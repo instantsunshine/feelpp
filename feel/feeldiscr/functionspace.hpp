@@ -73,6 +73,7 @@
 #include <feel/feelalg/boundingbox.hpp>
 #include <feel/feelalg/glas.hpp>
 #include <feel/feelalg/vectorublas.hpp>
+#include <feel/feelalg/vectorpetsc.hpp>
 
 #include <feel/feelmesh/regiontree.hpp>
 #include <feel/feelpoly/geomap.hpp>
@@ -1666,6 +1667,26 @@ public:
         super & container()
         {
             return *this;
+        }
+
+        /**
+         * \return a VectorPetsc sequential vector whose 'data' points
+         * to the element array of components, with read-write access.
+         * XXX workaround before proper container for VectorPetsc
+         * XXX safe for element if VectorPetsc is destroyed?
+         */
+        VectorPetsc<value_type> vec_petsc()
+        {
+            value_type *comp = &(this->vec().data()[0]);
+            size_type size = this->vec().size();
+            /* create petsc vector */
+            Vec V;
+            VecCreateSeqWithArray(this->worldComm(),(PetscInt)size,(PetscScalar*)comp,&V);
+            VecAssemblyBegin(V);
+            VecAssemblyEnd(V);
+            /* create feel petsc vector */
+            VectorPetsc<value_type> U = V;
+            return U;
         }
 
         /**
