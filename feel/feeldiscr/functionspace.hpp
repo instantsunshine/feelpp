@@ -1675,10 +1675,10 @@ public:
          * XXX workaround before proper container for VectorPetsc
          * XXX safe for element if VectorPetsc is destroyed?
          */
-        VectorPetsc<value_type> vec_petsc()
+        VectorPetsc<value_type> vecPetsc()
         {
             value_type *comp = &(this->vec().data()[0]);
-            size_type size = this->vec().size();
+            size_type size   = this->vec().size();
             /* create petsc vector */
             Vec V;
             VecCreateSeqWithArray(this->worldComm(),(PetscInt)size,(PetscScalar*)comp,&V);

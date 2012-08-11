@@ -612,14 +612,17 @@ public:
     template<class Archive>
     void serialize(Archive & ar, const unsigned int version) const
     {
-        value_type* array = *((value_type**)this->vec()->data);
-        int size          = this->vec()->map->n;
-        int gsize         = this->vec()->map->N;
+        value_type *array = *((value_type**)this->vec()->data);
+        int n             = this->vec()->map->n;
+        int N             = this->vec()->map->N;
 
-        if (size!=gsize) {
+        if (n!=N)
+        {
             FEELPP_ASSERT( 0 ).error( "wrong vector type for serialization (!=VECSEQ)" );
-        } else {
-            for (int i=0; i<size; i++)
+        }
+        else
+        {
+            for (int i=0; i<n; i++)
                 ar & array[i];
         }
     }
