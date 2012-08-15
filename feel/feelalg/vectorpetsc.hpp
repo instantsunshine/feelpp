@@ -167,7 +167,7 @@ public:
         /* map */
         PetscInt n;
         ISGetSize(is,&n);
-        DataMap dm(n, V.comm());
+        DataMap dm(n, n, V.comm());
         this->setMap(dm);
         /* init */
         VecGetSubVector(V.vec(), is, &this->_M_vec);
