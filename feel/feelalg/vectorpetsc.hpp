@@ -158,24 +158,22 @@ public:
     /**
      * Constructor.  Extracts a subvector from 'V' using mapping 'is'
      * without copy.
-     * XXX we *should* provide 'V' as Vector<T> instead of
-     *     VectorPetsc<T>. However in our program all the vectors are
-     *     defined as VectorPetsc directly in order to bypass the
-     *     virtual class vector.hpp, in which we can't define a
-     *     virtual method for the serialization of VectorPetsc.
      */
     VectorPetsc( VectorPetsc<value_type> &V, IS &is )
         :
-        super( V.map() ),
+        super(),
         _M_destroy_vec_on_exit( false )
     {
+        /* map */
+        PetscInt n;
+        ISGetSize(is,&n);
+        DataMap dm(n, V.comm());
+        this->setMap(dm);
+        /* init */
         VecGetSubVector(V.vec(), is, &this->_M_vec);
         this->M_is_initialized = true;
-        this->M_is_closed = true;
-        // XXX we shouldn't set M_is_closed=true. But as a subvector
-        //     is *always* sequential, none communication is required
-        //     after setting the values of the vector. Here it avoids
-        //     calling V->close().
+        /* close */
+        this->close(); /* no // assembly required */
     }
 
     /**
