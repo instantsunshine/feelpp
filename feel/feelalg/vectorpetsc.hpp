@@ -637,15 +637,13 @@ public:
         int n             = this->vec()->map->n;
         int N             = this->vec()->map->N;
 
-        if (n!=N)
-        {
-            FEELPP_ASSERT( 0 ).error( "wrong vector type for serialization (!=VECSEQ)" );
-        }
-        else
-        {
-            for (int i=0; i<n; i++)
-                ar & array[i];
-        }
+        int rank;
+        MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+
+        FEELPP_ASSERT( n==N ).error( "wrong vector type for serialization (!=VECSEQ)" );
+
+        for (int i=0; i<n; i++)
+            ar & array[i];
     }
 
     //@}
