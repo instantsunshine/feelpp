@@ -677,7 +677,24 @@ void MatrixPetsc<T>::set ( const size_type i,
     CHKERRABORT( this->comm(),ierr );
 }
 
+template <typename T>
+void
+MatrixPetsc<T>::setMatrix ( int* rows, int nrows,
+                            int* cols, int ncols,
+                            value_type* data)
+{
+    FEELPP_ASSERT ( this->isInitialized() ).error( "petsc matrix not initialized" );
 
+    int ierr=0;
+
+    // These casts are required for PETSc <= 2.1.5
+    ierr = MatSetValues( _M_mat,
+                         nrows, ( int* ) rows,
+                         ncols, ( int* ) cols,
+                         ( PetscScalar* ) data,
+                         INSERT_VALUES );
+    CHKERRABORT( this->comm(),ierr );
+}
 
 template <typename T>
 inline
@@ -755,7 +772,6 @@ MatrixPetsc<T>::addMatrix ( int* rows, int nrows,
                          ADD_VALUES );
     CHKERRABORT( this->comm(),ierr );
 }
-
 
 #if 0
 template <typename T>

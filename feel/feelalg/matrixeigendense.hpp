@@ -335,6 +335,19 @@ public:
     void init() {}
 
     /**
+     * Set the full matrix to the
+     * Sparse matrix.  This is useful
+     * for setting an element matrix
+     * at assembly time
+     */
+    void setMatrix ( int* rows, int nrows,
+                     int* cols, int ncols,
+                     value_type* data )
+    {
+        FEELPP_ASSERT( 0 ).error( "invalid call, not implemented yet" );
+    }
+
+    /**
      * Add the full matrix to the
      * Petsc matrix.  This is useful
      * for adding an element matrix

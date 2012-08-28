@@ -397,6 +397,16 @@ public:
                        const value_type& value ) = 0;
 
     /**
+     * Set the full matrix to the
+     * Sparse matrix.  This is useful
+     * for setting an element matrix
+     * at assembly time
+     */
+    virtual void setMatrix ( int* rows, int nrows,
+                             int* cols, int ncols,
+                             value_type* data ) = 0;
+
+    /**
      * Add \p value to the element
      * \p (i,j).  Throws an error if
      * the entry does not

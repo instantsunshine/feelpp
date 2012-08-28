@@ -436,6 +436,19 @@ public:
                const value_type& value );
 
     /**
+     * Set the full matrix to the
+     * Sparse matrix.  This is useful
+     * for setting an element matrix
+     * at assembly time
+     */
+    void setMatrix ( int* rows, int nrows,
+                     int* cols, int ncols,
+                     value_type* data )
+    {
+        FEELPP_ASSERT( 0 ).error( "invalid call, not implemented yet" );
+    }
+
+    /**
      * Multiplies matrix A by B and stores the result
      */
     void multiplyMatrix ( const MatrixEpetra& A, const MatrixEpetra& B );
