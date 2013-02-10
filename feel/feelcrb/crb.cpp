@@ -92,8 +92,7 @@ crbOptions( std::string const& prefix )
 
 
     crboptions
-    .add( crbSCMOptions() )
-    .add( eimOptions() );
+        .add( crbSCMOptions() );
 
     return crboptions;
 }
