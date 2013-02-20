@@ -2,7 +2,7 @@
 
   This file is part of the Feel library
 
-  Author(s): Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+  Author(s): Christophe Prud'homme <christophe.prudhomme@feelpp.org>
        Date: 2004-11-09
 
   Copyright (C) 2004 EPFL
@@ -24,7 +24,7 @@
 */
 /**
    \file Exporter.hpp
-   \author Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+   \author Christophe Prud'homme <christophe.prudhomme@feelpp.org>
    \date 2004-11-09
  */
 #ifndef __Exporter_H
@@ -87,6 +87,8 @@ public:
     typedef Visitor<MeshType> super2;
 
     typedef TimeSet<MeshType,N> timeset_type;
+    typedef typename timeset_type::mesh_type mesh_type;
+    typedef typename timeset_type::mesh_ptrtype mesh_ptrtype;
     typedef boost::shared_ptr<timeset_type> timeset_ptrtype;
     typedef std::vector<timeset_ptrtype> timeset_set_type;
     typedef typename timeset_set_type::iterator timeset_iterator;
@@ -102,6 +104,11 @@ public:
     /** @name Constructors, destructor
      */
     //@{
+
+    /**
+     * default constructor
+     */
+    Exporter( WorldComm const& worldComm = Environment::worldComm() );
 
     /**
      * Constructor
@@ -139,18 +146,18 @@ public:
      * of the \p exportername and using \p prefix for the prefix of the data
      * files.
      */
-    static Exporter<MeshType,N>* New( std::string const& exportername,
-                                      std::string prefix = "export",
-                                      WorldComm const& worldComm = Environment::worldComm() );
+    static boost::shared_ptr<Exporter<MeshType,N> > New( std::string const& exportername,
+                                                         std::string prefix = Environment::about().appName(),
+                                                         WorldComm const& worldComm = Environment::worldComm() );
 
     /**
      * Static function instantiating from the Exporter Factory an exporter out
      * of the variables_map \p vm and using \p prefix for the prefix of the data
      * files.
      */
-    static Exporter<MeshType,N>* New( po::variables_map const& vm,
-                                      std::string prefix = "export",
-                                      WorldComm const& worldComm = Environment::worldComm() );
+    static boost::shared_ptr<Exporter<MeshType,N> > New( po::variables_map const& vm = Environment::vm(),
+                                                         std::string prefix = Environment::about().appName(),
+                                                         WorldComm const& worldComm = Environment::worldComm() );
 
     //@}
 
@@ -240,7 +247,14 @@ public:
      * set the options from the \p variables_map \p vm as well as the prefix \p
      * exp_prefix
      */
-    virtual Exporter<MeshType,N>* setOptions( po::variables_map const& vm, std::string const& exp_prefix = "" );
+    virtual Exporter<MeshType,N>* setOptions( std::string const& exp_prefix = "" );
+
+    /**
+     * set the options from the \p variables_map \p vm as well as the prefix \p
+     * exp_prefix
+     */
+    virtual Exporter<MeshType,N>* setOptions( po::variables_map const& vm, std::string const& exp_prefix = "" ) FEELPP_DEPRECATED { return setOptions( exp_prefix ); }
+
 
     /**
      * set to \p __type the type of exporter (gmsh, ensight...)
@@ -312,6 +326,23 @@ public:
         return M_ts_set[ts];
     }
 
+    void
+    setMesh( mesh_ptrtype mesh )
+        {
+            this->step( 0 )->setMesh( mesh );
+        }
+    template<typename F>
+    void
+    add( std::string const& name, F const& u )
+        {
+            this->step( 0 )->add( this->prefix()+"."+name, u );
+        }
+
+    void
+    addRegions()
+        {
+            this->step( 0 )->addRegions();
+        }
     step_ptrtype step( double time )
     {
         if ( this->cptOfSave() % this->freq()  )
@@ -356,6 +387,12 @@ public:
      */
     void saveTimeSet() const
     {
+        if ( this->worldComm().rank() != this->worldComm().masterRank() )
+            {
+                ++M_cptOfSave;
+                return;
+            }
+
         auto __ts_it = this->beginTimeSet();
         auto __ts_en = this->endTimeSet();
 
@@ -415,10 +452,52 @@ protected:
 
 po::options_description exporter_options( std::string const& prefix = "" );
 
+namespace detail
+{
+template<typename Args>
+struct compute_exporter_return
+{
+    typedef typename boost::remove_pointer<
+        typename boost::remove_const<
+            typename boost::remove_reference<
+                typename parameter::binding<Args, tag::mesh>::type
+                >::type
+            >::type
+        >::type::element_type mesh_type;
+    //typename Feel::vf::detail::clean_type<Args, tag::mesh>::type::element_type mesh_type;
+    //typedef typename parameter::value_type<Args, tag::order>::type order_type;
+    //typedef boost::shared_ptr<Exporter<mesh_type,order_type::value> > type;
+    typedef Exporter<mesh_type,mesh_type::nOrder> type;
+    typedef boost::shared_ptr<type> ptrtype;
+    //typedef boost::shared_ptr<Exporter<Mesh<Simplex<2> >,1> > type;
+
+};
+}
+BOOST_PARAMETER_FUNCTION( ( typename Feel::detail::compute_exporter_return<Args>::ptrtype ),
+                          exporter,                                       // 2. name of the function template
+                          tag,                                        // 3. namespace of tag types
+                          ( required                                  // 4. one required parameter, and
+                            ( mesh, * )
+                          ) // required
+                          ( optional                                  // 4. one required parameter, and
+                            ( order,*, mpl::int_<1>() )
+                            ( name,*, "exporter" )
+                          ) )
+{
+    typedef typename Feel::detail::compute_exporter_return<Args>::type exporter_type;
+    auto e =  exporter_type::New(Environment::vm(),name);
+    e->setPrefix( name );
+    e->setMesh( mesh );
+    e->addRegions();
+    return e;
+    //return Exporter<Mesh<Simplex<2> >,1>::New();
+}
+
 } // Feel
 
 //#if !defined( FEELPP_INSTANTIATION_MODE )
 # include <feel/feelfilters/exporterimpl.hpp>
 //#endif // FEELPP_INSTANTIATION_MODE
+
 
 #endif /* __Exporter_H */

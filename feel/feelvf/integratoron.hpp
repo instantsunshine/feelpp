@@ -2,7 +2,7 @@
 
   This file is part of the Feel library
 
-  Author(s): Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+  Author(s): Christophe Prud'homme <christophe.prudhomme@feelpp.org>
        Date: 2005-03-15
 
   Copyright (C) 2005,2006 EPFL
@@ -24,7 +24,7 @@
 */
 /**
    \file integratoron.hpp
-   \author Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+   \author Christophe Prud'homme <christophe.prudhomme@feelpp.org>
    \date 2005-03-15
  */
 #ifndef __INTEGRATORON_HPP
@@ -306,7 +306,7 @@ IntegratorOnExpr<ElementRange, Elem, RhsElem,  OnExpr>::assemble( boost::shared_
     typedef boost::shared_ptr<gm_type> gm_ptrtype;
     typedef typename gm_type::template Context<context, geoelement_type> gmc_type;
     typedef boost::shared_ptr<gmc_type> gmc_ptrtype;
-    typedef fusion::map<fusion::pair<detail::gmc<0>, gmc_ptrtype> > map_gmc_type;
+    typedef fusion::map<fusion::pair<vf::detail::gmc<0>, gmc_ptrtype> > map_gmc_type;
 
 
     // dof
@@ -316,12 +316,17 @@ IntegratorOnExpr<ElementRange, Elem, RhsElem,  OnExpr>::assemble( boost::shared_
     typedef typename element_type::functionspace_type::fe_type fe_type;
     typedef typename fe_type::template Context< context, fe_type, gm_type, geoelement_type> fecontext_type;
     typedef boost::shared_ptr<fecontext_type> fecontext_ptrtype;
-    //typedef fusion::map<fusion::pair<detail::gmc<0>, fecontext_ptrtype> > map_gmc_type;
+    //typedef fusion::map<fusion::pair<vf::detail::gmc<0>, fecontext_ptrtype> > map_gmc_type;
 
     // expression
     //typedef typename expression_type::template tensor<map_gmc_type,fecontext_type> t_expr_type;
     typedef typename expression_type::template tensor<map_gmc_type> t_expr_type;
     typedef typename t_expr_type::shape shape;
+
+    // make sure that the form is close, ie the associated matrix is assembled
+    __form.matrix().close();
+    // make sure that the right hand side is closed, ie the associated vector is assembled
+    _M_rhs->close();
 
     //
     // start
@@ -329,14 +334,19 @@ IntegratorOnExpr<ElementRange, Elem, RhsElem,  OnExpr>::assemble( boost::shared_
     Debug( 5066 )  << "assembling Dirichlet conditions\n";
     boost::timer __timer;
 
+    std::vector<int> dofs;
+    std::vector<value_type> values;
+
+    element_iterator __face_it = this->beginElement();
+    element_iterator __face_en = this->endElement();
+    if ( __face_it != __face_en )
+    {
+
     dof_type const* __dof = _M_u.functionSpace()->dof().get();
 
     fe_type const* __fe = _M_u.functionSpace()->fe().get();
 
-    element_iterator __face_it = this->beginElement();
-
     gm_ptrtype __gm( new gm_type );
-
 
 
     //
@@ -363,7 +373,7 @@ IntegratorOnExpr<ElementRange, Elem, RhsElem,  OnExpr>::assemble( boost::shared_
     uint16_type __face_id = __face_it->pos_first();
     gmc_ptrtype __c( new gmc_type( __gm, __face_it->element( 0 ), __geopc, __face_id ) );
 
-    map_gmc_type mapgmc( fusion::make_pair<detail::gmc<0> >( __c ) );
+    map_gmc_type mapgmc( fusion::make_pair<vf::detail::gmc<0> >( __c ) );
     //t_expr_type expr( _M_expr, mapgmc );
 
 
@@ -383,9 +393,6 @@ IntegratorOnExpr<ElementRange, Elem, RhsElem,  OnExpr>::assemble( boost::shared_
 
     Debug( 5066 )  << "nbFaceDof = " << nbFaceDof << "\n";
     //const size_type nbFaceDof = __fe->boundaryFE()->points().size2();
-
-    std::vector<int> dofs;
-    std::vector<value_type> values;
 
     for ( ;
             __face_it != this->endElement();
@@ -411,7 +418,7 @@ IntegratorOnExpr<ElementRange, Elem, RhsElem,  OnExpr>::assemble( boost::shared_
         Debug( 5066 ) << "FACE_ID = " << __face_it->id() << "  ref pts=" << __c->xRefs() << "\n";
         Debug( 5066 ) << "FACE_ID = " << __face_it->id() << " real pts=" << __c->xReal() << "\n";
 
-        map_gmc_type mapgmc( fusion::make_pair<detail::gmc<0> >( __c ) );
+        map_gmc_type mapgmc( fusion::make_pair<vf::detail::gmc<0> >( __c ) );
 
         t_expr_type expr( _M_expr, mapgmc );
         expr.update( mapgmc );
@@ -477,6 +484,8 @@ IntegratorOnExpr<ElementRange, Elem, RhsElem,  OnExpr>::assemble( boost::shared_
             } // loop on face dof
     }
 
+    } // __face_it != __face_en
+
     __form.zeroRows( dofs, values, *_M_rhs, _M_on_strategy );
 }
 
@@ -484,6 +493,17 @@ IntegratorOnExpr<ElementRange, Elem, RhsElem,  OnExpr>::assemble( boost::shared_
 
 namespace detail
 {
+template<typename T >
+struct v_ptr1
+{
+    typedef T type;
+};
+template<typename T >
+struct v_ptr2
+{
+    typedef typename T::vector_ptrtype type;
+};
+
 template<typename Args>
 struct integratoron_type
 {
@@ -491,14 +511,43 @@ struct integratoron_type
     typedef typename clean_type<Args,tag::rhs>::type _rhs_type;
     typedef typename clean_type<Args,tag::element>::type _element_type;
     typedef typename clean_type<Args,tag::expr>::type _expr_type;
-
-
-    typedef IntegratorOnExpr<_range_type, _element_type, _rhs_type,
+#if 1
+    typedef typename mpl::if_<Feel::detail::is_vector_ptr<_rhs_type>,
+                              mpl::identity<v_ptr1<_rhs_type> >,
+                              mpl::identity<v_ptr2<_rhs_type> > >::type::type::type the_rhs_type;
+#else
+    typedef _rhs_type the_rhs_type;
+#endif
+typedef IntegratorOnExpr<_range_type, _element_type, the_rhs_type,
             typename mpl::if_<boost::is_arithmetic<_expr_type>,
             mpl::identity<Expr<Cst<_expr_type> > >,
             mpl::identity<_expr_type> >::type::type> type;
     typedef Expr<type> expr_type;
 };
+
+template<typename V>
+typename V::vector_ptrtype
+getRhsVector( V const&  v, mpl::false_ )
+{
+    return v.vectorPtr();
+}
+
+template<typename V>
+V
+getRhsVector( V const&  v, mpl::true_ )
+{
+    return v;
+}
+
+template<typename V>
+typename mpl::if_<Feel::detail::is_vector_ptr<V>,
+                  mpl::identity<v_ptr1<V> >,
+                  mpl::identity<v_ptr2<V> > >::type::type::type
+getRhsVector( V const&  v )
+{
+    return getRhsVector( v, Feel::detail::is_vector_ptr<V>() );
+}
+
 
 }
 /**
@@ -512,7 +561,7 @@ struct integratoron_type
  * \arg sum sum the multiple nodal  contributions  if applicable (false by default)
  */
 BOOST_PARAMETER_FUNCTION(
-    ( typename detail::integratoron_type<Args>::expr_type ), // return type
+    ( typename vf::detail::integratoron_type<Args>::expr_type ), // return type
     on,    // 2. function name
 
     tag,           // 3. namespace of tag types
@@ -530,8 +579,9 @@ BOOST_PARAMETER_FUNCTION(
     )
 )
 {
-    typename detail::integratoron_type<Args>::type ion( range, element, rhs, expr, type );
-    return typename detail::integratoron_type<Args>::expr_type( ion );
+    typename vf::detail::integratoron_type<Args>::type ion( range, element, Feel::vf::detail::getRhsVector(rhs), expr, type );
+    //typename vf::detail::integratoron_type<Args>::type ion( range, element, rhs, expr, type );
+    return typename vf::detail::integratoron_type<Args>::expr_type( ion );
 }
 
 #else
@@ -600,7 +650,7 @@ Expr<IntegratorOnExpr<ElementRange, Elem,
          OnExpr const& __e,
          size_type __on = ON_ELIMINATION|ON_ELIMINATION_KEEP_DIAGONAL )
 {
-    return detail::on( __r, __u, __rhs, __e, __on,  mpl::or_<is_shared_ptr<RhsElem>, boost::is_pointer<RhsElem> >() );
+    returnvf::detail::on( __r, __u, __rhs, __e, __on,  mpl::or_<is_shared_ptr<RhsElem>, boost::is_pointer<RhsElem> >() );
 
 }
 
@@ -618,7 +668,7 @@ Expr<IntegratorOnExpr<ElementRange, Elem,
          OnExpr const& __e,
          size_type __on = ON_ELIMINATION|ON_ELIMINATION_KEEP_DIAGONAL )
 {
-    return detail::on( __r, __u, __rhs, __e, __on,  mpl::or_<is_shared_ptr<RhsElem>, boost::is_pointer<RhsElem> >() );
+    returnvf::detail::on( __r, __u, __rhs, __e, __on,  mpl::or_<is_shared_ptr<RhsElem>, boost::is_pointer<RhsElem> >() );
 
 }
 #endif // 0

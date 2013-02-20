@@ -2,7 +2,7 @@
 
   This file is part of the Feel library
 
-  Author(s): Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+  Author(s): Christophe Prud'homme <christophe.prudhomme@feelpp.org>
        Date: 2009-03-04
 
   Copyright (C) 2009 Universite Joseph Fourier (Grenoble I)
@@ -58,10 +58,10 @@ Convection::run()
         std::string file_mesh = this->vm()["mesh_name"]. as<std::string>() ;;
         std::string complete_name = repository + file_mesh;
         std::cout << "Meshes read in file : " << complete_name <<std::endl;
-        
+
         mesh  =  loadGMSHMesh( _mesh=new mesh_type,
                               _filename=complete_name,
-                              _update=MESH_CHECK|MESH_UPDATE_FACES|MESH_UPDATE_EDGES|MESH_RENUMBER );        
+                              _update=MESH_CHECK|MESH_UPDATE_FACES|MESH_UPDATE_EDGES|MESH_RENUMBER );
     }
     else{
         mesh = createGMSHMesh( _mesh=new mesh_type,
@@ -69,10 +69,10 @@ Convection::run()
                                _update=MESH_RENUMBER|MESH_UPDATE_EDGES|MESH_UPDATE_FACES|MESH_CHECK );
     }
 
-    Log() << "Tfixed: " << mesh->markerName( "Tfixed" ) << ": " << integrate(markedfaces(mesh,"Tfixed"), cst(1.) ).evaluate()(0,0) << "\n";
-    Log() << "Tflux: " << mesh->markerName( "Tflux" ) << ": " << integrate(markedfaces(mesh,"Tflux"), cst(1.) ).evaluate()(0,0)  << "\n";
-    //Log() << "Fflux: " << mesh->markerName( "Fflux" ) << ": " << integrate(markedfaces(mesh,"Fflux"), cst(1.) ).evaluate()(0,0)  << "\n";
-    Log() << "Tinsulated: " << mesh->markerName( "Tinsulated" ) << ": " << integrate(markedfaces(mesh,"Tinsulated"), cst(1.) ).evaluate()(0,0)  << "\n";
+    LOG(INFO) << "Tfixed: " << mesh->markerName( "Tfixed" ) << ": " << integrate(markedfaces(mesh,"Tfixed"), cst(1.) ).evaluate()(0,0) << "\n";
+    LOG(INFO) << "Tflux: " << mesh->markerName( "Tflux" ) << ": " << integrate(markedfaces(mesh,"Tflux"), cst(1.) ).evaluate()(0,0)  << "\n";
+    //LOG(INFO) << "Fflux: " << mesh->markerName( "Fflux" ) << ": " << integrate(markedfaces(mesh,"Fflux"), cst(1.) ).evaluate()(0,0)  << "\n";
+    LOG(INFO) << "Tinsulated: " << mesh->markerName( "Tinsulated" ) << ": " << integrate(markedfaces(mesh,"Tinsulated"), cst(1.) ).evaluate()(0,0)  << "\n";
     timers["mesh"].second=timers["mesh"].first.elapsed();
     timings << "[Mesh] Time : " << timers["mesh"].second << std::endl;
     //
@@ -85,8 +85,9 @@ Convection::run()
     timers["fspace"].first.restart();
     // Espace des fonctions et elements
     Xh = space_type::New( mesh );
+    P1h = lagrangeP1( _space=Xh->functionSpace<2>() );
 
-    element_type U( Xh, "u" );
+    element_type U( Xh, "U" );
     element_type Un( Xh, "un" );
     element_type V( Xh, "v" );
     element_type W( Xh, "v" );
@@ -107,13 +108,13 @@ Convection::run()
     element_3_type eta = V. element<3>(); // fonction test multipliers
 #endif
 
-    Log() << "[convection::run()] u.size() = " << u.size() << " u.start() = " << u.start() << "\n";
-    Log() << "[convection::run()] p.size() = " << p.size() << " p.start() = " << p.start() << "\n";
-    Log() << "[convection::run()] t.size() = " << t.size() << " p.start() = " << t.start() << "\n";
+    LOG(INFO) << "[convection::run()] u.size() = " << u.size() << " u.start() = " << u.start() << "\n";
+    LOG(INFO) << "[convection::run()] p.size() = " << p.size() << " p.start() = " << p.start() << "\n";
+    LOG(INFO) << "[convection::run()] t.size() = " << t.size() << " p.start() = " << t.start() << "\n";
 #if defined( FEELPP_USE_LM )
-    Log() << "[convection::run()] xi.size() = " << xi.size() << " p.start() = " << xi.start() << "\n";
+    LOG(INFO) << "[convection::run()] xi.size() = " << xi.size() << " p.start() = " << xi.start() << "\n";
 #endif
-    Log() << "[convection::run()] U.size() = " << U.size() << " Xh ndof = " << Xh->nDof() << "\n";
+    LOG(INFO) << "[convection::run()] U.size() = " << U.size() << " Xh ndof = " << Xh->nDof() << "\n";
 
 #if CONVECTION_DIM == 2
     u = vf::project( Xh-> functionSpace<0>(), elements( mesh ), vec( Px()*Py(),Py()*Px() ) );
@@ -196,44 +197,65 @@ Convection::run()
     vector_ptrtype R( M_backend->newVector( Xh ) );
     sparse_matrix_ptrtype J( M_backend->newMatrix( Xh,Xh ) );
 
-    Log() << "============================================================\n";
+    LOG(INFO) << "============================================================\n";
     std::cout << "============================================================\n";
     double gr( this->vm()["gr"]. as<double>() );
     M_current_Grashofs = gr;
     double pr = this->vm()["pr"]. as<double>();
     M_current_Prandtl = pr;
-    Log() << "Grashof = " << M_current_Grashofs << "\n";
-    Log() << "Prandtl = " << M_current_Prandtl << "\n";
+    LOG(INFO) << "Grashof = " << M_current_Grashofs << "\n";
+    LOG(INFO) << "Prandtl = " << M_current_Prandtl << "\n";
     std::cout << "Grashof = " << M_current_Grashofs << "\n";
     std::cout << "Prandtl = " << M_current_Prandtl << "\n";
 
-    int N=std::max( 1.0,std::max( std::ceil( std::log( gr ) ),std::ceil( std::log( pr )-std::log( 1e-2 ) ) ) );
+    int N=1;
+
+    if ( option(_name="use_continuity").as<bool>() )
+        N = std::max( 1.0,std::max( std::ceil( std::log( gr ) ),std::ceil( std::log( pr )-std::log( 1e-2 ) ) ) );
 
     for ( int i = 0; i < N; ++i )
     {
-        int denom = ( N==1 )?1:N-1;
-        M_current_Grashofs = math::exp( math::log( 1. )+i*( math::log( gr )-math::log( 1. ) )/denom );
-        M_current_Prandtl = math::exp( math::log( 1e-2 )+i*( math::log( pr )-math::log( 1e-2 ) )/denom );
+        if ( option(_name="use_continuity").as<bool>() )
+        {
+            int denom = ( N==1 )?1:N-1;
+            M_current_Grashofs = math::exp( math::log( 1. )+i*( math::log( gr )-math::log( 1. ) )/denom );
+            M_current_Prandtl = math::exp( math::log( 1e-2 )+i*( math::log( pr )-math::log( 1e-2 ) )/denom );
+        }
+        else
+        {
+            M_current_Grashofs = gr;
+            M_current_Prandtl = pr;
+        }
+
         std::cout << "i/N = " << i << "/" << N <<std::endl;
         std::cout << " intermediary Grashof = " << M_current_Grashofs<<std::endl;
         std::cout<< " and Prandtl = " << M_current_Prandtl << "\n"<<std::endl;
+
         M_backend->nlSolve( _solution = U );
+
+
+       if( Environment::worldComm().globalSize() == 1 )
+        {
+            std::ofstream file_solution;
+            std::string mu_str;
+            mu_str = ( boost::format( "_%1%" ) % i ).str() ;
+            std::string name = "FEMsolution" + mu_str;
+
+            //work only in sequential else problem with VectorUblas<>::operator()()
+            file_solution.open( name,std::ios::out );
+            for ( int j=0; j < U.size(); j++ )
+                file_solution << U.operator()( j )<<"\n";
+            file_solution.close();
+        }
 
         if ( exporter->doExport() )
         {
-            Log() << "exportResults starts\n";
-
-            exporter->step( i )->setMesh( mesh );
-
-            exporter->step( i )->add( "u", u );
-            exporter->step( i )->add( "t", t );
-            exporter->step( i )->add( "p", p );
-
-            exporter->save();
-            Log() << "exportResults done\n";
+            LOG(INFO) << "exportResults done\n";
+            this->exportResults(U,i);
         }
-
     }
+
+    U.save(_path=".");
 
     // value mean-pressure
     double meas = integrate( elements( mesh ),constant( 1.0 )  ).evaluate()( 0, 0 );
@@ -242,7 +264,7 @@ Convection::run()
               << integrate( elements( mesh ) ,idv( p ) ).evaluate()( 0,0 )/meas << "\n";
 
 #if defined( FEELPP_USE_LM )
-    Log() << "value of the Lagrange multiplier xi= " << xi( 0 ) << "\n";
+    LOG(INFO) << "value of the Lagrange multiplier xi= " << xi( 0 ) << "\n";
     std::cout << "value of the Lagrange multiplier xi= " << xi( 0 ) << "\n";
 #endif
 
@@ -253,6 +275,9 @@ Convection::run()
     double div_u_error_L2 = integrate( elements( mesh ),
                                        divv( u )*divv( u ) ).evaluate()( 0, 0 );
     std::cout << "||div(u)||_2=" << math::sqrt( div_u_error_L2 ) << "\n";
+
+    double AverageTdomain = integrate( elements( mesh ) , idv( t ) ).evaluate()( 0,0 ) ;
+    std::cout << "AverageTdomain = " << AverageTdomain << std::endl;
 
     // calcul le nombre de Nusselt
     double AverageT = integrate( markedfaces( mesh,"Tflux" ) ,

@@ -2,7 +2,7 @@
 
   This file is part of the Feel library
 
-  Author(s): Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+  Author(s): Christophe Prud'homme <christophe.prudhomme@feelpp.org>
        Date: 2009-08-10
 
   Copyright (C) 2009 Université Joseph Fourier (Grenoble I)
@@ -23,7 +23,7 @@
 */
 /**
    \file crbscm.cpp
-   \author Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+   \author Christophe Prud'homme <christophe.prudhomme@feelpp.org>
    \date 2009-08-10
  */
 
@@ -52,6 +52,7 @@ crbSCMOptions( std::string const& prefix )
     ( "crb.scm.solvereigen-maxiter" ,  Feel::po::value<int>()->default_value( 10000 ), "solver eigen maxiter " )
     ( "crb.scm.solvereigen-nev" ,  Feel::po::value<int>()->default_value( 1 ), "solver eigen nev " )
     ( "crb.scm.solvereigen-ncv" ,  Feel::po::value<int>()->default_value( 3 ), "solver eigen ncv " )
+    ( "crb.scm.solvereigen-solver-type" ,  Feel::po::value<int>()->default_value( 5 ), "solver eigen type " )
     ;
 
 
@@ -62,3 +63,12 @@ crbSCMOptions( std::string const& prefix )
     return crbscmoptions;
 }
 }
+
+//here is the list of choice for solvereigen-solver-type :
+//0 : POWER
+//1 : LAPACK
+//2 : SUBSPACE
+//3 : ARNOLDI
+//4 : LANCZOS
+//5 : KRYLOVSCHUR
+

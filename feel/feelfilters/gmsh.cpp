@@ -2,7 +2,7 @@
 
   This file is part of the Feel library
 
-  Author(s): Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+  Author(s): Christophe Prud'homme <christophe.prudhomme@feelpp.org>
        Date: 2005-02-10
 
   Copyright (C) 2005,2006 EPFL
@@ -24,7 +24,7 @@
 */
 /**
    \file gmsh.cpp
-   \author Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+   \author Christophe Prud'homme <christophe.prudhomme@feelpp.org>
    \date 2005-02-10
  */
 #include <cstdlib>
@@ -69,6 +69,11 @@ namespace Feel
 namespace fs = boost::filesystem;
 
 const char* FEELPP_GMSH_FORMAT_VERSION = "2.2";
+#if defined(HAVE_METIS)
+const GMSH_PARTITIONER GMSH_PARTITIONER_DEFAULT = GMSH_PARTITIONER_METIS;
+#else
+const GMSH_PARTITIONER GMSH_PARTITIONER_DEFAULT = GMSH_PARTITIONER_CHACO;
+#endif
 
 Gmsh::Gmsh( int nDim, int nOrder, WorldComm const& worldComm )
     :
@@ -80,11 +85,13 @@ Gmsh::Gmsh( int nDim, int nOrder, WorldComm const& worldComm )
     M_h( 0.1 ),
     M_addmidpoint( true ),
     M_usePhysicalNames( false ),
-    M_partitioner( GMSH_PARTITIONER_CHACO ),
+    M_partitioner( (GMSH_PARTITIONER)GMSH_PARTITIONER_DEFAULT ),
     M_partitions( worldComm.size() ),
     M_partition_file( 0 ),
     M_shear( 0 ),
-    M_refine_levels( 0 )
+    M_recombine( 0 ),
+    M_refine_levels( 0 ),
+    M_substructuring( false )
 {
     this->setReferenceDomain();
 }
@@ -102,7 +109,9 @@ Gmsh::Gmsh( Gmsh const & __g )
     M_partitions( __g.M_partitions ),
     M_partition_file( __g.M_partition_file ),
     M_shear( __g.M_shear ),
-    M_refine_levels( __g.M_refine_levels )
+    M_recombine( __g.M_recombine ),
+    M_refine_levels( __g.M_refine_levels ),
+    M_substructuring( __g.M_substructuring )
 {}
 Gmsh::~Gmsh()
 {}
@@ -227,7 +236,7 @@ Gmsh::generate( std::string const& __name, std::string const& __geo, bool const 
 
     if ( !mpi::environment::initialized() || ( mpi::environment::initialized()  && this->worldComm().globalRank() == this->worldComm().masterRank() ) )
     {
-        Log() << "[Gmsh::generate] generate on processor " <<  this->worldComm().globalRank() << "/" << this->worldComm().globalSize() << "\n";
+        LOG(INFO) << "[Gmsh::generate] generate on processor " <<  this->worldComm().globalRank() << "/" << this->worldComm().globalSize() << "\n";
         bool geochanged ( generateGeo( __name,__geo,modifGeo ) );
         std::ostringstream __geoname;
         __geoname << __name << ".geo";
@@ -235,13 +244,13 @@ Gmsh::generate( std::string const& __name, std::string const& __geo, bool const 
         // generate mesh
         std::ostringstream __meshname;
         __meshname << __name << ".msh";
-        Debug( 10000 ) << "mesh file name: " << __meshname.str() << "\n";
-        Debug( 10000 ) << "does mesh file name exists ?: " << fs::exists( __meshname.str() ) << "\n";
+        LOG( INFO ) << "mesh file name: " << __meshname.str() << "\n";
+        LOG( INFO ) << "does mesh file name exists ?: " << fs::exists( __meshname.str() ) << "\n";
         fs::path __meshpath( __meshname.str() );
 
         if ( geochanged || __forceRebuild || !fs::exists( __meshpath ) )
         {
-            Debug( 10000 ) << "generating: " << __meshname.str() << "\n";
+            LOG( INFO ) << "generating: " << __meshname.str() << "\n";
 #if 0
 
             if ( __geo.find( "Volume" ) != std::string::npos )
@@ -260,14 +269,14 @@ Gmsh::generate( std::string const& __name, std::string const& __geo, bool const 
 #endif
         }
 
-        Log() << "[Gmsh::generate] meshname = " << __meshname.str() << "\n";
+        LOG(INFO) << "[Gmsh::generate] meshname = " << __meshname.str() << "\n";
         fname=__meshname.str();
     }
-
+    google::FlushLogFiles(INFO);
     if ( mpi::environment::initialized() )
     {
         mpi::broadcast( this->worldComm().globalComm(), fname, 0 );
-        Log() << "[Gmsh::generate] broadcast mesh filename : " << fname << " to all other processes\n";
+        LOG(INFO) << "[Gmsh::generate] broadcast mesh filename : " << fname << " to all other processes\n";
 
     }
 
@@ -325,9 +334,9 @@ Gmsh::generate( std::string const& __geoname, uint16_type dim, bool parametric  
         __str << BOOST_PP_STRINGIZE( GMSH_EXECUTABLE )
               << " -" << dim << " -part " << M_partitions  << " " << __geoname;
 
-    Log() << "[Gmsh::generate] execute '" <<  __str.str() << "\n";
-    Log() << "[Gmsh::generate] partitions: " <<  M_partitions << "\n";
-    Log() << "[Gmsh::generate] partitioner: " <<  M_partitioner << "\n";
+    LOG(INFO) << "[Gmsh::generate] execute '" <<  __str.str() << "\n";
+    LOG(INFO) << "[Gmsh::generate] partitions: " <<  M_partitions << "\n";
+    LOG(INFO) << "[Gmsh::generate] partitioner: " <<  M_partitioner << "\n";
 
     auto err = ::system( __str.str().c_str() );
 #else
@@ -340,13 +349,13 @@ Gmsh::generate( std::string const& __geoname, uint16_type dim, bool parametric  
         gmshIsInit=true;
         GmshInitialize();
     }
-    Log() << "[Gmsh::generate] env.part: " <<  Environment::numberOfProcessors() << "\n";
-    Log() << "[Gmsh::generate] env.part: " <<  Environment::worldComm().size() << "\n";
-    Log() << "[Gmsh::generate] partitions: " <<  M_partitions << "\n";
-    Log() << "[Gmsh::generate] partitioner: " <<  M_partitioner << "\n";
+    LOG(INFO) << "[Gmsh::generate] env.part: " <<  Environment::numberOfProcessors() << "\n";
+    LOG(INFO) << "[Gmsh::generate] env.part: " <<  Environment::worldComm().size() << "\n";
+    LOG(INFO) << "[Gmsh::generate] partitions: " <<  M_partitions << "\n";
+    LOG(INFO) << "[Gmsh::generate] partitioner: " <<  M_partitioner << "\n";
     CTX::instance()->partitionOptions.num_partitions =  M_partitions;
     CTX::instance()->partitionOptions.partitioner =  M_partitioner;
-
+    CTX::instance()->partitionOptions.mesh_dims[0] = M_partitions;
 
     CTX::instance()->mesh.mshFileVersion = std::atof( this->version().c_str() );
     CTX::instance()->mesh.lcExtendFromBoundary = 1;
@@ -380,9 +389,12 @@ Gmsh::generate( std::string const& __geoname, uint16_type dim, bool parametric  
     GModel::current()->readGEO( _name+".geo" );
     GModel::current()->mesh( dim );
     for( int l = 0; l < M_refine_levels-1; ++l )
-        GModel::current()->refineMesh( M_order==1 );
+    {
+        LOG(INFO) << "refine mesh level : " << l << "\n";
+        GModel::current()->refineMesh( CTX::instance()->mesh.secondOrderLinear );
+    }
     PartitionMesh( GModel::current(), CTX::instance()->partitionOptions );
-    //std::cout << "size : " << GModel::current()->getMeshPartitions().size() << "\n";
+    LOG(INFO) << "size : " << GModel::current()->getMeshPartitions().size() << "\n";
     GModel::current()->writeMSH( _name+".msh" );
     //GModel::current()->destroy();
 #endif
@@ -428,7 +440,7 @@ Gmsh::rebuildPartitionMsh( std::string const& nameMshInput,std::string const& na
     if ( mpi::environment::initialized() )
     {
         mpi::broadcast( this->worldComm().globalComm(), _name, this->worldComm().masterRank() );
-        Log() << "[Gmsh::rebuildPartitionMsh] broadcast mesh filename : " << _name << " to all other processes\n";
+        LOG(INFO) << "[Gmsh::rebuildPartitionMsh] broadcast mesh filename : " << _name << " to all other processes\n";
     }
 
 
@@ -438,7 +450,30 @@ Gmsh::rebuildPartitionMsh( std::string const& nameMshInput,std::string const& na
 
 }
 
+/* if Gmsh API is not detected, some variables need to be define
+   see gmsh/Common/GmshDefines.h
+*/
 
+#ifndef FEELPP_HAS_GMSH_H
+
+// 2D meshing algorithms (numbers should not be changed)
+#define ALGO_2D_MESHADAPT      1
+#define ALGO_2D_AUTO           2
+#define ALGO_2D_MESHADAPT_OLD  4
+#define ALGO_2D_DELAUNAY       5
+#define ALGO_2D_FRONTAL        6
+#define ALGO_2D_BAMG           7
+#define ALGO_2D_FRONTAL_QUAD   8
+
+// 3D meshing algorithms (numbers should not be changed)
+#define ALGO_3D_DELAUNAY       1
+#define ALGO_3D_FRONTAL        4
+#define ALGO_3D_FRONTAL_DEL    5
+#define ALGO_3D_FRONTAL_HEX    6
+#define ALGO_3D_MMG3D          7
+#define ALGO_3D_RTREE          9
+
+#endif
 
 std::string
 Gmsh::preamble() const
@@ -476,6 +511,10 @@ Gmsh::preamble() const
     {
         ostr << "Mesh.RecombinationAlgorithm=1;//blossom\n"
              << "Mesh.RecombineAll=1; //all\n";
+    }
+    else
+    {
+        ostr << "Mesh.RecombinationAlgorithm=0;\n";
     }
 
     return ostr.str();
@@ -549,7 +588,7 @@ struct EllipsoidDomain
 # define FACTORY1(LDIM,LORDER,LSHAPE )                                  \
     const bool BOOST_PP_CAT( BOOST_PP_CAT( BOOST_PP_CAT( mesh, LDIM ), LORDER), BOOST_PP_ARRAY_ELEM(1,LSHAPE))  = \
                 Gmsh::Factory::type::instance().registerProduct( boost::to_lower_copy(boost::algorithm::erase_all_copy( std::string( FACTORY1NAME(LDIM, LORDER, LSHAPE ) ), " " ) ), \
-                                                                 *new detail::BOOST_PP_CAT(BOOST_PP_ARRAY_ELEM(1,LSHAPE),Domain)(LDIM,LORDER) );
+                                                                 *new Feel::detail::BOOST_PP_CAT(BOOST_PP_ARRAY_ELEM(1,LSHAPE),Domain)(LDIM,LORDER) );
 
 # define FACTORY1_OP(_, GDO) FACTORY1 GDO
 
@@ -560,7 +599,7 @@ struct EllipsoidDomain
 # define FACTORY2(LDIM,LORDER,LSHAPE )                                  \
     const bool BOOST_PP_CAT( BOOST_PP_CAT( BOOST_PP_CAT( BOOST_PP_CAT( mesh, LDIM ), LORDER), BOOST_PP_ARRAY_ELEM(1,LSHAPE)), BOOST_PP_ARRAY_ELEM(2,LSHAPE))   = \
                 Gmsh::Factory::type::instance().registerProduct( boost::to_lower_copy( boost::algorithm::erase_all_copy( std::string( FACTORY2NAME(LDIM, LORDER, LSHAPE ) ), " " ) ), \
-                                                                 *new detail::BOOST_PP_CAT(BOOST_PP_ARRAY_ELEM(1,LSHAPE),Domain)(LDIM,LORDER,LDIM,boost::to_lower_copy(std::string(BOOST_PP_STRINGIZE(BOOST_PP_ARRAY_ELEM(2,LSHAPE)))) ));
+                                                                 *new Feel::detail::BOOST_PP_CAT(BOOST_PP_ARRAY_ELEM(1,LSHAPE),Domain)(LDIM,LORDER,LDIM,boost::to_lower_copy(std::string(BOOST_PP_STRINGIZE(BOOST_PP_ARRAY_ELEM(2,LSHAPE)))) ));
 
 # define FACTORY2_OP(_, GDO) FACTORY2 GDO
 
@@ -568,10 +607,10 @@ struct EllipsoidDomain
 BOOST_PP_LIST_FOR_EACH_PRODUCT( FACTORY1_OP, 3, ( DIMS, ORDERS, SHAPES1 ) )
 BOOST_PP_LIST_FOR_EACH_PRODUCT( FACTORY2_OP, 3, ( DIMS, ORDERS, SHAPES2 ) )
 
-const bool meshs213s = Gmsh::Factory::type::instance().registerProduct( "hypercube(2,1,3,simplex)", *new detail::HypercubeDomain( 2, 1, 3, "simplex" ) );
-const bool meshs213ts = Gmsh::Factory::type::instance().registerProduct( "hypercube(2,1,3,hypercube)", *new detail::HypercubeDomain( 2, 1, 3, "hypercube" ) );
-const bool meshs112s = Gmsh::Factory::type::instance().registerProduct( "hypercube(1,1,2,simplex)", *new detail::HypercubeDomain( 1, 1, 2, "simplex" ) );
-const bool meshs112ts = Gmsh::Factory::type::instance().registerProduct( "hypercube(1,1,2,yypercube)", *new detail::HypercubeDomain( 1, 1, 2, "yypercube" ) );
+const bool meshs213s = Gmsh::Factory::type::instance().registerProduct( "hypercube(2,1,3,simplex)", *new Feel::detail::HypercubeDomain( 2, 1, 3, "simplex" ) );
+const bool meshs213ts = Gmsh::Factory::type::instance().registerProduct( "hypercube(2,1,3,hypercube)", *new Feel::detail::HypercubeDomain( 2, 1, 3, "hypercube" ) );
+const bool meshs112s = Gmsh::Factory::type::instance().registerProduct( "hypercube(1,1,2,simplex)", *new Feel::detail::HypercubeDomain( 1, 1, 2, "simplex" ) );
+const bool meshs112ts = Gmsh::Factory::type::instance().registerProduct( "hypercube(1,1,2,yypercube)", *new Feel::detail::HypercubeDomain( 1, 1, 2, "hypercube" ) );
 
 /// \endcond detail
 } // Feel

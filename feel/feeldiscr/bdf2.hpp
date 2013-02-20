@@ -2,7 +2,7 @@
 
    This file is part of the Feel library
 
-   Author(s): Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+   Author(s): Christophe Prud'homme <christophe.prudhomme@feelpp.org>
    Date: 2006-12-30
 
    Copyright (C) 2006-2008 Université Joseph Fourier (Grenoble)
@@ -23,7 +23,7 @@
 */
 /**
    \file bdf.hpp
-   \author Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+   \author Christophe Prud'homme <christophe.prudhomme@feelpp.org>
    \date 2006-12-30
 */
 #ifndef _BDF_H
@@ -87,6 +87,7 @@ public:
         M_order_cur( 1 ),
         M_name( "bdf" ),
         M_time( 0.0 ),
+        M_iteration( 0 ),
         M_Ti( 0.0 ),
         M_Tf( 1.0 ),
         M_dt( 1.0 ),
@@ -95,6 +96,7 @@ public:
         M_n_restart( 0 ),
         M_restart( false ),
         M_restartPath( "" ),
+        M_restartAtLastSave( false ),
         M_alpha( BDF_MAX_ORDER ),
         M_beta( BDF_MAX_ORDER ),
         M_saveInFile( true ),
@@ -108,6 +110,7 @@ public:
         M_order( args[_order | 1] ),
         M_name( args[_name | "bdf"] ),
         M_time( args[_initial_time | 0] ),
+        M_iteration( 0 ),
         M_Ti( args[_initial_time | 0] ),
         M_Tf( args[_final_time | 1] ),
         M_dt( args[_time_step | 0.1] ),
@@ -117,6 +120,7 @@ public:
         M_n_restart( 0 ),
         M_restart( args[_restart | false] ),
         M_restartPath( args[_restart_path | ""] ),
+        M_restartAtLastSave( args[_restart_at_last_save | false] )
         M_alpha( BDF_MAX_ORDER ),
         M_beta( BDF_MAX_ORDER ),
         M_saveInFile( true ),
@@ -131,6 +135,7 @@ public:
         M_order_cur( M_order ),
         M_name( name ),
         M_time( vm[prefixvm( prefix, "bdf.time-initial" )].as<double>() ),
+        M_iteration( 0 ),
         M_iterations_between_order_change( vm[prefixvm( prefix, "bdf.iterations-between-order-change" )].as<int>() ),
         M_Ti( vm[prefixvm( prefix, "bdf.time-initial" )].as<double>() ),
         M_Tf( vm[prefixvm( prefix, "bdf.time-final" )].as<double>() ),
@@ -140,6 +145,7 @@ public:
         M_n_restart( 0 ),
         M_restart( vm[prefixvm( prefix, "bdf.restart" )].as<bool>() ),
         M_restartPath( vm[prefixvm( prefix, "bdf.restart.path" )].as<std::string>() ),
+        M_restartAtLastSave( vm[prefixvm( prefix, "bdf.restart.at-last-save" )].as<bool>() ),
         M_alpha( BDF_MAX_ORDER ),
         M_beta( BDF_MAX_ORDER ),
         M_saveInFile( vm[prefixvm( prefix, "bdf.save" )].as<bool>() ),
@@ -152,6 +158,7 @@ public:
         M_order_cur( 1 ),
         M_name( name ),
         M_time( 0. ),
+        M_iteration( 0 ),
         M_iterations_between_order_change( 1 ),
         M_Ti( 0. ),
         M_Tf( 1.0 ),
@@ -161,6 +168,7 @@ public:
         M_n_restart( 0 ),
         M_restart( false ),
         M_restartPath( "" ),
+        M_restartAtLastSave( false ),
         M_alpha( BDF_MAX_ORDER ),
         M_beta( BDF_MAX_ORDER ),
         M_saveInFile( true ),
@@ -174,6 +182,7 @@ public:
         M_order_cur( b.M_order_cur ),
         M_name( b.M_name ),
         M_time( b.M_time ),
+        M_iteration( b.M_iteration ),
         M_iterations_between_order_change( b.M_iterations_between_order_change ),
         M_Ti( b.M_Ti ),
         M_Tf( b.M_Tf ),
@@ -183,6 +192,7 @@ public:
         M_n_restart( b.M_n_restart ),
         M_restart( b.M_restart ),
         M_restartPath( b.M_restartPath ),
+        M_restartAtLastSave( b.M_restartAtLastSave ),
         M_time_values_map( b.M_time_values_map ),
         M_alpha( b.M_alpha ),
         M_beta( b.M_beta ),
@@ -212,6 +222,7 @@ public:
             M_order_cur = b.M_order_cur;
             M_name = b.M_name;
             M_time = b.M_time;
+            M_iteration = b.M_iteration;
             M_Ti = b.M_Ti;
             M_Tf = b.M_Tf;
             M_dt = b.M_dt;
@@ -219,6 +230,7 @@ public:
             M_n_restart = b.M_n_restart;
             M_restart = b.M_restart;
             M_restartPath = b.M_restartPath;
+            M_restartAtLastSave = b.M_restartAtLastSave;
             M_strategy = b.M_strategy;
             M_state = b.M_state;
 
@@ -255,7 +267,7 @@ public:
 
         for ( auto it = M_time_values_map.begin(), en = M_time_values_map.end(); it!=en; ++it )
         {
-            //Log() << "[Bdf] order " << i << "=" << M_time_orders[i] << "\n";
+            //LOG(INFO) << "[Bdf] order " << i << "=" << M_time_orders[i] << "\n";
             Debug( 5017 ) << "[Bdf::serialize] value " << *it << "\n";
 
         }
@@ -317,6 +329,12 @@ public:
         return M_restart;
     }
 
+    //! return value of do restart at last save
+    bool doRestartAtLastSave() const
+    {
+        return M_restartAtLastSave;
+    }
+
     //! return the current time
     double time() const
     {
@@ -364,13 +382,14 @@ public:
         M_time = M_Ti+this->timeStep();
         M_last_iteration_since_order_change = 1;
         M_order_cur = 1;
+        ++M_iteration;
 
         for ( int i = 2; i<=M_iteration; ++i )
         {
             if ( ( ( i - M_last_iteration_since_order_change ) == M_iterations_between_order_change )&&
                     M_order_cur < M_order )
             {
-                M_last_iteration_since_order_change = M_iteration;
+                M_last_iteration_since_order_change = i;
                 ++M_order_cur;
             }
         }
@@ -540,7 +559,10 @@ public:
     {
         M_restartPath=s;
     }
-
+    void setRestartAtLastSave( bool b )
+    {
+        M_restartAtLastSave=b;
+    }
     void setSaveInFile( bool b )
     {
         M_saveInFile = b;
@@ -548,12 +570,12 @@ public:
 
     void print() const
     {
-        Log() << "============================================================\n";
-        Log() << "BDF Information\n";
-        Log() << "   time step : " << this->timeStep() << "\n";
-        Log() << "time initial : " << this->timeInitial() << "\n";
-        Log() << "  time final : " << this->timeFinal() << "\n";
-        Log() << "  time order : " << this->timeOrder() << "\n";
+        LOG(INFO) << "============================================================\n";
+        LOG(INFO) << "BDF Information\n";
+        LOG(INFO) << "   time step : " << this->timeStep() << "\n";
+        LOG(INFO) << "time initial : " << this->timeInitial() << "\n";
+        LOG(INFO) << "  time final : " << this->timeFinal() << "\n";
+        LOG(INFO) << "  time order : " << this->timeOrder() << "\n";
     }
 protected:
     //! time order
@@ -585,8 +607,15 @@ protected:
     mutable BDFState M_state;
 
     int M_n_restart;
+
+    //! do a restart
     bool M_restart;
-    fs::path M_restartPath;//M_pathRestart;
+
+    //! restart path
+    fs::path M_restartPath;
+
+    //! do restart with ti the last save
+    bool M_restartAtLastSave;
 
     //! timer for real time per iteration
     mutable boost::timer M_timer;
@@ -700,6 +729,9 @@ protected:
                 Debug( 5017 ) << "[Bdf::init()] metadata loaded\n";
                 //BdfBaseMetadata bdfloader( *this );
                 //bdfloader.load();
+
+                // modify Ti with last saved time
+                if (this->doRestartAtLastSave()) M_Ti = M_time_values_map.back();
 
                 M_iteration = 0;
                 // look for M_ti in the time values
@@ -1011,7 +1043,7 @@ Bdf<SpaceType>::init()
 
     if ( this->isRestart() )
     {
-        for ( int p = 0; p < std::min( M_order, M_iteration ); ++p )
+        for ( int p = 0; p < std::min( M_order, M_iteration+1 ); ++p )
         {
             // create and open a character archive for output
             std::ostringstream ostr;
@@ -1083,8 +1115,8 @@ double
 Bdf<SpaceType>::start( element_type const& u0 )
 {
     this->init();
-    auto res = super::start();
     this->initialize( u0 );
+    auto res = super::start();
     return res;
 }
 
@@ -1093,8 +1125,8 @@ double
 Bdf<SpaceType>::start( unknowns_type const& uv0 )
 {
     this->init();
-    auto res = super::start();
     this->initialize( uv0 );
+    auto res = super::start();
     return res;
 }
 
@@ -1228,9 +1260,9 @@ BOOST_PARAMETER_FUNCTION(
     ( boost::shared_ptr<Bdf<typename meta::remove_all<typename parameter::binding<Args, tag::space>::type>::type::value_type> > ),
     bdf, tag,
     ( required
-      ( space,*( boost::is_convertible<mpl::_,boost::shared_ptr<Feel::FunctionSpaceBase> > ) )
-      ( vm,* ) )
+      ( space,*( boost::is_convertible<mpl::_,boost::shared_ptr<Feel::FunctionSpaceBase> > ) ) )
     ( optional
+      ( vm,*, Environment::vm() )
       ( prefix,*,"" )
       ( name,*,"bdf" )
       ( order,*( boost::is_integral<mpl::_> ),vm[prefixvm( prefix,"bdf.order" )].template as<int>() )
@@ -1241,7 +1273,8 @@ BOOST_PARAMETER_FUNCTION(
       ( steady,*( bool ),vm[prefixvm( prefix,"bdf.steady" )].template as<bool>() )
       ( restart,*( boost::is_integral<mpl::_> ),vm[prefixvm( prefix,"bdf.restart" )].template as<bool>() )
       ( restart_path,*,vm[prefixvm( prefix,"bdf.restart.path" )].template as<std::string>() )
-      ( save,*,vm[prefixvm( prefix,"bdf.save" )].template as<bool>() )
+      ( restart_at_last_save,*( boost::is_integral<mpl::_> ),vm[prefixvm( prefix,"bdf.restart.at-last-save" )].template as<bool>() )
+      ( save,*( boost::is_integral<mpl::_> ),vm[prefixvm( prefix,"bdf.save" )].template as<bool>() )
     ) )
 {
     typedef typename meta::remove_all<space_type>::type::value_type _space_type;
@@ -1254,6 +1287,7 @@ BOOST_PARAMETER_FUNCTION(
     thebdf->setStrategy( strategy );
     thebdf->setRestart( restart );
     thebdf->setRestartPath( restart_path );
+    thebdf->setRestartAtLastSave( restart_at_last_save );
     thebdf->setSaveInFile( save );
     return thebdf;
 }

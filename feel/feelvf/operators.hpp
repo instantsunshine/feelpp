@@ -3,7 +3,7 @@
 
   This file is part of the Feel library
 
-  Author(s): Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+  Author(s): Christophe Prud'homme <christophe.prudhomme@feelpp.org>
        Date: 2005-01-17
 
   Copyright (C) 2005,2006 EPFL
@@ -25,7 +25,7 @@
 */
 /**
    \file operators.hpp
-   \author Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+   \author Christophe Prud'homme <christophe.prudhomme@feelpp.org>
    \date 2005-01-17
  */
 #if !defined( __FEELPP_VF_OPERATORS_HPP )
@@ -247,6 +247,14 @@ enum OperatorType { __TEST, __TRIAL, __VALUE };
             {                                                           \
                 Debug( 5051 ) << "[" BOOST_PP_STRINGIZE(VF_OPERATOR_NAME( O )) "] copy constructor\n"; \
             }                                                           \
+            template<typename TheExpr>                                  \
+            struct Lambda                                               \
+            {                                                           \
+                typedef this_type type;                                 \
+            };                                                          \
+            template<typename TheExpr>                                  \
+                typename Lambda<TheExpr>::type                          \
+                operator()( TheExpr const& e  ) { return *this; }       \
                                                                         \
             element_type const& e() const { return M_v; }              \
             template<typename Geo_t, typename Basis_i_t, typename Basis_j_t = Basis_i_t> \
@@ -255,15 +263,15 @@ enum OperatorType { __TEST, __TRIAL, __VALUE };
                 typedef this_type expression_type;                      \
                 typedef BOOST_PP_CAT( Basis_,BOOST_PP_CAT(VF_OP_SWITCH( BOOST_PP_NOT( VF_OP_TYPE_IS_TRIAL( T ) ), i ,j ), _t)) map_basis_context_type; \
                 typedef typename mpl::if_<mpl::bool_<VF_OP_TYPE_IS_VALUE( T )>, \
-                    typename mpl::if_<fusion::result_of::has_key<Geo_t, detail::gmc<0> >, \
-                    mpl::identity<detail::gmc<0> >,                     \
-                    mpl::identity<detail::gmc<1> > >::type,             \
-                    typename mpl::if_<fusion::result_of::has_key<map_basis_context_type, detail::gmc<0> >, \
-                    mpl::identity<detail::gmc<0> >,                     \
-                    mpl::identity<detail::gmc<1> > >::type>::type::type key_type; \
-                typedef typename mpl::if_<fusion::result_of::has_key<map_basis_context_type, detail::gmc<0> >, \
-                    mpl::identity<detail::gmc<0> >,                     \
-                    mpl::identity<detail::gmc<1> > >::type::type basis_context_key_type;  \
+                    typename mpl::if_<fusion::result_of::has_key<Geo_t,vf::detail::gmc<0> >, \
+                    mpl::identity<vf::detail::gmc<0> >,                     \
+                    mpl::identity<vf::detail::gmc<1> > >::type,             \
+                    typename mpl::if_<fusion::result_of::has_key<map_basis_context_type,vf::detail::gmc<0> >, \
+                    mpl::identity<vf::detail::gmc<0> >,                     \
+                    mpl::identity<vf::detail::gmc<1> > >::type>::type::type key_type; \
+                typedef typename mpl::if_<fusion::result_of::has_key<map_basis_context_type,vf::detail::gmc<0> >, \
+                    mpl::identity<vf::detail::gmc<0> >,                     \
+                    mpl::identity<vf::detail::gmc<1> > >::type::type basis_context_key_type;  \
                 typedef typename fusion::result_of::value_at_key<Geo_t,key_type>::type::element_type gmc_type; \
                 typedef boost::shared_ptr<gmc_type> gmc_ptrtype;        \
                 typedef typename gmc_type::gm_type gm_type;             \
@@ -560,8 +568,14 @@ enum OperatorType { __TEST, __TRIAL, __VALUE };
                     BOOST_MPL_ASSERT_MSG( VF_OP_TYPE_IS_VALUE( T ), INVALID_CALL_TO_EVALQ, ()); \
                     return evalq( c1, c2, q, mpl::int_<shape::rank>() ); \
                 }                                                       \
+                ret_type const&                                         \
+                    evalq( uint16_type q ) const                        \
+                {                                                       \
+                    BOOST_MPL_ASSERT_MSG( VF_OP_TYPE_IS_VALUE( T ), INVALID_CALL_TO_EVALQ, ()); \
+                    return M_loc[q];                                    \
+                }                                                       \
             private:                                                    \
-                                               \
+                                                                        \
                     result_type                                         \
                     evaliq_( uint16_type /*i*/,                       \
                              uint16_type /*c1*/, uint16_type /*c2*/,    \

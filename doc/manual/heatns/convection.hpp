@@ -3,7 +3,7 @@
   This file is part of the Feel library
 
   Author(s): Samuel Quinodoz
-             Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+             Christophe Prud'homme <christophe.prudhomme@feelpp.org>
        Date: 2009-02-25
 
   Copyright (C) 2007 Samuel Quinodoz
@@ -28,7 +28,7 @@
 
 /**
    \file convection.cpp
-   \author Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+   \author Christophe Prud'homme <christophe.prudhomme@feelpp.org>
    \author Samuel Quinodoz
    \date 2009-02-25
  */
@@ -47,6 +47,7 @@
 
 // linear operators
 #include <feel/feeldiscr/operatorlinear.hpp>
+#include <feel/feeldiscr/operatorlagrangep1.hpp>
 
 // exporter
 #include <feel/feelfilters/exporter.hpp>
@@ -111,14 +112,15 @@ public:
 
 #if defined( FEELPP_USE_LM )
     typedef Lagrange<0, Scalar> basis_l_type; // multipliers for pressure space
-    typedef fusion::vector< basis_u_type , basis_p_type , basis_t_type,basis_l_type> basis_type;
+    typedef bases< basis_u_type , basis_p_type , basis_t_type,basis_l_type> basis_type;
 #else
-    typedef fusion::vector< basis_u_type , basis_p_type , basis_t_type> basis_type;
+    typedef bases< basis_u_type , basis_p_type , basis_t_type> basis_type;
 #endif
 
     //! numerical type is double
     typedef double value_type;
 
+    typedef FunctionSpace<mesh_type, basis_t_type> t_space_type;
     typedef FunctionSpace<mesh_type, basis_type> space_type;
     typedef boost::shared_ptr<space_type> space_ptrtype;
     typedef typename space_type::element_type element_type;
@@ -156,7 +158,8 @@ public:
 
     // Definition de la procedure pour exporter les solutions
     void exportResults( boost::format, element_type& U, double t );
-    
+    void exportResults( element_type& U, int i );
+
 private:
     void initLinearOperator( sparse_matrix_ptrtype& L );
     void initLinearOperator2( sparse_matrix_ptrtype& L );
@@ -167,6 +170,7 @@ private:
     backend_ptrtype M_backend;
 
     space_ptrtype Xh;
+    boost::shared_ptr<OperatorLagrangeP1<typename space_type::sub_functionspace<2>::type::value_type> > P1h;
 
     oplin_ptrtype M_oplin;
     funlin_ptrtype M_lf;

@@ -2,7 +2,7 @@
 
   This file is part of the Feel library
 
-  Author(s): Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+  Author(s): Christophe Prud'homme <christophe.prudhomme@feelpp.org>
        Date: 2009-03-04
 
   Copyright (C) 2009 Universite Joseph Fourier (Grenoble I)
@@ -23,7 +23,7 @@
 */
 /**
    \file convection_jacobian.cpp
-   \author Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+   \author Christophe Prud'homme <christophe.prudhomme@feelpp.org>
    \date 2009-03-04
  */
 #include <convection.hpp>
@@ -33,14 +33,13 @@ void Convection ::updateJacobian( const vector_ptrtype& X,
         sparse_matrix_ptrtype& J )
 {
     boost::timer ti;
-    Log() << "[updateJacobian] start\n";
+    LOG(INFO) << "[updateJacobian] start\n";
 
     if ( !J )
     {
         J =  M_backend->newMatrix( _test=Xh, _trial=Xh );
         M_D =  M_backend->newMatrix( _test=Xh, _trial=Xh );
         M_L =  M_backend->newMatrix( _test=Xh, _trial=Xh );
-        std::cout << "newMatrices J = D + L.\n";
 
         this->initLinearOperator( M_L );
         this->initLinearOperator2( M_L );
@@ -81,12 +80,7 @@ void Convection ::updateJacobian( const vector_ptrtype& X,
         else
             form2( Xh, Xh, M_D )  += on ( markedfaces( mesh, "Tfixed" ),t,Rtemp,cst( T0 ) );
     }
-    //L->printMatlab( "L.m" );
-    //J->printMatlab( "J1.m" );
-    //D->printMatlab( "D1.m" );
-    //J->addMatrix( 1.0, D );
-    //J->printMatlab( "J.m" );
-    Log() << "[updateJacobian] done in " << ti.elapsed() << "s\n";
+    LOG(INFO) << "[updateJacobian] done in " << ti.elapsed() << "s\n";
 
     J->addMatrix( 1.0, M_L);
     J->addMatrix( 1.0, M_D);

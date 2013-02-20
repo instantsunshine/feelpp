@@ -2,7 +2,7 @@
 
   This file is part of the Feel library
 
-  Author(s): Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+  Author(s): Christophe Prud'homme <christophe.prudhomme@feelpp.org>
        Date: 2009-03-04
 
   Copyright (C) 2009 Universite Joseph Fourier (Grenoble I)
@@ -23,7 +23,7 @@
 */
 /**
    \file convection_other.cpp
-   \author Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+   \author Christophe Prud'homme <christophe.prudhomme@feelpp.org>
    \date 2009-03-04
  */
 #include <boost/lexical_cast.hpp>
@@ -59,11 +59,14 @@ Convection::Convection( int argc,
     int state = this->vm()["steady"]. as<int>() ;
     int weakdir( this->vm()["weakdir"]. as<int>() );
 
-    std::string repository = this->vm()["output_dir"]. as<std::string>() + "/%1%/meshsize=%2%/procs_%3%/" ;
+    double gr( this->vm()["gr"]. as<double>() );
+    double pr = this->vm()["pr"]. as<double>();
+    std::string repository = this->vm()["output_dir"]. as<std::string>() + "/%1%/meshsize=%2%/(gr_%3%,pr_%4%)" ;
     this->changeRepository( boost::format( repository )
                             % this->about().appName()
                             % meshSize
-                            % Environment::numberOfProcessors() );
+                            % gr
+                            % pr);
 
 }
 // <int Order_s, int Order_p, int Order_t>
@@ -97,8 +100,8 @@ Convection::createMesh()
          << "Line(3) = {3,5};\n"
          << "Line(4) = {5,4};\n"
          << "Line(5) = {4,1};\n"
-         << "Line(6) = {5,6};\n"
-         << "Line Loop(7) = {1,2,3,4,5,6};\n"
+         << "//Line(6) = {5,6};\n"
+         << "Line Loop(7) = {1,2,3,4,5};\n"
          //<< "Line Loop(7) = {1,2,3,4,5};\n"
          << "Plane Surface(8) = {7};\n";
 #if CONVECTION_DIM == 2
@@ -112,11 +115,20 @@ Convection::createMesh()
     ostr << "Extrude {0, 0, 1} {\n"
          << "   Surface{8};\n"
          << "}\n"
+#if 0
          << "Physical Surface(\"Tfixed\") = {35};\n"
          << "Physical Surface(\"Tflux\") = {23};\n"
          << "Physical Surface(\"Tinsulated\") = {19, 40, 8, 31, 27};\n"
         //<< "Physical Surface(\"Fflux\") = {39};\n"
          << "Physical Surface(\"F.wall\") = {31, 27, 23, 19, 35, 40, 8};\n"
+
+#else
+         << "Physical Surface(\"Tfixed\") = {34}\n;"
+         << "Physical Surface(\"Tflux\") = {22};\n"
+         << "Physical Surface(\"Tinsulated\") = {30, 26, 8, 35, 18};\n"
+         << "Physical Surface(\"F.wall\") = {30, 26, 8, 34, 18, 35, 22};\n"
+
+#endif
          << "Physical Volume(\"domain\") = {1};\n";
 #endif
     std::ostringstream fname;
@@ -124,7 +136,7 @@ Convection::createMesh()
 
     gmshp->setPrefix( fname.str() );
     gmshp->setDescription( ostr.str() );
-    Log() << "[timer] createMesh(): " << timers["mesh"].second << "\n";
+    LOG(INFO) << "[timer] createMesh(): " << timers["mesh"].second << "\n";
 
     return gmshp;
 
@@ -137,18 +149,27 @@ void Convection ::solve( sparse_matrix_ptrtype & J ,
         vector_ptrtype& F )
 {
     M_backend->nlSolve( _solution= u );
-};
+}
 
 // <int Order_s, int Order_p, int Order_t>
 void Convection ::exportResults( boost::format fmt, element_type& U, double t )
 {
     exporter->addPath( fmt );
-    exporter->step( t )->setMesh( U.functionSpace()->mesh() );
+    exporter->step( t )->setMesh( P1h->mesh() );
     exporter->step( t )->add( "u", U. element<0>() );
     exporter->step( t )->add( "p", U. element<1>() );
     exporter->step( t )->add( "T", U. element<2>() );
     exporter->save();
-};
+}
 
+// <int Order_s, int Order_p, int Order_t>
+void Convection ::exportResults( element_type& U, int i )
+{
+    exporter->step( i )->setMesh( P1h->mesh() );
+    exporter->step( i )->add( "u", U. element<0>() );
+    exporter->step( i )->add( "p", U. element<1>() );
+    exporter->step( i )->add( "T", U. element<2>() );
+    exporter->save();
+}
 // instantiation
 // class Convection<2,1,2>;

@@ -2,7 +2,7 @@
 
   This file is part of the Feel library
 
-  Author(s): Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+  Author(s): Christophe Prud'homme <christophe.prudhomme@feelpp.org>
        Date: 2008-09-30
 
   Copyright (C) 2008-2012 Universite Joseph Fourier (Grenoble I)
@@ -23,7 +23,7 @@
 */
 /**
    \file periodic.hpp
-   \author Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+   \author Christophe Prud'homme <christophe.prudhomme@feelpp.org>
    \date 2008-09-30
  */
 #ifndef __Periodic_H
@@ -106,6 +106,7 @@ public:
      */
     //@{
 
+    Periodic() : M_tag1(invalid_uint16_type_value), M_tag2(invalid_uint16_type_value), M_trans() {}
     Periodic( uint16_type tag1, uint16_type tag2, node_type const& trans ) : M_tag1( tag1 ), M_tag2( tag2 ), M_trans( trans ) {}
     Periodic( Periodic const & p ) : M_tag1( p.M_tag1 ), M_tag2( p.M_tag2 ), M_trans( p.M_trans ) {}
     ~Periodic() {}

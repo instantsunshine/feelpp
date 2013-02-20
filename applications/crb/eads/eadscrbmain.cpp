@@ -2,7 +2,7 @@
 
   This file is part of the Feel library
 
-  Author(s): Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+  Author(s): Christophe Prud'homme <christophe.prudhomme@feelpp.org>
        Date: 2010-03-22
 
   Copyright (C) 2010-2011 Université Joseph Fourier (Grenoble I)
@@ -23,7 +23,7 @@
 */
 /**
    \file opuseadscrbapp.cpp
-   \author Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+   \author Christophe Prud'homme <christophe.prudhomme@feelpp.org>
    \date 2010-03-22
  */
 #include <eads.hpp>
@@ -34,20 +34,16 @@
 int
 main( int argc, char** argv )
 {
+    using namespace Feel;
+    Environment env( _argc=argc, _argv=argv,
+                     _desc=opusapp_options("eadscrb")
+                     .add(makeEadsOptions())
+                     .add(crbOptions())
+                     .add(eimOptions()),
+                     _about=makeEadsAbout( "eadscrb" ));
 
-    Feel::Environment env( argc, argv );
-    Feel::OpusApp<Feel::OpusModelRB<2,1,2> > app( argc, argv,
-            Feel::makeEadsAbout( "eadscrb" ),
-            Feel::makeEadsOptions() );
-
-    if ( app.vm().count( "help" ) )
-    {
-        std::cout << app.optionsDescription() << "\n";
-        return 0;
-    }
-
+    OpusApp<OpusModelRB<2,1,2> > app ;
     app.run();
-
 }
 
 

@@ -2,7 +2,7 @@
 
   This file is part of the Feel library
 
-  Author(s): Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+  Author(s): Christophe Prud'homme <christophe.prudhomme@feelpp.org>
        Date: 2005-10-18
 
   Copyright (C) 2005,2006 EPFL
@@ -24,7 +24,7 @@
 */
 /**
    \file vectorpetsc.hpp
-   \author Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+   \author Christophe Prud'homme <christophe.prudhomme@feelpp.org>
    \date 2005-10-18
  */
 #ifndef __VectorPetsc_H
@@ -636,7 +636,6 @@ public:
         value_type *array = *((value_type**)this->vec()->data);
         int n             = this->vec()->map->n;
         int N             = this->vec()->map->N;
-
         int rank;
         MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
@@ -829,6 +828,7 @@ public:
 
     void duplicateFromOtherPartition( Vector<T> const& vecInput );
 
+    value_type dot( Vector<T> const& __v );
 private :
 
     void duplicateFromOtherPartition_run( Vector<T> const& vecInput );

@@ -27,7 +27,7 @@ option(FEELPP_ENABLE_MANUAL "enable compilation of Feel++ manual (requires latex
 if ( FEELPP_ENABLE_MANUAL )
 include(UseLATEX OPTIONAL)
 
-foreach(cppfile "tutorial/*.cpp" "nonlinear/*.cpp" )
+foreach(cppfile "tutorial/*.cpp" "nonlinear/*.cpp" "../../mycode/laplacian_dirichlet_homogene.cpp")
  FILE(GLOB CPPFILE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ${cppfile})
  SET(CPPFILES "${CPPFILES};${CPPFILE}")
 endforeach()
@@ -48,6 +48,7 @@ ENDIF()
 
 add_latex_document(feel-manual.tex
   INPUTS
+  tutorial/crash_course.tex
   tutorial/building.tex
   tutorial/getting-started.tex
   tutorial/feel.tex
@@ -61,11 +62,12 @@ add_latex_document(feel-manual.tex
   ../biblio/feel-manual.bib
   ../biblio/feelpp.bib
   ../biblio/feelpp-thesis.bib
-  IMAGE_DIRS pngs pdfs pngs/mymesh pngs/heatsink pngs/laplacian
+  IMAGE_DIRS pngs pdfs pngs/mymesh pngs/heatsink pngs/Laplacian
   USE_INDEX
   DEFAULT_PDF
+  MANGLE_TARGET_NAMES
   )
-SET_TARGET_PROPERTIES(pdf PROPERTIES EXCLUDE_FROM_ALL true)
+SET_TARGET_PROPERTIES(feel-manual_pdf PROPERTIES EXCLUDE_FROM_ALL true)
 endif()
 
 # this target allows to create all the required figures for the tutorial
@@ -176,10 +178,12 @@ add_subdirectory(tutorial)
 
 if (NOT FEELPP_MINIMAL_CONFIGURATION)
   add_subdirectory(dd)
-  #add_subdirectory(heat)
+  add_subdirectory(heat)
+  add_subdirectory(solid)
   add_subdirectory(heatns)
   add_subdirectory(nonlinear)
   add_subdirectory(adapt)
   add_subdirectory(nirb)
   add_subdirectory(fd)
+  add_subdirectory(maxwell)
 endif()

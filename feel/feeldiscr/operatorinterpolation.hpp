@@ -2,7 +2,7 @@
 
   This file is part of the Feel library
 
-  Author(s): Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+  Author(s): Christophe Prud'homme <christophe.prudhomme@feelpp.org>
        Date: 2008-02-01
 
   Copyright (C) 2008-2012 Universite Joseph Fourier (Grenoble I)
@@ -23,7 +23,7 @@
 */
 /**
    \file operatorinterpolation.hpp
-   \author Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+   \author Christophe Prud'homme <christophe.prudhomme@feelpp.org>
    \author Chabannes Vincent <vincent.chabannes@imag.fr>
    \date 2008-02-01
  */
@@ -554,7 +554,11 @@ OperatorInterpolation<DomainSpaceType, ImageSpaceType,IteratorRange,InterpType>:
     //-----------------------------------------
     //init the localization tool
     auto locTool = this->domainSpace()->mesh()->tool_localization();
-    locTool->updateForUse();
+    if ( this->interpolationType().onlyLocalizeOnBoundary() ) locTool->updateForUseBoundaryFaces();
+    else locTool->updateForUse();
+    // kdtree parameter
+    locTool->kdtree()->nbNearNeighbor(this->interpolationType().nbNearNeighborInKdTree());
+
     //locTool->kdtree()->nbNearNeighbor(3);
     //locTool->kdtree()->nbNearNeighbor(this->domainSpace()->mesh()->numElements());
     //locTool->setExtrapolation(false);
@@ -562,7 +566,7 @@ OperatorInterpolation<DomainSpaceType, ImageSpaceType,IteratorRange,InterpType>:
     //-----------------------------------------
     // usefull data
     matrix_node_type ptsReal( image_mesh_type::nRealDim, 1 );
-    matrix_node_type ptsRef( image_mesh_type::nRealDim , 1 );
+    matrix_node_type ptsRef( domain_mesh_type::nDim , 1 );
     typename domain_mesh_type::Localization::container_search_iterator_type itanal,itanal_end;
     typename domain_mesh_type::Localization::container_output_iterator_type itL,itL_end;
     matrix_node_type MlocEval( domain_basis_type::nLocalDof*domain_basis_type::nComponents1,1 );

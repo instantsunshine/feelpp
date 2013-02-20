@@ -2,7 +2,7 @@
 
   This file is part of the Feel library
 
-  Author(s): Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+  Author(s): Christophe Prud'homme <christophe.prudhomme@feelpp.org>
        Date: 2009-11-13
 
   Copyright (C) 2009 Université Joseph Fourier (Grenoble I)
@@ -23,7 +23,7 @@
 */
 /**
    \file AdvectionDiffusion.hpp
-   \author Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
+   \author Christophe Prud'homme <christophe.prudhomme@feelpp.org>
    \date 2009-11-13
  */
 #ifndef __AdvectionDiffusion_H
@@ -76,7 +76,7 @@ makeAdvectionDiffusionAbout( std::string const& str = "AdvectionDiffusion" )
                            Feel::AboutData::License_GPL,
                            "Copyright (c) 2011 Université de Grenoble 1 (Joseph Fourier)" );
 
-    about.addAuthor( "Christophe Prud'homme", "developer", "christophe.prudhomme@ujf-grenoble.fr", "" );
+    about.addAuthor( "Christophe Prud'homme", "developer", "christophe.prudhomme@feelpp.org", "" );
     return about;
 }
 
@@ -157,7 +157,7 @@ public:
     typedef boost::shared_ptr<mesh_type> mesh_ptrtype;
 
     /*basis*/
-    typedef fusion::vector<Lagrange<Order, Scalar> > basis_type;
+    typedef bases<Lagrange<Order, Scalar> > basis_type;
 
     /*space*/
     typedef FunctionSpace<mesh_type, basis_type, value_type> space_type;
@@ -473,7 +473,7 @@ AdvectionDiffusion::init()
     R.setMarker( _type="line",_name="Top",_marker3=true );
     R.setMarker( _type="line",_name="Outflow",_marker2=true );
     R.setMarker( _type="surface",_name="Omega",_markerAll=true );
-    mesh = R.createMesh<mesh_type>( "Omega" );
+    mesh = R.createMesh<mesh_type>( _mesh=mesh, _name="Omega" );
 
 
     /*
@@ -570,7 +570,7 @@ AdvectionDiffusion::exportResults( element_type& U , parameter_type const& mu )
 
     if ( M_do_export )
     {
-        Log() << "exportResults starts\n";
+        LOG(INFO) << "exportResults starts\n";
 
         std::string exp_name;
         export_ptrtype exporter;
