@@ -159,11 +159,12 @@ public:
      * Constructor.  Extracts a subvector from 'V' using mapping 'is'
      * without copy.
      */
-    VectorPetsc( VectorPetsc<value_type> &V, IS &is )
+    VectorPetsc( VectorPetsc<value_type> const& V, IS &is )
         :
         super(),
         _M_destroy_vec_on_exit( false )
     {
+        int ierr=0;
         /* map */
         PetscInt n;
         ISGetSize(is,&n);
@@ -171,10 +172,43 @@ public:
         this->setMap(dm);
         /* init */
         VecGetSubVector(V.vec(), is, &this->_M_vec);
+        CHKERRABORT( V.comm(),ierr );
         this->M_is_initialized = true;
         /* close */
         this->close(); /* no // assembly required */
     }
+
+    /**
+     * Constructor.  Extracts a subvector from 'v' using vector of 'index'
+     * without copy.
+     */
+
+    VectorPetsc( VectorPetsc<value_type> const& V, std::vector<int> const& index )
+        :
+        super(),
+        _M_destroy_vec_on_exit( false )
+    {
+
+        int ierr=0;
+        PetscInt *map;
+        int n = index.size();
+        PetscMalloc(n*sizeof(PetscInt),&map);
+        for (int i=0; i<n; i++) map[i] = index[i];
+        ierr = ISCreateGeneral(V.comm(),n,map,PETSC_COPY_VALUES,&this->_M_is);
+        CHKERRABORT( V.comm(),ierr );
+        PetscFree(map);
+
+        DataMap dm(n, n, V.comm());
+        this->setMap(dm);
+        /* init */
+        ierr = VecGetSubVector(V.vec(), this->_M_is, &this->_M_vec);
+        CHKERRABORT( V.comm(),ierr );
+        this->M_is_initialized = true;
+        /* close */
+        this->close(); /* no // assembly required */
+        //#endif
+    }
+
 
     /**
      * Destructor, deallocates memory. Made virtual to allow
@@ -278,6 +312,11 @@ public:
         return *this;
     }
 
+    void restoreSubVector( VectorPetsc<value_type> const& V )
+    {
+        VecRestoreSubVector(V.vec(),this->_M_is,&this->_M_vec);
+    }
+
     //@}
 
     /** @name Accessors
@@ -338,6 +377,18 @@ public:
     {
         FEELPP_ASSERT ( _M_vec != 0 ).error( "invalid petsc vector" );
         return _M_vec;
+    }
+
+
+    IS is () const
+    {
+        FEELPP_ASSERT ( _M_is != 0 ).error( "invalid index set" );
+        return _M_is;
+    }
+    IS& is ()
+    {
+        FEELPP_ASSERT ( _M_vec != 0 ).error( "invalid index set" );
+        return _M_is;
     }
 
     //@}
@@ -627,6 +678,7 @@ public:
      */
     void printMatlab( const std::string name="NULL" ) const;
 
+
     /**
      * Serialization for PETSc VECSEQ
      */
@@ -665,6 +717,8 @@ public:
         this->close();
     }
 
+    value_type dot( Vector<T> const& __v );
+
 
 protected:
 
@@ -678,6 +732,11 @@ protected:
      * for the constructor which takes a PETSc Vec object.
      */
     const bool _M_destroy_vec_on_exit;
+
+    /**
+     * index set
+     */
+    IS _M_is;
 };
 
 template <typename T>
