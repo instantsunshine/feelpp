@@ -100,10 +100,10 @@ set(CLN_FOUND)
 set(CLN_INCLUDE_DIR)
 set(CLN_LIBRARIES)
 
-include(FindPkgConfig)
-if (PKG_CONFIG_FOUND)
-	pkg_check_modules(_cln cln)
-endif()
+##include(FindPkgConfig)
+#if (PKG_CONFIG_FOUND)
+#	pkg_check_modules(_cln cln)
+#endif()
 
 find_path(CLN_INCLUDE_DIR NAMES feel/cln/cln.h cln/cln.h
   HINTS
@@ -118,6 +118,7 @@ find_library(CLN_LIBRARIES NAMES feelpp_cln libcln cln
   $ENV{CLN_DIR}/lib)
 message(STATUS "Cln includes: ${CLN_INCLUDE_DIR} Libraries: ${CLN_LIBRARIES}" )
 
+message(STATUS "${CLN_LIBRARIES} ${CLN_INCLUDE_DIR} ${CLN_VERSION}")
 if (CLN_INCLUDE_DIR)
 	_cl_get_version(CLN_VERSION_MAJOR
 			CLN_VERSION_MINOR
@@ -135,10 +136,10 @@ if (CLN_INCLUDE_DIR)
 				      "${_cln_VERSION} vs ${CLN_VERSION}, "
 				      "please check your installation")
 		endif()
-		set(CLN_LIBRARIES CLN-NOTFOUND)
-		set(CLN_INCLUDE_DIR CLN-NOTFOUND)
-		set(CLN_LIBRARY_DIRS)
-		set(CLN_VERSION)
+		#set(CLN_LIBRARIES CLN-NOTFOUND)
+		#set(CLN_INCLUDE_DIR CLN-NOTFOUND)
+		#set(CLN_LIBRARY_DIRS)
+		#set(CLN_VERSION)
 	endif()
 endif()
 
