@@ -21,7 +21,8 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 #
-cmake_minimum_required (VERSION 2.8)
+#cmake_minimum_required (VERSION 2.8.9)
+cmake_minimum_required (VERSION 2.8.8)
 
 #
 # Bug in cmake that delete destroy library path if LIBRARY_PATH is not empty
@@ -80,7 +81,7 @@ if(GIT_FOUND AND  EXISTS ${PROJECT_SOURCE_DIR}/.git )
     message(STATUS "updating submodules...")
     execute_process(COMMAND git submodule update WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} )
   endif()
-  
+
   execute_process(
     COMMAND git rev-parse --verify -q --short HEAD
     WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
@@ -175,7 +176,7 @@ include(ProcessorCount)
 ProcessorCount(NProcs)
 ##if(N GREATER 1)
 math (EXPR NProcs2 '${NProcs}/2')
-message(STATUS "using ${NProcs2} cores" )
+message(STATUS "using ${NProcs2} cores out of ${NProcs} cores" )
 #  set(CTEST_BUILD_FLAGS -j${N2})
 #  set(ctest_test_args ${ctest_test_args} PARALLEL_LEVEL ${N2})
  OPTION(FEELPP_ENABLE_MPI_MODE "Instantiation mode" ON )
@@ -332,8 +333,7 @@ ADD_SUBDIRECTORY ( feel )
 SET(FEELPP_MESH_MAX_ORDER "5" CACHE STRING "maximum geometrical order in templates to instantiate" )
 
 OPTION(FEELPP_ENABLE_DOCUMENTATION "enable Feel++ documentation" ON)
-OPTION(FEELPP_ENABLE_BENCHMARKS "enable Feel++ benchmarks" OFF)
-OPTION(FEELPP_ENABLE_EXAMPLES "enable Feel++ examples" ON)
+OPTION(FEELPP_ENABLE_BENCHMARKS "enable Feel++ benchmarks" ON)
 OPTION(FEELPP_ENABLE_APPLICATIONS "enable Feel++ applications" ON)
 OPTION(FEELPP_ENABLE_RESEARCH "enable Feel++ research" ON)
 OPTION(FEELPP_ENABLE_TESTS "enable Feel++ tests" ON)
@@ -341,7 +341,6 @@ OPTION(FEELPP_ENABLE_TESTS "enable Feel++ tests" ON)
 OPTION(FEELPP_MINIMAL_CONFIGURATION "enable feel minimal configuration" OFF)
 IF( FEELPP_MINIMAL_CONFIGURATION )
   set( BUILD_TESTING OFF )
-  set( FEELPP_ENABLE_EXAMPLES OFF )
   set( FEELPP_ENABLE_BENCHMARKS OFF )
   set( FEELPP_ENABLE_TESTS OFF )
   set( FEELPP_ENABLE_RESEARCH OFF )
@@ -391,7 +390,7 @@ if ( EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/research AND FEELPP_ENABLE_RESEARCH )
 endif()
 
 
-ADD_SUBDIRECTORY ( mycode )
+ADD_SUBDIRECTORY ( quickstart )
 
 
 IF(FEELPP_ENABLE_TESTS )
@@ -409,181 +408,17 @@ foreach(OPT ${CONFIG_OPTIONS})
   set(FEELPP_CONFIG_OPTIONS "${FEELPP_CONFIG_OPTIONS} ${OPT}")
 endforeach(OPT)
 
+################################################################################
+# Installation procedure
+################################################################################
+include(feelpp.install)
 
-set(INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX})
-set(FEELPP_PREFIX ${CMAKE_INSTALL_PREFIX})
-set(FEELPP_DATADIR ${CMAKE_INSTALL_PREFIX}/share/feel )
-CONFIGURE_FILE(feelconfig.h.in feel/feelconfig.h  @ONLY)
-CONFIGURE_FILE(feelinfo.h.in feel/feelinfo.h  @ONLY)
+################################################################################
+# Packaging procedure
+################################################################################
+include(feelpp.package)
 
-#
-# Packaging
-#
-INCLUDE(InstallRequiredSystemLibraries)
-
-
-foreach(includedir feelcore feelalg feelmesh feelpoly feelfilters feeldiscr feelvf feelmaterial feelsystem )
-  FILE(GLOB files "feel/${includedir}/*.hpp")
-  FILE(GLOB cppfiles "feel/${includedir}/*.cpp")
-  INSTALL(FILES ${files} ${cppfiles} DESTINATION include/feel/${includedir} COMPONENT Devel)
-endforeach()
-FILE(GLOB files "feel/*.hpp")
-INSTALL(FILES ${files} DESTINATION include/feel COMPONENT Devel)
-
-# install cln headers
-FILE(GLOB files "${CMAKE_CURRENT_BINARY_DIR}/contrib/cln/include/cln/*.h")
-INSTALL(FILES ${files} DESTINATION include/feel/cln COMPONENT Devel)
-FILE(GLOB files "${CMAKE_CURRENT_BINARY_DIR}/contrib/cln/lib/lib*")
-INSTALL(FILES ${files} DESTINATION lib/ COMPONENT Devel)
-
-# install gflags headers
-FILE(GLOB files "${CMAKE_CURRENT_BINARY_DIR}/contrib/gflags/include/gflags/*.h")
-INSTALL(FILES ${files} DESTINATION include/feel/gflags COMPONENT Devel)
-FILE(GLOB files "${CMAKE_CURRENT_BINARY_DIR}/contrib/gflags/lib/lib*")
-INSTALL(FILES ${files} DESTINATION lib/ COMPONENT Devel)
-
-# install glog headers
-FILE(GLOB files "${CMAKE_CURRENT_BINARY_DIR}/contrib/glog/include/glog/*.h")
-INSTALL(FILES ${files} DESTINATION include/feel/glog COMPONENT Devel)
-FILE(GLOB files "${CMAKE_CURRENT_BINARY_DIR}/contrib/glog/lib/lib*")
-INSTALL(FILES ${files} DESTINATION lib/ COMPONENT Devel)
-
-# gmm
-IF ( NOT GMM_FOUND )
-  FILE(GLOB files "contrib/gmm/include/*.h")
-  INSTALL(FILES ${files} DESTINATION include/feel COMPONENT Devel)
-ENDIF()
-# feel++ config headers
-FILE(GLOB files "${CMAKE_CURRENT_BINARY_DIR}/feel/*.h")
-INSTALL(FILES ${files} DESTINATION include/feel COMPONENT Devel)
-
-message(STATUS "apps: ${FEELPP_INSTALL_APPS}")
-INSTALL(FILES ${FEELPP_INSTALL_APPS} DESTINATION bin/ COMPONENT Bin)
-
-# documentation and examples
-#  install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/doc/manual/feel_get_tutorial.sh DESTINATION bin COMPONENT Doc)
-install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/doc/manual/manual/feel-manual.pdf DESTINATION share/doc/feel COMPONENT Doc)
-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/doc/api/html DESTINATION share/doc/feel COMPONENT Doc
-        PATTERN ".svn" EXCLUDE PATTERN ".git" EXCLUDE )
-FILE(GLOB examples "${CMAKE_CURRENT_SOURCE_DIR}/doc/manual/*.*pp")
-INSTALL(FILES ${examples} DESTINATION share/doc/feel/examples/ COMPONENT Doc)
-
-
-##
-## Archive generation using cpack
-##
-if (UNIX)
-  execute_process(
-    COMMAND uname -m
-    OUTPUT_VARIABLE FEELPP_SYSTEM_MACHINE
-    OUTPUT_STRIP_TRAILING_WHITESPACE
-    ERROR_VARIABLE FEELPP_SYSTEM_MACHINE_error
-    RESULT_VARIABLE FEELPP_SYSTEM_MACHINE_result)
-endif()
-SET(CPACK_PACKAGE_NAME "feel++")
-SET(CPACK_GENERATOR "TGZ")
-SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Feel++")
-SET(CPACK_PACKAGE_VENDOR "Christophe Prud'homme")
-SET(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_SOURCE_DIR}/README.org")
-SET(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/COPYING")
-SET(CPACK_PACKAGE_VERSION_MAJOR "${FEELPP_VERSION_MAJOR}")
-SET(CPACK_PACKAGE_VERSION_MINOR "${FEELPP_VERSION_MINOR}")
-SET(CPACK_PACKAGE_VERSION_PATCH "${FEELPP_VERSION_MICRO}")
-SET(CPACK_PACKAGE_INSTALL_DIRECTORY "feel")
-SET(CPACK_SOURCE_GENERATOR "TGZ")
-SET(CPACK_SOURCE_OUTPUT_CONFIG_FILE "CPackSourceConfig.cmake")
-SET(CPACK_SYSTEM_NAME "${FEELPP_OS}-${FEELPP_SYSTEM_MACHINE}")
-
-OPTION(FEELPP_ENABLE_CPACK_OPUS "Enable OPUS packaging (if available) in CPack along with Feel++" ON )
-SET(CPACK_PACKAGE_NAME "feel++")
-SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Feel++ (Finite Element method Embedded Library and language in C++)")
-SET(CPACK_SOURCE_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${FEELPP_VERSION_MAJOR}.${FEELPP_VERSION_MINOR}.${FEELPP_VERSION_MICRO}${FEELPP_VERSION_EXTRA}")
-
-
-SET(CPACK_SOURCE_STRIP_FILES "")
-# The following components are regex's to match anywhere (unless anchored)
-# in absolute path + filename to find files or directories to be excluded
-# from source tarball.
-set(CPACK_SOURCE_IGNORE_FILES
-  "/\\\\.git/;\\\\.gitignore;/\\\\.svn;"
-  "/admin/;/Templates/;"
-  "/auto/;"
-  "/TAGS;/#.*;/.*~$;/.cvsignore;/.bzrignore;/work/"
-  "${PROJECT_SOURCE_DIR}/benchmarks/turek/"
-  "${PROJECT_SOURCE_DIR}/benchmarks/stokes/"
-  "${PROJECT_SOURCE_DIR}/benchmarks/ethiersteinman/"
-  "${PROJECT_SOURCE_DIR}/benchmarks/kovasznay/"
-  "${PROJECT_SOURCE_DIR}/doc/poster/"
-  "${PROJECT_SOURCE_DIR}/doc/manual/pdfs/"
-  "${PROJECT_SOURCE_DIR}/doc/figures/backgrounds/"
-  "${PROJECT_SOURCE_DIR}/doc/figures/logos/"
-  "${PROJECT_SOURCE_DIR}/examples/fluid/"
-  "${PROJECT_SOURCE_DIR}/examples/levelset/"
-  "${PROJECT_SOURCE_DIR}/examples/pbeq/"
-  "${PROJECT_SOURCE_DIR}/research/"
-  "/*.tar.gz;*.tar.bz2;*.deb;obj-x86_64-linux-gnu/;/opt/"
-  "*.aux;*.log;*.bbl;*.idx;*.ist;*.out;*.blg;OpusManualBenchmarkEADSUJF.pdf"
-  "${PROJECT_SOURCE_DIR}/applications/opus.old"
-  "${PROJECT_SOURCE_DIR}/applications/opus/"
-   "${PROJECT_SOURCE_DIR}/applications/opus/debian/opus/"
-  "${PROJECT_SOURCE_DIR}/applications/opus/debian/source/"
-  "${PROJECT_SOURCE_DIR}/applications/opus/doc/"
-  "${PROJECT_SOURCE_DIR}/applications/opus/scripts"
-  )
-
-#if ( NOT EXISTS ${FEELPP_SOURCE_DIR}/applications/opus/ )
-if ( EXISTS ${FEELPP_SOURCE_DIR}/applications/opus/ AND NOT FEELPP_ENABLE_CPACK_OPUS )
-#  set(CPACK_SOURCE_IGNORE_FILES "${PROJECT_SOURCE_DIR}/applications/opus/;${CPACK_SOURCE_IGNORE_FILES}" )
-endif()
-
-include( CPack )
-
-
-MESSAGE(STATUS "================================================================================")
-MESSAGE(STATUS "FEELPP_VERSION_MAJOR : ${FEELPP_VERSION_MAJOR}")
-MESSAGE(STATUS "FEELPP_VERSION_MINOR : ${FEELPP_VERSION_MINOR}")
-MESSAGE(STATUS "FEELPP_VERSION_MICRO : ${FEELPP_VERSION_MICRO}")
-MESSAGE(STATUS "FEELPP_REVISON : ${FEELPP_REVISION}")
-MESSAGE(STATUS "FEELPP_BUILDID : ${FEELPP_BUILDID}")
-MESSAGE(STATUS "")
-MESSAGE(STATUS "Feel++ Modules :")
-MESSAGE(STATUS "  Documentation: ${FEELPP_ENABLE_DOCUMENTATION}")
-MESSAGE(STATUS "      Testsuite: ${FEELPP_ENABLE_TESTS}")
-MESSAGE(STATUS "   Applications: ${FEELPP_ENABLE_APPLICATIONS}")
-MESSAGE(STATUS "       Examples: ${FEELPP_ENABLE_EXAMPLES}")
-MESSAGE(STATUS "     Benchmarks: ${FEELPP_ENABLE_BENCHMARKS}")
-MESSAGE(STATUS "       Research: ${FEELPP_ENABLE_RESEARCH}")
-MESSAGE(STATUS "")
-MESSAGE(STATUS "Feel++ Configuration:")
-MESSAGE(STATUS "                CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
-MESSAGE(STATUS "              CMAKE_CXX_COMPILER: ${CMAKE_CXX_COMPILER}")
-MESSAGE(STATUS "                 CMAKE_CXX_FLAGS: ${CMAKE_CXX_FLAGS}")
-MESSAGE(STATUS "         CMAKE_CXX_FLAGS_RELEASE: ${CMAKE_CXX_FLAGS_RELEASE}")
-MESSAGE(STATUS "  CMAKE_CXX_FLAGS_RELWITHDEBINFO: ${CMAKE_CXX_FLAGS_RELWITHDEBINFO}")
-MESSAGE(STATUS "           CMAKE_CXX_FLAGS_DEBUG: ${CMAKE_CXX_FLAGS_DEBUG}")
-MESSAGE(STATUS "")
-MESSAGE(STATUS "          FEELPP_ENABLE_GIT: ${FEELPP_ENABLE_GIT}")
-MESSAGE(STATUS "     FEELPP_ENABLE_MPI_MODE: ${FEELPP_ENABLE_MPI_MODE} Nprocs: ${N} Nprocs(build): ${N2}")
-MESSAGE(STATUS "      FEELPP_MESH_MAX_ORDER: ${FEELPP_MESH_MAX_ORDER}")
-MESSAGE(STATUS "  FEELPP_INSTANTIATION_MODE: ${FEELPP_INSTANTIATION_MODE}")
-MESSAGE(STATUS "     FEELPP_ENABLED_OPTIONS: ${FEELPP_ENABLED_OPTIONS}")
-MESSAGE(STATUS "================================================================================")
-
-string(TOLOWER "${CMAKE_GENERATOR}" cmake_generator_tolower)
-if(cmake_generator_tolower MATCHES "makefile")
-  message(STATUS "Some things you can do now with Feel++:")
-  MESSAGE(STATUS "================================================================================")
-  message(STATUS "Command        |   Description")
-  MESSAGE(STATUS "===============|================================================================")
-  message(STATUS "make install   | Install to ${CMAKE_INSTALL_PREFIX}. To change that:")
-  message(STATUS "               |     cmake . -DCMAKE_INSTALL_PREFIX=yourpath")
-  message(STATUS "               |   Feel++ headers will then be installed to:")
-  message(STATUS "               |     ${INCLUDE_INSTALL_DIR}")
-  message(STATUS "make doc       | Generate the manual applications, manual and the API ")
-  message(STATUS "               | documentation, requires Doxygen & LaTeX")
-  message(STATUS "make benchmarks| Generate the benchmarks(Warning: takes a long time!) ")
-  message(STATUS "make check     | Build and run the unit-tests.")
-  MESSAGE(STATUS "================================================================================")
-endif()
-
-message(STATUS "")
+################################################################################
+# Post-config message
+################################################################################
+include(feelpp.directive)

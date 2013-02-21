@@ -287,9 +287,6 @@ Environment::processGenericOptions()
               << "string = " << S_vm["debug"].as<std::string>() << "\n";
 #endif
 
-    if ( S_vm.count( "debug" ) && !S_vm["debug"].as<std::string>().empty() )
-        DebugStream::showDebugAreas( S_vm["debug"].as<std::string>() );
-
     VLOG(2) << "[processGenericOptions] done\n";
 }
 
@@ -476,7 +473,7 @@ Environment::Environment()
 #endif // FEELPP_HAS_PETSC_H
 
     S_worldcomm = worldcomm_type::New( world );
-    FEELPP_ASSERT( S_worldcomm ).error( "creating worldcomm failed" );
+    CHECK( S_worldcomm ) << "Environment : creating worldcomm failed\n";
 }
 
 fs::path scratchdir()
@@ -490,7 +487,6 @@ fs::path scratchdir()
         if (env != NULL && env[0] != '\0')
         {
             std::string value = (boost::format("%1%/%2%/feelpp/") % env % ::detail::Env::getUserName()).str();
-            std::cerr << "value=" << value << "\n";
             setenv("FEELPP_SCRATCHDIR", (boost::format("%1%/%2%/feelpp/") % env % ::detail::Env::getUserName() ).str().c_str(),0);
         }
         else
@@ -502,7 +498,6 @@ fs::path scratchdir()
     env = getenv("FEELPP_SCRATCHDIR");
     if (env != NULL && env[0] != '\0')
     {
-        std::cerr << "env=" << env << "\n";
         return fs::path( env );
     }
     std::string value = (boost::format("/tmp/%1%/feelpp/") % ::detail::Env::getUserName()).str();
@@ -559,14 +554,6 @@ Environment::Environment( int& argc, char**& argv )
     //and often unuseful messages
     PetscPopSignalHandler();
 #endif // FEELPP_HAS_PETSC_H
-
-
-    if ( argc >= 1 )
-    {
-        std::ostringstream ostr;
-        ostr << argv[0] << ".assertions";
-        Assert::setLog( ostr.str().c_str() );
-    }
 
     S_worldcomm = worldcomm_type::New( world );
     CHECK( S_worldcomm ) << "Feel++ Environment: creang worldcomm failed!";
@@ -632,14 +619,6 @@ Environment::init( int argc, char** argv, po::options_description const& desc, A
     //and often unuseful messages
     PetscPopSignalHandler();
 #endif // FEELPP_HAS_PETSC_H
-
-
-    if ( argc >= 1 )
-    {
-        std::ostringstream ostr;
-        ostr << argv[0] << ".assertions";
-        Assert::setLog( ostr.str().c_str() );
-    }
 
     S_worldcomm = worldcomm_type::New( world );
     CHECK( S_worldcomm ) << "Feel++ Environment: creang worldcomm failed!";
@@ -837,17 +816,6 @@ void
 Environment::setLogs( std::string const& prefix )
 {
 
-    mpi::communicator world;
-#if 0
-    LOG(INFO).detachAll();
-    std::ostringstream ostr;
-    ostr << prefix << "-" << world.size()  << "." << world.rank();
-    LOG(INFO).attach( ostr.str() );
-#endif
-
-    std::ostringstream ostr_assert;
-    ostr_assert << prefix  << "-" << world.size()  << "." << world.rank() << ".assertions";
-    Assert::setLog( ostr_assert.str().c_str() );
 
 }
 
@@ -858,7 +826,7 @@ Environment::worldsComm( int n )
     {
         mpi::communicator world;
         S_worldcomm = worldcomm_type::New( world );
-        FEELPP_ASSERT( S_worldcomm ).error( "worldcomm not allocated" );
+        CHECK( S_worldcomm ) << "Environment: worldcomm not allocated\n";
     }
 
     return S_worldcomm->subWorlds(n);

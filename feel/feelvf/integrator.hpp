@@ -750,10 +750,16 @@ Integrator<Elements, Im, Expr, Im2>::assemble( boost::shared_ptr<Elem1> const& _
         if ( it == en )
             continue;
 
-        if ( dynamic_cast<void*>( const_cast<MeshBase*>( it->mesh() ) ) == dynamic_cast<void*>( __u->mesh().get() ) &&
-             dynamic_cast<void*>( const_cast<MeshBase*>( it->mesh() ) ) == dynamic_cast<void*>( __v->mesh().get() ) )
+        bool same_mesh = ( dynamic_cast<void*>( const_cast<MeshBase*>( it->mesh() ) ) == dynamic_cast<void*>( __u->mesh().get() ) &&
+                           dynamic_cast<void*>( const_cast<MeshBase*>( it->mesh() ) ) == dynamic_cast<void*>( __v->mesh().get() ) );
+        const bool test_related_to_trial = __v->mesh()->isRelatedTo( __u->mesh() );
+        const bool trial_related_to_test = __u->mesh()->isRelatedTo( __v->mesh() );
+        if ( same_mesh || test_related_to_trial || trial_related_to_test )
+        {
+            VLOG(2) << "[integrator::assemble bilinear form] same_mesh: " << same_mesh << " test_related_to_trial: " << test_related_to_trial << " trial_related_to_test: " << trial_related_to_test << "\n";
             assemble( __form, mpl::int_<iDim>(), mpl::bool_<same_mesh_type::value>() );
 
+        }
         else
             assemble( __form, mpl::int_<iDim>(), mpl::bool_<false>() );
     }
@@ -876,6 +882,9 @@ Integrator<Elements, Im, Expr, Im2>::assemble( FormType& __form, mpl::int_<MESH_
                 //
                 for ( ; it != en; ++it )
                 {
+                    if ( formc->isZero( it->id() ) )
+                        continue;
+
                     switch ( M_gt )
                     {
                     default:
@@ -956,6 +965,7 @@ Integrator<Elements, Im, Expr, Im2>::assemble( FormType& __form, mpl::int_<MESH_
                             //ti1.restart();
                             map_gmc_type mapgmc( fusion::make_pair<vf::detail::gmc<0> >( __c ) );
                             formc->update( mapgmc,mapgmc,mapgmc );
+
                             //LOG( INFO )  << "update gmc : " << ti1.elapsed() << "\n";
                             //t1+=ti1.elapsed();
 
@@ -985,6 +995,7 @@ Integrator<Elements, Im, Expr, Im2>::assemble( FormType& __form, mpl::int_<MESH_
                             //ti1.restart();
                             map_gmc1_type mapgmc1( fusion::make_pair<vf::detail::gmc<0> >( __c1 ) );
                             formc1->update( mapgmc1,mapgmc1,mapgmc1 );
+
                             //LOG( INFO )  << "update gmc : " << ti1.elapsed() << "\n";
                             //t1+=ti1.elapsed();
 
@@ -1966,7 +1977,7 @@ Integrator<Elements, Im, Expr, Im2>::evaluate( mpl::int_<MESH_ELEMENTS> ) const
             //std::cout << "0.5" << std::endl;
             gm1_ptrtype gm1( new gm1_type ); //it->gm1();
             //std::cout << "0.6:  " << gm1.use_count() << " " << gm.use_count() << std::endl;
-            //Debug(5065) << "[integrator] evaluate(elements), gm is cached: " << gm->isCached() << "\n";
+            //DVLOG(2) << "[integrator] evaluate(elements), gm is cached: " << gm->isCached() << "\n";
             typename eval::gmpc_ptrtype __geopc( new typename eval::gmpc_type( gm,
                                                                                this->im().points() ) );
             //std::cout << "1" << std::endl;
@@ -2034,7 +2045,7 @@ Integrator<Elements, Im, Expr, Im2>::evaluate( mpl::int_<MESH_ELEMENTS> ) const
 
                 case GeomapStrategyType::GEOMAP_O1:
                 {
-                    //Debug(5065) << "geomap o1" << "\n";
+                    //DVLOG(2) << "geomap o1" << "\n";
                     __c1->update( *it );
                     map_gmc1_type mapgmc( fusion::make_pair<vf::detail::gmc<0> >( __c1 ) );
                     expr1.update( mapgmc );
@@ -2053,10 +2064,10 @@ Integrator<Elements, Im, Expr, Im2>::evaluate( mpl::int_<MESH_ELEMENTS> ) const
 
                 case GeomapStrategyType::GEOMAP_OPT:
                 {
-                    //Debug(5065) << "geomap opt" << "\n";
+                    //DVLOG(2) << "geomap opt" << "\n";
                     if ( it->isOnBoundary() )
                     {
-                        //Debug(5065) << "boundary element using ho" << "\n";
+                        //DVLOG(2) << "boundary element using ho" << "\n";
                         __c->update( *it );
                         map_gmc_type mapgmc( fusion::make_pair<vf::detail::gmc<0> >( __c ) );
                         expr.update( mapgmc );
@@ -2074,7 +2085,7 @@ Integrator<Elements, Im, Expr, Im2>::evaluate( mpl::int_<MESH_ELEMENTS> ) const
 
                     else
                     {
-                        //Debug(5065) << "interior element using order 1" << "\n";
+                        //DVLOG(2) << "interior element using order 1" << "\n";
                         __c1->update( *it );
                         map_gmc1_type mapgmc( fusion::make_pair<vf::detail::gmc<0> >( __c1 ) );
                         expr1.update( mapgmc );
@@ -2187,7 +2198,7 @@ Integrator<Elements, Im, Expr, Im2>::evaluate( mpl::int_<MESH_FACES> ) const
         FEELPP_ASSERT( it->element(0).gm() )( it->id() ).error( "invalid geometric transformation" );
         gm_ptrtype gm = it->element( 0 ).gm();
 
-        //Debug(5065) << "[integrator] evaluate(faces), gm is cached: " << gm->isCached() << "\n";
+        //DVLOG(2) << "[integrator] evaluate(faces), gm is cached: " << gm->isCached() << "\n";
         for ( uint16_type __f = 0; __f < im().nFaces(); ++__f )
         {
             __integrators.push_back( im( __f ) );
@@ -2368,7 +2379,7 @@ Integrator<Elements, Im, Expr, Im2>::broken( boost::shared_ptr<P0hType>& P0h, mp
         // geometric mapping and reference finite element
         //
         gm_ptrtype gm = it->gm();
-        //Debug(5065) << "[integrator] evaluate(elements), gm is cached: " << gm->isCached() << "\n";
+        //DVLOG(2) << "[integrator] evaluate(elements), gm is cached: " << gm->isCached() << "\n";
         typename eval::gmpc_ptrtype __geopc( new typename eval::gmpc_type( gm,
                                                                            this->im().points() ) );
 
@@ -2479,7 +2490,7 @@ Integrator<Elements, Im, Expr, Im2>::broken( boost::shared_ptr<P0hType>& P0h, mp
 
         gm_ptrtype gm = it->element( 0 ).gm();
 
-        //Debug(5065) << "[integrator] evaluate(faces), gm is cached: " << gm->isCached() << "\n";
+        //DVLOG(2) << "[integrator] evaluate(faces), gm is cached: " << gm->isCached() << "\n";
         for ( uint16_type __f = 0; __f < im().nFaces(); ++__f )
         {
             __integrators.push_back( im( __f ) );

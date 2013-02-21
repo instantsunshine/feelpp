@@ -22,5 +22,5 @@
 #
 #
 
-feelpp_add_application( myFirstApp SRCS laplacian_dirichlet_homogene.cpp LABEL doc)
+feelpp_add_application( qs_laplacian SRCS laplacian.cpp INCLUDE_IN_ALL)
 

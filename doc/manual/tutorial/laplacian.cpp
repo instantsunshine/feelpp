@@ -148,6 +148,15 @@ Laplacian<Dim,Order>::run()
                                                       _xmin=-1,
                                                       _ymin=-1 ) );
 
+#if 0
+        //auto eit = mesh->beginElementWithProcessId( this->comm().rank() );
+        //for( int ne = 0; ne < 10; ++ne )
+        mesh->eraseElement( mesh->beginElementWithProcessId( this->comm().rank() ) );
+        mesh->eraseElement( mesh->beginElementWithProcessId( this->comm().rank() ) );
+        mesh->eraseElement( mesh->beginElementWithProcessId( this->comm().rank() ) );
+        mesh->eraseElement( boost::prior(mesh->endElementWithProcessId( this->comm().rank() ) ) );
+        std::cout << "n elements after: "  << mesh->numElements() << "\n";
+#endif
 
     /**
      * The function space and some associated elements(functions) are then defined
@@ -343,8 +352,3 @@ main( int argc, char** argv )
     app.run();
 
 }
-
-
-
-
-
