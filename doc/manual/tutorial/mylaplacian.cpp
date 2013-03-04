@@ -44,7 +44,7 @@ int main(int argc, char**argv )
     using namespace Feel;
     Environment env( _argc=argc, _argv=argv,
                      _desc=feel_options(),
-                     _about=about(_name="laplacian",
+                     _about=about(_name="mylaplacian",
                                   _author="Feel++ Consortium",
                                   _email="feelpp-devel@feelpp.org"));
     // create mesh
@@ -73,7 +73,7 @@ int main(int argc, char**argv )
     a.solve(_rhs=l,_solution=u);
 
     // export results
-    auto e = exporter( _mesh=mesh, _name="mylaplacian" );
+    auto e = exporter( _mesh=mesh );
     e->add( "u", u );
     e->save();
 }
