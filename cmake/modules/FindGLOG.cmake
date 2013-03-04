@@ -48,7 +48,7 @@ if (NOT GLOG_INCLUDE_DIR )
     message(STATUS "Building glog in ${CMAKE_BINARY_DIR}/contrib/glog-compile...")
     execute_process(COMMAND mkdir -p ${CMAKE_BINARY_DIR}/contrib/glog-compile)
     execute_process(
-      COMMAND ${FEELPP_HOME_DIR}/contrib/glog/configure --prefix=${CMAKE_BINARY_DIR}/contrib/glog --with-gflags=${GFLAGS_DIR}
+      COMMAND ${FEELPP_HOME_DIR}/contrib/glog/configure --prefix=${CMAKE_BINARY_DIR}/contrib/glog --with-gflags=${GFLAGS_DIR}/lib/libfeelpp_gflags.so
       WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/contrib/glog-compile
 #      OUTPUT_QUIET
       OUTPUT_FILE "glog-configure"
