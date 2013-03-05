@@ -74,7 +74,7 @@ add_latex_document(feelpp-manual.tex
   ../biblio/feelpp-manual.bib
   ../biblio/feelpp.bib
   ../biblio/feelpp-thesis.bib
-  IMAGE_DIRS pngs pdfs pngs/mymesh pngs/heatsink pngs/Laplacian
+  IMAGE_DIRS pngs pdfs pngs/mymesh pngs/heatsink pngs/Laplacian pngs/myadvection
   USE_INDEX
   DEFAULT_PDF
   MANGLE_TARGET_NAMES
@@ -196,6 +196,7 @@ if (NOT FEELPP_MINIMAL_CONFIGURATION)
   add_subdirectory(dd)
   add_subdirectory(heat)
   add_subdirectory(solid)
+  add_subdirectory(ns)
   add_subdirectory(heatns)
   add_subdirectory(nonlinear)
   add_subdirectory(adapt)

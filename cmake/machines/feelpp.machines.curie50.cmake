@@ -21,5 +21,6 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 #
-set(Boost_NO_BOOST_CMAKE TRUE)
-set(Boost_NO_SYSTEM_PATHS TRUE)
+
+# enable the CCC script generation
+OPTION(FEELPP_ENABLE_CCC "Enable Feel++ tgcc/ccc submission scripts generation" ON)
