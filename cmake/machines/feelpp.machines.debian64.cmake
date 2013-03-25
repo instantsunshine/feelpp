@@ -1,9 +1,9 @@
-# -*- mode: cmake; coding: utf-8 -*-
+###  TEMPLATE.txt.tpl; coding: utf-8 ---
+
+#  Author(s): Christophe Prud'homme <christophe.prudhomme@feelpp.org>
+#       Date: 2012-04-12
 #
-#  Author(s): Christophe Prud'homme <christophe.prudhomme@ujf-grenoble.fr>
-#       Date: 2009-11-29
-#
-#  Copyright (C) 2009-2010 Université Joseph Fourier (Grenoble I)
+#  Copyright (C) 2013 Feel++ Consortium
 #
 # Distributed under the GPL(GNU Public License):
 # This program is free software; you can redistribute it and/or modify
@@ -21,23 +21,5 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 #
-set(SRC
-  info.cpp
-  feel.cpp
-  application.cpp
-  environment.cpp
-  simget.cpp
-  xmlparser.hpp
-  about.cpp
-  typeinfo.cpp
-  smartassert.cpp
-  pslogger.cpp
-  worldcomm.cpp
-  debug.cpp
- )
-
-file(GLOB HDR RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.hpp)
-feel_append_src(feelcore "${SRC};${HDR}")
-
 
 

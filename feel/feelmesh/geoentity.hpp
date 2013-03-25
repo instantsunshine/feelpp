@@ -498,6 +498,13 @@ public:
     {
         return M_neighor_pids;
     }
+    /**
+     * \return the number of partition the element is linked to
+     */
+    std::vector<int> & neighborPartitionIds()
+    {
+        return M_neighor_pids;
+    }
 
     /**
      * set id in a partition pid of the entity
@@ -519,6 +526,14 @@ public:
      * \return idInPartition map
      */
     std::map<uint16_type, size_type> const& idInPartition() const
+    {
+        return M_idInPartition;
+    }
+
+    /**
+     * \return idInPartition map
+     */
+    std::map<uint16_type, size_type> & idInPartition()
     {
         return M_idInPartition;
     }
@@ -653,6 +668,36 @@ public:
         return M_elist;
     }
 
+
+    /**
+     * add a new ghost element to which the point belongs
+     */
+    self_type& addElementGhost( int proc, size_type e  )
+    {
+        M_elistGhost.insert( boost::make_tuple( proc,e ) );
+        return *this;
+    }
+
+    /**
+     * \return the number of ghost elements whom the point belongs to
+     */
+    size_type numberOfElementsGhost() const
+    {
+        return M_elistGhost.size();
+    }
+
+    /**
+     * \return the set of ids of ghost elements whom the point belongs to
+     */
+    std::set<boost::tuple<int,size_type> > const& elementsGhost() const
+    {
+        return M_elistGhost;
+    }
+    std::set<boost::tuple<int,size_type> >& elementsGhost()
+    {
+        return M_elistGhost;
+    }
+
     //@}
 
 
@@ -706,6 +751,8 @@ private:
 
     //! element list to which the point belongs
     std::set<size_type> M_elist;
+    //! element list to which the point belongs
+    std::set<boost::tuple<int,size_type> > M_elistGhost;
 
 };
 

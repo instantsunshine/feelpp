@@ -23,7 +23,13 @@
 #
 INCLUDE_DIRECTORIES( ${CMAKE_CURRENT_SOURCE_DIR} )
 
-option(FEELPP_ENABLE_MANUAL "enable compilation of Feel++ manual (requires latex)" ON)
+find_program(LATEX NAMES latex pdflatex)
+if ( LATEX )
+  option(FEELPP_ENABLE_MANUAL "enable compilation of Feel++ manual (requires latex)" ON)
+else()
+  option(FEELPP_ENABLE_MANUAL "enable compilation of Feel++ manual (requires latex)" OFF)
+endif()
+
 if ( FEELPP_ENABLE_MANUAL )
 include(UseLATEX OPTIONAL)
 
@@ -148,8 +154,6 @@ if ( NOT FEELPP_MINIMAL_CONFIGURATION )
 endif ( NOT FEELPP_MINIMAL_CONFIGURATION )
 
 set(FEELPP_INSTALL_APPS ${FEELPP_INSTALL_APPS};${LIST_APPS} PARENT_SCOPE)
-message(STATUS "doc tutorial: ${LIST_APPS}")
-
 
 IF ( OCTAVE_FOUND )
 
