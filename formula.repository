@@ -1,0 +1,392 @@
+\form#0:$ Y=F(X) $
+\form#1:$ P$
+\form#2:$ N$
+\form#3:$ S $
+\form#4:$ X $
+\form#5:$ Y$
+\form#6:$ S P$
+\form#7:$ S N $
+\form#8:$ F $
+\form#9:$ Y = F(X) $
+\form#10:$ Y \in \mathbb{R}^N$
+\form#11:$ X \in \mathbb{R}^P$
+\form#12:$ r = x^T * y $
+\form#13:$ y = A * x $
+\form#14:$P A x = P b$
+\form#15:$P$
+\form#16:$A$
+\form#17:$P F(x)=0 b$
+\form#18:$F( u ) = 0$
+\form#19:$A^* = A$
+\form#20:$A^* != A$
+\form#21:$r$
+\form#22:$\epsilon$
+\form#23:$I$
+\form#24:$M$
+\form#25:$ r < \epsilon $
+\form#26:$ I > M $
+\form#27:$ m \times n $
+\form#28:$ m_l \times n_l $
+\form#29:$ M \times N $
+\form#30:$\texttt{this} = \_a*\_X + \texttt{this} $
+\form#31:$ v^T M u $
+\form#32:$|M|_1=max_{all columns j}\sum_{all rows i} |M_ij|$
+\form#33:$|Mv|_1\leq |M|_1 |v|_1$
+\form#34:$|M|_\infty=max_{all rows i}\sum_{all columns j} |M_ij|$
+\form#35:$|Mv|_\infty \leq |M|_\infty |v|_\infty$
+\form#36:$v^T A u$
+\form#37:$v^T A^T u$
+\form#38:$(Au, v)= v^T A u$
+\form#39:$A x =\lambda B x$
+\form#40:$A x = \lambda Bx$
+\form#41:$ R(X) $
+\form#42:$ J(X) $
+\form#43:$ A x = b $
+\form#44:$ A = U * S * V^T $
+\form#45:$ U$
+\form#46:$ V$
+\form#47:$ C = \frac{\sigma^\mathrm{max}}{\sigma^\mathrm{min}} $
+\form#48:$U(0-N) = s$
+\form#49:$U = V$
+\form#50:$l_1$
+\form#51:$l_2$
+\form#52:$l_\infty$
+\form#53:$U(0-DIM)+=s$
+\form#54:$U+=V$
+\form#55:$U+=a*V$
+\form#56:$ U+=v $
+\form#57:$U+=A*V$
+\form#58:$ U=v $
+\form#59:$U=V$
+\form#60:$ U+=V $
+\form#61:$ U+=A*V$
+\form#62:$U+=V $
+\form#63:$V_{min} \rightarrow V_{max} $
+\form#64:$V_{min}$
+\form#65:$V_{min} \rightarrow V_2\rightarrow V_3 $
+\form#66:$V_2$
+\form#67:$ (x, y, z) $
+\form#68:$ (r, \theta, \phi) $
+\form#69:$ 0 \le r < \infty $
+\form#70:$ 0 \le \theta < \pi $
+\form#71:$ 0 \le \phi < 2\pi $
+\form#72:$ \phi $
+\form#73:$ \theta $
+\form#74:$ Jac(i,j) = \frac{\partial\eta_j}{\partial \xi_i} $
+\form#75:$Jac \in \mathcal M_{9 \times pts().size2()} $
+\form#76:$\frac{\partial\eta_j}{\partial \xi_i}$
+\form#77:$ d\eta_1/d\xi_i $
+\form#78:$ d\eta_2/d\xi_i $
+\form#79:$ d\eta_3/d\xi_i $
+\form#80:\[ \psi_i(x) = \left\{\begin{array}{ll} \frac{1-x}{2}, & i=0, \\ \frac{1-x}{2}\frac{1+x}{2} P^{(1,1)}_{i-1}(x), & 1 \leq i < N, \\ \frac{1+x}{2}, & i=N, \\ \end{array}\right. \]
+\form#81:$[-1;1]$
+\form#82:$ \phi_i(x) = P_i^{0,0}(x) $
+\form#83:$P_i^{0,0}(x)$
+\form#84:$x \in [-1;1]$
+\form#85:$(0,0)$
+\form#86:$ E $
+\form#87:$ \ell : E \longrightarrow R $
+\form#88:$ \{x_i\}_{i=1...N} $
+\form#89:\begin{eqnarray*} \ell_i :& E \longrightarrow R, i = 1...N\\ & f \longrightarrow f(x_i) \end{eqnarray*}
+\form#90:$ \{y_i\}_{i=1...N} $
+\form#91:\begin{eqnarray*} \ell_i,j :& E \longrightarrow R, i = 1...N\\ & f \longrightarrow \partial f(y_i)/ \partial x_j \end{eqnarray*}
+\form#92:$\ell_u (v) = \int_\Omega( u\, v )$
+\form#93:$\ell_u (v) = \int_{\Gamma} ( u\, v )$
+\form#94:$\Gamma \subset \partial \Omega$
+\form#95:$\ell_u^i (v) = \int_\Omega( \frac{d u}{d x_i} \, v )$
+\form#96:$ K(x_{\mathrm{ref}}) = G \nabla_{\mathrm{ref}} \phi(x_{\mathrm{ref}}) $
+\form#97:$G $
+\form#98:$ B(x_{\mathrm{ref}}) = K ( K^T K )^{-1} $
+\form#99:$[N,N,P,P]$
+\form#100:$ P^{\alpha,beta}_n(x)$
+\form#101:$[-1,1]$
+\form#102:$(1-x)^\alpha(1+x)^\beta (\alpha,\beta > -1)$
+\form#103:$ H(div)$
+\form#104:$\frac{\partial \cdot}{\partial x}$
+\form#105:$\frac{\partial \cdot}{\partial y}$
+\form#106:$\frac{\partial \cdot}{\partial z}$
+\form#107:$ L_2$
+\form#108:$ \sum_q w_q f_q \phi_q $
+\form#109:$ P_1 \oplus P_2$
+\form#110:$ {p_i}_{i=1...N} $
+\form#111:$ C_{i,j} = \mathcal{R}( p_i)_j $
+\form#112:$\mathcal{R}$
+\form#113:\[p_i = \sum_j=1^N \mathcal{R}( p_i )_j \phi_j\]
+\form#114:$A_{i,j} = p_i(x_j) = \sum_{k=1}^N \mathcal{R}(p_i)_k \phi_k(x_j)$
+\form#115:$\ell$
+\form#116:\begin{eqnarray*} A_{i,j} &= \frac{\partial p_i(x_j)}{\partial x_\ell}\\ &= \sum_{k=1}^N \mathcal{R}(p_i)_k \frac{\partial \phi_k(x_j)}{\partial x_\ell} \end{eqnarray*}
+\form#117:$ \psi_i(z) $
+\form#118:$ \psi_{ij}(z) $
+\form#119:$ \psi_{ijk}(z) $
+\form#120:$W_N$
+\form#121:$ \mu$
+\form#122:$\mu$
+\form#123:$\sum_{i=0}^N u^N_i \phi_i$
+\form#124:$H_1$
+\form#125:$h1(\xi_i, \xi_j) = \xi_j^T H_1 \xi_i$
+\form#126:$a_{qm}(\xi_i, \xi_j) = \xi_j^T A_{qm} \xi_i$
+\form#127:$a_qm(\xi_i, \xi_j) = \xi_j^T A_{qm} \xi_i$
+\form#128:$m_{qm}(\xi_i, \xi_j) = \xi_j^T M_{qm} \xi_i$
+\form#129:$A_{qm}$
+\form#130:$M_{qm}$
+\form#131:$L_qm$
+\form#132:$F_{qm}$
+\form#133:$f_{qm}(\xi) = \xi^T F_{qm} $
+\form#134:$M u = f$
+\form#135:$ M $
+\form#136:$ L_2 $
+\form#137:$A x = f$
+\form#138:$A^T x = f$
+\form#139:$C_K$
+\form#140:$Y_{\mathrm{UB}}$
+\form#141:$y \in \mathbb{R}^{Q_a}$
+\form#142:$\mathcal{U}_{\mathrm{UB}}$
+\form#143:$g (\: \cdot\: ; \mu) \in L^{\infty} (\Omega)$
+\form#144:$\mu^g_1$
+\form#145:$S^g_1 = \{ \mu^g_1 \}$
+\form#146:$\xi_1 \equiv g (x ; \mu^g_1)$
+\form#147:$W^g_1 = {\rm span} \: \{\xi_1 \}$
+\form#148:$\xi_1 \neq 0$
+\form#149:$M \geq 2$
+\form#150:$\mu^g_M = \arg \max_{\mu \in \Xi^{^g}}\inf _{z \in W^g_{M-1}} \|g (\: \cdot \: ; \mu) - z \|_{L^{\infty} (\Omega)}$
+\form#151:$\Xi^g$
+\form#152:${\mathcal{D}}$
+\form#153:$S^g_M = S^g_{M-1} \cup \mu^g_M$
+\form#154:$\xi_M = g (x;\mu^g_M)$
+\form#155:$W^g_M = {\rm span} \: \{ \xi_m, \: 1 \leq m \leq M \}$
+\form#156:$\mu^g_M$
+\form#157:$M_{\max}$
+\form#158:$\{g (\: \cdot \: ; \mu) \: | \: \mu \in \mathcal{D}\} $
+\form#159:$T_M = \{ t_1, \ldots, t_M \}$
+\form#160:$1 \leq M \leq M_{\max}$
+\form#161:$t_1 = \arg \: {\rm ess} \: \sup_{x \in \Omega} | \xi_1 (x)|$
+\form#162:$q_1 = \xi_1 (x) / \xi_1 (t_1) $
+\form#163:$B^1_{11} = 1$
+\form#164:$M = 2, \ldots, M_{\max}$
+\form#165:$ \sum^{M-1}_{j = 1} \: \sigma^{M-1}_j \: q_j(t_i) = \xi_M (t_i)$
+\form#166:$ 1 \leq i \leq M-1$
+\form#167:$r_M (x) = \xi_M (x) - \sum^{M-1}_{j = 1}\: \sigma^{M-1}_j \: q_j (x)$
+\form#168:$t_M = \arg \: {\rm ess} \: \sup_{x \in \Omega} |r_M (x)|$
+\form#169:$q_M (x) = r_M (x) /r_M (t_M) $
+\form#170:$B^M_{i \: j} = q_j (t_i)$
+\form#171:$1 \leq i,j \leq M$
+\form#172:$g$
+\form#173:$T_M$
+\form#174:$g_M (x ; \mu) = \sum^M_{m = 1} \beta_m (\mu) \: q_m (x)$
+\form#175:$\sum^M_{j = 1} \: B^M_{i \: j} \: \beta_j (\mu) = g (t_i ; \mu)$
+\form#176:$ 1 \leq i \leq M$
+\form#177:$\varepsilon_M (\mu) \equiv \| g (\: \cdot \: ; \mu) - g_M (\: \cdot \: ; \mu)\|_{L^{\infty} (\Omega)}$
+\form#178:$W^g_M$
+\form#179:$S^g_M$
+\form#180:$z \in W^g_M$
+\form#181:$ \Omega $
+\form#182:$\Omega$
+\form#183:\[ \Omega=[0,1]^d\ \subset\ \mathbb{R}^d \]
+\form#184:\[ \Omega=\{ \mathbf{x} \in \mathbb{R}^d | x_i \geq 0, \sum_{i=1}{d} x_i \leq 1 \} \]
+\form#185:$ d=1,2,3 $
+\form#186:$ \mathbf{x}=(x_1,...,x_d) $
+\form#187:$ \int_\Omega 1 $
+\form#188:$ \int_{\partial\Omega} 1 $
+\form#189:$ \int_{\Omega} x^2+y^2+z^2 $
+\form#190:$ (x,y,z) \mapsto x^2+y^2+z^2$
+\form#191:$y=z=0$
+\form#192:$ z=0 $
+\form#193:$ \int_{\Omega} sin(x^2+y^2+z^2) $
+\form#194:$ (x,y,z) \mapsto sin(x^2+y^2+z^2)$
+\form#195:$x$
+\form#196:$y$
+\form#197:$ X_h $
+\form#198:$ X_h$
+\form#199:\begin{eqnarray} g(x,y,z) &=& \sin(\pi x/2)\ \cos(\pi y/2)\ \cos(\pi*z/2) \\ f(x,y,z) &=& (1-x^2)\ (1-y^2)\ (1-z^2)\ (x^2+y^2+z^2)^{\alpha/2.0},\quad \alpha=3 \end{eqnarray}
+\form#200:$u$
+\form#201:\[ -\Delta u = f\ \text{in}\ \Omega = [-1;1]^2 \]
+\form#202:\[ f= 2 \pi^2 g \]
+\form#203:\[ g=\sin(\pi x) \cos(\pi y) \]
+\form#204:\[ u=g_{|x=\pm 1}, \quad \frac{\partial u}{\partial n} = 0_{|y=\pm 1} \]
+\form#205:\[ \mathcal{X} = \Big\{ v \in H_1(\Omega) \text{ such that } v=g_{|x=-1,x=1} \Big\} \]
+\form#206:\[ \mathcal{V} = \Big\{ v \in H_1(\Omega) \text{ such that } v=0_{|x=-1,x=1} \Big\} \]
+\form#207:$v \in \mathcal{V}$
+\form#208:\begin{equation} \label{eq:13} \int_\Omega -\Delta u v = \int_\Omega f v \end{equation}
+\form#209:$u \in \mathcal{X}$
+\form#210:\[ \int_\Omega \nabla u \cdot \nabla v = \int_\Omega f v \]
+\form#211:\[ \int_{\partial \Omega} \frac{\partial u}{\partial n} v = 0, \]
+\form#212:\[ \label{eq:21} \frac{\partial u}{\partial n} \stackrel{\text{def}}{=} \nabla u \cdot n \]
+\form#213:$n$
+\form#214:$\partial \Omega$
+\form#215:\[ \label{eq:10} \Omega = \cup_{e=1}^\nel \Omega^e \]
+\form#216:$\Omega^e$
+\form#217:$d$
+\form#218:$\nel$
+\form#219:$N$
+\form#220:\[ \label{eq:17} X_h = \Big\{ v_h \in C^0(\Omega),\ {v_h}_{|\Omega^e} \in \mathbb{P}_N( \Omega^e ),\ v_h=g_{|x=-1,x=1}\Big\} \]
+\form#221:\[ \label{eq:18} V_h = \Big\{ v_h \in C^0(\Omega),\ {v_h}_{|\Omega^e} \in \mathbb{P}_N( \Omega^e ),\ v_h=0_{|x=-1,x=1}\Big\} \]
+\form#222:$u_h \in X_h \subset \mathcal{X}$
+\form#223:$v \in V_h \subset \mathcal{V}$
+\form#224:\[ \int_\Omega \nabla u_h \cdot \nabla v_h = \int_\Omega f v_h \]
+\form#225:$u \in X_h \subset H_1(\Omega)$
+\form#226:$v \in X_h$
+\form#227:\[ \int_\Omega \nabla u \cdot \nabla v + \int_{|x=-1,x=1} -\frac{\partial u}{\partial n} v - u \frac{\partial v}{\partial n} + \frac{\mu}{h} u v = \int_\Omega f v + \int_{|x=-1,x=1} - g \frac{\partial v}{\partial n} + \frac{\mu}{h} g v \]
+\form#228:\[ \label{eq:19} X_h = \Big\{ v_h \in C^0(\Omega),\ {v_h}_{|\Omega^e} \in \mathbb{P}_N( \Omega^e ) \Big\} \]
+\form#229:$> 0$
+\form#230:$h$
+\form#231:$f$
+\form#232:\[ \begin{array}{rccl} \ell: & X_h & \mapsto & \mathbb{R}\\ & v_h & \rightarrow &\ell(v_h)=\int_\Omega f v_h \end{array} \]
+\form#233:$x=\pm 1$
+\form#234:$1$
+\form#235:$3$
+\form#236:$x=-1$
+\form#237:$x=1$
+\form#238:\[ D u = F \]
+\form#239:$L_2$
+\form#240:\begin{equation} \label{eq:7} \|u-u_h\|_{L_2}\ =\ \sqrt{\int_\Omega (u-u_h)^2} = \sqrt{\int_\Omega (g-u_h)^2} \end{equation}
+\form#241:$u_h$
+\form#242:$P_2$
+\form#243:$h^{-(N+1)}$
+\form#244:$h^{-N}$
+\form#245:$(\mathbf{u},p)$
+\form#246:$p$
+\form#247:$c$
+\form#248:$p+c$
+\form#249:\[ \label{eq:26} \int_\Omega p = 0 \]
+\form#250:$(\mathbf{u},p,\lambda)$
+\form#251:\[ - \mu \Delta \mathbf{u} +\nabla p = \mathbf{f}\quad, \quad \nabla \cdot \mathbf{u} + \lambda = 0, \quad \text{and}\quad \int_\Omega p = 0,\quad \text{in}\ \Omega = [-1;1]^2 \]
+\form#252:\[ \mathbf{f} = \mathbf{0} \]
+\form#253:\[ \mathbf{u}=\mathbf{1}_{|y=1}, \quad \mathbf{u}=\mathbf{0}_{|\partial \Omega \backslash \{(x,y) \in \Omega | y=1\}} \]
+\form#254:$\mathbf{u}$
+\form#255:$H^1_0(\Omega)$
+\form#256:$L^2_0(\Omega)$
+\form#257:$L^2(\Omega)$
+\form#258:$\mathbb{P}_0(\Omega)$
+\form#259:$\mathcal{X} = H^1_0(\Omega)\times L^2(\Omega)\times\mathbb{P}_0(\Omega)$
+\form#260:$(\mathbf{u}, p, \lambda) \in \mathcal{X}$
+\form#261:$(\mathbf{v},q,\nu) \in \mathcal{X}$
+\form#262:\[ \int_\Omega \mu \nabla \mathbf{u} : \nabla \mathbf{v} + \nabla \cdot \mathbf{v} p + \nabla \cdot \mathbf{u}\ q + q \lambda + p \nu \ = \ \int_\Omega \mathbf{f} \cdot \mathbf{v} \]
+\form#263:$\Omega_h$
+\form#264:$X_h$
+\form#265:$M_h$
+\form#266:$\mathbb{P}_N/\mathbb{P}_{N-1}$
+\form#267:$\mathcal{X}_h=X_h\times M_h \times \mathbb{P}_0(\Omega)$
+\form#268:$(\mathbf{u}_h,p_h,\lambda_h) \in \mathcal{X}_h$
+\form#269:$(\mathbf{v}_h,q_h,\nu_h) \in \mathcal{X}_h$
+\form#270:\[ \label{eq:27} \int_{\Omega_h} \mu \nabla \mathbf{u}_h \cdot \nabla \mathbf{v}_h + \nabla \cdot \mathbf{v}_h \ p_h + \nabla \cdot \mathbf{u}_h\ q_h + p_h \nu_h + q_h \lambda_h = \ \int_{\Omega_h} \mathbf{f} \cdot \mathbf{v}_h \]
+\form#271:\[ \label{eq:28} \underbrace{\begin{pmatrix} A & B & 0\\ B^T & 0 & C\\ 0 & C^T & 0 \end{pmatrix}}_{\mathcal{A}} \underbrace{ \begin{pmatrix} \mathbf{u}_h\\ p_h\\ \lambda_h \end{pmatrix}}_{\mathcal{U}} = \underbrace{\begin{pmatrix} F\\ 0\\ 0 \end{pmatrix}}_{\mathcal{F}} \]
+\form#272:$(\mathbf{u},\mathbf{v})$
+\form#273:$B$
+\form#274:$(\mathbf{u},q)$
+\form#275:$C$
+\form#276:$(p,\nu)$
+\form#277:$\mathcal{A}$
+\form#278:$\mathcal{A} \mathcal{U} = \mathcal{F}$
+\form#279:$\mathcal{X}_h$
+\form#280:$\mathcal{U}$
+\form#281:$\mathcal{F}$
+\form#282:$\lambda$
+\form#283:$\mathbb{P}_0(\Omega_h)$
+\form#284:$\tau(\mathbf{u}) = \frac{1}{2}(\nabla \mathbf{u} + \nabla \mathbf{u}^T)$
+\form#285:$\tau(\mathbf{u}) = \nabla \mathbf{u}$
+\form#286:$\bar{\sigma}(\mathbf{u},p) \mathbf{n} = -p \mathbf{n} + 2 \mu \tau(\mathbf{u}) \mathbf{n}$
+\form#287:$\mathbf{n}$
+\form#288:$\bar{\sigma}(\mathbf{u},p) = -p \mathbb{I} + 2 \mu \tau(\mathbf{u})$
+\form#289:\[ A x = b \]
+\form#290:$n \times n $
+\form#291:$x,b$
+\form#292:$Y_h$
+\form#293:$ -\Delta u = f$
+\form#294:$u= g$
+\form#295:$\Gamma$
+\form#296:$\int_{\partial \Omega} -\nabla u \cdot \mathbf{n} v$
+\form#297:$\int_{\partial \Omega} -\nabla v \cdot \mathbf{n} u$
+\form#298:$\int_{\partial \Omega} \frac{\gamma}{h} u v$
+\form#299:$P_0$
+\form#300:$ -\beta\cdot\nabla u + \mu u = f$
+\form#301:$\Gamma_{in}$
+\form#302:$D u = F$
+\form#303:$ M u = f $
+\form#304:$ -\Delta u + \lambda \exp(u) = 0, \quad u_\Gamma = 0$
+\form#305:$ -\Delta u + u^\lambda = 0, \quad u_\Gamma = 0$
+\form#306:$-\epsilon \Delta u -\beta\cdot\nabla u + \mu u = f$
+\form#307:$f: \mathbb{R}^n \mapsto \mathbb{R}^{m\times p}$
+\form#308:$n=1,2,3$
+\form#309:$m=1,2,3$
+\form#310:$p=1,2,3$
+\form#311:$\overrightarrow{P}$
+\form#312:$(P_x, P_y, P_z)^T$
+\form#313:$d \times 1$
+\form#314:$P_x$
+\form#315:$1 \times 1$
+\form#316:$P_y$
+\form#317:$\overrightarrow{P}(value is 0 in 1D)$
+\form#318:$P_z$
+\form#319:$z$
+\form#320:$\overrightarrow{P}(value is 0 in 1D and 2D)$
+\form#321:$\overrightarrow{C}$
+\form#322:$(C_x, C_y, C_z)^T$
+\form#323:$C_x$
+\form#324:$C_y$
+\form#325:$\overrightarrow{C}<br>(value is 0 in 1D)$
+\form#326:$C_z$
+\form#327:$\overrightarrow{C}<br>(value is 0 in 1D and 2D)$
+\form#328:$(N_x, N_y, N_z)^T$
+\form#329:$\overrightarrow{N}$
+\form#330:$\begin{pmatrix} m_{11} & m_{12} & ...\\ m_{21} & m_{22} & ...\\ \vdots & & \end{pmatrix}$
+\form#331:$M \times N$
+\form#332:$\begin{pmatrix} v_1\\v_2\\ \vdots \\v_N \end{pmatrix}$
+\form#333:$M\times N$
+\form#334:$|f(\overrightarrow{x})|$
+\form#335:$\cos(f(\overrightarrow{x}))$
+\form#336:$\sin(f(\overrightarrow{x}))$
+\form#337:$\tan(f(\overrightarrow{x}))$
+\form#338:$\acos(f(\overrightarrow{x}))$
+\form#339:$\asin(f(\overrightarrow{x}))$
+\form#340:$\atan(f(\overrightarrow{x}))$
+\form#341:$\cosh(f(\overrightarrow{x}))$
+\form#342:$\sinh(f(\overrightarrow{x}))$
+\form#343:$\tanh(f(\overrightarrow{x}))$
+\form#344:$\exp(f(\overrightarrow{x}))$
+\form#345:$\log(f(\overrightarrow{x}))$
+\form#346:$\sqrt{f(\overrightarrow{x})}$
+\form#347:$\begin{cases} 1 & \text{if}\ f(\overrightarrow{x}) \geq 0\\-1 & \text{if}\ f(\overrightarrow{x}) < 0\end{cases}$
+\form#348:$\chi(f(\overrightarrow{x}))=\begin{cases}0 & \text{if}\ f(\overrightarrow{x}) = 0\\1 & \text{if}\ f(\overrightarrow{x}) \neq 0\\\end{cases}$
+\form#349:$N \times 1$
+\form#350:$N_x$
+\form#351:$N_y$
+\form#352:$N_z$
+\form#353:$\mathrm{rank}(f(\overrightarrow{x}))$
+\form#354:$m \times p$
+\form#355:$m \times p $
+\form#356:$\mathrm{rank}(f(\overrightarrow{x}))+1$
+\form#357:$p=1$
+\form#358:$m \times n $
+\form#359:$\nabla f$
+\form#360:$\nabla\cdot f$
+\form#361:$\mathrm{rank}(f(\overrightarrow{x}))-1$
+\form#362:$1 \times 1 $
+\form#363:$ f+g$
+\form#364:$ f-g$
+\form#365:$ f*g$
+\form#366:$ f/g$
+\form#367:$ f<g$
+\form#368:$ f<=g$
+\form#369:$ f>g$
+\form#370:$ f>=g$
+\form#371:$ f==g$
+\form#372:$ f!=g$
+\form#373:$ -g$
+\form#374:$ f$
+\form#375:$ !g$
+\form#376:$\nabla\times f$
+\form#377:$n \times 1 $
+\form#378:$m=n$
+\form#379:$\nabla^2 f$
+\form#380:$m=p=1$
+\form#381:$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$
+\form#382:$m=1$
+\form#383:$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$
+\form#384:$m=2$
+\form#385:${f}=\frac{1}{2}(f_0+f_1)$
+\form#386:$\mathrm{rank}( f(\overrightarrow{x}))$
+\form#387:$f_0$
+\form#388:$f_1$
+\form#389:$\max(f_0,f_1)$
+\form#390:$n \times p $
+\form#391:$\min(f_0,f_1)$
