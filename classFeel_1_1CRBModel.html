@@ -18,7 +18,7 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="feel.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -160,8 +160,8 @@ functionspace_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a clas
 <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Qm</b> (mpl::bool_&lt; true &gt;) const </td></tr>
 <tr class="memitem:af7383c76a851b83edcb7be08b80bb1e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7383c76a851b83edcb7be08b80bb1e6"></a>
 <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Qm</b> (mpl::bool_&lt; false &gt;) const </td></tr>
-<tr class="memitem:a75ee0b5d1944787d8ef20be744067d4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75ee0b5d1944787d8ef20be744067d4c"></a>
-<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Qmf</b> () const </td></tr>
+<tr class="memitem:ac109efaa75d40c064c4f4c297599ca6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac109efaa75d40c064c4f4c297599ca6f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>QInitialGuess</b> () const </td></tr>
 <tr class="memitem:a29b174e956b4dd2ba86f8ae090ac7686"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29b174e956b4dd2ba86f8ae090ac7686"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>mMaxA</b> (int q)</td></tr>
 <tr class="memitem:a52236b499b8fbaba052269146f4aba9b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52236b499b8fbaba052269146f4aba9b"></a>
@@ -170,8 +170,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>mMaxM</b> (int q)</td>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>mMaxM</b> (int q, mpl::bool_&lt; true &gt;)</td></tr>
 <tr class="memitem:a872ae6392889b33e1a892706e0671e5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a872ae6392889b33e1a892706e0671e5c"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>mMaxM</b> (int q, mpl::bool_&lt; false &gt;)</td></tr>
-<tr class="memitem:a29280d0ab9e375a261dd12b23f992ad9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29280d0ab9e375a261dd12b23f992ad9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mMaxMF</b> (int q) const </td></tr>
+<tr class="memitem:a66a5a6896eec42ae68e7ee77be3eb690"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66a5a6896eec42ae68e7ee77be3eb690"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mMaxInitialGuess</b> (int q) const </td></tr>
 <tr class="memitem:a58a5fdccb15f3226b0dbc74d2d715eaa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58a5fdccb15f3226b0dbc74d2d715eaa"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>mMaxF</b> (int output_index, int q)</td></tr>
 <tr class="memitem:a8f784931e4588a6ccfee64d3af234ab0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f784931e4588a6ccfee64d3af234ab0"></a>
@@ -186,6 +186,8 @@ parameterspace_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a cla
 <tr><td colspan="2"><div class="groupHeader">Mutators</div></td></tr>
 <tr class="memitem:a82687058c4dd3fa195c88c022268f95f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a82687058c4dd3fa195c88c022268f95f">setMeshSize</a> (double s)</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Methods</div></td></tr>
+<tr class="memitem:ada2e2c3e906fff93681e8c297129c011"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada2e2c3e906fff93681e8c297129c011"></a>
+beta_vector_type&#160;</td><td class="memItemRight" valign="bottom"><b>computeBetaInitialGuess</b> (parameter_type const &amp;mu) const </td></tr>
 <tr class="memitem:aaeb4f52b9f0c2fed81845949b58bf306"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaeb4f52b9f0c2fed81845949b58bf306"></a>
 betaqm_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#aaeb4f52b9f0c2fed81845949b58bf306">computeBetaQm</a> (parameter_type const &amp;mu, double time=0)</td></tr>
 <tr class="memdesc:aaeb4f52b9f0c2fed81845949b58bf306"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the betaqm given <code>mu</code> <br/></td></tr>
@@ -199,12 +201,8 @@ betaqm_type&#160;</td><td class="memItemRight" valign="bottom"><b>computeBetaQm<
 betaqm_type&#160;</td><td class="memItemRight" valign="bottom"><b>computeBetaQm</b> (<a class="el" href="classFeel_1_1CRBModel.html#a9a32d976cdcfb1585f71243e7b618ddc">element_type</a> const &amp;T, parameter_type const &amp;mu, mpl::bool_&lt; true &gt;, double time=0)</td></tr>
 <tr class="memitem:ac817159f977eaa9109bb8a6a954d3b21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac817159f977eaa9109bb8a6a954d3b21"></a>
 betaqm_type&#160;</td><td class="memItemRight" valign="bottom"><b>computeBetaQm</b> (<a class="el" href="classFeel_1_1CRBModel.html#a9a32d976cdcfb1585f71243e7b618ddc">element_type</a> const &amp;T, parameter_type const &amp;mu, mpl::bool_&lt; false &gt;, double time=0)</td></tr>
-<tr class="memitem:aa7b631f6d5446571dc5cadf91961d1e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7b631f6d5446571dc5cadf91961d1e6"></a>
-element_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>initialGuess</b> (parameter_type const &amp;mu)</td></tr>
-<tr class="memitem:a630cc05b701de095b474a55769717aab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a630cc05b701de095b474a55769717aab"></a>
-element_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>initialGuess</b> (parameter_type const &amp;mu, mpl::bool_&lt; true &gt;)</td></tr>
-<tr class="memitem:a0dfed5b064d2f0c35320c1ed41b72b15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0dfed5b064d2f0c35320c1ed41b72b15"></a>
-element_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>initialGuess</b> (parameter_type const &amp;mu, mpl::bool_&lt; false &gt;)</td></tr>
+<tr class="memitem:aa3bdbda71be7aeb8b4874a9a37a5b973"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3bdbda71be7aeb8b4874a9a37a5b973"></a>
+element_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>assembleInitialGuess</b> (parameter_type const &amp;mu)</td></tr>
 <tr class="memitem:a5c631a31e170d12a4db9cfdaa67abe5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c631a31e170d12a4db9cfdaa67abe5d"></a>
 offline_merge_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a5c631a31e170d12a4db9cfdaa67abe5d">update</a> (parameter_type const &amp;mu, double time=0)</td></tr>
 <tr class="memdesc:a5c631a31e170d12a4db9cfdaa67abe5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">update the model wrt <code>mu</code> <br/></td></tr>
@@ -233,6 +231,12 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>computeNormL2</b> (
 affine_decomposition_type&#160;</td><td class="memItemRight" valign="bottom"><b>computeAffineDecomposition</b> (mpl::bool_&lt; true &gt;)</td></tr>
 <tr class="memitem:ad13da85744af61e92618dea3e6a56fc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad13da85744af61e92618dea3e6a56fc7"></a>
 affine_decomposition_type&#160;</td><td class="memItemRight" valign="bottom"><b>computeAffineDecomposition</b> (mpl::bool_&lt; false &gt;)</td></tr>
+<tr class="memitem:ab449f330db9be9d11f4dffe8855e3b40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab449f330db9be9d11f4dffe8855e3b40"></a>
+std::vector&lt; std::vector<br class="typebreak"/>
+&lt; element_ptrtype &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>computeInitialGuessAffineDecomposition</b> ()</td></tr>
+<tr class="memitem:ae22774697a33b8f4faba1c032a822004"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae22774697a33b8f4faba1c032a822004"></a>
+std::vector&lt; std::vector<br class="typebreak"/>
+&lt; element_ptrtype &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>computeInitialGuessVAffineDecomposition</b> ()</td></tr>
 <tr class="memitem:a1c8deb8ba5df0197195fde43abb36f9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1CRBModel.html#ada0c365d6d269ce7005241092e7dcc2b">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a1c8deb8ba5df0197195fde43abb36f9c">h1</a> (<a class="el" href="classFeel_1_1CRBModel.html#a9a32d976cdcfb1585f71243e7b618ddc">element_type</a> const &amp;xi_i, <a class="el" href="classFeel_1_1CRBModel.html#a9a32d976cdcfb1585f71243e7b618ddc">element_type</a> const &amp;xi_j) const </td></tr>
 <tr class="memdesc:a1c8deb8ba5df0197195fde43abb36f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">the inner product <img class="formulaInl" alt="$h1(\xi_i, \xi_j) = \xi_j^T H_1 \xi_i$" src="form_125.png"/>  <a href="#a1c8deb8ba5df0197195fde43abb36f9c"></a><br/></td></tr>
 <tr class="memitem:ac36e52235de1cc532a18c494e6713357"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1CRBModel.html#ada0c365d6d269ce7005241092e7dcc2b">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#ac36e52235de1cc532a18c494e6713357">h1</a> (<a class="el" href="classFeel_1_1CRBModel.html#a9a32d976cdcfb1585f71243e7b618ddc">element_type</a> const &amp;xi_i) const </td></tr>
@@ -245,10 +249,10 @@ affine_decomposition_type&#160;</td><td class="memItemRight" valign="bottom"><b>
 <tr class="memdesc:a441f8bd8b81c02e4d359baeb500f8a61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix <code>Mq</code>[q][m] of the affine decomposition of the bilinear form (time dependent)  <a href="#a441f8bd8b81c02e4d359baeb500f8a61"></a><br/></td></tr>
 <tr class="memitem:a223d1cc3dced1352741ed7bc9dfa6da5"><td class="memItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a223d1cc3dced1352741ed7bc9dfa6da5">Mqm</a> (uint16_type q, uint16_type m, bool transpose=false)</td></tr>
 <tr class="memdesc:a223d1cc3dced1352741ed7bc9dfa6da5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix <code>Mq</code>[q][m] of the affine decomposition of the bilinear form (time dependent)  <a href="#a223d1cc3dced1352741ed7bc9dfa6da5"></a><br/></td></tr>
-<tr class="memitem:a92e74b89a8d1ac54757e9775a8f667ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92e74b89a8d1ac54757e9775a8f667ec"></a>
-const vector_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>MFqm</b> (uint16_type q, uint16_type m) const </td></tr>
-<tr class="memitem:ac17ff2d1a38fef0d2caa33e4904c21c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac17ff2d1a38fef0d2caa33e4904c21c6"></a>
-vector_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>MFqm</b> (uint16_type q, uint16_type m)</td></tr>
+<tr class="memitem:afa774f1cbe9d1eaa730eddeb5e13653e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa774f1cbe9d1eaa730eddeb5e13653e"></a>
+const vector_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>InitialGuessVector</b> (uint16_type q, uint16_type m) const </td></tr>
+<tr class="memitem:abe7d91ecea372146dd56ed8e4a3b61ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe7d91ecea372146dd56ed8e4a3b61ca"></a>
+vector_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>InitialGuessVector</b> (uint16_type q, uint16_type m)</td></tr>
 <tr class="memitem:aa2652bf9bbc0b5e403d357c588584753"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1CRBModel.html#ada0c365d6d269ce7005241092e7dcc2b">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#aa2652bf9bbc0b5e403d357c588584753">Aqm</a> (uint16_type q, uint16_type m, <a class="el" href="classFeel_1_1CRBModel.html#a9a32d976cdcfb1585f71243e7b618ddc">element_type</a> const &amp;xi_i, <a class="el" href="classFeel_1_1CRBModel.html#a9a32d976cdcfb1585f71243e7b618ddc">element_type</a> const &amp;xi_j, bool transpose=false) const </td></tr>
 <tr class="memdesc:aa2652bf9bbc0b5e403d357c588584753"><td class="mdescLeft">&#160;</td><td class="mdescRight">the inner product <img class="formulaInl" alt="$a_{qm}(\xi_i, \xi_j) = \xi_j^T A_{qm} \xi_i$" src="form_126.png"/>  <a href="#aa2652bf9bbc0b5e403d357c588584753"></a><br/></td></tr>
 <tr class="memitem:a9ed8ccb5599c83632182d149b0470fa0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1CRBModel.html#ada0c365d6d269ce7005241092e7dcc2b">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a9ed8ccb5599c83632182d149b0470fa0">Mqm</a> (uint16_type q, uint16_type m, <a class="el" href="classFeel_1_1CRBModel.html#a9a32d976cdcfb1585f71243e7b618ddc">element_type</a> const &amp;xi_i, <a class="el" href="classFeel_1_1CRBModel.html#a9a32d976cdcfb1585f71243e7b618ddc">element_type</a> const &amp;xi_j, bool transpose=false) const </td></tr>
@@ -452,28 +456,24 @@ typedef Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><b>ve
 <tr class="memitem:aac2386b4e3f7b76c107e3a26a2f73934"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac2386b4e3f7b76c107e3a26a2f73934"></a>
 typedef std::vector<br class="typebreak"/>
 &lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>beta_vector_type</b></td></tr>
-<tr class="memitem:af3d3f5c039f92cf2468215b85b96dd6a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3d3f5c039f92cf2468215b85b96dd6a"></a>
+<tr class="memitem:a2fb7b77ddbbcb5bf6a314502e6fe23a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fb7b77ddbbcb5bf6a314502e6fe23a8"></a>
 typedef boost::tuple<br class="typebreak"/>
 &lt; sparse_matrix_ptrtype, <br class="typebreak"/>
 sparse_matrix_ptrtype, <br class="typebreak"/>
-std::vector&lt; vector_ptrtype &gt;<br class="typebreak"/>
-, element_ptrtype &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>offline_merge_type</b></td></tr>
-<tr class="memitem:a670c0fd807188cb15c8a9277623349e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a670c0fd807188cb15c8a9277623349e5"></a>
+std::vector&lt; vector_ptrtype &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>offline_merge_type</b></td></tr>
+<tr class="memitem:a08e000cb265613cb38ca7b0e2ae279ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08e000cb265613cb38ca7b0e2ae279ac"></a>
 typedef boost::tuple<br class="typebreak"/>
 &lt; std::vector&lt; std::vector<br class="typebreak"/>
 &lt; sparse_matrix_ptrtype &gt;<br class="typebreak"/>
  &gt;, std::vector&lt; std::vector<br class="typebreak"/>
 &lt; sparse_matrix_ptrtype &gt;<br class="typebreak"/>
  &gt;, std::vector&lt; std::vector<br class="typebreak"/>
-&lt; std::vector&lt; vector_ptrtype &gt;<br class="typebreak"/>
- &gt; &gt;, std::vector&lt; std::vector<br class="typebreak"/>
-&lt; vector_ptrtype &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>affine_decomposition_type</b></td></tr>
-<tr class="memitem:ae5e4aa07f7c150dff2e64e3eb87ca86e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5e4aa07f7c150dff2e64e3eb87ca86e"></a>
+&lt; std::vector&lt; vector_ptrtype &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>affine_decomposition_type</b></td></tr>
+<tr class="memitem:af9f66e8b213b1ed4459312b59cf83031"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9f66e8b213b1ed4459312b59cf83031"></a>
 typedef boost::tuple<br class="typebreak"/>
 &lt; beta_vector_type, <br class="typebreak"/>
 beta_vector_type, std::vector<br class="typebreak"/>
-&lt; beta_vector_type &gt;<br class="typebreak"/>
-, beta_vector_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>betaqm_type</b></td></tr>
+&lt; beta_vector_type &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>betaqm_type</b></td></tr>
 <tr class="memitem:a130cb10e39947f8daf7d049c1ca037d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a130cb10e39947f8daf7d049c1ca037d3"></a>
 typedef Bdf&lt; <a class="el" href="classFeel_1_1CRBModel.html#abfd06e583290cfaeda5ea14a49065468">space_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a130cb10e39947f8daf7d049c1ca037d3">bdf_type</a></td></tr>
 <tr class="memdesc:a130cb10e39947f8daf7d049c1ca037d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">time discretization <br/></td></tr>
@@ -1855,7 +1855,7 @@ template&lt;typename ModelType&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1CRBModel.html">CRBModel</a></li>
-    <li class="footer">Generated on Mon Apr 15 2013 16:05:30 for Feel++ by
+    <li class="footer">Generated on Tue Apr 16 2013 16:35:23 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

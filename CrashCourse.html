@@ -18,7 +18,7 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="feel.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -90,13 +90,143 @@ $(document).ready(function(){initNavTree('CrashCourse.html','');});
 <div class="title">Crash Course </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><hr/>
- </div></div><!-- contents -->
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#Requirements">Requirements</a></li>
+<li class="level1"><a href="#Compiling">Compiling</a></li>
+<li class="level1"><a href="#Hello">Feel++ Hello World</a><ul><li class="level2"><a href="#Math">About the math</a></li>
+<li class="level2"><a href="#Code">About the code</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#First">First execution & vizualisation</a></li>
+</ul>
+</div>
+<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Vincent Huber</dd></dl>
+<hr/>
+<p>This chapter is designed for impatient people who wants to test <a href="http://www.feelpp.org">Feel++</a> as soon as possible. </p>
+<h1><a class="anchor" id="Requirements"></a>
+Requirements</h1>
+<p>Before installing <a href="http://www.feelpp.org">Feel++</a>, you need to get this required packages : </p>
+<ul>
+<li>g++ (4.4, 4.5, 4.6, 4.7 or higher) OR Clang (3.1 or higher) </li>
+<li>MPI : openmpi (preferred) or mpich </li>
+<li>Boost (1.39 or higher) </li>
+<li>Petsc (2.3.3 or higher) </li>
+<li>Cmake (2.6 or higher) </li>
+<li><a class="el" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator.">Gmsh</a> (can be found at <a href="http://www.geuz.org/gmsh">http://www.geuz.org/gmsh</a>) </li>
+<li>Libxml2 It is assumed that all this packages are properly installed.</li>
+</ul>
+<h1><a class="anchor" id="Building"></a>
+Building Feel++</h1>
+<p><a href="http://www.feelpp.org">Feel++</a> is distributed as a tarball once in a while. The tarballs are available at <br/>
+ </p>
+<center><a href="http://code.google.com/p/feelpp/downloads/list"></a><a href="http://code.google.com/p/feelpp/downloads/list">http://code.google.com/p/feelpp/downloads/list</a></center><p>Download the latest tarball. Then follow the steps and replace <code>x, y, z </code>with the corresponding numbers</p>
+<pre class="fragment">  tar xzf feel-x.y.z.tar.gz
+  cd feel-x.y.z
+</pre><p> We define then the current directory as the source one, ie: </p>
+<pre class="fragment">  export FeelppSrcDir=`pwd`
+</pre><p><a href="#" class="top">top</a> <hr/>
+ <h1><a class="anchor" id="Compiling"></a>
+Compiling</h1>
+<p>Please, notice that 4 Gbytes of RAM is a minimum to make <a href="http://www.feelpp.org">Feel++</a> compiling (with <code>GCC</code>), with clang, the memory footprint is much lower.</p>
+<p>In order to compile <a href="http://www.feelpp.org">Feel++</a> and a test application, we create a new directory: </p>
+<pre class="fragment">  mkdir build
+  cd build
+  export buildDir=`pwd`
+</pre><p> <br/>
+ and then, we are able to compile our first application: </p>
+<pre class="fragment">  cd $buildDir
+  cmake $FeelppSrcDir
+  make -j4
+</pre><p> <br/>
+ This procedure will build the entire librarie (with DebWithRelInfo option) and a dummy program to presents the <a href="http://www.feelpp.org">Feel++</a>'s abilities.<br/>
+</p>
+<p>There is a procedure to install as a system librarie <a href="http://www.feelpp.org">Feel++</a>. </p>
+<pre class="fragment">  make install
+</pre><p> See chapter 2 for more details.</p>
+<p><a href="#" class="top">top</a> <hr/>
+ <h1><a class="anchor" id="Hello"></a>
+Feel++ Hello World</h1>
+<p>As an introduction to the aim and the way to do with <a href="http://www.feelpp.org">Feel++</a>, we provide a sort of <code>Hello World</code> program to evaluate the library.</p>
+<h2><a class="anchor" id="Math"></a>
+About the math</h2>
+<p>We want to solve the simplest problem:<br/>
+ </p>
+<center> <img class="formulaInl" alt="$ \begin{aligned} - \Delta u &amp;= 1,\\ u_{|\partial \Omega} &amp;= 0, \end{aligned} $" src="form_406.png"/></center><p><br/>
+ where <img class="formulaInl" alt="$\Omega \in \mathbb{R}^n, n\in{1,2,3}$" src="form_407.png"/>.<br/>
+</p>
+<p>That problem written in variational form is: <br/>
+looks for <img class="formulaInl" alt="$v\in H^1\left( \Omega \right)$" src="form_408.png"/><br/>
+ </p>
+<center> <img class="formulaInl" alt="$ \begin{aligned} a\left( u,v \right)&amp;=l\left( v \right)\\ \forall v &amp;\in H^1\left( \Omega \right). \end{aligned} $" src="form_409.png"/></center><p><br/>
+ with: <br/>
+</p>
+<center> <img class="formulaInl" alt="$ \begin{aligned} a\left( u,v \right)&amp;=\int_{\Omega} \nabla u \cdot \nabla v ,\\ l\left( v \right) &amp;= \int_{\Omega} v . \end{aligned} $" src="form_410.png"/></center><p><br/>
+</p>
+<p>The aim of <a href="http://www.feelpp.org">Feel++</a> is to provide the simplest way to write the $a$ and $f$ forms.</p>
+<p>From a discrete point of view, we introduce <img class="formulaInl" alt="$V_h\subset H^1\left( \Omega \right)$" src="form_411.png"/> such that: <br/>
+</p>
+<center> <img class="formulaInl" alt="$ \begin{aligned} V_h = \left\{ v \in C^0\left( \Omega \right), \forall K\in \mathcal{T}_h, \right.v\left|_K \in P_1\left( K \right) \right\}, \end{aligned} $" src="form_412.png"/></center><p><br/>
+ where <img class="formulaInl" alt="$\mathcal{T}_h$" src="form_413.png"/> is the set of element <img class="formulaInl" alt="$K$" src="form_414.png"/> forming the mesh of <img class="formulaInl" alt="$\Omega$" src="form_182.png"/>. <br/>
+ We now look for <img class="formulaInl" alt="$u_h \in V_h$" src="form_416.png"/> such that: <br/>
+</p>
+<center> <img class="formulaInl" alt="$ \begin{aligned} \forall v_h\in V_h, a\left( u_h,v_h \right)=l\left( v_h \right). \end{aligned} $" src="form_415.png"/></center><p><br/>
+</p>
+<h2><a class="anchor" id="Code"></a>
+About the code</h2>
+<p>This section is here to declare that we want to use the namespace <a href="http://www.feelpp.org">Feel++</a>, to passe the command line options to the created environnement and add some informations (basics <a href="http://www.feelpp.org">Feel++</a> options, application name). </p>
+<div class="fragment"><div class="line"><span class="keyword">using namespace </span>Feel;</div>
+<div class="line">Environment env( _argc=argc, _argv=argv,</div>
+<div class="line">                 _desc=feel_options(),</div>
+<div class="line">                 _directory=<span class="stringliteral">&quot;.&quot;</span>,</div>
+<div class="line">                 _about=about(_name=<span class="stringliteral">&quot;qs_laplacian&quot;</span>,</div>
+<div class="line">                 _author=<span class="stringliteral">&quot;Feel++ Consortium&quot;</span>,</div>
+<div class="line">                 _email=<span class="stringliteral">&quot;feelpp-devel@feelpp.org&quot;</span>));</div>
+</div><!-- fragment --><p> We have to define the mesh, the approximation space and our test and trial functions. </p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> mesh = <a class="code" href="namespaceFeel.html#aeef72bd9ec13a749932e33309da80e62">unitSquare</a>();</div>
+<div class="line"><span class="keyword">auto</span> Vh = Pch&lt;1&gt;( mesh );</div>
+<div class="line"><span class="keyword">auto</span> u = Vh-&gt;element();</div>
+<div class="line"><span class="keyword">auto</span> v = Vh-&gt;element();</div>
+</div><!-- fragment --><p> We create now our bilinear and linear forms, we add the homogeneous Dirichlet conditions and solve the discretized (linear) system. </p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> l = form1( _test=Vh );</div>
+<div class="line">l = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>(_range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>(mesh),</div>
+<div class="line">              _expr=<span class="keywordtype">id</span>(v));</div>
+<div class="line"><span class="keyword">auto</span> a = form2( _trial=Vh, _test=Vh );</div>
+<div class="line">a = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>(_range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>(mesh),</div>
+<div class="line">              _expr=gradt(u)*trans(grad(v)) );</div>
+<div class="line">a+=on(_range=<a class="code" href="namespaceFeel.html#a6d4deea03257c3f53b0e9df514a7bf00">boundaryfaces</a>(mesh), _rhs=l, _element=u,</div>
+<div class="line">      _expr=constant(0.) );</div>
+<div class="line">a.solve(_rhs=l,_solution=u);</div>
+</div><!-- fragment --><p> <a href="http://www.feelpp.org">Feel++</a> provides the possibility to save the results: </p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> e = exporter( _mesh=mesh );</div>
+<div class="line">e-&gt;add( <span class="stringliteral">&quot;u&quot;</span>, u );</div>
+<div class="line">e-&gt;save();</div>
+<div class="line"><span class="keywordflow">return</span> 0;</div>
+</div><!-- fragment --><p><a href="#" class="top">top</a> <hr/>
+ <h1><a class="anchor" id="First"></a>
+First execution &amp; vizualisation</h1>
+<p>To test that part of code, please go to: </p>
+<pre class="fragment">  cd $FeelppSrcDir/quickstart
+</pre><p> and execute the code, by: </p>
+<pre class="fragment">  ./feelpp_qs_laplacian
+</pre><p> This will produce several files: </p>
+<pre class="fragment">  qs_laplacian-1_0.case
+  qs_laplacian-1.sos
+  qs_laplacian.timeset
+  qs_laplacian.u-1_0.001
+  qs_laplacian-1_0.geo001
+  qs_laplacian.pid-1_0.001
+  square.geo
+  square.msh
+</pre><p> You can vizualise the results using any Ensight file reader, such as Paraview, opening =qs_laplacian-1.sos=. </p>
+<pre class="fragment">  paraview qs_laplacian-1.sos
+</pre><p> You may have a look to the differents option provided by </p>
+<pre class="fragment">  ./feelpp_qs_laplacian --help
+</pre> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 15 2013 16:05:28 for Feel++ by
+    <li class="footer">Generated on Tue Apr 16 2013 16:35:21 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

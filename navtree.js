@@ -3,8 +3,7 @@ var NAVTREE =
   [ "Feel++", "index.html", [
     [ "Introduction", "index.html", null ],
     [ "Getting Started", "usergroup0.html", "usergroup0" ],
-    [ "Obsolet Version", "usergroup1.html", "usergroup1" ],
-    [ "Quick Reference", "usergroup2.html", "usergroup2" ],
+    [ "Quick Reference", "usergroup1.html", "usergroup1" ],
     [ "Class List", "annotated.html", "annotated" ]
   ] ]
 ];
@@ -12,26 +11,26 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classFeel_1_1Advection.html#aa50d0045708f02a25eb775c522bd23c3",
-"classFeel_1_1Backend.html#af7f595eb7c5e4bb85aef7ec903fe6056",
-"classFeel_1_1CRBDB.html#a6b26667b5d61e737479bcc9d0782b43e",
-"classFeel_1_1CRBModelTrilinear.html#adf109546fe3cb442b6423a2cf6d3354b",
-"classFeel_1_1DataMap.html#ad1cf9d19c6087f862f297502f0bf7176",
-"classFeel_1_1ExporterGmsh.html#a4cb79e71b2da6bafb70664b7593733b9",
-"classFeel_1_1GeoElement1D.html#ac3bcc857c285bf34e005983dd4317fae",
-"classFeel_1_1GeoMap.html#aa214982097d37f668a61f7500a591fde",
-"classFeel_1_1GeoND.html#af9b6a85a0dd059b7a25e0a81de4ede91",
-"classFeel_1_1Info.html#ae6c178ec8060d1355167c157acccfec0",
-"classFeel_1_1MatrixSparse.html#a848f6bb588c1923cebcac47a4bc5f8ff",
-"classFeel_1_1Mesh3D.html#ab096bb911258396a1fa651222a694b7d",
-"classFeel_1_1ParameterSpace_1_1Element.html#acdd937ebfd698c52a089473858894769",
-"classFeel_1_1PolynomialSet.html#a63bd0d24c8d4e1e447962878fce75007",
-"classFeel_1_1SolverBase.html#a07084dfc5416505d0b544fad96d1eaa4",
-"classFeel_1_1Sound.html#adf900c254b92d4f0cd4a303a62c8b6fc",
-"classFeel_1_1VectorBlock.html#a3f620322ad4d7e643a368e2438fece32",
-"classFeel_1_1fem_1_1CrouzeixRaviart.html",
-"classLShape.html#a37a078799ab8e7a9f5e5c0d60958e98c",
-"structFeel_1_1BoundingBox.html#ad42bb35c4e77c1c95f371f1185620c94"
+"classFeel_1_1Aitken.html",
+"classFeel_1_1BackendEigen.html",
+"classFeel_1_1CRBDB.html#a796ec19fc7de3200f90f9af532c5bf1a",
+"classFeel_1_1CRBModelTrilinear.html#ae7728ebc8c4e70256afa9454acf7cb09",
+"classFeel_1_1DataMap.html#ad2e8906097e7b5c9ed90eacdb1741815",
+"classFeel_1_1ExporterGmsh.html#a5745a3d44624b9f5659682680b049d40",
+"classFeel_1_1GeoElement1D.html#ac98d07dd8f7b70e16ccb9a01abf56b9c",
+"classFeel_1_1GeoMap.html#aa2e8e5831218e0648938117821885a20",
+"classFeel_1_1GeoND.html#afd32eb056407216626774e44c7689f67",
+"classFeel_1_1Info.html#aeb0909ebb7f3687714d789fc9ca9e0c4",
+"classFeel_1_1MatrixSparse.html#a8569b5ca72c200d49d809621deacb5b3",
+"classFeel_1_1Mesh3D.html#ab241dd0dc6ed9869e0c9502e21df2e89",
+"classFeel_1_1ParameterSpace_1_1Element.html#ad1a12135507c87bcd52619beb03c01b5",
+"classFeel_1_1PolynomialSet.html#a66bb2dbcd92715338419af3efd690999",
+"classFeel_1_1SolverBase.html#a13a83cc0ddebb7abb26bea6fb0e464ad",
+"classFeel_1_1Sphere.html",
+"classFeel_1_1VectorBlock.html#a4137ef4b08536eb14b94dce90d4ccc25",
+"classFeel_1_1fem_1_1CrouzeixRaviart.html#a03f1cee5706dfe1a003ff15e8360b19f",
+"classLShape.html#a3f71983a8d304afd9f70f98c124fb666",
+"structFeel_1_1BoundingBox.html#ad79b724f28f24c2324fcd6a042ab132e"
 ];
 
 var navTreeSubIndices = new Array();

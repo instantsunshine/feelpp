@@ -18,7 +18,7 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="feel.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('classFeel_1_1Laplacian.html','');});
 class Feel::Laplacian&lt; Dim, Order, Cont, Entity, FType &gt;</h3>
 
 <p><a class="el" href="classFeel_1_1Laplacian.html">Laplacian</a> Solver using discontinous approximation spaces</p>
-<p>solve <img class="formulaInl" alt="$ -\Delta u = f$" src="form_293.png"/> on <img class="formulaInl" alt="$\Omega$" src="form_182.png"/> and <img class="formulaInl" alt="$u= g$" src="form_294.png"/> on <img class="formulaInl" alt="$\Gamma$" src="form_295.png"/> </p>
+<p>solve <img class="formulaInl" alt="$ -\Delta u = f$" src="form_373.png"/> on <img class="formulaInl" alt="$\Omega$" src="form_182.png"/> and <img class="formulaInl" alt="$u= g$" src="form_374.png"/> on <img class="formulaInl" alt="$\Gamma$" src="form_375.png"/> </p>
 </div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Feel::Laplacian&lt; Dim, Order, Cont, Entity, FType &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -325,9 +325,9 @@ template&lt;int Dim, int Order, typename Cont , template&lt; uint16_type, uint16
 <div class="line">a = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ), _expr=nu*gradt( u )*trans( grad( v ) ) );</div>
 </div><!-- fragment --><p>weak dirichlet conditions treatment for the boundaries marked 1 and 3</p>
 <ol type="1">
-<li>assemble <img class="formulaInl" alt="$\int_{\partial \Omega} -\nabla u \cdot \mathbf{n} v$" src="form_296.png"/></li>
-<li>assemble <img class="formulaInl" alt="$\int_{\partial \Omega} -\nabla v \cdot \mathbf{n} u$" src="form_297.png"/></li>
-<li><p class="startli">assemble <img class="formulaInl" alt="$\int_{\partial \Omega} \frac{\gamma}{h} u v$" src="form_298.png"/></p>
+<li>assemble <img class="formulaInl" alt="$\int_{\partial \Omega} -\nabla u \cdot \mathbf{n} v$" src="form_376.png"/></li>
+<li>assemble <img class="formulaInl" alt="$\int_{\partial \Omega} -\nabla v \cdot \mathbf{n} u$" src="form_377.png"/></li>
+<li><p class="startli">assemble <img class="formulaInl" alt="$\int_{\partial \Omega} \frac{\gamma}{h} u v$" src="form_378.png"/></p>
 <div class="fragment"><div class="line"> */</div>
 <div class="line"><span class="comment">//# marker10 #</span></div>
 <div class="line">a += <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range=<a class="code" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">markedfaces</a>( mesh,<span class="stringliteral">&quot;Dirichlet&quot;</span> ),</div>
@@ -394,7 +394,7 @@ template&lt;int Dim, int Order, typename Cont , template&lt; uint16_type, uint16
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1Laplacian.html">Laplacian</a></li>
-    <li class="footer">Generated on Mon Apr 15 2013 16:05:30 for Feel++ by
+    <li class="footer">Generated on Tue Apr 16 2013 16:35:23 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

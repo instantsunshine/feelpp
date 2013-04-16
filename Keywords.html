@@ -18,7 +18,7 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="feel.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -91,7 +91,12 @@ $(document).ready(function(){initNavTree('Keywords.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Keywords_Array">Points, Vectors and Matrix</a></li>
+<ul><li class="level1"><a href="#Keywords_Array">Points and  Vectors</a></li>
+<li class="level1"><a href="#Keywords_Matrix">Matrix</a><ul><li class="level2"><a href="#Matrix_Building">Building Matrix</a></li>
+<li class="level2"><a href="#Matrix_Manipulating">Manipulating Matrix</a></li>
+<li class="level2"><a href="#Matrix_Jacobian">Jacobian Matrix</a></li>
+</ul>
+</li>
 <li class="level1"><a href="#Keywords_Expr">Expressions</a></li>
 <li class="level1"><a href="#Keywords_Operators">Operators</a><ul><li class="level2"><a href="#Operators_Operations">Operations</a></li>
 <li class="level2"><a href="#Operators_Differential">Differential Operators</a></li>
@@ -106,28 +111,28 @@ $(document).ready(function(){initNavTree('Keywords.html','');});
 <hr/>
 <p>One of <a href="http://www.feelpp.org">Feel++</a> assets is it finite element embedded language. The language follows the C++ grammar, and provides keywords as well as operations between objects which are, mathematically, tensors of rank 0, 1 or 2.</p>
 <p>In all following tables we use the notations :<br/>
- <img class="formulaInl" alt="$f: \mathbb{R}^n \mapsto \mathbb{R}^{m\times p}$" src="form_307.png"/> with <img class="formulaInl" alt="$n=1,2,3$" src="form_308.png"/>, <img class="formulaInl" alt="$m=1,2,3$" src="form_309.png"/>, <img class="formulaInl" alt="$p=1,2,3$" src="form_310.png"/><br/>
+ <img class="formulaInl" alt="$f: \mathbb{R}^n \mapsto \mathbb{R}^{m\times p}$" src="form_293.png"/> with <img class="formulaInl" alt="$n=1,2,3$" src="form_294.png"/>, <img class="formulaInl" alt="$m=1,2,3$" src="form_295.png"/>, <img class="formulaInl" alt="$p=1,2,3$" src="form_296.png"/><br/>
  <img class="formulaInl" alt="$\Omega^e$" src="form_216.png"/> current mesh element</p>
 <h1><a class="anchor" id="Keywords_Array"></a>
-Points, Vectors and Matrix</h1>
+Points and  Vectors</h1>
 <p>Current Point : </p>
 <table  class="manual">
 <tr>
 <th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>Description</th><th>Dimension </th></tr>
 <tr>
 <td><div class="fragment"><div class="line">P()</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\overrightarrow{P}$" src="form_311.png"/></td><td><img class="formulaInl" alt="$(P_x, P_y, P_z)^T$" src="form_312.png"/></td><td><img class="formulaInl" alt="$d \times 1$" src="form_313.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\overrightarrow{P}$" src="form_297.png"/></td><td><img class="formulaInl" alt="$(P_x, P_y, P_z)^T$" src="form_298.png"/></td><td><img class="formulaInl" alt="$d \times 1$" src="form_299.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">Px()</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$P_x$" src="form_314.png"/></td><td><img class="formulaInl" alt="$x$" src="form_195.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{P}$" src="form_311.png"/></td><td><img class="formulaInl" alt="$1 \times 1$" src="form_315.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$P_x$" src="form_300.png"/></td><td><img class="formulaInl" alt="$x$" src="form_195.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{P}$" src="form_297.png"/></td><td><img class="formulaInl" alt="$1 \times 1$" src="form_301.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">Py()</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$P_y$" src="form_316.png"/></td><td><img class="formulaInl" alt="$y$" src="form_196.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{P}$" src="form_311.png"/><br/>
-(value is 0 in 1D)</td><td><img class="formulaInl" alt="$1 \times 1$" src="form_315.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$P_y$" src="form_302.png"/></td><td><img class="formulaInl" alt="$y$" src="form_196.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{P}$" src="form_297.png"/><br/>
+(value is 0 in 1D)</td><td><img class="formulaInl" alt="$1 \times 1$" src="form_301.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">Pz()</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$P_z$" src="form_318.png"/></td><td><img class="formulaInl" alt="$z$" src="form_319.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{P}$" src="form_311.png"/><br/>
-(value is 0 in 1D and 2D)</td><td><img class="formulaInl" alt="$1 \times 1$" src="form_315.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$P_z$" src="form_303.png"/></td><td><img class="formulaInl" alt="$z$" src="form_304.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{P}$" src="form_297.png"/><br/>
+(value is 0 in 1D and 2D)</td><td><img class="formulaInl" alt="$1 \times 1$" src="form_301.png"/> </td></tr>
 </table>
 <p>Element Barycenter Point : </p>
 <table  class="manual">
@@ -135,18 +140,18 @@ Points, Vectors and Matrix</h1>
 <th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>Description</th><th>Dimension </th></tr>
 <tr>
 <td><div class="fragment"><div class="line">C()</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\overrightarrow{C}$" src="form_321.png"/></td><td><img class="formulaInl" alt="$(C_x, C_y, C_z)^T$" src="form_322.png"/></td><td><img class="formulaInl" alt="$d \times 1$" src="form_313.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\overrightarrow{C}$" src="form_305.png"/></td><td><img class="formulaInl" alt="$(C_x, C_y, C_z)^T$" src="form_306.png"/></td><td><img class="formulaInl" alt="$d \times 1$" src="form_299.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">Cx()</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$C_x$" src="form_323.png"/></td><td><img class="formulaInl" alt="$x$" src="form_195.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{C}$" src="form_321.png"/></td><td><img class="formulaInl" alt="$1 \times 1$" src="form_315.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$C_x$" src="form_307.png"/></td><td><img class="formulaInl" alt="$x$" src="form_195.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{C}$" src="form_305.png"/></td><td><img class="formulaInl" alt="$1 \times 1$" src="form_301.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">Cy()</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$C_y$" src="form_324.png"/></td><td><img class="formulaInl" alt="$y$" src="form_196.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{C}$" src="form_321.png"/><br/>
-(value is 0 in 1D)</td><td><img class="formulaInl" alt="$1 \times 1$" src="form_315.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$C_y$" src="form_308.png"/></td><td><img class="formulaInl" alt="$y$" src="form_196.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{C}$" src="form_305.png"/><br/>
+(value is 0 in 1D)</td><td><img class="formulaInl" alt="$1 \times 1$" src="form_301.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">Cz()</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$C_z$" src="form_326.png"/></td><td><img class="formulaInl" alt="$z$" src="form_319.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{C}$" src="form_321.png"/><br/>
-(value is 0 in 1D and 2D)</td><td><img class="formulaInl" alt="$1 \times 1$" src="form_315.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$C_z$" src="form_309.png"/></td><td><img class="formulaInl" alt="$z$" src="form_304.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{C}$" src="form_305.png"/><br/>
+(value is 0 in 1D and 2D)</td><td><img class="formulaInl" alt="$1 \times 1$" src="form_301.png"/> </td></tr>
 </table>
 <p>Normal at Current Point : </p>
 <table  class="manual">
@@ -154,31 +159,90 @@ Points, Vectors and Matrix</h1>
 <th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>Description</th><th>Dimension </th></tr>
 <tr>
 <td><div class="fragment"><div class="line">N()</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\overrightarrow{N}$" src="form_329.png"/></td><td><img class="formulaInl" alt="$(N_x, N_y, N_z)^T$" src="form_328.png"/></td><td><img class="formulaInl" alt="$d \times 1$" src="form_313.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\overrightarrow{N}$" src="form_310.png"/></td><td><img class="formulaInl" alt="$(N_x, N_y, N_z)^T$" src="form_311.png"/></td><td><img class="formulaInl" alt="$d \times 1$" src="form_299.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">Nx()</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$N_x$" src="form_350.png"/></td><td><img class="formulaInl" alt="$x$" src="form_195.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{N}$" src="form_329.png"/></td><td><img class="formulaInl" alt="$1 \times 1$" src="form_315.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$N_x$" src="form_312.png"/></td><td><img class="formulaInl" alt="$x$" src="form_195.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{N}$" src="form_310.png"/></td><td><img class="formulaInl" alt="$1 \times 1$" src="form_301.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">Ny()</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$N_y$" src="form_351.png"/></td><td><img class="formulaInl" alt="$y$" src="form_196.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{N}$" src="form_329.png"/><br/>
-(value is 0 in 1D)</td><td><img class="formulaInl" alt="$1 \times 1$" src="form_315.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$N_y$" src="form_313.png"/></td><td><img class="formulaInl" alt="$y$" src="form_196.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{N}$" src="form_310.png"/><br/>
+(value is 0 in 1D)</td><td><img class="formulaInl" alt="$1 \times 1$" src="form_301.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">Nz()</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$N_z$" src="form_352.png"/></td><td><img class="formulaInl" alt="$z$" src="form_319.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{N}$" src="form_329.png"/><br/>
-(value is 0 in 1D and 2D)</td><td><img class="formulaInl" alt="$1 \times 1$" src="form_315.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$N_z$" src="form_314.png"/></td><td><img class="formulaInl" alt="$z$" src="form_304.png"/> coordinate of <img class="formulaInl" alt="$\overrightarrow{N}$" src="form_310.png"/><br/>
+(value is 0 in 1D and 2D)</td><td><img class="formulaInl" alt="$1 \times 1$" src="form_301.png"/> </td></tr>
 </table>
-<p><a class="el" href="classFeel_1_1Vector.html">Vector</a> and Matrix : </p>
+<p>Vectors : </p>
 <table  class="manual">
 <tr>
-<th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>DescriptionDescription </th><th>Dimension </th></tr>
+<th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>Description</th><th>Dimension </th></tr>
 <tr>
-<td><div class="fragment"><div class="line">vec&lt;N&gt;(v_1,v_2,...,v_N)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\begin{pmatrix} v_1\\v_2\\ \vdots \\v_N \end{pmatrix}$" src="form_332.png"/></td><td>Column <a class="el" href="classFeel_1_1Vector.html">Vector</a> with <img class="formulaInl" alt="$N$" src="form_219.png"/> rows<br/>
-entries being expressions</td><td><img class="formulaInl" alt="$N \times 1$" src="form_349.png"/> </td></tr>
+<td><div class="fragment"><div class="line">vec&lt;n&gt;(v_1,v_2,...,v_n)</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\begin{pmatrix} v_1\\v_2\\ \vdots \\v_n \end{pmatrix}$" src="form_398.png"/></td><td>Column <a class="el" href="classFeel_1_1Vector.html">Vector</a> with <img class="formulaInl" alt="$n$" src="form_213.png"/> rows<br/>
+entries being expressions</td><td><img class="formulaInl" alt="$n \times 1$" src="form_399.png"/> </td></tr>
+</table>
+<p><a href="#" class="top">top</a> <hr/>
+ <br/>
+ </p>
+<h1><a class="anchor" id="Keywords_Matrix"></a>
+Matrix</h1>
+<h2><a class="anchor" id="Matrix_Building"></a>
+Building Matrix</h2>
+<table  class="manual">
 <tr>
-<td><div class="fragment"><div class="line">mat&lt;M,N&gt;(m_11,m_12,...,m_MN)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\begin{pmatrix} m_{11} &amp; m_{12} &amp; ...\\ m_{21} &amp; m_{22} &amp; ...\\ \vdots &amp; &amp; \end{pmatrix}$" src="form_330.png"/></td><td><img class="formulaInl" alt="$M\times N$" src="form_333.png"/> Matrix<br/>
- entries beeing expressions </td><td><img class="formulaInl" alt="$M \times N$" src="form_331.png"/> </td></tr>
+<th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>Description</th><th>Dimension </th></tr>
+<tr>
+<td><div class="fragment"><div class="line">mat&lt;m,n&gt;(m_11,m_12,...,m_mn)</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\begin{pmatrix} m_{11} &amp; m_{12} &amp; ...\\ m_{21} &amp; m_{22} &amp; ...\\ \vdots &amp; &amp; \end{pmatrix}$" src="form_317.png"/></td><td><img class="formulaInl" alt="$m\times n$" src="form_400.png"/> Matrix<br/>
+ entries beeing expressions </td><td><img class="formulaInl" alt="$m \times n$" src="form_401.png"/> </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">ones&lt;m,n&gt;()</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\begin{pmatrix} 1 &amp; 1 &amp; ...\\ 1 &amp; 1 &amp; ...\\ \vdots &amp; &amp; \end{pmatrix}$" src="form_387.png"/></td><td><img class="formulaInl" alt="$m\times n$" src="form_400.png"/> Matrix <br/>
+Filled with 1 </td><td><img class="formulaInl" alt="$m \times n$" src="form_401.png"/> </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">zero&lt;m,n&gt;()</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\begin{pmatrix} 0 &amp; 0 &amp; ...\\ 0 &amp; 0 &amp; ...\\ \vdots &amp; &amp; \end{pmatrix}$" src="form_388.png"/></td><td><img class="formulaInl" alt="$m\times n$" src="form_400.png"/> Matrix <br/>
+Filled with 0 </td><td><img class="formulaInl" alt="$m \times n$" src="form_401.png"/> </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">constant&lt;m,n&gt;(c)</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\begin{pmatrix} c &amp; c &amp; ...\\ c &amp; c &amp; ...\\ \vdots &amp; &amp; \end{pmatrix}$" src="form_389.png"/></td><td><img class="formulaInl" alt="$m\times n$" src="form_400.png"/> Matrix <br/>
+Filled with a constant c </td><td><img class="formulaInl" alt="$m \times n$" src="form_401.png"/> </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">eye&lt;n&gt;()</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\begin{pmatrix} 1 &amp; 0 &amp; ...\\ 0 &amp; 1 &amp; ...\\ \vdots &amp; &amp; \end{pmatrix}$" src="form_390.png"/></td><td>Unit diagonal Matrix <br/>
+ of size <img class="formulaInl" alt="$n\times n$" src="form_402.png"/> </td><td><img class="formulaInl" alt="$n \times n$" src="form_403.png"/> </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">Id&lt;n&gt;()</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\begin{pmatrix} 1 &amp; 0 &amp; ...\\ 0 &amp; 1 &amp; ...\\ \vdots &amp; &amp; \end{pmatrix}$" src="form_390.png"/></td><td>Unit diagonal Matrix <br/>
+ of size <img class="formulaInl" alt="$n\times n$" src="form_402.png"/> </td><td><img class="formulaInl" alt="$n \times n$" src="form_403.png"/> </td></tr>
+</table>
+<h2><a class="anchor" id="Matrix_Manipulating"></a>
+Manipulating Matrix</h2>
+<p>Let <img class="formulaInl" alt="$A$" src="form_16.png"/> a square matrix of size <img class="formulaInl" alt="$n$" src="form_213.png"/>. </p>
+<table  class="manual">
+<tr>
+<th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>Description</th><th>Dimension </th></tr>
+<tr>
+<td><div class="fragment"><div class="line">inv(A)</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$A^{-1}$" src="form_404.png"/></td><td>Inverse of matrix <img class="formulaInl" alt="$A$" src="form_16.png"/> </td><td><img class="formulaInl" alt="$n \times n$" src="form_403.png"/> </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">det(A)</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\det (A)$" src="form_405.png"/></td><td>Determinant of matrix <img class="formulaInl" alt="$A$" src="form_16.png"/> </td><td><img class="formulaInl" alt="$1 \times 1$" src="form_301.png"/> </td></tr>
+</table>
+<h2><a class="anchor" id="Matrix_Jacobian"></a>
+Jacobian Matrix</h2>
+<p>You can access to the jacobian matrix, <img class="formulaInl" alt="$J$" src="form_395.png"/>, of the geometric transformation, usign the keyword : </p>
+<div class="fragment"><div class="line">J() </div>
+</div><!-- fragment --><p> There are some tools to manipulate this jacobian. </p>
+<table  class="manual">
+<tr>
+<th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>Description </th></tr>
+<tr>
+<td><div class="fragment"><div class="line">detJ()</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\det(J)$" src="form_396.png"/></td><td>Determinant of jacobian matrix  </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">invJT()</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$(J^{-1})^T$" src="form_397.png"/></td><td>Transposed inverse of jacobian matrix  </td></tr>
 </table>
 <p><a href="#" class="top">top</a> <hr/>
  <br/>
@@ -196,7 +260,7 @@ Expressions</h1>
 <div class="line">cst( c )</div>
 </div><!-- fragment --></td><td>Variable <img class="formulaInl" alt="$x$" src="form_195.png"/><br/>
  Variable <img class="formulaInl" alt="$y$" src="form_196.png"/><br/>
- Variable <img class="formulaInl" alt="$z$" src="form_319.png"/><br/>
+ Variable <img class="formulaInl" alt="$z$" src="form_304.png"/><br/>
  Constant function equal to <img class="formulaInl" alt="$c$" src="form_247.png"/>  </td></tr>
 </table>
 <p>You can custom your constant function : </p>
@@ -207,49 +271,49 @@ Expressions</h1>
 <th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>Description </th></tr>
 <tr>
 <td><div class="fragment"><div class="line">abs(expr) </div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$|f(\overrightarrow{x})|$" src="form_334.png"/></td><td>element wise absolute value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$|f(\overrightarrow{x})|$" src="form_320.png"/></td><td>element wise absolute value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">cos(expr)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\cos(f(\overrightarrow{x}))$" src="form_335.png"/></td><td>element wise cos value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\cos(f(\overrightarrow{x}))$" src="form_321.png"/></td><td>element wise cos value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">sin(expr)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\sin(f(\overrightarrow{x}))$" src="form_336.png"/></td><td>element wise sin value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\sin(f(\overrightarrow{x}))$" src="form_322.png"/></td><td>element wise sin value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">tan(expr)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\tan(f(\overrightarrow{x}))$" src="form_337.png"/></td><td>element wise tan value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\tan(f(\overrightarrow{x}))$" src="form_323.png"/></td><td>element wise tan value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">acos(expr)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\acos(f(\overrightarrow{x}))$" src="form_338.png"/></td><td>element wise acos value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\acos(f(\overrightarrow{x}))$" src="form_324.png"/></td><td>element wise acos value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">asin(expr)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\asin(f(\overrightarrow{x}))$" src="form_339.png"/></td><td>element wise asin value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\asin(f(\overrightarrow{x}))$" src="form_325.png"/></td><td>element wise asin value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">atan(expr)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\atan(f(\overrightarrow{x}))$" src="form_340.png"/></td><td>element wise atan value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\atan(f(\overrightarrow{x}))$" src="form_326.png"/></td><td>element wise atan value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">cosh(expr)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\cosh(f(\overrightarrow{x}))$" src="form_341.png"/></td><td>element wise cosh value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\cosh(f(\overrightarrow{x}))$" src="form_327.png"/></td><td>element wise cosh value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">sinh(expr)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\sinh(f(\overrightarrow{x}))$" src="form_342.png"/></td><td>element wise sinh value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\sinh(f(\overrightarrow{x}))$" src="form_328.png"/></td><td>element wise sinh value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">tanh(expr)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\tanh(f(\overrightarrow{x}))$" src="form_343.png"/></td><td>element wise tanh value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\tanh(f(\overrightarrow{x}))$" src="form_329.png"/></td><td>element wise tanh value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">exp(expr)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\exp(f(\overrightarrow{x}))$" src="form_344.png"/></td><td>element wise exp value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\exp(f(\overrightarrow{x}))$" src="form_330.png"/></td><td>element wise exp value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">log(expr)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\log(f(\overrightarrow{x}))$" src="form_345.png"/></td><td>element wise log value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\log(f(\overrightarrow{x}))$" src="form_331.png"/></td><td>element wise log value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">sqrt(expr)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\sqrt{f(\overrightarrow{x})}$" src="form_346.png"/></td><td>element wise sqrt value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\sqrt{f(\overrightarrow{x})}$" src="form_332.png"/></td><td>element wise sqrt value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">sign(expr)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\begin{cases} 1 &amp; \text{if}\ f(\overrightarrow{x}) \geq 0\\-1 &amp; \text{if}\ f(\overrightarrow{x}) < 0\end{cases}$" src="form_347.png"/></td><td>element wise sign value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\begin{cases} 1 &amp; \text{if}\ f(\overrightarrow{x}) \geq 0\\-1 &amp; \text{if}\ f(\overrightarrow{x}) < 0\end{cases}$" src="form_333.png"/></td><td>element wise sign value of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">chi(expr)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\chi(f(\overrightarrow{x}))=\begin{cases}0 &amp; \text{if}\ f(\overrightarrow{x}) = 0\\1 &amp; \text{if}\ f(\overrightarrow{x}) \neq 0\\\end{cases}$" src="form_348.png"/></td><td>element wise boolean test of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\chi(f(\overrightarrow{x}))=\begin{cases}0 &amp; \text{if}\ f(\overrightarrow{x}) = 0\\1 &amp; \text{if}\ f(\overrightarrow{x}) \neq 0\\\end{cases}$" src="form_334.png"/></td><td>element wise boolean test of <img class="formulaInl" alt="$f$" src="form_231.png"/> </td></tr>
 </table>
 <p><a href="#" class="top">top</a> <hr/>
  <br/>
@@ -264,47 +328,47 @@ Operations</h2>
 <th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>Description </th></tr>
 <tr>
 <td><div class="fragment"><div class="line">+ </div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f+g$" src="form_363.png"/></td><td>tensor sum </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f+g$" src="form_335.png"/></td><td>tensor sum </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">- </div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f-g$" src="form_364.png"/></td><td>tensor substraction </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f-g$" src="form_336.png"/></td><td>tensor substraction </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">* </div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f*g$" src="form_365.png"/></td><td>tensor product </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f*g$" src="form_337.png"/></td><td>tensor product </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">/ </div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f/g$" src="form_366.png"/></td><td>tensor tensor division <br/>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f/g$" src="form_338.png"/></td><td>tensor tensor division <br/>
 ( <img class="formulaInl" alt="$g$" src="form_172.png"/> scalar field) </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">&lt;</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f<g$" src="form_367.png"/></td><td>element wise less </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f<g$" src="form_339.png"/></td><td>element wise less </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">&lt;= </div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f<=g$" src="form_368.png"/></td><td>element wise less or equal </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f<=g$" src="form_340.png"/></td><td>element wise less or equal </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">&gt; </div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f>g$" src="form_369.png"/></td><td>element wise greater </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f>g$" src="form_341.png"/></td><td>element wise greater </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">&gt;= </div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f>=g$" src="form_370.png"/></td><td>element wise greater or equal </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f>=g$" src="form_342.png"/></td><td>element wise greater or equal </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">== </div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f==g$" src="form_371.png"/></td><td>element wise equal </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f==g$" src="form_343.png"/></td><td>element wise equal </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">!= </div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f!=g$" src="form_372.png"/></td><td>element wise not equal </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f!=g$" src="form_344.png"/></td><td>element wise not equal </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">- </div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ -g$" src="form_373.png"/></td><td>element wise unary minus </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ -g$" src="form_345.png"/></td><td>element wise unary minus </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">&amp;&amp; </div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f$" src="form_374.png"/> and <img class="formulaInl" alt="$g$" src="form_172.png"/></td><td>element wise logical and  </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f$" src="form_346.png"/> and <img class="formulaInl" alt="$g$" src="form_172.png"/></td><td>element wise logical and  </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">|| </div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f$" src="form_374.png"/> or <img class="formulaInl" alt="$g$" src="form_172.png"/></td><td>element wise logical or </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ f$" src="form_346.png"/> or <img class="formulaInl" alt="$g$" src="form_172.png"/></td><td>element wise logical or </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">! </div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ !g$" src="form_375.png"/></td><td>element wise logical not </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$ !g$" src="form_347.png"/></td><td>element wise logical not </td></tr>
 </table>
 <h2><a class="anchor" id="Operators_Differential"></a>
 Differential Operators</h2>
@@ -317,50 +381,50 @@ Differential Operators</h2>
 <th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>Description</th><th>Rank</th><th>Dimension </th></tr>
 <tr>
 <td><div class="fragment"><div class="line">id(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$f$" src="form_231.png"/> </td><td>test function </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))$" src="form_353.png"/> </td><td><img class="formulaInl" alt="$m \times p $" src="form_355.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$f$" src="form_231.png"/> </td><td>test function </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))$" src="form_348.png"/> </td><td><img class="formulaInl" alt="$m \times p $" src="form_349.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">idt(f)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$f$" src="form_231.png"/> </td><td>trial function </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))$" src="form_353.png"/> </td><td><img class="formulaInl" alt="$m \times p $" src="form_355.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$f$" src="form_231.png"/> </td><td>trial function </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))$" src="form_348.png"/> </td><td><img class="formulaInl" alt="$m \times p $" src="form_349.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">idv(f)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$f$" src="form_231.png"/> </td><td>evaluation function </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))$" src="form_353.png"/> </td><td><img class="formulaInl" alt="$m \times p $" src="form_355.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$f$" src="form_231.png"/> </td><td>evaluation function </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))$" src="form_348.png"/> </td><td><img class="formulaInl" alt="$m \times p $" src="form_349.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">grad(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\nabla f$" src="form_359.png"/> </td><td>gradient of test function </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))+1$" src="form_356.png"/> </td><td><img class="formulaInl" alt="$m \times n $" src="form_358.png"/> <br/>
- <img class="formulaInl" alt="$p=1$" src="form_357.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\nabla f$" src="form_350.png"/> </td><td>gradient of test function </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))+1$" src="form_351.png"/> </td><td><img class="formulaInl" alt="$m \times n $" src="form_352.png"/> <br/>
+ <img class="formulaInl" alt="$p=1$" src="form_353.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">gradt(f)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\nabla f$" src="form_359.png"/> </td><td>grdient of trial function </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))+1$" src="form_356.png"/> </td><td><img class="formulaInl" alt="$m \times n $" src="form_358.png"/><br/>
- <img class="formulaInl" alt="$p=1$" src="form_357.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\nabla f$" src="form_350.png"/> </td><td>grdient of trial function </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))+1$" src="form_351.png"/> </td><td><img class="formulaInl" alt="$m \times n $" src="form_352.png"/><br/>
+ <img class="formulaInl" alt="$p=1$" src="form_353.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">gradv(f)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\nabla f$" src="form_359.png"/> </td><td>evaluation function gradient </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))+1$" src="form_356.png"/> </td><td><img class="formulaInl" alt="$m \times n $" src="form_358.png"/><br/>
- <img class="formulaInl" alt="$p=1$" src="form_357.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\nabla f$" src="form_350.png"/> </td><td>evaluation function gradient </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))+1$" src="form_351.png"/> </td><td><img class="formulaInl" alt="$m \times n $" src="form_352.png"/><br/>
+ <img class="formulaInl" alt="$p=1$" src="form_353.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">div(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\nabla\cdot f$" src="form_360.png"/> </td><td>divergence of test function </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))-1$" src="form_361.png"/> </td><td><img class="formulaInl" alt="$1 \times 1 $" src="form_362.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\nabla\cdot f$" src="form_354.png"/> </td><td>divergence of test function </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))-1$" src="form_355.png"/> </td><td><img class="formulaInl" alt="$1 \times 1 $" src="form_356.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">divt(f)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\nabla\cdot f$" src="form_360.png"/> </td><td>divergence of trial function </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))-1$" src="form_361.png"/> </td><td><img class="formulaInl" alt="$1 \times 1 $" src="form_362.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\nabla\cdot f$" src="form_354.png"/> </td><td>divergence of trial function </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))-1$" src="form_355.png"/> </td><td><img class="formulaInl" alt="$1 \times 1 $" src="form_356.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">divv(f)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\nabla\cdot f$" src="form_360.png"/> </td><td>evaluation function divergence </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))-1$" src="form_361.png"/> </td><td><img class="formulaInl" alt="$1 \times 1 $" src="form_362.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\nabla\cdot f$" src="form_354.png"/> </td><td>evaluation function divergence </td><td><img class="formulaInl" alt="$\mathrm{rank}(f(\overrightarrow{x}))-1$" src="form_355.png"/> </td><td><img class="formulaInl" alt="$1 \times 1 $" src="form_356.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line"><a class="code" href="namespaceFeel.html#af0e68f5f62e0b915cf3b9ac73b5c4080" title="compute the curl of a vectorial polynomial p ">curl</a>(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\nabla\times f$" src="form_376.png"/> </td><td>curl of test function </td><td>1</td><td><img class="formulaInl" alt="$n \times 1 $" src="form_377.png"/><br/>
- <img class="formulaInl" alt="$m=n$" src="form_378.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\nabla\times f$" src="form_357.png"/> </td><td>curl of test function </td><td>1</td><td><img class="formulaInl" alt="$n \times 1 $" src="form_358.png"/><br/>
+ <img class="formulaInl" alt="$m=n$" src="form_359.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line"><a class="code" href="namespaceFeel.html#a31844ce9bde57a55518ab057fd040744" title="compute the transpose of the curl of a vectorial polynomial p ">curlt</a>(f)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\nabla\times f$" src="form_376.png"/> </td><td>curl of trial function </td><td>1 </td><td><img class="formulaInl" alt="$n \times 1 $" src="form_377.png"/><br/>
- <img class="formulaInl" alt="$m=n$" src="form_378.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\nabla\times f$" src="form_357.png"/> </td><td>curl of trial function </td><td>1 </td><td><img class="formulaInl" alt="$n \times 1 $" src="form_358.png"/><br/>
+ <img class="formulaInl" alt="$m=n$" src="form_359.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">curlv(f)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\nabla\times f$" src="form_376.png"/> </td><td>evaluation function curl </td><td>1 </td><td><img class="formulaInl" alt="$n \times 1 $" src="form_377.png"/><br/>
- <img class="formulaInl" alt="$m=n$" src="form_378.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\nabla\times f$" src="form_357.png"/> </td><td>evaluation function curl </td><td>1 </td><td><img class="formulaInl" alt="$n \times 1 $" src="form_358.png"/><br/>
+ <img class="formulaInl" alt="$m=n$" src="form_359.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">hess(f)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\nabla^2 f$" src="form_379.png"/> </td><td>hessian of test function </td><td>2 </td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
- <img class="formulaInl" alt="$m=p=1$" src="form_380.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\nabla^2 f$" src="form_360.png"/> </td><td>hessian of test function </td><td>2 </td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
+ <img class="formulaInl" alt="$m=p=1$" src="form_361.png"/> </td></tr>
 </table>
 <h2><a class="anchor" id="Operators_TwoValued"></a>
 Two Valued Operators</h2>
@@ -369,88 +433,88 @@ Two Valued Operators</h2>
 <th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>Description</th><th>Rank</th><th>Dimension </th></tr>
 <tr>
 <td><div class="fragment"><div class="line">jump(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$" src="form_381.png"/> </td><td>jump of test function </td><td>0</td><td><img class="formulaInl" alt="$n \times 1 $" src="form_377.png"/><br/>
- <img class="formulaInl" alt="$m=1$" src="form_382.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$" src="form_362.png"/> </td><td>jump of test function </td><td>0</td><td><img class="formulaInl" alt="$n \times 1 $" src="form_358.png"/><br/>
+ <img class="formulaInl" alt="$m=1$" src="form_363.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">jump(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$" src="form_383.png"/> </td><td>jump of test function </td><td>0</td><td><img class="formulaInl" alt="$1 \times 1 $" src="form_362.png"/><br/>
- <img class="formulaInl" alt="$m=2$" src="form_384.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$" src="form_364.png"/> </td><td>jump of test function </td><td>0</td><td><img class="formulaInl" alt="$1 \times 1 $" src="form_356.png"/><br/>
+ <img class="formulaInl" alt="$m=2$" src="form_365.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">jumpt(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$" src="form_381.png"/> </td><td>jump of trial function </td><td>0</td><td><img class="formulaInl" alt="$n \times 1 $" src="form_377.png"/><br/>
- <img class="formulaInl" alt="$m=1$" src="form_382.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$" src="form_362.png"/> </td><td>jump of trial function </td><td>0</td><td><img class="formulaInl" alt="$n \times 1 $" src="form_358.png"/><br/>
+ <img class="formulaInl" alt="$m=1$" src="form_363.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">jumpt(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$" src="form_383.png"/> </td><td>jump of trial function </td><td>0</td><td><img class="formulaInl" alt="$1 \times 1 $" src="form_362.png"/><br/>
- <img class="formulaInl" alt="$m=2$" src="form_384.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$" src="form_364.png"/> </td><td>jump of trial function </td><td>0</td><td><img class="formulaInl" alt="$1 \times 1 $" src="form_356.png"/><br/>
+ <img class="formulaInl" alt="$m=2$" src="form_365.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">jumpv(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$" src="form_381.png"/> </td><td>jump of function evaluation </td><td>0</td><td><img class="formulaInl" alt="$n \times 1 $" src="form_377.png"/><br/>
- <img class="formulaInl" alt="$m=1$" src="form_382.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$" src="form_362.png"/> </td><td>jump of function evaluation </td><td>0</td><td><img class="formulaInl" alt="$n \times 1 $" src="form_358.png"/><br/>
+ <img class="formulaInl" alt="$m=1$" src="form_363.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">jumpv(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$" src="form_383.png"/> </td><td>jump of function evaluation</td><td>0</td><td><img class="formulaInl" alt="$1 \times 1 $" src="form_362.png"/><br/>
- <img class="formulaInl" alt="$m=2$" src="form_384.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$" src="form_364.png"/> </td><td>jump of function evaluation</td><td>0</td><td><img class="formulaInl" alt="$1 \times 1 $" src="form_356.png"/><br/>
+ <img class="formulaInl" alt="$m=2$" src="form_365.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">average(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="${f}=\frac{1}{2}(f_0+f_1)$" src="form_385.png"/> </td><td>average of test function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_386.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
- <img class="formulaInl" alt="$m=n$" src="form_378.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="${f}=\frac{1}{2}(f_0+f_1)$" src="form_366.png"/> </td><td>average of test function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
+ <img class="formulaInl" alt="$m=n$" src="form_359.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">averaget(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="${f}=\frac{1}{2}(f_0+f_1)$" src="form_385.png"/> </td><td>average of trial function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_386.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
- <img class="formulaInl" alt="$m=n$" src="form_378.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="${f}=\frac{1}{2}(f_0+f_1)$" src="form_366.png"/> </td><td>average of trial function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
+ <img class="formulaInl" alt="$m=n$" src="form_359.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">averagev(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="${f}=\frac{1}{2}(f_0+f_1)$" src="form_385.png"/> </td><td>average of function evaluation</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_386.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
- <img class="formulaInl" alt="$m=n$" src="form_378.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="${f}=\frac{1}{2}(f_0+f_1)$" src="form_366.png"/> </td><td>average of function evaluation</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
+ <img class="formulaInl" alt="$m=n$" src="form_359.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">leftface(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$f_0$" src="form_387.png"/> </td><td>left test function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_386.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
- <img class="formulaInl" alt="$m=n$" src="form_378.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$f_0$" src="form_368.png"/> </td><td>left test function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
+ <img class="formulaInl" alt="$m=n$" src="form_359.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">leftfacet(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$f_0$" src="form_387.png"/> </td><td>left trial function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_386.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
- <img class="formulaInl" alt="$m=n$" src="form_378.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$f_0$" src="form_368.png"/> </td><td>left trial function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
+ <img class="formulaInl" alt="$m=n$" src="form_359.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">leftfacev(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$f_0$" src="form_387.png"/> </td><td>left function evaluation</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_386.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
- <img class="formulaInl" alt="$m=n$" src="form_378.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$f_0$" src="form_368.png"/> </td><td>left function evaluation</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
+ <img class="formulaInl" alt="$m=n$" src="form_359.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">rightface(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$f_1$" src="form_388.png"/> </td><td>right test function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_386.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
- <img class="formulaInl" alt="$m=n$" src="form_378.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$f_1$" src="form_369.png"/> </td><td>right test function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
+ <img class="formulaInl" alt="$m=n$" src="form_359.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">rightfacet(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$f_1$" src="form_388.png"/> </td><td>right trial function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_386.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
- <img class="formulaInl" alt="$m=n$" src="form_378.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$f_1$" src="form_369.png"/> </td><td>right trial function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
+ <img class="formulaInl" alt="$m=n$" src="form_359.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">rightfacev(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$f_1$" src="form_388.png"/> </td><td>right function evaluation</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_386.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
- <img class="formulaInl" alt="$m=n$" src="form_378.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$f_1$" src="form_369.png"/> </td><td>right function evaluation</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times n $" src="form_290.png"/><br/>
+ <img class="formulaInl" alt="$m=n$" src="form_359.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">maxface(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\max(f_0,f_1)$" src="form_389.png"/> </td><td>maximum of right and left<br/>
-test function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_386.png"/></td><td><img class="formulaInl" alt="$n \times p $" src="form_390.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\max(f_0,f_1)$" src="form_370.png"/> </td><td>maximum of right and left<br/>
+test function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times p $" src="form_371.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">maxfacet(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\max(f_0,f_1)$" src="form_389.png"/> </td><td>maximum of right and left<br/>
-trial function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_386.png"/></td><td><img class="formulaInl" alt="$n \times p $" src="form_390.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\max(f_0,f_1)$" src="form_370.png"/> </td><td>maximum of right and left<br/>
+trial function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times p $" src="form_371.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">maxfacev(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\max(f_0,f_1)$" src="form_389.png"/> </td><td>maximum of right and left<br/>
-function evaluation</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_386.png"/></td><td><img class="formulaInl" alt="$n \times p $" src="form_390.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\max(f_0,f_1)$" src="form_370.png"/> </td><td>maximum of right and left<br/>
+function evaluation</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times p $" src="form_371.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">minface(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\min(f_0,f_1)$" src="form_391.png"/> </td><td>minimum of right and left<br/>
-test function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_386.png"/></td><td><img class="formulaInl" alt="$n \times p $" src="form_390.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\min(f_0,f_1)$" src="form_372.png"/> </td><td>minimum of right and left<br/>
+test function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times p $" src="form_371.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">minfacet(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\min(f_0,f_1)$" src="form_391.png"/> </td><td>minimum of right and left<br/>
-trial function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_386.png"/></td><td><img class="formulaInl" alt="$n \times p $" src="form_390.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\min(f_0,f_1)$" src="form_372.png"/> </td><td>minimum of right and left<br/>
+trial function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times p $" src="form_371.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">minfacev(f)</div>
-</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\min(f_0,f_1)$" src="form_391.png"/> </td><td>minimum of right and left<br/>
-function evaluation</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_386.png"/></td><td><img class="formulaInl" alt="$n \times p $" src="form_390.png"/> </td></tr>
+</div><!-- fragment --> </td><td><img class="formulaInl" alt="$\min(f_0,f_1)$" src="form_372.png"/> </td><td>minimum of right and left<br/>
+function evaluation</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times p $" src="form_371.png"/> </td></tr>
 </table>
 <p><a href="#" class="top">top</a> </p>
 </div></div><!-- contents -->
@@ -458,7 +522,7 @@ function evaluation</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\over
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 15 2013 16:05:28 for Feel++ by
+    <li class="footer">Generated on Tue Apr 16 2013 16:35:21 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

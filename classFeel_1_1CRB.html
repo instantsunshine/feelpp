@@ -18,7 +18,7 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="feel.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -191,6 +191,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>updateResidual</b> (c
 void&#160;</td><td class="memItemRight" valign="bottom"><b>computeProjectionInitialGuess</b> (const <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> &amp;mu, int N, vectorN_type &amp;initial_guess) const </td></tr>
 <tr class="memitem:aa3a21070b770129456dc505d065270e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3a21070b770129456dc505d065270e4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>newton</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, vectorN_type &amp;uN, double &amp;condition_number, double &amp;output) const </td></tr>
+<tr class="memitem:a2d42d99b629295615e349beb8d9e90f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d42d99b629295615e349beb8d9e90f7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>offlineFixedPointPrimal</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, element_ptrtype &amp;u) const </td></tr>
 <tr class="memitem:a0bee42baa9f6b46154fa122c35864b72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0bee42baa9f6b46154fa122c35864b72"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>fixedPointPrimal</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, std::vector&lt; vectorN_type &gt; &amp;uN, std::vector&lt; vectorN_type &gt; &amp;uNold, double &amp;condition_number, std::vector&lt; double &gt; &amp;output_vector, int K=0) const </td></tr>
 <tr class="memitem:a7eb5d9cf3959f12e605720c542a03d4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7eb5d9cf3959f12e605720c542a03d4a"></a>
@@ -1277,7 +1279,7 @@ template&lt;typename TruthModelType &gt; </div>
 <p>Offline computation</p>
 <dl class="section return"><dt>Returns</dt><dd>the convergence history (max error) </dd></dl>
 
-<p>References <a class="el" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">Feel::Backend&lt; T &gt;::build()</a>, <a class="el" href="classFeel_1_1CRB.html#a7e91a6877d6064fba476540ca71c0772">Feel::CRB&lt; TruthModelType &gt;::check()</a>, <a class="el" href="classFeel_1_1CRB.html#ab5ac52d3e77a6ffedf1bbe31adbefeb2">Feel::CRB&lt; TruthModelType &gt;::exportBasisFunctions()</a>, <a class="el" href="namespaceFeel.html#a73707c3e6d405359ea9b4e1f21c9e530">Feel::inner_product()</a>, <a class="el" href="classFeel_1_1CRB.html#a7878f971a68f86fb1bb261b6f9aac137">Feel::CRB&lt; TruthModelType &gt;::maxErrorBounds()</a>, <a class="el" href="classFeel_1_1CRBDB.html#aafbd9eddb9faeb89f4f0fa29d01744e9">Feel::CRBDB::name()</a>, <a class="el" href="classFeel_1_1CRB.html#a8084a3cd7bc559a3d39dba3b89cf7a17">Feel::CRB&lt; TruthModelType &gt;::offlineResidual()</a>, <a class="el" href="classFeel_1_1CRB.html#a14733b964441a10d01794887164f50cf">Feel::CRB&lt; TruthModelType &gt;::orthonormalize()</a>, <a class="el" href="classFeel_1_1CRB.html#adda8104e4be7ee8a4e7996963c63be62">Feel::CRB&lt; TruthModelType &gt;::projectionOnPodSpace()</a>, <a class="el" href="classFeel_1_1CRB.html#a39d510c1295521c3f2de52d359b368ee">Feel::CRB&lt; TruthModelType &gt;::saveDB()</a>, and <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">Feel::Backend&lt; T &gt;::build()</a>, <a class="el" href="classFeel_1_1CRB.html#a7e91a6877d6064fba476540ca71c0772">Feel::CRB&lt; TruthModelType &gt;::check()</a>, <a class="el" href="classFeel_1_1CRB.html#ab5ac52d3e77a6ffedf1bbe31adbefeb2">Feel::CRB&lt; TruthModelType &gt;::exportBasisFunctions()</a>, <a class="el" href="namespaceFeel.html#a73707c3e6d405359ea9b4e1f21c9e530">Feel::inner_product()</a>, <a class="el" href="classFeel_1_1CRB.html#a7878f971a68f86fb1bb261b6f9aac137">Feel::CRB&lt; TruthModelType &gt;::maxErrorBounds()</a>, <a class="el" href="classFeel_1_1CRB.html#a8084a3cd7bc559a3d39dba3b89cf7a17">Feel::CRB&lt; TruthModelType &gt;::offlineResidual()</a>, <a class="el" href="classFeel_1_1CRB.html#a14733b964441a10d01794887164f50cf">Feel::CRB&lt; TruthModelType &gt;::orthonormalize()</a>, <a class="el" href="classFeel_1_1CRB.html#adda8104e4be7ee8a4e7996963c63be62">Feel::CRB&lt; TruthModelType &gt;::projectionOnPodSpace()</a>, <a class="el" href="classFeel_1_1CRB.html#a39d510c1295521c3f2de52d359b368ee">Feel::CRB&lt; TruthModelType &gt;::saveDB()</a>, and <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>.</p>
 
 </div>
 </div>
@@ -1885,7 +1887,7 @@ template&lt;typename TruthModelType&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1CRB.html">CRB</a></li>
-    <li class="footer">Generated on Mon Apr 15 2013 16:05:30 for Feel++ by
+    <li class="footer">Generated on Tue Apr 16 2013 16:35:23 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>
