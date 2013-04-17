@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Feel++: Initialize Feel++ : Environment</title>
+<title>Feel++: Environment</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -87,33 +87,217 @@ $(document).ready(function(){initNavTree('Environment.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Initialize Feel++ : Environment </div>  </div>
+<div class="title">Environment </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Todo">Todo : first section</a></li>
+<ul><li class="level1"><a href="#Initialize">Initialize Feel++</a></li>
+<li class="level1"><a href="#Options">Feel++ Options Description</a><ul><li class="level2"><a href="#Options_Custom">Todo: Custom Options</a></li>
+<li class="level2"><a href="#Options_Accessors">Accessors</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#Repository">Repository</a><ul><li class="level2"><a href="#Repository_Accessors">Accessors</a></li>
+<li class="level2"><a href="#Repository_Change">Change Repository</a></li>
+<li class="level2"><a href="#Repository_Find">Find File</a></li>
+<li class="level2"><a href="#Repository_LogFiles">Set Log Files</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#MPI">MPI Environment</a><ul><li class="level2"><a href="#MPI_Accessors">Accesors</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#TODO">TODO</a></li>
 </ul>
 </div>
 <div class="textblock"><ul>
 <li><b>Previous:</b> <a class="el" href="Keywords.html">Keywords</a> </li>
-<li><b>Next:</b> <a class="el" href="Mesh.html">Manipulating Meshes</a></li>
+<li><b>Next:</b> <a class="el" href="Mesh.html">Meshes</a></li>
 </ul>
 <hr/>
-<p>To initialize Feel++ you use the Environment class, the usual interface is as follows : </p>
+<h1><a class="anchor" id="Initialize"></a>
+Initialize Feel++</h1>
+<p>Environment class is necessary to initialize your application, as seen in <a class="el" href="FirstApp.html">First Feel++ Application</a>. Interface is as follow : </p>
+<div class="fragment"><div class="line">Environment env( _argc, _argv, _desc, _about );</div>
+</div><!-- fragment --><p> No one of those parameters are required but it is highly recomanded to use the minimal declaration : </p>
 <div class="fragment"><div class="line">Environment env( _argc=argc, _argv=argv,</div>
-<div class="line">                 _desc=feel_options(),</div>
-<div class="line">                 _about=about(_name=<span class="stringliteral">&quot;mylaplacian&quot;</span>,</div>
-<div class="line">                              _author=<span class="stringliteral">&quot;Feel++ Consortium&quot;</span>,</div>
-<div class="line">                              _email=<span class="stringliteral">&quot;feelpp-devel@feelpp.org&quot;</span>));</div>
-</div><!-- fragment --><h1><a class="anchor" id="Todo"></a>
-Todo : first section</h1>
+<div class="line">                 _desc=feel_option(),</div>
+<div class="line">                 _about=about(_name=<span class="stringliteral">&quot;name_of_your_app&quot;</span>,</div>
+<div class="line">                              _author=<span class="stringliteral">&quot;your_name&quot;</span>,</div>
+<div class="line">                              _email=<span class="stringliteral">&quot;your_email_adress&quot;</span>) );</div>
+</div><!-- fragment --><ul>
+<li><code>_argc</code> and <code>argv</code> are the arguments of your main function. </li>
+<li><code>_desc</code> is a description of your options. </li>
+<li><code>_about</code> is a brief description of your application.</li>
+</ul>
+<h1><a class="anchor" id="Options"></a>
+Feel++ Options Description</h1>
+<h2><a class="anchor" id="Options_Custom"></a>
+Todo: Custom Options</h2>
+<p>TODO : This paragraph </p>
+<div class="fragment"><div class="line"><span class="keyword">inline</span></div>
+<div class="line">Feel::po::options_description</div>
+<div class="line"><a class="code" href="namespaceFeel.html#ac9c8bc6d9632abb259953c3faa835eeb">makeOptions</a>()</div>
+<div class="line">{</div>
+<div class="line">...</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="Options_Accessors"></a>
+Accessors</h2>
+<p>Youc can access to the parameters of your application environment using the following function : </p>
+<div class="fragment"><div class="line">Environment::vm(_name);</div>
+</div><!-- fragment --><p> <code>_name</code> is the name of the parameter as seen is previous paragraph.<br/>
+ Use template methode to cast the parameter into the appropriate type.<br/>
+ Examples :<br/>
+ From "doc/manual/solid/beam.cpp" : </p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> E = Environment::vm(_name=<span class="stringliteral">&quot;E&quot;</span>).template as&lt;double&gt;();</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> nu = Environment::vm(_name=<span class="stringliteral">&quot;nu&quot;</span>).template as&lt;double&gt;();</div>
+</div><!-- fragment --><p> From "doc/manual/fd/penalisation.cpp" : </p>
+<div class="fragment"><div class="line">Tfinal =  Environment::vm( _name=<span class="stringliteral">&quot;test&quot;</span> ).template as&lt;int&gt;()*dt;</div>
+</div><!-- fragment --><p><a href="#" class="top">top</a> <hr/>
+ <h1><a class="anchor" id="Repository"></a>
+Repository</h1>
+<h2><a class="anchor" id="Repository_Accessors"></a>
+Accessors</h2>
+<p>There is a list of functions you can use to get information about the Repository Environment. </p>
+<table  class="manual">
+<tr>
+<th>Feel++ function</th><th>Return </th></tr>
+<tr>
+<td><div class="fragment"><div class="line">Environment::rootRepository();</div>
+</div><!-- fragment --></td><td>Repository where the results are stored.<br/>
+ Default : <code>$HOME/feel</code>. </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">Environment::geoPathList();</div>
+</div><!-- fragment --></td><td>The list of paths where Feel++ looks into to find a <a class="el" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator.">Gmsh</a> Geo file </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">Environment::localGeoRepository();</div>
+</div><!-- fragment --></td><td>The local geo files repository <br/>
+Default : <code>$HOME/feel/geo</code>  </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">Environment::systemGeoRepository();</div>
+</div><!-- fragment --></td><td>A tuple : the system geo files repository<br/>
+and <code>true</code> or <code>false</code> whether the directory exists or not <br/>
+Default: <code>/usr/share/feel/geo</code> or <code>/usr/local/share/feel/geo</code>  </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">Environment::localConfigRepository();</div>
+</div><!-- fragment --></td><td>The local config files repository<br/>
+Default : <code>$HOME/feel/config</code>  </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">Environment::systemConfigRepository();</div>
+</div><!-- fragment --></td><td>A tuple : the system config files repository<br/>
+and <code>true</code> or <code>false</code> whether the directory exists or not<br/>
+Default : <code>/usr/share/feel/config</code> or /usr/local/share/feel/config </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">Environment::scratchDirectory();</div>
+</div><!-- fragment --></td><td>The scratch directory </td></tr>
+</table>
+<h2><a class="anchor" id="Repository_Change"></a>
+Change Repository</h2>
+<p>You can change the default repository, using the following function : </p>
+<div class="fragment"><div class="line">Environment::changeRepository( _directory, _subdir, _filename );</div>
+</div><!-- fragment --><p> Required Parameters : </p>
+<ul>
+<li><code>_directory</code> : new directory</li>
+</ul>
+<p>Optional Parameters : </p>
+<ul>
+<li><code>_subdir</code> : Default = <code>true</code> </li>
+<li><code>_filename</code> : Default = <code>"logfile"</code></li>
+</ul>
+<p>You can use <code>boost::format</code> to custom the path. <br/>
+ There is an example from "doc/manual/laplacian/laplacian.cpp" : </p>
+<div class="fragment"><div class="line">Environment::changeRepository( boost::format( <span class="stringliteral">&quot;doc/manual/laplacian/%1%/%2%-%3%/P%4%/h_%5%/&quot;</span> )</div>
+<div class="line">                               % this-&gt;about().appName()</div>
+<div class="line">                               % shape</div>
+<div class="line">                               % Dim</div>
+<div class="line">                               % Order</div>
+<div class="line">                               % meshSize );</div>
+</div><!-- fragment --><p> Then results will be store in : "/doc/manual/laplacian/&lt;appName&gt;/&lt;shape&gt;-&lt;Dim&gt;/P&lt;Order&gt;/h_&lt;meshSize&gt;/"</p>
+<h2><a class="anchor" id="Repository_Find"></a>
+Find File</h2>
+<div class="fragment"><div class="line">Environment::findFile( std::string <span class="keyword">const</span>&amp; filename );</div>
+</div><!-- fragment --><p> Returns the string containing the filename path</p>
+<p>Find a file. The lookup is as follows: </p>
+<ul>
+<li>look into current path </li>
+<li>look into paths that went through changeRepository(), it means that we look for example into the path from which the executable was run</li>
+</ul>
+<p>If the file has an extension .geo or .msh, try also to </p>
+<ul>
+<li>look into <code>localGeoRepository()</code> which is usually $HOME/feel/geo </li>
+<li>look into <code>systemGeoRepository()</code> which is usually $FEELPP_DIR/share/feel/geo</li>
+</ul>
+<p>If <code>filename</code> is not found, then the empty string is returned.</p>
+<h2><a class="anchor" id="Repository_LogFiles"></a>
+Set Log Files</h2>
+<div class="fragment"><div class="line">Environment::setLogs( std::string <span class="keyword">const</span>&amp; prefix );</div>
+</div><!-- fragment --><p> Required <a class="el" href="classFeel_1_1Parameter.html" title="parameter class to describe code inputs">Parameter</a> : </p>
+<ul>
+<li><code>prefix</code> : prefix for log filenames.</li>
+</ul>
 <p><a href="#" class="top">top</a> <hr/>
- </div></div><!-- contents -->
+ <h1><a class="anchor" id="MPI"></a>
+MPI Environment</h1>
+<h2><a class="anchor" id="MPI_Accessors"></a>
+Accesors</h2>
+<p>There is a list of functions you can use to get information about the MPI Environment. </p>
+<table  class="manual">
+<tr>
+<th>Feel++ function</th><th>Description</th><th>Return </th></tr>
+<tr>
+<td><div class="fragment"><div class="line">Environment::initialized();</div>
+</div><!-- fragment --></td><td>Determine if the MPI environment has already been initialized.</td><td><code>boolean</code> <br/>
+ <code>true</code> if the MPI environment has been initialized. </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">Environment::finalized();</div>
+</div><!-- fragment --></td><td>Determine if the MPI environment has already been finalized.</td><td><code>boolean</code> <br/>
+ <code>trueif</code> the MPI environment has been finalized. </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">Environment::worldComm()</div>
+</div><!-- fragment --></td><td></td><td>The world communicators. </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">Environment::worldsComm(<span class="keywordtype">int</span> n);</div>
+</div><!-- fragment --></td><td></td><td>n sub world communicators </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">Environment::masterWorldComm(<span class="keywordtype">int</span> n)</div>
+</div><!-- fragment --></td><td></td><td>Master world comm associated with a color map of size n </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">Environment::numberOfProcessors();</div>
+</div><!-- fragment --></td><td></td><td>Number of processors </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">Environment::rank();</div>
+</div><!-- fragment --></td><td></td><td>The rank in global mpi communicators </td></tr>
+</table>
+<p><br/>
+ Todo: </p>
+<div class="fragment"><div class="line">setWordlComm( WordlComm&amp; worldcomm);</div>
+</div><!-- fragment --><p><a href="#" class="top">top</a> <hr/>
+ <h1><a class="anchor" id="TODO"></a>
+TODO</h1>
+<ul>
+<li><div class="fragment"><div class="line">Environment::about();</div>
+</div><!-- fragment --></li>
+</ul>
+<ul>
+<li><div class="fragment"><div class="line">Environment::optionsDescription();</div>
+</div><!-- fragment --></li>
+</ul>
+<ul>
+<li><div class="fragment"><div class="line">Environment::addDeleteObserver(Observer <span class="keyword">const</span>&amp; obs );</div>
+</div><!-- fragment --></li>
+</ul>
+<ul>
+<li><div class="fragment"><div class="line">Environment::option;</div>
+</div><!-- fragment --></li>
+</ul>
+<ul>
+<li><div class="fragment"><div class="line">Environment::optionT;</div>
+</div><!-- fragment --> </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Apr 16 2013 16:35:21 for Feel++ by
+    <li class="footer">Generated on Wed Apr 17 2013 16:51:06 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -47,7 +47,6 @@ var searchData=
   ['getdescriptionfromfile',['getDescriptionFromFile',['../classFeel_1_1Gmsh.html#abd5389576f769da14fc39f66bf78d3af',1,'Feel::Gmsh']]],
   ['getl',['getL',['../classFeel_1_1LU.html#a91d9e6bf57024b3e69b5f2126aa29b47',1,'Feel::LU']]],
   ['getpivot',['getPivot',['../classFeel_1_1LU.html#a3fb3a499d274605f12cfbe2f12f41613',1,'Feel::LU']]],
-  ['getting_20started',['Getting started',['../GettingStarted.html',1,'']]],
   ['getu',['getU',['../classFeel_1_1LU.html#a5b28da2907dd05e3168d8b2fc68a16f3',1,'Feel::LU']]],
   ['gid',['gid',['../classFeel_1_1DataMap.html#aad8cf00cf50fae0f77b491f3ea74d6e6',1,'Feel::DataMap']]],
   ['glas_2ehpp',['glas.hpp',['../glas_8hpp.html',1,'']]],

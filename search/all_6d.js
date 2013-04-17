@@ -147,8 +147,8 @@ var searchData=
   ['mesh_5fptrtype',['mesh_ptrtype',['../classFeel_1_1CRBModel.html#a04e94ff16d820ec47c07702cd43b54f8',1,'Feel::CRBModel::mesh_ptrtype()'],['../classFeel_1_1CRBModelTrilinear.html#aae59adacd2325d728b61925667b4568f',1,'Feel::CRBModelTrilinear::mesh_ptrtype()'],['../classFeel_1_1POD.html#aab68f4585e67ec264f4c6bbd4f158436',1,'Feel::POD::mesh_ptrtype()'],['../classLShape.html#a64d3d1ab31076ddbd95a663911963c93',1,'LShape::mesh_ptrtype()'],['../classResidualEstimator.html#a3a20c44ef5b33618f752cb3090c08a5a',1,'ResidualEstimator::mesh_ptrtype()'],['../classLaplacian.html#a58b9aa16918518752039952ae667cd24',1,'Laplacian::mesh_ptrtype()'],['../classLaplacian.html#a58b9aa16918518752039952ae667cd24',1,'Laplacian::mesh_ptrtype()'],['../classDiode.html#a0e9a03b50e4fa064bf263b5171d1cb84',1,'Diode::mesh_ptrtype()'],['../classFeel_1_1DAR.html#a015dd6e19ff7257350483793cab1c2a7',1,'Feel::DAR::mesh_ptrtype()']]],
   ['mesh_5ftype',['mesh_type',['../classFeel_1_1CRB.html#a24455f285005030c7b322d30ca036ec8',1,'Feel::CRB::mesh_type()'],['../classFeel_1_1CRBTrilinear.html#a98e07678e838c0eb6ff9a7b584e8827f',1,'Feel::CRBTrilinear::mesh_type()'],['../classFeel_1_1CRBModel.html#a72888cb7395f4665c3ba81eff88214c3',1,'Feel::CRBModel::mesh_type()'],['../classFeel_1_1CRBModelTrilinear.html#a2b038a8299563767ea4e485b45dfa9c5',1,'Feel::CRBModelTrilinear::mesh_type()'],['../classFeel_1_1POD.html#a9db5c89c74d3971488bce1fd8cb7d076',1,'Feel::POD::mesh_type()'],['../classLShape.html#a434180a50d078cf96a270aa5fa50afaf',1,'LShape::mesh_type()'],['../classResidualEstimator.html#adca4ee6f2ccac1101dc0f184d592f2db',1,'ResidualEstimator::mesh_type()'],['../classLaplacian.html#a9be2b7ab192863c97110763ecf7fdbc4',1,'Laplacian::mesh_type()'],['../classLaplacian.html#a9be2b7ab192863c97110763ecf7fdbc4',1,'Laplacian::mesh_type()'],['../classDiode.html#a2df8c8d744ca9f0f38fe4ba7c9ad9f47',1,'Diode::mesh_type()'],['../classFeel_1_1DAR.html#af257f776b89a285fa4bfa9c094437ef7',1,'Feel::DAR::mesh_type()']]],
   ['meshadaptation_2ehpp',['meshadaptation.hpp',['../meshadaptation_8hpp.html',1,'']]],
-  ['meshbase',['MeshBase',['../classFeel_1_1MeshBase.html#a1303d8e0da46dae1afc2411757b5229b',1,'Feel::MeshBase::MeshBase(WorldComm const &amp;worldComm=Environment::worldComm())'],['../classFeel_1_1MeshBase.html#a5328f1259e75d4273d8868676b7b59b2',1,'Feel::MeshBase::MeshBase(MeshBase const &amp;)']]],
   ['meshbase',['MeshBase',['../classFeel_1_1MeshBase.html',1,'Feel']]],
+  ['meshbase',['MeshBase',['../classFeel_1_1MeshBase.html#a1303d8e0da46dae1afc2411757b5229b',1,'Feel::MeshBase::MeshBase(WorldComm const &amp;worldComm=Environment::worldComm())'],['../classFeel_1_1MeshBase.html#a5328f1259e75d4273d8868676b7b59b2',1,'Feel::MeshBase::MeshBase(MeshBase const &amp;)']]],
   ['meshbase_2ecpp',['meshbase.cpp',['../meshbase_8cpp.html',1,'']]],
   ['meshbase_2ehpp',['meshbase.hpp',['../meshbase_8hpp.html',1,'']]],
   ['meshcomponents',['MeshComponents',['../namespaceFeel.html#a82cf55da340f64b682d0bea678d6cdf4',1,'Feel']]],
@@ -185,6 +185,5 @@ var searchData=
   ['mylaplacian_2ecpp',['mylaplacian.cpp',['../mylaplacian_8cpp.html',1,'']]],
   ['mylid',['myLID',['../classFeel_1_1DataMap.html#ae2636e7ea59b7ebe6608082f7923b1aa',1,'Feel::DataMap']]],
   ['mymesh_2ecpp',['mymesh.cpp',['../mymesh_8cpp.html',1,'']]],
-  ['mystokes_2ecpp',['mystokes.cpp',['../mystokes_8cpp.html',1,'']]],
-  ['manipulating_20function_20spaces',['Manipulating Function Spaces',['../Spaces.html',1,'']]]
+  ['mystokes_2ecpp',['mystokes.cpp',['../mystokes_8cpp.html',1,'']]]
 ];
