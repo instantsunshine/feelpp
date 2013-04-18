@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"classFeel_1_1VectorBlock.html#a2acc5d7403533a700eb70aaf147ee701":[3,0,52,7],
+"classFeel_1_1VectorBlock.html#a3f620322ad4d7e643a368e2438fece32":[3,0,52,2],
 "classFeel_1_1VectorBlock.html#a4137ef4b08536eb14b94dce90d4ccc25":[3,0,52,9],
 "classFeel_1_1VectorBlock.html#a67bd66b7621d0790119ecdaef12df997":[3,0,52,8],
 "classFeel_1_1VectorBlock.html#a9c84cfe5ba6084cb4fb580758277e80a":[3,0,52,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "classFeel_1_1dyna_1_1Jacobi.html#a78a35f6deb311826c1f8717c91837a09":[3,0,1,0,0],
 "classFeel_1_1dyna_1_1Jacobi.html#a89d88e77755ba84f2cf80e4e4d253da0":[3,0,1,0,8],
 "classFeel_1_1dyna_1_1Jacobi.html#a9a25e9343ac6af319f0d82361cebcd85":[3,0,1,0,6],
-"classFeel_1_1dyna_1_1Jacobi.html#aa7cde7e9ee6f0133e82ea5b2a241379e":[3,0,1,0,1],
-"classFeel_1_1dyna_1_1Jacobi.html#af364dd7e37383cbbff85b7dc9765fca6":[3,0,1,0,4],
-"classFeel_1_1fem_1_1CrouzeixRaviart.html":[3,0,2,0]
+"classFeel_1_1dyna_1_1Jacobi.html#aa7cde7e9ee6f0133e82ea5b2a241379e":[3,0,1,0,1]
 };

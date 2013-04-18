@@ -6,10 +6,12 @@ var NAVTREEINDEX0 =
 "Building.html":[1,1],
 "CrashCourse.html":[1,0],
 "Environment.html":[2,1],
+"Exporter.html":[2,6],
 "FirstApp.html":[1,2],
 "Integrals.html":[2,4],
 "Keywords.html":[2,0],
 "Mesh.html":[2,2],
+"Solver.html":[2,5],
 "Spaces.html":[2,3],
 "annotated.html":[3],
 "classBareItemHandler.html":[3,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "classFeel_1_1Advection.html#a4f9f9bc43af917d6a09d02b6f7f8054f":[3,0,148,0],
 "classFeel_1_1Advection.html#a75b52cfca52efb8c069d60691b897321":[3,0,148,5],
 "classFeel_1_1Advection.html#a8794ba152aec6fb7ddfae7a4848c3113":[3,0,148,1],
-"classFeel_1_1Advection.html#aa50d0045708f02a25eb775c522bd23c3":[3,0,148,6],
-"classFeel_1_1Advection.html#aca1fd840d77e40563ba72afb462fa470":[3,0,148,9],
-"classFeel_1_1Advection.html#af10ef0eb25d33db2f66675e08f4a3d84":[3,0,148,10]
+"classFeel_1_1Advection.html#aa50d0045708f02a25eb775c522bd23c3":[3,0,148,6]
 };

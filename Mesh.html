@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.1.2"/>
 <title>Feel++: Meshes</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -18,16 +19,22 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
-<link href="feel.css" rel="stylesheet" type="text/css" />
+<link href="feel.css"   rel="stylesheet" type="text/css" />
+<link href="eigendoxy.css" rel="stylesheet" type="text/css">
+<!-- $extrastylesheet -->
+<script type="text/javascript" src="eigen_navtree_hacks.js"></script>
+<!-- <script type="text/javascript"> -->
+<!-- </script> -->
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- <a name="top"></a> -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Feel++
+   <div id="projectname"><a href="http://www.feelpp.org/">Feel++</a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -91,7 +98,10 @@ $(document).ready(function(){initNavTree('Mesh.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Todo">Todo : first section</a></li>
+<ul><li class="level1"><a href="#Basic">Basic Meshes</a></li>
+<li class="level1"><a href="#Load">Load Mesh</a></li>
+<li class="level1"><a href="#Creat">Creat Mesh</a></li>
+<li class="level1"><a href="#Accessors">Accessors</a></li>
 </ul>
 </div>
 <div class="textblock"><ul>
@@ -99,15 +109,142 @@ $(document).ready(function(){initNavTree('Mesh.html','');});
 <li><b>Next:</b> <a class="el" href="Spaces.html">Function Spaces</a></li>
 </ul>
 <hr/>
-<h1><a class="anchor" id="Todo"></a>
-Todo : first section</h1>
+ In this section, we present some of the mesh definition and manipulation tools provided by <a href="http://www.feelpp.org">Feel++</a>.<br/>
+ <a class="el" href="namespaceFeel.html">Feel</a> supports only the <a class="el" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator.">Gmsh</a> mesh file format. It provides also some classes to manipulate <a class="el" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator.">Gmsh</a> <code></code>.geo files and generate <code></code>.msh files.</p>
+<p>The <code><a class="el" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator.">Gmsh</a></code> class helps with the generation of meshes using the program <code>gmsh</code>.</p>
+<p>You can visualize the geometry files <code></code>.geo and <code></code>.msh using the <code>gmsh</code> application : </p>
+<pre class="fragment">  gmsh &lt;entity_name&gt;.msh
+</pre><h1><a class="anchor" id="Basic"></a>
+Basic Meshes</h1>
+<p>There is a list of basic geometries you can automatically generate with <a href="http://www.feelpp.org">Feel++</a> library. </p>
+<table  class="manual">
+<tr>
+<th>Feel++ function</th><th>Dim</th><th>Description&lt;/th </th></tr>
+<tr>
+<td><code><a class="el" href="namespaceFeel.html#afd30cd0d88210def50eaa407ca0a2d20">unitSegment()</a></code>;</td><td>1</td><td>Build a mesh of the unit segment <img class="formulaInl" alt="$[0,1]$" src="form_424.png"/> </td></tr>
+<tr>
+<td><code><a class="el" href="namespaceFeel.html#aeef72bd9ec13a749932e33309da80e62">unitSquare()</a></code>;</td><td>2</td><td>Build a mesh of the unit square <img class="formulaInl" alt="$[0,1]^2$" src="form_425.png"/> using triangles </td></tr>
+<tr>
+<td><code><a class="el" href="namespaceFeel.html#acb52ee369375c35506744aa7b7f77850">unitCircle()</a></code>;</td><td>2</td><td>Build a mesh of the unit circle using triangles </td></tr>
+<tr>
+<td><code>unitHypercube()</code>;</td><td>3</td><td>Build a mesh of the unit hypercube <img class="formulaInl" alt="$[0,1]^3$" src="form_426.png"/> using tetrahedrons </td></tr>
+<tr>
+<td><code><a class="el" href="namespaceFeel.html#a5f23b38aeff08e0c33d858c57e5093ab">unitSphere()</a></code>;</td><td>3</td><td>Build a mesh of the unit sphere using tetrahedrons </td></tr>
+</table>
+<p><b>Examples :</b><br/>
+ From "<a class="el" href="myfunctionspace_8cpp.html">doc/manual/tutorial/myfunctionspace.cpp</a> </p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> mesh = <a class="code" href="namespaceFeel.html#aeef72bd9ec13a749932e33309da80e62">unitSquare</a>();</div>
+</div><!-- fragment --><p>From</p>
 <p><a href="#" class="top">top</a> <hr/>
- </div></div><!-- contents -->
+ <h1><a class="anchor" id="Load"></a>
+Load Mesh</h1>
+<p>TODO</p>
+<p><a href="#" class="top">top</a> <hr/>
+ <h1><a class="anchor" id="Creat"></a>
+Creat Mesh</h1>
+<p>TODO</p>
+<p><a href="#" class="top">top</a> <hr/>
+ <h1><a class="anchor" id="Accessors"></a>
+Accessors</h1>
+<p>There is a list of functions you can use to get information about your mesh. </p>
+<table  class="manual">
+<tr>
+<th>Feel++ function</th><th>Return </th></tr>
+<tr>
+<td><div class="fragment"><div class="line">dimension() </div>
+</div><!-- fragment --></td><td><code>int</code> <br/>
+ Mesh dimension </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">order() </div>
+</div><!-- fragment --></td><td><code>GMSH_ORDER</code> <br/>
+ The order of the elements of the mesh </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">version()</div>
+</div><!-- fragment --></td><td><code>std::string</code> <br/>
+The file format version </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">format()</div>
+</div><!-- fragment --></td><td><code>GMSH_FORMAT</code> <br/>
+ The file format </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">isASCIIFormat()</div>
+</div><!-- fragment --></td><td><code>bool</code> <br/>
+ <code>true</code> if gmsh format is ascii </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">isBinaryFormat()</div>
+</div><!-- fragment --></td><td><code>bool</code> <br/>
+ <code>true</code> if gmsh format is binary </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">prefix()</div>
+</div><!-- fragment --></td><td><code>std::string</code> <br/>
+ The name of the file </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">boundingBox()</div>
+</div><!-- fragment --></td><td><code>std::vector&lt;std::pair&lt;double,double&gt;&gt;</code> <br/>
+ Bounding box </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">xmin()</div>
+</div><!-- fragment --></td><td><code>double</code> <br/>
+ The <code>x</code> minimal value (same syntax for <code>or</code> <code>z</code> ) </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">xmax()</div>
+</div><!-- fragment --></td><td><code>double</code> <br/>
+ The <code>maximal</code> value (smae syntax for <code>y</code> or  ) </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">h()</div>
+</div><!-- fragment --></td><td><code>double</code> <br/>
+Characteristic lenght </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">description()</div>
+</div><!-- fragment --></td><td><code>std::string</code> <br/>
+ The geometry description </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">addMidPoint()</div>
+</div><!-- fragment --></td><td><code>bool</code> <br/>
+Add the mid point of the domain </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">usePhysicalNames()</div>
+</div><!-- fragment --></td><td><code>bool</code> <br/>
+<code>true</code> if use the physical name </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">worldComm() </div>
+</div><!-- fragment --></td><td><code>WorldComm</code> <br/>
+The world communicator </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">numberOfPartitions()</div>
+</div><!-- fragment --></td><td><code>int</code> <br/>
+The number of partitions </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">mshFileByPartition()</div>
+</div><!-- fragment --></td><td><code>bool</code> <br/>
+ if save msh file by partitions </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">partitioner()</div>
+</div><!-- fragment --></td><td><code>GMSH_PARTITIONER</code> <br/>
+ The partitionner </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">shear()</div>
+</div><!-- fragment --></td><td><code>double</code> <br/>
+ The shear </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">recombine()</div>
+</div><!-- fragment --></td><td><code>bool</code> <br/>
+<code>true</code> if recombine  </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">refinementLevels()</div>
+</div><!-- fragment --></td><td><code>int</code> <br/>
+The refinement levels </td></tr>
+</table>
+<p><a href="#" class="top">top</a> <hr/>
+ <ul>
+<li><b>Next:</b> <a class="el" href="Spaces.html">Function Spaces</a> </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 17 2013 16:51:06 for Feel++ by
+    <li class="footer">Generated on Thu Apr 18 2013 12:24:35 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.1.2"/>
 <title>Feel++: Keywords</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -18,16 +19,22 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
-<link href="feel.css" rel="stylesheet" type="text/css" />
+<link href="feel.css"   rel="stylesheet" type="text/css" />
+<link href="eigendoxy.css" rel="stylesheet" type="text/css">
+<!-- $extrastylesheet -->
+<script type="text/javascript" src="eigen_navtree_hacks.js"></script>
+<!-- <script type="text/javascript"> -->
+<!-- </script> -->
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- <a name="top"></a> -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Feel++
+   <div id="projectname"><a href="http://www.feelpp.org/">Feel++</a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -94,13 +101,15 @@ $(document).ready(function(){initNavTree('Keywords.html','');});
 <ul><li class="level1"><a href="#Keywords_Array">Points and  Vectors</a></li>
 <li class="level1"><a href="#Keywords_Matrix">Matrix</a><ul><li class="level2"><a href="#Matrix_Building">Building Matrix</a></li>
 <li class="level2"><a href="#Matrix_Manipulating">Manipulating Matrix</a></li>
-<li class="level2"><a href="#Matrix_Jacobian">Jacobian Matrix</a></li>
 </ul>
 </li>
 <li class="level1"><a href="#Keywords_Expr">Expressions</a></li>
 <li class="level1"><a href="#Keywords_Operators">Operators</a><ul><li class="level2"><a href="#Operators_Operations">Operations</a></li>
 <li class="level2"><a href="#Operators_Differential">Differential Operators</a></li>
 <li class="level2"><a href="#Operators_TwoValued">Two Valued Operators</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#Kyewords_Geometric">Geometric Transformations</a><ul><li class="level2"><a href="#Matrix_Jacobian">Jacobian Matrix</a></li>
 </ul>
 </li>
 </ul>
@@ -228,21 +237,6 @@ Manipulating Matrix</h2>
 <tr>
 <td><div class="fragment"><div class="line">det(A)</div>
 </div><!-- fragment --></td><td><img class="formulaInl" alt="$\det (A)$" src="form_405.png"/></td><td>Determinant of matrix <img class="formulaInl" alt="$A$" src="form_16.png"/> </td><td><img class="formulaInl" alt="$1 \times 1$" src="form_301.png"/> </td></tr>
-</table>
-<h2><a class="anchor" id="Matrix_Jacobian"></a>
-Jacobian Matrix</h2>
-<p>You can access to the jacobian matrix, <img class="formulaInl" alt="$J$" src="form_395.png"/>, of the geometric transformation, usign the keyword : </p>
-<div class="fragment"><div class="line">J() </div>
-</div><!-- fragment --><p> There are some tools to manipulate this jacobian. </p>
-<table  class="manual">
-<tr>
-<th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>Description </th></tr>
-<tr>
-<td><div class="fragment"><div class="line">detJ()</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\det(J)$" src="form_396.png"/></td><td>Determinant of jacobian matrix  </td></tr>
-<tr>
-<td><div class="fragment"><div class="line">invJT()</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$(J^{-1})^T$" src="form_397.png"/></td><td>Transposed inverse of jacobian matrix  </td></tr>
 </table>
 <p><a href="#" class="top">top</a> <hr/>
  <br/>
@@ -516,13 +510,36 @@ trial function</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overright
 </div><!-- fragment --> </td><td><img class="formulaInl" alt="$\min(f_0,f_1)$" src="form_372.png"/> </td><td>minimum of right and left<br/>
 function evaluation</td><td><img class="formulaInl" alt="$\mathrm{rank}( f(\overrightarrow{x}))$" src="form_367.png"/></td><td><img class="formulaInl" alt="$n \times p $" src="form_371.png"/> </td></tr>
 </table>
-<p><a href="#" class="top">top</a> </p>
+<p><a href="#" class="top">top</a> <hr/>
+ <br/>
+ </p>
+<h1><a class="anchor" id="Kyewords_Geometric"></a>
+Geometric Transformations</h1>
+<h2><a class="anchor" id="Matrix_Jacobian"></a>
+Jacobian Matrix</h2>
+<p>You can access to the jacobian matrix, <img class="formulaInl" alt="$J$" src="form_395.png"/>, of the geometric transformation, using the keyword : </p>
+<div class="fragment"><div class="line">J() </div>
+</div><!-- fragment --><p> There are some tools to manipulate this jacobian. </p>
+<table  class="manual">
+<tr>
+<th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>Description </th></tr>
+<tr>
+<td><div class="fragment"><div class="line">detJ()</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\det(J)$" src="form_396.png"/></td><td>Determinant of jacobian matrix  </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">invJT()</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$(J^{-1})^T$" src="form_397.png"/></td><td>Transposed inverse of jacobian matrix  </td></tr>
+</table>
+<p><a href="#" class="top">top</a> <hr/>
+<ul>
+<li><b>Next:</b> <a class="el" href="Environment.html">Environment</a> </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 17 2013 16:51:06 for Feel++ by
+    <li class="footer">Generated on Thu Apr 18 2013 12:24:35 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

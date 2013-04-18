@@ -1,5 +1,7 @@
 var NAVTREEINDEX14 =
 {
+"classFeel_1_1PolynomialSet.html#a61bfef705fa9ed3f575e417aff3799ad":[3,0,129,39],
+"classFeel_1_1PolynomialSet.html#a63bd0d24c8d4e1e447962878fce75007":[3,0,129,57],
 "classFeel_1_1PolynomialSet.html#a66bb2dbcd92715338419af3efd690999":[3,0,129,61],
 "classFeel_1_1PolynomialSet.html#a68864ba5c51165631ed732f891e10564":[3,0,129,37],
 "classFeel_1_1PolynomialSet.html#a6a3f0a6d754260cfc70f8fde2a1691f3":[3,0,129,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX14 =
 "classFeel_1_1Singleton.html#a1d3a68a11d8143582273ca02114a140b":[3,0,17,3],
 "classFeel_1_1Singleton.html#a7a70bea80a40a08861c4ac50192ea7cd":[3,0,17,2],
 "classFeel_1_1Singleton.html#a8e3feacafb170b8688a46e433c0b4b4b":[3,0,17,1],
-"classFeel_1_1Singleton.html#af6dcc14dfa0091a993ee69f03bdad118":[3,0,17,0],
-"classFeel_1_1SolverBase.html":[3,0,45],
-"classFeel_1_1SolverBase.html#a07084dfc5416505d0b544fad96d1eaa4":[3,0,45,2]
+"classFeel_1_1Singleton.html#af6dcc14dfa0091a993ee69f03bdad118":[3,0,17,0]
 };
