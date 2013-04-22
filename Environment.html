@@ -20,7 +20,7 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="feel.css"   rel="stylesheet" type="text/css" />
-<link href="eigendoxy.css" rel="stylesheet" type="text/css">
+<link href="feel.css" rel="stylesheet" type="text/css">
 <!-- $extrastylesheet -->
 <script type="text/javascript" src="eigen_navtree_hacks.js"></script>
 <!-- <script type="text/javascript"> -->
@@ -34,10 +34,15 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname"><a href="http://www.feelpp.org/">Feel++</a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
+  </td>
+  <td width="500px" align="center" valign="bottom">
+    <a href="http://www.feelpp.org/"><img alt="Feel++" src="home.png"/></a>
+    <a href="https://github.com/feelpp/feelpp"><img alt="Feel++ on Github" src="http://sciactive.github.io/pnotify/includes/github-icon.png"/></a>
+    <a href="https://plus.google.com/communities/104696212880173187475"><img alt="Feel++ community" src="google.png"/></a>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -103,10 +108,10 @@ $(document).ready(function(){initNavTree('Environment.html','');});
 <li class="level2"><a href="#Options_Accessors">Accessors</a></li>
 </ul>
 </li>
-<li class="level1"><a href="#Repository">Repository</a><ul><li class="level2"><a href="#Repository_Accessors">Accessors</a></li>
-<li class="level2"><a href="#Repository_Change">Change Repository</a></li>
-<li class="level2"><a href="#Repository_Find">Find File</a></li>
-<li class="level2"><a href="#Repository_LogFiles">Set Log Files</a></li>
+<li class="level1"><a href="#Repository">Repository</a><ul><li class="level2"><a href="#Change">changeRepository</a></li>
+<li class="level2"><a href="#Find">findFile</a></li>
+<li class="level2"><a href="#SetLogs">setLogs</a></li>
+<li class="level2"><a href="#Repository_Accessors">Accessors</a></li>
 </ul>
 </li>
 <li class="level1"><a href="#MPI">MPI Environment</a><ul><li class="level2"><a href="#MPI_Accessors">Accesors</a></li>
@@ -226,6 +231,57 @@ Accessors</h2>
 </div><!-- fragment --><p><a href="#" class="top">top</a> <hr/>
  <h1><a class="anchor" id="Repository"></a>
 Repository</h1>
+<h2><a class="anchor" id="Change"></a>
+changeRepository</h2>
+<p>You can change the default repository.</p>
+<p><b>Interface :</b><br/>
+ </p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> changeRepository( _directory, _subdir, _filename );</div>
+</div><!-- fragment --><p> Required Parameters : </p>
+<ul>
+<li><code>_directory</code> : new directory</li>
+</ul>
+<p>Optional Parameters : </p>
+<ul>
+<li><code>_subdir</code> : Default = <code>true</code> </li>
+<li><code>_filename</code> : Default = <code>"logfile"</code></li>
+</ul>
+<p>You can use <code>boost::format</code> to custom the path. <br/>
+ <b>Example :</b><br/>
+ From <code>"doc/manual/laplacian/laplacian.cpp"</code> : </p>
+<div class="fragment"><div class="line">Environment::changeRepository( boost::format( <span class="stringliteral">&quot;doc/manual/laplacian/%1%/%2%-%3%/P%4%/h_%5%/&quot;</span> )</div>
+<div class="line">                               % this-&gt;about().appName()</div>
+<div class="line">                               % shape</div>
+<div class="line">                               % Dim</div>
+<div class="line">                               % Order</div>
+<div class="line">                               % meshSize );</div>
+</div><!-- fragment --><p> Then results will be store in : "/doc/manual/laplacian/&lt;appName&gt;/&lt;shape&gt;-&lt;Dim&gt;/P&lt;Order&gt;/h_&lt;meshSize&gt;/"</p>
+<h2><a class="anchor" id="Find"></a>
+findFile</h2>
+<p><b>Interface :</b><br/>
+ </p>
+<div class="fragment"><div class="line">std::string findFile( std::string <span class="keyword">const</span>&amp; filename );</div>
+</div><!-- fragment --><p> Returns the string containing the filename path.</p>
+<p>The lookup is as follows: </p>
+<ul>
+<li>look into current path </li>
+<li>look into paths that went through changeRepository(), it means that we look for example into the path from which the executable was run</li>
+</ul>
+<p>If the file has an extension .geo or .msh, try also to </p>
+<ul>
+<li>look into <code>localGeoRepository()</code> which is usually $HOME/feel/geo </li>
+<li>look into <code>systemGeoRepository()</code> which is usually $FEELPP_DIR/share/feel/geo</li>
+</ul>
+<p>If <code>filename</code> is not found, then the empty string is returned.</p>
+<h2><a class="anchor" id="SetLogs"></a>
+setLogs</h2>
+<p><b>Interface :</b><br/>
+ </p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> setLogs( std::string <span class="keyword">const</span>&amp; prefix );</div>
+</div><!-- fragment --><p> Required Parameters : </p>
+<ul>
+<li><code>prefix</code> : prefix for log filenames.</li>
+</ul>
 <h2><a class="anchor" id="Repository_Accessors"></a>
 Accessors</h2>
 <p>There is a list of functions you can use to get information about the repositories used by <a href="http://www.feelpp.org">Feel++</a>. </p>
@@ -268,51 +324,6 @@ Default : <code>/usr/share/feel/config</code> or /usr/local/share/feel/config </
 </div><!-- fragment --></td><td><code>fs::path</code> <br/>
 The scratch directory </td></tr>
 </table>
-<h2><a class="anchor" id="Repository_Change"></a>
-Change Repository</h2>
-<p>You can change the default repository, using the following function : </p>
-<div class="fragment"><div class="line">Environment::changeRepository( _directory, _subdir, _filename );</div>
-</div><!-- fragment --><p> Required Parameters : </p>
-<ul>
-<li><code>_directory</code> : new directory</li>
-</ul>
-<p>Optional Parameters : </p>
-<ul>
-<li><code>_subdir</code> : Default = <code>true</code> </li>
-<li><code>_filename</code> : Default = <code>"logfile"</code></li>
-</ul>
-<p>You can use <code>boost::format</code> to custom the path. <br/>
- <b>Example :</b><br/>
- From "doc/manual/laplacian/laplacian.cpp" : </p>
-<div class="fragment"><div class="line">Environment::changeRepository( boost::format( <span class="stringliteral">&quot;doc/manual/laplacian/%1%/%2%-%3%/P%4%/h_%5%/&quot;</span> )</div>
-<div class="line">                               % this-&gt;about().appName()</div>
-<div class="line">                               % shape</div>
-<div class="line">                               % Dim</div>
-<div class="line">                               % Order</div>
-<div class="line">                               % meshSize );</div>
-</div><!-- fragment --><p> Then results will be store in : "/doc/manual/laplacian/&lt;appName&gt;/&lt;shape&gt;-&lt;Dim&gt;/P&lt;Order&gt;/h_&lt;meshSize&gt;/"</p>
-<h2><a class="anchor" id="Repository_Find"></a>
-Find File</h2>
-<div class="fragment"><div class="line">Environment::findFile( std::string <span class="keyword">const</span>&amp; filename );</div>
-</div><!-- fragment --><p> Returns the string containing the filename path (<code>std::string</code> ).</p>
-<p>Find a file. The lookup is as follows: </p>
-<ul>
-<li>look into current path </li>
-<li>look into paths that went through changeRepository(), it means that we look for example into the path from which the executable was run</li>
-</ul>
-<p>If the file has an extension .geo or .msh, try also to </p>
-<ul>
-<li>look into <code>localGeoRepository()</code> which is usually $HOME/feel/geo </li>
-<li>look into <code>systemGeoRepository()</code> which is usually $FEELPP_DIR/share/feel/geo</li>
-</ul>
-<p>If <code>filename</code> is not found, then the empty string is returned.</p>
-<h2><a class="anchor" id="Repository_LogFiles"></a>
-Set Log Files</h2>
-<div class="fragment"><div class="line">Environment::setLogs( std::string <span class="keyword">const</span>&amp; prefix );</div>
-</div><!-- fragment --><p> Required <a class="el" href="classFeel_1_1Parameter.html" title="parameter class to describe code inputs">Parameter</a> : </p>
-<ul>
-<li><code>prefix</code> : prefix for log filenames.</li>
-</ul>
 <p><a href="#" class="top">top</a> <hr/>
  <h1><a class="anchor" id="MPI"></a>
 MPI Environment</h1>
@@ -380,7 +391,7 @@ TODO</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 18 2013 12:24:35 for Feel++ by
+    <li class="footer">Generated on Mon Apr 22 2013 16:29:05 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>
