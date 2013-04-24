@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -193,10 +193,18 @@ map_dense_matrix_type &amp;J)&gt;&#160;</td><td class="memItemRight" valign="bot
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3843ff95ffe4d8f45a524f7093aa14f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a3843ff95ffe4d8f45a524f7093aa14f5">showSNESMonitor</a> () const </td></tr>
+<tr class="memitem:ad24a596d95627b51efc9631b23152fd8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad24a596d95627b51efc9631b23152fd8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setShowKSPConvergedReason</b> (bool b)</td></tr>
+<tr class="memitem:a96568666705f427d6a7d832dc65c3c5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96568666705f427d6a7d832dc65c3c5c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setShowKSPMonitor</b> (bool b)</td></tr>
+<tr class="memitem:a4eadf09553fcc5dc6eef5b68143461a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4eadf09553fcc5dc6eef5b68143461a8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setShowSNESConvergedReason</b> (bool b)</td></tr>
+<tr class="memitem:aa8ebbe9c347ce99074b8c33b42defc57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8ebbe9c347ce99074b8c33b42defc57"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setShowSNESMonitor</b> (bool b)</td></tr>
+<tr class="memitem:afac59e025540e33e39e5a367efb8c8fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#afac59e025540e33e39e5a367efb8c8fa">showKSPConvergedReason</a> () const </td></tr>
 <tr class="memitem:afce003dc732ee4d422681e813b96c9fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#afce003dc732ee4d422681e813b96c9fd">showKSPMonitor</a> () const </td></tr>
 <tr class="memitem:aa50e8a1fd30359a4406f6cf68fbfd314"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#aa50e8a1fd30359a4406f6cf68fbfd314">showSNESConvergedReason</a> () const </td></tr>
-<tr class="memitem:afac59e025540e33e39e5a367efb8c8fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#afac59e025540e33e39e5a367efb8c8fa">showKSPConvergedReason</a> () const </td></tr>
+<tr class="memitem:a3843ff95ffe4d8f45a524f7093aa14f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a3843ff95ffe4d8f45a524f7093aa14f5">showSNESMonitor</a> () const </td></tr>
 <tr><td colspan="2"><div class="groupHeader">Accessors</div></td></tr>
 <tr class="memitem:a18b9eeb268eefdfc42c49a1280b4fb6d"><td class="memItemLeft" align="right" valign="top">WorldComm const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a18b9eeb268eefdfc42c49a1280b4fb6d">comm</a> () const </td></tr>
 <tr class="memitem:afb6cb009cc2735aa1ee74845a79468a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb6cb009cc2735aa1ee74845a79468a4"></a>
@@ -241,17 +249,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAbsoluteSolutionTo
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a8ee58c12ff06fe1086944c25ec50640b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a8ee58c12ff06fe1086944c25ec50640b">M_is_initialized</a></td></tr>
-<tr class="memitem:ae8402c5a51b0dec4b59e8b240f6cce0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a63d6d444a7e0d7bd77b307219a00ce2b">SolverNonLinearType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#ae8402c5a51b0dec4b59e8b240f6cce0a">M_snl_type</a></td></tr>
-<tr class="memitem:ab0961b309cb3633721616eaecf840e90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a75d37378df29bc4c9a393504b87fdc51">SolverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#ab0961b309cb3633721616eaecf840e90">M_kspSolver_type</a></td></tr>
-<tr class="memitem:aecfb0c0ab7f6662a2f7e9f6d0dbcf91f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#affe8f1716191835c1f39a4f88c8f7299">PreconditionerType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#aecfb0c0ab7f6662a2f7e9f6d0dbcf91f">M_preconditioner_type</a></td></tr>
-<tr class="memitem:adcde8c1c73e5adc4fcdf15e964fb7072"><td class="memItemLeft" align="right" valign="top">preconditioner_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#adcde8c1c73e5adc4fcdf15e964fb7072">M_preconditioner</a></td></tr>
-<tr class="memitem:a043b59ccac2ca8ef918bda2b697cf045"><td class="memItemLeft" align="right" valign="top">MatSolverPackageType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a043b59ccac2ca8ef918bda2b697cf045">M_matSolverPackage_type</a></td></tr>
-<tr class="memitem:a4670ac30011f9874d2c03afcc2650392"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a4670ac30011f9874d2c03afcc2650392">M_relativeResidualTol</a></td></tr>
+<tr class="memitem:a2e9cc8f037487a98611e5826ed1ed307"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e9cc8f037487a98611e5826ed1ed307"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>M_absoluteResidualTol</b></td></tr>
 <tr class="memitem:a3ecb956a49bfc73cd11feae676f957fc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a3ecb956a49bfc73cd11feae676f957fc">M_absoluteSolutionTol</a></td></tr>
+<tr class="memitem:a8ee58c12ff06fe1086944c25ec50640b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a8ee58c12ff06fe1086944c25ec50640b">M_is_initialized</a></td></tr>
+<tr class="memitem:ab0961b309cb3633721616eaecf840e90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a75d37378df29bc4c9a393504b87fdc51">SolverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#ab0961b309cb3633721616eaecf840e90">M_kspSolver_type</a></td></tr>
+<tr class="memitem:a043b59ccac2ca8ef918bda2b697cf045"><td class="memItemLeft" align="right" valign="top">MatSolverPackageType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a043b59ccac2ca8ef918bda2b697cf045">M_matSolverPackage_type</a></td></tr>
 <tr class="memitem:ab53d2853b7825d9ed335df2f5cb51829"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#ab53d2853b7825d9ed335df2f5cb51829">M_nbItMax</a></td></tr>
+<tr class="memitem:a2b8a2e9621fab4b5e0951fedfce0956e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b8a2e9621fab4b5e0951fedfce0956e"></a>
+<a class="el" href="namespaceFeel.html#a3d7a6c5948e669b187f2d4620499715a">MatrixStructure</a>&#160;</td><td class="memItemRight" valign="bottom"><b>M_prec_matrix_structure</b></td></tr>
+<tr class="memitem:adcde8c1c73e5adc4fcdf15e964fb7072"><td class="memItemLeft" align="right" valign="top">preconditioner_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#adcde8c1c73e5adc4fcdf15e964fb7072">M_preconditioner</a></td></tr>
+<tr class="memitem:aecfb0c0ab7f6662a2f7e9f6d0dbcf91f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#affe8f1716191835c1f39a4f88c8f7299">PreconditionerType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#aecfb0c0ab7f6662a2f7e9f6d0dbcf91f">M_preconditioner_type</a></td></tr>
+<tr class="memitem:ac852084e20b7f75e16378fda5b19fb6a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac852084e20b7f75e16378fda5b19fb6a"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>M_prefix</b></td></tr>
+<tr class="memitem:a4670ac30011f9874d2c03afcc2650392"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a4670ac30011f9874d2c03afcc2650392">M_relativeResidualTol</a></td></tr>
 <tr class="memitem:a7f69f36a7851b5f78dd1c18a76e58035"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a7f69f36a7851b5f78dd1c18a76e58035">M_reuse_jac</a></td></tr>
 <tr class="memitem:aa65aa08fd8aadad6d4cc668528a9ec48"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#aa65aa08fd8aadad6d4cc668528a9ec48">M_reuse_prec</a></td></tr>
+<tr class="memitem:a4a8c723d2c20da178df6ba142c0c059d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a8c723d2c20da178df6ba142c0c059d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_showKSPConvergedReason</b></td></tr>
+<tr class="memitem:ab040e4b982dc7f4f6fd80b816e39acf4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab040e4b982dc7f4f6fd80b816e39acf4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_showKSPMonitor</b></td></tr>
+<tr class="memitem:ac107ca1d292212bcc287ce423d5d7747"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac107ca1d292212bcc287ce423d5d7747"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_showSNESConvergedReason</b></td></tr>
+<tr class="memitem:ae09109337c16915165f9a2c1dd676aca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae09109337c16915165f9a2c1dd676aca"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_showSNESMonitor</b></td></tr>
+<tr class="memitem:ae8402c5a51b0dec4b59e8b240f6cce0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a63d6d444a7e0d7bd77b307219a00ce2b">SolverNonLinearType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#ae8402c5a51b0dec4b59e8b240f6cce0a">M_snl_type</a></td></tr>
+<tr class="memitem:ac85f56ccaff5dcdcccb57cd4f26596ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac85f56ccaff5dcdcccb57cd4f26596ff"></a>
+WorldComm&#160;</td><td class="memItemRight" valign="bottom"><b>M_worldComm</b></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="member-group"></a>
 Constructors, destructor</h2></td></tr>
@@ -1683,7 +1707,7 @@ template&lt;typename T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1SolverNonLinear.html">SolverNonLinear</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:06 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:57 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

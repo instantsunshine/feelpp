@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -100,7 +100,9 @@ $(document).ready(function(){initNavTree('gmsh_8cpp.html','');});
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">gmsh.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -131,14 +133,48 @@ $(document).ready(function(){initNavTree('gmsh_8cpp.html','');});
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceFeel"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html">Feel</a></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ad458cb345ecea852dea934cd2f40cb33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad458cb345ecea852dea934cd2f40cb33"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALGO_2D_AUTO</b>&#160;&#160;&#160;2</td></tr>
+<tr class="memitem:a5d3cdd9ebc6ff21a330c6a68561c77a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d3cdd9ebc6ff21a330c6a68561c77a5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALGO_2D_BAMG</b>&#160;&#160;&#160;7</td></tr>
+<tr class="memitem:ad66c06add8ae9908fce0c2f511376afe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad66c06add8ae9908fce0c2f511376afe"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALGO_2D_DELAUNAY</b>&#160;&#160;&#160;5</td></tr>
+<tr class="memitem:adf286326dbe29a86ce1914bd3931e164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf286326dbe29a86ce1914bd3931e164"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALGO_2D_FRONTAL</b>&#160;&#160;&#160;6</td></tr>
+<tr class="memitem:a4ee775653b45b36c4e6c655af607eb05"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ee775653b45b36c4e6c655af607eb05"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALGO_2D_FRONTAL_QUAD</b>&#160;&#160;&#160;8</td></tr>
+<tr class="memitem:a3e6110760b72ce6b93e560059e9b48f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e6110760b72ce6b93e560059e9b48f3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALGO_2D_MESHADAPT</b>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a0c12e20e44da1a02fb96863b8b821c8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c12e20e44da1a02fb96863b8b821c8a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALGO_2D_MESHADAPT_OLD</b>&#160;&#160;&#160;4</td></tr>
+<tr class="memitem:a476ab442ec79cd917b5ce552b82500ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a476ab442ec79cd917b5ce552b82500ac"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALGO_3D_DELAUNAY</b>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a3c213699a0f4f9623eb8a9515fbd74c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c213699a0f4f9623eb8a9515fbd74c0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALGO_3D_FRONTAL</b>&#160;&#160;&#160;4</td></tr>
+<tr class="memitem:a22e1985d3d723e26f0ef756a90032e1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22e1985d3d723e26f0ef756a90032e1c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALGO_3D_FRONTAL_DEL</b>&#160;&#160;&#160;5</td></tr>
+<tr class="memitem:a8838a4e7a584ddd36e8a19a6e65a9682"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8838a4e7a584ddd36e8a19a6e65a9682"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALGO_3D_FRONTAL_HEX</b>&#160;&#160;&#160;6</td></tr>
+<tr class="memitem:a005586ffb33940c2b86db95019d688f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a005586ffb33940c2b86db95019d688f6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALGO_3D_MMG3D</b>&#160;&#160;&#160;7</td></tr>
+<tr class="memitem:aedc0c9536669a711463b56ad17d08096"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedc0c9536669a711463b56ad17d08096"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALGO_3D_RTREE</b>&#160;&#160;&#160;9</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a3785b6ca8ae70e2305821071d8d76c45"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; Mesh<br class="typebreak"/>
+&lt; Simplex&lt; 3 &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a3785b6ca8ae70e2305821071d8d76c45">Feel::unitCube</a> (double h)</td></tr>
 <tr class="memitem:afd30cd0d88210def50eaa407ca0a2d20"><td class="memItemLeft" align="right" valign="top">detail boost::shared_ptr&lt; Mesh<br class="typebreak"/>
 &lt; Simplex&lt; 1 &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#afd30cd0d88210def50eaa407ca0a2d20">Feel::unitSegment</a> (double h)</td></tr>
 <tr class="memitem:aeef72bd9ec13a749932e33309da80e62"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; Mesh<br class="typebreak"/>
 &lt; Simplex&lt; 2 &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#aeef72bd9ec13a749932e33309da80e62">Feel::unitSquare</a> (double h)</td></tr>
-<tr class="memitem:a3785b6ca8ae70e2305821071d8d76c45"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; Mesh<br class="typebreak"/>
-&lt; Simplex&lt; 3 &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a3785b6ca8ae70e2305821071d8d76c45">Feel::unitCube</a> (double h)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a9579b02624f99fabaf320df49e38513e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9579b02624f99fabaf320df49e38513e"></a>
+const GMSH_PARTITIONER&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::GMSH_PARTITIONER_DEFAULT</b> = GMSH_PARTITIONER_CHACO</td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme <a href="#" onclick="location.href='mai'+'lto:'+'chr'+'is'+'top'+'he'+'.pr'+'ud'+'hom'+'me'+'@fe'+'el'+'pp.'+'or'+'g'; return false;">chris<span style="display: none;">.nosp@m.</span>toph<span style="display: none;">.nosp@m.</span>e.pru<span style="display: none;">.nosp@m.</span>dhom<span style="display: none;">.nosp@m.</span>me@fe<span style="display: none;">.nosp@m.</span>elpp<span style="display: none;">.nosp@m.</span>.org</a> </dd></dl>
@@ -148,8 +184,8 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_e5f0dfdce99b571c03f822e68138ad6d.html">feelfilters</a></li><li class="navelem"><a class="el" href="gmsh_8cpp.html">gmsh.cpp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:04 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_20ecd942a77abb86794d08a686402ca9.html">feelfilters</a></li><li class="navelem"><a class="el" href="gmsh_8cpp.html">gmsh.cpp</a></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:54 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

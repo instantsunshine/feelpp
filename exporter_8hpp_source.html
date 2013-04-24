@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -163,14 +163,14 @@ $(document).ready(function(){initNavTree('exporter_8hpp_source.html','');});
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1VisitorBase.html" title="The base class of any Acyclic Visitor.">VisitorBase</a> <a class="code" href="classFeel_1_1VisitorBase.html" title="The base class of any Acyclic Visitor.">super1</a>;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Visitor.html">Visitor&lt;MeshType&gt;</a> <a class="code" href="classFeel_1_1Visitor.html">super2</a>;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">typedef</span> TimeSet&lt;MeshType,N&gt; timeset_type;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1TimeSet.html" title="data TimeSet">TimeSet&lt;MeshType,N&gt;</a> <a class="code" href="classFeel_1_1TimeSet.html" title="data TimeSet">timeset_type</a>;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> timeset_type::mesh_type mesh_type;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> timeset_type::mesh_ptrtype mesh_ptrtype;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;timeset_type&gt; timeset_ptrtype;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">typedef</span> std::vector&lt;timeset_ptrtype&gt; timeset_set_type;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> timeset_set_type::iterator timeset_iterator;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> timeset_set_type::const_iterator timeset_const_iterator;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> timeset_type::step_type step_type;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1TimeSet_1_1Step.html" title="a step in a time set">timeset_type::step_type</a> <a class="code" href="classFeel_1_1TimeSet_1_1Step.html" title="a step in a time set">step_type</a>;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> timeset_type::step_ptrtype step_ptrtype;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">struct </span>Factory</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
@@ -475,8 +475,8 @@ $(document).ready(function(){initNavTree('exporter_8hpp_source.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_e5f0dfdce99b571c03f822e68138ad6d.html">feelfilters</a></li><li class="navelem"><b>exporter.hpp</b></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:28:58 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_20ecd942a77abb86794d08a686402ca9.html">feelfilters</a></li><li class="navelem"><b>exporter.hpp</b></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:47 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -10,7 +10,6 @@ var classFeel_1_1SolverLinear =
     [ "~SolverLinear", "classFeel_1_1SolverLinear.html#a00c678b88735046fc5cf51ca71f3f1ef", null ],
     [ "aTolerance", "classFeel_1_1SolverLinear.html#a5357452ff316826e3fdee36bc96d25f5", null ],
     [ "attachPreconditioner", "classFeel_1_1SolverLinear.html#aadbdb48a9e4587b02240be88cc36beca", null ],
-    [ "BOOST_PARAMETER_MEMBER_FUNCTION", "classFeel_1_1SolverLinear.html#a14b56d7dd4c978ab9804a8bc415bfaa5", null ],
     [ "clear", "classFeel_1_1SolverLinear.html#a56209a190f92bc9f2431833fc583fb5f", null ],
     [ "dTolerance", "classFeel_1_1SolverLinear.html#a6c4115f31a8da7771ce9d5dfea9dd07e", null ],
     [ "fieldSplitType", "classFeel_1_1SolverLinear.html#ac5153a0e3b5239a4ad456aed76d09959", null ],

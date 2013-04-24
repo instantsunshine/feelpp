@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -99,7 +99,9 @@ $(document).ready(function(){initNavTree('classFeel_1_1AssertContext.html','');}
 
 <div class="header">
   <div class="summary">
-<a href="classFeel_1_1AssertContext-members.html">List of all members</a>  </div>
+<a href="classFeel_1_1AssertContext-members.html">List of all members</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::AssertContext Class Reference</div>  </div>
 </div><!--header-->
@@ -108,7 +110,40 @@ $(document).ready(function(){initNavTree('classFeel_1_1AssertContext.html','');}
 <p><code>#include &lt;<a class="el" href="smartassert_8hpp_source.html">smartassert.hpp</a>&gt;</code></p>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>contains details about a failed assertion </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a879b35a3e60649c8e11ede5beac78e6a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a879b35a3e60649c8e11ede5beac78e6a"></a>
+typedef std::pair&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>val_and_str</b></td></tr>
+<tr class="memitem:afa76c7d8c8f5bf7561054165d78c53a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa76c7d8c8f5bf7561054165d78c53a6"></a>
+typedef std::vector&lt; val_and_str &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vals_array</b></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae709d9b60e7674be37a7c40ff653d8ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae709d9b60e7674be37a7c40ff653d8ae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_val</b> (const string &amp;val, const string &amp;str)</td></tr>
+<tr class="memitem:a97e74fc6dcaa185fb43c819115896975"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97e74fc6dcaa185fb43c819115896975"></a>
+const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>expression</b> () const </td></tr>
+<tr class="memitem:af26c22df5e2b13fdc95d0b2fcb08570d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af26c22df5e2b13fdc95d0b2fcb08570d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>get_level</b> () const </td></tr>
+<tr class="memitem:a1d2c5ca741839e2921d7ef371270727b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d2c5ca741839e2921d7ef371270727b"></a>
+const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_level_msg</b> () const </td></tr>
+<tr class="memitem:a86620406416bb0c4e2c7547c22cdde34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86620406416bb0c4e2c7547c22cdde34"></a>
+const vals_array &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_vals_array</b> () const </td></tr>
+<tr class="memitem:a60ebf94286174f185920f44b3c906f15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60ebf94286174f185920f44b3c906f15"></a>
+const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getContextFile</b> () const </td></tr>
+<tr class="memitem:a4ea55e35a19fcf3f337aa67223ce0320"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ea55e35a19fcf3f337aa67223ce0320"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getContextLine</b> () const </td></tr>
+<tr class="memitem:a8e0f8c8ff2f34cb380fb7483dedee2b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e0f8c8ff2f34cb380fb7483dedee2b4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setExpression</b> (const string &amp;str)</td></tr>
+<tr class="memitem:aa619887bf2de59524cc73707d210cdcf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa619887bf2de59524cc73707d210cdcf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFileLine</b> (const char *file, int line)</td></tr>
+<tr class="memitem:ab1112d7ffec81e27f8f5db1f7d911fb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1112d7ffec81e27f8f5db1f7d911fb1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLevel</b> (int nLevel)</td></tr>
+<tr class="memitem:a4789d10467d7f47f11d71a6dfa00f780"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4789d10467d7f47f11d71a6dfa00f780"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLevelMsg</b> (const char *strMsg)</td></tr>
+</table>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="smartassert_8hpp_source.html">smartassert.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -117,7 +152,7 @@ $(document).ready(function(){initNavTree('classFeel_1_1AssertContext.html','');}
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1AssertContext.html">AssertContext</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:06 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:54 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

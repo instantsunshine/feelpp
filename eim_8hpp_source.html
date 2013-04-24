@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -1231,46 +1231,90 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;</div>
 <div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;ModelType&gt; model_ptrtype;</div>
 <div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;</div>
-<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;    EimFunctionNoSolve( model_ptrtype model )</div>
-<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;        :</div>
-<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;        M_model( model ),</div>
-<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;        M_elt( M_model-&gt;functionSpace()-&gt;element() )</div>
-<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;        {</div>
-<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;            value_type x = boost::lexical_cast&lt;value_type&gt;(<span class="stringliteral">&quot;inf&quot;</span>);</div>
-<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;            M_elt = <a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">vf::project</a>( _space=M_model-&gt;functionSpace(), _expr=cst(x) );</div>
-<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;        }</div>
-<div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;</div>
-<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;    element_type solve( parameter_type <span class="keyword">const</span>&amp; mu )</div>
-<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;        {</div>
-<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;            DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;no solve required\n&quot;</span>;</div>
-<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;            <span class="keywordflow">return</span> M_elt;</div>
-<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;        }</div>
-<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;    std::string modelName()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> M_model-&gt;modelName(); }</div>
-<div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;    functionspace_ptrtype functionSpace() { <span class="keywordflow">return</span> M_model-&gt;functionSpace(); }</div>
-<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;    parameterspace_ptrtype parameterSpace() { <span class="keywordflow">return</span> M_model-&gt;parameterSpace(); }</div>
-<div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;</div>
-<div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;    model_ptrtype M_model;</div>
-<div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;    element_type M_elt;</div>
-<div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;};</div>
-<div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;</div>
-<div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ModelType&gt;</div>
-<div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;boost::shared_ptr&lt;EimFunctionNoSolve&lt;ModelType&gt;&gt;</div>
-<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;eim_no_solve( boost::shared_ptr&lt;ModelType&gt; model )</div>
-<div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;{</div>
-<div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160;    <span class="keywordflow">return</span> boost::shared_ptr&lt;EimFunctionNoSolve&lt;ModelType&gt;&gt;( <span class="keyword">new</span> EimFunctionNoSolve&lt;ModelType&gt;( model ) );</div>
-<div class="line"><a name="l01329"></a><span class="lineno"> 1329</span>&#160;}</div>
-<div class="line"><a name="l01330"></a><span class="lineno"> 1330</span>&#160;</div>
-<div class="line"><a name="l01331"></a><span class="lineno"> 1331</span>&#160;</div>
-<div class="line"><a name="l01332"></a><span class="lineno"> 1332</span>&#160;po::options_description eimOptions( std::string <span class="keyword">const</span>&amp; prefix =<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01333"></a><span class="lineno"> 1333</span>&#160;}</div>
-<div class="line"><a name="l01334"></a><span class="lineno"> 1334</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _FEELPP_EIM_HPP */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> nb_spaces = functionspace_type::nSpaces;</div>
+<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt; boost::is_same&lt; mpl::int_&lt;nb_spaces&gt; , mpl::int_&lt;2&gt; &gt; , fusion::vector&lt; mpl::int_&lt;0&gt;, mpl::int_&lt;1&gt; &gt;  ,</div>
+<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;                       <span class="keyword">typename</span> mpl::if_ &lt; boost::is_same&lt; mpl::int_&lt;nb_spaces&gt; , mpl::int_&lt;3&gt; &gt; , fusion::vector &lt; mpl::int_&lt;0&gt; , mpl::int_&lt;1&gt; , mpl::int_&lt;2&gt; &gt; ,</div>
+<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;                                  <span class="keyword">typename</span> mpl::if_&lt; boost::is_same&lt; mpl::int_&lt;nb_spaces&gt; , mpl::int_&lt;4&gt; &gt;, fusion::vector&lt; mpl::int_&lt;0&gt;, mpl::int_&lt;1&gt;, mpl::int_&lt;2&gt;, mpl::int_&lt;3&gt; &gt;,</div>
+<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;                                                     fusion::vector&lt; mpl::int_&lt;0&gt;, mpl::int_&lt;1&gt;, mpl::int_&lt;2&gt;, mpl::int_&lt;3&gt;, mpl::int_&lt;4&gt; &gt;</div>
+<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;                                                     &gt;::type &gt;::type &gt;::type index_vector_type;</div>
+<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;</div>
+<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;    EimFunctionNoSolve( model_ptrtype model )</div>
+<div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;        :</div>
+<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;        M_model( model ),</div>
+<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;        M_elt( M_model-&gt;functionSpace()-&gt;element() )</div>
+<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;        {}</div>
+<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;</div>
+<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;    element_type solve( parameter_type <span class="keyword">const</span>&amp; mu )</div>
+<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;    {</div>
+<div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;no solve required\n&quot;</span>;</div>
+<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> is_composite = functionspace_type::is_composite;</div>
+<div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;        <span class="keywordflow">return</span> solve( mu , mpl::bool_&lt; is_composite &gt;() );</div>
+<div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;    }</div>
+<div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;    element_type solve( parameter_type <span class="keyword">const</span>&amp; mu , mpl::bool_&lt;false&gt; )</div>
+<div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;    {</div>
+<div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;        value_type x = boost::lexical_cast&lt;value_type&gt;(<span class="stringliteral">&quot;inf&quot;</span>);</div>
+<div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;        M_elt = <a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">vf::project</a>( _space=M_model-&gt;functionSpace(), _expr=cst(x) );</div>
+<div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;        <span class="keywordflow">return</span> M_elt;</div>
+<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;    }</div>
+<div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;    element_type solve( parameter_type <span class="keyword">const</span>&amp; mu , mpl::bool_&lt;true&gt; )</div>
+<div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160;    {</div>
+<div class="line"><a name="l01329"></a><span class="lineno"> 1329</span>&#160;        ProjectInfCompositeCase project_inf_composite_case( M_elt );</div>
+<div class="line"><a name="l01330"></a><span class="lineno"> 1330</span>&#160;        index_vector_type index_vector;</div>
+<div class="line"><a name="l01331"></a><span class="lineno"> 1331</span>&#160;        fusion::for_each( index_vector, project_inf_composite_case );</div>
+<div class="line"><a name="l01332"></a><span class="lineno"> 1332</span>&#160;        <span class="keywordflow">return</span> project_inf_composite_case.element();</div>
+<div class="line"><a name="l01333"></a><span class="lineno"> 1333</span>&#160;    }</div>
+<div class="line"><a name="l01334"></a><span class="lineno"> 1334</span>&#160;</div>
+<div class="line"><a name="l01335"></a><span class="lineno"> 1335</span>&#160;    std::string modelName()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> M_model-&gt;modelName(); }</div>
+<div class="line"><a name="l01336"></a><span class="lineno"> 1336</span>&#160;    functionspace_ptrtype functionSpace() { <span class="keywordflow">return</span> M_model-&gt;functionSpace(); }</div>
+<div class="line"><a name="l01337"></a><span class="lineno"> 1337</span>&#160;    parameterspace_ptrtype parameterSpace() { <span class="keywordflow">return</span> M_model-&gt;parameterSpace(); }</div>
+<div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;</div>
+<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;    <span class="keyword">struct </span>ProjectInfCompositeCase</div>
+<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;    {</div>
+<div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;        ProjectInfCompositeCase( element_type &amp; composite_element)</div>
+<div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;            :</div>
+<div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;            M_element( composite_element )</div>
+<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;        {}</div>
+<div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;</div>
+<div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;        <span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;        <span class="keywordtype">void</span></div>
+<div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;        operator()( <span class="keyword">const</span> T&amp; t )<span class="keyword"> const</span></div>
+<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;            <span class="keyword">auto</span> view = M_element.template element&lt; T::value &gt;();</div>
+<div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;            <span class="keyword">auto</span> space = view.functionSpace();</div>
+<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;            view = <a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">vf::project</a>( _space=space, _expr=cst( boost::lexical_cast&lt;value_type&gt;(<span class="stringliteral">&quot;inf&quot;</span>) ) );</div>
+<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;        }</div>
+<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;</div>
+<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;        element_type element()</div>
+<div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;        {</div>
+<div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;            <span class="keywordflow">return</span> M_element;</div>
+<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;        }</div>
+<div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;</div>
+<div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160;        element_type M_element;</div>
+<div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160;</div>
+<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;    }; <span class="comment">//struct ProjectInfOnSubspace</span></div>
+<div class="line"><a name="l01363"></a><span class="lineno"> 1363</span>&#160;</div>
+<div class="line"><a name="l01364"></a><span class="lineno"> 1364</span>&#160;    model_ptrtype M_model;</div>
+<div class="line"><a name="l01365"></a><span class="lineno"> 1365</span>&#160;    element_type M_elt;</div>
+<div class="line"><a name="l01366"></a><span class="lineno"> 1366</span>&#160;};</div>
+<div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160;</div>
+<div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ModelType&gt;</div>
+<div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;boost::shared_ptr&lt;EimFunctionNoSolve&lt;ModelType&gt;&gt;</div>
+<div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160;eim_no_solve( boost::shared_ptr&lt;ModelType&gt; model )</div>
+<div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;{</div>
+<div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;    <span class="keywordflow">return</span> boost::shared_ptr&lt;EimFunctionNoSolve&lt;ModelType&gt;&gt;( <span class="keyword">new</span> EimFunctionNoSolve&lt;ModelType&gt;( model ) );</div>
+<div class="line"><a name="l01373"></a><span class="lineno"> 1373</span>&#160;}</div>
+<div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;</div>
+<div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;</div>
+<div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;po::options_description eimOptions( std::string <span class="keyword">const</span>&amp; prefix =<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;}</div>
+<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _FEELPP_EIM_HPP */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_ba6b0b00ba30d3bae765add8611b95f7.html">feelcrb</a></li><li class="navelem"><a class="el" href="eim_8hpp.html">eim.hpp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:28:58 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_158e1417d43fa5244f8b5daf340f79ff.html">feelcrb</a></li><li class="navelem"><a class="el" href="eim_8hpp.html">eim.hpp</a></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:47 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

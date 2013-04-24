@@ -1,7 +1,6 @@
 var searchData=
 [
   ['eim',['EIM',['../classFeel_1_1EIM.html',1,'Feel']]],
-  ['elaxi',['Elaxi',['../classFeel_1_1Elaxi.html',1,'Feel']]],
   ['element',['Element',['../classFeel_1_1ParameterSpace_1_1Element.html',1,'Feel::ParameterSpace']]],
   ['environment',['Environment',['../classFeel_1_1detail_1_1Environment.html',1,'Feel::detail']]],
   ['exporter',['Exporter',['../classFeel_1_1Exporter.html',1,'Feel']]],

@@ -14,7 +14,6 @@ var classFeel_1_1fem_1_1CrouzeixRaviart =
     [ "CrouzeixRaviart", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a725686fd346a652a1c775d830637d7e8", null ],
     [ "CrouzeixRaviart", "classFeel_1_1fem_1_1CrouzeixRaviart.html#ae599057d448e84672228c2e3cef3d78a", null ],
     [ "~CrouzeixRaviart", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a4966100814dfcc50fe8780b7599aca23", null ],
-    [ "BOOST_STATIC_ASSERT", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a4b8a3804e51749b6d61ec44f76fcae76", null ],
     [ "familyName", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a7192d728aa636aab547f4ebf536a4e95", null ],
     [ "isomorphism", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a300635b5589ce6569c8ee0d40c32e683", null ],
     [ "referenceConvex", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a8eb9bef8c4011e886247f4c70cec8a40", null ],

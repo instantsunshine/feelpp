@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -1344,7 +1344,7 @@ $(document).ready(function(){initNavTree('fekete_8hpp_source.html','');});
 <div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class </span>Convex,</div>
 <div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;          uint16_type Order,</div>
 <div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;          <span class="keyword">typename</span> T = <span class="keywordtype">double</span> &gt;</div>
-<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;<span class="keyword">class </span>PointSetFekete : <span class="keyword">public</span> mpl::if_&lt;mpl::or_&lt;mpl::equal_to&lt;mpl::bool_&lt;Convex::is_hypercube&gt;, mpl::bool_&lt;true&gt; &gt;,</div>
+<div class="line"><a name="l01251"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSetFekete.html"> 1251</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1PointSetFekete.html">PointSetFekete</a> : <span class="keyword">public</span> mpl::if_&lt;mpl::or_&lt;mpl::equal_to&lt;mpl::bool_&lt;Convex::is_hypercube&gt;, mpl::bool_&lt;true&gt; &gt;,</div>
 <div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;    mpl::equal_to&lt;mpl::int_&lt;Convex::nDim&gt;, mpl::int_&lt;1&gt; &gt; &gt;,</div>
 <div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;    mpl::identity&lt;PointSetGaussLobatto&lt;Convex,Order,T&gt; &gt;,</div>
 <div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;    typename mpl::if_&lt;mpl::equal_to&lt;mpl::int_&lt;Convex::nDim&gt;, mpl::int_&lt;3&gt; &gt;,</div>
@@ -1358,7 +1358,7 @@ $(document).ready(function(){initNavTree('fekete_8hpp_source.html','');});
 <div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;            mpl::identity&lt;PointSetWarpBlend&lt;Convex,Order,T&gt; &gt;,</div>
 <div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;            mpl::identity&lt;PointSetFeketeSimplex&lt;Convex,Order,T&gt; &gt; &gt;::type&gt;::type::type super;</div>
 <div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;    PointSetFekete( <span class="keywordtype">int</span> interior = 0 ) : super( interior ) {}</div>
+<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;    <a class="code" href="classFeel_1_1PointSetFekete.html">PointSetFekete</a>( <span class="keywordtype">int</span> interior = 0 ) : super( interior ) {}</div>
 <div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;};</div>
 <div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;</div>
 <div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;} <span class="comment">// Feel</span></div>
@@ -1368,8 +1368,8 @@ $(document).ready(function(){initNavTree('fekete_8hpp_source.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_c85c146a44177c6961da007357ddadde.html">feelpoly</a></li><li class="navelem"><a class="el" href="fekete_8hpp.html">fekete.hpp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:28:59 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_1c1841c8c56c8663798eb9371cc92062.html">feelpoly</a></li><li class="navelem"><a class="el" href="fekete_8hpp.html">fekete.hpp</a></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:47 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

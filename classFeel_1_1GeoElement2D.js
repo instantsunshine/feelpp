@@ -19,7 +19,6 @@ var classFeel_1_1GeoElement2D =
     [ "GeoElement2D", "classFeel_1_1GeoElement2D.html#a4ad051f61ec3924d0d85a6782753fc4a", null ],
     [ "GeoElement2D", "classFeel_1_1GeoElement2D.html#a3c89d115ac3c71ef358b384bc629f5b0", null ],
     [ "~GeoElement2D", "classFeel_1_1GeoElement2D.html#a5c9d2a863ae73fb30cf94ef758afe951", null ],
-    [ "BOOST_MPL_ASSERT_MSG", "classFeel_1_1GeoElement2D.html#a2b203c9a6313431755d5a5cb841e8464", null ],
     [ "disconnectSubEntities", "classFeel_1_1GeoElement2D.html#a107a058b282a81427bcf29f8336338bc", null ],
     [ "edge", "classFeel_1_1GeoElement2D.html#a5ad0ae48278bd7903ae72d241c3c1562", null ],
     [ "edge", "classFeel_1_1GeoElement2D.html#a547bc8176148376aa8c41d71d22c08b0", null ],

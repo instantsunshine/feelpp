@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -100,7 +100,9 @@ $(document).ready(function(){initNavTree('classFeel_1_1BoundaryAdapted.html','')
 <div class="header">
   <div class="summary">
 <a href="classFeel_1_1BoundaryAdapted-members.html">List of all members</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::BoundaryAdapted&lt; Dim, Degree, T, StoragePolicy &gt; Class Template Reference</div>  </div>
 </div><!--header-->
@@ -130,6 +132,10 @@ class Feel::BoundaryAdapted&lt; Dim, Degree, T, StoragePolicy &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:ad3ca31570004cebdedecb8dfb5062877"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3ca31570004cebdedecb8dfb5062877"></a>
+typedef BoundaryAdaptedTraits<br class="typebreak"/>
+&lt; Dim, Degree, T, <br class="typebreak"/>
+StoragePolicy &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>traits_type</b></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Typedefs</div></td></tr>
 <tr class="memitem:a5d4b32aaaa048c39e2f683bf480effe4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d4b32aaaa048c39e2f683bf480effe4"></a>
 typedef <a class="el" href="classFeel_1_1BoundaryAdapted.html">BoundaryAdapted</a>&lt; Dim, <br class="typebreak"/>
@@ -196,6 +202,21 @@ matrix_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b>
 <tr class="memitem:a358b8b269788407ff9d08dc1602ef438"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1BoundaryAdapted.html">self_type</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1BoundaryAdapted.html#a358b8b269788407ff9d08dc1602ef438">basis</a> () const </td></tr>
 <tr class="memitem:add0cd1edaa37f12fa192ec5cab4b15be"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1BoundaryAdapted.html#add0cd1edaa37f12fa192ec5cab4b15be">familyName</a> () const </td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a49fba2497788ae040191ef87b9f7976f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49fba2497788ae040191ef87b9f7976f"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_normalized</b> = traits_type::is_normalized</td></tr>
+<tr class="memitem:a35533b2c70d52bd4ef3a0e7b9703ba39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35533b2c70d52bd4ef3a0e7b9703ba39"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nConvexOrderDiff</b> = traits_type::nConvexOrderDiff</td></tr>
+<tr class="memitem:a58be7d6ce90171804fb36fd8b6b92376"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58be7d6ce90171804fb36fd8b6b92376"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nDim</b> = traits_type::nDim</td></tr>
+<tr class="memitem:a3cf02577a3667766d7c550874807ec13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cf02577a3667766d7c550874807ec13"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nOrder</b> = traits_type::nOrder</td></tr>
+<tr class="memitem:a278104267d10da69bc55039526b85c4d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a278104267d10da69bc55039526b85c4d"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>numFaces</b> = traits_type::numFaces</td></tr>
+<tr class="memitem:a9970ed14750f095f8882f0e89bf3de3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9970ed14750f095f8882f0e89bf3de3f"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>numVertices</b> = traits_type::numVertices</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="member-group"></a>
 Methods</h2></td></tr>
 <tr class="memitem:aa1fe3247f0428e35dbcaba99f059f40c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1fe3247f0428e35dbcaba99f059f40c"></a>
@@ -222,6 +243,8 @@ typedef ublas::matrix<br class="typebreak"/>
 <tr class="memdesc:a21dae64795a2b9d28256669bb10f7637 inherit pub_static_methods_classFeel_1_1Basis"><td class="mdescLeft">&#160;</td><td class="mdescRight">derivatives of Dubiner polynomials the derivatives are computed at the nodes of the lattice  <a href="#a21dae64795a2b9d28256669bb10f7637"></a><br/></td></tr>
 <tr class="memitem:a03c1f93e47ddd45eccf7e09f8b5cd648 inherit pub_static_methods_classFeel_1_1Basis"><td class="memItemLeft" align="right" valign="top">static matrix_type const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Basis.html#a03c1f93e47ddd45eccf7e09f8b5cd648">derivate</a> (uint16_type i)</td></tr>
 <tr class="memdesc:a03c1f93e47ddd45eccf7e09f8b5cd648 inherit pub_static_methods_classFeel_1_1Basis"><td class="mdescLeft">&#160;</td><td class="mdescRight">derivatives of Dubiner polynomials the derivatives are computed at the nodes of the lattice  <a href="#a03c1f93e47ddd45eccf7e09f8b5cd648"></a><br/></td></tr>
+<tr class="memitem:add9ad9ca744510bce099965922e58625 inherit pro_static_methods_classFeel_1_1Basis"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add9ad9ca744510bce099965922e58625"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>initDerivation</b> (PrimalBasis const &amp;basis)</td></tr>
 </table>
 <h2>Member Function Documentation</h2>
 <a class="anchor" id="a358b8b269788407ff9d08dc1602ef438"></a>
@@ -394,7 +417,7 @@ template&lt;uint16_type Dim, uint16_type Degree, typename T = double, template&l
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1BoundaryAdapted.html">BoundaryAdapted</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:07 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:55 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

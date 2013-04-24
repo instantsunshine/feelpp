@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -292,7 +292,7 @@ $(document).ready(function(){initNavTree('functionals2_8hpp_source.html','');});
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    uint16_type _M_k;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="comment">// quadrature rule on the element and faces of the element</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <a class="code" href="structFeel_1_1IM.html">IM&lt;Space::nDim,2*Space::nOrder+1, value_type&gt;</a> _M_q;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    IM&lt;Space::nDim,2*Space::nOrder+1, value_type&gt; _M_q;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;};</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
@@ -329,7 +329,7 @@ $(document).ready(function(){initNavTree('functionals2_8hpp_source.html','');});
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> gm_type::face_gm_type::precompute_type face_pc_type;</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> gm_type::face_gm_type::precompute_ptrtype face_pc_ptrtype;</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        gm_type __gm;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <a class="code" href="structFeel_1_1IM.html" title="integration method interface class">IM</a>&lt;reference_convex_type::nDim-1,2*space_type::nOrder-1&gt; __qr_face;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        IM&lt;reference_convex_type::nDim-1,2*space_type::nOrder-1&gt; __qr_face;</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        face_pc_ptrtype __geopc( <span class="keyword">new</span> face_pc_type( __gm-&gt;boundaryMap(),__qr_face.points() ) );</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[nc] ref_convex_face &quot;</span>  &lt;&lt; face &lt;&lt; <span class="stringliteral">&quot;=&quot;</span> &lt;&lt; ref_convex_face.points() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -460,8 +460,8 @@ $(document).ready(function(){initNavTree('functionals2_8hpp_source.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_c85c146a44177c6961da007357ddadde.html">feelpoly</a></li><li class="navelem"><a class="el" href="functionals2_8hpp.html">functionals2.hpp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:28:59 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_1c1841c8c56c8663798eb9371cc92062.html">feelpoly</a></li><li class="navelem"><a class="el" href="functionals2_8hpp.html">functionals2.hpp</a></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:48 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

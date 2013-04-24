@@ -1,9 +1,7 @@
 var searchData=
 [
   ['parameterspace_2ehpp',['parameterspace.hpp',['../parameterspace_8hpp.html',1,'']]],
-  ['penalisation2_2ecpp',['penalisation2.cpp',['../penalisation2_8cpp.html',1,'']]],
-  ['penalisation3_2ecpp',['penalisation3.cpp',['../penalisation3_8cpp.html',1,'']]],
-  ['periodic_2ecpp',['periodic.cpp',['../periodic_8cpp.html',1,'']]],
+  ['periodic_2ehpp',['periodic.hpp',['../periodic_8hpp.html',1,'']]],
   ['pfemapp_2ehpp',['pfemapp.hpp',['../pfemapp_8hpp.html',1,'']]],
   ['pod_2ecpp',['pod.cpp',['../pod_8cpp.html',1,'']]],
   ['pod_2ehpp',['pod.hpp',['../pod_8hpp.html',1,'']]],
@@ -13,6 +11,7 @@ var searchData=
   ['pointsettomesh_2ehpp',['pointsettomesh.hpp',['../pointsettomesh_8hpp.html',1,'']]],
   ['polynomial_2ehpp',['polynomial.hpp',['../polynomial_8hpp.html',1,'']]],
   ['polynomialset_2ehpp',['polynomialset.hpp',['../polynomialset_8hpp.html',1,'']]],
+  ['preassembleobject_2ehpp',['preassembleobject.hpp',['../preassembleobject_8hpp.html',1,'']]],
   ['preconditioner_2ecpp',['preconditioner.cpp',['../preconditioner_8cpp.html',1,'']]],
   ['preconditioner_2ehpp',['preconditioner.hpp',['../preconditioner_8hpp.html',1,'']]],
   ['preconditionerifpack_2ecpp',['preconditionerifpack.cpp',['../preconditionerifpack_8cpp.html',1,'']]],

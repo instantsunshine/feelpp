@@ -6,6 +6,5 @@ var classFeel_1_1functional_1_1IntegralMomentOfDivergence =
     [ "space_type", "classFeel_1_1functional_1_1IntegralMomentOfDivergence.html#af5bfcd5cd1a16f6553fc9a5c2ae63e42", null ],
     [ "value_type", "classFeel_1_1functional_1_1IntegralMomentOfDivergence.html#a9ed7ff28698a5e7d350c9b1fe2bdb320", null ],
     [ "IntegralMomentOfDivergence", "classFeel_1_1functional_1_1IntegralMomentOfDivergence.html#afa5ebc1a214cb04fe7c5e8358b670b6f", null ],
-    [ "IntegralMomentOfDivergence", "classFeel_1_1functional_1_1IntegralMomentOfDivergence.html#ada317266ebe4e37a409f7cef1c98a88c", null ],
-    [ "BOOST_STATIC_ASSERT", "classFeel_1_1functional_1_1IntegralMomentOfDivergence.html#ae8ee7634bbb8f898ee7e22723c91158a", null ]
+    [ "IntegralMomentOfDivergence", "classFeel_1_1functional_1_1IntegralMomentOfDivergence.html#ada317266ebe4e37a409f7cef1c98a88c", null ]
 ];

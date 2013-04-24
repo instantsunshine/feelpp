@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -232,55 +232,72 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classFeel_1_1Gmsh"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1Gmsh')"><img src="closed.png" alt="-"/>&nbsp;Public Types inherited from <a class="el" href="classFeel_1_1Gmsh.html">Feel::Gmsh</a></td></tr>
+<tr class="memitem:a31488b937b792e7375be5e0713003f5e inherit pub_types_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>DomainType</b> { <br/>
+&#160;&#160;<b>GMSH_REFERENCE_DOMAIN</b> =  0, 
+<br/>
+&#160;&#160;<b>GMSH_REAL_DOMAIN</b>
+<br/>
+ }</td></tr>
 <tr class="inherit_header pub_static_methods_classFeel_1_1Gmsh"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classFeel_1_1Gmsh')"><img src="closed.png" alt="-"/>&nbsp;Static Public Member Functions inherited from <a class="el" href="classFeel_1_1Gmsh.html">Feel::Gmsh</a></td></tr>
 <tr class="memitem:ae9e5e667f022dc36ee5b38a81daa1a3f inherit pub_static_methods_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9e5e667f022dc36ee5b38a81daa1a3f"></a>
 static boost::shared_ptr&lt; <a class="el" href="classFeel_1_1Gmsh.html">Gmsh</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>New</b> (po::variables_map const &amp;vm)</td></tr>
 <tr class="memitem:ab29793b57b74bbf1af1e7e7431f86ff1 inherit pub_static_methods_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab29793b57b74bbf1af1e7e7431f86ff1"></a>
 static boost::shared_ptr&lt; <a class="el" href="classFeel_1_1Gmsh.html">Gmsh</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>New</b> (std::string const &amp;shape, uint16_type d=2, uint16_type o=1, std::string const &amp;ct=&quot;simplex&quot;)</td></tr>
 <tr class="inherit_header pro_methods_classFeel_1_1Gmsh"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classFeel_1_1Gmsh')"><img src="closed.png" alt="-"/>&nbsp;Protected Member Functions inherited from <a class="el" href="classFeel_1_1Gmsh.html">Feel::Gmsh</a></td></tr>
-<tr class="memitem:a5fcdb513547d28f6518cdad892e7fcd5 inherit pro_methods_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#a5fcdb513547d28f6518cdad892e7fcd5">getDescription</a> () const </td></tr>
 <tr class="memitem:a4cec3a3aa6081c46f03fa46961825cf7 inherit pro_methods_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#a4cec3a3aa6081c46f03fa46961825cf7">generateGeo</a> (std::string const &amp;name, std::string const &amp;geo, bool const modifGeo=true) const </td></tr>
+<tr class="memitem:a5fcdb513547d28f6518cdad892e7fcd5 inherit pro_methods_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#a5fcdb513547d28f6518cdad892e7fcd5">getDescription</a> () const </td></tr>
 <tr class="inherit_header pro_attribs_classFeel_1_1Gmsh"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classFeel_1_1Gmsh')"><img src="closed.png" alt="-"/>&nbsp;Protected Attributes inherited from <a class="el" href="classFeel_1_1Gmsh.html">Feel::Gmsh</a></td></tr>
-<tr class="memitem:a7f488443251749d91ab9c53a7808a79e inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f488443251749d91ab9c53a7808a79e"></a>
-WorldComm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#a7f488443251749d91ab9c53a7808a79e">M_worldComm</a></td></tr>
-<tr class="memdesc:a7f488443251749d91ab9c53a7808a79e inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">communicator <br/></td></tr>
+<tr class="memitem:ade641c4a5ea4f14efb54c41d7637f8c2 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade641c4a5ea4f14efb54c41d7637f8c2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#ade641c4a5ea4f14efb54c41d7637f8c2">M_addmidpoint</a></td></tr>
+<tr class="memdesc:ade641c4a5ea4f14efb54c41d7637f8c2 inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">mid point <br/></td></tr>
+<tr class="memitem:a0fbcde4843735c7528bb23e3cd57c3c2 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fbcde4843735c7528bb23e3cd57c3c2"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>M_desc</b></td></tr>
 <tr class="memitem:abeb9d16e5374b22060732831a0794de7 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abeb9d16e5374b22060732831a0794de7"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#abeb9d16e5374b22060732831a0794de7">M_dimension</a></td></tr>
 <tr class="memdesc:abeb9d16e5374b22060732831a0794de7 inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">mesh dimension <br/></td></tr>
-<tr class="memitem:a2175e8c010303f6a64be84802ad6986e inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2175e8c010303f6a64be84802ad6986e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#a2175e8c010303f6a64be84802ad6986e">M_order</a></td></tr>
-<tr class="memdesc:a2175e8c010303f6a64be84802ad6986e inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">mesh order <br/></td></tr>
+<tr class="memitem:a6045b23f35739e9ab5bdbce32090704e inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6045b23f35739e9ab5bdbce32090704e"></a>
+GMSH_FORMAT&#160;</td><td class="memItemRight" valign="bottom"><b>M_format</b></td></tr>
+<tr class="memitem:ab6f5abd5ef6028a51511f1aae8b1be5a inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6f5abd5ef6028a51511f1aae8b1be5a"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#ab6f5abd5ef6028a51511f1aae8b1be5a">M_h</a></td></tr>
+<tr class="memdesc:ab6f5abd5ef6028a51511f1aae8b1be5a inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">characteristic length <br/></td></tr>
 <tr class="memitem:ab4f8ad793cd4ea2b040a6d8412a244bb inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4f8ad793cd4ea2b040a6d8412a244bb"></a>
 std::vector&lt; std::pair&lt; double, <br class="typebreak"/>
 double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#ab4f8ad793cd4ea2b040a6d8412a244bb">M_I</a></td></tr>
 <tr class="memdesc:ab4f8ad793cd4ea2b040a6d8412a244bb inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">bounding box <br/></td></tr>
-<tr class="memitem:ab6f5abd5ef6028a51511f1aae8b1be5a inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6f5abd5ef6028a51511f1aae8b1be5a"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#ab6f5abd5ef6028a51511f1aae8b1be5a">M_h</a></td></tr>
-<tr class="memdesc:ab6f5abd5ef6028a51511f1aae8b1be5a inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">characteristic length <br/></td></tr>
-<tr class="memitem:ade641c4a5ea4f14efb54c41d7637f8c2 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade641c4a5ea4f14efb54c41d7637f8c2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#ade641c4a5ea4f14efb54c41d7637f8c2">M_addmidpoint</a></td></tr>
-<tr class="memdesc:ade641c4a5ea4f14efb54c41d7637f8c2 inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">mid point <br/></td></tr>
-<tr class="memitem:afb750c08567fcc101515cde0f9d88978 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb750c08567fcc101515cde0f9d88978"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#afb750c08567fcc101515cde0f9d88978">M_usePhysicalNames</a></td></tr>
-<tr class="memdesc:afb750c08567fcc101515cde0f9d88978 inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">add physical names to msh files <br/></td></tr>
+<tr class="memitem:a6795cdd2d4c4e1e8a284c3c3542dca53 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6795cdd2d4c4e1e8a284c3c3542dca53"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>M_name</b></td></tr>
+<tr class="memitem:a2175e8c010303f6a64be84802ad6986e inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2175e8c010303f6a64be84802ad6986e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#a2175e8c010303f6a64be84802ad6986e">M_order</a></td></tr>
+<tr class="memdesc:a2175e8c010303f6a64be84802ad6986e inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">mesh order <br/></td></tr>
+<tr class="memitem:a9d0647f04e674373d4de2b9b85df49b9 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d0647f04e674373d4de2b9b85df49b9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#a9d0647f04e674373d4de2b9b85df49b9">M_partition_file</a></td></tr>
+<tr class="memdesc:a9d0647f04e674373d4de2b9b85df49b9 inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">save msh file by partition <br/></td></tr>
 <tr class="memitem:a28c5d988593cff5861c15a9e8f34a954 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28c5d988593cff5861c15a9e8f34a954"></a>
 GMSH_PARTITIONER&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#a28c5d988593cff5861c15a9e8f34a954">M_partitioner</a></td></tr>
 <tr class="memdesc:a28c5d988593cff5861c15a9e8f34a954 inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">partitioner type <br/></td></tr>
 <tr class="memitem:acaea5228f199cc7cd1f2895d895d9031 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acaea5228f199cc7cd1f2895d895d9031"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#acaea5228f199cc7cd1f2895d895d9031">M_partitions</a></td></tr>
 <tr class="memdesc:acaea5228f199cc7cd1f2895d895d9031 inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of partitions <br/></td></tr>
-<tr class="memitem:a9d0647f04e674373d4de2b9b85df49b9 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d0647f04e674373d4de2b9b85df49b9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#a9d0647f04e674373d4de2b9b85df49b9">M_partition_file</a></td></tr>
-<tr class="memdesc:a9d0647f04e674373d4de2b9b85df49b9 inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">save msh file by partition <br/></td></tr>
-<tr class="memitem:ab1f8392622bb13be1caa9b85be65ff65 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1f8392622bb13be1caa9b85be65ff65"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#ab1f8392622bb13be1caa9b85be65ff65">M_shear</a></td></tr>
-<tr class="memdesc:ab1f8392622bb13be1caa9b85be65ff65 inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">shear <br/></td></tr>
 <tr class="memitem:a3066ede9cbaa42c21d5c6e376aaef35d inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3066ede9cbaa42c21d5c6e376aaef35d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#a3066ede9cbaa42c21d5c6e376aaef35d">M_recombine</a></td></tr>
 <tr class="memdesc:a3066ede9cbaa42c21d5c6e376aaef35d inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">recombine simplices into hypercubes <br/></td></tr>
 <tr class="memitem:af157f672fa3ef0c73809104b3ba55ab3 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af157f672fa3ef0c73809104b3ba55ab3"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#af157f672fa3ef0c73809104b3ba55ab3">M_refine_levels</a></td></tr>
 <tr class="memdesc:af157f672fa3ef0c73809104b3ba55ab3 inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of refinement levels <br/></td></tr>
+<tr class="memitem:ab1f8392622bb13be1caa9b85be65ff65 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1f8392622bb13be1caa9b85be65ff65"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#ab1f8392622bb13be1caa9b85be65ff65">M_shear</a></td></tr>
+<tr class="memdesc:ab1f8392622bb13be1caa9b85be65ff65 inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">shear <br/></td></tr>
+<tr class="memitem:a32bb72018717c1384c37b65480982760 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32bb72018717c1384c37b65480982760"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_substructuring</b></td></tr>
+<tr class="memitem:afb750c08567fcc101515cde0f9d88978 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb750c08567fcc101515cde0f9d88978"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#afb750c08567fcc101515cde0f9d88978">M_usePhysicalNames</a></td></tr>
+<tr class="memdesc:afb750c08567fcc101515cde0f9d88978 inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">add physical names to msh files <br/></td></tr>
+<tr class="memitem:af8a403cbad11385cd44a85b847d90ca8 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8a403cbad11385cd44a85b847d90ca8"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>M_version</b></td></tr>
+<tr class="memitem:a7f488443251749d91ab9c53a7808a79e inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f488443251749d91ab9c53a7808a79e"></a>
+WorldComm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#a7f488443251749d91ab9c53a7808a79e">M_worldComm</a></td></tr>
+<tr class="memdesc:a7f488443251749d91ab9c53a7808a79e inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">communicator <br/></td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="gmshhypercubedomain_8hpp_source.html">gmshhypercubedomain.hpp</a></li>
@@ -292,7 +309,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1GmshHypercubeDomain.html">GmshHypercubeDomain</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:06 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:56 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

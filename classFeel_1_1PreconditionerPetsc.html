@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -100,6 +100,7 @@ $(document).ready(function(){initNavTree('classFeel_1_1PreconditionerPetsc.html'
 <div class="header">
   <div class="summary">
 <a href="classFeel_1_1PreconditionerPetsc-members.html">List of all members</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::PreconditionerPetsc&lt; T &gt; Class Template Reference</div>  </div>
@@ -181,6 +182,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ac9887e5a647dda74a7a9c9e54951a401"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9887e5a647dda74a7a9c9e54951a401"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>setPetscFieldSplitPreconditionerType</b> (PC &amp;<a class="el" href="classFeel_1_1PreconditionerPetsc.html#af8eb28cc24617536b7826efd0b76ee6b">pc</a>, WorldComm const &amp;worldComm=Environment::worldComm(), std::string const &amp;prefix=&quot;&quot;)</td></tr>
+<tr class="memitem:af3796f70f11fe377dc9dbb7c623081dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3796f70f11fe377dc9dbb7c623081dc"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>setPetscSubpreconditionerType</b> (PC &amp;<a class="el" href="classFeel_1_1PreconditionerPetsc.html#af8eb28cc24617536b7826efd0b76ee6b">pc</a>, WorldComm const &amp;worldComm=Environment::worldComm(), std::string const &amp;prefix=&quot;&quot;)</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Mutators</div></td></tr>
 <tr class="memitem:aab7016816edfeedf59f39b28fa40324e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1PreconditionerPetsc.html#aab7016816edfeedf59f39b28fa40324e">setPetscPreconditionerType</a> (const <a class="el" href="namespaceFeel.html#affe8f1716191835c1f39a4f88c8f7299">PreconditionerType</a> &amp;<a class="el" href="classFeel_1_1Preconditioner.html">preconditioner_type</a>, const MatSolverPackageType &amp;matSolverPackage_type, PC &amp;<a class="el" href="classFeel_1_1PreconditionerPetsc.html#af8eb28cc24617536b7826efd0b76ee6b">pc</a>, WorldComm const &amp;worldComm=Environment::worldComm(), std::string const &amp;prefix=&quot;&quot;)</td></tr>
 <tr class="inherit_header pub_static_methods_classFeel_1_1Preconditioner"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classFeel_1_1Preconditioner')"><img src="closed.png" alt="-"/>&nbsp;Static Public Member Functions inherited from <a class="el" href="classFeel_1_1Preconditioner.html">Feel::Preconditioner< T ></a></td></tr>
@@ -189,8 +194,8 @@ static preconditioner_ptrtype&#160;</td><td class="memItemRight" valign="bottom"
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ade8254ba365f4d28e50fc5ae10e42cee"><td class="memItemLeft" align="right" valign="top">PC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1PreconditionerPetsc.html#ade8254ba365f4d28e50fc5ae10e42cee">M_pc</a></td></tr>
 <tr class="memitem:a29d07631013ba57bb6cf899ec6f2285c"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1PreconditionerPetsc.html#a29d07631013ba57bb6cf899ec6f2285c">M_mat</a></td></tr>
+<tr class="memitem:ade8254ba365f4d28e50fc5ae10e42cee"><td class="memItemLeft" align="right" valign="top">PC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1PreconditionerPetsc.html#ade8254ba365f4d28e50fc5ae10e42cee">M_pc</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -207,13 +212,15 @@ typedef boost::shared_ptr<br class="typebreak"/>
 typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vector_ptrtype</b></td></tr>
 <tr class="inherit_header pro_attribs_classFeel_1_1Preconditioner"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classFeel_1_1Preconditioner')"><img src="closed.png" alt="-"/>&nbsp;Protected Attributes inherited from <a class="el" href="classFeel_1_1Preconditioner.html">Feel::Preconditioner< T ></a></td></tr>
-<tr class="memitem:adac9b259564bb6bc86a0be18bcd31207 inherit pro_attribs_classFeel_1_1Preconditioner"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#adac9b259564bb6bc86a0be18bcd31207">M_name</a></td></tr>
-<tr class="memitem:a8f161a521809cf5d4325038d995a2f24 inherit pro_attribs_classFeel_1_1Preconditioner"><td class="memItemLeft" align="right" valign="top">WorldComm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#a8f161a521809cf5d4325038d995a2f24">M_worldComm</a></td></tr>
-<tr class="memitem:ac99c9dd0c7ed7dce03c79b98dbffc7ce inherit pro_attribs_classFeel_1_1Preconditioner"><td class="memItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#ac99c9dd0c7ed7dce03c79b98dbffc7ce">M_matrix</a></td></tr>
-<tr class="memitem:a23a7db331f0ba75462d7b8747fc214da inherit pro_attribs_classFeel_1_1Preconditioner"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#affe8f1716191835c1f39a4f88c8f7299">PreconditionerType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#a23a7db331f0ba75462d7b8747fc214da">M_preconditioner_type</a></td></tr>
-<tr class="memitem:afabfa4a2c0816962103c8280cb5a80eb inherit pro_attribs_classFeel_1_1Preconditioner"><td class="memItemLeft" align="right" valign="top">MatSolverPackageType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#afabfa4a2c0816962103c8280cb5a80eb">M_matSolverPackage_type</a></td></tr>
-<tr class="memitem:a9e352374d2f27317ed049192cac84380 inherit pro_attribs_classFeel_1_1Preconditioner"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a3d7a6c5948e669b187f2d4620499715a">MatrixStructure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#a9e352374d2f27317ed049192cac84380">M_prec_matrix_structure</a></td></tr>
 <tr class="memitem:a5065971a8bb9aa3702adf699f75987fc inherit pro_attribs_classFeel_1_1Preconditioner"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#a5065971a8bb9aa3702adf699f75987fc">M_is_initialized</a></td></tr>
+<tr class="memitem:a49a87613706232fcd4e34dfbea2fb0a9 inherit pro_attribs_classFeel_1_1Preconditioner"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49a87613706232fcd4e34dfbea2fb0a9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_mat_has_changed</b></td></tr>
+<tr class="memitem:ac99c9dd0c7ed7dce03c79b98dbffc7ce inherit pro_attribs_classFeel_1_1Preconditioner"><td class="memItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#ac99c9dd0c7ed7dce03c79b98dbffc7ce">M_matrix</a></td></tr>
+<tr class="memitem:afabfa4a2c0816962103c8280cb5a80eb inherit pro_attribs_classFeel_1_1Preconditioner"><td class="memItemLeft" align="right" valign="top">MatSolverPackageType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#afabfa4a2c0816962103c8280cb5a80eb">M_matSolverPackage_type</a></td></tr>
+<tr class="memitem:adac9b259564bb6bc86a0be18bcd31207 inherit pro_attribs_classFeel_1_1Preconditioner"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#adac9b259564bb6bc86a0be18bcd31207">M_name</a></td></tr>
+<tr class="memitem:a9e352374d2f27317ed049192cac84380 inherit pro_attribs_classFeel_1_1Preconditioner"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a3d7a6c5948e669b187f2d4620499715a">MatrixStructure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#a9e352374d2f27317ed049192cac84380">M_prec_matrix_structure</a></td></tr>
+<tr class="memitem:a23a7db331f0ba75462d7b8747fc214da inherit pro_attribs_classFeel_1_1Preconditioner"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#affe8f1716191835c1f39a4f88c8f7299">PreconditionerType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#a23a7db331f0ba75462d7b8747fc214da">M_preconditioner_type</a></td></tr>
+<tr class="memitem:a8f161a521809cf5d4325038d995a2f24 inherit pro_attribs_classFeel_1_1Preconditioner"><td class="memItemLeft" align="right" valign="top">WorldComm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#a8f161a521809cf5d4325038d995a2f24">M_worldComm</a></td></tr>
 </table>
 <h2>Member Function Documentation</h2>
 <a class="anchor" id="a9ce793ac53cd2080f4e3e1ce7920d5b9"></a>
@@ -435,7 +442,7 @@ template&lt;typename T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1PreconditionerPetsc.html">PreconditionerPetsc</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:06 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:56 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

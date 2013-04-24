@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -130,7 +130,12 @@ class Feel::ExporterGnuplot&lt; MeshType &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a5c3132ff5e3f49c42169ac996516b28b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1ExporterGnuplot.html#a5c3132ff5e3f49c42169ac996516b28b">PlottingProperties</a> </td></tr>
+<tr class="memitem:a5c3132ff5e3f49c42169ac996516b28b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1ExporterGnuplot.html#a5c3132ff5e3f49c42169ac996516b28b">PlottingProperties</a> { <br/>
+&#160;&#160;<b>GRID_ON</b> =  1, 
+<br/>
+&#160;&#160;<b>PNG_OUTPUT</b> =  2
+<br/>
+ }</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Typedefs</div></td></tr>
 <tr class="memitem:a57142d2315eca4f9e1803bb5f239f210"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57142d2315eca4f9e1803bb5f239f210"></a>
 typedef MeshType&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_type</b></td></tr>
@@ -139,7 +144,7 @@ typedef <a class="el" href="classFeel_1_1Exporter.html">Exporter</a>&lt; MeshTyp
 <tr class="memitem:a147e4c6db931c2c1c8269e3adb4cf577"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a147e4c6db931c2c1c8269e3adb4cf577"></a>
 typedef mesh_type::value_type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
 <tr class="memitem:a6b9e4f918cda6fc97548738fa85e2200"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b9e4f918cda6fc97548738fa85e2200"></a>
-typedef super::timeset_type&#160;</td><td class="memItemRight" valign="bottom"><b>timeset_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1TimeSet.html">super::timeset_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>timeset_type</b></td></tr>
 <tr class="memitem:a19b01e0081bbe066db1045e017c2ae79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19b01e0081bbe066db1045e017c2ae79"></a>
 typedef super::timeset_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>timeset_ptrtype</b></td></tr>
 <tr class="memitem:ad2cf4680c76eb24adacc9d8539a1b79d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2cf4680c76eb24adacc9d8539a1b79d"></a>
@@ -156,14 +161,14 @@ typedef <a class="el" href="classFeel_1_1VisitorBase.html">VisitorBase</a>&#160;
 <tr class="memitem:aaf42960868220531e9041e402793ac7f inherit pub_types_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf42960868220531e9041e402793ac7f"></a>
 typedef <a class="el" href="classFeel_1_1Visitor.html">Visitor</a>&lt; MeshType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>super2</b></td></tr>
 <tr class="memitem:afbfe9c419c6b0c333033dff1a132f838 inherit pub_types_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afbfe9c419c6b0c333033dff1a132f838"></a>
-typedef TimeSet&lt; MeshType, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>timeset_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1TimeSet.html">TimeSet</a>&lt; MeshType, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>timeset_type</b></td></tr>
 <tr class="memitem:a0f5cf43c3a6c240933daffec915f44ae inherit pub_types_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f5cf43c3a6c240933daffec915f44ae"></a>
 typedef timeset_type::mesh_type&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_type</b></td></tr>
 <tr class="memitem:a414b9e08b415b9a512dc118e3b69a95e inherit pub_types_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a414b9e08b415b9a512dc118e3b69a95e"></a>
 typedef timeset_type::mesh_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_ptrtype</b></td></tr>
 <tr class="memitem:a3d4c1a833dc8cfbda20ca2173ab95014 inherit pub_types_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d4c1a833dc8cfbda20ca2173ab95014"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
-&lt; timeset_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>timeset_ptrtype</b></td></tr>
+&lt; <a class="el" href="classFeel_1_1TimeSet.html">timeset_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>timeset_ptrtype</b></td></tr>
 <tr class="memitem:a0ff53217257df86af93cb03c8a530048 inherit pub_types_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ff53217257df86af93cb03c8a530048"></a>
 typedef std::vector<br class="typebreak"/>
 &lt; timeset_ptrtype &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>timeset_set_type</b></td></tr>
@@ -173,7 +178,7 @@ typedef timeset_set_type::iterator&#160;</td><td class="memItemRight" valign="bo
 typedef <br class="typebreak"/>
 timeset_set_type::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>timeset_const_iterator</b></td></tr>
 <tr class="memitem:a15b578790cdcfd92fb63a18867286102 inherit pub_types_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15b578790cdcfd92fb63a18867286102"></a>
-typedef timeset_type::step_type&#160;</td><td class="memItemRight" valign="bottom"><b>step_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1TimeSet_1_1Step.html">timeset_type::step_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>step_type</b></td></tr>
 <tr class="memitem:acac146eecfc6d48a576c13815053fca9 inherit pub_types_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acac146eecfc6d48a576c13815053fca9"></a>
 typedef timeset_type::step_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>step_ptrtype</b></td></tr>
 <tr class="inherit_header pub_types_classFeel_1_1Visitor"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1Visitor')"><img src="closed.png" alt="-"/>&nbsp;Public Types inherited from <a class="el" href="classFeel_1_1Visitor.html">Feel::Visitor< MeshType ></a></td></tr>
@@ -264,6 +269,27 @@ Additional Inherited Members</h2></td></tr>
 &lt; <a class="el" href="classFeel_1_1Exporter.html">Exporter</a>&lt; MeshType, 1 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Exporter.html#ab5184fd78b9c90b74127ab2027808996">New</a> (std::string const &amp;exportername, std::string prefix=Environment::about().appName(), WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
 <tr class="memitem:aefa2b4a6d5fb2e506ce26fde32d538ed inherit pub_static_methods_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top">static boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Exporter.html">Exporter</a>&lt; MeshType, 1 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Exporter.html#aefa2b4a6d5fb2e506ce26fde32d538ed">New</a> (po::variables_map const &amp;vm=Environment::vm(), std::string prefix=Environment::about().appName(), WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
+<tr class="inherit_header pro_attribs_classFeel_1_1Exporter"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classFeel_1_1Exporter')"><img src="closed.png" alt="-"/>&nbsp;Protected Attributes inherited from <a class="el" href="classFeel_1_1Exporter.html">Feel::Exporter< MeshType ></a></td></tr>
+<tr class="memitem:a36cebfcf4a10c8143e848a532810ba7d inherit pro_attribs_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36cebfcf4a10c8143e848a532810ba7d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>M_cptOfSave</b></td></tr>
+<tr class="memitem:accd0ce956edf10823833c56687b0c845 inherit pro_attribs_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="accd0ce956edf10823833c56687b0c845"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_do_export</b></td></tr>
+<tr class="memitem:a080d0b0776a883d84b5841ba11540d9c inherit pro_attribs_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a080d0b0776a883d84b5841ba11540d9c"></a>
+ExporterGeometry&#160;</td><td class="memItemRight" valign="bottom"><b>M_ex_geometry</b></td></tr>
+<tr class="memitem:a45495972bc1e3da0346f51758f684e1e inherit pro_attribs_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45495972bc1e3da0346f51758f684e1e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>M_freq</b></td></tr>
+<tr class="memitem:a22342b6d8673281b3e6fd825e16ad657 inherit pro_attribs_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22342b6d8673281b3e6fd825e16ad657"></a>
+file_type&#160;</td><td class="memItemRight" valign="bottom"><b>M_ft</b></td></tr>
+<tr class="memitem:ab1a641e1a1a0c93bbeb9b4d54d39e7ed inherit pro_attribs_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1a641e1a1a0c93bbeb9b4d54d39e7ed"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>M_path</b></td></tr>
+<tr class="memitem:ae05cd1241e4556be718248a5da12bf96 inherit pro_attribs_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae05cd1241e4556be718248a5da12bf96"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>M_prefix</b></td></tr>
+<tr class="memitem:a3489fb2b439ff03a03a1504053ed1846 inherit pro_attribs_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3489fb2b439ff03a03a1504053ed1846"></a>
+timeset_set_type&#160;</td><td class="memItemRight" valign="bottom"><b>M_ts_set</b></td></tr>
+<tr class="memitem:a48951e826e924cd6ffffeff181eaa0dc inherit pro_attribs_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48951e826e924cd6ffffeff181eaa0dc"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>M_type</b></td></tr>
+<tr class="memitem:a7f312c1e89f4727daa9d8fcde5d4de16 inherit pro_attribs_classFeel_1_1Exporter"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f312c1e89f4727daa9d8fcde5d4de16"></a>
+WorldComm&#160;</td><td class="memItemRight" valign="bottom"><b>M_worldComm</b></td></tr>
 </table>
 <h2>Member Enumeration Documentation</h2>
 <a class="anchor" id="a5c3132ff5e3f49c42169ac996516b28b"></a>
@@ -507,7 +533,7 @@ template&lt;typename MeshType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1ExporterGnuplot.html">ExporterGnuplot</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:06 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:55 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -100,7 +100,8 @@ $(document).ready(function(){initNavTree('typetraits_8hpp.html','');});
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">typetraits.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -131,8 +132,66 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a07b2cdc63fdf48e9ff38d4bb772c1aed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="typetraits_8hpp.html#a07b2cdc63fdf48e9ff38d4bb772c1aed">FEELPP_UNARY_FUNCS_OP</a>(_, TF)&#160;&#160;&#160;FEELPP_UNARY_FUNCS_OP_CODE TF      \</td></tr>
 <tr class="memitem:a3712b09a711779005cbe94444a3980a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="typetraits_8hpp.html#a3712b09a711779005cbe94444a3980a1">FEELPP_BINARY_FUNCS_OP</a>(_, TF)&#160;&#160;&#160;FEELPP_BINARY_FUNCS_OP_CODE TF      \</td></tr>
+<tr class="memitem:afd932d8d495606b16ec980d74ff3846f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_BINARY_FUNCS_OP_CODE</b>(T, F)</td></tr>
+<tr class="memitem:ae42b822f179a742e5c9f2b5d978c762a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae42b822f179a742e5c9f2b5d978c762a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_FUNC_CALL</b>(T)&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(3, 1 , T)</td></tr>
+<tr class="memitem:ab0270ec79c8cd21221fd86b33f59908e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0270ec79c8cd21221fd86b33f59908e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_FUNC_NAME</b>(T)&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(3, 0 , T)</td></tr>
+<tr class="memitem:afb237f9480406857323070030e0716cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb237f9480406857323070030e0716cc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_FUNC_NONS</b>(T)&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(3, 2 , T)</td></tr>
+<tr class="memitem:adcfb8a44d1765d72feae0a7ac8205723"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_GLOBAL_BINARY_FUNCS</b></td></tr>
+<tr class="memitem:a70b4c4b3907d5980ae447f14e65ec131"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_GLOBAL_FUNCS</b></td></tr>
+<tr class="memitem:adc7db60546f83dd00cebefb31adbd632"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_MP_BINARY_FUNCS</b></td></tr>
+<tr class="memitem:a6405763c16250470b912134d0e109b92"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_MP_FUNCS</b></td></tr>
+<tr class="memitem:aa3b6fbd67a720683ee06254ab99fed60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3b6fbd67a720683ee06254ab99fed60"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_NUMERICAL_NTYPES</b>&#160;&#160;&#160;BOOST_PP_ADD(4, BOOST_PP_ADD( QD_NTYPES, MPFR_NTYPES ) )</td></tr>
+<tr class="memitem:a7903c007e90af3bdac437daedbc682dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7903c007e90af3bdac437daedbc682dd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_PRED_FUNC</b>(d, data, elem)&#160;&#160;&#160;BOOST_PP_EQUAL(FEELPP_TRAITS_FUNC_TYPE(elem), data)</td></tr>
+<tr class="memitem:a0614081743bf32742b328dd2204c6530"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_STD_BINARY_FUNCS</b></td></tr>
+<tr class="memitem:aa368a9c4201b965e3fea36924ce83a81"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_STD_FUNCS</b></td></tr>
+<tr class="memitem:abf819ec7086f5ca3e02125790fe7ed4d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_STDCOMPLEX_FUNCS</b></td></tr>
+<tr class="memitem:aa5c968a5e786951cde0132672b406428"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5c968a5e786951cde0132672b406428"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_TRAITS_EPSILON</b>(T)&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(7, 5 , T)</td></tr>
+<tr class="memitem:a0e403e8da0b72f217d6af2fa3b4bd64c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_TRAITS_FUNC_CONJ</b>(T, t)</td></tr>
+<tr class="memitem:a761a369f73a07ad1d92194e048bccd2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_TRAITS_FUNC_IMAG</b>(T, t)</td></tr>
+<tr class="memitem:aeba850b69a25761cc477d1dddd47e740"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_TRAITS_FUNC_REAL</b>(T, t)</td></tr>
+<tr class="memitem:a7cfa626b440a6e7862da90997c1ca83d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cfa626b440a6e7862da90997c1ca83d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_TRAITS_FUNC_TYPE</b>(T)&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(7, 6 , T)</td></tr>
+<tr class="memitem:a49953c24f8ed54f266cd2d7128db6e1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49953c24f8ed54f266cd2d7128db6e1e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_TRAITS_IS_COMPLEX</b>(T)&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(7, 3 , T)</td></tr>
+<tr class="memitem:ad26bc6e1bbc94150017c941ce12370bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad26bc6e1bbc94150017c941ce12370bd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_TRAITS_IS_FLOATING</b>(T)&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(7, 2 , T)</td></tr>
+<tr class="memitem:a2b3fae9718e587ee99d7db45b8de5379"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b3fae9718e587ee99d7db45b8de5379"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_TRAITS_OP</b>(_, T)&#160;&#160;&#160;FEELPP_TRAITS_OP_CODE T   \</td></tr>
+<tr class="memitem:ae7b219f0faf98971cd7ecbb2269767d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7b219f0faf98971cd7ecbb2269767d5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_TRAITS_OP_CODE</b>(T)</td></tr>
+<tr class="memitem:ae5b321a6268f3c7691a095059df81a1a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5b321a6268f3c7691a095059df81a1a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_TRAITS_RANK</b>(T)&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(7, 4 , T)</td></tr>
+<tr class="memitem:a0d136a7f1af2c7c64d91b8104d845093"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d136a7f1af2c7c64d91b8104d845093"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_TRAITS_REAL_TYPE</b>(T)&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(7, 1 , T)</td></tr>
+<tr class="memitem:a90edb6262dcdff238a28fa0ab0b6c1ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90edb6262dcdff238a28fa0ab0b6c1ab"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_TRAITS_TYPE</b>(T)&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(7, 0 , T)</td></tr>
+<tr class="memitem:a23c3ca9397b9b047bcf0c4d8f6dfdd8b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_TRAITS_TYPES</b></td></tr>
+<tr class="memitem:a07b2cdc63fdf48e9ff38d4bb772c1aed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="typetraits_8hpp.html#a07b2cdc63fdf48e9ff38d4bb772c1aed">FEELPP_UNARY_FUNCS_OP</a>(_, TF)&#160;&#160;&#160;FEELPP_UNARY_FUNCS_OP_CODE TF      \</td></tr>
+<tr class="memitem:a98b195fe5a30af14c0fe862f7e2fef22"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_UNARY_FUNCS_OP_CODE</b>(T, F)</td></tr>
+<tr class="memitem:aeb1e7ee65e859d820461ccb8fb29d815"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb1e7ee65e859d820461ccb8fb29d815"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MPFR_MP_TYPE</b></td></tr>
+<tr class="memitem:a801570906b55d66ff0e44f649063b522"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a801570906b55d66ff0e44f649063b522"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MPFR_NTYPES</b>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:a61959551413d370bed39bc1908686acf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61959551413d370bed39bc1908686acf"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>QD_DD_TYPE</b></td></tr>
+<tr class="memitem:ac5bdb67911f3ca889b53ec64ee364b87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5bdb67911f3ca889b53ec64ee364b87"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>QD_NTYPES</b>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:abced04d0f1df4c95976cd3de6067e61a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abced04d0f1df4c95976cd3de6067e61a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>QD_QD_TYPE</b></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a559102856463db18fe24e9d6241533ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a559102856463db18fe24e9d6241533ca"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::factor_from_eps</b> = 50</td></tr>
+<tr class="memitem:a97f4cc26df35977a346e0c745f1e99e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97f4cc26df35977a346e0c745f1e99e8"></a>
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::factor_from_eps_fl</b> = 50</td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme <a href="#" onclick="location.href='mai'+'lto:'+'chr'+'is'+'top'+'he'+'.pr'+'ud'+'hom'+'me'+'@fe'+'el'+'pp.'+'or'+'g'; return false;">chris<span style="display: none;">.nosp@m.</span>toph<span style="display: none;">.nosp@m.</span>e.pru<span style="display: none;">.nosp@m.</span>dhom<span style="display: none;">.nosp@m.</span>me@fe<span style="display: none;">.nosp@m.</span>elpp<span style="display: none;">.nosp@m.</span>.org</a> </dd></dl>
@@ -165,6 +224,337 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="afd932d8d495606b16ec980d74ff3846f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FEELPP_BINARY_FUNCS_OP_CODE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">F&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">template&lt;typename Type2&gt;                                                                       \</div>
+<div class="line">  inline                                                                                         \</div>
+<div class="line">  FEELPP_TRAITS_TYPE( T ) FEELPP_FUNC_NAME( F )( FEELPP_TRAITS_TYPE( T ) const&amp; x, Type2 const&amp; y ) \</div>
+<div class="line">  {                                                                                              \</div>
+<div class="line">      return FEELPP_FUNC_CALL( F )( x, y );                                                       \</div>
+<div class="line">  }                                                                                              \</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="adcfb8a44d1765d72feae0a7ac8205723"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FEELPP_GLOBAL_BINARY_FUNCS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">BOOST_PP_TUPLE_TO_LIST(                                        \</div>
+<div class="line">    1,                                                         \</div>
+<div class="line">    (                                                          \</div>
+<div class="line">        (pow       , ::npwr, npwr  )                           \</div>
+<div class="line">     )                                                         \</div>
+<div class="line">    )                                                          \</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a70b4c4b3907d5980ae447f14e65ec131"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FEELPP_GLOBAL_FUNCS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">BOOST_PP_TUPLE_TO_LIST(                                        \</div>
+<div class="line">    18,                                                        \</div>
+<div class="line">    (                                                          \</div>
+<div class="line">        (abs       , ::abs  , abs  ),   <span class="comment">/* absolute value*/</span>           \</div>
+<div class="line">        (sqrt      , ::sqrt , sqrt ),  <span class="comment">/* square root */</span>              \</div>
+<div class="line">        (norm1     , ::abs  , abs  ),   <span class="comment">/* norm1    */</span>                \</div>
+<div class="line">        (norm2     , ::abs  , abs  ),   <span class="comment">/* norm2    */</span>                \</div>
+<div class="line">        (norm_inf  , ::abs  , abs  ),   <span class="comment">/* norm_inf */</span>                \</div>
+<div class="line">        (cos       , ::cos  , cos  ),                                 \</div>
+<div class="line">        (sin       , ::sin  , sin  ),                                 \</div>
+<div class="line">        (tan       , ::tan  , tan  ),                                 \</div>
+<div class="line">        (acos      , ::acos , acos ),                                 \</div>
+<div class="line">        (asin      , ::asin , asin ),                                 \</div>
+<div class="line">        (atan      , ::atan , atan ),                                 \</div>
+<div class="line">        (cosh      , ::cosh , cosh ),                                 \</div>
+<div class="line">        (sinh      , ::sinh , sinh ),                                 \</div>
+<div class="line">        (tanh      , ::tanh , tanh ),                                 \</div>
+<div class="line">        (exp       , ::exp  , exp  ),                                 \</div>
+<div class="line">        (log       , ::log  , log  ),                                 \</div>
+<div class="line">        (ceil      , ::ceil , ceil ),                                 \</div>
+<div class="line">        (floor     , ::floor, floor)                                  \</div>
+<div class="line">     )                                                         \</div>
+<div class="line">    )                                                          \</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="adc7db60546f83dd00cebefb31adbd632"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FEELPP_MP_BINARY_FUNCS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">BOOST_PP_TUPLE_TO_LIST(                                        \</div>
+<div class="line">    1,                                                         \</div>
+<div class="line">    (                                                          \</div>
+<div class="line">        (pow       , mpfr::pow, pow  )                           \</div>
+<div class="line">     )                                                         \</div>
+<div class="line">    )                                                          \</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a6405763c16250470b912134d0e109b92"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FEELPP_MP_FUNCS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">BOOST_PP_TUPLE_TO_LIST(                                        \</div>
+<div class="line">    18,                                                        \</div>
+<div class="line">    (                                                          \</div>
+<div class="line">        (abs       , mpfr::abs  , abs  ),   <span class="comment">/* absolute value*/</span>           \</div>
+<div class="line">        (sqrt      , mpfr::sqrt , sqrt ),  <span class="comment">/* square root */</span>              \</div>
+<div class="line">        (norm1     , mpfr::abs  , abs  ),   <span class="comment">/* norm1    */</span>                \</div>
+<div class="line">        (norm2     , mpfr::abs  , abs  ),   <span class="comment">/* norm2    */</span>                \</div>
+<div class="line">        (norm_inf  , mpfr::abs  , abs  ),   <span class="comment">/* norm_inf */</span>                \</div>
+<div class="line">        (cos       , mpfr::cos  , cos  ),                                 \</div>
+<div class="line">        (sin       , mpfr::sin  , sin  ),                                 \</div>
+<div class="line">        (tan       , mpfr::tan  , tan  ),                                 \</div>
+<div class="line">        (acos      , mpfr::acos , acos ),                                 \</div>
+<div class="line">        (asin      , mpfr::asin , asin ),                                 \</div>
+<div class="line">        (atan      , mpfr::atan , atan ),                                 \</div>
+<div class="line">        (cosh      , mpfr::cosh , cosh ),                                 \</div>
+<div class="line">        (sinh      , mpfr::sinh , sinh ),                                 \</div>
+<div class="line">        (tanh      , mpfr::tanh , tanh ),                                 \</div>
+<div class="line">        (exp       , mpfr::exp  , exp  ),                                 \</div>
+<div class="line">        (log       , mpfr::log  , log  ),                                 \</div>
+<div class="line">        (ceil      , mpfr::ceil , ceil ),                                 \</div>
+<div class="line">        (floor     , mpfr::floor, floor)                                  \</div>
+<div class="line">     )                                                         \</div>
+<div class="line">    )                                                          \</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a0614081743bf32742b328dd2204c6530"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FEELPP_STD_BINARY_FUNCS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">BOOST_PP_TUPLE_TO_LIST(                                        \</div>
+<div class="line">    1,                                                         \</div>
+<div class="line">    (                                                          \</div>
+<div class="line">        (pow       , std::pow, pow  )                          \</div>
+<div class="line">     )                                                         \</div>
+<div class="line">    )                                                          \</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aa368a9c4201b965e3fea36924ce83a81"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FEELPP_STD_FUNCS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">BOOST_PP_TUPLE_TO_LIST(                                        \</div>
+<div class="line">    19,                                                        \</div>
+<div class="line">    (                                                          \</div>
+<div class="line">        (abs       , std::abs  , abs  ),   <span class="comment">/* absolute value*/</span>        \</div>
+<div class="line">        (sqrt      , std::sqrt , sqrt ),  <span class="comment">/* square root */</span>           \</div>
+<div class="line">        (norm1     , std::abs  , abs  ),   <span class="comment">/* norm1    */</span>             \</div>
+<div class="line">        (norm2     , std::abs  , abs  ),   <span class="comment">/* norm2    */</span>             \</div>
+<div class="line">        (norm_inf  , std::abs  , abs  ),   <span class="comment">/* norm_inf */</span>             \</div>
+<div class="line">        (cos       , std::cos  , cos  ),                              \</div>
+<div class="line">        (sin       , std::sin  , sin  ),                              \</div>
+<div class="line">        (tan       , std::tan  , tan  ),                              \</div>
+<div class="line">        (acos      , std::acos , acos ),                              \</div>
+<div class="line">        (asin      , std::asin , asin ),                              \</div>
+<div class="line">        (atan      , std::atan , atan ),                              \</div>
+<div class="line">        (cosh      , std::cosh , cosh ),                              \</div>
+<div class="line">        (sinh      , std::sinh , sinh ),                              \</div>
+<div class="line">        (tanh      , std::tanh , tanh ),                              \</div>
+<div class="line">        (exp       , std::exp  , exp  ),                              \</div>
+<div class="line">        (log       , std::log  , log  ),                              \</div>
+<div class="line">        (log10     , std::log10, log10),                              \</div>
+<div class="line">        (ceil      , std::ceil , ceil ),                              \</div>
+<div class="line">        (floor     , std::floor, floor)                               \</div>
+<div class="line">     )                                                         \</div>
+<div class="line">    )                                                          \</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="abf819ec7086f5ca3e02125790fe7ed4d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FEELPP_STDCOMPLEX_FUNCS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">BOOST_PP_TUPLE_TO_LIST(                                    \</div>
+<div class="line">                           11,                                        \</div>
+<div class="line">                           (                                            \</div>
+<div class="line">                            (abs       , std::abs  , abs  ),   <span class="comment">/* absolute value*/</span> \</div>
+<div class="line">                            (sqrt      , std::sqrt , sqrt ),  <span class="comment">/* square root */</span> \</div>
+<div class="line">                            (norm1     , std::abs  , abs  ),   <span class="comment">/* norm1    */</span> \</div>
+<div class="line">                            (norm2     , std::abs  , abs  ),   <span class="comment">/* norm2    */</span> \</div>
+<div class="line">                            (norm_inf  , std::abs  , abs  ),   <span class="comment">/* norm_inf */</span> \</div>
+<div class="line">                            (cos       , std::cos  , cos  ),            \</div>
+<div class="line">                            (sin       , std::sin  , sin  ),            \</div>
+<div class="line">                            (tan       , std::tan  , tan  ),            \</div>
+<div class="line">                            (exp       , std::exp  , exp  ),            \</div>
+<div class="line">                            (log       , std::log  , log  ),            \</div>
+<div class="line">                            (log10     , std::log10, log10 )            \</div>
+<div class="line">                                                                        ) \</div>
+<div class="line">                                                               )        \</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a0e403e8da0b72f217d6af2fa3b4bd64c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FEELPP_TRAITS_FUNC_CONJ</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">BOOST_PP_IF( FEELPP_TRAITS_IS_COMPLEX(T),             \</div>
+<div class="line">               BOOST_PP_IDENTITY( std::conj( t ) ),    \</div>
+<div class="line">               BOOST_PP_IDENTITY( t ) )()              \</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a761a369f73a07ad1d92194e048bccd2b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FEELPP_TRAITS_FUNC_IMAG</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">BOOST_PP_IF( FEELPP_TRAITS_IS_COMPLEX(T),                                 \</div>
+<div class="line">               BOOST_PP_IDENTITY( t.imag() ),                              \</div>
+<div class="line">               BOOST_PP_IDENTITY( FEELPP_TRAITS_REAL_TYPE(T)( 0.0 ) ) )()   \</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aeba850b69a25761cc477d1dddd47e740"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FEELPP_TRAITS_FUNC_REAL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">BOOST_PP_IF( FEELPP_TRAITS_IS_COMPLEX(T),     \</div>
+<div class="line">               t.real(),  \</div>
+<div class="line">               t )      \</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a23c3ca9397b9b047bcf0c4d8f6dfdd8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FEELPP_TRAITS_TYPES</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">BOOST_PP_TUPLE_TO_LIST( \</div>
+<div class="line">      FEELPP_NUMERICAL_NTYPES, \</div>
+<div class="line">      ( \</div>
+<div class="line">       QD_DD_TYPE                               \</div>
+<div class="line">       QD_QD_TYPE                               \</div>
+<div class="line">       MPFR_MP_TYPE                                                     \</div>
+<div class="line">       ( <span class="keywordtype">float</span>      , <span class="keywordtype">float</span>      , 1, 0, 7 , std::numeric_limits&lt;float&gt;::epsilon()*factor_from_eps_fl , 0 ), \</div>
+<div class="line">       ( <span class="keywordtype">double</span>     , <span class="keywordtype">double</span>     , 1, 0, 8 , std::numeric_limits&lt;double&gt;::epsilon()*factor_from_eps, 0 ), \</div>
+<div class="line">       ( std::complex&lt;float&gt;, <span class="keywordtype">float</span>, 1, 1, 10, std::numeric_limits&lt;float&gt;::epsilon()*factor_from_eps_fl , 3 ), \</div>
+<div class="line">       ( std::complex&lt;double&gt;, <span class="keywordtype">double</span>, 1, 1, 11, std::numeric_limits&lt;double&gt;::epsilon()*factor_from_eps , 3 ) \</div>
+<div class="line">      ) \</div>
+<div class="line">   ) \</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a class="anchor" id="a07b2cdc63fdf48e9ff38d4bb772c1aed"></a>
 <div class="memitem">
 <div class="memproto">
@@ -192,13 +582,44 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a98b195fe5a30af14c0fe862f7e2fef22"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FEELPP_UNARY_FUNCS_OP_CODE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">F&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">inline                                                                            \</div>
+<div class="line">  FEELPP_TRAITS_TYPE( T ) FEELPP_FUNC_NAME( F )( FEELPP_TRAITS_TYPE( T ) const&amp; t )    \</div>
+<div class="line">  {                                                                                 \</div>
+<div class="line">      return FEELPP_FUNC_CALL( F )( t );                                             \</div>
+<div class="line">  }                                                                                 \</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_b98c83a91512c3be55dc71902560b537.html">feelcore</a></li><li class="navelem"><a class="el" href="typetraits_8hpp.html">typetraits.hpp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:05 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_aee4c96ffc3ed41ef7d25ec330d2b2e2.html">feelcore</a></li><li class="navelem"><a class="el" href="typetraits_8hpp.html">typetraits.hpp</a></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:54 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

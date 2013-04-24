@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -111,7 +111,19 @@ $(document).ready(function(){initNavTree('classFeel_1_1DataMap.html','');});
 <div class="textblock"><p>data layout in a multi-processor environnement </p>
 <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd></dd></dl>
-</div><table class="memberdecls">
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Feel::DataMap:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+ <div class="center">
+  <img src="classFeel_1_1DataMap.png" usemap="#Feel::DataMap_map" alt=""/>
+  <map id="Feel::DataMap_map" name="Feel::DataMap_map">
+<area href="classFeel_1_1DofComposite.html" title="Compositing of degree of freedom table." alt="Feel::DofComposite" shape="rect" coords="0,56,327,80"/>
+<area href="classFeel_1_1DofTable.html" title="Local-to-global Degree of Freedom table." alt="Feel::DofTable&lt; MeshType, FEType, PeriodicityType &gt;" shape="rect" coords="337,56,664,80"/>
+</map>
+ </div></div>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors, destructor</div></td></tr>
@@ -243,15 +255,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>close</b> () const </
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a28332572f1180b641b06fcf85bba6fbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#a28332572f1180b641b06fcf85bba6fbe">_M_n_dofs</a></td></tr>
-<tr class="memitem:abf72cd2fd8a2d6302b816f5ff15d6f84"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#abf72cd2fd8a2d6302b816f5ff15d6f84">_M_n_localWithoutGhost_df</a></td></tr>
-<tr class="memitem:ac41b4c1bb2c71bd4771421fa83947f7c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#ac41b4c1bb2c71bd4771421fa83947f7c">_M_n_localWithGhost_df</a></td></tr>
 <tr class="memitem:abd1d034c904a5391b9eceb7fab6b41a1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#abd1d034c904a5391b9eceb7fab6b41a1">_M_first_df</a></td></tr>
-<tr class="memitem:a7f7b69ea53256e1c2042104be211b4ff"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#a7f7b69ea53256e1c2042104be211b4ff">_M_last_df</a></td></tr>
 <tr class="memitem:a243e2fd1627bf4a871446b591aa2d7e1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#a243e2fd1627bf4a871446b591aa2d7e1">_M_first_df_globalcluster</a></td></tr>
+<tr class="memitem:a7f7b69ea53256e1c2042104be211b4ff"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#a7f7b69ea53256e1c2042104be211b4ff">_M_last_df</a></td></tr>
 <tr class="memitem:aefdbcb0fd2c9a5e56746cdb76b83c7d9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#aefdbcb0fd2c9a5e56746cdb76b83c7d9">_M_last_df_globalcluster</a></td></tr>
-<tr class="memitem:adefa1c803646c359e1c8b946a4843f17"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#adefa1c803646c359e1c8b946a4843f17">M_mapGlobalProcessToGlobalCluster</a></td></tr>
+<tr class="memitem:a28332572f1180b641b06fcf85bba6fbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#a28332572f1180b641b06fcf85bba6fbe">_M_n_dofs</a></td></tr>
+<tr class="memitem:ac41b4c1bb2c71bd4771421fa83947f7c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#ac41b4c1bb2c71bd4771421fa83947f7c">_M_n_localWithGhost_df</a></td></tr>
+<tr class="memitem:abf72cd2fd8a2d6302b816f5ff15d6f84"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#abf72cd2fd8a2d6302b816f5ff15d6f84">_M_n_localWithoutGhost_df</a></td></tr>
+<tr class="memitem:ad2e8906097e7b5c9ed90eacdb1741815"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2e8906097e7b5c9ed90eacdb1741815"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_closed</b></td></tr>
 <tr class="memitem:ae47f135be738b55b56111cbd4b6fbf1e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#ae47f135be738b55b56111cbd4b6fbf1e">M_mapGlobalClusterToGlobalProcess</a></td></tr>
+<tr class="memitem:adefa1c803646c359e1c8b946a4843f17"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#adefa1c803646c359e1c8b946a4843f17">M_mapGlobalProcessToGlobalCluster</a></td></tr>
+<tr class="memitem:a469674ec8135b3fe66e8fea866941369"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a469674ec8135b3fe66e8fea866941369"></a>
+std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>M_myglobalelements</b></td></tr>
 <tr class="memitem:aa7c5cb221fa4bb81426cfae5936c2083"><td class="memItemLeft" align="right" valign="top">WorldComm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#aa7c5cb221fa4bb81426cfae5936c2083">M_worldComm</a></td></tr>
 </table>
 <h2>Constructor &amp; Destructor Documentation</h2>
@@ -951,7 +967,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1DataMap.html">DataMap</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:06 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:55 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

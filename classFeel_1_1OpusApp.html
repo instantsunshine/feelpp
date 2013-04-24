@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -128,13 +128,42 @@ class Feel::OpusApp&lt; ModelType, RM, Model &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a29a002804f75033d54ae77090d24d929"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29a002804f75033d54ae77090d24d929"></a>
-typedef ModelType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1OpusApp.html#a29a002804f75033d54ae77090d24d929">model_type</a></td></tr>
-<tr class="memdesc:a29a002804f75033d54ae77090d24d929"><td class="mdescLeft">&#160;</td><td class="mdescRight">model type <br/></td></tr>
+<tr class="memitem:a7411c7b3948761ee5af2f0339e617166"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7411c7b3948761ee5af2f0339e617166"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; crb_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>crb_ptrtype</b></td></tr>
+<tr class="memitem:ae5307bb2df6d5fb6325429f4c26327de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5307bb2df6d5fb6325429f4c26327de"></a>
+typedef RM&lt; crbmodel_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>crb_type</b></td></tr>
+<tr class="memitem:a851f192fcfa005a435692aa78d5aacd9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a851f192fcfa005a435692aa78d5aacd9"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; crbmodel_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>crbmodel_ptrtype</b></td></tr>
+<tr class="memitem:acb690a05b1d65c244f1fb834ea181596"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb690a05b1d65c244f1fb834ea181596"></a>
+typedef Model&lt; ModelType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>crbmodel_type</b></td></tr>
+<tr class="memitem:a0c94f4110bdae1e891ea760edbaecbd3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c94f4110bdae1e891ea760edbaecbd3"></a>
+typedef <a class="el" href="classFeel_1_1CRBModel.html">CRBModel</a>&lt; ModelType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>crbmodelbilinear_type</b></td></tr>
+<tr class="memitem:a5af6bc3c763dc53e89ce6e168d7bfeb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5af6bc3c763dc53e89ce6e168d7bfeb8"></a>
+typedef model_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
+<tr class="memitem:a5b0a06f978b501c6950dfa226fbf1315"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b0a06f978b501c6950dfa226fbf1315"></a>
+typedef <br class="typebreak"/>
+model_type::functionspace_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>functionspace_ptrtype</b></td></tr>
 <tr class="memitem:a4299cbb57bf2ec863bbe1199df72901a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4299cbb57bf2ec863bbe1199df72901a"></a>
 typedef <br class="typebreak"/>
 model_type::functionspace_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1OpusApp.html#a4299cbb57bf2ec863bbe1199df72901a">functionspace_type</a></td></tr>
 <tr class="memdesc:a4299cbb57bf2ec863bbe1199df72901a"><td class="mdescLeft">&#160;</td><td class="mdescRight">function space type <br/></td></tr>
+<tr class="memitem:ab8fe208bd30b6fa916507c2f5da6367b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8fe208bd30b6fa916507c2f5da6367b"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; ModelType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>model_ptrtype</b></td></tr>
+<tr class="memitem:a29a002804f75033d54ae77090d24d929"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29a002804f75033d54ae77090d24d929"></a>
+typedef ModelType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1OpusApp.html#a29a002804f75033d54ae77090d24d929">model_type</a></td></tr>
+<tr class="memdesc:a29a002804f75033d54ae77090d24d929"><td class="mdescLeft">&#160;</td><td class="mdescRight">model type <br/></td></tr>
+<tr class="memitem:a9c7daa59bc839df366266852c27cba40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c7daa59bc839df366266852c27cba40"></a>
+typedef ModelType::parameter_type&#160;</td><td class="memItemRight" valign="bottom"><b>parameter_type</b></td></tr>
+<tr class="memitem:a7f2907507ae2fe5e1fea771aca2699f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f2907507ae2fe5e1fea771aca2699f1"></a>
+typedef double&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
+<tr class="memitem:a3061b975aac0430d968dad36ac758fd0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3061b975aac0430d968dad36ac758fd0"></a>
+typedef std::vector<br class="typebreak"/>
+&lt; parameter_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vector_parameter_type</b></td></tr>
+<tr class="memitem:a4f07cd2cdfcc69501a53088b97311e7b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f07cd2cdfcc69501a53088b97311e7b"></a>
+typedef Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><b>vectorN_type</b></td></tr>
 <tr class="inherit_header pub_types_classFeel_1_1Application"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1Application')"><img src="closed.png" alt="-"/>&nbsp;Public Types inherited from <a class="el" href="classFeel_1_1Application.html">Feel::Application</a></td></tr>
 <tr class="memitem:af693db51ca874953a72fee81cd13ed4e inherit pub_types_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af693db51ca874953a72fee81cd13ed4e"></a>
 typedef boost::ptr_list&lt; <a class="el" href="classFeel_1_1Simget.html">Simget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#af693db51ca874953a72fee81cd13ed4e">simgets_type</a></td></tr>
@@ -142,12 +171,43 @@ typedef boost::ptr_list&lt; <a class="el" href="classFeel_1_1Simget.html">Simget
 <tr class="memitem:abf27535f4318a03d55a2607626981418 inherit pub_types_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf27535f4318a03d55a2607626981418"></a>
 typedef simgets_type::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#abf27535f4318a03d55a2607626981418">simget_iterator</a></td></tr>
 <tr class="memdesc:abf27535f4318a03d55a2607626981418 inherit pub_types_classFeel_1_1Application"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classFeel_1_1Simget.html" title="Simulation Object.">Simget</a> iterator over the collection. <br/></td></tr>
-<tr class="memitem:a1e1a0700e66c6f2a7f75f8a8daedb360 inherit pub_types_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Stats</b> </td></tr>
+<tr class="memitem:a1e1a0700e66c6f2a7f75f8a8daedb360 inherit pub_types_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Stats</b> { <br/>
+&#160;&#160;<b>FLAT</b> =  1&lt;&lt;1, 
+<br/>
+&#160;&#160;<b>HEADER</b> =  1&lt;&lt;2, 
+<br/>
+&#160;&#160;<b>ERRORS</b> =  1&lt;&lt;3, 
+<br/>
+&#160;&#160;<b>TIME</b> =  1&lt;&lt;4, 
+<br/>
+&#160;&#160;<b>DATA</b> =  1&lt;&lt;5, 
+<br/>
+&#160;&#160;<b>NUMBERS</b> =  1&lt;&lt;6, 
+<br/>
+&#160;&#160;<b>ALL</b> =  ERRORS | TIME | DATA | NUMBERS
+<br/>
+ }</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a6db364b2a3b2f8d1c9d77bd67c1d3322"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6db364b2a3b2f8d1c9d77bd67c1d3322"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
+<tr class="memitem:a3685a0e5ad53778e29a00a354c9681d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3685a0e5ad53778e29a00a354c9681d0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>loadDB</b> ()</td></tr>
+<tr class="memitem:a1697fddcc91d191516b008c8bfad27c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1697fddcc91d191516b008c8bfad27c2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>OpusApp</b> (<a class="el" href="classFeel_1_1AboutData.html">AboutData</a> const &amp;ad, po::options_description const &amp;od)</td></tr>
+<tr class="memitem:a553b332344f4a1174472a0916c27915d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a553b332344f4a1174472a0916c27915d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>OpusApp</b> (<a class="el" href="classFeel_1_1AboutData.html">AboutData</a> const &amp;ad, po::options_description const &amp;od, CRBModelMode mode)</td></tr>
+<tr class="memitem:a19e668c48216f9ed8fc57c54b858900c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19e668c48216f9ed8fc57c54b858900c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>OpusApp</b> (int argc, char **argv, <a class="el" href="classFeel_1_1AboutData.html">AboutData</a> const &amp;ad, po::options_description const &amp;od)</td></tr>
+<tr class="memitem:aeec7476ce0ef3f62a516fb24631fb2d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeec7476ce0ef3f62a516fb24631fb2d4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>OpusApp</b> (int argc, char **argv, <a class="el" href="classFeel_1_1AboutData.html">AboutData</a> const &amp;ad, po::options_description const &amp;od, CRBModelMode mode)</td></tr>
 <tr class="memitem:aff1eec52dc259a58db7f68cefb4ae29d"><td class="memItemLeft" align="right" valign="top">FEELPP_DONT_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1OpusApp.html#aff1eec52dc259a58db7f68cefb4ae29d">run</a> ()</td></tr>
 <tr class="memitem:a82cf5b840d265c90262be1e1ef6a2938"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1OpusApp.html#a82cf5b840d265c90262be1e1ef6a2938">run</a> (const double *X, unsigned long N, double *Y, unsigned long P)</td></tr>
+<tr class="memitem:afed9a8293d7477b2bdc58e055d870c54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afed9a8293d7477b2bdc58e055d870c54"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMode</b> (std::string const &amp;mode)</td></tr>
+<tr class="memitem:ab534d2087997c319bb7fee45a48a1afa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab534d2087997c319bb7fee45a48a1afa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMode</b> (CRBModelMode mode)</td></tr>
 <tr class="inherit_header pub_methods_classFeel_1_1Application"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classFeel_1_1Application')"><img src="closed.png" alt="-"/>&nbsp;Public Member Functions inherited from <a class="el" href="classFeel_1_1Application.html">Feel::Application</a></td></tr>
 <tr class="memitem:a5afafb52208c46ed381aa06fca34bbdb inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5afafb52208c46ed381aa06fca34bbdb"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Application</b> ()</td></tr>
@@ -199,8 +259,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Application</b> (
 <tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_classFeel_1_1Application"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classFeel_1_1Application')"><img src="closed.png" alt="-"/>&nbsp;Static Public Member Functions inherited from <a class="el" href="classFeel_1_1Application.html">Feel::Application</a></td></tr>
-<tr class="memitem:ad56c97478b62d268a5c5756e3a490938 inherit pub_static_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">static mpi::communicator const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#ad56c97478b62d268a5c5756e3a490938">comm</a> ()</td></tr>
 <tr class="memitem:a22adbcbe84221352650fca6d59f89634 inherit pub_static_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a22adbcbe84221352650fca6d59f89634">barrier</a> ()</td></tr>
+<tr class="memitem:ad56c97478b62d268a5c5756e3a490938 inherit pub_static_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">static mpi::communicator const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#ad56c97478b62d268a5c5756e3a490938">comm</a> ()</td></tr>
 <tr class="memitem:a7b653098a7bc205f06bc7dab38b953f1 inherit pub_static_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a7b653098a7bc205f06bc7dab38b953f1">initialized</a> ()</td></tr>
 <tr class="memitem:a557a482f6bd88fb483cb9e6377229da0 inherit pub_static_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a557a482f6bd88fb483cb9e6377229da0">finalized</a> ()</td></tr>
 <tr class="memitem:a3a0577ea01072fc70017d24ee443ca88 inherit pub_static_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a3a0577ea01072fc70017d24ee443ca88">processorName</a> ()</td></tr>
@@ -222,6 +282,10 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a22adbcbe84221352650fca6d59f89634 inherit pub_static_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a22adbcbe84221352650fca6d59f89634">barrier</a> ()</td></tr>
 <tr class="inherit_header pro_methods_classFeel_1_1Application"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classFeel_1_1Application')"><img src="closed.png" alt="-"/>&nbsp;Protected Member Functions inherited from <a class="el" href="classFeel_1_1Application.html">Feel::Application</a></td></tr>
 <tr class="memitem:ae8a93b3a1b08b3369b849fbe887bb808 inherit pro_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#ae8a93b3a1b08b3369b849fbe887bb808">doOptions</a> (int argc, char **argv)</td></tr>
+<tr class="memitem:ad530d56cd570aedab483aaacb102de22 inherit pro_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad530d56cd570aedab483aaacb102de22"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>parseAndStoreOptions</b> (po::command_line_parser parser, bool extra_parser=false)</td></tr>
+<tr class="memitem:a9b46d7543cd79c739e9963998c695443 inherit pro_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b46d7543cd79c739e9963998c695443"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>processGenericOptions</b> ()</td></tr>
 <tr class="memitem:a81301038996c1dbeb1ac86dbbbe608c3 inherit pro_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a81301038996c1dbeb1ac86dbbbe608c3">setLogs</a> ()</td></tr>
 </table>
 <h2>Member Function Documentation</h2>
@@ -316,7 +380,7 @@ template&lt;typename ModelType , template&lt; typename ReducedMethod &gt; class 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1OpusApp.html">OpusApp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:07 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:56 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

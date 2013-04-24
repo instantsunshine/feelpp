@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -99,7 +99,8 @@ $(document).ready(function(){initNavTree('classFeel_1_1Backend.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="classFeel_1_1Backend-members.html">List of all members</a>  </div>
+<a href="classFeel_1_1Backend-members.html">List of all members</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::Backend&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
@@ -216,8 +217,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>reuseJacRebuildAtFirs
 <tr class="memitem:afe2399f31c19dbf4fe77dadeae1d3c27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe2399f31c19dbf4fe77dadeae1d3c27"></a>
 <a class="el" href="namespaceFeel.html#a4da28efa430cc4bd3a6a86cde30a9809">BackendType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> () const </td></tr>
 <tr><td colspan="2"><div class="groupHeader">Mutators</div></td></tr>
-<tr class="memitem:a7f889bce160dd0f6cdbd9ba6fe45da4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a7f889bce160dd0f6cdbd9ba6fe45da4f">BOOST_PARAMETER_MEMBER_FUNCTION</a> ((void), setTolerances, tag,(required(rtolerance,(double)))(optional(maxit,(<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>), 1000)(atolerance,(double), 1e-50)(dtolerance,(double), 1e5)))</td></tr>
-<tr class="memitem:a7cec98c8054a977896c36b31e282cdf2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a7cec98c8054a977896c36b31e282cdf2">BOOST_PARAMETER_MEMBER_FUNCTION</a> ((void), setSolverType, tag,(required(ksp,(std::string)))(optional(pc,(std::string),&quot;lu&quot;)(constant_null_space,(bool), false)(pcfactormatsolverpackage,(std::string),&quot;petsc&quot;)))</td></tr>
 <tr class="memitem:ac561dc38e1f22c68f0395ee90e717709"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ac561dc38e1f22c68f0395ee90e717709">setPrecMatrixStructure</a> (<a class="el" href="namespaceFeel.html#a3d7a6c5948e669b187f2d4620499715a">MatrixStructure</a> mstruct)</td></tr>
 <tr class="memitem:a59d78ab6b116dbe065a6fd258a7c5de2"><td class="memItemLeft" align="right" valign="top">solvernonlinear_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a59d78ab6b116dbe065a6fd258a7c5de2">nlSolver</a> ()</td></tr>
 <tr class="memitem:acdea997fc311a0f039418b387efcdb1f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acdea997fc311a0f039418b387efcdb1f"></a>
@@ -243,10 +242,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setReuseJacRebuildAtF
 <tr class="memitem:ac6a784a0037db067e878f0d14d084ab4"><td class="memItemLeft" align="right" valign="top">real_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ac6a784a0037db067e878f0d14d084ab4">dot</a> (vector_ptrtype const &amp;x, vector_ptrtype const &amp;y) const </td></tr>
 <tr class="memitem:aa3eff8e69436b9d28fb8cc39ba6c52ec"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#aa3eff8e69436b9d28fb8cc39ba6c52ec">prod</a> (<a class="el" href="classFeel_1_1MatrixSparse.html">sparse_matrix_type</a> const &amp;A, <a class="el" href="classFeel_1_1Vector.html">vector_type</a> const &amp;x, <a class="el" href="classFeel_1_1Vector.html">vector_type</a> &amp;y) const =0</td></tr>
 <tr class="memitem:a8e3f8adf98ddf60ff0adb0bbd621aa7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a8e3f8adf98ddf60ff0adb0bbd621aa7e">prod</a> (sparse_matrix_ptrtype const &amp;A, vector_ptrtype const &amp;x, vector_ptrtype &amp;y) const </td></tr>
-<tr class="memitem:ae8ec49598963eb57dd2c3db4e1b58862"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ae8ec49598963eb57dd2c3db4e1b58862">BOOST_PARAMETER_MEMBER_FUNCTION</a> ((solve_return_type), <a class="el" href="classFeel_1_1Backend.html#a22833dfc4ad0b592a753d48ae2946fd2">solve</a>, tag,(required(matrix,(sparse_matrix_ptrtype))(in_out(solution),*)(rhs,(vector_ptrtype)))(optional(prec,(preconditioner_ptrtype), preconditioner(_prefix=this-&gt;<a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">prefix</a>(), _matrix=matrix, _pc=this-&gt;<a class="el" href="classFeel_1_1Backend.html#a578d05b7b18f4e296df32f094a081f12">pcEnumType</a>(), _pcfactormatsolverpackage=this-&gt;<a class="el" href="classFeel_1_1Backend.html#a6647de58940f9532e23e5118d0cfd156">matSolverPackageEnumType</a>(), _backend=this-&gt;shared_from_this()))(maxit,(<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>), M_maxit)(rtolerance,(double), M_rtolerance)(atolerance,(double), M_atolerance)(dtolerance,(double), M_dtolerance)(reuse_prec,(bool), M_reuse_prec)(transpose,(bool), false)(constant_null_space,(bool), false)(pc,(std::string), M_pc)(ksp,(std::string), M_ksp)(pcfactormatsolverpackage,(std::string), M_pcFactorMatSolverPackage)))</td></tr>
 <tr class="memitem:a22833dfc4ad0b592a753d48ae2946fd2"><td class="memItemLeft" align="right" valign="top">virtual solve_return_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a22833dfc4ad0b592a753d48ae2946fd2">solve</a> (sparse_matrix_ptrtype const &amp;A, sparse_matrix_ptrtype const &amp;P, vector_ptrtype &amp;x, vector_ptrtype const &amp;b)=0</td></tr>
 <tr class="memitem:ad2157eec7ea621c3792797037277d9fa"><td class="memItemLeft" align="right" valign="top">solve_return_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ad2157eec7ea621c3792797037277d9fa">solve</a> (sparse_matrix_ptrtype const &amp;A, sparse_matrix_ptrtype const &amp;P, vector_ptrtype &amp;x, vector_ptrtype const &amp;b, bool reuse_prec)</td></tr>
-<tr class="memitem:a8455c39be375217c4beac68b273b87c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a8455c39be375217c4beac68b273b87c2">BOOST_PARAMETER_MEMBER_FUNCTION</a> ((nl_solve_return_type), <a class="el" href="classFeel_1_1Backend.html#acc94a0aad6494257235aab11ec372324">nlSolve</a>, tag,(required(in_out(solution),*))(optional(jacobian,(sparse_matrix_ptrtype), sparse_matrix_ptrtype())(residual,(vector_ptrtype), vector_ptrtype())(prec,(preconditioner_ptrtype), preconditioner(_prefix=this-&gt;<a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">prefix</a>(), _pc=this-&gt;<a class="el" href="classFeel_1_1Backend.html#a578d05b7b18f4e296df32f094a081f12">pcEnumType</a>(), _backend=this-&gt;shared_from_this(), _pcfactormatsolverpackage=this-&gt;<a class="el" href="classFeel_1_1Backend.html#a6647de58940f9532e23e5118d0cfd156">matSolverPackageEnumType</a>()))(maxit,(<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>), M_maxit)(rtolerance,(double), M_rtolerance)(atolerance,(double), M_atolerance)(dtolerance,(double), M_dtolerance)(reuse_prec,(bool), M_reuse_prec)(reuse_jac,(bool), M_reuse_jac)(transpose,(bool), false)(pc,(std::string), M_pc)(ksp,(std::string), M_ksp)(pcfactormatsolverpackage,(std::string), M_pcFactorMatSolverPackage)))</td></tr>
 <tr class="memitem:acc94a0aad6494257235aab11ec372324"><td class="memItemLeft" align="right" valign="top">virtual nl_solve_return_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#acc94a0aad6494257235aab11ec372324">nlSolve</a> (sparse_matrix_ptrtype &amp;A, vector_ptrtype &amp;x, vector_ptrtype &amp;b, const double, const int)</td></tr>
 <tr class="memitem:aaabfbb2da0661b6e73deb704df212dca"><td class="memItemLeft" align="right" valign="top">virtual nl_solve_return_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#aaabfbb2da0661b6e73deb704df212dca">nlSolve</a> (sparse_matrix_ptrtype &amp;A, vector_ptrtype &amp;x, vector_ptrtype &amp;b, const double, const int, bool reusePC, bool reuseJAC)</td></tr>
 <tr class="memitem:aa7ce4ac2e7d7146834d56fb6afc2a318"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#aa7ce4ac2e7d7146834d56fb6afc2a318">attachPreconditioner</a> (preconditioner_ptrtype preconditioner)</td></tr>
@@ -255,6 +252,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setReuseJacRebuildAtF
 <tr class="memitem:a9fca567504a8af1966d492ce2cecd268"><td class="memTemplParams" colspan="2">template&lt;typename Observer &gt; </td></tr>
 <tr class="memitem:a9fca567504a8af1966d492ce2cecd268"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a9fca567504a8af1966d492ce2cecd268">addDeleteObserver</a> (boost::shared_ptr&lt; Observer &gt; const &amp;obs)</td></tr>
 <tr class="memitem:ad66bbc3dbf94fd9949183f27e8728239"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ad66bbc3dbf94fd9949183f27e8728239">sendDeleteSignal</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a924cadbd6ba07b048a5aa3f7b3d0eade"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a924cadbd6ba07b048a5aa3f7b3d0eade"></a>
+preconditioner_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>M_preconditioner</b></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="member-group"></a>
 Constructors, destructor</h2></td></tr>
@@ -274,17 +276,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Backend</b> ()</t
 <tr class="memitem:ad9d817212ebf3ddebf2a7b9f71232d10"><td class="memItemLeft" align="right" valign="top">virtual sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ad9d817212ebf3ddebf2a7b9f71232d10">newZeroMatrix</a> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> m, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> m_l, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n_l)=0</td></tr>
 <tr class="memitem:a16048207b66c731bdc6a9aae6baadb53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16048207b66c731bdc6a9aae6baadb53"></a>
 virtual sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>newZeroMatrix</b> (<a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;dm1, <a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;dm2)=0</td></tr>
-<tr class="memitem:abb6f61c03ff65f8bf9a86ce32dedbf03"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#abb6f61c03ff65f8bf9a86ce32dedbf03">BOOST_PARAMETER_MEMBER_FUNCTION</a> ((sparse_matrix_ptrtype), <a class="el" href="classFeel_1_1Backend.html#ae9cc4a2666705823d5d435637b24483d">newMatrix</a>, tag,(required(trial,*(boost::is_convertible&lt; mpl::_, boost::shared_ptr&lt; FunctionSpaceBase &gt; &gt;))(test,*(boost::is_convertible&lt; mpl::_, boost::shared_ptr&lt; FunctionSpaceBase &gt; &gt;)))(optional(pattern,(<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>), Pattern::COUPLED)(properties,(<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>), <a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae">NON_HERMITIAN</a>)(buildGraphWithTranspose,(bool), false)(pattern_block,*,(BlocksStencilPattern(1, 1, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>(Pattern::HAS_NO_BLOCK_PATTERN))))(diag_is_nonzero,*(boost::is_integral&lt; mpl::_ &gt;), true)(verbose,(int), 0)(collect_garbage,*(boost::is_integral&lt; mpl::_ &gt;), true)))</td></tr>
 <tr class="memitem:a1b38302501043eb08a7a58f43312b966"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1b38302501043eb08a7a58f43312b966"></a>
 template&lt;typename DomainSpace , typename ImageSpace &gt; </td></tr>
 <tr class="memitem:a1b38302501043eb08a7a58f43312b966"><td class="memTemplItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>newMatrix</b> (DomainSpace const &amp;dm, ImageSpace const &amp;im, sparse_matrix_ptrtype const &amp;M, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> prop=<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae">NON_HERMITIAN</a>)</td></tr>
-<tr class="memitem:a93777b44ce4884533c75df556c2070dc"><td class="memTemplParams" colspan="2">template&lt;typename BlockType  = sparse_matrix_ptrtype&gt; </td></tr>
-<tr class="memitem:a93777b44ce4884533c75df556c2070dc"><td class="memTemplItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a93777b44ce4884533c75df556c2070dc">newBlockMatrixImpl</a> (vf::BlocksBase&lt; BlockType &gt; const &amp;b, bool copy_values=true, bool diag_is_nonzero=true)</td></tr>
-<tr class="memitem:abdf8bd8065b52d18c7f8a4b89fdd23b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#abdf8bd8065b52d18c7f8a4b89fdd23b8">BOOST_PARAMETER_MEMBER_FUNCTION</a> ((sparse_matrix_ptrtype), newBlockMatrix, tag,(required(block,*))(optional(copy_values,*(boost::is_integral&lt; mpl::_ &gt;), true)(diag_is_nonzero,*(boost::is_integral&lt; mpl::_ &gt;), true)))</td></tr>
+<tr class="memitem:ae814550c53cc42c83dc4c3e252146905"><td class="memItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ae814550c53cc42c83dc4c3e252146905">newBlockMatrixImpl</a> (vf::BlocksBase&lt; sparse_matrix_ptrtype &gt; const &amp;b, bool copy_values=true, bool diag_is_nonzero=true)</td></tr>
+<tr class="memitem:a673f80eccb5035439748045c0b2d846b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a673f80eccb5035439748045c0b2d846b"></a>
+sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>newBlockMatrixImpl</b> (vf::BlocksBase&lt; boost::shared_ptr&lt; <a class="el" href="classFeel_1_1GraphCSR.html">GraphCSR</a> &gt; &gt; const &amp;b, bool copy_values=true, bool diag_is_nonzero=true)</td></tr>
 <tr class="memitem:a339c85259745dbf2d883c9464b994a8c"><td class="memTemplParams" colspan="2">template&lt;typename BlockType  = vector_ptrtype&gt; </td></tr>
 <tr class="memitem:a339c85259745dbf2d883c9464b994a8c"><td class="memTemplItemLeft" align="right" valign="top">vector_ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a339c85259745dbf2d883c9464b994a8c">newBlockVectorImpl</a> (vf::BlocksBase&lt; BlockType &gt; const &amp;b, bool copy_values=true)</td></tr>
-<tr class="memitem:a54d1ef96d4709c1655a07490d2047fbe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a54d1ef96d4709c1655a07490d2047fbe">BOOST_PARAMETER_MEMBER_FUNCTION</a> ((vector_ptrtype), newBlockVector, tag,(required(block,*))(optional(copy_values,*(boost::is_integral&lt; mpl::_ &gt;), true)))</td></tr>
-<tr class="memitem:ab262d0d0784f2a53c40558e835dd3ea1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ab262d0d0784f2a53c40558e835dd3ea1">BOOST_PARAMETER_MEMBER_FUNCTION</a> ((sparse_matrix_ptrtype), <a class="el" href="classFeel_1_1Backend.html#ad9d817212ebf3ddebf2a7b9f71232d10">newZeroMatrix</a>, tag,(required(test,*)(trial,*)))</td></tr>
 <tr class="memitem:af2490c7116ddd7218b6fc59cff3ff8cc"><td class="memItemLeft" align="right" valign="top">virtual vector_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#af2490c7116ddd7218b6fc59cff3ff8cc">newVector</a> (<a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;dm)=0</td></tr>
 <tr class="memitem:aa94fb4e059fa9ef32e77b22b9f6a6b1e"><td class="memItemLeft" align="right" valign="top">virtual vector_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#aa94fb4e059fa9ef32e77b22b9f6a6b1e">newVector</a> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n_local)=0</td></tr>
 <tr class="memitem:ae4268c3a3e792a44d417ddc21a3e63cb"><td class="memTemplParams" colspan="2">template&lt;typename DomainSpace &gt; </td></tr>
@@ -401,424 +400,6 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Attaches a <a class="el" href="classFeel_1_1Preconditioner.html" title="base class for preconditioner">Preconditioner</a> object to be used by the solver </p>
-
-</div>
-</div>
-<a class="anchor" id="abb6f61c03ff65f8bf9a86ce32dedbf03"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::BOOST_PARAMETER_MEMBER_FUNCTION </td>
-          <td>(</td>
-          <td class="paramtype">(sparse_matrix_ptrtype)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classFeel_1_1Backend.html#ae9cc4a2666705823d5d435637b24483d">newMatrix</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">tag&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">(required(trial,*(boost::is_convertible&lt; mpl::_, boost::shared_ptr&lt; FunctionSpaceBase &gt; &gt;))(test,*(boost::is_convertible&lt; mpl::_, boost::shared_ptr&lt; FunctionSpaceBase &gt; &gt;)))(optional(pattern,(<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>), Pattern::COUPLED)(properties,(<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>), <a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae">NON_HERMITIAN</a>)(buildGraphWithTranspose,(bool), false)(pattern_block,*,(BlocksStencilPattern(1, 1, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>(Pattern::HAS_NO_BLOCK_PATTERN))))(diag_is_nonzero,*(boost::is_integral&lt; mpl::_ &gt;), true)(verbose,(int), 0)(collect_garbage,*(boost::is_integral&lt; mpl::_ &gt;), true))&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>helper function </p>
-
-<p>References <a class="el" href="classFeel_1_1Backend.html#ae9cc4a2666705823d5d435637b24483d">Feel::Backend&lt; T &gt;::newMatrix()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="abdf8bd8065b52d18c7f8a4b89fdd23b8"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::BOOST_PARAMETER_MEMBER_FUNCTION </td>
-          <td>(</td>
-          <td class="paramtype">(sparse_matrix_ptrtype)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">newBlockMatrix&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">tag&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">(required(block,*))(optional(copy_values,*(boost::is_integral&lt; mpl::_ &gt;), true)(diag_is_nonzero,*(boost::is_integral&lt; mpl::_ &gt;), true))&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>instantiate a new block matrix sparse </p>
-
-<p>References <a class="el" href="classFeel_1_1Backend.html#a93777b44ce4884533c75df556c2070dc">Feel::Backend&lt; T &gt;::newBlockMatrixImpl()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a54d1ef96d4709c1655a07490d2047fbe"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::BOOST_PARAMETER_MEMBER_FUNCTION </td>
-          <td>(</td>
-          <td class="paramtype">(vector_ptrtype)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">newBlockVector&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">tag&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">(required(block,*))(optional(copy_values,*(boost::is_integral&lt; mpl::_ &gt;), true))&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>instantiate a new block matrix sparse </p>
-
-<p>References <a class="el" href="classFeel_1_1Backend.html#a339c85259745dbf2d883c9464b994a8c">Feel::Backend&lt; T &gt;::newBlockVectorImpl()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab262d0d0784f2a53c40558e835dd3ea1"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::BOOST_PARAMETER_MEMBER_FUNCTION </td>
-          <td>(</td>
-          <td class="paramtype">(sparse_matrix_ptrtype)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classFeel_1_1Backend.html#ad9d817212ebf3ddebf2a7b9f71232d10">newZeroMatrix</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">tag&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">(required(test,*)(trial,*))&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>instantiate a new zero matrix </p>
-
-<p>References <a class="el" href="classFeel_1_1Backend.html#ad9d817212ebf3ddebf2a7b9f71232d10">Feel::Backend&lt; T &gt;::newZeroMatrix()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a7f889bce160dd0f6cdbd9ba6fe45da4f"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::BOOST_PARAMETER_MEMBER_FUNCTION </td>
-          <td>(</td>
-          <td class="paramtype">(void)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">setTolerances&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">tag&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">(required(rtolerance,(double)))(optional(maxit,(<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>), 1000)(atolerance,(double),1e-50)(dtolerance,(double),1e5))&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>set tolerances: relative tolerance <code>rtol</code>, divergence tolerance <code>dtol</code> and absolute tolerance <code>atol</code> </p>
-
-</div>
-</div>
-<a class="anchor" id="a7cec98c8054a977896c36b31e282cdf2"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::BOOST_PARAMETER_MEMBER_FUNCTION </td>
-          <td>(</td>
-          <td class="paramtype">(void)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">setSolverType&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">tag&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">(required(ksp,(std::string)))(optional(pc,(std::string),&quot;lu&quot;)(constant_null_space,(bool), false)(pcfactormatsolverpackage,(std::string),&quot;petsc&quot;))&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>set solver: krylov subspace method and preconditioners </p>
-
-</div>
-</div>
-<a class="anchor" id="ae8ec49598963eb57dd2c3db4e1b58862"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::BOOST_PARAMETER_MEMBER_FUNCTION </td>
-          <td>(</td>
-          <td class="paramtype">(solve_return_type)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classFeel_1_1Backend.html#a22833dfc4ad0b592a753d48ae2946fd2">solve</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">tag&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">(required(matrix,(sparse_matrix_ptrtype))(in_out(solution),*)(rhs,(vector_ptrtype)))(optional(prec,(preconditioner_ptrtype), preconditioner(_prefix=this-&gt;<a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">prefix</a>(), _matrix=matrix, _pc=this-&gt;<a class="el" href="classFeel_1_1Backend.html#a578d05b7b18f4e296df32f094a081f12">pcEnumType</a>(),_pcfactormatsolverpackage=this-&gt;<a class="el" href="classFeel_1_1Backend.html#a6647de58940f9532e23e5118d0cfd156">matSolverPackageEnumType</a>(), _backend=this-&gt;shared_from_this()))(maxit,(<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>), M_maxit)(rtolerance,(double), M_rtolerance)(atolerance,(double), M_atolerance)(dtolerance,(double), M_dtolerance)(reuse_prec,(bool), M_reuse_prec)(transpose,(bool), false)(constant_null_space,(bool), false)(pc,(std::string), M_pc)(ksp,(std::string), M_ksp)(pcfactormatsolverpackage,(std::string), M_pcFactorMatSolverPackage))&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>solve for <img class="formulaInl" alt="$P A x = P b$" src="form_14.png"/> where <img class="formulaInl" alt="$P$" src="form_15.png"/> is an approximation of the inverse of <img class="formulaInl" alt="$A$" src="form_16.png"/>. this interface uses the boost.parameter library to ease the function usage</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">A</td><td>matrix to inverse </td></tr>
-    <tr><td class="paramname">rhs</td><td>right hand side vector </td></tr>
-    <tr><td class="paramname">solution</td><td>solution of the system </td></tr>
-    <tr><td class="paramname">P</td><td>preconditioner </td></tr>
-    <tr><td class="paramname">maxit</td><td>maximum number of iterations </td></tr>
-    <tr><td class="paramname">tolerance</td><td>tolerance on the residual </td></tr>
-    <tr><td class="paramname">reuse_prec</td><td>if true use adaptive preconditioning strategy </td></tr>
-    <tr><td class="paramname">transpose</td><td>if true solve the transpose problem</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>some parameter may not be meaningful for all backends </dd></dl>
-
-<p>References <a class="el" href="classFeel_1_1Backend.html#aa7ce4ac2e7d7146834d56fb6afc2a318">Feel::Backend&lt; T &gt;::attachPreconditioner()</a>, <a class="el" href="classFeel_1_1Backend.html#af2490c7116ddd7218b6fc59cff3ff8cc">Feel::Backend&lt; T &gt;::newVector()</a>, and <a class="el" href="classFeel_1_1Backend.html#a22833dfc4ad0b592a753d48ae2946fd2">Feel::Backend&lt; T &gt;::solve()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8455c39be375217c4beac68b273b87c2"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::BOOST_PARAMETER_MEMBER_FUNCTION </td>
-          <td>(</td>
-          <td class="paramtype">(nl_solve_return_type)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classFeel_1_1Backend.html#acc94a0aad6494257235aab11ec372324">nlSolve</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">tag&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">(required(in_out(solution),*))(optional(jacobian,(sparse_matrix_ptrtype), sparse_matrix_ptrtype())(residual,(vector_ptrtype), vector_ptrtype())(prec,(preconditioner_ptrtype), preconditioner(_prefix=this-&gt;<a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">prefix</a>(), _pc=this-&gt;<a class="el" href="classFeel_1_1Backend.html#a578d05b7b18f4e296df32f094a081f12">pcEnumType</a>(), _backend=this-&gt;shared_from_this(),_pcfactormatsolverpackage=this-&gt;<a class="el" href="classFeel_1_1Backend.html#a6647de58940f9532e23e5118d0cfd156">matSolverPackageEnumType</a>()))(maxit,(<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>), M_maxit)(rtolerance,(double), M_rtolerance)(atolerance,(double), M_atolerance)(dtolerance,(double), M_dtolerance)(reuse_prec,(bool), M_reuse_prec)(reuse_jac,(bool), M_reuse_jac)(transpose,(bool), false)(pc,(std::string), M_pc)(ksp,(std::string), M_ksp)(pcfactormatsolverpackage,(std::string), M_pcFactorMatSolverPackage))&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>solve for <img class="formulaInl" alt="$P F(x)=0 b$" src="form_17.png"/> </p>
-
-<p>References <a class="el" href="classFeel_1_1Backend.html#af2490c7116ddd7218b6fc59cff3ff8cc">Feel::Backend&lt; T &gt;::newVector()</a>, <a class="el" href="classFeel_1_1Backend.html#acc94a0aad6494257235aab11ec372324">Feel::Backend&lt; T &gt;::nlSolve()</a>, <a class="el" href="classFeel_1_1Backend.html#a59d78ab6b116dbe065a6fd258a7c5de2">Feel::Backend&lt; T &gt;::nlSolver()</a>, and <a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">Feel::Backend&lt; T &gt;::prefix()</a>.</p>
 
 </div>
 </div>
@@ -1219,13 +800,11 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a93777b44ce4884533c75df556c2070dc"></a>
+<a class="anchor" id="ae814550c53cc42c83dc4c3e252146905"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
-<div class="memtemplate">
-template&lt;typename BlockType  = sparse_matrix_ptrtype&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1233,7 +812,7 @@ template&lt;typename BlockType  = sparse_matrix_ptrtype&gt; </div>
         <tr>
           <td class="memname">sparse_matrix_ptrtype <a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::newBlockMatrixImpl </td>
           <td>(</td>
-          <td class="paramtype">vf::BlocksBase&lt; BlockType &gt; const &amp;&#160;</td>
+          <td class="paramtype">vf::BlocksBase&lt; sparse_matrix_ptrtype &gt; const &amp;&#160;</td>
           <td class="paramname"><em>b</em>, </td>
         </tr>
         <tr>
@@ -2335,7 +1914,7 @@ template&lt;typename T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1Backend.html">Backend</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:06 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:54 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -100,7 +100,8 @@ $(document).ready(function(){initNavTree('backend_8hpp.html','');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">backend.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -121,7 +122,7 @@ $(document).ready(function(){initNavTree('backend_8hpp.html','');});
 <code>#include &lt;feel/feelalg/datamap.hpp&gt;</code><br/>
 <code>#include &lt;<a class="el" href="solvernonlinear_8hpp_source.html">feel/feelalg/solvernonlinear.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="preconditioner_8hpp_source.html">feel/feelalg/preconditioner.hpp</a>&gt;</code><br/>
-<code>#include &lt;feel/feeldiscr/functionspacebase.hpp&gt;</code><br/>
+<code>#include &lt;<a class="el" href="functionspacebase_8hpp_source.html">feel/feeldiscr/functionspacebase.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="matrixshell_8hpp_source.html">feel/feelalg/matrixshell.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="matrixshellsparse_8hpp_source.html">feel/feelalg/matrixshellsparse.hpp</a>&gt;</code><br/>
 <code>#include &lt;feel/feelvf/pattern.hpp&gt;</code><br/>
@@ -138,6 +139,20 @@ Classes</h2></td></tr>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceFeel"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html">Feel</a></td></tr>
 <tr class="memitem:namespaceFeel_1_1detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel_1_1detail.html">Feel::detail</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a6e755f5dce8079042f0f1e70728d9180"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e755f5dce8079042f0f1e70728d9180"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; backend_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::backend_ptrtype</b></td></tr>
+<tr class="memitem:afda9d31e3c4b659659f30372ddfa4504"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afda9d31e3c4b659659f30372ddfa4504"></a>
+typedef Backend&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::backend_type</b></td></tr>
+<tr class="memitem:a8ed66d7d80701cf737efd10bfcaeeb3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ed66d7d80701cf737efd10bfcaeeb3b"></a>
+typedef <a class="el" href="classFeel_1_1Singleton.html">Feel::Singleton</a><br class="typebreak"/>
+&lt; BackendManagerImpl &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::detail::BackendManager</b></td></tr>
+<tr class="memitem:a6ec0fd3c7813cc91711905f4e95ac4dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ec0fd3c7813cc91711905f4e95ac4dd"></a>
+typedef <a class="el" href="classFeel_1_1Singleton.html">Feel::Singleton</a><br class="typebreak"/>
+&lt; BackendManagerDeleterImpl &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::detail::BackendManagerDeleter</b></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme <a href="#" onclick="location.href='mai'+'lto:'+'chr'+'is'+'top'+'he'+'.pr'+'ud'+'hom'+'me'+'@fe'+'el'+'pp.'+'or'+'g'; return false;">chris<span style="display: none;">.nosp@m.</span>toph<span style="display: none;">.nosp@m.</span>e.pru<span style="display: none;">.nosp@m.</span>dhom<span style="display: none;">.nosp@m.</span>me@fe<span style="display: none;">.nosp@m.</span>elpp<span style="display: none;">.nosp@m.</span>.org</a> </dd></dl>
@@ -147,8 +162,8 @@ Namespaces</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_a0f98f552c2d10986d40f0722dc05407.html">feelalg</a></li><li class="navelem"><a class="el" href="backend_8hpp.html">backend.hpp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:04 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_a85c05f67ecc6f105d16a4f081031243.html">feelalg</a></li><li class="navelem"><a class="el" href="backend_8hpp.html">backend.hpp</a></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:53 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -15,7 +15,6 @@ var classFeel_1_1fem_1_1Lagrange =
     [ "value_type", "classFeel_1_1fem_1_1Lagrange.html#a698aecdd635e9fddaf3f8762192559b2", null ],
     [ "Lagrange", "classFeel_1_1fem_1_1Lagrange.html#ac9a67cf9d9bf379663980826f3c4f78a", null ],
     [ "~Lagrange", "classFeel_1_1fem_1_1Lagrange.html#af67b4859004c28ede489312482fdffe9", null ],
-    [ "BOOST_STATIC_ASSERT", "classFeel_1_1fem_1_1Lagrange.html#a0b02f174cecef45a8cb5731ed80c6e6c", null ],
     [ "familyName", "classFeel_1_1fem_1_1Lagrange.html#aa56367f3e8c29b18e97fcc420f99e819", null ],
     [ "isomorphism", "classFeel_1_1fem_1_1Lagrange.html#ab9fcadb4fceac022d458113324260ba5", null ],
     [ "referenceConvex", "classFeel_1_1fem_1_1Lagrange.html#ac19e4d687df1ec2902371960767e49fc", null ],

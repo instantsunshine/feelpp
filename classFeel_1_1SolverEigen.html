@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -173,8 +173,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aee3af76e50d62d058bcab610e652f944"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#aee3af76e50d62d058bcab610e652f944">initialized</a> () const </td></tr>
 <tr class="memitem:af26f97e2dfc3a7ca1fcfbca651c1cf8e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#af26f97e2dfc3a7ca1fcfbca651c1cf8e">clear</a> ()</td></tr>
 <tr class="memitem:af5e07b3f630d217ce03ad39977464681"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#af5e07b3f630d217ce03ad39977464681">init</a> ()=0</td></tr>
-<tr class="memitem:a5e198c2ffa9e9ef8968995b8f435f3f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e198c2ffa9e9ef8968995b8f435f3f7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_PARAMETER_MEMBER_FUNCTION</b> ((solve_return_type), <a class="el" href="classFeel_1_1SolverEigen.html#aa09564a52db89534864de2a3e3a0eb43">solve</a>, tag,(required(matrixA,(sparse_matrix_ptrtype))(matrixB,(sparse_matrix_ptrtype)))(optional(maxit,(<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>), 1000)(<a class="el" href="classFeel_1_1SolverEigen.html#a3bffbfc17979de150e1c4dbebb359256">tolerance</a>,(double), 1e-11)))</td></tr>
 <tr class="memitem:aa09564a52db89534864de2a3e3a0eb43"><td class="memItemLeft" align="right" valign="top">virtual solve_return_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#aa09564a52db89534864de2a3e3a0eb43">solve</a> (<a class="el" href="classFeel_1_1MatrixSparse.html">MatrixSparse</a>&lt; value_type &gt; &amp;matrix_A, int nev, int ncv, const double tol, const unsigned int m_its)=0</td></tr>
 <tr class="memitem:a965ade84778665a5b0f3c4baf41d7d1a"><td class="memItemLeft" align="right" valign="top">solve_return_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#a965ade84778665a5b0f3c4baf41d7d1a">solve</a> (boost::shared_ptr&lt; <a class="el" href="classFeel_1_1MatrixSparse.html">MatrixSparse</a>&lt; value_type &gt; &gt; &amp;matrix_A, int nev, int ncv, const double tol, const unsigned int m_its)</td></tr>
 <tr class="memitem:a52ef3bebed6fc6821c2e4da99832a499"><td class="memItemLeft" align="right" valign="top">virtual solve_return_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#a52ef3bebed6fc6821c2e4da99832a499">solve</a> (<a class="el" href="classFeel_1_1MatrixSparse.html">MatrixSparse</a>&lt; value_type &gt; &amp;matrix_A, <a class="el" href="classFeel_1_1MatrixSparse.html">MatrixSparse</a>&lt; value_type &gt; &amp;matrix_B, int nev, int ncv, const double tol, const unsigned int m_its)=0</td></tr>
@@ -182,21 +180,21 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:abfa743f92bc370ae269967664762e0bb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#abfa743f92bc370ae269967664762e0bb">M_prefix</a></td></tr>
-<tr class="memitem:a84465f10c90303db255da4c88f801a5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#aa6ba49d3d8578adfc5ae20cff2b89e65">EigenSolverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#a84465f10c90303db255da4c88f801a5d">M_eigen_solver_type</a></td></tr>
 <tr class="memitem:ae74322654405f5b68779fd9b7dc0ed62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#ab9dd0a9c3b4ed8785c07c88ed8efafb3">EigenProblemType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#ae74322654405f5b68779fd9b7dc0ed62">M_eigen_problem_type</a></td></tr>
-<tr class="memitem:a7c22196e5a6737085689edec4d04df06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a7b06253b16577e9dede530ee4b24f863">PositionOfSpectrum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#a7c22196e5a6737085689edec4d04df06">M_position_of_spectrum</a></td></tr>
-<tr class="memitem:ad3b6e61f52ceb4bd7609d130ae2f100b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a969885acafaff68169ba5e22440655fe">SpectralTransformType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#ad3b6e61f52ceb4bd7609d130ae2f100b">M_spectral_transform</a></td></tr>
+<tr class="memitem:a84465f10c90303db255da4c88f801a5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#aa6ba49d3d8578adfc5ae20cff2b89e65">EigenSolverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#a84465f10c90303db255da4c88f801a5d">M_eigen_solver_type</a></td></tr>
 <tr class="memitem:ad1d3bbcdfea39e8fc9d5d025c758694b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#ad1d3bbcdfea39e8fc9d5d025c758694b">M_is_initialized</a></td></tr>
-<tr class="memitem:a2906d7e18e029b25afdb816dfa8c2795"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2906d7e18e029b25afdb816dfa8c2795"></a>
-<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#a2906d7e18e029b25afdb816dfa8c2795">M_nev</a></td></tr>
-<tr class="memdesc:a2906d7e18e029b25afdb816dfa8c2795"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of eigenvalues <br/></td></tr>
-<tr class="memitem:a70a38fa62c2afa43e966e08e7e35e129"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70a38fa62c2afa43e966e08e7e35e129"></a>
-<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#a70a38fa62c2afa43e966e08e7e35e129">M_ncv</a></td></tr>
-<tr class="memdesc:a70a38fa62c2afa43e966e08e7e35e129"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of eigenvalues <br/></td></tr>
 <tr class="memitem:afcd6f8382b7c9076d89d42efc1e0a099"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcd6f8382b7c9076d89d42efc1e0a099"></a>
 <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#afcd6f8382b7c9076d89d42efc1e0a099">M_maxit</a></td></tr>
 <tr class="memdesc:afcd6f8382b7c9076d89d42efc1e0a099"><td class="mdescLeft">&#160;</td><td class="mdescRight">max number of iterations <br/></td></tr>
+<tr class="memitem:a70a38fa62c2afa43e966e08e7e35e129"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70a38fa62c2afa43e966e08e7e35e129"></a>
+<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#a70a38fa62c2afa43e966e08e7e35e129">M_ncv</a></td></tr>
+<tr class="memdesc:a70a38fa62c2afa43e966e08e7e35e129"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of eigenvalues <br/></td></tr>
+<tr class="memitem:a2906d7e18e029b25afdb816dfa8c2795"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2906d7e18e029b25afdb816dfa8c2795"></a>
+<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#a2906d7e18e029b25afdb816dfa8c2795">M_nev</a></td></tr>
+<tr class="memdesc:a2906d7e18e029b25afdb816dfa8c2795"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of eigenvalues <br/></td></tr>
+<tr class="memitem:a7c22196e5a6737085689edec4d04df06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a7b06253b16577e9dede530ee4b24f863">PositionOfSpectrum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#a7c22196e5a6737085689edec4d04df06">M_position_of_spectrum</a></td></tr>
+<tr class="memitem:abfa743f92bc370ae269967664762e0bb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#abfa743f92bc370ae269967664762e0bb">M_prefix</a></td></tr>
+<tr class="memitem:ad3b6e61f52ceb4bd7609d130ae2f100b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a969885acafaff68169ba5e22440655fe">SpectralTransformType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#ad3b6e61f52ceb4bd7609d130ae2f100b">M_spectral_transform</a></td></tr>
 <tr class="memitem:a6f45896f0bbb3380c134318c61086b65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f45896f0bbb3380c134318c61086b65"></a>
 value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#a6f45896f0bbb3380c134318c61086b65">M_tolerance</a></td></tr>
 <tr class="memdesc:a6f45896f0bbb3380c134318c61086b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">tolerance <br/></td></tr>
@@ -1380,7 +1378,7 @@ template&lt;typename T&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1SolverEigen.html">SolverEigen</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:06 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:57 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

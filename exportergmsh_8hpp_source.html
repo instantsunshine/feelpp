@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -157,12 +157,12 @@ $(document).ready(function(){initNavTree('exportergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Exporter.html" title="export Feel generated data to some file formatsUse the visitor and factory pattern.">Exporter&lt;MeshType,N&gt;</a> <a class="code" href="classFeel_1_1Exporter.html" title="export Feel generated data to some file formatsUse the visitor and factory pattern.">super</a>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mesh_type::value_type value_type;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::timeset_type timeset_type;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1TimeSet.html" title="data TimeSet">super::timeset_type</a> <a class="code" href="classFeel_1_1TimeSet.html" title="data TimeSet">timeset_type</a>;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::timeset_ptrtype timeset_ptrtype;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::timeset_iterator timeset_iterator;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::timeset_const_iterator timeset_const_iterator;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> timeset_type::step_type step_type;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1TimeSet_1_1Step.html" title="a step in a time set">timeset_type::step_type</a> <a class="code" href="classFeel_1_1TimeSet_1_1Step.html" title="a step in a time set">step_type</a>;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> timeset_type::step_ptrtype step_ptrtype;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> timeset_type::step_const_iterator step_const_iterator;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
@@ -249,8 +249,8 @@ $(document).ready(function(){initNavTree('exportergmsh_8hpp_source.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_e5f0dfdce99b571c03f822e68138ad6d.html">feelfilters</a></li><li class="navelem"><b>exportergmsh.hpp</b></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:28:59 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_20ecd942a77abb86794d08a686402ca9.html">feelfilters</a></li><li class="navelem"><b>exportergmsh.hpp</b></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:47 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

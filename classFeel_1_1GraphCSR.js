@@ -10,6 +10,7 @@ var classFeel_1_1GraphCSR =
     [ "storage_ptrtype", "classFeel_1_1GraphCSR.html#a8035ef1a375383c2492a8a115fef0bac", null ],
     [ "storage_type", "classFeel_1_1GraphCSR.html#a8502723502cd917a8896776068c38a0b", null ],
     [ "GraphCSR", "classFeel_1_1GraphCSR.html#a981c44a8874c196f652b929d2f2c2d1c", null ],
+    [ "GraphCSR", "classFeel_1_1GraphCSR.html#ad3931c11723210ba6c71b5f6bff1149e", null ],
     [ "GraphCSR", "classFeel_1_1GraphCSR.html#a7ad9b4d2ae630a1ff8a5d9d60929b86a", null ],
     [ "~GraphCSR", "classFeel_1_1GraphCSR.html#aea7117105e67f6c2e6c80c823eb1c8b3", null ],
     [ "a", "classFeel_1_1GraphCSR.html#a1d4ebd90fd7662b0c060502fce0615b7", null ],

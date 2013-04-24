@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -99,7 +99,9 @@ $(document).ready(function(){initNavTree('classFeel_1_1Dubiner.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="classFeel_1_1Dubiner-members.html">List of all members</a>  </div>
+<a href="classFeel_1_1Dubiner-members.html">List of all members</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::Dubiner&lt; Dim, RealDim, Degree, NormalizationPolicy, T, StoragePolicy &gt; Class Template Reference</div>  </div>
 </div><!--header-->
@@ -122,6 +124,13 @@ G.E. Karniadakis and S.J. Sherwin, ''Spectral/hp Element Methods for CFD,'' Oxfo
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:ad411012bf14a5b0a8634ffee5655dd4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad411012bf14a5b0a8634ffee5655dd4f"></a>
+typedef Discontinuous&#160;</td><td class="memItemRight" valign="bottom"><b>continuity_type</b></td></tr>
+<tr class="memitem:a8debb58341991fc8b0a0cfe78438d842"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8debb58341991fc8b0a0cfe78438d842"></a>
+typedef DubinerTraits&lt; Dim, <br class="typebreak"/>
+RealDim, Degree, <br class="typebreak"/>
+NormalizationPolicy, T, <br class="typebreak"/>
+StoragePolicy &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>traits_type</b></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Typedefs</div></td></tr>
 <tr class="memitem:a4c1bd4964bb6d7efc2691658135a17bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c1bd4964bb6d7efc2691658135a17bd"></a>
 typedef <a class="el" href="classFeel_1_1Dubiner.html">Dubiner</a>&lt; Dim, RealDim, <br class="typebreak"/>
@@ -176,6 +185,25 @@ matrix_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b>
 <tr class="memitem:a9d232743c2ec7f6da5c431926f06a6fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Dubiner.html">self_type</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Dubiner.html#a9d232743c2ec7f6da5c431926f06a6fa">basis</a> () const </td></tr>
 <tr class="memitem:ad40482f8c5cf73fadac1aae0e40ce83e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Dubiner.html#ad40482f8c5cf73fadac1aae0e40ce83e">isNormalized</a> () const </td></tr>
 <tr class="memitem:acdf38b45a0dfb9720dd07546bfaaa969"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Dubiner.html#acdf38b45a0dfb9720dd07546bfaaa969">familyName</a> () const </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a73867e9aa75ddee0ffdf607a55ab0c92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73867e9aa75ddee0ffdf607a55ab0c92"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_normalized</b> = traits_type::is_normalized</td></tr>
+<tr class="memitem:a206a74abcbf56d645e85835124472c88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a206a74abcbf56d645e85835124472c88"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_product</b> = true</td></tr>
+<tr class="memitem:a1dd3a34cd34aec5fa85cca47e64dd438"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1dd3a34cd34aec5fa85cca47e64dd438"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>isContinuous</b> = false</td></tr>
+<tr class="memitem:ae685dd043b492b00681b823f2d5eb37d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae685dd043b492b00681b823f2d5eb37d"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>isTransformationEquivalent</b> = true</td></tr>
+<tr class="memitem:ae94c13eba4e843acf818e0ae94d3d5ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae94c13eba4e843acf818e0ae94d3d5ae"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nConvexOrderDiff</b> = traits_type::nConvexOrderDiff</td></tr>
+<tr class="memitem:a187e08d4481dbf8b8372437d0bae60ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a187e08d4481dbf8b8372437d0bae60ad"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nDim</b> = traits_type::nDim</td></tr>
+<tr class="memitem:aeef54ecfca0226f9fd290f3a4d28a847"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeef54ecfca0226f9fd290f3a4d28a847"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nOrder</b> = traits_type::nOrder</td></tr>
+<tr class="memitem:afb9a76c02626b6020d0a3541eeac2ca4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb9a76c02626b6020d0a3541eeac2ca4"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nRealDim</b> = traits_type::nRealDim</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="member-group"></a>
 Methods</h2></td></tr>
@@ -448,7 +476,7 @@ template&lt;uint16_type Dim, uint16_type RealDim, uint16_type Degree, typename N
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1Dubiner.html">Dubiner</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:07 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:55 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

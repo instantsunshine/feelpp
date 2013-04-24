@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -100,7 +100,9 @@ $(document).ready(function(){initNavTree('classFeel_1_1functional_1_1IntegralMom
 <div class="header">
   <div class="summary">
 <a href="classFeel_1_1functional_1_1IntegralMomentsOnFace-members.html">List of all members</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::functional::IntegralMomentsOnFace&lt; Space, BasisType &gt; Class Template Reference</div>  </div>
 </div><!--header-->
@@ -114,9 +116,35 @@ class Feel::functional::IntegralMomentsOnFace&lt; Space, BasisType &gt;</h3>
 <p>functional that returns <img class="formulaInl" alt="$\ell_u (v) = \int_{\Gamma} ( u\, v )$" src="form_93.png"/> where <img class="formulaInl" alt="$\Gamma \subset \partial \Omega$" src="form_94.png"/> </p>
 <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a06dd9b297a1ee080ba132ce41d7a1e83"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06dd9b297a1ee080ba132ce41d7a1e83"></a>
+typedef BasisType&#160;</td><td class="memItemRight" valign="bottom"><b>basis_type</b></td></tr>
+<tr class="memitem:a86207a6f60cb42c96535e527884d5bfd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86207a6f60cb42c96535e527884d5bfd"></a>
+typedef <a class="el" href="classFeel_1_1Functional.html">Functional</a>&lt; Space &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>functional_type</b></td></tr>
+<tr class="memitem:a9fab8ec17f92bad343b819b7c8ca561a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9fab8ec17f92bad343b819b7c8ca561a"></a>
+typedef <a class="el" href="structFeel_1_1node.html">node</a>&lt; value_type &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>node_type</b></td></tr>
+<tr class="memitem:a410fdeed8d72ccbb41e41a4edf3ec86d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a410fdeed8d72ccbb41e41a4edf3ec86d"></a>
+typedef super::polynomial_type&#160;</td><td class="memItemRight" valign="bottom"><b>polynomial_type</b></td></tr>
+<tr class="memitem:ae7ab763c4db88e55bfd106dab584ee6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7ab763c4db88e55bfd106dab584ee6c"></a>
+typedef <br class="typebreak"/>
+space_type::reference_convex_type&#160;</td><td class="memItemRight" valign="bottom"><b>reference_convex_type</b></td></tr>
+<tr class="memitem:ae634b2722b906994c36f17c532343c47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae634b2722b906994c36f17c532343c47"></a>
+typedef <a class="el" href="classFeel_1_1functional_1_1IntegralMomentsOnFace.html">IntegralMomentsOnFace</a><br class="typebreak"/>
+&lt; Space, BasisType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>self_type</b></td></tr>
+<tr class="memitem:a323dff922b7d8a7f34673a6432c989b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a323dff922b7d8a7f34673a6432c989b5"></a>
+typedef Space&#160;</td><td class="memItemRight" valign="bottom"><b>space_type</b></td></tr>
+<tr class="memitem:ac4b659b9205c92ecdd5663e85b94826c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4b659b9205c92ecdd5663e85b94826c"></a>
+typedef space_type::value_type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa829bfc9da28efc6ebdb335fdd5e896c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1functional_1_1IntegralMomentsOnFace.html#aa829bfc9da28efc6ebdb335fdd5e896c">IntegralMomentsOnFace</a> (space_type const &amp;p, basis_type const &amp;l, IntegrationFaceEnum face=ALL_FACES)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a54e1cc1776026f3d3e5cffe0078fa0f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54e1cc1776026f3d3e5cffe0078fa0f4"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nComponents</b> = space_type::nComponents</td></tr>
 </table>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa829bfc9da28efc6ebdb335fdd5e896c"></a>
@@ -179,7 +207,7 @@ template&lt;typename Space , typename BasisType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><b>functional</b></li><li class="navelem"><a class="el" href="classFeel_1_1functional_1_1IntegralMomentsOnFace.html">IntegralMomentsOnFace</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:09 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:58 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

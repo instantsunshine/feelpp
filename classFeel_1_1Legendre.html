@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -99,7 +99,9 @@ $(document).ready(function(){initNavTree('classFeel_1_1Legendre.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="classFeel_1_1Legendre-members.html">List of all members</a>  </div>
+<a href="classFeel_1_1Legendre-members.html">List of all members</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::Legendre&lt; Dim, RealDim, Degree, NormalizationPolicy, T, StoragePolicy &gt; Class Template Reference</div>  </div>
 </div><!--header-->
@@ -118,6 +120,13 @@ class Feel::Legendre&lt; Dim, RealDim, Degree, NormalizationPolicy, T, StoragePo
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:a3073661bfd7443da0a42e59fd04396d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3073661bfd7443da0a42e59fd04396d9"></a>
+typedef Discontinuous&#160;</td><td class="memItemRight" valign="bottom"><b>continuity_type</b></td></tr>
+<tr class="memitem:a35354677deff8e178327d2ec7f4d5417"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35354677deff8e178327d2ec7f4d5417"></a>
+typedef LegendreTraits&lt; Dim, <br class="typebreak"/>
+RealDim, Degree, <br class="typebreak"/>
+NormalizationPolicy, T, <br class="typebreak"/>
+StoragePolicy &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>traits_type</b></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Typedefs</div></td></tr>
 <tr class="memitem:ac44e94017171359066c44b701d503cdf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac44e94017171359066c44b701d503cdf"></a>
 typedef <a class="el" href="classFeel_1_1Legendre.html">Legendre</a>&lt; Dim, RealDim, <br class="typebreak"/>
@@ -172,6 +181,25 @@ matrix_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b>
 <tr class="memitem:abe3e9987c581d084570116c27afafcf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Legendre.html">self_type</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Legendre.html#abe3e9987c581d084570116c27afafcf9">basis</a> () const </td></tr>
 <tr class="memitem:a4542ac9627405c46d1065bb2e8b3b945"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Legendre.html#a4542ac9627405c46d1065bb2e8b3b945">isNormalized</a> () const </td></tr>
 <tr class="memitem:a2b88cdb85d80aff3431883cf88f8afe0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Legendre.html#a2b88cdb85d80aff3431883cf88f8afe0">familyName</a> () const </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:af2987181170b9c9b84f03e4f240fe859"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2987181170b9c9b84f03e4f240fe859"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_normalized</b> = NormalizationPolicy::is_normalized</td></tr>
+<tr class="memitem:a2065ed61c82f7fe9b0b0c69a6985cf39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2065ed61c82f7fe9b0b0c69a6985cf39"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_product</b> = true</td></tr>
+<tr class="memitem:ac714ae2a01c095d58552ee259ab1064f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac714ae2a01c095d58552ee259ab1064f"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>isContinuous</b> = false</td></tr>
+<tr class="memitem:a69e295326999d8d8ab811c32b91f3770"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69e295326999d8d8ab811c32b91f3770"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>isTransformationEquivalent</b> = true</td></tr>
+<tr class="memitem:a1a145c2c0ff030bffcdd5fb5034cf217"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a145c2c0ff030bffcdd5fb5034cf217"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nConvexOrder</b> = nOrder+2</td></tr>
+<tr class="memitem:a0fa68ead8e4bd42233dcc73a66412fbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fa68ead8e4bd42233dcc73a66412fbc"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nDim</b> = Dim</td></tr>
+<tr class="memitem:a2e74b79449e50623ed494f3a0bf23ef7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e74b79449e50623ed494f3a0bf23ef7"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nOrder</b> = Degree</td></tr>
+<tr class="memitem:a2940c20b22dddc35c5a37a0f8792ef65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2940c20b22dddc35c5a37a0f8792ef65"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nRealDim</b> = RealDim</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="member-group"></a>
 Methods</h2></td></tr>
@@ -444,7 +472,7 @@ template&lt;uint16_type Dim, uint16_type RealDim, uint16_type Degree, typename N
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1Legendre.html">Legendre</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:07 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:56 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

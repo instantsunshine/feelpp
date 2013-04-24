@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -99,7 +99,8 @@ $(document).ready(function(){initNavTree('structFeel_1_1Hypercube_1_1PolyDims.ht
 
 <div class="header">
   <div class="summary">
-<a href="structFeel_1_1Hypercube_1_1PolyDims-members.html">List of all members</a>  </div>
+<a href="structFeel_1_1Hypercube_1_1PolyDims-members.html">List of all members</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::Hypercube&lt; Dim, Order, RDim &gt;::PolyDims&lt; N &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
@@ -116,7 +117,42 @@ struct Feel::Hypercube&lt; Dim, Order, RDim &gt;::PolyDims&lt; N &gt;</h3>
 <li>(n+1)^2 over the quadrangle</li>
 <li>(n+1)^3 over the hexahedron </li>
 </ol>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:ac9de8fba8640d0901ad6147b95bba908"><td class="memItemLeft" align="right" valign="top">static const uint32_type&#160;</td><td class="memItemRight" valign="bottom"><b>value</b></td></tr>
+</table>
+<h2>Member Data Documentation</h2>
+<a class="anchor" id="ac9de8fba8640d0901ad6147b95bba908"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_type Dim, uint16_type Order = 1, uint16_type RDim = Dim&gt; </div>
+<div class="memtemplate">
+template&lt;int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_type Feel::Hypercube&lt; Dim, Order, RDim &gt;::<a class="el" href="structFeel_1_1Hypercube_1_1PolyDims.html">PolyDims</a>&lt; N &gt;::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"> mpl::if_&lt;mpl::equal_to&lt;mpl::int_&lt;nDim&gt;,mpl::int_&lt;3&gt; &gt;,</div>
+<div class="line">                                 mpl::identity&lt;mpl::int_&lt;( N+1 )*( N+1 )*( N+1 )&gt; &gt;,</div>
+<div class="line">                                 <span class="keyword">typename</span> mpl::if_&lt;mpl::equal_to&lt;mpl::int_&lt;nDim&gt;,mpl::int_&lt;2&gt; &gt;,</div>
+<div class="line">                                 mpl::identity&lt;mpl::int_&lt;( N+1 )*( N+1 )&gt; &gt;,</div>
+<div class="line">                                 mpl::identity&lt;mpl::int_&lt;( N+1 )&gt; &gt; &gt;::type&gt;::type::value</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="hypercube_8hpp_source.html">hypercube.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -125,7 +161,7 @@ struct Feel::Hypercube&lt; Dim, Order, RDim &gt;::PolyDims&lt; N &gt;</h3>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><b>Hypercube</b></li><li class="navelem"><a class="el" href="structFeel_1_1Hypercube_1_1PolyDims.html">PolyDims</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:06 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:56 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

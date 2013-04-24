@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -100,7 +100,9 @@ $(document).ready(function(){initNavTree('classFeel_1_1CRBApp.html','');});
 <div class="header">
   <div class="summary">
 <a href="classFeel_1_1CRBApp-members.html">List of all members</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::CRBApp&lt; ModelType &gt; Class Template Reference</div>  </div>
 </div><!--header-->
@@ -125,10 +127,54 @@ class Feel::CRBApp&lt; ModelType &gt;</h3>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a2bb78546be981acbc178aa787f5672d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bb78546be981acbc178aa787f5672d3"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classFeel_1_1CRB.html">crb_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>crb_ptrtype</b></td></tr>
+<tr class="memitem:ae82e8e766de594d3dc2d7398333988fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae82e8e766de594d3dc2d7398333988fe"></a>
+typedef <a class="el" href="classFeel_1_1CRB.html">CRB</a>&lt; <a class="el" href="classFeel_1_1CRBModel.html">crbmodel_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>crb_type</b></td></tr>
+<tr class="memitem:a55e96a1738816f1e528bb53d931ffe2a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55e96a1738816f1e528bb53d931ffe2a"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classFeel_1_1CRBModel.html">crbmodel_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>crbmodel_ptrtype</b></td></tr>
+<tr class="memitem:a4c972a3de86c846b808c7a9bb18fa227"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c972a3de86c846b808c7a9bb18fa227"></a>
+typedef <a class="el" href="classFeel_1_1CRBModel.html">CRBModel</a>&lt; ModelType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>crbmodel_type</b></td></tr>
+<tr class="inherit_header pub_types_classFeel_1_1Application"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1Application')"><img src="closed.png" alt="-"/>&nbsp;Public Types inherited from <a class="el" href="classFeel_1_1Application.html">Feel::Application</a></td></tr>
+<tr class="memitem:af693db51ca874953a72fee81cd13ed4e inherit pub_types_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af693db51ca874953a72fee81cd13ed4e"></a>
+typedef boost::ptr_list&lt; <a class="el" href="classFeel_1_1Simget.html">Simget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#af693db51ca874953a72fee81cd13ed4e">simgets_type</a></td></tr>
+<tr class="memdesc:af693db51ca874953a72fee81cd13ed4e inherit pub_types_classFeel_1_1Application"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classFeel_1_1Simget.html" title="Simulation Object.">Simget</a> collection type. <br/></td></tr>
+<tr class="memitem:abf27535f4318a03d55a2607626981418 inherit pub_types_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf27535f4318a03d55a2607626981418"></a>
+typedef simgets_type::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#abf27535f4318a03d55a2607626981418">simget_iterator</a></td></tr>
+<tr class="memdesc:abf27535f4318a03d55a2607626981418 inherit pub_types_classFeel_1_1Application"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classFeel_1_1Simget.html" title="Simulation Object.">Simget</a> iterator over the collection. <br/></td></tr>
+<tr class="memitem:a1e1a0700e66c6f2a7f75f8a8daedb360 inherit pub_types_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Stats</b> { <br/>
+&#160;&#160;<b>FLAT</b> =  1&lt;&lt;1, 
+<br/>
+&#160;&#160;<b>HEADER</b> =  1&lt;&lt;2, 
+<br/>
+&#160;&#160;<b>ERRORS</b> =  1&lt;&lt;3, 
+<br/>
+&#160;&#160;<b>TIME</b> =  1&lt;&lt;4, 
+<br/>
+&#160;&#160;<b>DATA</b> =  1&lt;&lt;5, 
+<br/>
+&#160;&#160;<b>NUMBERS</b> =  1&lt;&lt;6, 
+<br/>
+&#160;&#160;<b>ALL</b> =  ERRORS | TIME | DATA | NUMBERS
+<br/>
+ }</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a865bce35d0b7b459eaddbdfcdec3cd15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a865bce35d0b7b459eaddbdfcdec3cd15"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CRBApp</b> (<a class="el" href="classFeel_1_1AboutData.html">AboutData</a> const &amp;ad, po::options_description const &amp;od)</td></tr>
+<tr class="memitem:ac6ca3dcbd6e69eed81e1ae42c6db720e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6ca3dcbd6e69eed81e1ae42c6db720e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CRBApp</b> (int argc, char **argv, <a class="el" href="classFeel_1_1AboutData.html">AboutData</a> const &amp;ad, po::options_description const &amp;od)</td></tr>
+<tr class="memitem:a338b11a34f1a37ce89db216797b46e0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a338b11a34f1a37ce89db216797b46e0c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
 <tr class="memitem:ad74464be29b6bc203b43b475f613a50b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBApp.html#ad74464be29b6bc203b43b475f613a50b">run</a> ()</td></tr>
 <tr class="memitem:a2fe0260b16fdbb0ffc1a247c291155e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBApp.html#a2fe0260b16fdbb0ffc1a247c291155e2">run</a> (const double *X, unsigned long N, double *Y, unsigned long P)</td></tr>
+<tr class="memitem:a998309cd5aa8125f0dff792d6e57122b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a998309cd5aa8125f0dff792d6e57122b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutput</b> (int i=0, <a class="el" href="namespaceFeel.html#a87e77631faf5262bc0eaca80b8e9190f">CRBErrorType</a> error_type=(int) CRB_RESIDUAL, int maxiter=10)</td></tr>
 <tr class="inherit_header pub_methods_classFeel_1_1Application"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classFeel_1_1Application')"><img src="closed.png" alt="-"/>&nbsp;Public Member Functions inherited from <a class="el" href="classFeel_1_1Application.html">Feel::Application</a></td></tr>
 <tr class="memitem:a5afafb52208c46ed381aa06fca34bbdb inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5afafb52208c46ed381aa06fca34bbdb"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Application</b> ()</td></tr>
@@ -177,19 +223,18 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Application</b> (
 <tr class="memitem:aaaa2082de9ef5601ca9ba3d63a112b51 inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#aaaa2082de9ef5601ca9ba3d63a112b51">printStats</a> (std::ostream &amp;out, std::vector&lt; std::string &gt; const &amp;keys, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> stats=ALL) const </td></tr>
 <tr class="memitem:a38a5a757ca720bda95a95ccf91f4410f inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a38a5a757ca720bda95a95ccf91f4410f">resultFileName</a> () const </td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a2eade9caa2e61c6a273732bfcf28650b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2eade9caa2e61c6a273732bfcf28650b"></a>
+crb_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>crb</b></td></tr>
+<tr class="memitem:a73636748372fd6d678f0e4f54be23449"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73636748372fd6d678f0e4f54be23449"></a>
+crbmodel_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>opus</b></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classFeel_1_1Application"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1Application')"><img src="closed.png" alt="-"/>&nbsp;Public Types inherited from <a class="el" href="classFeel_1_1Application.html">Feel::Application</a></td></tr>
-<tr class="memitem:af693db51ca874953a72fee81cd13ed4e inherit pub_types_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af693db51ca874953a72fee81cd13ed4e"></a>
-typedef boost::ptr_list&lt; <a class="el" href="classFeel_1_1Simget.html">Simget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#af693db51ca874953a72fee81cd13ed4e">simgets_type</a></td></tr>
-<tr class="memdesc:af693db51ca874953a72fee81cd13ed4e inherit pub_types_classFeel_1_1Application"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classFeel_1_1Simget.html" title="Simulation Object.">Simget</a> collection type. <br/></td></tr>
-<tr class="memitem:abf27535f4318a03d55a2607626981418 inherit pub_types_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf27535f4318a03d55a2607626981418"></a>
-typedef simgets_type::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#abf27535f4318a03d55a2607626981418">simget_iterator</a></td></tr>
-<tr class="memdesc:abf27535f4318a03d55a2607626981418 inherit pub_types_classFeel_1_1Application"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classFeel_1_1Simget.html" title="Simulation Object.">Simget</a> iterator over the collection. <br/></td></tr>
-<tr class="memitem:a1e1a0700e66c6f2a7f75f8a8daedb360 inherit pub_types_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Stats</b> </td></tr>
 <tr class="inherit_header pub_static_methods_classFeel_1_1Application"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classFeel_1_1Application')"><img src="closed.png" alt="-"/>&nbsp;Static Public Member Functions inherited from <a class="el" href="classFeel_1_1Application.html">Feel::Application</a></td></tr>
-<tr class="memitem:ad56c97478b62d268a5c5756e3a490938 inherit pub_static_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">static mpi::communicator const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#ad56c97478b62d268a5c5756e3a490938">comm</a> ()</td></tr>
 <tr class="memitem:a22adbcbe84221352650fca6d59f89634 inherit pub_static_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a22adbcbe84221352650fca6d59f89634">barrier</a> ()</td></tr>
+<tr class="memitem:ad56c97478b62d268a5c5756e3a490938 inherit pub_static_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">static mpi::communicator const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#ad56c97478b62d268a5c5756e3a490938">comm</a> ()</td></tr>
 <tr class="memitem:a7b653098a7bc205f06bc7dab38b953f1 inherit pub_static_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a7b653098a7bc205f06bc7dab38b953f1">initialized</a> ()</td></tr>
 <tr class="memitem:a557a482f6bd88fb483cb9e6377229da0 inherit pub_static_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a557a482f6bd88fb483cb9e6377229da0">finalized</a> ()</td></tr>
 <tr class="memitem:a3a0577ea01072fc70017d24ee443ca88 inherit pub_static_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a3a0577ea01072fc70017d24ee443ca88">processorName</a> ()</td></tr>
@@ -211,6 +256,10 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a22adbcbe84221352650fca6d59f89634 inherit pub_static_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a22adbcbe84221352650fca6d59f89634">barrier</a> ()</td></tr>
 <tr class="inherit_header pro_methods_classFeel_1_1Application"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classFeel_1_1Application')"><img src="closed.png" alt="-"/>&nbsp;Protected Member Functions inherited from <a class="el" href="classFeel_1_1Application.html">Feel::Application</a></td></tr>
 <tr class="memitem:ae8a93b3a1b08b3369b849fbe887bb808 inherit pro_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#ae8a93b3a1b08b3369b849fbe887bb808">doOptions</a> (int argc, char **argv)</td></tr>
+<tr class="memitem:ad530d56cd570aedab483aaacb102de22 inherit pro_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad530d56cd570aedab483aaacb102de22"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>parseAndStoreOptions</b> (po::command_line_parser parser, bool extra_parser=false)</td></tr>
+<tr class="memitem:a9b46d7543cd79c739e9963998c695443 inherit pro_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b46d7543cd79c739e9963998c695443"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>processGenericOptions</b> ()</td></tr>
 <tr class="memitem:a81301038996c1dbeb1ac86dbbbe608c3 inherit pro_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a81301038996c1dbeb1ac86dbbbe608c3">setLogs</a> ()</td></tr>
 </table>
 <h2>Member Function Documentation</h2>
@@ -304,7 +353,7 @@ template&lt;typename ModelType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1CRBApp.html">CRBApp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:07 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:55 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

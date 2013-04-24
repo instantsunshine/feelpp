@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -100,7 +100,9 @@ $(document).ready(function(){initNavTree('classFeel_1_1GeoMap_1_1Context.html','
 <div class="header">
   <div class="summary">
 <a href="classFeel_1_1GeoMap_1_1Context-members.html">List of all members</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::GeoMap&lt; Dim, Order, RealDim, T, Entity, PP &gt;::Context&lt; context_v, ElementType &gt; Class Template Reference</div>  </div>
 </div><!--header-->
@@ -114,10 +116,82 @@ class Feel::GeoMap&lt; Dim, Order, RealDim, T, Entity, PP &gt;::Context&lt; cont
 
 <p><a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a> for the geometric mapping depend on a node in the reference element </p>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ab6997218548dda5a5ceb8de98ac99041"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6997218548dda5a5ceb8de98ac99041"></a>
+typedef ElementType&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
+<tr class="memitem:a5cef842af756ee4c724faecc0b19971d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5cef842af756ee4c724faecc0b19971d"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; gm_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>gm_ptrtype</b></td></tr>
+<tr class="memitem:acf39a4437c07582ea03ca7bf04c55f6a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf39a4437c07582ea03ca7bf04c55f6a"></a>
+typedef mpl::if_<br class="typebreak"/>
+&lt; mpl::equal_to&lt; mpl::int_<br class="typebreak"/>
+&lt; PDim &gt;, mpl::int_&lt; NDim &gt;<br class="typebreak"/>
+ &gt;, mpl::identity&lt; <a class="el" href="classFeel_1_1GeoMap.html">GeoMap</a>&lt; Dim, <br class="typebreak"/>
+Order, NDim, T, Entity, PP &gt;<br class="typebreak"/>
+ &gt;, typename mpl::if_<br class="typebreak"/>
+&lt; mpl::and_<br class="typebreak"/>
+&lt; mpl::greater_equal<br class="typebreak"/>
+&lt; mpl::int_&lt; NDim &gt;, mpl::int_<br class="typebreak"/>
+&lt; 1 &gt; &gt;, mpl::equal_to<br class="typebreak"/>
+&lt; mpl::int_&lt; PDim &gt;, mpl::int_<br class="typebreak"/>
+&lt; NDim-1 &gt; &gt; &gt;, mpl::identity<br class="typebreak"/>
+&lt; typename <a class="el" href="classFeel_1_1GeoMap.html">GeoMap</a>&lt; NDim, Order, <br class="typebreak"/>
+NDim, T, Entity, PP &gt;<br class="typebreak"/>
+::face_gm_type &gt;, typename <br class="typebreak"/>
+mpl::if_&lt; mpl::and_<br class="typebreak"/>
+&lt; mpl::equal_to&lt; mpl::int_<br class="typebreak"/>
+&lt; NDim &gt;, mpl::int_<br class="typebreak"/>
+&lt; 3 &gt; &gt;, mpl::equal_to<br class="typebreak"/>
+&lt; mpl::int_&lt; PDim &gt;, mpl::int_<br class="typebreak"/>
+&lt; NDim-2 &gt; &gt; &gt;, mpl::identity<br class="typebreak"/>
+&lt; typename <a class="el" href="classFeel_1_1GeoMap.html">GeoMap</a>&lt; NDim, Order, <br class="typebreak"/>
+NDim, T, Entity, PP &gt;<br class="typebreak"/>
+::edge_gm_type &gt;<br class="typebreak"/>
+, mpl::identity&lt; boost::none_t &gt;<br class="typebreak"/>
+ &gt;::type &gt;::type &gt;::type::type&#160;</td><td class="memItemRight" valign="bottom"><b>gm_type</b></td></tr>
+<tr class="memitem:a98615baef35775fe64588726fe7e9641"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98615baef35775fe64588726fe7e9641"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classFeel_1_1GeoMap_1_1Context.html">gmc_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>gmc_ptrtype</b></td></tr>
+<tr class="memitem:a3a74aad80484618ff4e996a671f6c24c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a74aad80484618ff4e996a671f6c24c"></a>
+typedef <a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; contextv, <br class="typebreak"/>
+ElementType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>gmc_type</b></td></tr>
+<tr class="memitem:a9dc183ead6db76eba7cd58474e33fbe4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9dc183ead6db76eba7cd58474e33fbe4"></a>
+typedef <br class="typebreak"/>
+normals_type::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>normal_const_iterator</b></td></tr>
+<tr class="memitem:ab6e4b28c93de55d1fddd342b1e7e9a16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6e4b28c93de55d1fddd342b1e7e9a16"></a>
+typedef node_t_type&#160;</td><td class="memItemRight" valign="bottom"><b>normal_type</b></td></tr>
+<tr class="memitem:a7063bb2bf47382d9bfdcd4fcde56e45b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7063bb2bf47382d9bfdcd4fcde56e45b"></a>
+typedef ublas::vector<br class="typebreak"/>
+&lt; normal_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>normals_type</b></td></tr>
+<tr class="memitem:a11f34bcbf10018451f6a09da9f385dea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11f34bcbf10018451f6a09da9f385dea"></a>
+typedef <br class="typebreak"/>
+element_type::permutation_type&#160;</td><td class="memItemRight" valign="bottom"><b>permutation_type</b></td></tr>
+<tr class="memitem:ae1bf32d5eb7e5de1f9ad9c7db3c6fbc6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1bf32d5eb7e5de1f9ad9c7db3c6fbc6"></a>
+typedef gm_type::precompute_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>precompute_ptrtype</b></td></tr>
+<tr class="memitem:af123499438d9b083984852511a60f8c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af123499438d9b083984852511a60f8c3"></a>
+typedef <br class="typebreak"/>
+tangents_type::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>tangent_const_iterator</b></td></tr>
+<tr class="memitem:a613d455d59e004a96eb07baa42c1ccb2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a613d455d59e004a96eb07baa42c1ccb2"></a>
+typedef node_t_type&#160;</td><td class="memItemRight" valign="bottom"><b>tangent_type</b></td></tr>
+<tr class="memitem:acd439ac54046bbf9aec41d7fcdff7fd1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd439ac54046bbf9aec41d7fcdff7fd1"></a>
+typedef ublas::vector<br class="typebreak"/>
+&lt; tangent_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tangents_type</b></td></tr>
+<tr class="memitem:af8488cd9e96c090aeee6eaac26d44ca7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8488cd9e96c090aeee6eaac26d44ca7"></a>
+typedef gm_type::value_type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8fda01381ddca155e84bd0da7a6d0904"><td class="memItemLeft" align="right" valign="top">gmc_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoMap_1_1Context.html#a8fda01381ddca155e84bd0da7a6d0904">clone</a> ()</td></tr>
+<tr class="memitem:accbf2362f88bfc51a2e7132364c7c01c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="accbf2362f88bfc51a2e7132364c7c01c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Context</b> (gm_ptrtype __gm, element_type const &amp;__e, precompute_ptrtype const &amp;__pc)</td></tr>
+<tr class="memitem:a2766add03fe9ded0817800ce5d4bc487"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2766add03fe9ded0817800ce5d4bc487"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Context</b> (gm_ptrtype __gm, element_type const &amp;__e, std::vector&lt; std::map&lt; permutation_type, precompute_ptrtype &gt; &gt; &amp;__pc, uint16_type __f)</td></tr>
+<tr class="memitem:a2ea19ba5dcd5197fea0007883eb61588"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ea19ba5dcd5197fea0007883eb61588"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Context</b> (gmc_ptrtype &amp;p)</td></tr>
 <tr class="memitem:a456e2331293c2b0cb41955dbc4d4aaa7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoMap_1_1Context.html#a456e2331293c2b0cb41955dbc4d4aaa7">update</a> (element_type const &amp;__e, uint16_type __f)</td></tr>
+<tr class="memitem:ab3b67ceddfd8aa991e1364307d46120a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3b67ceddfd8aa991e1364307d46120a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (element_type const &amp;__e, precompute_ptrtype const &amp;__pc)</td></tr>
 <tr class="memitem:a839fac80fef87b19a1ba77fe83eb8915"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoMap_1_1Context.html#a839fac80fef87b19a1ba77fe83eb8915">update</a> (element_type const &amp;__e)</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Accessors</div></td></tr>
 <tr class="memitem:a65f94c817c93f7d5afbe85863557b997"><td class="memItemLeft" align="right" valign="top">gm_ptrtype const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoMap_1_1Context.html#a65f94c817c93f7d5afbe85863557b997">geometricMapping</a> () const </td></tr>
@@ -196,6 +270,26 @@ value_type&#160;</td><td class="memItemRight" valign="bottom"><b>measFace</b> ()
 precompute_ptrtype &gt; &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoMap_1_1Context.html#a1e932d1245d5244e522b05b4fee2fb2c">pcFaces</a> () const </td></tr>
 <tr><td colspan="2"><div class="groupHeader">Mutators</div></td></tr>
 <tr class="memitem:a48b6548cb018e992bb8104d43216846d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoMap_1_1Context.html#a48b6548cb018e992bb8104d43216846d">setPc</a> (precompute_ptrtype const &amp;__pc)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a781542c13abaa94dca9c145a66367ee5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a781542c13abaa94dca9c145a66367ee5"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>condition</b> = ( ( PDim==NDim )||( ( NDim&gt;=1 )&amp;&amp;( PDim==NDim-1 ) ) )</td></tr>
+<tr class="memitem:a839c88ed7bfab7bc47b276b4a1f3dfb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a839c88ed7bfab7bc47b276b4a1f3dfb0"></a>
+static const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>context</b> = context_v</td></tr>
+<tr class="memitem:a1f4df65e01713b034c917f561314af06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f4df65e01713b034c917f561314af06"></a>
+static const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>contextv</b> = context_v</td></tr>
+<tr class="memitem:ad283a3b52d3ef24d1fed45327034c617"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad283a3b52d3ef24d1fed45327034c617"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_linear</b> = ( trans == fem::LINEAR )</td></tr>
+<tr class="memitem:ada5785d176cedcdfc47b6d33909614a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada5785d176cedcdfc47b6d33909614a3"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>NDim</b> = ElementType::nRealDim</td></tr>
+<tr class="memitem:a9eb7b83d523d0426b84adad34055c251"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9eb7b83d523d0426b84adad34055c251"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nDim</b> = NDim</td></tr>
+<tr class="memitem:acae3c979b062b9aea32a59eee88e2e6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acae3c979b062b9aea32a59eee88e2e6f"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>PDim</b> = ElementType::nDim</td></tr>
+<tr class="memitem:a5b795b86c8c6c63127c1375d62a3d508"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b795b86c8c6c63127c1375d62a3d508"></a>
+static const <br class="typebreak"/>
+fem::transformation_type&#160;</td><td class="memItemRight" valign="bottom"><b>trans</b> = geometric_mapping_type::trans</td></tr>
 </table>
 <h2>Member Function Documentation</h2>
 <a class="anchor" id="a3092fb9caa0beb82e2c9c3c943c8dc3c"></a>
@@ -1344,7 +1438,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1GeoMap.html">GeoMap</a></li><li class="navelem"><a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:07 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:55 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

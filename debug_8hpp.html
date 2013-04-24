@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -100,7 +100,9 @@ $(document).ready(function(){initNavTree('debug_8hpp.html','');});
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">debug.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -120,12 +122,67 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:afdf4d6a134fdcb83145f36b63a128b40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdf4d6a134fdcb83145f36b63a128b40"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#afdf4d6a134fdcb83145f36b63a128b40">FEELPP_DEBUG_FUNC_INFO</a>(area)&#160;&#160;&#160;<a class="el" href="classDebug.html">Debug</a>(area) &lt;&lt; FEELPP_FUNCINFO &lt;&lt; &quot;\n&quot;;</td></tr>
-<tr class="memdesc:afdf4d6a134fdcb83145f36b63a128b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard function announcer. <br/></td></tr>
 <tr class="memitem:a2765aa64d61f895c0d6a09aeffe3edb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2765aa64d61f895c0d6a09aeffe3edb1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a2765aa64d61f895c0d6a09aeffe3edb1">FEELPP_DEBUG_BEGIN</a>(area)&#160;&#160;&#160;<a class="el" href="classDebug.html">Debug</a>(area) &lt;&lt; &quot;BEGIN: &quot; &lt;&lt; __PRETTY_FUNCTION__ &lt;&lt; &quot;\n&quot;;</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a2765aa64d61f895c0d6a09aeffe3edb1">FEELPP_DEBUG_BEGIN</a>(area)&#160;&#160;&#160;Debug(area) &lt;&lt; &quot;BEGIN: &quot; &lt;&lt; __PRETTY_FUNCTION__ &lt;&lt; &quot;\n&quot;;</td></tr>
 <tr class="memdesc:a2765aa64d61f895c0d6a09aeffe3edb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use these to introduce and extroduce functions. <br/></td></tr>
+<tr class="memitem:aa67a792efe6d941cca59959fe6295c5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa67a792efe6d941cca59959fe6295c5c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_DEBUG_END</b>(area)&#160;&#160;&#160;Debug(area) &lt;&lt; &quot;END: &quot; &lt;&lt; __PRETTY_FUNCTION__ &lt;&lt; &quot;\n&quot;;</td></tr>
+<tr class="memitem:afdf4d6a134fdcb83145f36b63a128b40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdf4d6a134fdcb83145f36b63a128b40"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#afdf4d6a134fdcb83145f36b63a128b40">FEELPP_DEBUG_FUNC_INFO</a>(area)&#160;&#160;&#160;Debug(area) &lt;&lt; FEELPP_FUNCINFO &lt;&lt; &quot;\n&quot;;</td></tr>
+<tr class="memdesc:afdf4d6a134fdcb83145f36b63a128b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard function announcer. <br/></td></tr>
+<tr class="memitem:a056d979961e269be4852338f5da56996"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a056d979961e269be4852338f5da56996"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_FUNCINFO</b>&#160;&#160;&#160;&quot;[&quot; &lt;&lt; __FILE__ &lt;&lt; &quot;:&quot; &lt;&lt; __LINE__ &lt;&lt; &quot;] &quot;</td></tr>
+<tr class="memitem:aff1416101978c4351d18d90c07839d3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff1416101978c4351d18d90c07839d3d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_LINEINFO</b>&#160;&#160;&#160;&quot;[&quot; &lt;&lt; __FILE__ &lt;&lt; &quot;:&quot; &lt;&lt; __LINE__ &lt;&lt; &quot;] &quot;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a128065f601b01f3415a7acc5b0413cf5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a128065f601b01f3415a7acc5b0413cf5"></a>
+typedef DebugStream &amp;(*&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::LManipFunction</b> )(DebugStream &amp;)</td></tr>
+<tr class="memitem:adbf1118e75d65702156bdab826c01682"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbf1118e75d65702156bdab826c01682"></a>
+typedef NdebugStream &amp;(*&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::LNManipFunction</b> )(NdebugStream &amp;)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a9ddbf7cbdafe486102ea8e1595c8134c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ddbf7cbdafe486102ea8e1595c8134c"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::backtrace</b> ()</td></tr>
+<tr class="memitem:a96c2617b2514cbf6a8aaa6ea98893324"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96c2617b2514cbf6a8aaa6ea98893324"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::backtrace</b> (int)</td></tr>
+<tr class="memitem:a3f3055fe8659d182981035731bf6957f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f3055fe8659d182981035731bf6957f"></a>
+DebugStream&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::Debug</b> (int area, DebugStream::stprintf func)</td></tr>
+<tr class="memitem:a92dd2ae2494873c601a01d7ee8f0ae3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92dd2ae2494873c601a01d7ee8f0ae3d"></a>
+DebugStream&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::Debug</b> (bool cond, int area, DebugStream::stprintf)</td></tr>
+<tr class="memitem:ab6955566da6efdd3349d1aabe8ab2f22"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6955566da6efdd3349d1aabe8ab2f22"></a>
+NdebugStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::endl</b> (NdebugStream &amp;s)</td></tr>
+<tr class="memitem:aa0e3f696e510c1b71ec6aa5dc0ef5aa8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0e3f696e510c1b71ec6aa5dc0ef5aa8"></a>
+Feel::DebugStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>endl</b> (Feel::DebugStream &amp;s)</td></tr>
+<tr class="memitem:a526247c8c47c857ce82809c7967ade5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a526247c8c47c857ce82809c7967ade5f"></a>
+DebugStream&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::Error</b> (int area)</td></tr>
+<tr class="memitem:a26a26c520c7122d0a4ba38135308e288"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26a26c520c7122d0a4ba38135308e288"></a>
+DebugStream&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::Error</b> (bool cond, int area)</td></tr>
+<tr class="memitem:a062e9a1773c6b026e6d2f8070e852d25"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a062e9a1773c6b026e6d2f8070e852d25"></a>
+DebugStream&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::Fatal</b> (int area)</td></tr>
+<tr class="memitem:ac37b7639cb589ac68598965162dd7977"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac37b7639cb589ac68598965162dd7977"></a>
+DebugStream&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::Fatal</b> (bool cond, int area)</td></tr>
+<tr class="memitem:a4f2e149c86281ea44f4ce06aac161abe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f2e149c86281ea44f4ce06aac161abe"></a>
+NdebugStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::flush</b> (NdebugStream &amp;s)</td></tr>
+<tr class="memitem:afc282405d209ca01cc006cf571961d18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc282405d209ca01cc006cf571961d18"></a>
+Feel::DebugStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> (Feel::DebugStream &amp;)</td></tr>
+<tr class="memitem:aed8e06c4d5d01b3f4e5e2fb9b7d36953"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed8e06c4d5d01b3f4e5e2fb9b7d36953"></a>
+DebugStream&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::Log</b> (int area, DebugStream::stprintf func)</td></tr>
+<tr class="memitem:af26c1400449d75d57e5c9f150de6e6ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af26c1400449d75d57e5c9f150de6e6ae"></a>
+DebugStream&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::Log</b> (bool cond, int area, DebugStream::stprintf)</td></tr>
+<tr class="memitem:ae2f5cc9d4818d5183d32e0f46bd0bd81"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae2f5cc9d4818d5183d32e0f46bd0bd81"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae2f5cc9d4818d5183d32e0f46bd0bd81"><td class="memTemplItemLeft" align="right" valign="top">DebugStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Feel::operator&lt;&lt;</b> (DebugStream &amp;__s, T const *__t)</td></tr>
+<tr class="memitem:ae0a4372311e92acdb374a3b69f6ae60d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0a4372311e92acdb374a3b69f6ae60d"></a>
+NdebugStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::perror</b> (NdebugStream &amp;s)</td></tr>
+<tr class="memitem:a7af545ef77506aa3d86eb10be9397e05"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7af545ef77506aa3d86eb10be9397e05"></a>
+Feel::DebugStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>perror</b> (Feel::DebugStream &amp;s)</td></tr>
+<tr class="memitem:a356deb1c43e40cf2d112e86ca0ce1280"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a356deb1c43e40cf2d112e86ca0ce1280"></a>
+DebugStream&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::Warning</b> (int area)</td></tr>
+<tr class="memitem:a6d3b5091878d448a92cf2ad5078e7325"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d3b5091878d448a92cf2ad5078e7325"></a>
+DebugStream&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::Warning</b> (bool cond, int area)</td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme <a href="#" onclick="location.href='mai'+'lto:'+'chr'+'is'+'top'+'he'+'.pr'+'ud'+'hom'+'me'+'@fe'+'el'+'pp.'+'or'+'g'; return false;">chris<span style="display: none;">.nosp@m.</span>toph<span style="display: none;">.nosp@m.</span>e.pru<span style="display: none;">.nosp@m.</span>dhom<span style="display: none;">.nosp@m.</span>me@fe<span style="display: none;">.nosp@m.</span>elpp<span style="display: none;">.nosp@m.</span>.org</a> </dd></dl>
@@ -135,8 +192,8 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_b98c83a91512c3be55dc71902560b537.html">feelcore</a></li><li class="navelem"><a class="el" href="debug_8hpp.html">debug.hpp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:04 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_aee4c96ffc3ed41ef7d25ec330d2b2e2.html">feelcore</a></li><li class="navelem"><a class="el" href="debug_8hpp.html">debug.hpp</a></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:53 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

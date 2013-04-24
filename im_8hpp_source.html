@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -162,7 +162,7 @@ $(document).ready(function(){initNavTree('im_8hpp_source.html','');});
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;         <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type, u<span class="keywordtype">int</span>16_type, u<span class="keywordtype">int</span>16_type&gt; <span class="keyword">class </span>Entity = <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex</a>,</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;         <span class="keyword">template</span>&lt;<span class="keyword">class</span> Convex, u<span class="keywordtype">int</span>16_type O, <span class="keyword">typename</span> T2&gt; <span class="keyword">class </span>QPS = <a class="code" href="classFeel_1_1Gauss.html" title="Gauss quadrature points.">Gauss</a>,</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;         <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type N&gt; <span class="keyword">class </span>DegreePolicy = <a class="code" href="structFeel_1_1IntegrationDegree.html">IntegrationDegree</a>&gt;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">class </span>IMGeneral</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="classFeel_1_1IMGeneral.html">   90</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1IMGeneral.html" title="integration method interface class">IMGeneral</a></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    :</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">public</span> QPS&lt;Entity&lt;Dim,1,Dim&gt;, DegreePolicy&lt;Order&gt;::integration_degree, T&gt;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
@@ -183,16 +183,16 @@ $(document).ready(function(){initNavTree('im_8hpp_source.html','');});
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">typedef</span> boost::tuple&lt;nodes_type, weights_type&gt; quadrature_data_type;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::face_quadrature_type face_quadrature_type;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">typedef</span> IMGeneral&lt;Dim,Order,T,Entity,QPS,DegreePolicy&gt; parent_quadrature_type;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1IMGeneral.html" title="integration method interface class">IMGeneral&lt;Dim,Order,T,Entity,QPS,DegreePolicy&gt;</a> <a class="code" href="classFeel_1_1IMGeneral.html" title="integration method interface class">parent_quadrature_type</a>;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    IMGeneral()</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="classFeel_1_1IMGeneral.html" title="integration method interface class">IMGeneral</a>()</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        :</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        super()</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    ~IMGeneral() {}</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    ~<a class="code" href="classFeel_1_1IMGeneral.html" title="integration method interface class">IMGeneral</a>() {}</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    quadrature_data_type data()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> boost::make_tuple( this-&gt;<a class="code" href="namespaceFeel.html#a07ec0494dee4ca9a16b866e8c1f4d495">points</a>(), this-&gt;weights() );</div>
@@ -203,8 +203,8 @@ $(document).ready(function(){initNavTree('im_8hpp_source.html','');});
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">int</span> DIM,</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;         <span class="keywordtype">int</span> IMORDER,</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;         <span class="keyword">typename</span> T = double,</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;         <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type, u<span class="keywordtype">int</span>16_type, u<span class="keywordtype">int</span>16_type&gt; <span class="keyword">class </span>Entity = Simplex&gt;</div>
-<div class="line"><a name="l00132"></a><span class="lineno"><a class="code" href="structFeel_1_1IM.html">  132</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1IM.html" title="integration method interface class">IM</a></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;         <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type, u<span class="keywordtype">int</span>16_type, u<span class="keywordtype">int</span>16_type&gt; <span class="keyword">class </span>Entity = <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex</a>&gt;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">struct </span>IM</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        :</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">public</span> mpl::if_&lt;mpl::and_&lt;mpl::or_&lt;mpl::and_&lt;mpl::less_equal&lt;mpl::int_&lt;IMORDER&gt;,mpl::int_&lt;20&gt; &gt;,</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        mpl::equal_to&lt;mpl::int_&lt;DIM&gt;,mpl::int_&lt;2&gt; &gt; &gt;,</div>
@@ -273,7 +273,7 @@ $(document).ready(function(){initNavTree('im_8hpp_source.html','');});
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;         <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type N&gt; <span class="keyword">class </span>DegreePolicy&gt;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;std::ostream&amp;</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<a class="code" href="namespaceFeel.html#a9e126cb1abe01c7ef329b5d2bd285899">operator&lt;&lt;</a>( std::ostream&amp; os,</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <a class="code" href="structFeel_1_1IM.html" title="integration method interface class">Feel::IM&lt;Dim, Order, T, Entity,QPS, DegreePolicy&gt;</a> <span class="keyword">const</span>&amp; qps )</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            Feel::IM&lt;Dim, Order, T, Entity,QPS, DegreePolicy&gt; <span class="keyword">const</span>&amp; qps )</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;{</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    os &lt;&lt; <span class="stringliteral">&quot;quadrature point set:\n&quot;</span></div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;       &lt;&lt; <span class="stringliteral">&quot;number of points: &quot;</span> &lt;&lt; qps.nPoints() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
@@ -307,8 +307,8 @@ $(document).ready(function(){initNavTree('im_8hpp_source.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_c85c146a44177c6961da007357ddadde.html">feelpoly</a></li><li class="navelem"><a class="el" href="im_8hpp.html">im.hpp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:01 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_1c1841c8c56c8663798eb9371cc92062.html">feelpoly</a></li><li class="navelem"><a class="el" href="im_8hpp.html">im.hpp</a></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:49 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

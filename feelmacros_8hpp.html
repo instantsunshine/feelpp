@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -109,24 +109,44 @@ $(document).ready(function(){initNavTree('feelmacros_8hpp.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:ab2d9c3a2773605b72df85a7a0de8fb61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2d9c3a2773605b72df85a7a0de8fb61"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CONSTRUCTOR</b>(A)&#160;&#160;&#160;<a class="el" href="feelmacros_8hpp.html#aa7db438b007de409caf4724d548d5c39">FEELPP_CONSTRUCTOR_BEGIN</a>(A)</td></tr>
+<tr class="memitem:aab535b0410d5986c86401e8f1bae02a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab535b0410d5986c86401e8f1bae02a4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DESTRUCTOR</b>(A)&#160;&#160;&#160;<a class="el" href="feelmacros_8hpp.html#a1042092b8f72ec768698753c9537c9e8">FEELPP_DESTRUCTOR_BEGIN</a>(A)</td></tr>
+<tr class="memitem:a9e922b2f9ae779127f1a3776b7c0bc7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e922b2f9ae779127f1a3776b7c0bc7a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_ALWAYS_INLINE_ATTRIB</b></td></tr>
+<tr class="memitem:ab7af794e85639a1ac6d42b19974ac544"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7af794e85639a1ac6d42b19974ac544"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_CLANG_AT_LEAST</b>(x, y)&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:a0cd19c81de4b6aa17386fc4efa5ac04f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0cd19c81de4b6aa17386fc4efa5ac04f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_CONSTRUCTOR</b>(A)&#160;&#160;&#160;<a class="el" href="feelmacros_8hpp.html#aa7db438b007de409caf4724d548d5c39">FEELPP_CONSTRUCTOR_BEGIN</a>(A)</td></tr>
 <tr class="memitem:aa7db438b007de409caf4724d548d5c39"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#aa7db438b007de409caf4724d548d5c39">FEELPP_CONSTRUCTOR_BEGIN</a>(A)&#160;&#160;&#160;DVLOG(3) &lt;&lt; &quot;Constructor of &quot; &lt;&lt; A &lt;&lt; &quot; begins\n&quot;;</td></tr>
 <tr class="memitem:aaa1fb5f1c77aff551591188b80dbb7c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#aaa1fb5f1c77aff551591188b80dbb7c5">FEELPP_CONSTRUCTOR_END</a>(A)&#160;&#160;&#160;DVLOG(3) &lt;&lt; &quot;Constructor of &quot; &lt;&lt; A &lt;&lt; &quot; ends\n&quot;;</td></tr>
+<tr class="memitem:ae1047b19c7799995bfe3f9ac78e05ddd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1047b19c7799995bfe3f9ac78e05ddd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_DEBUG_VAR</b>(x)&#160;&#160;&#160;std::cerr &lt;&lt; #x &lt;&lt; &quot; = &quot; &lt;&lt; x &lt;&lt; std::endl;</td></tr>
+<tr class="memitem:a0b3a75b0b154ecf75a6a1c7878d942cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#a0b3a75b0b154ecf75a6a1c7878d942cd">FEELPP_DEPRECATED</a></td></tr>
+<tr class="memitem:a494b0cd18a7b5451333bd840e108a81f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a494b0cd18a7b5451333bd840e108a81f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_DESTRUCTOR</b>(A)&#160;&#160;&#160;<a class="el" href="feelmacros_8hpp.html#a4e97403e2c3ac98b5c99e8266fbc2092">FEELPP_DESTRUCTOR_END</a>(A)</td></tr>
 <tr class="memitem:a1042092b8f72ec768698753c9537c9e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#a1042092b8f72ec768698753c9537c9e8">FEELPP_DESTRUCTOR_BEGIN</a>(A)&#160;&#160;&#160;DVLOG(3) &lt;&lt; &quot;Destructor of &quot; &lt;&lt; A &lt;&lt; &quot; begins\n&quot;;</td></tr>
 <tr class="memitem:a4e97403e2c3ac98b5c99e8266fbc2092"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#a4e97403e2c3ac98b5c99e8266fbc2092">FEELPP_DESTRUCTOR_END</a>(A)&#160;&#160;&#160;DVLOG(3) &lt;&lt; &quot;Destructor of &quot; &lt;&lt; A &lt;&lt; &quot; ends\n&quot;;</td></tr>
-<tr class="memitem:a2eb6f9e0395b47b8d5e3eeae4fe0c116"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#a2eb6f9e0395b47b8d5e3eeae4fe0c116">INLINE</a>&#160;&#160;&#160;inline</td></tr>
-<tr class="memitem:a49e458af612db77d6a982699b783eab1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#a49e458af612db77d6a982699b783eab1">FEELPP_RESTRICT</a>&#160;&#160;&#160;__restrict__</td></tr>
-<tr class="memdesc:a49e458af612db77d6a982699b783eab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">C99 feature of restricted(not aliased) pointers and references.  <a href="#a49e458af612db77d6a982699b783eab1"></a><br/></td></tr>
+<tr class="memitem:a794a63cfeec554fdde254ea497f695c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a794a63cfeec554fdde254ea497f695c5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_DONT_INLINE</b></td></tr>
 <tr class="memitem:ab949cc7d41e83108ffd17dd9bfd5dd5b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#ab949cc7d41e83108ffd17dd9bfd5dd5b">FEELPP_EXPORT</a></td></tr>
 <tr class="memdesc:ab949cc7d41e83108ffd17dd9bfd5dd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load time improvements for DSO libraries.  <a href="#ab949cc7d41e83108ffd17dd9bfd5dd5b"></a><br/></td></tr>
-<tr class="memitem:afd589deb669a64692fc8abc1e1a4c0d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#afd589deb669a64692fc8abc1e1a4c0d3">FEELPP_NO_EXPORT</a></td></tr>
-<tr class="memitem:a059b972cbc19169fca22f89ffabacdb9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#a059b972cbc19169fca22f89ffabacdb9">FEELPP_PACKED</a></td></tr>
-<tr class="memitem:a0b3a75b0b154ecf75a6a1c7878d942cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#a0b3a75b0b154ecf75a6a1c7878d942cd">FEELPP_DEPRECATED</a></td></tr>
-<tr class="memitem:a742a1074cdeaeb4ab486a264285fe5fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#a742a1074cdeaeb4ab486a264285fe5fe">FEELPP_ISLIKELY</a>(x)&#160;&#160;&#160;( x )</td></tr>
-<tr class="memitem:a63649bd649ac40de4ad068605ebd6a23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#a63649bd649ac40de4ad068605ebd6a23">FEELPP_ISUNLIKELY</a>(x)&#160;&#160;&#160;( x )</td></tr>
-<tr class="memitem:ad2ea97bee2da693149a3d23e77bb5bf7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#ad2ea97bee2da693149a3d23e77bb5bf7">FEELPP_PREFETCH</a>(x, rw, locality)</td></tr>
-<tr class="memdesc:ad2ea97bee2da693149a3d23e77bb5bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefetching.  <a href="#ad2ea97bee2da693149a3d23e77bb5bf7"></a><br/></td></tr>
+<tr class="memitem:acb81544b836953a9f31b4fdc345aa1cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb81544b836953a9f31b4fdc345aa1cf"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_GNUC_AT_LEAST</b>(x, y)&#160;&#160;&#160;0</td></tr>
 <tr class="memitem:abd925574d4c74d833d509f225782423f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#abd925574d4c74d833d509f225782423f">FEELPP_IS_CONSTANT</a>(n)</td></tr>
 <tr class="memdesc:abd925574d4c74d833d509f225782423f"><td class="mdescLeft">&#160;</td><td class="mdescRight">detect at compile if it is a constant  <a href="#abd925574d4c74d833d509f225782423f"></a><br/></td></tr>
+<tr class="memitem:a742a1074cdeaeb4ab486a264285fe5fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#a742a1074cdeaeb4ab486a264285fe5fe">FEELPP_ISLIKELY</a>(x)&#160;&#160;&#160;( x )</td></tr>
+<tr class="memitem:a63649bd649ac40de4ad068605ebd6a23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#a63649bd649ac40de4ad068605ebd6a23">FEELPP_ISUNLIKELY</a>(x)&#160;&#160;&#160;( x )</td></tr>
+<tr class="memitem:afd589deb669a64692fc8abc1e1a4c0d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#afd589deb669a64692fc8abc1e1a4c0d3">FEELPP_NO_EXPORT</a></td></tr>
+<tr class="memitem:a059b972cbc19169fca22f89ffabacdb9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#a059b972cbc19169fca22f89ffabacdb9">FEELPP_PACKED</a></td></tr>
+<tr class="memitem:ad2ea97bee2da693149a3d23e77bb5bf7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#ad2ea97bee2da693149a3d23e77bb5bf7">FEELPP_PREFETCH</a>(x, rw, locality)</td></tr>
+<tr class="memdesc:ad2ea97bee2da693149a3d23e77bb5bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefetching.  <a href="#ad2ea97bee2da693149a3d23e77bb5bf7"></a><br/></td></tr>
+<tr class="memitem:a49e458af612db77d6a982699b783eab1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#a49e458af612db77d6a982699b783eab1">FEELPP_RESTRICT</a>&#160;&#160;&#160;__restrict__</td></tr>
+<tr class="memdesc:a49e458af612db77d6a982699b783eab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">C99 feature of restricted(not aliased) pointers and references.  <a href="#a49e458af612db77d6a982699b783eab1"></a><br/></td></tr>
+<tr class="memitem:a886165e5daec0a9fd1443d09d36a24f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a886165e5daec0a9fd1443d09d36a24f1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_STRONG_INLINE</b>&#160;&#160;&#160;inline</td></tr>
+<tr class="memitem:a2eb6f9e0395b47b8d5e3eeae4fe0c116"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="feelmacros_8hpp.html#a2eb6f9e0395b47b8d5e3eeae4fe0c116">INLINE</a>&#160;&#160;&#160;inline</td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme <a href="#" onclick="location.href='mai'+'lto:'+'chr'+'is'+'top'+'he'+'.pr'+'ud'+'hom'+'me'+'@fe'+'el'+'pp.'+'or'+'g'; return false;">chris<span style="display: none;">.nosp@m.</span>toph<span style="display: none;">.nosp@m.</span>e.pru<span style="display: none;">.nosp@m.</span>dhom<span style="display: none;">.nosp@m.</span>me@fe<span style="display: none;">.nosp@m.</span>elpp<span style="display: none;">.nosp@m.</span>.org</a> </dd></dl>
@@ -537,8 +557,8 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_b98c83a91512c3be55dc71902560b537.html">feelcore</a></li><li class="navelem"><a class="el" href="feelmacros_8hpp.html">feelmacros.hpp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:04 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_aee4c96ffc3ed41ef7d25ec330d2b2e2.html">feelcore</a></li><li class="navelem"><a class="el" href="feelmacros_8hpp.html">feelmacros.hpp</a></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:54 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -111,16 +111,8 @@ $(document).ready(function(){initNavTree('Environment.html','');});
 <li class="level1"><a href="#Repository">Repository</a><ul><li class="level2"><a href="#Change">changeRepository</a></li>
 <li class="level2"><a href="#Find">findFile</a></li>
 <li class="level2"><a href="#SetLogs">setLogs</a></li>
-<li class="level2"><a href="#Repository_Accessors">Accessors</a></li>
 </ul>
 </li>
-<li class="level1"><a href="#MPI">MPI Environment</a><ul><li class="level2"><a href="#MPI_Accessors">Accesors</a></li>
-</ul>
-</li>
-<li class="level1"><a href="#Description">Miscellaneous</a><ul><li class="level2"><a href="#Miscellaneous_About">About</a></li>
-</ul>
-</li>
-<li class="level1"><a href="#TODO">TODO</a></li>
 </ul>
 </div>
 <div class="textblock"><ul>
@@ -128,6 +120,7 @@ $(document).ready(function(){initNavTree('Environment.html','');});
 <li><b>Next:</b> <a class="el" href="Mesh.html">Meshes</a></li>
 </ul>
 <hr/>
+ In this section, we present some tools to initialize and manipulate <a href="http://www.feelpp.org">Feel++</a> environment. For more information, see <a class="el" href="classFeel_1_1detail_1_1Environment.html">Environment</a>.</p>
 <h1><a class="anchor" id="Initialize"></a>
 Initialize Feel++</h1>
 <p>Environment class is necessary to initialize your application, as seen in <a class="el" href="FirstApp.html">First Feel++ Application</a>. Interface is as follow : </p>
@@ -156,7 +149,7 @@ Add Options</h2>
 <div class="line"></div>
 <div class="line"><span class="keyword">inline</span></div>
 <div class="line">po::options_description</div>
-<div class="line"><a class="code" href="namespaceFeel.html#ac9c8bc6d9632abb259953c3faa835eeb">makeOptions</a>()</div>
+<div class="line">makeOptions()</div>
 <div class="line">{</div>
 <div class="line">  po::options_description myappOptions( <span class="stringliteral">&quot;My app options&quot;</span> );</div>
 <div class="line">  myappOptions.add_options()</div>
@@ -177,7 +170,7 @@ Add Options</h2>
 <p>The data returned is typically used as an argument of a <a class="el" href="classFeel_1_1Application.html" title="provides information about the Application">Feel::Application</a> subclass.</p>
 <p>This routine has to be declared before your <code>main</code> function. Then you can use it to initialize <a href="http://www.feelpp.org">Feel++</a> Environment : </p>
 <div class="fragment"><div class="line">Environment env( _argc=argc, _argv=argv,</div>
-<div class="line">                 _desc=<a class="code" href="namespaceFeel.html#ac9c8bc6d9632abb259953c3faa835eeb">makeOptions</a>(),</div>
+<div class="line">                 _desc=makeOptions(),</div>
 <div class="line">                 _about=about(_name=<span class="stringliteral">&quot;myapp&quot;</span>,</div>
 <div class="line">                              _author=<span class="stringliteral">&quot;myname&quot;</span>,</div>
 <div class="line">                              _email=<span class="stringliteral">&quot;my@email.com&quot;</span>) );</div>
@@ -189,7 +182,7 @@ Add Options</h2>
 <div class="line"></div>
 <div class="line"><span class="keyword">inline</span></div>
 <div class="line">po::options_description</div>
-<div class="line"><a class="code" href="namespaceFeel.html#ac9c8bc6d9632abb259953c3faa835eeb">makeOptions</a>()</div>
+<div class="line">makeOptions()</div>
 <div class="line">{</div>
 <div class="line">    po::options_description laplacianoptions( <span class="stringliteral">&quot;Laplacian options&quot;</span> );</div>
 <div class="line">    laplacianoptions.add_options()</div>
@@ -282,106 +275,6 @@ setLogs</h2>
 <ul>
 <li><code>prefix</code> : prefix for log filenames.</li>
 </ul>
-<h2><a class="anchor" id="Repository_Accessors"></a>
-Accessors</h2>
-<p>There is a list of functions you can use to get information about the repositories used by <a href="http://www.feelpp.org">Feel++</a>. </p>
-<table  class="manual">
-<tr>
-<th>Feel++ function</th><th>Return </th></tr>
-<tr>
-<td><div class="fragment"><div class="line">Environment::rootRepository();</div>
-</div><!-- fragment --></td><td><code>std::string</code> <br/>
-Repository where the results are stored.<br/>
- Default : <code>$HOME/feel</code>. </td></tr>
-<tr>
-<td><div class="fragment"><div class="line">Environment::geoPathList();</div>
-</div><!-- fragment --></td><td><code>std::vector&lt;std::string&gt;</code> <br/>
-The list of paths where Feel++ looks into to find a <a class="el" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator.">Gmsh</a> Geo file </td></tr>
-<tr>
-<td><div class="fragment"><div class="line">Environment::localGeoRepository();</div>
-</div><!-- fragment --></td><td><code>std::string</code> <br/>
-The local geo files repository <br/>
-Default : <code>$HOME/feel/geo</code>  </td></tr>
-<tr>
-<td><div class="fragment"><div class="line">Environment::systemGeoRepository();</div>
-</div><!-- fragment --></td><td><code>boost::tuple&lt;std::string,bool&gt;</code> <br/>
-A tuple : the system geo files repository<br/>
-and <code>true</code> or <code>false</code> whether the directory exists or not <br/>
-Default: <code>/usr/share/feel/geo</code> or <code>/usr/local/share/feel/geo</code>  </td></tr>
-<tr>
-<td><div class="fragment"><div class="line">Environment::localConfigRepository();</div>
-</div><!-- fragment --></td><td><code>std::string</code> <br/>
-The local config files repository<br/>
-Default : <code>$HOME/feel/config</code>  </td></tr>
-<tr>
-<td><div class="fragment"><div class="line">Environment::systemConfigRepository();</div>
-</div><!-- fragment --></td><td><code>boost::tuple&lt;std::string,bool&gt;</code> <br/>
-A tuple : the system config files repository<br/>
-and <code>true</code> or <code>false</code> whether the directory exists or not<br/>
-Default : <code>/usr/share/feel/config</code> or /usr/local/share/feel/config </td></tr>
-<tr>
-<td><div class="fragment"><div class="line">Environment::scratchDirectory();</div>
-</div><!-- fragment --></td><td><code>fs::path</code> <br/>
-The scratch directory </td></tr>
-</table>
-<p><a href="#" class="top">top</a> <hr/>
- <h1><a class="anchor" id="MPI"></a>
-MPI Environment</h1>
-<h2><a class="anchor" id="MPI_Accessors"></a>
-Accesors</h2>
-<p>There is a list of functions you can use to get information about the MPI Environment. </p>
-<table  class="manual">
-<tr>
-<th>Feel++ function</th><th>Description</th><th>Return </th></tr>
-<tr>
-<td><div class="fragment"><div class="line">Environment::initialized();</div>
-</div><!-- fragment --></td><td>Determine if the MPI environment has already been initialized.</td><td><code>bool</code> <br/>
- <code>true</code> if the MPI environment has been initialized. </td></tr>
-<tr>
-<td><div class="fragment"><div class="line">Environment::finalized();</div>
-</div><!-- fragment --></td><td>Determine if the MPI environment has already been finalized.</td><td><code>bool</code> <br/>
- <code>true</code> if the MPI environment has been finalized. </td></tr>
-<tr>
-<td><div class="fragment"><div class="line">Environment::worldComm()</div>
-</div><!-- fragment --></td><td></td><td><code>WorldComm</code> <br/>
-The world communicators. </td></tr>
-<tr>
-<td><div class="fragment"><div class="line">Environment::worldsComm(<span class="keywordtype">int</span> n);</div>
-</div><!-- fragment --></td><td></td><td>std::vector&lt;WorldComm&gt; <br/>
- n sub world communicators </td></tr>
-<tr>
-<td><div class="fragment"><div class="line">Environment::masterWorldComm(<span class="keywordtype">int</span> n);</div>
-</div><!-- fragment --></td><td></td><td><code>WorldComm</code> <br/>
- Master world comm associated with a color map of size n </td></tr>
-<tr>
-<td><div class="fragment"><div class="line">Environment::numberOfProcessors();</div>
-</div><!-- fragment --></td><td></td><td><code>int</code> <br/>
- Number of processors </td></tr>
-<tr>
-<td><div class="fragment"><div class="line">Environment::rank();</div>
-</div><!-- fragment --></td><td></td><td><code>int</code> <br/>
-The rank in global mpi communicators </td></tr>
-</table>
-<p><br/>
- Todo: </p>
-<div class="fragment"><div class="line">setWordlComm( WordlComm&amp; worldcomm);</div>
-</div><!-- fragment --><p><a href="#" class="top">top</a> <hr/>
- <h1><a class="anchor" id="Description"></a>
-Miscellaneous</h1>
-<h2><a class="anchor" id="Miscellaneous_About"></a>
-About</h2>
-<div class="fragment"><div class="line">Environment::about();</div>
-</div><!-- fragment --><p> Is an accessor to the <a class="el" href="classFeel_1_1AboutData.html" title="Holds information needed by the &quot;About&quot; box and other classes.">AboutData</a> of your application. Frequently used to get the application name.</p>
-<p><b>Example :</b><br/>
- </p>
-<div class="fragment"><div class="line">std::cout&lt;&lt; <span class="stringliteral">&quot;Name of my application : &quot;</span> &lt;&lt; Environment::about().appName() &lt;&lt; std::endl;</div>
-</div><!-- fragment --><p><a href="#" class="top">top</a> <hr/>
- <h1><a class="anchor" id="TODO"></a>
-TODO</h1>
-<ul>
-<li><div class="fragment"><div class="line">Environment::addDeleteObserver(Observer <span class="keyword">const</span>&amp; obs );</div>
-</div><!-- fragment --></li>
-</ul>
 <hr/>
 <ul>
 <li><b>Next:</b> <a class="el" href="Mesh.html">Meshes</a> </li>
@@ -391,7 +284,7 @@ TODO</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:05 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:54 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

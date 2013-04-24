@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -173,8 +173,7 @@ boost::numeric::bindings::traits::sparse_matrix_traits<br class="typebreak"/>
 <tr class="memitem:ab2a23eb2123cdff3e2f0a3aece424d51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2a23eb2123cdff3e2f0a3aece424d51"></a>
 typedef std::vector&lt; std::set<br class="typebreak"/>
 &lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pattern_type</b></td></tr>
-<tr class="memitem:aa9ed770526001ce781afcc7969fcc676"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9ed770526001ce781afcc7969fcc676"></a>
-static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_row_major</b></td></tr>
+<tr class="memitem:aa9ed770526001ce781afcc7969fcc676"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_row_major</b></td></tr>
 </table>
 <h2>Member Function Documentation</h2>
 <a class="anchor" id="a77315e357955c3708ed83b0e932d0321"></a>
@@ -653,6 +652,31 @@ template&lt;typename T , typename LayoutType &gt; </div>
 
 </div>
 </div>
+<h2>Member Data Documentation</h2>
+<a class="anchor" id="aa9ed770526001ce781afcc7969fcc676"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename LayoutType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool <a class="el" href="classFeel_1_1MatrixUBlas.html">Feel::MatrixUBlas</a>&lt; T, LayoutType &gt;::is_row_major</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"> boost::is_same&lt;ordering_type,</div>
+<div class="line">                      boost::numeric::bindings::traits::row_major_t&gt;::value</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="matrixublas_8hpp_source.html">matrixublas.hpp</a></li>
 </ul>
@@ -662,7 +686,7 @@ template&lt;typename T , typename LayoutType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1MatrixUBlas.html">MatrixUBlas</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:06 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:56 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

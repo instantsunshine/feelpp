@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -100,7 +100,9 @@ $(document).ready(function(){initNavTree('classFeel_1_1functional_1_1IntegralMom
 <div class="header">
   <div class="summary">
 <a href="classFeel_1_1functional_1_1IntegralMomentOnFace-members.html">List of all members</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::functional::IntegralMomentOnFace&lt; Space &gt; Class Template Reference</div>  </div>
 </div><!--header-->
@@ -125,6 +127,37 @@ class Feel::functional::IntegralMomentOnFace&lt; Space &gt;</h3>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aa7c93457c9293781b4957c76d0338bf3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7c93457c9293781b4957c76d0338bf3"></a>
+typedef <a class="el" href="structFeel_1_1node.html">node</a>&lt; value_type &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>node_type</b></td></tr>
+<tr class="memitem:aafd73b8001b831ea58eb50fce60ee728"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafd73b8001b831ea58eb50fce60ee728"></a>
+typedef super::polynomial_type&#160;</td><td class="memItemRight" valign="bottom"><b>polynomial_type</b></td></tr>
+<tr class="memitem:a3b252ac125d2f48167f25e71dfcee8e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b252ac125d2f48167f25e71dfcee8e1"></a>
+typedef <a class="el" href="classFeel_1_1functional_1_1IntegralMomentOnFace.html">IntegralMomentOnFace</a><br class="typebreak"/>
+&lt; Space &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>self_type</b></td></tr>
+<tr class="memitem:afd562d66b5b669e5f55fedcab96e49e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd562d66b5b669e5f55fedcab96e49e0"></a>
+typedef super::space_type&#160;</td><td class="memItemRight" valign="bottom"><b>space_type</b></td></tr>
+<tr class="memitem:a09a918d43f5eca141071208ad2e47045"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09a918d43f5eca141071208ad2e47045"></a>
+typedef space_type::value_type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
+<tr class="inherit_header pub_types_classFeel_1_1Functional"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1Functional')"><img src="closed.png" alt="-"/>&nbsp;Public Types inherited from <a class="el" href="classFeel_1_1Functional.html">Feel::Functional< Space ></a></td></tr>
+<tr class="memitem:ac0adf3b5174cee7e2433d4fd77a383db inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0adf3b5174cee7e2433d4fd77a383db"></a>
+typedef Space::value_type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
+<tr class="memitem:a8cca8004d4f576203b419e39d86e40c2 inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cca8004d4f576203b419e39d86e40c2"></a>
+typedef <a class="el" href="classFeel_1_1Functional.html">Functional</a>&lt; Space &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>self_type</b></td></tr>
+<tr class="memitem:a5867eb2552ab6fee4202e544fd1dae94 inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5867eb2552ab6fee4202e544fd1dae94"></a>
+typedef Space&#160;</td><td class="memItemRight" valign="bottom"><b>space_type</b></td></tr>
+<tr class="memitem:a2efd7404df7bb6a80768fcd30b490c9e inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2efd7404df7bb6a80768fcd30b490c9e"></a>
+typedef Space&#160;</td><td class="memItemRight" valign="bottom"><b>polynomialset_type</b></td></tr>
+<tr class="memitem:ac4f1b58a7cde88e9990c1aee9d0a2a7a inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4f1b58a7cde88e9990c1aee9d0a2a7a"></a>
+typedef space_type::polynomial_type&#160;</td><td class="memItemRight" valign="bottom"><b>polynomial_type</b></td></tr>
+<tr class="memitem:abb183d762b69060ad9e5298abb6a40a6 inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb183d762b69060ad9e5298abb6a40a6"></a>
+typedef space_type::basis_type&#160;</td><td class="memItemRight" valign="bottom"><b>basis_type</b></td></tr>
+<tr class="memitem:a0eef4b37679b69857436449dec411748 inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0eef4b37679b69857436449dec411748"></a>
+typedef space_type::matrix_type&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_type</b></td></tr>
+<tr class="memitem:a02aa2150cd9469101eb923ec692e9634 inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02aa2150cd9469101eb923ec692e9634"></a>
+typedef ublas::matrix&lt; value_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>rep_type</b></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adc1f9dfc1adf919c0caaf75c8182fe1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1functional_1_1IntegralMomentOnFace.html#adc1f9dfc1adf919c0caaf75c8182fe1b">IntegralMomentOnFace</a> (space_type const &amp;p, uint16_type k, IntegrationFaceEnum face=ALL_FACES)</td></tr>
@@ -149,25 +182,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Functional</b> ()
 <tr class="memitem:a2ee31fd7860198f931bec050b8e2abdc inherit pub_methods_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ee31fd7860198f931bec050b8e2abdc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoefficient</b> (matrix_type const &amp;__coeff)</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classFeel_1_1Functional"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1Functional')"><img src="closed.png" alt="-"/>&nbsp;Public Types inherited from <a class="el" href="classFeel_1_1Functional.html">Feel::Functional< Space ></a></td></tr>
-<tr class="memitem:ac0adf3b5174cee7e2433d4fd77a383db inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0adf3b5174cee7e2433d4fd77a383db"></a>
-typedef Space::value_type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
-<tr class="memitem:a8cca8004d4f576203b419e39d86e40c2 inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cca8004d4f576203b419e39d86e40c2"></a>
-typedef <a class="el" href="classFeel_1_1Functional.html">Functional</a>&lt; Space &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>self_type</b></td></tr>
-<tr class="memitem:a5867eb2552ab6fee4202e544fd1dae94 inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5867eb2552ab6fee4202e544fd1dae94"></a>
-typedef Space&#160;</td><td class="memItemRight" valign="bottom"><b>space_type</b></td></tr>
-<tr class="memitem:a2efd7404df7bb6a80768fcd30b490c9e inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2efd7404df7bb6a80768fcd30b490c9e"></a>
-typedef Space&#160;</td><td class="memItemRight" valign="bottom"><b>polynomialset_type</b></td></tr>
-<tr class="memitem:ac4f1b58a7cde88e9990c1aee9d0a2a7a inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4f1b58a7cde88e9990c1aee9d0a2a7a"></a>
-typedef space_type::polynomial_type&#160;</td><td class="memItemRight" valign="bottom"><b>polynomial_type</b></td></tr>
-<tr class="memitem:abb183d762b69060ad9e5298abb6a40a6 inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb183d762b69060ad9e5298abb6a40a6"></a>
-typedef space_type::basis_type&#160;</td><td class="memItemRight" valign="bottom"><b>basis_type</b></td></tr>
-<tr class="memitem:a0eef4b37679b69857436449dec411748 inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0eef4b37679b69857436449dec411748"></a>
-typedef space_type::matrix_type&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_type</b></td></tr>
-<tr class="memitem:a02aa2150cd9469101eb923ec692e9634 inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02aa2150cd9469101eb923ec692e9634"></a>
-typedef ublas::matrix&lt; value_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>rep_type</b></td></tr>
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a519ccf6d69e6e11aa244de782779c498"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a519ccf6d69e6e11aa244de782779c498"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nComponents</b> = space_type::nComponents</td></tr>
 <tr class="inherit_header pub_static_attribs_classFeel_1_1Functional"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classFeel_1_1Functional')"><img src="closed.png" alt="-"/>&nbsp;Static Public Attributes inherited from <a class="el" href="classFeel_1_1Functional.html">Feel::Functional< Space ></a></td></tr>
 <tr class="memitem:ae7d7e4f17d478d7ae14db64cb4a89df3 inherit pub_static_attribs_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7d7e4f17d478d7ae14db64cb4a89df3"></a>
 static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nComponents</b> = space_type::nComponents</td></tr>
@@ -291,7 +309,7 @@ template&lt;typename Space &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><b>functional</b></li><li class="navelem"><a class="el" href="classFeel_1_1functional_1_1IntegralMomentOnFace.html">IntegralMomentOnFace</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:09 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:58 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

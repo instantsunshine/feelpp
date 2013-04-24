@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -99,7 +99,9 @@ $(document).ready(function(){initNavTree('structFeel_1_1Component.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="structFeel_1_1Component-members.html">List of all members</a>  </div>
+<a href="structFeel_1_1Component-members.html">List of all members</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::Component&lt; T &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
@@ -113,7 +115,33 @@ struct Feel::Component&lt; T &gt;</h3>
 <p>Get the component type out the available types </p>
 <div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">typename</span> Component&lt;Vectorial&lt;3&gt; &gt;::type component_type;</div>
 <div class="line"><span class="comment">// component_type should be of type \c Scalar&lt;3&gt;</span></div>
-</div><!-- fragment --> </div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><!-- fragment --> </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a6804f9f5204374e931ac0dc682757661"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6804f9f5204374e931ac0dc682757661"></a>
+typedef mpl::if_<br class="typebreak"/>
+&lt; boost::is_same&lt; T, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a><br class="typebreak"/>
+&lt; nDim &gt; &gt;, mpl::identity<br class="typebreak"/>
+&lt; <a class="el" href="structFeel_1_1Scalar.html">Scalar</a>&lt; nDim &gt; &gt;, typename <br class="typebreak"/>
+mpl::if_&lt; boost::is_same&lt; T, <br class="typebreak"/>
+<a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a>&lt; nDim &gt;<br class="typebreak"/>
+ &gt;, mpl::identity&lt; <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a><br class="typebreak"/>
+&lt; nDim &gt; &gt;, typename mpl::if_<br class="typebreak"/>
+&lt; boost::is_same&lt; T, <a class="el" href="structFeel_1_1Tensor2.html">Tensor2</a><br class="typebreak"/>
+&lt; nDim &gt; &gt;, mpl::identity<br class="typebreak"/>
+&lt; <a class="el" href="structFeel_1_1Tensor2.html">Tensor2</a>&lt; nDim &gt; &gt; &gt;::type &gt;<br class="typebreak"/>
+::type &gt;::type::type&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
+<tr class="memitem:acd6d6b1cd124eef119c1b80b67a4cdb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd6d6b1cd124eef119c1b80b67a4cdb8"></a>
+typedef mpl::vector&lt; <a class="el" href="structFeel_1_1Scalar.html">Scalar</a><br class="typebreak"/>
+&lt; nDim &gt;, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a>&lt; nDim &gt;<br class="typebreak"/>
+, <a class="el" href="structFeel_1_1Tensor2.html">Tensor2</a>&lt; nDim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>types</b></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a59b0613dda434059318f45939b19c2a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59b0613dda434059318f45939b19c2a4"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nDim</b> = T::nDim</td></tr>
+</table>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="feelpoly_2policy_8hpp_source.html">feelpoly/policy.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -122,7 +150,7 @@ struct Feel::Component&lt; T &gt;</h3>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="structFeel_1_1Component.html">Component</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:07 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:55 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

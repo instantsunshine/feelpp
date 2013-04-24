@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -99,7 +99,8 @@ $(document).ready(function(){initNavTree('classFeel_1_1fem_1_1CrouzeixRaviart.ht
 
 <div class="header">
   <div class="summary">
-<a href="classFeel_1_1fem_1_1CrouzeixRaviart-members.html">List of all members</a>  </div>
+<a href="classFeel_1_1fem_1_1CrouzeixRaviart-members.html">List of all members</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::fem::CrouzeixRaviart&lt; N, RealDim, PolySetType, T, Convex, TheTAG &gt; Class Template Reference</div>  </div>
 </div><!--header-->
@@ -157,6 +158,11 @@ matrix_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b>
 <tr class="memitem:ae58299f7d72885e853e278a324e777d1 inherit pub_methods_classFeel_1_1FiniteElement"><td class="memItemLeft" align="right" valign="top">points_type const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1FiniteElement.html#ae58299f7d72885e853e278a324e777d1">points</a> () const</td></tr>
 <tr class="memitem:a8d59ccb6dd47411e9f08a4d2be232b51 inherit pub_methods_classFeel_1_1FiniteElement"><td class="memItemLeft" align="right" valign="top">points_type const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1FiniteElement.html#a8d59ccb6dd47411e9f08a4d2be232b51">points</a> (uint16_type f) const</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a56488cc6aac2588cf602ecac095e1ef5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56488cc6aac2588cf602ecac095e1ef5"></a>
+reference_convex_type&#160;</td><td class="memItemRight" valign="bottom"><b>_M_refconvex</b></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="member-group"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ac6923bd1cbe6faa84907bbc71b8670a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6923bd1cbe6faa84907bbc71b8670a0"></a>
@@ -206,14 +212,11 @@ static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>n
 static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_product</b> = true</td></tr>
 <tr class="memitem:a7441d39ca6282856fabdeadac2366b20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7441d39ca6282856fabdeadac2366b20"></a>
 static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nbPtsPerVertex</b> = 0</td></tr>
-<tr class="memitem:aeaadd1c47582f1c9c3cc79ea4a07c4a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeaadd1c47582f1c9c3cc79ea4a07c4a5"></a>
-static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nbPtsPerEdge</b></td></tr>
-<tr class="memitem:a38a0296f2152bdbd1d2ce78e9b3d9a1b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38a0296f2152bdbd1d2ce78e9b3d9a1b"></a>
-static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nbPtsPerFace</b></td></tr>
+<tr class="memitem:aeaadd1c47582f1c9c3cc79ea4a07c4a5"><td class="memItemLeft" align="right" valign="top">static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nbPtsPerEdge</b></td></tr>
+<tr class="memitem:a38a0296f2152bdbd1d2ce78e9b3d9a1b"><td class="memItemLeft" align="right" valign="top">static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nbPtsPerFace</b></td></tr>
 <tr class="memitem:a918d95317052e9051f147ed84c3f1893"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a918d95317052e9051f147ed84c3f1893"></a>
 static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nbPtsPerVolume</b> = 0</td></tr>
-<tr class="memitem:a9d824a9fb20b92230cdec318c9186c0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d824a9fb20b92230cdec318c9186c0e"></a>
-static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>numPoints</b></td></tr>
+<tr class="memitem:a9d824a9fb20b92230cdec318c9186c0e"><td class="memItemLeft" align="right" valign="top">static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>numPoints</b></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="member-group"></a>
 Methods</h2></td></tr>
@@ -388,6 +391,81 @@ template&lt;uint16_type N, uint16_type RealDim, template&lt; uint16_type Dim &gt
 
 </div>
 </div>
+<h2>Member Data Documentation</h2>
+<a class="anchor" id="aeaadd1c47582f1c9c3cc79ea4a07c4a5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_type N, uint16_type RealDim, template&lt; uint16_type Dim &gt; class PolySetType, typename T  = double, template&lt; uint16_type, uint16_type, uint16_type &gt; class Convex = Simplex, uint16_type TheTAG = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint16_type <a class="el" href="classFeel_1_1fem_1_1CrouzeixRaviart.html">Feel::fem::CrouzeixRaviart</a>&lt; N, RealDim, PolySetType, T, <a class="el" href="classFeel_1_1Convex.html">Convex</a>, TheTAG &gt;::nbPtsPerEdge</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"> mpl::if_&lt;mpl::equal_to&lt;mpl::int_&lt;nDim&gt;,mpl::int_&lt;2&gt; &gt;,</div>
+<div class="line">                             mpl::int_&lt;reference_convex_type::nbPtsPerEdge&gt;,</div>
+<div class="line">                             mpl::int_&lt;0&gt; &gt;::type::value</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a38a0296f2152bdbd1d2ce78e9b3d9a1b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_type N, uint16_type RealDim, template&lt; uint16_type Dim &gt; class PolySetType, typename T  = double, template&lt; uint16_type, uint16_type, uint16_type &gt; class Convex = Simplex, uint16_type TheTAG = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint16_type <a class="el" href="classFeel_1_1fem_1_1CrouzeixRaviart.html">Feel::fem::CrouzeixRaviart</a>&lt; N, RealDim, PolySetType, T, <a class="el" href="classFeel_1_1Convex.html">Convex</a>, TheTAG &gt;::nbPtsPerFace</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"> mpl::if_&lt;mpl::equal_to&lt;mpl::int_&lt;nDim&gt;,mpl::int_&lt;3&gt; &gt;,</div>
+<div class="line">                             mpl::int_&lt;reference_convex_type::nbPtsPerFace&gt;,</div>
+<div class="line">                             mpl::int_&lt;0&gt; &gt;::type::value</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a9d824a9fb20b92230cdec318c9186c0e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_type N, uint16_type RealDim, template&lt; uint16_type Dim &gt; class PolySetType, typename T  = double, template&lt; uint16_type, uint16_type, uint16_type &gt; class Convex = Simplex, uint16_type TheTAG = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint16_type <a class="el" href="classFeel_1_1fem_1_1CrouzeixRaviart.html">Feel::fem::CrouzeixRaviart</a>&lt; N, RealDim, PolySetType, T, <a class="el" href="classFeel_1_1Convex.html">Convex</a>, TheTAG &gt;::numPoints</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"> ( reference_convex_type::numGeometricFaces*nbPtsPerFace+</div>
+<div class="line">                                           reference_convex_type::numEdges*nbPtsPerEdge )</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="crouzeixraviart_8hpp_source.html">crouzeixraviart.hpp</a></li>
 </ul>
@@ -397,7 +475,7 @@ template&lt;uint16_type N, uint16_type RealDim, template&lt; uint16_type Dim &gt
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><b>fem</b></li><li class="navelem"><a class="el" href="classFeel_1_1fem_1_1CrouzeixRaviart.html">CrouzeixRaviart</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:08 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:57 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -637,7 +637,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;</div>
 <div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;} <span class="comment">// namespace detail</span></div>
 <div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00759"></a><span class="lineno"><a class="code" href="namespaceFeel.html#ad050e075255cb0f4a10826a58273d022">  759</a></span>&#160;BOOST_PARAMETER_FUNCTION(</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;BOOST_PARAMETER_FUNCTION(</div>
 <div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    ( <span class="keyword">typename</span> Feel::detail::mesh&lt;Args&gt;::ptrtype ), <span class="comment">// return type</span></div>
 <div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;    straightenMesh,    <span class="comment">// 2. function name</span></div>
 <div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;</div>
@@ -688,7 +688,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;</div>
 <div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;    <span class="keywordflow">if</span> ( save )</div>
 <div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    {</div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;        exporter = <a class="code" href="classFeel_1_1Exporter.html" title="export Feel generated data to some file formatsUse the visitor and factory pattern.">Exporter&lt;_mesh_type,_mesh_type::nOrder&gt;::New</a>( <span class="stringliteral">&quot;gmsh&quot;</span><span class="comment">/*test_app-&gt;vm()*/</span>, <span class="stringliteral">&quot;straightener&quot;</span> );</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;        exporter = Exporter&lt;_mesh_type,_mesh_type::nOrder&gt;::New( <span class="stringliteral">&quot;gmsh&quot;</span><span class="comment">/*test_app-&gt;vm()*/</span>, <span class="stringliteral">&quot;straightener&quot;</span> );</div>
 <div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;        exporter-&gt;step( 0 )-&gt;setMesh( _mesh );</div>
 <div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;        exporter-&gt;step( 0 )-&gt;add( <span class="stringliteral">&quot;xHo&quot;</span>, xHo );</div>
 <div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;        exporter-&gt;step( 0 )-&gt;add( <span class="stringliteral">&quot;xLo&quot;</span>, xLo );</div>
@@ -698,13 +698,13 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;        exporter-&gt;save();</div>
 <div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;    }</div>
 <div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;    <a class="code" href="classFeel_1_1MeshMover.html" title="Move mesh according to a given map.">MeshMover&lt;_mesh_type&gt;</a> meshmove;</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;    MeshMover&lt;_mesh_type&gt; meshmove;</div>
 <div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;    meshmove.apply( _mesh, straightener );</div>
 <div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;</div>
 <div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;    <span class="keywordflow">return</span> _mesh;</div>
 <div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;}</div>
 <div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;</div>
-<div class="line"><a name="l00836"></a><span class="lineno"><a class="code" href="namespaceFeel.html#a09ce5b8ceee3b86a9222ceec2f9a6351">  836</a></span>&#160;BOOST_PARAMETER_FUNCTION(</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;BOOST_PARAMETER_FUNCTION(</div>
 <div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;    ( <span class="keyword">typename</span> Feel::detail::mesh&lt;Args&gt;::ptrtype ), <span class="comment">// return type</span></div>
 <div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;    loadGMSHMesh,    <span class="comment">// 2. function name</span></div>
 <div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;</div>
@@ -744,30 +744,30 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;        CHECK( !filename_with_path.empty() ) &lt;&lt; <span class="stringliteral">&quot;File &quot;</span> &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot; cannot be found in the following paths list:\n &quot;</span> &lt;&lt; ostr.str();</div>
 <div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;    }</div>
 <div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    <a class="code" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator.">Gmsh</a> gmsh( _mesh_type::nDim,_mesh_type::nOrder, worldcomm );</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    Gmsh gmsh( _mesh_type::nDim,_mesh_type::nOrder, worldcomm );</div>
 <div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    gmsh.setRefinementLevels( refine );</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    gmsh.<a class="code" href="classFeel_1_1Gmsh.html#aea8c57166d4e61226b6f627985042816" title="set the number of partitions">setNumberOfPartitions</a>( partitions );</div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    gmsh.<a class="code" href="classFeel_1_1Gmsh.html#ac3988aee134015edafb0e0e177ec4add" title="set the partitioner">setPartitioner</a>( (GMSH_PARTITIONER)partitioner );</div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;    gmsh.<a class="code" href="classFeel_1_1Gmsh.html#aeb1fcccccf00427a0ffb5c7b2c19bb9b" title="set save msh file by partitions">setMshFileByPartition</a>( partition_file );</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    gmsh.setNumberOfPartitions( partitions );</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    gmsh.setPartitioner( (GMSH_PARTITIONER)partitioner );</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;    gmsh.setMshFileByPartition( partition_file );</div>
 <div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;</div>
 <div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;</div>
 <div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    <span class="comment">// refinement if option is enabled to a value greater or equal to 1</span></div>
 <div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    <span class="keywordflow">if</span> ( refine )</div>
 <div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;    {</div>
-<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;        filename_with_path = gmsh.<a class="code" href="classFeel_1_1Gmsh.html#af8ccac207591aa29a8040abe50228b71">refine</a>( filename_with_path, refine );</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;        filename_with_path = gmsh.refine( filename_with_path, refine );</div>
 <div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;    }</div>
 <div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( rebuild_partitions )</div>
 <div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;    {</div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;        gmsh.<a class="code" href="classFeel_1_1Gmsh.html#aaf90e78b954af643e221310dce95b23a">rebuildPartitionMsh</a>(filename_with_path,rebuild_partitions_filename);</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;        gmsh.rebuildPartitionMsh(filename_with_path,rebuild_partitions_filename);</div>
 <div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;        filename_with_path=rebuild_partitions_filename;</div>
 <div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;    }</div>
 <div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;</div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;    <a class="code" href="classFeel_1_1ImporterGmsh.html" title="gmsh importer class">ImporterGmsh&lt;_mesh_type&gt;</a> <span class="keyword">import</span>( filename_with_path, FEELPP_GMSH_FORMAT_VERSION, worldcomm );</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;    ImporterGmsh&lt;_mesh_type&gt; <span class="keyword">import</span>( filename_with_path, FEELPP_GMSH_FORMAT_VERSION, worldcomm );</div>
 <div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;</div>
 <div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;    <span class="comment">// need to replace physical_region by elementary_region while reading</span></div>
 <div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;    <span class="keywordflow">if</span> ( physical_are_elementary_regions )</div>
 <div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;    {</div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;        <span class="keyword">import</span>.<a class="code" href="classFeel_1_1ImporterGmsh.html#a83648e8c4eee6487acf28ac217354c1c">setElementRegionAsPhysicalRegion</a>( physical_are_elementary_regions );</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;        <span class="keyword">import</span>.setElementRegionAsPhysicalRegion( physical_are_elementary_regions );</div>
 <div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;    }</div>
 <div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;</div>
 <div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;    _mesh-&gt;accept( <span class="keyword">import</span> );</div>
@@ -791,7 +791,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;    <span class="keywordflow">return</span> _mesh;</div>
 <div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;}</div>
 <div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;</div>
-<div class="line"><a name="l00930"></a><span class="lineno"><a class="code" href="namespaceFeel.html#af0342f73318c46b967d5426bbab03326">  930</a></span>&#160;BOOST_PARAMETER_FUNCTION(</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;BOOST_PARAMETER_FUNCTION(</div>
 <div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    ( <span class="keywordtype">void</span> ),          <span class="comment">// return type</span></div>
 <div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;    saveGMSHMesh,    <span class="comment">// 2. function name</span></div>
 <div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    tag,             <span class="comment">// 3. namespace of tag types</span></div>
@@ -806,11 +806,11 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Feel::detail::mesh&lt;Args&gt;::ptrtype _mesh_ptrtype;</div>
 <div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;</div>
 <div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;<span class="preprocessor">#if BOOST_FILESYSTEM_VERSION == 3</span></div>
-<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;<span class="preprocessor"></span>    <a class="code" href="classFeel_1_1ExporterGmsh.html" title="Exporter to GMSH format.">ExporterGmsh&lt;_mesh_type,1&gt;</a> exporter( fs::path( filename ).stem().<span class="keywordtype">string</span>(), 1,  mesh-&gt;worldComm() );</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;<span class="preprocessor"></span>    ExporterGmsh&lt;_mesh_type,1&gt; exporter( fs::path( filename ).stem().<span class="keywordtype">string</span>(), 1,  mesh-&gt;worldComm() );</div>
 <div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;<span class="preprocessor">#elif BOOST_FILESYSTEM_VERSION == 2</span></div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;<span class="preprocessor"></span>    <a class="code" href="classFeel_1_1ExporterGmsh.html" title="Exporter to GMSH format.">ExporterGmsh&lt;_mesh_type,1&gt;</a> exporter( fs::path( filename ).stem(), 1, mesh-&gt;worldComm() );</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;<span class="preprocessor"></span>    ExporterGmsh&lt;_mesh_type,1&gt; exporter( fs::path( filename ).stem(), 1, mesh-&gt;worldComm() );</div>
 <div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;<span class="preprocessor"></span>    exporter.<a class="code" href="classFeel_1_1ExporterGmsh.html#af8d45a8bc3f56a7ca06a7ff3db48f8db">saveMesh</a>( filename, mesh, parametricnodes );</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;<span class="preprocessor"></span>    exporter.saveMesh( filename, mesh, parametricnodes );</div>
 <div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;</div>
 <div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;}</div>
 <div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;</div>
@@ -834,7 +834,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;}</div>
 <div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;</div>
 <div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;</div>
-<div class="line"><a name="l00987"></a><span class="lineno"><a class="code" href="namespaceFeel.html#af724fdff56aeb0207990d6578097294d">  987</a></span>&#160;BOOST_PARAMETER_FUNCTION(</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;BOOST_PARAMETER_FUNCTION(</div>
 <div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;    ( <span class="keyword">typename</span> Feel::detail::mesh&lt;Args&gt;::ptrtype ), <span class="comment">// return type</span></div>
 <div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;    createGMSHMesh,    <span class="comment">// 2. function name</span></div>
 <div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;</div>
@@ -887,12 +887,12 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;            fname = desc-&gt;refine( fname, refine, parametricnodes );</div>
 <div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;        }</div>
 <div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;</div>
-<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;        <a class="code" href="classFeel_1_1ImporterGmsh.html" title="gmsh importer class">ImporterGmsh&lt;_mesh_type&gt;</a> <span class="keyword">import</span>( fname, FEELPP_GMSH_FORMAT_VERSION, worldcomm );</div>
+<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;        ImporterGmsh&lt;_mesh_type&gt; <span class="keyword">import</span>( fname, FEELPP_GMSH_FORMAT_VERSION, worldcomm );</div>
 <div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;</div>
 <div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;        <span class="comment">// need to replace physical_regions by elementary_regions for specific meshes</span></div>
 <div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;        <span class="keywordflow">if</span> ( physical_are_elementary_regions )</div>
 <div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;        {</div>
-<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;            <span class="keyword">import</span>.<a class="code" href="classFeel_1_1ImporterGmsh.html#a83648e8c4eee6487acf28ac217354c1c">setElementRegionAsPhysicalRegion</a>( physical_are_elementary_regions );</div>
+<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;            <span class="keyword">import</span>.setElementRegionAsPhysicalRegion( physical_are_elementary_regions );</div>
 <div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;        }</div>
 <div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;</div>
 <div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;        _mesh-&gt;accept( <span class="keyword">import</span> );</div>
@@ -917,7 +917,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;}</div>
 <div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;</div>
 <div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;</div>
-<div class="line"><a name="l01093"></a><span class="lineno"><a class="code" href="namespaceFeel.html#a8518d53a53b13599af33e4379f62ac79"> 1093</a></span>&#160;BOOST_PARAMETER_FUNCTION(</div>
+<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;BOOST_PARAMETER_FUNCTION(</div>
 <div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;    ( gmsh_ptrtype ), <span class="comment">// return type</span></div>
 <div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;    domain,    <span class="comment">// 2. function name</span></div>
 <div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;    tag,           <span class="comment">// 3. namespace of tag types</span></div>
@@ -956,7 +956,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;    <span class="keywordflow">return</span> gmsh_ptr;</div>
 <div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;}</div>
 <div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;</div>
-<div class="line"><a name="l01140"></a><span class="lineno"><a class="code" href="namespaceFeel.html#ad1b415f245f0527f8d7b34d05d3c8abb"> 1140</a></span>&#160;BOOST_PARAMETER_FUNCTION(</div>
+<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;BOOST_PARAMETER_FUNCTION(</div>
 <div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;    ( gmsh_ptrtype ), <span class="comment">// return type</span></div>
 <div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;    geo,    <span class="comment">// 2. function name</span></div>
 <div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;    tag,           <span class="comment">// 3. namespace of tag types</span></div>
@@ -971,7 +971,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;    )</div>
 <div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;</div>
 <div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;{</div>
-<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;    gmsh_ptrtype gmsh_ptr( <span class="keyword">new</span> <a class="code" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator.">Gmsh</a>( 3, 1 ) );</div>
+<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;    gmsh_ptrtype gmsh_ptr( <span class="keyword">new</span> Gmsh( 3, 1 ) );</div>
 <div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;</div>
 <div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;    gmsh_ptr-&gt;setCharacteristicLength( h );</div>
 <div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;<span class="preprocessor">#if BOOST_FILESYSTEM_VERSION == 3</span></div>
@@ -1031,7 +1031,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;</div>
 <div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;</div>
 <div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;</div>
-<div class="line"><a name="l01222"></a><span class="lineno"><a class="code" href="namespaceFeel.html#a38c357a62020b9c7ce88ff305e3a5ff7"> 1222</a></span>&#160;BOOST_PARAMETER_FUNCTION(</div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;BOOST_PARAMETER_FUNCTION(</div>
 <div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;    ( gmsh_ptrtype ), <span class="comment">// return type</span></div>
 <div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;    mshconvert,    <span class="comment">// 2. function name</span></div>
 <div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;    tag,           <span class="comment">// 3. namespace of tag types</span></div>
@@ -1042,7 +1042,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;      ( order,              *( boost::is_integral&lt;mpl::_&gt; ), 1 ) )</div>
 <div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;    )</div>
 <div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;{</div>
-<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;    gmsh_ptrtype gmsh_ptr( <span class="keyword">new</span> <a class="code" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator.">Gmsh</a>( 3, 1 ) );</div>
+<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;    gmsh_ptrtype gmsh_ptr( <span class="keyword">new</span> Gmsh( 3, 1 ) );</div>
 <div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;<span class="preprocessor">#if BOOST_FILESYSTEM_VERSION == 3</span></div>
 <div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;<span class="preprocessor"></span>    gmsh_ptr-&gt;setPrefix( fs::path( filename ).stem().<span class="keywordtype">string</span>() );</div>
 <div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;<span class="preprocessor">#elif BOOST_FILESYSTEM_VERSION == 2</span></div>
@@ -1070,7 +1070,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;    <span class="keywordflow">return</span> gmsh_ptr;</div>
 <div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;}</div>
 <div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;</div>
-<div class="line"><a name="l01266"></a><span class="lineno"><a class="code" href="namespaceFeel.html#a62346cec73fcc4c172c2a5ccefd41fdd"> 1266</a></span>&#160;BOOST_PARAMETER_FUNCTION(</div>
+<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;BOOST_PARAMETER_FUNCTION(</div>
 <div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;    ( std::string ), <span class="comment">// return type</span></div>
 <div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;    img2msh,    <span class="comment">// 2. function name</span></div>
 <div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;    tag,           <span class="comment">// 3. namespace of tag types</span></div>
@@ -1080,7 +1080,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;      ( prefix,       *( boost::is_convertible&lt;mpl::_,std::string&gt; ), fs::path( filename ).stem() ) )</div>
 <div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;    )</div>
 <div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;{</div>
-<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;    gmsh_ptrtype gmsh_ptr( <span class="keyword">new</span> <a class="code" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator.">Gmsh</a>( 2, 1 ) );</div>
+<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;    gmsh_ptrtype gmsh_ptr( <span class="keyword">new</span> Gmsh( 2, 1 ) );</div>
 <div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;    gmsh_ptr-&gt;setPrefix( prefix );</div>
 <div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;    std::string meshname = ( boost::format( <span class="stringliteral">&quot;%1%-0.msh&quot;</span> ) % prefix ).str();</div>
 <div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;</div>
@@ -1117,7 +1117,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;boost::shared_ptr&lt;Mesh&lt;Simplex&lt;2,Ngeo&gt; &gt; &gt;</div>
 <div class="line"><a name="l01320"></a><span class="lineno"><a class="code" href="namespaceFeel.html#acb52ee369375c35506744aa7b7f77850"> 1320</a></span>&#160;<a class="code" href="namespaceFeel.html#acb52ee369375c35506744aa7b7f77850">unitCircle</a>( <span class="keywordtype">double</span> h = option(_name=<span class="stringliteral">&quot;gmsh.hsize&quot;</span>).<span class="keyword">template</span> as&lt;double&gt;() )</div>
 <div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;{</div>
-<div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;    <span class="keywordflow">return</span> createGMSHMesh(_mesh=<span class="keyword">new</span> Mesh&lt;<a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex&lt;2,Ngeo&gt;</a> &gt;,</div>
+<div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;    <span class="keywordflow">return</span> createGMSHMesh(_mesh=<span class="keyword">new</span> <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class">Mesh</a>&lt;<a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex&lt;2,Ngeo&gt;</a> &gt;,</div>
 <div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;                          _desc=domain( _name=<span class="stringliteral">&quot;square&quot;</span>,</div>
 <div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;                                        _shape=<span class="stringliteral">&quot;ellipsoid&quot;</span>,</div>
 <div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;                                        _dim=2,</div>
@@ -1131,7 +1131,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01336"></a><span class="lineno"> 1336</span>&#160;boost::shared_ptr&lt;Mesh&lt;Simplex&lt;3,Ngeo&gt; &gt; &gt;</div>
 <div class="line"><a name="l01337"></a><span class="lineno"><a class="code" href="namespaceFeel.html#a5f23b38aeff08e0c33d858c57e5093ab"> 1337</a></span>&#160;<a class="code" href="namespaceFeel.html#a5f23b38aeff08e0c33d858c57e5093ab">unitSphere</a>( <span class="keywordtype">double</span> h = option(_name=<span class="stringliteral">&quot;gmsh.hsize&quot;</span>).<span class="keyword">template</span> as&lt;double&gt;() )</div>
 <div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;{</div>
-<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;    <span class="keywordflow">return</span> createGMSHMesh(_mesh=<span class="keyword">new</span> Mesh&lt;<a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex&lt;3,Ngeo&gt;</a> &gt;,</div>
+<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;    <span class="keywordflow">return</span> createGMSHMesh(_mesh=<span class="keyword">new</span> <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class">Mesh</a>&lt;<a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex&lt;3,Ngeo&gt;</a> &gt;,</div>
 <div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;                          _desc=domain( _name=<span class="stringliteral">&quot;sphere&quot;</span>,</div>
 <div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;                                        _shape=<span class="stringliteral">&quot;ellipsoid&quot;</span>,</div>
 <div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;                                        _dim=3,</div>
@@ -1159,7 +1159,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160;</div>
 <div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160;</div>
 <div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;</div>
-<div class="line"><a name="l01380"></a><span class="lineno"><a class="code" href="namespaceFeel.html#add0ddfd3d044073b3e24085491b1f22a"> 1380</a></span>&#160;BOOST_PARAMETER_FUNCTION(</div>
+<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;BOOST_PARAMETER_FUNCTION(</div>
 <div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;    ( <span class="keyword">typename</span> Feel::detail::mesh&lt;Args&gt;::ptrtype ), <span class="comment">// return type</span></div>
 <div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;    loadMesh,    <span class="comment">// 2. function name</span></div>
 <div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;</div>
@@ -1238,8 +1238,8 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_e5f0dfdce99b571c03f822e68138ad6d.html">feelfilters</a></li><li class="navelem"><a class="el" href="gmsh_8hpp.html">gmsh.hpp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:00 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_20ecd942a77abb86794d08a686402ca9.html">feelfilters</a></li><li class="navelem"><a class="el" href="gmsh_8hpp.html">gmsh.hpp</a></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:49 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

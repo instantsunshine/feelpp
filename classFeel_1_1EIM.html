@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -99,7 +99,9 @@ $(document).ready(function(){initNavTree('classFeel_1_1EIM.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="classFeel_1_1EIM-members.html">List of all members</a>  </div>
+<a href="classFeel_1_1EIM-members.html">List of all members</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::EIM&lt; ModelType &gt; Class Template Reference</div>  </div>
 </div><!--header-->
@@ -233,6 +235,46 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBDB.html#a57b7b91bc9b624aa98653f5c5897747d">setDBFilename</a> (std::string const &amp;filename)</td></tr>
 <tr class="memdesc:a57b7b91bc9b624aa98653f5c5897747d inherit pub_methods_classFeel_1_1CRBDB"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the DB filename <br/></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a00061e3976ab27db2284e22cc9bde1fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00061e3976ab27db2284e22cc9bde1fd"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nDim</b> = ModelType::nDim</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a021cb9c37952f0be4e033fce62a3ac77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a021cb9c37952f0be4e033fce62a3ac77"></a>
+matrix_type&#160;</td><td class="memItemRight" valign="bottom"><b>M_B</b></td></tr>
+<tr class="memitem:a69135d1080239db1fa71d46ad76cf2e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69135d1080239db1fa71d46ad76cf2e3"></a>
+std::vector&lt; element_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>M_g</b></td></tr>
+<tr class="memitem:a5f5b7de895f8f1f5300b54f728b1e5ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f5b7de895f8f1f5300b54f728b1e5ae"></a>
+std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>M_index_max</b></td></tr>
+<tr class="memitem:a9a5a220c575db9fe4eeb150333b43e3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a5a220c575db9fe4eeb150333b43e3a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_is_read</b></td></tr>
+<tr class="memitem:adc64b4020f3ca22cb521cacdb37edd90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc64b4020f3ca22cb521cacdb37edd90"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_is_written</b></td></tr>
+<tr class="memitem:ae6455abe9f179608ab609ec0e6adea76"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6455abe9f179608ab609ec0e6adea76"></a>
+<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>M_M</b></td></tr>
+<tr class="memitem:a9e447802722f336660624fc49f9f85b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e447802722f336660624fc49f9f85b8"></a>
+<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>M_M_max</b></td></tr>
+<tr class="memitem:acd208fc36fb740218c02e6d5cea8bf89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd208fc36fb740218c02e6d5cea8bf89"></a>
+model_type *&#160;</td><td class="memItemRight" valign="bottom"><b>M_model</b></td></tr>
+<tr class="memitem:a27332224d8a5f6fac2429a23dcf9e418"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27332224d8a5f6fac2429a23dcf9e418"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>M_name</b></td></tr>
+<tr class="memitem:a5937df6d4c6749c438ddde058ef673a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5937df6d4c6749c438ddde058ef673a3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_offline_done</b></td></tr>
+<tr class="memitem:a358987a7a28eff5a91ec207d7df2e8a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a358987a7a28eff5a91ec207d7df2e8a5"></a>
+std::vector&lt; element_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>M_q</b></td></tr>
+<tr class="memitem:ae5e88b9538f5db071c5a12fb0bb2e403"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5e88b9538f5db071c5a12fb0bb2e403"></a>
+std::vector&lt; node_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>M_t</b></td></tr>
+<tr class="memitem:a8b6586cd7b4cabbe358e7f95868ba068"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b6586cd7b4cabbe358e7f95868ba068"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>M_tol</b></td></tr>
+<tr class="memitem:a5ff9bcdaa07555b7ffa0190f72ba0bb7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ff9bcdaa07555b7ffa0190f72ba0bb7"></a>
+sampling_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>M_trainset</b></td></tr>
+<tr class="memitem:ad1ff1b1a7b3927384e2eecb58e426dfa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1ff1b1a7b3927384e2eecb58e426dfa"></a>
+po::variables_map&#160;</td><td class="memItemRight" valign="bottom"><b>M_vm</b></td></tr>
+<tr class="memitem:adfb95db458021cc8175114ecead47e83"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfb95db458021cc8175114ecead47e83"></a>
+<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>M_WN</b></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="member-group"></a>
 Methods</h2></td></tr>
 <tr class="memitem:ac98d07dd8f7b70e16ccb9a01abf56b9c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac98d07dd8f7b70e16ccb9a01abf56b9c"></a>
@@ -263,6 +305,18 @@ element_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b
 <tr class="memitem:a1f79b4febcbb08705d42eec60f0d6cac"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1f79b4febcbb08705d42eec60f0d6cac"></a>
 template&lt;class Archive &gt; </td></tr>
 <tr class="memitem:a1f79b4febcbb08705d42eec60f0d6cac"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>serialize</b> (Archive &amp;__ar, const unsigned int __version)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classFeel_1_1CRBDB"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classFeel_1_1CRBDB')"><img src="closed.png" alt="-"/>&nbsp;Protected Member Functions inherited from <a class="el" href="classFeel_1_1CRBDB.html">Feel::CRBDB</a></td></tr>
+<tr class="memitem:ae87a3969aa510d8cc8d53e53c42db288 inherit pro_methods_classFeel_1_1CRBDB"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae87a3969aa510d8cc8d53e53c42db288"></a>
+template&lt;class Archive &gt; </td></tr>
+<tr class="memitem:ae87a3969aa510d8cc8d53e53c42db288"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>load</b> (Archive &amp;ar, const unsigned int version)</td></tr>
+<tr class="memitem:a3d4de9be10efe26ddd9b7759dcecaa4a inherit pro_methods_classFeel_1_1CRBDB"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3d4de9be10efe26ddd9b7759dcecaa4a"></a>
+template&lt;class Archive &gt; </td></tr>
+<tr class="memitem:a3d4de9be10efe26ddd9b7759dcecaa4a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>save</b> (Archive &amp;ar, const unsigned int version) const </td></tr>
+<tr class="memitem:a6a903e732be9451e6c9f7068e88fc050 inherit pro_methods_classFeel_1_1CRBDB"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a903e732be9451e6c9f7068e88fc050"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setIsLoaded</b> (bool isloaded)</td></tr>
 </table>
 <h2>Member Function Documentation</h2>
 <a class="anchor" id="a24933b72d48f543fdb68796082dd0a98"></a>
@@ -493,7 +547,7 @@ template&lt;typename ModelType&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1EIM.html">EIM</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:07 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:55 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

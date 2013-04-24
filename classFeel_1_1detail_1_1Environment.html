@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -104,8 +104,6 @@ $(document).ready(function(){initNavTree('classFeel_1_1detail_1_1Environment.htm
 <div class="title">Feel::detail::Environment Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="environment_8hpp_source.html">environment.hpp</a>&gt;</code></p>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Initialize, finalize, and query the Feel++ environment. </p>
 <p>The <code><a class="el" href="classFeel_1_1detail_1_1Environment.html" title="Initialize, finalize, and query the Feel++ environment.">Environment</a></code> class is used to initialize, finalize, and query the Feel++ environment. It will typically be used in the <code>main()</code> function of a program, which will create a single instance of <code><a class="el" href="classFeel_1_1detail_1_1Environment.html" title="Initialize, finalize, and query the Feel++ environment.">Environment</a></code> initialized with the arguments passed to the program:</p>
@@ -133,8 +131,6 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors, destructor</div></td></tr>
 <tr class="memitem:acaf2f1ff09bbcd3e2f73e7500c5bd16d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#acaf2f1ff09bbcd3e2f73e7500c5bd16d">Environment</a> ()</td></tr>
 <tr class="memitem:abaaadfde8e57d25522379ba5a1a482fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#abaaadfde8e57d25522379ba5a1a482fe">Environment</a> (int &amp;argc, char **&amp;argv)</td></tr>
-<tr class="memitem:a8f2221571e0e23fa6b044b6812070bd5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f2221571e0e23fa6b044b6812070bd5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_PARAMETER_MEMBER_FUNCTION</b> ((void), static changeRepository, tag,(required(directory,(boost::format)))(optional(filename,*(boost::is_convertible&lt; mpl::_, std::string &gt;),&quot;logfile&quot;)(subdir,*(boost::is_convertible&lt; mpl::_, bool &gt;), true)))</td></tr>
 <tr class="memitem:a879e9ab6ec73d1fbb10bb2b3decbda28"><td class="memTemplParams" colspan="2"><a class="anchor" id="a879e9ab6ec73d1fbb10bb2b3decbda28"></a>
 template&lt;class ArgumentPack &gt; </td></tr>
 <tr class="memitem:a879e9ab6ec73d1fbb10bb2b3decbda28"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Environment</b> (ArgumentPack const &amp;args)</td></tr>
@@ -163,11 +159,7 @@ static <a class="el" href="classFeel_1_1AboutData.html">AboutData</a> const &amp
 const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#ab4b8596baef27e631769ab7ba5cbc8cf">optionsDescription</a> ()</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Mutators</div></td></tr>
 <tr class="memitem:aca4440fef331b4cfa5fb75a8d6843158"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#aca4440fef331b4cfa5fb75a8d6843158">setWorldComm</a> (WorldComm &amp;worldcomm)</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="member-group"></a>
-Methods</h2></td></tr>
-<tr class="memitem:af8b0e3ff687f6a60a04db129abdc4494"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8b0e3ff687f6a60a04db129abdc4494"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_PARAMETER_MEMBER_FUNCTION</b> ((po::variable_value), static <a class="el" href="classFeel_1_1detail_1_1Environment.html#ab2b28bbafcdbad667fd52b22702be57d">vm</a>, tag,(required(name,(std::string)))(optional(worldcomm,(WorldComm), <a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())(sub,(std::string),&quot;&quot;)(prefix,(std::string),&quot;&quot;)))</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Methods</div></td></tr>
 <tr class="memitem:ac14a1f5d50dca4cbc198b1996adb4864"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#ac14a1f5d50dca4cbc198b1996adb4864">rootRepository</a> ()</td></tr>
 <tr class="memitem:aeb133b6d43b8ec8a48c502d67676256b"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#aeb133b6d43b8ec8a48c502d67676256b">findFile</a> (std::string const &amp;filename)</td></tr>
 <tr class="memitem:abd55a574b5edb51d7230f2947568f2d0"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#abd55a574b5edb51d7230f2947568f2d0">geoPathList</a> ()</td></tr>
@@ -756,7 +748,7 @@ template&lt;typename Observer &gt; </td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="namespaceFeel_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classFeel_1_1detail_1_1Environment.html">Environment</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:07 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:57 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

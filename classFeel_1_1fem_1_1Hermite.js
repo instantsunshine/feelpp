@@ -15,7 +15,6 @@ var classFeel_1_1fem_1_1Hermite =
     [ "value_type", "classFeel_1_1fem_1_1Hermite.html#a98a66ef8e409313924eae977b44c9a23", null ],
     [ "Hermite", "classFeel_1_1fem_1_1Hermite.html#a7672a1eb47fe147aca2d6b22bcb7c33a", null ],
     [ "~Hermite", "classFeel_1_1fem_1_1Hermite.html#a2b8e0dd2afcceb21665b433b5af7463e", null ],
-    [ "BOOST_STATIC_ASSERT", "classFeel_1_1fem_1_1Hermite.html#a6981e847cacb7f0dcb54ad41e54ca090", null ],
     [ "familyName", "classFeel_1_1fem_1_1Hermite.html#a82c366fb4548ab1c360b5dcec1b3ef95", null ],
     [ "referenceConvex", "classFeel_1_1fem_1_1Hermite.html#a605dac177855e252ae7e34494add5dd7", null ],
     [ "transform", "classFeel_1_1fem_1_1Hermite.html#a81e51bc353203d75e5c14080bdd4158c", null ],

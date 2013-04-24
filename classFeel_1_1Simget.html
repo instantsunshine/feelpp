@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -100,7 +100,9 @@ $(document).ready(function(){initNavTree('classFeel_1_1Simget.html','');});
 <div class="header">
   <div class="summary">
 <a href="classFeel_1_1Simget-members.html">List of all members</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::Simget Class Reference</div>  </div>
 </div><!--header-->
@@ -116,29 +118,7 @@ $(document).ready(function(){initNavTree('classFeel_1_1Simget.html','');});
 </ul>
 <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd></dd></dl>
-</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Feel::Simget:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
- <div class="center">
-  <img src="classFeel_1_1Simget.png" usemap="#Feel::Simget_map" alt=""/>
-  <map id="Feel::Simget_map" name="Feel::Simget_map">
-<area href="classDiode.html" alt="Diode" shape="rect" coords="284,56,558,80"/>
-<area href="classFeel_1_1DAR.html" alt="Feel::DAR&lt; Dim &gt;" shape="rect" coords="284,112,558,136"/>
-<area href="classFeel_1_1PeriodicLaplacian.html" alt="Feel::PeriodicLaplacian&lt; Dim, Order &gt;" shape="rect" coords="284,168,558,192"/>
-<area href="classFeel_1_1PeriodicStokes.html" alt="Feel::PeriodicStokes&lt; Dim, Order &gt;" shape="rect" coords="284,224,558,248"/>
-<area href="classFeel_1_1Sound.html" alt="Feel::Sound&lt; Dim, Order &gt;" shape="rect" coords="284,280,558,304"/>
-<area href="classFeel_1_1Stokes.html" title="solves the stokes equations" alt="Feel::Stokes" shape="rect" coords="284,336,558,360"/>
-<area href="classLaplacian.html" alt="Laplacian&lt; Dim &gt;" shape="rect" coords="284,392,558,416"/>
-<area href="classLaplacian.html" alt="Laplacian&lt; Dim &gt;" shape="rect" coords="284,448,558,472"/>
-<area href="classLShape.html" alt="LShape&lt; Dim &gt;" shape="rect" coords="284,504,558,528"/>
-<area href="classMortarLaplacian.html" alt="MortarLaplacian&lt; Dim, Order1, Order2 &gt;" shape="rect" coords="284,560,558,584"/>
-<area href="classResidualEstimator.html" alt="ResidualEstimator&lt; Dim, Order &gt;" shape="rect" coords="284,616,558,640"/>
-<area href="classThreeFields.html" alt="ThreeFields&lt; Dim, Order1, Order2, Order3 &gt;" shape="rect" coords="284,672,558,696"/>
-</map>
- </div></div>
-<table class="memberdecls">
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors, destructor</div></td></tr>
@@ -190,6 +170,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:afcd4ac23a947d7238110967ee57f00dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Simget.html">Simget</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Simget.html#afcd4ac23a947d7238110967ee57f00dd">changeRepository</a> (boost::format fmt)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a8ef62c20726f84f0d5c4210118491217"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ef62c20726f84f0d5c4210118491217"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>M_level</b></td></tr>
+<tr class="memitem:a68c2b10b130558044fa84bc1e8f69b8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a68c2b10b130558044fa84bc1e8f69b8e"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>M_meshSize</b></td></tr>
+<tr class="memitem:a25001e751c81b958ef3b82cf6e63ff9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25001e751c81b958ef3b82cf6e63ff9a"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>M_meshSizeInit</b></td></tr>
+<tr class="memitem:a12cc8834f5a9cf3d94bdb72bc98bab06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12cc8834f5a9cf3d94bdb72bc98bab06"></a>
+ptree::ptree&#160;</td><td class="memItemRight" valign="bottom"><b>M_stats</b></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a23f25bcc02a0e94c2f5a4188496b04d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23f25bcc02a0e94c2f5a4188496b04d0"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>Application</b></td></tr>
 </table>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a47356f761b64cbd1f78d89131828a9e2"></a>
@@ -333,8 +329,6 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>simply execute the simget </p>
 
-<p>Implemented in <a class="el" href="classDiode.html#a1c1a7be26c2e96e2db682e426456c5d7">Diode</a>, <a class="el" href="classThreeFields.html#a1590a05ded3bb1a31240100854bb706b">ThreeFields&lt; Dim, Order1, Order2, Order3 &gt;</a>, <a class="el" href="classLaplacian.html#a03a7f2232b9460ec4ad881d4c50c7aa6">Laplacian&lt; Dim &gt;</a>, <a class="el" href="classResidualEstimator.html#a9e70214e6f2f7a1c017e7a43d0233042">ResidualEstimator&lt; Dim, Order &gt;</a>, <a class="el" href="classMortarLaplacian.html#a96e2fc84deb01dcb1f842ecb25f52fc6">MortarLaplacian&lt; Dim, Order1, Order2 &gt;</a>, <a class="el" href="classLShape.html#a5197bb4be90860e0688e07b63ca7caa5">LShape&lt; Dim &gt;</a>, <a class="el" href="classFeel_1_1Sound.html#a948829038b99e7b8daad0d59d8a39d5c">Feel::Sound&lt; Dim, Order &gt;</a>, <a class="el" href="classFeel_1_1PeriodicLaplacian.html#ae12b3a340b6dfdfc1e23ae584621f131">Feel::PeriodicLaplacian&lt; Dim, Order &gt;</a>, <a class="el" href="classFeel_1_1Stokes.html#a670c636f87581b7acdb98d4a7b16fc89">Feel::Stokes</a>, <a class="el" href="classFeel_1_1DAR.html#a8afabe347c36be4b29a07284a2f45597">Feel::DAR&lt; Dim &gt;</a>, <a class="el" href="classLaplacian.html#a03a7f2232b9460ec4ad881d4c50c7aa6">Laplacian&lt; Dim &gt;</a>, and <a class="el" href="classFeel_1_1PeriodicStokes.html#a2b14e8c158cd99912456d1eb2574e526">Feel::PeriodicStokes&lt; Dim, Order &gt;</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a4a4507e4e99a9634adaf704dce940247"></a>
@@ -382,8 +376,6 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>models the input/output relation <img class="formulaInl" alt="$ Y=F(X) $" src="form_0.png"/> </p>
 
-<p>Reimplemented in <a class="el" href="classDiode.html#a319e36fc5e55ec18109538c3cd03dd7e">Diode</a>, <a class="el" href="classThreeFields.html#ac3d7b5452c532d126d4401e3991ab979">ThreeFields&lt; Dim, Order1, Order2, Order3 &gt;</a>, <a class="el" href="classLaplacian.html#abd550ef6066215743ab546bce03ead95">Laplacian&lt; Dim &gt;</a>, <a class="el" href="classResidualEstimator.html#a7b929fc88225b00f606b2e9f707c850c">ResidualEstimator&lt; Dim, Order &gt;</a>, and <a class="el" href="classLShape.html#a90a7e0be8bdc30350d4a9f68f8c98f3e">LShape&lt; Dim &gt;</a>.</p>
-
 <p>References <a class="el" href="classFeel_1_1Simget.html#a4a4507e4e99a9634adaf704dce940247">run()</a>.</p>
 
 </div>
@@ -422,7 +414,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1Simget.html">Simget</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:06 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:57 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

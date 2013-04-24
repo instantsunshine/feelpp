@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -335,8 +335,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>computeNumberOfSnapsho
 int&#160;</td><td class="memItemRight" valign="bottom"><b>computeNumberOfSnapshots</b> (mpl::bool_&lt; true &gt;)</td></tr>
 <tr class="memitem:a27b1c9d9f0b946d565d93806443181a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27b1c9d9f0b946d565d93806443181a9"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>computeNumberOfSnapshots</b> (mpl::bool_&lt; false &gt;)</td></tr>
-<tr class="memitem:a1ef14849301e1a59894d250dbf410316"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ef14849301e1a59894d250dbf410316"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>computeStatistics</b> (Eigen::VectorXd vector, std::string name)</td></tr>
+<tr class="memitem:ae12232710f52943b3b4bd8b95ebbcc46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae12232710f52943b3b4bd8b95ebbcc46"></a>
+vectorN_type&#160;</td><td class="memItemRight" valign="bottom"><b>computeStatistics</b> (Eigen::VectorXd vector, std::string name)</td></tr>
 <tr class="memitem:aa007112023bdebccee83edb3d9b5e4e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa007112023bdebccee83edb3d9b5e4e5"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>timeStep</b> ()</td></tr>
 <tr class="memitem:a322468baa7872fc62f6e111181d0b6b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a322468baa7872fc62f6e111181d0b6b9"></a>
@@ -388,14 +388,20 @@ Protected Attributes</h2></td></tr>
 std::vector&lt; std::vector<br class="typebreak"/>
 &lt; sparse_matrix_ptrtype &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a014aa8871e6b7c994474583bdc1ceeff">M_Aqm</a></td></tr>
 <tr class="memdesc:a014aa8871e6b7c994474583bdc1ceeff"><td class="mdescLeft">&#160;</td><td class="mdescRight">affine decomposition terms for the left hand side <br/></td></tr>
-<tr class="memitem:a5444317fa8a857d75bb458d0990a0eca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5444317fa8a857d75bb458d0990a0eca"></a>
-std::vector&lt; std::vector<br class="typebreak"/>
-&lt; sparse_matrix_ptrtype &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a5444317fa8a857d75bb458d0990a0eca">M_Mqm</a></td></tr>
-<tr class="memdesc:a5444317fa8a857d75bb458d0990a0eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">affine decomposition terms ( time dependent ) <br/></td></tr>
 <tr class="memitem:afc7d7aa5dbfb1fa17e03e82cacab3aed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc7d7aa5dbfb1fa17e03e82cacab3aed"></a>
 std::vector&lt; std::vector<br class="typebreak"/>
 &lt; std::vector&lt; vector_ptrtype &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#afc7d7aa5dbfb1fa17e03e82cacab3aed">M_Fqm</a></td></tr>
 <tr class="memdesc:afc7d7aa5dbfb1fa17e03e82cacab3aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">affine decomposition terms for the right hand side <br/></td></tr>
+<tr class="memitem:ac703ce7a1d1b34626e2fda35ffb14329"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac703ce7a1d1b34626e2fda35ffb14329"></a>
+std::vector&lt; std::vector<br class="typebreak"/>
+&lt; element_ptrtype &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>M_InitialGuessV</b></td></tr>
+<tr class="memitem:af815b9e17a24fa533b6de75eb9c85d83"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af815b9e17a24fa533b6de75eb9c85d83"></a>
+std::vector&lt; std::vector<br class="typebreak"/>
+&lt; vector_ptrtype &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>M_InitialGuessVector</b></td></tr>
+<tr class="memitem:a5444317fa8a857d75bb458d0990a0eca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5444317fa8a857d75bb458d0990a0eca"></a>
+std::vector&lt; std::vector<br class="typebreak"/>
+&lt; sparse_matrix_ptrtype &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a5444317fa8a857d75bb458d0990a0eca">M_Mqm</a></td></tr>
+<tr class="memdesc:a5444317fa8a857d75bb458d0990a0eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">affine decomposition terms ( time dependent ) <br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="member-group"></a>
 Typedefs</h2></td></tr>
@@ -487,7 +493,7 @@ typedef boost::tuple<br class="typebreak"/>
 beta_vector_type, std::vector<br class="typebreak"/>
 &lt; beta_vector_type &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>betaqm_type</b></td></tr>
 <tr class="memitem:a130cb10e39947f8daf7d049c1ca037d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a130cb10e39947f8daf7d049c1ca037d3"></a>
-typedef Bdf&lt; <a class="el" href="classFeel_1_1CRBModel.html#abfd06e583290cfaeda5ea14a49065468">space_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a130cb10e39947f8daf7d049c1ca037d3">bdf_type</a></td></tr>
+typedef <a class="el" href="classFeel_1_1Bdf.html">Bdf</a>&lt; <a class="el" href="classFeel_1_1CRBModel.html#abfd06e583290cfaeda5ea14a49065468">space_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a130cb10e39947f8daf7d049c1ca037d3">bdf_type</a></td></tr>
 <tr class="memdesc:a130cb10e39947f8daf7d049c1ca037d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">time discretization <br/></td></tr>
 <tr class="memitem:a54d03c5cc11323c18aca0e301c053a26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54d03c5cc11323c18aca0e301c053a26"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
@@ -1867,7 +1873,7 @@ template&lt;typename ModelType&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1CRBModel.html">CRBModel</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:07 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:55 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

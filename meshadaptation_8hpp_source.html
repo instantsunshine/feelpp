@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -137,7 +137,7 @@ $(document).ready(function(){initNavTree('meshadaptation_8hpp_source.html','');}
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;feel/feelvf/vf.hpp&gt;</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="feel_8hpp.html">feel/feelcore/feel.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;feel/feeldiscr/mesh.hpp&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="mesh_8hpp.html">feel/feeldiscr/mesh.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;feel/feeldiscr/projector.hpp&gt;</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;boost/assert.hpp&gt;</span></div>
@@ -935,7 +935,7 @@ $(document).ready(function(){initNavTree('meshadaptation_8hpp_source.html','');}
 <div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;Dim; i++)</div>
 <div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;            {</div>
 <div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;                dvard1P0[i] = <a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">vf::project</a>(P0h, <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>(mesh), gradv(varP1)(0,i) );</div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;                dvard1P1[i] = element_div( sum(P1h, idv(dvard1P0[i])*meas()), sum(P1h, meas() ) ); <span class="comment">//L2 proj -&gt; P1</span></div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;                dvard1P1[i] = <a class="code" href="namespaceFeel.html#a81bfa16d11dfe6ede737b6bb01c63738">element_div</a>( sum(P1h, idv(dvard1P0[i])*meas()), sum(P1h, meas() ) ); <span class="comment">//L2 proj -&gt; P1</span></div>
 <div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;            }</div>
 <div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;</div>
 <div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;        <span class="comment">// Second derivatives of proj_P1(U) are P0</span></div>
@@ -947,7 +947,7 @@ $(document).ready(function(){initNavTree('meshadaptation_8hpp_source.html','');}
 <div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;                    {</div>
 <div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;                        <span class="comment">// Hessian components are entered column by column</span></div>
 <div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;                        hessP0[i+j*Dim] = <a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">vf::project</a>(P0h, <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>(mesh), gradv( dvard1P1[j] )(0,i) );</div>
-<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;                        hessP1[i+j*Dim] = element_div( sum(P1h, idv(hessP0[i+j*Dim])*meas()), sum(P1h, meas() ) ); <span class="comment">//L2 proj -&gt; P1</span></div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;                        hessP1[i+j*Dim] = <a class="code" href="namespaceFeel.html#a81bfa16d11dfe6ede737b6bb01c63738">element_div</a>( sum(P1h, idv(hessP0[i+j*Dim])*meas()), sum(P1h, meas() ) ); <span class="comment">//L2 proj -&gt; P1</span></div>
 <div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;                    }</div>
 <div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;            }</div>
 <div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;        <span class="comment">// ******************************************************************************************* //</span></div>
@@ -1167,8 +1167,8 @@ $(document).ready(function(){initNavTree('meshadaptation_8hpp_source.html','');}
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_06b803f68165fa0ac5f90c97ebe862c1.html">feelmesh</a></li><li class="navelem"><a class="el" href="meshadaptation_8hpp.html">meshadaptation.hpp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:02 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_59d2677dd290de5cc910cd0b1e1ed506.html">feelmesh</a></li><li class="navelem"><a class="el" href="meshadaptation_8hpp.html">meshadaptation.hpp</a></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:51 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

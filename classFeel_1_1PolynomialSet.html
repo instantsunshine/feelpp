@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -100,7 +100,8 @@ $(document).ready(function(){initNavTree('classFeel_1_1PolynomialSet.html','');}
 <div class="header">
   <div class="summary">
 <a href="classFeel_1_1PolynomialSet-members.html">List of all members</a> &#124;
-<a href="#pub-types">Public Types</a>  </div>
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::PolynomialSet&lt; Poly, PolySetType &gt; Class Template Reference</div>  </div>
 </div><!--header-->
@@ -121,10 +122,40 @@ class Feel::PolynomialSet&lt; Poly, PolySetType &gt;</h3>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:aad691c3d24db2e317849f0c73c0427c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad691c3d24db2e317849f0c73c0427c3"></a>
+typedef std::vector&lt; std::map<br class="typebreak"/>
+&lt; typename <br class="typebreak"/>
+convex_type::permutation_type, <br class="typebreak"/>
+precompute_ptrtype &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>faces_precompute_type</b></td></tr>
+<tr class="memitem:a43805c2544f34ba6e666e29ea164fbd0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43805c2544f34ba6e666e29ea164fbd0"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classFeel_1_1PolynomialSet.html#a743601b503cfd82532cc647ef002e9bd">precompute_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>precompute_ptrtype</b></td></tr>
 <tr class="memitem:a743601b503cfd82532cc647ef002e9bd"><td class="memItemLeft" align="right" valign="top">typedef PreCompute&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1PolynomialSet.html#a743601b503cfd82532cc647ef002e9bd">precompute_type</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ab914ede36116210688f920d5770e2166"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab914ede36116210688f920d5770e2166"></a>
+template&lt;size_type context_v, size_type context_g, typename BasisType , typename GeoType , typename ElementType &gt; </td></tr>
+<tr class="memitem:ab914ede36116210688f920d5770e2166"><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; Context<br class="typebreak"/>
+&lt; context_v, BasisType, <br class="typebreak"/>
+GeoType, ElementType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>context</b> (boost::shared_ptr&lt; BasisType &gt; b, boost::shared_ptr&lt; GeoType &gt; gm, precompute_ptrtype &amp;pc)</td></tr>
+<tr class="memitem:a785ddf5213052ebcc34c2fe46911323a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a785ddf5213052ebcc34c2fe46911323a"></a>
+template&lt;int contextv, int contextg, typename BasisType , typename GeoType , typename ElementType &gt; </td></tr>
+<tr class="memitem:a785ddf5213052ebcc34c2fe46911323a"><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; Context<br class="typebreak"/>
+&lt; contextv, BasisType, GeoType, <br class="typebreak"/>
+ElementType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ctx</b> (boost::shared_ptr&lt; BasisType &gt; const &amp;b, boost::shared_ptr&lt; typename GeoType::template Context&lt; contextg, ElementType &gt; &gt; const &amp;gm, precompute_ptrtype pc, ElementType &amp;e)</td></tr>
+<tr class="memitem:af675e93488bd0efb2a46a5da02f9cc97"><td class="memTemplParams" colspan="2"><a class="anchor" id="af675e93488bd0efb2a46a5da02f9cc97"></a>
+template&lt;int contextv, typename BasisType , typename GeoType , typename ElementType &gt; </td></tr>
+<tr class="memitem:af675e93488bd0efb2a46a5da02f9cc97"><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; Context<br class="typebreak"/>
+&lt; contextv, BasisType, GeoType, <br class="typebreak"/>
+ElementType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ctx</b> (boost::shared_ptr&lt; BasisType &gt; const &amp;b, boost::shared_ptr&lt; typename GeoType::template Context&lt; contextv, ElementType &gt; &gt; const &amp;gm, precompute_ptrtype pc, ElementType &amp;e)</td></tr>
+<tr class="memitem:a63bd0d24c8d4e1e447962878fce75007"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63bd0d24c8d4e1e447962878fce75007"></a>
+precompute_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>preCompute</b> (self_ptrtype p, points_type const &amp;P)</td></tr>
+<tr class="memitem:aa0c81fb4faf475c1fbbd773bd9f4b479"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0c81fb4faf475c1fbbd773bd9f4b479"></a>
+std::vector&lt; std::map<br class="typebreak"/>
+&lt; typename <br class="typebreak"/>
+convex_type::permutation_type, <br class="typebreak"/>
+precompute_ptrtype &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>preComputeOnFaces</b> (self_ptrtype p, points_type const &amp;P)</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors, destructor</div></td></tr>
 <tr class="memitem:af95c80505ca0cede1b98213f7fceb4f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af95c80505ca0cede1b98213f7fceb4f1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>PolynomialSet</b> ()</td></tr>
@@ -236,10 +267,6 @@ static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>n
 static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nComponents2</b> = polyset_type::nComponents2</td></tr>
 <tr class="memitem:a397f8420e9d205851ba9c62919d0c6a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a397f8420e9d205851ba9c62919d0c6a0"></a>
 static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>rank</b> = polyset_type::rank</td></tr>
-<tr class="memitem:a2030e4b4006a51557f1b9ad6870a747b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2030e4b4006a51557f1b9ad6870a747b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_STATIC_ASSERT</b> ((boost::is_same&lt; typename matrix_type::value_type, value_type &gt;::value))</td></tr>
-<tr class="memitem:a0e0771b901f2bab354faca0b10d957c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e0771b901f2bab354faca0b10d957c0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_STATIC_ASSERT</b> ((boost::is_same&lt; typename matrix_type::value_type, typename points_type::value_type &gt;::value))</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="member-group"></a>
 Accessors</h2></td></tr>
@@ -1033,7 +1060,7 @@ template&lt;typename Poly, template&lt; uint16_type &gt; class PolySetType = Sca
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:07 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:56 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

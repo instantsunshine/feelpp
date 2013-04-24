@@ -6,6 +6,5 @@ var structFeel_1_1functional_1_1DirectionalComponentPointEvaluation =
     [ "space_type", "structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#ab7ec29bb3c0e2abb84368db61653262f", null ],
     [ "super", "structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#ac5b510c8dcfa5363eb8dcdf39acec015", null ],
     [ "value_type", "structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#ad61df4ef20b2e923ecce0b87ac4e9fcf", null ],
-    [ "DirectionalComponentPointEvaluation", "structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#a6ac9b99fe5626fd69446abe31aa748a7", null ],
-    [ "BOOST_STATIC_ASSERT", "structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#aedf9d50f1009affd63680857e9bd15aa", null ]
+    [ "DirectionalComponentPointEvaluation", "structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#a6ac9b99fe5626fd69446abe31aa748a7", null ]
 ];

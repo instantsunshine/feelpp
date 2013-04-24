@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -99,7 +99,10 @@ $(document).ready(function(){initNavTree('classFeel_1_1GeoMap_1_1Inverse.html','
 
 <div class="header">
   <div class="summary">
-<a href="classFeel_1_1GeoMap_1_1Inverse-members.html">List of all members</a>  </div>
+<a href="classFeel_1_1GeoMap_1_1Inverse-members.html">List of all members</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::GeoMap&lt; Dim, Order, RealDim, T, Entity, PP &gt;::Inverse Class Reference</div>  </div>
 </div><!--header-->
@@ -112,8 +115,34 @@ class Feel::GeoMap&lt; Dim, Order, RealDim, T, Entity, PP &gt;::Inverse</h3>
 
 <p><a class="el" href="classFeel_1_1GeoMap_1_1Inverse.html">Inverse</a> of the geometric mapping for a given context </p>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a2bafe7de5335c06c57dcf333b5712ba4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bafe7de5335c06c57dcf333b5712ba4"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classFeel_1_1GeoMap.html">geometric_mapping_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>geometric_mapping_ptrtype</b></td></tr>
+<tr class="memitem:a2ce2e7c1035a1b9a26e31e5a0013540b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ce2e7c1035a1b9a26e31e5a0013540b"></a>
+typedef <a class="el" href="classFeel_1_1GeoMap.html">GeoMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>geometric_mapping_type</b></td></tr>
+<tr class="memitem:a4f6618537bff8589ef5b250bf2e716ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f6618537bff8589ef5b250bf2e716ef"></a>
+typedef <br class="typebreak"/>
+geometric_mapping_type::matrix_node_t_type&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_node_t_type</b></td></tr>
+<tr class="memitem:a9bd093745e64ee0fbef8e4a8ce6f3051"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bd093745e64ee0fbef8e4a8ce6f3051"></a>
+typedef <br class="typebreak"/>
+geometric_mapping_type::matrix_node_t_type&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_node_type</b></td></tr>
+<tr class="memitem:a857e176680533262ead4c6ecf495b033"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a857e176680533262ead4c6ecf495b033"></a>
+typedef <br class="typebreak"/>
+geometric_mapping_type::node_t_type&#160;</td><td class="memItemRight" valign="bottom"><b>node_t_type</b></td></tr>
+<tr class="memitem:ab0c1ec6459f73fcc7a7a2df18ce50ecf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0c1ec6459f73fcc7a7a2df18ce50ecf"></a>
+typedef <br class="typebreak"/>
+geometric_mapping_type::node_t_type&#160;</td><td class="memItemRight" valign="bottom"><b>node_type</b></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a293682a48abc0f5d09b3a9e9684b95c3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a293682a48abc0f5d09b3a9e9684b95c3"></a>
+template&lt;typename GeoElem &gt; </td></tr>
+<tr class="memitem:a293682a48abc0f5d09b3a9e9684b95c3"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Inverse</b> (geometric_mapping_ptrtype __gm, GeoElem const &amp;__ge, WorldComm const &amp;worldComm=Environment::worldComm().subWorldCommSeq())</td></tr>
+<tr class="memitem:a5db22502bfaca7698704bc975b69f295"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5db22502bfaca7698704bc975b69f295"></a>
+template&lt;typename GeoElem &gt; </td></tr>
+<tr class="memitem:a5db22502bfaca7698704bc975b69f295"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Inverse</b> (geometric_mapping_ptrtype __gm, GeoElem const &amp;__ge, mpl::int_&lt; 1 &gt;, WorldComm const &amp;worldComm=Environment::worldComm().subWorldCommSeq())</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Accessors</div></td></tr>
 <tr class="memitem:ad69d4adfa55da9795d29dc771e0ac04a"><td class="memItemLeft" align="right" valign="top">geometric_mapping_ptrtype const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoMap_1_1Inverse.html#ad69d4adfa55da9795d29dc771e0ac04a">geometricMapping</a> () const </td></tr>
 <tr class="memitem:a81db0318b64f232b3ba1c14d2056740d"><td class="memItemLeft" align="right" valign="top">uint16_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoMap_1_1Inverse.html#a81db0318b64f232b3ba1c14d2056740d">N</a> () const </td></tr>
@@ -134,6 +163,12 @@ value_type&#160;</td><td class="memItemRight" valign="bottom"><b>J</b> () const 
 <tr class="memitem:a6af4c4e333a7697ba62bb0500772626c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoMap_1_1Inverse.html#a6af4c4e333a7697ba62bb0500772626c">setXReal</a> (node_type const &amp;__xreal)</td></tr>
 <tr class="memitem:acf27922cb55c3f0552c8d5d367c9269c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf27922cb55c3f0552c8d5d367c9269c"></a>
 matrix_node_t_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (matrix_node_t_type const &amp;real_pts, bool allow_extrapolation=false) const </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a966411d4dd8dc4f0ca0003817675798f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a966411d4dd8dc4f0ca0003817675798f"></a>
+static const <br class="typebreak"/>
+fem::transformation_type&#160;</td><td class="memItemRight" valign="bottom"><b>trans</b> = geometric_mapping_type::trans</td></tr>
 </table>
 <h2>Member Function Documentation</h2>
 <a class="anchor" id="ae31ac91ebbbf3d9643362e2568efc82f"></a>
@@ -455,7 +490,7 @@ template&lt;uint16_type Dim, uint16_type Order, uint16_type RealDim, typename T 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1GeoMap.html">GeoMap</a></li><li class="navelem"><a class="el" href="classFeel_1_1GeoMap_1_1Inverse.html">Inverse</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:07 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:55 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

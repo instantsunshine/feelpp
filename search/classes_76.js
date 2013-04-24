@@ -11,9 +11,8 @@ var searchData=
   ['visitor_3c_20meshtype_20_3e',['Visitor&lt; MeshType &gt;',['../classFeel_1_1Visitor.html',1,'Feel']]],
   ['visitor_3c_20mpl_3a_3afront_3c_20tlist_20_3e_3a_3atype_2c_20r_20_3e',['Visitor&lt; mpl::front&lt; TList &gt;::type, R &gt;',['../classFeel_1_1Visitor.html',1,'Feel']]],
   ['visitor_3c_20pointset_3c_20convex_2c_20t_20_3e_20_3e',['Visitor&lt; PointSet&lt; Convex, T &gt; &gt;',['../classFeel_1_1Visitor.html',1,'Feel']]],
+  ['visitor_3c_20pointset_3c_20domain_5fconvex_5ftype_2c_20value_5ftype_20_3e_20_3e',['Visitor&lt; PointSet&lt; domain_convex_type, value_type &gt; &gt;',['../classFeel_1_1Visitor.html',1,'Feel']]],
   ['visitor_3c_20tlist_2c_20r_20_3e',['Visitor&lt; TList, R &gt;',['../classFeel_1_1Visitor.html',1,'Feel']]],
   ['visitorbase',['VisitorBase',['../classFeel_1_1VisitorBase.html',1,'Feel']]],
-  ['visitorbaseimpl',['VisitorBaseImpl',['../classVisitorBaseImpl.html',1,'']]],
-  ['visitorbaseimpl_3c_20tail_2c_20r_20_3e',['VisitorBaseImpl&lt; Tail, R &gt;',['../classVisitorBaseImpl.html',1,'']]],
   ['visitorcyclic',['VisitorCyclic',['../classFeel_1_1VisitorCyclic.html',1,'Feel']]]
 ];

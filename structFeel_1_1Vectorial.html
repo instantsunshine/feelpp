@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -99,7 +99,9 @@ $(document).ready(function(){initNavTree('structFeel_1_1Vectorial.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="structFeel_1_1Vectorial-members.html">List of all members</a>  </div>
+<a href="structFeel_1_1Vectorial-members.html">List of all members</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::Vectorial&lt; Dim &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
@@ -112,7 +114,47 @@ struct Feel::Vectorial&lt; Dim &gt;</h3>
 
 <p>Policy for <code><a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a></code> polynomials or polynomial sets of dimension <code>Dim</code> </p>
 <dl class="section note"><dt>Note</dt><dd><code><a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a></code> can be seen as rank 1 Tensor polynomials </dd></dl>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a10d145d5f0b4b3ba070191860927bd14"><td class="memTemplParams" colspan="2"><a class="anchor" id="a10d145d5f0b4b3ba070191860927bd14"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a10d145d5f0b4b3ba070191860927bd14"><td class="memTemplItemLeft" align="right" valign="top">static ublas::matrix&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>toMatrix</b> (ublas::matrix&lt; T &gt; const &amp;__c)</td></tr>
+<tr class="memitem:acb0d06f9943ff6a2b10495103e431dc2"><td class="memTemplParams" colspan="2"><a class="anchor" id="acb0d06f9943ff6a2b10495103e431dc2"></a>
+template&lt;typename AE &gt; </td></tr>
+<tr class="memitem:acb0d06f9943ff6a2b10495103e431dc2"><td class="memTemplItemLeft" align="right" valign="top">static ublas::matrix&lt; typename <br class="typebreak"/>
+ublas::matrix_expression&lt; AE &gt;<br class="typebreak"/>
+::value_type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>toType</b> (ublas::matrix_expression&lt; AE &gt; const &amp;__c)</td></tr>
+<tr class="memitem:a0f50bbb54bc4f72ee5d82ac170722bf4"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0f50bbb54bc4f72ee5d82ac170722bf4"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0f50bbb54bc4f72ee5d82ac170722bf4"><td class="memTemplItemLeft" align="right" valign="top">static ublas::matrix&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>toType</b> (ublas::matrix&lt; T &gt; const &amp;__c)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a9ecd82b02a3bcce66eef3d6ac8fed6dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ecd82b02a3bcce66eef3d6ac8fed6dc"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_scalar</b> = false</td></tr>
+<tr class="memitem:a1ef3f246ccd813e5e9154a7271c4987b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ef3f246ccd813e5e9154a7271c4987b"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_tensor2</b> = false</td></tr>
+<tr class="memitem:ac495c302aa0346bd7e5cc7cfd0050f46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac495c302aa0346bd7e5cc7cfd0050f46"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_tensor3</b> = false</td></tr>
+<tr class="memitem:a80ef3e60a0a698a3bb79c57443234873"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80ef3e60a0a698a3bb79c57443234873"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_vectorial</b> = true</td></tr>
+<tr class="memitem:a31e7661385f1fb71e472172a1ea227d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31e7661385f1fb71e472172a1ea227d0"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nComponents</b> = nDim</td></tr>
+<tr class="memitem:aee15c032d634ff243da65f5ed88e1059"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee15c032d634ff243da65f5ed88e1059"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nComponents1</b> = nDim</td></tr>
+<tr class="memitem:aa922e24dc0db26754d223f64a07809e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa922e24dc0db26754d223f64a07809e7"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nComponents2</b> = 1</td></tr>
+<tr class="memitem:addb70fa9c35c007c5ff0c9ea8d968980"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="addb70fa9c35c007c5ff0c9ea8d968980"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nComponents3</b> = 1</td></tr>
+<tr class="memitem:a682321836b9a113a36a705c6c4cf165c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a682321836b9a113a36a705c6c4cf165c"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nComponentsLast</b> = nComponents1</td></tr>
+<tr class="memitem:a9eebad6260dfb7f96a17caf8ed44a3a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9eebad6260dfb7f96a17caf8ed44a3a6"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nDim</b> = Dim</td></tr>
+<tr class="memitem:a2b59369593870e1b16d80c4e34ce2046"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b59369593870e1b16d80c4e34ce2046"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>rank</b> = 1</td></tr>
+</table>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="feelpoly_2policy_8hpp_source.html">feelpoly/policy.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -121,7 +163,7 @@ struct Feel::Vectorial&lt; Dim &gt;</h3>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:07 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:57 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

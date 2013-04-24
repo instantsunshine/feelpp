@@ -71,7 +71,7 @@ var classFeel_1_1CRBModel =
     [ "computeNumberOfSnapshots", "classFeel_1_1CRBModel.html#aa799d9bd0f86e1615b50dbfef3fd914e", null ],
     [ "computeNumberOfSnapshots", "classFeel_1_1CRBModel.html#ad52ca851701db3fe3d1521767357d1f6", null ],
     [ "computeNumberOfSnapshots", "classFeel_1_1CRBModel.html#a27b1c9d9f0b946d565d93806443181a9", null ],
-    [ "computeStatistics", "classFeel_1_1CRBModel.html#a1ef14849301e1a59894d250dbf410316", null ],
+    [ "computeStatistics", "classFeel_1_1CRBModel.html#ae12232710f52943b3b4bd8b95ebbcc46", null ],
     [ "Fqm", "classFeel_1_1CRBModel.html#af9d312fb3f3b022a2468606b6a16439f", null ],
     [ "Fqm", "classFeel_1_1CRBModel.html#a22ca0e787aeeb6c6ec0fc430c3f90730", null ],
     [ "Fqm", "classFeel_1_1CRBModel.html#a7803bbbacd885bd86cf5f536723ff179", null ],

@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -101,7 +101,8 @@ $(document).ready(function(){initNavTree('crb_8hpp.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">crb.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -151,7 +152,21 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a87e77631faf5262bc0eaca80b8e9190f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a87e77631faf5262bc0eaca80b8e9190f">Feel::CRBErrorType</a> </td></tr>
+<tr class="memitem:a87e77631faf5262bc0eaca80b8e9190f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a87e77631faf5262bc0eaca80b8e9190f">Feel::CRBErrorType</a> { <br/>
+&#160;&#160;<b>CRB_RESIDUAL</b> =  0, 
+<br/>
+&#160;&#160;<b>CRB_RESIDUAL_SCM</b> = 1, 
+<br/>
+&#160;&#160;<b>CRB_NO_RESIDUAL</b> = 2, 
+<br/>
+&#160;&#160;<b>CRB_EMPIRICAL</b> = 3
+<br/>
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a8139a0d4de5dc8faed1e4adcadba7a85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8139a0d4de5dc8faed1e4adcadba7a85"></a>
+Feel::po::options_description&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::crbOptions</b> (std::string const &amp;prefix)</td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme <a href="#" onclick="location.href='mai'+'lto:'+'chr'+'is'+'top'+'he'+'.pr'+'ud'+'hom'+'me'+'@fe'+'el'+'pp.'+'or'+'g'; return false;">chris<span style="display: none;">.nosp@m.</span>toph<span style="display: none;">.nosp@m.</span>e.pru<span style="display: none;">.nosp@m.</span>dhom<span style="display: none;">.nosp@m.</span>me@fe<span style="display: none;">.nosp@m.</span>elpp<span style="display: none;">.nosp@m.</span>.org</a> </dd></dl>
@@ -161,8 +176,8 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_ba6b0b00ba30d3bae765add8611b95f7.html">feelcrb</a></li><li class="navelem"><a class="el" href="crb_8hpp.html">crb.hpp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:04 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_158e1417d43fa5244f8b5daf340f79ff.html">feelcrb</a></li><li class="navelem"><a class="el" href="crb_8hpp.html">crb.hpp</a></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:53 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

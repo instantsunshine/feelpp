@@ -3,7 +3,6 @@ var searchData=
   ['factory',['Factory',['../classFeel_1_1Factory.html',1,'Feel']]],
   ['factoryclone',['FactoryClone',['../classFeel_1_1FactoryClone.html',1,'Feel']]],
   ['factorydefaulterror',['FactoryDefaultError',['../structFeel_1_1FactoryDefaultError.html',1,'Feel']]],
-  ['fekete',['Fekete',['../classFekete.html',1,'']]],
   ['filterfromvtk',['FilterFromVtk',['../classFeel_1_1FilterFromVtk.html',1,'Feel']]],
   ['filterfromvtk3d',['FilterFromVtk3D',['../classFeel_1_1FilterFromVtk3D.html',1,'Feel']]],
   ['finiteelement',['FiniteElement',['../classFeel_1_1FiniteElement.html',1,'Feel']]],
@@ -14,5 +13,7 @@ var searchData=
   ['finiteelement_3c_20raviartthomaspolynomialset_3c_20n_2c_20o_2c_20t_2c_20convex_20_3e_2c_20fem_3a_3adetail_3a_3araviartthomasdual_2c_20pointsetequispaced_20_3e',['FiniteElement&lt; RaviartThomasPolynomialSet&lt; N, O, T, Convex &gt;, fem::detail::RaviartThomasDual, PointSetEquiSpaced &gt;',['../classFeel_1_1FiniteElement.html',1,'Feel']]],
   ['functional',['Functional',['../classFeel_1_1Functional.html',1,'Feel']]],
   ['functionalset',['FunctionalSet',['../classFeel_1_1FunctionalSet.html',1,'Feel']]],
-  ['functionalset_3c_20primal_5fspace_5ftype_20_3e',['FunctionalSet&lt; primal_space_type &gt;',['../classFeel_1_1FunctionalSet.html',1,'Feel']]]
+  ['functionalset_3c_20primal_5fspace_5ftype_20_3e',['FunctionalSet&lt; primal_space_type &gt;',['../classFeel_1_1FunctionalSet.html',1,'Feel']]],
+  ['functionspace',['FunctionSpace',['../classFeel_1_1FunctionSpace.html',1,'Feel']]],
+  ['functionspacebase',['FunctionSpaceBase',['../classFeel_1_1FunctionSpaceBase.html',1,'Feel']]]
 ];

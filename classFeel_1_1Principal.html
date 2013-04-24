@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -99,7 +99,9 @@ $(document).ready(function(){initNavTree('classFeel_1_1Principal.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="classFeel_1_1Principal-members.html">List of all members</a>  </div>
+<a href="classFeel_1_1Principal-members.html">List of all members</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::Principal&lt; Degree, T, StoragePolicy &gt; Class Template Reference</div>  </div>
 </div><!--header-->
@@ -144,6 +146,14 @@ typedef storage_policy::vector_type&#160;</td><td class="memItemRight" valign="b
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a5328bf6b708dbeb8355abaf5dd0e2775"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5328bf6b708dbeb8355abaf5dd0e2775"></a>
+matrix_type&#160;</td><td class="memItemRight" valign="bottom"><b>derivate_1</b> (vector_type const &amp;__pts) const </td></tr>
+<tr class="memitem:abc0761b4e401093fc630830a3b8c8436"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc0761b4e401093fc630830a3b8c8436"></a>
+vector_matrix_type&#160;</td><td class="memItemRight" valign="bottom"><b>derivate_2</b> (vector_type const &amp;__pts) const </td></tr>
+<tr class="memitem:ab0ce3c914acd734a48d41392f1149696"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0ce3c914acd734a48d41392f1149696"></a>
+vector_vector_matrix_type&#160;</td><td class="memItemRight" valign="bottom"><b>derivate_3</b> (vector_type const &amp;__pts) const </td></tr>
+<tr class="memitem:ae5136bf06155c4925124083c20da6de0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5136bf06155c4925124083c20da6de0"></a>
+<a class="el" href="classFeel_1_1Principal.html">self_type</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classFeel_1_1Principal.html">self_type</a> const &amp;d)</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors, destructor</div></td></tr>
 <tr class="memitem:aab1f0d303fa155dff85455976cfc96d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab1f0d303fa155dff85455976cfc96d7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Principal</b> ()</td></tr>
@@ -162,6 +172,11 @@ value_type&#160;</td><td class="memItemRight" valign="bottom"><b>b</b> () const 
 <tr class="memitem:aee5673edc93963a3bc69f7d336d3ad73"><td class="memItemLeft" align="right" valign="top">matrix_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Principal.html#aee5673edc93963a3bc69f7d336d3ad73">evaluate_1</a> (vector_type const &amp;__pts) const </td></tr>
 <tr class="memitem:a97afbda62c8454ecb9b2a2beeade1768"><td class="memItemLeft" align="right" valign="top">vector_matrix_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Principal.html#a97afbda62c8454ecb9b2a2beeade1768">evaluate_2</a> (vector_type const &amp;__pts) const </td></tr>
 <tr class="memitem:ab55c69d7f052feb55bb8291480022e2f"><td class="memItemLeft" align="right" valign="top">vector_vector_matrix_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Principal.html#ab55c69d7f052feb55bb8291480022e2f">evaluate_3</a> (vector_type const &amp;__pts) const </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a6ef536a070337d8d7422fdfc33e9d70a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ef536a070337d8d7422fdfc33e9d70a"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nOrder</b> = Degree</td></tr>
 </table>
 <h2>Member Function Documentation</h2>
 <a class="anchor" id="aee5673edc93963a3bc69f7d336d3ad73"></a>
@@ -233,7 +248,7 @@ template&lt;uint16_type Degree, typename T , template&lt; class &gt; class Stora
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1Principal.html">Principal</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:07 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:56 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

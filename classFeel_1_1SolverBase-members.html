@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -105,16 +105,22 @@ $(document).ready(function(){initNavTree('classFeel_1_1SolverBase.html','');});
 
 <p>This is the complete list of members for <a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html#af9bd228e8bbdc39ab30667ba1ff0e298">New</a>()=0</td><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a></td><td class="entry"><span class="mlabel">pure virtual</span><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>array_type</b> typedef (defined in <a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a>)</td><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html#af9bd228e8bbdc39ab30667ba1ff0e298">New</a>()=0</td><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a></td><td class="entry"><span class="mlabel">pure virtual</span><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>residualNorm</b>() const =0 (defined in <a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a>)</td><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html#af600ede595225336cd76b08fd15d31ad">setMatrix</a>(MatrixType const &amp;newMatrix)=0</td><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html#a6f075ecfa1eea8e773779d55af26ae0d">setOptionsFromGetPot</a>(GetPot const &amp;dataFile, std::string section)=0</td><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>setTolerance</b>(double newTolerance)=0 (defined in <a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a>)</td><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>solve</b>(array_type &amp;x, array_type const &amp;b)=0 (defined in <a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a>)</td><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>solver_type</b> typedef (defined in <a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a>)</td><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>value_type</b> typedef (defined in <a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a>)</td><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html#a13a83cc0ddebb7abb26bea6fb0e464ad">~SolverBase</a>()=0</td><td class="entry"><a class="el" href="classFeel_1_1SolverBase.html">Feel::SolverBase</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:06 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:57 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

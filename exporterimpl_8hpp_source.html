@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -231,7 +231,7 @@ $(document).ready(function(){initNavTree('exporterimpl_8hpp_source.html','');});
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">else</span> <span class="comment">// fallback</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        exporter = <span class="keyword">new</span> <a class="code" href="classFeel_1_1ExporterEnsight.html" title="exporter to Ensight format">ExporterEnsight&lt;MeshType, N&gt;</a>( worldComm );</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    exporter-&gt;<a class="code" href="classFeel_1_1Exporter.html#ae0cbadd9f3e483d8edb7b4664b3a67e5">addTimeSet</a>( timeset_ptrtype( <span class="keyword">new</span> timeset_type( prefix ) ) );</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    exporter-&gt;<a class="code" href="classFeel_1_1Exporter.html#ae0cbadd9f3e483d8edb7b4664b3a67e5">addTimeSet</a>( timeset_ptrtype( <span class="keyword">new</span> <a class="code" href="classFeel_1_1TimeSet.html" title="data TimeSet">timeset_type</a>( prefix ) ) );</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    exporter-&gt;<a class="code" href="classFeel_1_1Exporter.html#ae3bba0a66e5982b327b2592a4d92100f">setPrefix</a>( prefix );</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> boost::shared_ptr&lt;Exporter&lt;MeshType, N&gt; &gt;(exporter);</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
@@ -253,7 +253,7 @@ $(document).ready(function(){initNavTree('exporterimpl_8hpp_source.html','');});
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    exporter-&gt;<a class="code" href="classFeel_1_1ExporterEnsight.html#a67770c209bf283fc4d3bb5d619cf6b36">setOptions</a>();</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">//std::cout &lt;&lt; &quot;[exporter::New] do export = &quot; &lt;&lt; exporter-&gt;doExport() &lt;&lt; std::endl;</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    exporter-&gt;addTimeSet( timeset_ptrtype( <span class="keyword">new</span> timeset_type( prefix ) ) );</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    exporter-&gt;addTimeSet( timeset_ptrtype( <span class="keyword">new</span> <a class="code" href="classFeel_1_1TimeSet.html" title="data TimeSet">timeset_type</a>( prefix ) ) );</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    exporter-&gt;setPrefix( prefix );</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> boost::shared_ptr&lt;Exporter&lt;MeshType, N&gt; &gt;( exporter );</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
@@ -314,8 +314,8 @@ $(document).ready(function(){initNavTree('exporterimpl_8hpp_source.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_e5f0dfdce99b571c03f822e68138ad6d.html">feelfilters</a></li><li class="navelem"><a class="el" href="exporterimpl_8hpp.html">exporterimpl.hpp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:28:59 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_20ecd942a77abb86794d08a686402ca9.html">feelfilters</a></li><li class="navelem"><a class="el" href="exporterimpl_8hpp.html">exporterimpl.hpp</a></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:47 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

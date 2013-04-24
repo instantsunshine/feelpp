@@ -22,8 +22,6 @@ var classFeel_1_1PolynomialSet =
     [ "PolynomialSet", "classFeel_1_1PolynomialSet.html#ad47e66f21411ca23b0c053452c8108ed", null ],
     [ "~PolynomialSet", "classFeel_1_1PolynomialSet.html#a1efccfec749c13b9250b7d528e1d9263", null ],
     [ "basis", "classFeel_1_1PolynomialSet.html#a05f79fa98b68abf49ded80bf74eed37f", null ],
-    [ "BOOST_STATIC_ASSERT", "classFeel_1_1PolynomialSet.html#a2030e4b4006a51557f1b9ad6870a747b", null ],
-    [ "BOOST_STATIC_ASSERT", "classFeel_1_1PolynomialSet.html#a0e0771b901f2bab354faca0b10d957c0", null ],
     [ "coeff", "classFeel_1_1PolynomialSet.html#a47c3378ff4692aa26fe75815bbd92033", null ],
     [ "context", "classFeel_1_1PolynomialSet.html#ab914ede36116210688f920d5770e2166", null ],
     [ "ctx", "classFeel_1_1PolynomialSet.html#a785ddf5213052ebcc34c2fe46911323a", null ],

@@ -18,7 +18,9 @@ var searchData=
   ['reference_3c_20simplex_3c_202_2c_201_2c_202_20_3e_2c_202_2c_201_2c_202_2c_20t_20_3e',['Reference&lt; Simplex&lt; 2, 1, 2 &gt;, 2, 1, 2, T &gt;',['../classFeel_1_1Reference.html',1,'Feel']]],
   ['reference_3c_20simplex_3c_203_2c_201_2c_203_20_3e_2c_203_2c_201_2c_203_2c_20t_20_3e',['Reference&lt; Simplex&lt; 3, 1, 3 &gt;, 3, 1, 3, T &gt;',['../classFeel_1_1Reference.html',1,'Feel']]],
   ['reference_5fconvex',['reference_convex',['../structFeel_1_1GeoEntity_1_1reference__convex.html',1,'Feel::GeoEntity']]],
-  ['regiontree',['RegionTree',['../classFeel_1_1RegionTree.html',1,'Feel']]],
-  ['residualestimator',['ResidualEstimator',['../classResidualEstimator.html',1,'']]],
-  ['resistancelaplacian',['ResistanceLaplacian',['../classFeel_1_1ResistanceLaplacian.html',1,'Feel']]]
+  ['regionmarker2',['RegionMarker2',['../structFeel_1_1RegionMarker2.html',1,'Feel']]],
+  ['regionmarker3',['RegionMarker3',['../structFeel_1_1RegionMarker3.html',1,'Feel']]],
+  ['regionmarkre',['RegionMarkre',['../structFeel_1_1RegionMarkre.html',1,'Feel']]],
+  ['regionprocess',['RegionProcess',['../structFeel_1_1RegionProcess.html',1,'Feel']]],
+  ['regiontree',['RegionTree',['../classFeel_1_1RegionTree.html',1,'Feel']]]
 ];

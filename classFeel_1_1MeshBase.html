@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -100,7 +100,8 @@ $(document).ready(function(){initNavTree('classFeel_1_1MeshBase.html','');});
 <div class="header">
   <div class="summary">
 <a href="classFeel_1_1MeshBase-members.html">List of all members</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::MeshBase Class Reference</div>  </div>
 </div><!--header-->
@@ -119,9 +120,10 @@ $(document).ready(function(){initNavTree('classFeel_1_1MeshBase.html','');});
  <div class="center">
   <img src="classFeel_1_1MeshBase.png" usemap="#Feel::MeshBase_map" alt=""/>
   <map id="Feel::MeshBase_map" name="Feel::MeshBase_map">
-<area href="classFeel_1_1Mesh1D.html" title="1D mesh class" alt="Feel::Mesh1D&lt; Shape &gt;" shape="rect" coords="0,56,150,80"/>
-<area href="classFeel_1_1Mesh2D.html" title="2D mesh class" alt="Feel::Mesh2D&lt; Shape &gt;" shape="rect" coords="160,56,310,80"/>
-<area href="classFeel_1_1Mesh3D.html" title="3D mesh class" alt="Feel::Mesh3D&lt; Shape &gt;" shape="rect" coords="320,56,470,80"/>
+<area href="classFeel_1_1Mesh0D.html" title="0D mesh class" alt="Feel::Mesh0D&lt; Shape &gt;" shape="rect" coords="0,56,150,80"/>
+<area href="classFeel_1_1Mesh1D.html" title="1D mesh class" alt="Feel::Mesh1D&lt; Shape &gt;" shape="rect" coords="160,56,310,80"/>
+<area href="classFeel_1_1Mesh2D.html" title="2D mesh class" alt="Feel::Mesh2D&lt; Shape &gt;" shape="rect" coords="320,56,470,80"/>
+<area href="classFeel_1_1Mesh3D.html" title="3D mesh class" alt="Feel::Mesh3D&lt; Shape &gt;" shape="rect" coords="480,56,630,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -199,12 +201,17 @@ template&lt;typename M &gt; </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a6c8e958ed0d8117dd3f92f0192909248"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a6c8e958ed0d8117dd3f92f0192909248">setUpdatedForUse</a> (bool u)</td></tr>
-<tr class="memitem:adbcbbde4f2a3eacc704cdd94ed21c52b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#adbcbbde4f2a3eacc704cdd94ed21c52b">renumber</a> ()=0</td></tr>
-<tr class="memitem:a7f04eea0fcd983db31f62da11cc98d5b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a7f04eea0fcd983db31f62da11cc98d5b">updateEntitiesCoDimensionOne</a> ()=0</td></tr>
-<tr class="memitem:ad949011514b6940a39e53cf19877effe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#ad949011514b6940a39e53cf19877effe">updateEntitiesCoDimensionTwo</a> ()=0</td></tr>
 <tr class="memitem:ab77c0415347189d6fc23610e4a36359e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#ab77c0415347189d6fc23610e4a36359e">check</a> () const =0</td></tr>
 <tr class="memitem:ab22d4678c8cc5a4360375b0ac66bcf55"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#ab22d4678c8cc5a4360375b0ac66bcf55">checkAndFixPermutation</a> ()=0</td></tr>
+<tr class="memitem:adbcbbde4f2a3eacc704cdd94ed21c52b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#adbcbbde4f2a3eacc704cdd94ed21c52b">renumber</a> ()=0</td></tr>
+<tr class="memitem:a6c8e958ed0d8117dd3f92f0192909248"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a6c8e958ed0d8117dd3f92f0192909248">setUpdatedForUse</a> (bool u)</td></tr>
+<tr class="memitem:a7f04eea0fcd983db31f62da11cc98d5b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a7f04eea0fcd983db31f62da11cc98d5b">updateEntitiesCoDimensionOne</a> ()=0</td></tr>
+<tr class="memitem:ad949011514b6940a39e53cf19877effe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#ad949011514b6940a39e53cf19877effe">updateEntitiesCoDimensionTwo</a> ()=0</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ac98d07dd8f7b70e16ccb9a01abf56b9c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac98d07dd8f7b70e16ccb9a01abf56b9c"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization::access</b></td></tr>
 </table>
 <h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a3a4f37a7436de677c1e9a8d576975721"></a>
@@ -356,7 +363,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Empty all containers of the mesh. Must be redefined by derived classes. </p>
 
-<p>Reimplemented in <a class="el" href="classFeel_1_1Mesh3D.html#aafa67d57b2a85ae4036db14c5c875b42">Feel::Mesh3D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh2D.html#a9cff6202d258bc2b1e39c443c3a4bb0f">Feel::Mesh2D&lt; Shape &gt;</a>, and <a class="el" href="classFeel_1_1Mesh1D.html#a690cf8e7ce619dba68184bad61beac2b">Feel::Mesh1D&lt; Shape &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classFeel_1_1Mesh3D.html#aafa67d57b2a85ae4036db14c5c875b42">Feel::Mesh3D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh2D.html#a9cff6202d258bc2b1e39c443c3a4bb0f">Feel::Mesh2D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh1D.html#a690cf8e7ce619dba68184bad61beac2b">Feel::Mesh1D&lt; Shape &gt;</a>, and <a class="el" href="classFeel_1_1Mesh0D.html#ad26c9581bf3c450f081c66cc62be4339">Feel::Mesh0D&lt; Shape &gt;</a>.</p>
 
 </div>
 </div>
@@ -709,7 +716,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the number of elements </dd></dl>
 
-<p>Implemented in <a class="el" href="classFeel_1_1Mesh2D.html#a0e78fb11d9cd577c043949a6484b6cda">Feel::Mesh2D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh3D.html#a7ceb41da9bd30b149856af35ac81f9ac">Feel::Mesh3D&lt; Shape &gt;</a>, and <a class="el" href="classFeel_1_1Mesh1D.html#ad4078e20ac0352dd70274a2c882eb822">Feel::Mesh1D&lt; Shape &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classFeel_1_1Mesh2D.html#a0e78fb11d9cd577c043949a6484b6cda">Feel::Mesh2D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh3D.html#a7ceb41da9bd30b149856af35ac81f9ac">Feel::Mesh3D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh1D.html#ad4078e20ac0352dd70274a2c882eb822">Feel::Mesh1D&lt; Shape &gt;</a>, and <a class="el" href="classFeel_1_1Mesh0D.html#ab0b90f206ed35e27bd802a8495188b79">Feel::Mesh0D&lt; Shape &gt;</a>.</p>
 
 </div>
 </div>
@@ -735,7 +742,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the number of faces </dd></dl>
 
-<p>Implemented in <a class="el" href="classFeel_1_1Mesh2D.html#a74acbea0e1927a1410bc70401613e417">Feel::Mesh2D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh3D.html#aa96470e96c7206d5a96c1b1d5a9248fa">Feel::Mesh3D&lt; Shape &gt;</a>, and <a class="el" href="classFeel_1_1Mesh1D.html#a5aef0447ae3b6c713f78bb203fe6b6c1">Feel::Mesh1D&lt; Shape &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classFeel_1_1Mesh2D.html#a74acbea0e1927a1410bc70401613e417">Feel::Mesh2D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh3D.html#aa96470e96c7206d5a96c1b1d5a9248fa">Feel::Mesh3D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh1D.html#a5aef0447ae3b6c713f78bb203fe6b6c1">Feel::Mesh1D&lt; Shape &gt;</a>, and <a class="el" href="classFeel_1_1Mesh0D.html#a3aa1c5077a4d19511e01c42af40a4c5b">Feel::Mesh0D&lt; Shape &gt;</a>.</p>
 
 </div>
 </div>
@@ -761,7 +768,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the number of Points </dd></dl>
 
-<p>Implemented in <a class="el" href="classFeel_1_1Mesh2D.html#a0f1ed8043c4adeb96587bb05695727c2">Feel::Mesh2D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh3D.html#ab3db617afa6488a89c7ba31716953ed5">Feel::Mesh3D&lt; Shape &gt;</a>, and <a class="el" href="classFeel_1_1Mesh1D.html#a9514dc3471330831265bd08f09489d18">Feel::Mesh1D&lt; Shape &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classFeel_1_1Mesh2D.html#a0f1ed8043c4adeb96587bb05695727c2">Feel::Mesh2D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh3D.html#ab3db617afa6488a89c7ba31716953ed5">Feel::Mesh3D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh1D.html#a9514dc3471330831265bd08f09489d18">Feel::Mesh1D&lt; Shape &gt;</a>, and <a class="el" href="classFeel_1_1Mesh0D.html#a29db1b04336ceff375df80196de1a798">Feel::Mesh0D&lt; Shape &gt;</a>.</p>
 
 </div>
 </div>
@@ -851,9 +858,9 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>After loading/defining a mesh, we want to have as much locality as possible (elements/faces/nodes to be contiguous). In order to do that the mesh elements/faces/nodes are renumbered. That will be then most helpful when generating the <code>Dof</code> table. This procedure should work also with <code>comm()</code>.size() == 1 </p>
+<p>After loading/defining a mesh, we want to have as much locality as possible (elements/faces/nodes to be contiguous). In order to do that the mesh elements/faces/nodes are renumbered. That will be then most helpful when generating the <code><a class="el" href="classFeel_1_1Dof.html" title="class that represents a degree of freedom">Dof</a></code> table. This procedure should work also with <code>comm()</code>.size() == 1 </p>
 
-<p>Implemented in <a class="el" href="classFeel_1_1Mesh3D.html#ab88a13ab3f386b3abf77ee3df63d63a6">Feel::Mesh3D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh2D.html#a3b24571d5e1ddf276a28b035c374cfbe">Feel::Mesh2D&lt; Shape &gt;</a>, and <a class="el" href="classFeel_1_1Mesh1D.html#a9c14a403a3692759818f8a79971b6cdc">Feel::Mesh1D&lt; Shape &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classFeel_1_1Mesh3D.html#ab88a13ab3f386b3abf77ee3df63d63a6">Feel::Mesh3D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh2D.html#a3b24571d5e1ddf276a28b035c374cfbe">Feel::Mesh2D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh1D.html#a9c14a403a3692759818f8a79971b6cdc">Feel::Mesh1D&lt; Shape &gt;</a>, and <a class="el" href="classFeel_1_1Mesh0D.html#a35084da94d7c29956b374fd8ee55c7d3">Feel::Mesh0D&lt; Shape &gt;</a>.</p>
 
 </div>
 </div>
@@ -1117,7 +1124,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>update the entities of co-dimension 2 </p>
 
-<p>Implemented in <a class="el" href="classFeel_1_1Mesh2D.html#a634eef66fde7f6ef2fc6b9fc037632d4">Feel::Mesh2D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh3D.html#acfb7ba4e4a1d5768eee084687c4a5fbf">Feel::Mesh3D&lt; Shape &gt;</a>, and <a class="el" href="classFeel_1_1Mesh1D.html#a9ee75e7535599308d8be4edeee50499a">Feel::Mesh1D&lt; Shape &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classFeel_1_1Mesh2D.html#a634eef66fde7f6ef2fc6b9fc037632d4">Feel::Mesh2D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh3D.html#acfb7ba4e4a1d5768eee084687c4a5fbf">Feel::Mesh3D&lt; Shape &gt;</a>, <a class="el" href="classFeel_1_1Mesh1D.html#a9ee75e7535599308d8be4edeee50499a">Feel::Mesh1D&lt; Shape &gt;</a>, and <a class="el" href="classFeel_1_1Mesh0D.html#a6965a1f1802c172c91df3ea5fd4b1963">Feel::Mesh0D&lt; Shape &gt;</a>.</p>
 
 </div>
 </div>
@@ -1207,7 +1214,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1MeshBase.html">MeshBase</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:06 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:56 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

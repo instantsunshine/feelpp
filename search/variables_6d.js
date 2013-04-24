@@ -59,5 +59,6 @@ var searchData=
   ['map_5fdense_5fjacobian',['map_dense_jacobian',['../classFeel_1_1SolverNonLinear.html#a6fc4635ccfabd1909fd334322ab73690',1,'Feel::SolverNonLinear']]],
   ['map_5fdense_5fmatvec',['map_dense_matvec',['../classFeel_1_1SolverNonLinear.html#a3b921c2ce2e025a7d73157c0cde7af89',1,'Feel::SolverNonLinear']]],
   ['map_5fdense_5fresidual',['map_dense_residual',['../classFeel_1_1SolverNonLinear.html#a39b3f7c0ff20d1741ea88d933827dfc8',1,'Feel::SolverNonLinear']]],
-  ['matvec',['matvec',['../classFeel_1_1SolverNonLinear.html#ac5cc43ea14d8e3273684f4e34277d0d4',1,'Feel::SolverNonLinear']]]
+  ['matvec',['matvec',['../classFeel_1_1SolverNonLinear.html#ac5cc43ea14d8e3273684f4e34277d0d4',1,'Feel::SolverNonLinear']]],
+  ['meshchanged',['meshChanged',['../classFeel_1_1Mesh.html#af79f16702233be26f55e613c82b98a1f',1,'Feel::Mesh']]]
 ];

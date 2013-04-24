@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -117,9 +117,24 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4c300b4c137594540a9428af36363049"><td class="memTemplParams" colspan="2">template&lt;typename Poly , template&lt; uint16_type &gt; class PsetType&gt; </td></tr>
-<tr class="memitem:a4c300b4c137594540a9428af36363049"><td class="memTemplItemLeft" align="right" valign="top">Poly::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049">Feel::integrate</a> (Polynomial&lt; Poly, PsetType &gt; const &amp;p)</td></tr>
-<tr class="memdesc:a4c300b4c137594540a9428af36363049"><td class="mdescLeft">&#160;</td><td class="mdescRight">integrate a polynomial over a convex  <a href="#a4c300b4c137594540a9428af36363049"></a><br/></td></tr>
+<tr class="memitem:af0e68f5f62e0b915cf3b9ac73b5c4080"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
+<tr class="memitem:af0e68f5f62e0b915cf3b9ac73b5c4080"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Poly, Vectorial &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#af0e68f5f62e0b915cf3b9ac73b5c4080">Feel::curl</a> (Polynomial&lt; Poly, Vectorial &gt; const &amp;p)</td></tr>
+<tr class="memdesc:af0e68f5f62e0b915cf3b9ac73b5c4080"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the curl of a vectorial polynomial <code>p</code>  <a href="#af0e68f5f62e0b915cf3b9ac73b5c4080"></a><br/></td></tr>
+<tr class="memitem:a3788c225ebee3147f0bcd32c6d77478d"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
+<tr class="memitem:a3788c225ebee3147f0bcd32c6d77478d"><td class="memTemplItemLeft" align="right" valign="top">PolynomialSet&lt; Poly, Vectorial &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a3788c225ebee3147f0bcd32c6d77478d">Feel::curl</a> (PolynomialSet&lt; Poly, Vectorial &gt; const &amp;p)</td></tr>
+<tr class="memdesc:a3788c225ebee3147f0bcd32c6d77478d"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the curl of a vectorial polynomial set <code>p</code>  <a href="#a3788c225ebee3147f0bcd32c6d77478d"></a><br/></td></tr>
+<tr class="memitem:a31844ce9bde57a55518ab057fd040744"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
+<tr class="memitem:a31844ce9bde57a55518ab057fd040744"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Poly, Vectorial &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a31844ce9bde57a55518ab057fd040744">Feel::curlt</a> (Polynomial&lt; Poly, Vectorial &gt; const &amp;p)</td></tr>
+<tr class="memdesc:a31844ce9bde57a55518ab057fd040744"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the transpose of the curl of a vectorial polynomial <code>p</code>  <a href="#a31844ce9bde57a55518ab057fd040744"></a><br/></td></tr>
+<tr class="memitem:ad711a250106c87c0df471a90881a2dfb"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
+<tr class="memitem:ad711a250106c87c0df471a90881a2dfb"><td class="memTemplItemLeft" align="right" valign="top">PolynomialSet&lt; Poly, Vectorial &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#ad711a250106c87c0df471a90881a2dfb">Feel::curlt</a> (PolynomialSet&lt; Poly, Vectorial &gt; const &amp;p)</td></tr>
+<tr class="memdesc:ad711a250106c87c0df471a90881a2dfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the transpose of the curl of a vectorial polynomial <code>p</code>  <a href="#ad711a250106c87c0df471a90881a2dfb"></a><br/></td></tr>
+<tr class="memitem:a552129f28d2fad48c78b92a1baccbdb9"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
+<tr class="memitem:a552129f28d2fad48c78b92a1baccbdb9"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Poly, Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a552129f28d2fad48c78b92a1baccbdb9">Feel::divergence</a> (Polynomial&lt; Poly, Vectorial &gt; const &amp;p)</td></tr>
+<tr class="memdesc:a552129f28d2fad48c78b92a1baccbdb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the divergence of a vectorial polynomial <code>p</code>  <a href="#a552129f28d2fad48c78b92a1baccbdb9"></a><br/></td></tr>
+<tr class="memitem:a9f140d4902cd2b28cd758430f1af2f6e"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
+<tr class="memitem:a9f140d4902cd2b28cd758430f1af2f6e"><td class="memTemplItemLeft" align="right" valign="top">PolynomialSet&lt; Poly, Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a9f140d4902cd2b28cd758430f1af2f6e">Feel::divergence</a> (PolynomialSet&lt; Poly, Vectorial &gt; const &amp;p)</td></tr>
+<tr class="memdesc:a9f140d4902cd2b28cd758430f1af2f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the divergence of a vectorial polynomial set <code>p</code>  <a href="#a9f140d4902cd2b28cd758430f1af2f6e"></a><br/></td></tr>
 <tr class="memitem:a03f3303c5b91e975155799efa3f30b25"><td class="memTemplParams" colspan="2">template&lt;typename Poly , template&lt; uint16_type &gt; class Type&gt; </td></tr>
 <tr class="memitem:a03f3303c5b91e975155799efa3f30b25"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Poly, Type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a03f3303c5b91e975155799efa3f30b25">Feel::dx</a> (Polynomial&lt; Poly, Type &gt; const &amp;p)</td></tr>
 <tr class="memdesc:a03f3303c5b91e975155799efa3f30b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute <img class="formulaInl" alt="$\frac{\partial \cdot}{\partial x}$" src="form_104.png"/> of a polynomial <code>p</code>  <a href="#a03f3303c5b91e975155799efa3f30b25"></a><br/></td></tr>
@@ -153,24 +168,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8073bad0e88192d69a7b74083ffa640d"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
 <tr class="memitem:a8073bad0e88192d69a7b74083ffa640d"><td class="memTemplItemLeft" align="right" valign="top">PolynomialSet&lt; Poly, Tensor2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a8073bad0e88192d69a7b74083ffa640d">Feel::hessian</a> (PolynomialSet&lt; Poly, Scalar &gt; const &amp;p)</td></tr>
 <tr class="memdesc:a8073bad0e88192d69a7b74083ffa640d"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the gradient of a vectorial polynomial set  <a href="#a8073bad0e88192d69a7b74083ffa640d"></a><br/></td></tr>
-<tr class="memitem:a552129f28d2fad48c78b92a1baccbdb9"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
-<tr class="memitem:a552129f28d2fad48c78b92a1baccbdb9"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Poly, Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a552129f28d2fad48c78b92a1baccbdb9">Feel::divergence</a> (Polynomial&lt; Poly, Vectorial &gt; const &amp;p)</td></tr>
-<tr class="memdesc:a552129f28d2fad48c78b92a1baccbdb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the divergence of a vectorial polynomial <code>p</code>  <a href="#a552129f28d2fad48c78b92a1baccbdb9"></a><br/></td></tr>
-<tr class="memitem:a9f140d4902cd2b28cd758430f1af2f6e"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
-<tr class="memitem:a9f140d4902cd2b28cd758430f1af2f6e"><td class="memTemplItemLeft" align="right" valign="top">PolynomialSet&lt; Poly, Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a9f140d4902cd2b28cd758430f1af2f6e">Feel::divergence</a> (PolynomialSet&lt; Poly, Vectorial &gt; const &amp;p)</td></tr>
-<tr class="memdesc:a9f140d4902cd2b28cd758430f1af2f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the divergence of a vectorial polynomial set <code>p</code>  <a href="#a9f140d4902cd2b28cd758430f1af2f6e"></a><br/></td></tr>
-<tr class="memitem:af0e68f5f62e0b915cf3b9ac73b5c4080"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
-<tr class="memitem:af0e68f5f62e0b915cf3b9ac73b5c4080"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Poly, Vectorial &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#af0e68f5f62e0b915cf3b9ac73b5c4080">Feel::curl</a> (Polynomial&lt; Poly, Vectorial &gt; const &amp;p)</td></tr>
-<tr class="memdesc:af0e68f5f62e0b915cf3b9ac73b5c4080"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the curl of a vectorial polynomial <code>p</code>  <a href="#af0e68f5f62e0b915cf3b9ac73b5c4080"></a><br/></td></tr>
-<tr class="memitem:a3788c225ebee3147f0bcd32c6d77478d"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
-<tr class="memitem:a3788c225ebee3147f0bcd32c6d77478d"><td class="memTemplItemLeft" align="right" valign="top">PolynomialSet&lt; Poly, Vectorial &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a3788c225ebee3147f0bcd32c6d77478d">Feel::curl</a> (PolynomialSet&lt; Poly, Vectorial &gt; const &amp;p)</td></tr>
-<tr class="memdesc:a3788c225ebee3147f0bcd32c6d77478d"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the curl of a vectorial polynomial set <code>p</code>  <a href="#a3788c225ebee3147f0bcd32c6d77478d"></a><br/></td></tr>
-<tr class="memitem:a31844ce9bde57a55518ab057fd040744"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
-<tr class="memitem:a31844ce9bde57a55518ab057fd040744"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Poly, Vectorial &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a31844ce9bde57a55518ab057fd040744">Feel::curlt</a> (Polynomial&lt; Poly, Vectorial &gt; const &amp;p)</td></tr>
-<tr class="memdesc:a31844ce9bde57a55518ab057fd040744"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the transpose of the curl of a vectorial polynomial <code>p</code>  <a href="#a31844ce9bde57a55518ab057fd040744"></a><br/></td></tr>
-<tr class="memitem:ad711a250106c87c0df471a90881a2dfb"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
-<tr class="memitem:ad711a250106c87c0df471a90881a2dfb"><td class="memTemplItemLeft" align="right" valign="top">PolynomialSet&lt; Poly, Vectorial &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#ad711a250106c87c0df471a90881a2dfb">Feel::curlt</a> (PolynomialSet&lt; Poly, Vectorial &gt; const &amp;p)</td></tr>
-<tr class="memdesc:ad711a250106c87c0df471a90881a2dfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the transpose of the curl of a vectorial polynomial <code>p</code>  <a href="#ad711a250106c87c0df471a90881a2dfb"></a><br/></td></tr>
+<tr class="memitem:a4c300b4c137594540a9428af36363049"><td class="memTemplParams" colspan="2">template&lt;typename Poly , template&lt; uint16_type &gt; class PsetType&gt; </td></tr>
+<tr class="memitem:a4c300b4c137594540a9428af36363049"><td class="memTemplItemLeft" align="right" valign="top">Poly::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049">Feel::integrate</a> (Polynomial&lt; Poly, PsetType &gt; const &amp;p)</td></tr>
+<tr class="memdesc:a4c300b4c137594540a9428af36363049"><td class="mdescLeft">&#160;</td><td class="mdescRight">integrate a polynomial over a convex  <a href="#a4c300b4c137594540a9428af36363049"></a><br/></td></tr>
 <tr class="memitem:ae89776231eca6bd68ba734da512759b3"><td class="memTemplParams" colspan="2">template&lt;typename Pset , typename Func , typename IM &gt; </td></tr>
 <tr class="memitem:ae89776231eca6bd68ba734da512759b3"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Pset, Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">Feel::project</a> (Pset const &amp;pset, Func const &amp;f, IM const &amp;im)</td></tr>
 <tr class="memitem:ae64c75954df0318d6e9e1a5f848bb05c"><td class="memTemplParams" colspan="2">template&lt;typename P , template&lt; uint16_type &gt; class Type, template&lt; class, template&lt; uint16_type &gt; class &gt; class Poly1, template&lt; class, template&lt; uint16_type &gt; class &gt; class Poly2&gt; </td></tr>
@@ -185,8 +185,8 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_c85c146a44177c6961da007357ddadde.html">feelpoly</a></li><li class="navelem"><a class="el" href="operations_8hpp.html">operations.hpp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:05 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_1c1841c8c56c8663798eb9371cc92062.html">feelpoly</a></li><li class="navelem"><a class="el" href="operations_8hpp.html">operations.hpp</a></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:54 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

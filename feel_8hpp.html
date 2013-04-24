@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -100,7 +100,10 @@ $(document).ready(function(){initNavTree('feel_8hpp.html','');});
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">feel.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -156,17 +159,74 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceFeel"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html">Feel</a></td></tr>
 <tr class="memitem:namespaceFeel_1_1detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel_1_1detail.html">Feel::detail</a></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a67918fd15a1cddd6dbc0c6b46edad8e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67918fd15a1cddd6dbc0c6b46edad8e6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>OMP_GET_NUM_THREADS</b>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:adc8e7e4bbd5e6e060a0831c6e29bc434"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc8e7e4bbd5e6e060a0831c6e29bc434"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>OMP_GET_WTICK</b>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:a40f929660b98b96f92d79bb060e6ce63"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40f929660b98b96f92d79bb060e6ce63"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>OMP_GET_WTIME</b>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:a0262a14a4a34032d0e99bbf440739ea5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0262a14a4a34032d0e99bbf440739ea5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>OMP_SET_DYNAMIC</b>(num)</td></tr>
+<tr class="memitem:aa6bccd5a68ff9621a72f4516c43b3f5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6bccd5a68ff9621a72f4516c43b3f5f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>OMP_SET_NESTED</b>(num)</td></tr>
+<tr class="memitem:aaa59626371a7e1cf9a2dad8657535023"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa59626371a7e1cf9a2dad8657535023"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>OMP_SET_NUM_THREADS</b>(num)</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a400c8901e57a2fb179676de769c3f098"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a400c8901e57a2fb179676de769c3f098"></a>
+typedef std::complex&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::complex_type</b></td></tr>
 <tr class="memitem:a5155120d1dda406c1dde284a66a1b000"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5155120d1dda406c1dde284a66a1b000"></a>
 typedef uint16_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a5155120d1dda406c1dde284a66a1b000">Feel::dim_type</a></td></tr>
 <tr class="memdesc:a5155120d1dda406c1dde284a66a1b000"><td class="mdescLeft">&#160;</td><td class="mdescRight">dimension type <br/></td></tr>
+<tr class="memitem:a5137d5a00a3a883290b5742501e7b5a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5137d5a00a3a883290b5742501e7b5a8"></a>
+typedef int64_type&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::flag_type</b></td></tr>
+<tr class="memitem:aa29cb17e9d0d5fb6e5269c078b4bc948"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa29cb17e9d0d5fb6e5269c078b4bc948"></a>
+typedef boost::int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::int16_type</b></td></tr>
+<tr class="memitem:a73b5d18a1df0e94bb344ced592dc1df2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73b5d18a1df0e94bb344ced592dc1df2"></a>
+typedef boost::int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::int32_type</b></td></tr>
+<tr class="memitem:a00aef995ca042fb6949bcf95c4c0aca9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00aef995ca042fb6949bcf95c4c0aca9"></a>
+typedef boost::int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::int64_type</b></td></tr>
+<tr class="memitem:a422bdf5e2ca1e9311a1f3ce426dcfafb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a422bdf5e2ca1e9311a1f3ce426dcfafb"></a>
+typedef boost::int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::int8_type</b></td></tr>
+<tr class="memitem:aff8c989dddf67ff63dff34793ec0509f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff8c989dddf67ff63dff34793ec0509f"></a>
+typedef double&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::Real</b></td></tr>
+<tr class="memitem:a8f206c5d1c80e879bc590f00c5cc8dc5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f206c5d1c80e879bc590f00c5cc8dc5"></a>
+typedef detail::real&lt; 32 &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::real32_type</b></td></tr>
+<tr class="memitem:a0e4929a45457fdc27e1055122bfff7a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e4929a45457fdc27e1055122bfff7a5"></a>
+typedef detail::real&lt; 64 &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::real64_type</b></td></tr>
+<tr class="memitem:ae93119144bffa7ed368079a659665469"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae93119144bffa7ed368079a659665469"></a>
+typedef double&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::scalar_type</b></td></tr>
 <tr class="memitem:a285d572c85de361b3f3e2695b41a4ce0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a285d572c85de361b3f3e2695b41a4ce0"></a>
 typedef size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">Feel::size_type</a></td></tr>
 <tr class="memdesc:a285d572c85de361b3f3e2695b41a4ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indices (starting from 0) <br/></td></tr>
+<tr class="memitem:a7b535239159347f393440013431cb827"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b535239159347f393440013431cb827"></a>
+typedef boost::uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::uint16_type</b></td></tr>
+<tr class="memitem:ad0e34887a7aeab02ea0f36ae69d047a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0e34887a7aeab02ea0f36ae69d047a9"></a>
+typedef boost::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::uint32_type</b></td></tr>
+<tr class="memitem:acc4d2df760bc5f3bd17b5e255472fe64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc4d2df760bc5f3bd17b5e255472fe64"></a>
+typedef boost::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::uint64_type</b></td></tr>
+<tr class="memitem:aed52446c0413dd3b45f6c009d0ad530b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed52446c0413dd3b45f6c009d0ad530b"></a>
+typedef boost::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::uint8_type</b></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a7e353c428da9966c9111e435e4b4ab42"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7e353c428da9966c9111e435e4b4ab42"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a7e353c428da9966c9111e435e4b4ab42"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Feel::detail::ignore_unused_variable_warning</b> (const T &amp;)</td></tr>
+<tr class="memitem:afdf3582bcb29eaf28321e1f5c48bfa36"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdf3582bcb29eaf28321e1f5c48bfa36"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::prefixvm</b> (std::string const &amp;prefix, std::string const &amp;opt, std::string const &amp;sep)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a33cad1849779384dc3e64e2f3f8689bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33cad1849779384dc3e64e2f3f8689bc"></a>
+const int64_type&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::invalid_flag_type_value</b> = std::numeric_limits&lt;int32_type&gt;::min()</td></tr>
+<tr class="memitem:af87c1e8b3de6fcd633bd8bac9af4cd65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af87c1e8b3de6fcd633bd8bac9af4cd65"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::pi</b> = constants::pi&lt;double&gt;()</td></tr>
+<tr class="memitem:a2eb1fdf4f3827fc5e446fa7ce76255dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2eb1fdf4f3827fc5e446fa7ce76255dc"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::two_pi</b> = constants::two_pi&lt;double&gt;()</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constants</div></td></tr>
 <tr class="memitem:a79ed5b16106b4f440ed3e76a8cb12ad3"><td class="memItemLeft" align="right" valign="top">const uint8_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a79ed5b16106b4f440ed3e76a8cb12ad3">Feel::invalid_uint8_type_value</a> = uint8_type( -1 )</td></tr>
 <tr class="memitem:a74681da1036cc5b236aabef05d8a8f87"><td class="memItemLeft" align="right" valign="top">const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">Feel::invalid_uint16_type_value</a> = uint16_type( -1 )</td></tr>
@@ -183,8 +243,8 @@ Variables</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_b98c83a91512c3be55dc71902560b537.html">feelcore</a></li><li class="navelem"><a class="el" href="feel_8hpp.html">feel.hpp</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:04 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_aee4c96ffc3ed41ef7d25ec330d2b2e2.html">feelcore</a></li><li class="navelem"><a class="el" href="feel_8hpp.html">feel.hpp</a></li>
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:54 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

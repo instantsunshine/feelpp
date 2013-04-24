@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -193,8 +193,7 @@ static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>n
 static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nDofGrad</b> = super::nDim*nDof</td></tr>
 <tr class="memitem:a8090cf438fcbfbb40b2bc1628c5a0dd8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8090cf438fcbfbb40b2bc1628c5a0dd8"></a>
 static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nDofHess</b> = super::nDim*super::nDim*nDof</td></tr>
-<tr class="memitem:a05e755fe3381e61bfb9121e83553268f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05e755fe3381e61bfb9121e83553268f"></a>
-static const <br class="typebreak"/>
+<tr class="memitem:a05e755fe3381e61bfb9121e83553268f"><td class="memItemLeft" align="right" valign="top">static const <br class="typebreak"/>
 fem::transformation_type&#160;</td><td class="memItemRight" valign="bottom"><b>trans</b></td></tr>
 </table>
 <h2>Member Typedef Documentation</h2>
@@ -405,6 +404,32 @@ the dual basis of the finite element </dd></dl>
 
 </div>
 </div>
+<h2>Member Data Documentation</h2>
+<a class="anchor" id="a05e755fe3381e61bfb9121e83553268f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename P, template&lt; class Pr, template&lt; class, uint16_type, class &gt; class Pt &gt; class PDual, template&lt; class, uint16_type, class &gt; class Pts&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const fem::transformation_type <a class="el" href="classFeel_1_1FiniteElement.html">Feel::FiniteElement</a>&lt; P, PDual, Pts &gt;::trans</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"> ( fem::transformation_type )mpl::if_&lt;mpl::and_&lt;mpl::bool_&lt;P::convex_type::is_simplex&gt;,mpl::equal_to&lt;mpl::int_&lt;super::nOrder&gt;, mpl::int_&lt;1&gt; &gt; &gt;,</div>
+<div class="line">                                          mpl::int_&lt;fem::LINEAR&gt;,</div>
+<div class="line">                                          mpl::int_&lt;fem::NONLINEAR&gt; &gt;::type::value</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="fe_8hpp_source.html">fe.hpp</a></li>
 </ul>
@@ -414,7 +439,7 @@ the dual basis of the finite element </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1FiniteElement.html">FiniteElement</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 16:29:07 for Feel++ by
+    <li class="footer">Generated on Wed Apr 24 2013 16:50:55 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

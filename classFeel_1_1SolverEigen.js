@@ -15,7 +15,6 @@ var classFeel_1_1SolverEigen =
     [ "SolverEigen", "classFeel_1_1SolverEigen.html#ad3631022c2f811bce11e87b785b06e27", null ],
     [ "SolverEigen", "classFeel_1_1SolverEigen.html#acc609a6bf143480945e00794cea258ad", null ],
     [ "~SolverEigen", "classFeel_1_1SolverEigen.html#a07cd2315ac592905a17790f7cbdc2260", null ],
-    [ "BOOST_PARAMETER_MEMBER_FUNCTION", "classFeel_1_1SolverEigen.html#a5e198c2ffa9e9ef8968995b8f435f3f7", null ],
     [ "build", "classFeel_1_1SolverEigen.html#ae3cfe6866bcfcfdcdedfdb629ff4d30b", null ],
     [ "build", "classFeel_1_1SolverEigen.html#ac18b7766a14967ded56be9f67a75a8b4", null ],
     [ "clear", "classFeel_1_1SolverEigen.html#af26f97e2dfc3a7ca1fcfbca651c1cf8e", null ],
