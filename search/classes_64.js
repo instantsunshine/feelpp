@@ -3,6 +3,7 @@ var searchData=
   ['datamap',['DataMap',['../classFeel_1_1DataMap.html',1,'Feel']]],
   ['directionalcomponentpointevaluation',['DirectionalComponentPointEvaluation',['../structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html',1,'Feel::functional']]],
   ['directionalcomponentpointsevaluation',['DirectionalComponentPointsEvaluation',['../structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html',1,'Feel::functional']]],
+  ['dirscalingmatrix',['DirScalingMatrix',['../classFeel_1_1DirScalingMatrix.html',1,'Feel']]],
   ['discontinuousinterfaces',['DiscontinuousInterfaces',['../classFeel_1_1DiscontinuousInterfaces.html',1,'Feel']]],
   ['dof',['Dof',['../classFeel_1_1Dof.html',1,'Feel']]],
   ['dofcomposite',['DofComposite',['../classFeel_1_1DofComposite.html',1,'Feel']]],
@@ -13,5 +14,6 @@ var searchData=
   ['dualbasis_3c_20nedelecpolynomialset_3c_20n_2c_20o_2c_20t_2c_20convex_20_3e_20_3e',['DualBasis&lt; NedelecPolynomialSet&lt; N, O, T, Convex &gt; &gt;',['../classFeel_1_1DualBasis.html',1,'Feel']]],
   ['dualbasis_3c_20raviartthomaspolynomialset_3c_20n_2c_20o_2c_20t_2c_20convex_20_3e_20_3e',['DualBasis&lt; RaviartThomasPolynomialSet&lt; N, O, T, Convex &gt; &gt;',['../classFeel_1_1DualBasis.html',1,'Feel']]],
   ['dubiner',['Dubiner',['../classFeel_1_1Dubiner.html',1,'Feel']]],
-  ['dubiner_3c_20dim_2c_20order_2c_20normalized_3c_20false_20_3e_2c_20t_2c_20storageublas_20_3e',['Dubiner&lt; Dim, Order, Normalized&lt; false &gt;, T, StorageUBlas &gt;',['../classFeel_1_1Dubiner.html',1,'Feel']]]
+  ['dubiner_3c_20dim_2c_20order_2c_20normalized_3c_20false_20_3e_2c_20t_2c_20storageublas_20_3e',['Dubiner&lt; Dim, Order, Normalized&lt; false &gt;, T, StorageUBlas &gt;',['../classFeel_1_1Dubiner.html',1,'Feel']]],
+  ['dummy_5fdata',['dummy_data',['../structFeel_1_1dummy__data.html',1,'Feel']]]
 ];

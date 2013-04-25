@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['solver',['Solver',['../Solver.html',1,'']]]
+  ['stokes_20problem',['Stokes Problem',['../Stokes.html',1,'']]]
 ];

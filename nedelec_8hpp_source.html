@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -139,7 +139,7 @@ $(document).ready(function(){initNavTree('nedelec_8hpp_source.html','');});
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;boost/assign/list_of.hpp&gt;</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;boost/assign/std/vector.hpp&gt;</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="feel_8hpp.html">feel/feelcore/feel.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;feel/feelcore/feel.hpp&gt;</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;feel/feelcore/traits.hpp&gt;</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="lu_8hpp.html">feel/feelalg/lu.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
@@ -156,7 +156,7 @@ $(document).ready(function(){initNavTree('nedelec_8hpp_source.html','');});
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &lt;feel/feelpoly/quadpoint.hpp&gt;</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fe_8hpp.html">feel/feelpoly/fe.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &lt;feel/feelvf/vf.hpp&gt;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="vf_8hpp.html">feel/feelvf/vf.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">namespace </span>Feel</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
@@ -422,7 +422,7 @@ $(document).ready(function(){initNavTree('nedelec_8hpp_source.html','');});
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                    e &lt; _M_convex_ref.entityRange( nDim-1 ).end();</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                    ++e )</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            {</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                <span class="keyword">typedef</span> <a class="code" href="structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html" title="functional associate with directional component point evaluation">Feel::functional::DirectionalComponentPointsEvaluation&lt;primal_space_type&gt;</a> dcpe_type;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                <span class="keyword">typedef</span> Feel::functional::DirectionalComponentPointsEvaluation&lt;primal_space_type&gt; dcpe_type;</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;tangent &quot;</span> &lt;&lt; e &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; _M_convex_ref.tangent( e ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                node_type dir= _M_convex_ref.tangent( e )*j[e];</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                <span class="comment">//node_type dir= _M_convex_ref.tangent(e);</span></div>
@@ -821,7 +821,7 @@ $(document).ready(function(){initNavTree('nedelec_8hpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_1c1841c8c56c8663798eb9371cc92062.html">feelpoly</a></li><li class="navelem"><a class="el" href="nedelec_8hpp.html">nedelec.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 24 2013 16:50:51 for Feel++ by
+    <li class="footer">Generated on Thu Apr 25 2013 16:44:04 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -333,3 +333,111 @@
 \form#332:$a$
 \form#333:$l$
 \form#334:$f=1$
+\form#335:$B$
+\form#336:$B^T$
+\form#337:$n \times m$
+\form#338:$\frac{1}{2}(A+A^T)$
+\form#339:$\frac{1}{2}(A-A^T)$
+\form#340:$ -\Delta u = f$
+\form#341:$u= g$
+\form#342:$\Gamma$
+\form#343:$P_2$
+\form#344:$\int_{\partial \Omega} -\nabla u \cdot \mathbf{n} v$
+\form#345:$\int_{\partial \Omega} -\nabla v \cdot \mathbf{n} u$
+\form#346:$\int_{\partial \Omega} \frac{\gamma}{h} u v$
+\form#347:$P_0$
+\form#348:$ -\beta\cdot\nabla u + \mu u = f$
+\form#349:$\Gamma_{in}$
+\form#350:$D u = F$
+\form#351:$ M u = f $
+\form#352:$-Delta u = 0 $
+\form#353:$u= 0 $
+\form#354:$ -\Delta u + \lambda \exp(u) = 0, \quad u_\Gamma = 0$
+\form#355:$ -\Delta u + u^\lambda = 0, \quad u_\Gamma = 0$
+\form#356:$-\epsilon \Delta u -\beta\cdot\nabla u + \mu u = f$
+\form#357:$ W/(m*K) $
+\form#358:$ kg/m^3 $
+\form#359:$ J/(kg*K) $
+\form#360:$ Pa $
+\form#361:$ +x $
+\form#362:$ -x $
+\form#363:$\tilde{s}^k = \mathrm{arg}\mathrm{min}_{s \in R^n}{\tilde{\phi}^k : ||s|| < \Delta^k}$
+\form#364:$\tau \geq 0$
+\form#365:$||\tilde{s} + \tau d|| = \Delta$
+\form#366:$\tau$
+\form#367:$\xi$
+\form#368:$ \xi = \mathrm{min}\{ \xi_1, -(\frac{\tilde{s}}/{d})_i : \frac{\tilde{s}}/{d})_i < 0 \}$
+\form#369:$(l * r^T)$
+\form#370:$\operatorname{tr}(l^T * r)$
+\form#371:$(l : r)$
+\form#372:$\sqrt{\operatorname{tr}(v^T * v)}$
+\form#373:$ \begin{aligned} -\int_\Omega \Delta u v = \int_\Omega f v \;. \end{aligned} $
+\form#374:$ \begin{aligned} \int_\Omega \nabla u \nabla v -\underbrace{ \int_{\partial\Omega} \frac{\partial u}{\partial n} v }_{= 0} =\int_\Omega f v \; \end{aligned} $
+\form#375:$ \begin{aligned} a(u,v)=l(v) \;, \end{aligned} $
+\form#376:$ \left\{ \begin{aligned} -\mu\Delta \bf u + \nabla p & = \bf f & \text{on}\; \Omega \;, \\ \div(\bf u) & = 0 & \text{on}\; \Omega \;, \\ \bf u & = g & \text{on}\; \Gamma \;, \\ \end{aligned} \right $
+\form#377:$u\in [H_g^1(\Omega)]^d$
+\form#378:$p\in [L_0^2(\Omega)]$
+\form#379:$ g(x,y)=\left( \begin{aligned} y(1-y) \\ 0 \\ \end{aligned} \right) $
+\form#380:$v\in H^1(\Omega)$
+\form#381:$ \begin{aligned} \left( \int_\Omega \mu \nabla \mathbf u : \nabla \mathbf v -\int_{\partial\Omega} \frac{\partial \mathbf u}{\partial \mathbf n} \cdot \mathbf v \right) +\int_\Omega ( \div(p \mathbf v) - \mathbf v \div(p) ) =\int_\Omega \mathbf f \cdot \mathbf v \;. \end{aligned} \right) $
+\form#382:$ \begin{aligned} \int_\Omega \div(p \mathbf v) = \int_{\partial\Omega} p \mathbf v\cdot \mathbf n \;. \label{eq:tuto-stk-gauss} \end{aligned} \right) $
+\form#383:$q\in L_2(\Omega)$
+\form#384:$ \begin{aligned} \int_{\Omega} \div(\mathbf u) q = 0 \;, \end{aligned} \right) $
+\form#385:$ \begin{aligned} \int_\Omega \mu \nabla \mathbf u :\nabla \mathbf v +\int_\Omega \left( \div(\mathbf u) q - p \div(\mathbf v) \right) + \int_{\partial\Omega} \left( p \mathbf n - \underbrace{\frac{\partial \mathbf u}{\partial \mathbf n}}_{=0} \right) \cdot \mathbf v =\int_\Omega \mathbf f \cdot \mathbf v \end{aligned} \right) $
+\form#386:$(\mathbf u,p)\in [H_g^1(\Omega)]^d\times L_0^2(\Omega) $
+\form#387:$(\mathbf v,q) \in [H_0^1(\Omega)]^d \times L_0^2(\Omega)$
+\form#388:$ \begin{aligned} a((\mathbf u,p),(\mathbf v,q)) = l((\mathbf v,q)) \end{aligned} \right) $
+\form#389:$\mu=1$
+\form#390:$\mathbf f = 0$
+\form#391:$\times$
+\form#392:$U=\left( \begin{array}{c} u \\ p \\ \end{array} \right) $
+\form#393:$ \left\{ \begin{aligned} -\mu\Delta \bf u + \nabla p & = \bf f & \text{on}\; \Omega \;, \\ \nabla\cdot\bf u & = 0 & \text{on}\; \Omega \;, \\ \bf u & = g & \text{on}\; \Gamma \;, \\ \end{aligned} \right $
+\form#394:$ \begin{aligned} \left( \int_\Omega \mu \nabla \mathbf u : \nabla \mathbf v -\int_{\partial\Omega} \frac{\partial \mathbf u}{\partial \mathbf n} \cdot \mathbf v \right) +\int_\Omega ( \nabla\cdot(p \mathbf v) - \mathbf v \nabla\cdot p ) =\int_\Omega \mathbf f \cdot \mathbf v \;. \end{aligned} \right) $
+\form#395:$ \begin{aligned} \int_\Omega \nabla\cdot(p \mathbf v) = \int_{\partial\Omega} p \mathbf v\cdot \mathbf n \;. \end{aligned} \right) $
+\form#396:$ \begin{aligned} \int_{\Omega} \nabla\cdot\mathbf u q = 0 \;, \end{aligned} \right) $
+\form#397:$ \begin{aligned} \int_\Omega \mu \nabla \mathbf u :\nabla \mathbf v +\int_\Omega \left( \nabla\cdot\mathbf u q - p \nabla\cdot\mathbf v \right) + \int_{\partial\Omega} \left( p \mathbf n - \underbrace{\frac{\partial \mathbf u}{\partial \mathbf n}}_{=0} \right) \cdot \mathbf v =\int_\Omega \mathbf f \cdot \mathbf v \end{aligned} \right) $
+\form#398:$ \left\{ \begin{aligned} -\epsilon\Delta u + \bbeta \cdot \nabla u + \mu u & = f & \text{on}\; \Omega \;, \\ u & = 0 & \text{on}\; \partial\Omega \;, \\ \end{aligned} \right $
+\form#399:$$ H_0^1(\Omega) = \{ v\in H^1(\Omega),\; v=0 \; \text{on} \; \partial\Omega \} \;. $
+\form#400:\[ H_0^1(\Omega) = \{ v\in H^1(\Omega),\; v=0 \; \text{on} \; \partial\Omega \} \;. \]
+\form#401:$ \begin{aligned} - \int_\Omega \epsilon \Delta u\ v + \int_\Omega \bbeta \cdot \nabla u\ v + \int_\Omega \mu\ u\ v = \int_\Omega f\ v \;. \end{aligned} $
+\form#402:$u \in \in H_0^1(\Omega)$
+\form#403:$ \begin{aligned} \int_\Omega \epsilon \nabla u \cdot \nabla v - \underbrace{\int_{\partial\Omega} \epsilon (\nabla u \cdot \mathbf n)\ v}_{=0} + \int_\Omega (\bbeta \cdot \nabla u)\ v + \int_\Omega \mu\ u\ v = \int_\Omega f v \; \quad \forall v \in \in H_0^1(\Omega), \end{aligned} $
+\form#404:$\mathbf n$
+\form#405:\[ a(u,v) = l(v) \quad \forall v \in \in H_0^1(\Omega), \]
+\form#406:$\mu = 1 $
+\form#407:$\epsilon = 1$
+\form#408:$\bbeta=(1,1)^T$
+\form#409:$X_h$
+\form#410:$u$
+\form#411:$\epsilon= 1, 0.01, 0.0001$
+\form#412:$\epsilon = 0.0001$
+\form#413:$\epsilon=1$
+\form#414:$\epsilon=0.01$
+\form#415:$\epsilon=0.0001$
+\form#416:$\text{Sym}(A)$
+\form#417:$ \text{Asym}(A)$
+\form#418:$ \begin{aligned} \int_\Omega \epsilon \nabla u \cdot \nabla v - \underbrace{\int_{\partial\Omega} \epsilon (\nabla u \cdot \mathbf n)\ v}_{=0} + \int_\Omega (\beta \cdot \nabla u)\ v + \int_\Omega \mu\ u\ v = \int_\Omega f v \; \quad \forall v \in H_0^1(\Omega), \end{aligned} $
+\form#419:\[ a(u,v) = l(v) \quad \forall v \in H_0^1(\Omega), \]
+\form#420:$\text{tr}(A)$
+\form#421:$ A.B \\ A:B = \text{tr}(A*B^T)$
+\form#422:$ A\times B$
+\form#423:\[ l(v)=\int_\Omega v \]
+\form#424:\[ a(u,v)=\int_\Omega uv \]
+\form#425:$a(u,v)=l(v$
+\form#426:$ u = 0 \text{ on }\;\partial\Omega \;$
+\form#427:$ u=\left( \begin{aligned} y(1-y) \\ 0 \\ \end{aligned} \right) $
+\form#428:$ u=\left( \begin{aligned} 0 \\ 0 \\ \end{aligned} \right) $
+\form#429:$a(u,v)=l(v)$
+\form#430:\[ A x = b \]
+\form#431:$x,b$
+\form#432:$Y_h$
+\form#433:$Ax=b$
+\form#434:$b$
+\form#435:$P^{-1}Ax= P^{-1}b$
+\form#436:$\displaystyle{\frac{\mid\mid r^{(k)} \mid\mid }{\mid\mid r^{(0)} \mid\mid}}$
+\form#437:$r^{(k)}=b-Ax^{(k)}$
+\form#438:$x^{(k)}$
+\form#439:$k^{th}$
+\form#440:$\mid\mid r^{(k)} \mid\mid $
+\form#441:$A^{t}x=b$
+\form#442:$A^{t}=A$

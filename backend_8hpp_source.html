@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -133,7 +133,7 @@ $(document).ready(function(){initNavTree('backend_8hpp_source.html','');});
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;boost/fusion/include/fold.hpp&gt;</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;boost/smart_ptr/enable_shared_from_this.hpp&gt;</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="feel_8hpp.html">feel/feelcore/feel.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;feel/feelcore/feel.hpp&gt;</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="environment_8hpp.html">feel/feelcore/environment.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="singleton_8hpp.html">feel/feelcore/singleton.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;feel/feelcore/parameter.hpp&gt;</span></div>
@@ -160,7 +160,7 @@ $(document).ready(function(){initNavTree('backend_8hpp_source.html','');});
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">//#include &lt;feel/feelvf/bilinearform.hpp&gt;</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &lt;feel/feelvf/pattern.hpp&gt;</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#include &lt;feel/feelvf/block.hpp&gt;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="block_8hpp.html">feel/feelvf/block.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">namespace </span>Feel</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
@@ -906,7 +906,7 @@ $(document).ready(function(){initNavTree('backend_8hpp_source.html','');});
 <div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;<span class="keyword">typedef</span> boost::shared_ptr&lt;backend_type&gt; backend_ptrtype;</div>
 <div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;</div>
 <div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;</div>
-<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;<span class="keyword">namespace </span>detail</div>
+<div class="line"><a name="l01042"></a><span class="lineno"><a class="code" href="namespaceFeel_1_1detail.html"> 1042</a></span>&#160;<span class="keyword">namespace </span>detail</div>
 <div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;{</div>
 <div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;<span class="keyword">class </span>BackendManagerImpl:</div>
 <div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;    <span class="keyword">public</span> std::map&lt;std::pair&lt;BackendType,std::string&gt;, backend_ptrtype &gt;,</div>
@@ -918,7 +918,7 @@ $(document).ready(function(){initNavTree('backend_8hpp_source.html','');});
 <div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;    <span class="keyword">typedef</span> std::map&lt;key_type, value_type&gt; backend_manager_type;</div>
 <div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;</div>
 <div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;};</div>
-<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern">Feel::Singleton&lt;BackendManagerImpl&gt;</a> BackendManager;</div>
+<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern">Feel::Singleton&lt;BackendManagerImpl&gt;</a> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern">BackendManager</a>;</div>
 <div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;</div>
 <div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;<span class="keyword">struct </span>BackendManagerDeleterImpl</div>
 <div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;{</div>
@@ -929,7 +929,7 @@ $(document).ready(function(){initNavTree('backend_8hpp_source.html','');});
 <div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[BackendManagerDeleter] clear BackendManager done\n&quot;</span>;</div>
 <div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;        }</div>
 <div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;};</div>
-<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern">Feel::Singleton&lt;BackendManagerDeleterImpl&gt;</a> BackendManagerDeleter;</div>
+<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern">Feel::Singleton&lt;BackendManagerDeleterImpl&gt;</a> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern">BackendManagerDeleter</a>;</div>
 <div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;} <span class="comment">// detail</span></div>
 <div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;</div>
 <div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;</div>
@@ -993,7 +993,7 @@ $(document).ready(function(){initNavTree('backend_8hpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_a85c05f67ecc6f105d16a4f081031243.html">feelalg</a></li><li class="navelem"><a class="el" href="backend_8hpp.html">backend.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 24 2013 16:50:45 for Feel++ by
+    <li class="footer">Generated on Thu Apr 25 2013 16:43:54 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

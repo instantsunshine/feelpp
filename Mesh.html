@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -134,10 +134,10 @@ Introduction</h1>
 <div class="line">                   _about=about( _name=<span class="stringliteral">&quot;mymesh&quot;</span> ,</div>
 <div class="line">                                 _author=<span class="stringliteral">&quot;Feel++ Consortium&quot;</span>,</div>
 <div class="line">                                 _email=<span class="stringliteral">&quot;feelpp-devel@feelpp.org&quot;</span> ) );</div>
-<div class="line"></div>
+<div class="line">                                 </div>
 <div class="line">  <span class="comment">// create a mesh with GMSH using Feel++ geometry tool</span></div>
-<div class="line">  <span class="keyword">auto</span> mesh = <a class="code" href="namespaceFeel.html#aeef72bd9ec13a749932e33309da80e62">unitSquare</a>();</div>
-<div class="line"></div>
+<div class="line">  <span class="keyword">auto</span> mesh = <a class="code" href="namespaceFeel.html#ae825fbe687017d967220cf4674ac4f21">unitSquare</a>();</div>
+<div class="line">                                 </div>
 <div class="line">  <span class="comment">// export results for post processing</span></div>
 <div class="line">  <span class="keyword">auto</span> e = exporter( _mesh=mesh );</div>
 <div class="line">  e-&gt;addRegions();</div>
@@ -145,7 +145,7 @@ Introduction</h1>
 <div class="line">}</div>
 <div class="line"><span class="comment">// main</span></div>
 </div><!-- fragment --><p>As always, we initialise the <a href="http://www.feelpp.org">Feel++</a> environment (see section <a class="el" href="FirstApp.html">First Feel++ Application</a> ).<br/>
- The <code><a class="el" href="namespaceFeel.html#aeef72bd9ec13a749932e33309da80e62">unitSquare()</a></code> will generate a mesh for a square geometry. <a href="http://www.feelpp.org">Feel++</a> provides several functions to automate the GMSH mesh generation for different topologies. These functions will create a geometry file <code></code>.geo and a mesh file <code></code>.msh. We can visualize them in GMSH. </p>
+ The <code><a class="el" href="namespaceFeel.html#ae825fbe687017d967220cf4674ac4f21">unitSquare()</a></code> will generate a mesh for a square geometry. <a href="http://www.feelpp.org">Feel++</a> provides several functions to automate the GMSH mesh generation for different topologies. These functions will create a geometry file <code></code>.geo and a mesh file <code></code>.msh. We can visualize them in GMSH. </p>
 <pre class="fragment">  gmsh &lt;entity_name&gt;.msh
 </pre><p>Finally we use the <code>exporter()</code> (see <a class="el" href="Exporter.html">Exporter</a> ) function to export the mesh for post processing. It will create by default a Paraview format file <code></code>.sos and an Ensight format file <code></code>.case. </p>
 <pre class="fragment">  paraview &lt;app_name&gt;.sos
@@ -158,9 +158,9 @@ Basic Meshes</h1>
 <tr>
 <th>Feel++ function</th><th>Dim</th><th>Description&lt;/th </th></tr>
 <tr>
-<td><code><a class="el" href="namespaceFeel.html#afd30cd0d88210def50eaa407ca0a2d20">unitSegment()</a></code>;</td><td>1</td><td>Build a mesh of the unit segment <img class="formulaInl" alt="$[0,1]$" src="form_320.png"/> </td></tr>
+<td><code><a class="el" href="namespaceFeel.html#a0a1f9cc8a7334a06b823b76866aaba04">unitSegment()</a></code>;</td><td>1</td><td>Build a mesh of the unit segment <img class="formulaInl" alt="$[0,1]$" src="form_320.png"/> </td></tr>
 <tr>
-<td><code><a class="el" href="namespaceFeel.html#aeef72bd9ec13a749932e33309da80e62">unitSquare()</a></code>;</td><td>2</td><td>Build a mesh of the unit square <img class="formulaInl" alt="$[0,1]^2$" src="form_321.png"/> using triangles </td></tr>
+<td><code><a class="el" href="namespaceFeel.html#ae825fbe687017d967220cf4674ac4f21">unitSquare()</a></code>;</td><td>2</td><td>Build a mesh of the unit square <img class="formulaInl" alt="$[0,1]^2$" src="form_321.png"/> using triangles </td></tr>
 <tr>
 <td><code><a class="el" href="namespaceFeel.html#acb52ee369375c35506744aa7b7f77850">unitCircle()</a></code>;</td><td>2</td><td>Build a mesh of the unit circle using triangles </td></tr>
 <tr>
@@ -170,7 +170,7 @@ Basic Meshes</h1>
 </table>
 <p><b>Examples :</b><br/>
  From "doc/manual/tutorial/myfunctionspace.cpp </p>
-<div class="fragment"><div class="line"><span class="keyword">auto</span> mesh = <a class="code" href="namespaceFeel.html#aeef72bd9ec13a749932e33309da80e62">unitSquare</a>();</div>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> mesh = <a class="code" href="namespaceFeel.html#ae825fbe687017d967220cf4674ac4f21">unitSquare</a>();</div>
 </div><!-- fragment --><p><a href="#" class="top">top</a> <hr/>
  <h1><a class="anchor" id="Load"></a>
 Load Meshes</h1>
@@ -362,7 +362,7 @@ Todo</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 24 2013 16:50:54 for Feel++ by
+    <li class="footer">Generated on Thu Apr 25 2013 16:44:09 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

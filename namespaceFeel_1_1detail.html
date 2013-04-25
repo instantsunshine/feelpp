@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -112,6 +112,8 @@ $(document).ready(function(){initNavTree('namespaceFeel_1_1detail.html','');});
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html">Environment</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize, finalize, and query the Feel++ environment.  <a href="classFeel_1_1detail_1_1Environment.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1NAME.html">NAME</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">brief description  <a href="classFeel_1_1detail_1_1NAME.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -133,8 +135,20 @@ Functions</h2></td></tr>
 <tr class="memitem:ae7e18e7eef48b9bb3d69ee06ab2888cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7e18e7eef48b9bb3d69ee06ab2888cd"></a>
 <a class="el" href="feelmacros_8hpp.html#afd589deb669a64692fc8abc1e1a4c0d3">FEELPP_NO_EXPORT</a> std::pair<br class="typebreak"/>
 &lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>at_option_parser_2</b> (std::string const &amp;s)</td></tr>
+<tr class="memitem:ac5cc3a03832f08d55f4545b31db1adc4"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac5cc3a03832f08d55f4545b31db1adc4"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac5cc3a03832f08d55f4545b31db1adc4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Material.html">Material</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>createMaterial</b> ()</td></tr>
 <tr class="memitem:a3a936dd728e1c2329a79225ab177566a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a936dd728e1c2329a79225ab177566a"></a>
 char **&#160;</td><td class="memItemRight" valign="bottom"><b>dupargv</b> (char **argv)</td></tr>
+<tr class="memitem:a6e7d9e21deac8dc2b4908bf87185e205"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6e7d9e21deac8dc2b4908bf87185e205"></a>
+template&lt;class Expr1 , class Expr2 &gt; </td></tr>
+<tr class="memitem:a6e7d9e21deac8dc2b4908bf87185e205"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1ADExpr.html">ADExpr</a>&lt; @<a class="el" href="classFeel_1_1detail_1_1NAME.html">NAME</a> @&lt; <a class="el" href="classFeel_1_1ADExpr.html">ADExpr</a>&lt; Expr1 &gt;<br class="typebreak"/>
+, <a class="el" href="classFeel_1_1ADExpr.html">ADExpr</a>&lt; Expr2 &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>FCT</b> (const <a class="el" href="classFeel_1_1ADExpr.html">ADExpr</a>&lt; Expr1 &gt; &amp;expr1, const <a class="el" href="classFeel_1_1ADExpr.html">ADExpr</a>&lt; Expr2 &gt; &amp;expr2)</td></tr>
+<tr class="memitem:abf75210cc359f7d7d48af0128087a24f"><td class="memTemplParams" colspan="2"><a class="anchor" id="abf75210cc359f7d7d48af0128087a24f"></a>
+template&lt;class T , int Nvar, int Order, int Var&gt; </td></tr>
+<tr class="memitem:abf75210cc359f7d7d48af0128087a24f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1ADExpr.html">ADExpr</a>&lt; @<a class="el" href="classFeel_1_1detail_1_1NAME.html">NAME</a> @&lt; <a class="el" href="classFeel_1_1ADType.html">ADType</a>&lt; T, <br class="typebreak"/>
+Nvar, Order, Var &gt;, <a class="el" href="classFeel_1_1ADType.html">ADType</a>&lt; T, <br class="typebreak"/>
+Nvar, Order, Var &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>FCT</b> (const <a class="el" href="classFeel_1_1ADType.html">ADType</a>&lt; T, Nvar, Order, Var &gt; &amp;x, const <a class="el" href="classFeel_1_1ADType.html">ADType</a>&lt; T, Nvar, Order, Var &gt; &amp;y)</td></tr>
 <tr class="memitem:a2522662d339569e65c595a5f5f0bd8b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2522662d339569e65c595a5f5f0bd8b0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>freeargv</b> (char **vector)</td></tr>
 <tr class="memitem:aa77d77117feada52d279ff22c5003fdd"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa77d77117feada52d279ff22c5003fdd"></a>
@@ -164,6 +178,10 @@ template&lt;class T &gt; </td></tr>
 <a class="el" href="classFeel_1_1AboutData.html">AboutData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>makeAbout</b> (char *name)</td></tr>
 <tr class="memitem:a81c8a735ba70e0646779e641b4318259"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81c8a735ba70e0646779e641b4318259"></a>
 po::options_description&#160;</td><td class="memItemRight" valign="bottom"><b>makeOptions</b> ()</td></tr>
+<tr class="memitem:a4ba986d4ea0ecc80a42172b6ba75d077"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4ba986d4ea0ecc80a42172b6ba75d077"></a>
+template&lt;class W , class T , int Nvar, int Order, int Var&gt; </td></tr>
+<tr class="memitem:a4ba986d4ea0ecc80a42172b6ba75d077"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1ADExpr.html">ADExpr</a>&lt; AdFuncPow&lt; <a class="el" href="classFeel_1_1ADType.html">ADType</a>&lt; T, <br class="typebreak"/>
+Nvar, Order, Var &gt;, ADCst&lt; W &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>pow</b> (const <a class="el" href="classFeel_1_1ADType.html">ADType</a>&lt; T, Nvar, Order, Var &gt; &amp;x, W y)</td></tr>
 <tr class="memitem:aa71fa6b9c8f8206db86b7f42db88d64c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa71fa6b9c8f8206db86b7f42db88d64c"></a>
 fs::path&#160;</td><td class="memItemRight" valign="bottom"><b>scratchdir</b> ()</td></tr>
 <tr class="memitem:a54542e3c556880cf7c891a325492cee1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a54542e3c556880cf7c891a325492cee1"></a>
@@ -219,7 +237,7 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><b>spaces</b> = 30<
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="namespaceFeel_1_1detail.html">detail</a></li>
-    <li class="footer">Generated on Wed Apr 24 2013 16:50:57 for Feel++ by
+    <li class="footer">Generated on Thu Apr 25 2013 16:44:13 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

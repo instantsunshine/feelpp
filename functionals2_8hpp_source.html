@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -150,7 +150,7 @@ $(document).ready(function(){initNavTree('functionals2_8hpp_source.html','');});
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1functional_1_1IntegralMoment.html" title="functional that returns ">IntegralMoment&lt;Space,Poly&gt;</a> <a class="code" href="classFeel_1_1Functional.html" title="represents a linear functional">self_type</a>;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::space_type space_type;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Poly::polynomial_type polynomial_type;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_type::value_type value_type;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_type::value_type <a class="code" href="classFeel_1_1core__data.html#aee2aed1d215276cd470455b928965403" title="value type for the functional">value_type</a>;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1node.html">node&lt;value_type&gt;::type</a> node_type;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//BOOST_STATIC_ASSERT( ( boost::is_same&lt;typename space_type::basis_type, typename Poly::basis_type&gt;::value ) );</span></div>
@@ -200,14 +200,14 @@ $(document).ready(function(){initNavTree('functionals2_8hpp_source.html','');});
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> P1, <span class="keyword">typename</span> P2&gt;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">struct </span>prod</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> P1::value_type value_type;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> P1::value_type <a class="code" href="classFeel_1_1core__data.html#aee2aed1d215276cd470455b928965403" title="value type for the functional">value_type</a>;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    prod ( P1 <span class="keyword">const</span>&amp; p1, P2 <span class="keyword">const</span>&amp; p2 )</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        :</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        _M_p1 ( p1 ),</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        _M_p2 ( p2 )</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {}</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor"></span>    value_type operator() ( <span class="keyword">typename</span> <a class="code" href="structFeel_1_1node.html">node&lt;value_type&gt;::type</a> <span class="keyword">const</span>&amp; n )</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor"></span>    <a class="code" href="classFeel_1_1core__data.html#aee2aed1d215276cd470455b928965403" title="value type for the functional">value_type</a> operator() ( <span class="keyword">typename</span> <a class="code" href="structFeel_1_1node.html">node&lt;value_type&gt;::type</a> <span class="keyword">const</span>&amp; n )</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    {</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> _M_p1.evaluate( n )( 0,0 ) * _M_p2.evaluate( n )( 0,0 );</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
@@ -231,12 +231,12 @@ $(document).ready(function(){initNavTree('functionals2_8hpp_source.html','');});
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1functional_1_1IntegralMomentOnFace.html" title="functional that returns  where ">IntegralMomentOnFace&lt;Space&gt;</a> <a class="code" href="classFeel_1_1Functional.html" title="represents a linear functional">self_type</a>;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::space_type space_type;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::polynomial_type polynomial_type;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_type::value_type value_type;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_type::value_type <a class="code" href="classFeel_1_1core__data.html#aee2aed1d215276cd470455b928965403" title="value type for the functional">value_type</a>;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1node.html">node&lt;value_type&gt;::type</a> node_type;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> uint16_type nComponents = space_type::nComponents;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="code" href="classFeel_1_1functional_1_1IntegralMomentOnFace.html#adc1f9dfc1adf919c0caaf75c8182fe1b">  164</a></span>&#160;    <a class="code" href="classFeel_1_1functional_1_1IntegralMomentOnFace.html" title="functional that returns  where ">IntegralMomentOnFace</a>( space_type <span class="keyword">const</span>&amp; p, uint16_type k, IntegrationFaceEnum face = ALL_FACES )</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="code" href="classFeel_1_1functional_1_1IntegralMomentOnFace.html#a1e6046af2f998ed356f69399cb7dd3f7">  164</a></span>&#160;    <a class="code" href="classFeel_1_1functional_1_1IntegralMomentOnFace.html" title="functional that returns  where ">IntegralMomentOnFace</a>( space_type <span class="keyword">const</span>&amp; p, uint16_type k, IntegrationFaceEnum face = ALL_FACES )</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        :</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        super( p ),</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        _M_k ( k ),</div>
@@ -257,7 +257,7 @@ $(document).ready(function(){initNavTree('functionals2_8hpp_source.html','');});
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        this-&gt;setCoefficient( __rep );</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
-<div class="line"><a name="l00193"></a><span class="lineno"><a class="code" href="classFeel_1_1functional_1_1IntegralMomentOnFace.html#a043cd78b40d87ce02aac3264118cb52b">  193</a></span>&#160;    <a class="code" href="classFeel_1_1functional_1_1IntegralMomentOnFace.html" title="functional that returns  where ">IntegralMomentOnFace</a>( space_type <span class="keyword">const</span>&amp; p, uint16_type k, uint16_type c, IntegrationFaceEnum face = ALL_FACES )</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="code" href="classFeel_1_1functional_1_1IntegralMomentOnFace.html#af2175817915d6531523c91ee3462bb25">  193</a></span>&#160;    <a class="code" href="classFeel_1_1functional_1_1IntegralMomentOnFace.html" title="functional that returns  where ">IntegralMomentOnFace</a>( space_type <span class="keyword">const</span>&amp; p, uint16_type k, uint16_type c, IntegrationFaceEnum face = ALL_FACES )</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        :</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        super( p ),</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        _M_k ( k ),</div>
@@ -310,12 +310,12 @@ $(document).ready(function(){initNavTree('functionals2_8hpp_source.html','');});
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keyword">typedef</span> Space space_type;</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_type::reference_convex_type reference_convex_type;</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::polynomial_type polynomial_type;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_type::value_type value_type;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_type::value_type <a class="code" href="classFeel_1_1core__data.html#aee2aed1d215276cd470455b928965403" title="value type for the functional">value_type</a>;</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1node.html">node&lt;value_type&gt;::type</a> node_type;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> uint16_type nComponents = space_type::nComponents;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00265"></a><span class="lineno"><a class="code" href="classFeel_1_1functional_1_1IntegralMomentsOnFace.html#aa829bfc9da28efc6ebdb335fdd5e896c">  265</a></span>&#160;    <a class="code" href="classFeel_1_1functional_1_1IntegralMomentsOnFace.html" title="functional that returns  where ">IntegralMomentsOnFace</a>( space_type <span class="keyword">const</span>&amp; p,</div>
+<div class="line"><a name="l00265"></a><span class="lineno"><a class="code" href="classFeel_1_1functional_1_1IntegralMomentsOnFace.html#a9a676c9e4ad11098af890f854c404645">  265</a></span>&#160;    <a class="code" href="classFeel_1_1functional_1_1IntegralMomentsOnFace.html" title="functional that returns  where ">IntegralMomentsOnFace</a>( space_type <span class="keyword">const</span>&amp; p,</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                           basis_type <span class="keyword">const</span>&amp; l,</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                           IntegrationFaceEnum face = ALL_FACES )</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        :</div>
@@ -392,7 +392,7 @@ $(document).ready(function(){initNavTree('functionals2_8hpp_source.html','');});
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1functional_1_1IntegralMoment.html" title="functional that returns ">IntegralMoment&lt;Space&gt;</a> <a class="code" href="classFeel_1_1Functional.html" title="represents a linear functional">self_type</a>;</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::space_type space_type;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_type::value_type value_type;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_type::value_type <a class="code" href="classFeel_1_1core__data.html#aee2aed1d215276cd470455b928965403" title="value type for the functional">value_type</a>;</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1node.html">node&lt;value_type&gt;::type</a> node_type;</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <a class="code" href="classFeel_1_1functional_1_1IntegralMomentOfDerivative.html" title="functional that returns ">IntegralMomentOfDerivative</a>()</div>
@@ -419,7 +419,7 @@ $(document).ready(function(){initNavTree('functionals2_8hpp_source.html','');});
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1functional_1_1IntegralMoment.html" title="functional that returns ">IntegralMoment&lt;Space&gt;</a> <a class="code" href="classFeel_1_1Functional.html" title="represents a linear functional">self_type</a>;</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Poly::polynomial_type polynomial_type;</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::space_type space_type;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_type::value_type value_type;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_type::value_type <a class="code" href="classFeel_1_1core__data.html#aee2aed1d215276cd470455b928965403" title="value type for the functional">value_type</a>;</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1node.html">node&lt;value_type&gt;::type</a> node_type;</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <a class="code" href="classFeel_1_1functional_1_1IntegralMomentOfDivergence.html" title="functional that returns ">IntegralMomentOfDivergence</a>()</div>
@@ -461,7 +461,7 @@ $(document).ready(function(){initNavTree('functionals2_8hpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_1c1841c8c56c8663798eb9371cc92062.html">feelpoly</a></li><li class="navelem"><a class="el" href="functionals2_8hpp.html">functionals2.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 24 2013 16:50:48 for Feel++ by
+    <li class="footer">Generated on Thu Apr 25 2013 16:43:59 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

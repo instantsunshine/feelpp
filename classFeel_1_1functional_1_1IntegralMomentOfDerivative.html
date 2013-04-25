@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.1.2"/>
-<title>Feel++: Feel::functional::IntegralMomentOfDerivative&lt; Space &gt; Class Template Reference</title>
+<title>Feel++: Feel::functional&lt; Data &gt;::IntegralMomentOfDerivative&lt; Space &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -103,38 +103,39 @@ $(document).ready(function(){initNavTree('classFeel_1_1functional_1_1IntegralMom
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Feel::functional::IntegralMomentOfDerivative&lt; Space &gt; Class Template Reference</div>  </div>
+<div class="title">Feel::functional&lt; Data &gt;::IntegralMomentOfDerivative&lt; Space &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="functionals2_8hpp_source.html">functionals2.hpp</a>&gt;</code></p>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Space&gt;<br/>
-class Feel::functional::IntegralMomentOfDerivative&lt; Space &gt;</h3>
+<div class="textblock"><h3>template&lt;typename Data&gt;<br/>
+template&lt;typename Space&gt;<br/>
+class Feel::functional&lt; Data &gt;::IntegralMomentOfDerivative&lt; Space &gt;</h3>
 
 <p>functional that returns <img class="formulaInl" alt="$\ell_u^i (v) = \int_\Omega( \frac{d u}{d x_i} \, v )$" src="form_95.png"/> </p>
 <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
 </div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Feel::functional::IntegralMomentOfDerivative&lt; Space &gt;:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Feel::functional&lt; Data &gt;::IntegralMomentOfDerivative&lt; Space &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
  <div class="center">
-  <img src="classFeel_1_1functional_1_1IntegralMomentOfDerivative.png" usemap="#Feel::functional::IntegralMomentOfDerivative&lt; Space &gt;_map" alt=""/>
-  <map id="Feel::functional::IntegralMomentOfDerivative&lt; Space &gt;_map" name="Feel::functional::IntegralMomentOfDerivative&lt; Space &gt;_map">
-<area href="classFeel_1_1Functional.html" title="represents a linear functional" alt="Feel::Functional&lt; Space &gt;" shape="rect" coords="0,0,322,24"/>
+  <img src="classFeel_1_1functional_1_1IntegralMomentOfDerivative.png" usemap="#Feel::functional&lt; Data &gt;::IntegralMomentOfDerivative&lt; Space &gt;_map" alt=""/>
+  <map id="Feel::functional&lt; Data &gt;::IntegralMomentOfDerivative&lt; Space &gt;_map" name="Feel::functional&lt; Data &gt;::IntegralMomentOfDerivative&lt; Space &gt;_map">
+<area href="classFeel_1_1Functional.html" title="represents a linear functional" alt="Feel::Functional&lt; Space &gt;" shape="rect" coords="0,0,372,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ae4c1dc77839b4a7e7bd73344ab626a66"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4c1dc77839b4a7e7bd73344ab626a66"></a>
-typedef <a class="el" href="structFeel_1_1node.html">node</a>&lt; value_type &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>node_type</b></td></tr>
-<tr class="memitem:a51ad584f9fe6b792968c20c1f8954725"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51ad584f9fe6b792968c20c1f8954725"></a>
+<tr class="memitem:ab483df71670ef804df1960789e6359d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab483df71670ef804df1960789e6359d1"></a>
+typedef <a class="el" href="structFeel_1_1node.html">node</a>&lt; <a class="el" href="classFeel_1_1core__data.html#aee2aed1d215276cd470455b928965403">value_type</a> &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>node_type</b></td></tr>
+<tr class="memitem:ad49f4800b393b457f0d34d7da3dca1e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad49f4800b393b457f0d34d7da3dca1e1"></a>
 typedef <a class="el" href="classFeel_1_1functional_1_1IntegralMoment.html">IntegralMoment</a>&lt; Space &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>self_type</b></td></tr>
-<tr class="memitem:aca39e168288af2b69cc214082a3b402a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca39e168288af2b69cc214082a3b402a"></a>
+<tr class="memitem:a6d1a7ec0930421fb6655a166defbaae2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d1a7ec0930421fb6655a166defbaae2"></a>
 typedef super::space_type&#160;</td><td class="memItemRight" valign="bottom"><b>space_type</b></td></tr>
-<tr class="memitem:a3b459438bd1b030e4ad001ae089ec15b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b459438bd1b030e4ad001ae089ec15b"></a>
+<tr class="memitem:aa2688830d3a8f9fe67ee376eb1c32204"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2688830d3a8f9fe67ee376eb1c32204"></a>
 typedef space_type::value_type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
 <tr class="inherit_header pub_types_classFeel_1_1Functional"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1Functional')"><img src="closed.png" alt="-"/>&nbsp;Public Types inherited from <a class="el" href="classFeel_1_1Functional.html">Feel::Functional< Space ></a></td></tr>
 <tr class="memitem:ac0adf3b5174cee7e2433d4fd77a383db inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0adf3b5174cee7e2433d4fd77a383db"></a>
@@ -156,9 +157,9 @@ typedef ublas::matrix&lt; value_type &gt;&#160;</td><td class="memItemRight" val
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adb02a8523135beac24360f97f60eeb30"><td class="memTemplParams" colspan="2"><a class="anchor" id="adb02a8523135beac24360f97f60eeb30"></a>
+<tr class="memitem:aa91b9d76d3da121ae2ddd35eaeff76d8"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa91b9d76d3da121ae2ddd35eaeff76d8"></a>
 template&lt;typename P &gt; </td></tr>
-<tr class="memitem:adb02a8523135beac24360f97f60eeb30"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>IntegralMomentOfDerivative</b> (space_type const &amp;b, uint16_type i)</td></tr>
+<tr class="memitem:aa91b9d76d3da121ae2ddd35eaeff76d8"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>IntegralMomentOfDerivative</b> (space_type const &amp;b, uint16_type i)</td></tr>
 <tr class="inherit_header pub_methods_classFeel_1_1Functional"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classFeel_1_1Functional')"><img src="closed.png" alt="-"/>&nbsp;Public Member Functions inherited from <a class="el" href="classFeel_1_1Functional.html">Feel::Functional< Space ></a></td></tr>
 <tr class="memitem:a4cc42f54ea01e4a987f452b86c7703ee inherit pub_methods_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cc42f54ea01e4a987f452b86c7703ee"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Functional</b> ()</td></tr>
@@ -193,8 +194,8 @@ static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>n
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><b>functional</b></li><li class="navelem"><a class="el" href="classFeel_1_1functional_1_1IntegralMomentOfDerivative.html">IntegralMomentOfDerivative</a></li>
-    <li class="footer">Generated on Wed Apr 24 2013 16:50:58 for Feel++ by
+    <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1functional.html">functional</a></li><li class="navelem"><a class="el" href="classFeel_1_1functional_1_1IntegralMomentOfDerivative.html">IntegralMomentOfDerivative</a></li>
+    <li class="footer">Generated on Thu Apr 25 2013 16:44:11 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

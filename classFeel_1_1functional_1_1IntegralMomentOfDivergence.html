@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.1.2"/>
-<title>Feel++: Feel::functional::IntegralMomentOfDivergence&lt; Space, Poly &gt; Class Template Reference</title>
+<title>Feel++: Feel::functional&lt; Data &gt;::IntegralMomentOfDivergence&lt; Space, Poly &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -103,40 +103,41 @@ $(document).ready(function(){initNavTree('classFeel_1_1functional_1_1IntegralMom
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Feel::functional::IntegralMomentOfDivergence&lt; Space, Poly &gt; Class Template Reference</div>  </div>
+<div class="title">Feel::functional&lt; Data &gt;::IntegralMomentOfDivergence&lt; Space, Poly &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="functionals2_8hpp_source.html">functionals2.hpp</a>&gt;</code></p>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Space, typename Poly = Space&gt;<br/>
-class Feel::functional::IntegralMomentOfDivergence&lt; Space, Poly &gt;</h3>
+<div class="textblock"><h3>template&lt;typename Data&gt;<br/>
+template&lt;typename Space, typename Poly = Space&gt;<br/>
+class Feel::functional&lt; Data &gt;::IntegralMomentOfDivergence&lt; Space, Poly &gt;</h3>
 
 <p>functional that returns <img class="formulaInl" alt="$\ell_u^i (v) = \int_\Omega( \frac{d u}{d x_i} \, v )$" src="form_95.png"/> </p>
 <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
 </div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Feel::functional::IntegralMomentOfDivergence&lt; Space, Poly &gt;:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Feel::functional&lt; Data &gt;::IntegralMomentOfDivergence&lt; Space, Poly &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
  <div class="center">
-  <img src="classFeel_1_1functional_1_1IntegralMomentOfDivergence.png" usemap="#Feel::functional::IntegralMomentOfDivergence&lt; Space, Poly &gt;_map" alt=""/>
-  <map id="Feel::functional::IntegralMomentOfDivergence&lt; Space, Poly &gt;_map" name="Feel::functional::IntegralMomentOfDivergence&lt; Space, Poly &gt;_map">
-<area href="classFeel_1_1Functional.html" title="represents a linear functional" alt="Feel::Functional&lt; Space &gt;" shape="rect" coords="0,0,364,24"/>
+  <img src="classFeel_1_1functional_1_1IntegralMomentOfDivergence.png" usemap="#Feel::functional&lt; Data &gt;::IntegralMomentOfDivergence&lt; Space, Poly &gt;_map" alt=""/>
+  <map id="Feel::functional&lt; Data &gt;::IntegralMomentOfDivergence&lt; Space, Poly &gt;_map" name="Feel::functional&lt; Data &gt;::IntegralMomentOfDivergence&lt; Space, Poly &gt;_map">
+<area href="classFeel_1_1Functional.html" title="represents a linear functional" alt="Feel::Functional&lt; Space &gt;" shape="rect" coords="0,0,414,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a2d562d54747cb3f500c7e713fed67db2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d562d54747cb3f500c7e713fed67db2"></a>
-typedef <a class="el" href="structFeel_1_1node.html">node</a>&lt; value_type &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>node_type</b></td></tr>
-<tr class="memitem:a6f1d3fa68240ba8bf06da82cbef2d824"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f1d3fa68240ba8bf06da82cbef2d824"></a>
+<tr class="memitem:a51ab31d356a1e19e0f6cbde26080eba0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51ab31d356a1e19e0f6cbde26080eba0"></a>
+typedef <a class="el" href="structFeel_1_1node.html">node</a>&lt; <a class="el" href="classFeel_1_1core__data.html#aee2aed1d215276cd470455b928965403">value_type</a> &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>node_type</b></td></tr>
+<tr class="memitem:a2bb6b7169da8019a44a76655c11b0761"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bb6b7169da8019a44a76655c11b0761"></a>
 typedef Poly::polynomial_type&#160;</td><td class="memItemRight" valign="bottom"><b>polynomial_type</b></td></tr>
-<tr class="memitem:a1c2fe341c1ee4c178ba4a7cfb2f3d8e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c2fe341c1ee4c178ba4a7cfb2f3d8e7"></a>
+<tr class="memitem:a248886d834240e79253030eb820403ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a248886d834240e79253030eb820403ae"></a>
 typedef <a class="el" href="classFeel_1_1functional_1_1IntegralMoment.html">IntegralMoment</a>&lt; Space &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>self_type</b></td></tr>
-<tr class="memitem:af5bfcd5cd1a16f6553fc9a5c2ae63e42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5bfcd5cd1a16f6553fc9a5c2ae63e42"></a>
+<tr class="memitem:a23ebefe1b2b9f8bc943a152bd4713eab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23ebefe1b2b9f8bc943a152bd4713eab"></a>
 typedef super::space_type&#160;</td><td class="memItemRight" valign="bottom"><b>space_type</b></td></tr>
-<tr class="memitem:a9ed7ff28698a5e7d350c9b1fe2bdb320"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ed7ff28698a5e7d350c9b1fe2bdb320"></a>
+<tr class="memitem:a8cf3c17422cd7043b2274cc98ebf183e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cf3c17422cd7043b2274cc98ebf183e"></a>
 typedef space_type::value_type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
 <tr class="inherit_header pub_types_classFeel_1_1Functional"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1Functional')"><img src="closed.png" alt="-"/>&nbsp;Public Types inherited from <a class="el" href="classFeel_1_1Functional.html">Feel::Functional< Space ></a></td></tr>
 <tr class="memitem:ac0adf3b5174cee7e2433d4fd77a383db inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0adf3b5174cee7e2433d4fd77a383db"></a>
@@ -158,7 +159,7 @@ typedef ublas::matrix&lt; value_type &gt;&#160;</td><td class="memItemRight" val
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ada317266ebe4e37a409f7cef1c98a88c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada317266ebe4e37a409f7cef1c98a88c"></a>
+<tr class="memitem:a06ad90e94c5884fbfc9fedf73669f291"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06ad90e94c5884fbfc9fedf73669f291"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>IntegralMomentOfDivergence</b> (space_type const &amp;p, polynomial_type const &amp;q)</td></tr>
 <tr class="inherit_header pub_methods_classFeel_1_1Functional"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classFeel_1_1Functional')"><img src="closed.png" alt="-"/>&nbsp;Public Member Functions inherited from <a class="el" href="classFeel_1_1Functional.html">Feel::Functional< Space ></a></td></tr>
 <tr class="memitem:a4cc42f54ea01e4a987f452b86c7703ee inherit pub_methods_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cc42f54ea01e4a987f452b86c7703ee"></a>
@@ -194,8 +195,8 @@ static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>n
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><b>functional</b></li><li class="navelem"><a class="el" href="classFeel_1_1functional_1_1IntegralMomentOfDivergence.html">IntegralMomentOfDivergence</a></li>
-    <li class="footer">Generated on Wed Apr 24 2013 16:50:58 for Feel++ by
+    <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1functional.html">functional</a></li><li class="navelem"><a class="el" href="classFeel_1_1functional_1_1IntegralMomentOfDivergence.html">IntegralMomentOfDivergence</a></li>
+    <li class="footer">Generated on Thu Apr 25 2013 16:44:11 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

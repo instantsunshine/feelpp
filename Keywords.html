@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('Keywords.html','');});
 <ul><li class="level1"><a href="#Keywords_Points">Points</a></li>
 <li class="level1"><a href="#Keywords_Array">Vectors and Matrix</a><ul><li class="level2"><a href="#BuildingVectors">Building Vectors</a></li>
 <li class="level2"><a href="#BuildingMatrix">Building Matrix</a></li>
-<li class="level2"><a href="#Matrix_Manipulating">Manipulating Matrix</a></li>
+<li class="level2"><a href="#Matrix_Manipulating">Manipulating Vectors and Matrix</a></li>
 </ul>
 </li>
 <li class="level1"><a href="#Keywords_Expr">Expressions</a></li>
@@ -245,8 +245,8 @@ Filled with a constant c </td><td><img class="formulaInl" alt="$m \times n$" src
  of size <img class="formulaInl" alt="$n\times n$" src="form_254.png"/> </td><td><img class="formulaInl" alt="$n \times n$" src="form_255.png"/> </td></tr>
 </table>
 <h2><a class="anchor" id="Matrix_Manipulating"></a>
-Manipulating Matrix</h2>
-<p>Let <img class="formulaInl" alt="$A$" src="form_16.png"/> a square matrix of size <img class="formulaInl" alt="$n$" src="form_239.png"/>. </p>
+Manipulating Vectors and Matrix</h2>
+<p>Let <img class="formulaInl" alt="$A$" src="form_16.png"/> be a square matrix of size <img class="formulaInl" alt="$n$" src="form_239.png"/>. </p>
 <table  class="manual">
 <tr>
 <th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>Description</th><th>Dimension </th></tr>
@@ -257,25 +257,35 @@ Manipulating Matrix</h2>
 <td><div class="fragment"><div class="line">det(A)</div>
 </div><!-- fragment --></td><td><img class="formulaInl" alt="$\det (A)$" src="form_257.png"/></td><td>Determinant of matrix <img class="formulaInl" alt="$A$" src="form_16.png"/> </td><td><img class="formulaInl" alt="$1 \times 1$" src="form_223.png"/> </td></tr>
 <tr>
-<td><div class="fragment"><div class="line">trace(A)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$\tr (A)$" src="form_258.png"/></td><td>Trace of matrix <img class="formulaInl" alt="$A$" src="form_16.png"/><br/>
-Can be used on non-squared Matrix<br/>
-Can be used on Vectors </td><td><img class="formulaInl" alt="$1 \times 1$" src="form_223.png"/> </td></tr>
-<tr>
-<td><div class="fragment"><div class="line">trans(A)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$A^T$" src="form_259.png"/></td><td>Transpose of matrix <img class="formulaInl" alt="$A$" src="form_16.png"/><br/>
-Can be used on non-squared Matrix<br/>
-Can be used on Vectors </td><td><img class="formulaInl" alt="$1 \times 1$" src="form_223.png"/> </td></tr>
-<tr>
 <td><div class="fragment"><div class="line">sym(A)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$ Sym (A)$" src="form_260.png"/></td><td>Symmetric part of matrix <img class="formulaInl" alt="$A$" src="form_16.png"/><br/>
-Can be used on non-squared Matrix<br/>
-Can be used on Vectors </td><td><img class="formulaInl" alt="$n \times n$" src="form_255.png"/> </td></tr>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\text{Sym}(A)$" src="form_416.png"/></td><td>Symmetric part of matrix <img class="formulaInl" alt="$A$" src="form_16.png"/> : <img class="formulaInl" alt="$\frac{1}{2}(A+A^T)$" src="form_338.png"/><br/>
+ </td><td><img class="formulaInl" alt="$n \times n$" src="form_255.png"/> </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">antisym(A)</div>
-</div><!-- fragment --></td><td><img class="formulaInl" alt="$ Asym (A)$" src="form_261.png"/></td><td>Antisymmetric part of matrix <img class="formulaInl" alt="$A$" src="form_16.png"/><br/>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$ \text{Asym}(A)$" src="form_417.png"/></td><td>Antisymmetric part of <img class="formulaInl" alt="$A$" src="form_16.png"/> : <img class="formulaInl" alt="$\frac{1}{2}(A-A^T)$" src="form_339.png"/><br/>
+ </td><td><img class="formulaInl" alt="$n \times n$" src="form_255.png"/> </td></tr>
+</table>
+<p>Let A and B be two matrix (or two vectors) of same dimension <img class="formulaInl" alt="$m \times n$" src="form_249.png"/>. </p>
+<table  class="manual">
+<tr>
+<th><a href="http://www.feelpp.org">Feel++</a> Keyword</th><th>Math Object</th><th>Description</th><th>Dimension </th></tr>
+<tr>
+<td><div class="fragment"><div class="line">trace(A)</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$\text{tr}(A)$" src="form_420.png"/></td><td>Trace of matrix <img class="formulaInl" alt="$A$" src="form_16.png"/><br/>
+Generalized on non-squared Matrix<br/>
+Generalized on Vectors </td><td><img class="formulaInl" alt="$1 \times 1$" src="form_223.png"/> </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">trans(B)</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$B^T$" src="form_336.png"/></td><td>Transpose of matrix <img class="formulaInl" alt="$B$" src="form_335.png"/><br/>
 Can be used on non-squared Matrix<br/>
-Can be used on Vectors </td><td><img class="formulaInl" alt="$n \times n$" src="form_255.png"/> </td></tr>
+Can be used on Vectors </td><td><img class="formulaInl" alt="$n \times m$" src="form_337.png"/> </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">inner(A,B)</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$ A.B \\ A:B = \text{tr}(A*B^T)$" src="form_421.png"/></td><td><a class="el" href="structFeel_1_1Scalar.html">Scalar</a> product of two vectors<br/>
+Generalized scalar product of two matrix </td><td><img class="formulaInl" alt="$1 \times 1$" src="form_223.png"/> </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">cross(A,B)</div>
+</div><!-- fragment --></td><td><img class="formulaInl" alt="$ A\times B$" src="form_422.png"/></td><td>Cross product of two vectors</td><td><img class="formulaInl" alt="$n \times 1$" src="form_240.png"/> </td></tr>
 </table>
 <p><a href="#" class="top">top</a> <hr/>
  <br/>
@@ -578,7 +588,7 @@ Jacobian Matrix</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 24 2013 16:50:54 for Feel++ by
+    <li class="footer">Generated on Thu Apr 25 2013 16:44:09 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

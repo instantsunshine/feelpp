@@ -15,6 +15,7 @@ var searchData=
   ['hermitian',['HERMITIAN',['../namespaceFeel.html#afacc311419d607ce6ac26decbbd04917a7b32254885d5d667b513bed40bfc949b',1,'Feel']]],
   ['hessian',['hessian',['../namespaceFeel.html#a8073bad0e88192d69a7b74083ffa640d',1,'Feel']]],
   ['hessian_5fnode_5ftype',['hessian_node_type',['../namespaceFeel.html#a5726f6c555d1353dd27fcf1b8b770589',1,'Feel']]],
+  ['hessian_5ftype',['hessian_type',['../classFeel_1_1core__data.html#a722abc2f0dbeda2a8c88454bd17e6326',1,'Feel::core_data']]],
   ['hface',['hFace',['../classFeel_1_1GeoND.html#a804b7e3b128e6392b589eed086cca808',1,'Feel::GeoND::hFace()'],['../classFeel_1_1GeoMap_1_1Context.html#ac9000df9d9a65d4d4bd9b5b8c2e999e2',1,'Feel::GeoMap::Context::hFace()']]],
   ['homepage',['homepage',['../classFeel_1_1AboutData.html#a308275dfe323ec8896b41f511051cc7c',1,'Feel::AboutData']]],
   ['howmany',['howMany',['../classFeel_1_1BareItemsHandler.html#ae1e8777a3464b9c2e5c9b533d2df9b73',1,'Feel::BareItemsHandler']]],

@@ -1,6 +1,10 @@
 var searchData=
 [
   ['mapped_2ehpp',['mapped.hpp',['../mapped_8hpp.html',1,'']]],
+  ['material_2ecpp',['material.cpp',['../material_8cpp.html',1,'']]],
+  ['material_2ehpp',['material.hpp',['../material_8hpp.html',1,'']]],
+  ['materiallib_2ecpp',['materiallib.cpp',['../materiallib_8cpp.html',1,'']]],
+  ['materiallib_2ehpp',['materiallib.hpp',['../materiallib_8hpp.html',1,'']]],
   ['matrix_2ehpp',['matrix.hpp',['../matrix_8hpp.html',1,'']]],
   ['matrixblock_2ecpp',['matrixblock.cpp',['../matrixblock_8cpp.html',1,'']]],
   ['matrixblock_2ehpp',['matrixblock.hpp',['../matrixblock_8hpp.html',1,'']]],
@@ -14,6 +18,7 @@ var searchData=
   ['matrixsparse_2ehpp',['matrixsparse.hpp',['../matrixsparse_8hpp.html',1,'']]],
   ['matrixtriplet_2ehpp',['matrixtriplet.hpp',['../matrixtriplet_8hpp.html',1,'']]],
   ['matrixublas_2ehpp',['matrixublas.hpp',['../matrixublas_8hpp.html',1,'']]],
+  ['matvec_2ehpp',['matvec.hpp',['../matvec_8hpp.html',1,'']]],
   ['mesh_2ecpp',['mesh.cpp',['../mesh_8cpp.html',1,'']]],
   ['mesh_2ehpp',['mesh.hpp',['../mesh_8hpp.html',1,'']]],
   ['mesh0d_2ehpp',['mesh0d.hpp',['../mesh0d_8hpp.html',1,'']]],

@@ -11,11 +11,15 @@ var searchData=
   ['pointsettomesh_2ehpp',['pointsettomesh.hpp',['../pointsettomesh_8hpp.html',1,'']]],
   ['polynomial_2ehpp',['polynomial.hpp',['../polynomial_8hpp.html',1,'']]],
   ['polynomialset_2ehpp',['polynomialset.hpp',['../polynomialset_8hpp.html',1,'']]],
+  ['ppoperators_2ehpp',['ppoperators.hpp',['../ppoperators_8hpp.html',1,'']]],
   ['preassembleobject_2ehpp',['preassembleobject.hpp',['../preassembleobject_8hpp.html',1,'']]],
   ['preconditioner_2ecpp',['preconditioner.cpp',['../preconditioner_8cpp.html',1,'']]],
   ['preconditioner_2ehpp',['preconditioner.hpp',['../preconditioner_8hpp.html',1,'']]],
   ['preconditionerifpack_2ecpp',['preconditionerifpack.cpp',['../preconditionerifpack_8cpp.html',1,'']]],
   ['preconditionerpetsc_2ecpp',['preconditionerpetsc.cpp',['../preconditionerpetsc_8cpp.html',1,'']]],
   ['preconditionerpetsc_2ehpp',['preconditionerpetsc.hpp',['../preconditionerpetsc_8hpp.html',1,'']]],
-  ['principal_2ehpp',['principal.hpp',['../principal_8hpp.html',1,'']]]
+  ['principal_2ehpp',['principal.hpp',['../principal_8hpp.html',1,'']]],
+  ['problem_2ehpp',['problem.hpp',['../problem_8hpp.html',1,'']]],
+  ['products_2ehpp',['products.hpp',['../products_8hpp.html',1,'']]],
+  ['projectors_2ehpp',['projectors.hpp',['../projectors_8hpp.html',1,'']]]
 ];

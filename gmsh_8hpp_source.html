@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -135,14 +135,14 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;boost/assign/list_of.hpp&gt;</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;boost/range/algorithm/for_each.hpp&gt;</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="feel_8hpp.html">feel/feelcore/feel.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;feel/feelcore/feel.hpp&gt;</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="environment_8hpp.html">feel/feelcore/environment.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;feel/feelcore/parameter.hpp&gt;</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="factory_8hpp.html">feel/feelcore/factory.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="singleton_8hpp.html">feel/feelcore/singleton.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="worldcomm_8hpp.html">feel/feelcore/worldcomm.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gmshenums_8hpp.html">feel/feelfilters/gmshenums.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;feel/feelvf/vf.hpp&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="vf_8hpp.html">feel/feelvf/vf.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;feel/feelmesh/meshmover.hpp&gt;</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">namespace </span>Feel</div>
@@ -1108,9 +1108,9 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;</div>
 <div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;</div>
 <div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;</div>
-<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;boost::shared_ptr&lt;Mesh&lt;Simplex&lt;1&gt; &gt; &gt; <a class="code" href="namespaceFeel.html#afd30cd0d88210def50eaa407ca0a2d20">unitSegment</a>( <span class="keywordtype">double</span> h = option(_name=<span class="stringliteral">&quot;gmsh.hsize&quot;</span>).as&lt;double&gt;() );</div>
+<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;boost::shared_ptr&lt;Mesh&lt;Simplex&lt;1&gt; &gt; &gt; <a class="code" href="namespaceFeel.html#a0a1f9cc8a7334a06b823b76866aaba04">unitSegment</a>( <span class="keywordtype">double</span> h = option(_name=<span class="stringliteral">&quot;gmsh.hsize&quot;</span>).as&lt;double&gt;() );</div>
 <div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;</div>
-<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;boost::shared_ptr&lt;Mesh&lt;Simplex&lt;2&gt; &gt; &gt; <a class="code" href="namespaceFeel.html#aeef72bd9ec13a749932e33309da80e62">unitSquare</a>( <span class="keywordtype">double</span> h = option(_name=<span class="stringliteral">&quot;gmsh.hsize&quot;</span>).as&lt;double&gt;() );</div>
+<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;boost::shared_ptr&lt;Mesh&lt;Simplex&lt;2&gt; &gt; &gt; <a class="code" href="namespaceFeel.html#ae825fbe687017d967220cf4674ac4f21">unitSquare</a>( <span class="keywordtype">double</span> h = option(_name=<span class="stringliteral">&quot;gmsh.hsize&quot;</span>).as&lt;double&gt;() );</div>
 <div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;</div>
 <div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">int</span> Ngeo=1&gt;</div>
 <div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;<span class="keyword">inline</span></div>
@@ -1142,7 +1142,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;}</div>
 <div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;</div>
 <div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;</div>
-<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;boost::shared_ptr&lt;Mesh&lt;Simplex&lt;3&gt; &gt; &gt; <a class="code" href="namespaceFeel.html#a3785b6ca8ae70e2305821071d8d76c45">unitCube</a>( <span class="keywordtype">double</span> h = option(_name=<span class="stringliteral">&quot;gmsh.hsize&quot;</span>).as&lt;double&gt;() );</div>
+<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;boost::shared_ptr&lt;Mesh&lt;Simplex&lt;3&gt; &gt; &gt; <a class="code" href="namespaceFeel.html#a13fd553670b9336583ef4affee5d9fbb">unitCube</a>( <span class="keywordtype">double</span> h = option(_name=<span class="stringliteral">&quot;gmsh.hsize&quot;</span>).as&lt;double&gt;() );</div>
 <div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;</div>
 <div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">int</span> Dim, <span class="keyword">typename</span> Convex=Simplex&lt;Dim&gt;&gt;</div>
 <div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;<span class="keyword">inline</span></div>
@@ -1239,7 +1239,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_20ecd942a77abb86794d08a686402ca9.html">feelfilters</a></li><li class="navelem"><a class="el" href="gmsh_8hpp.html">gmsh.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 24 2013 16:50:49 for Feel++ by
+    <li class="footer">Generated on Thu Apr 25 2013 16:44:01 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

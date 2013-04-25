@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.1.2"/>
-<title>Feel++: Feel::functional::ComponentPointEvaluation&lt; Space &gt; Class Template Reference</title>
+<title>Feel++: Feel::functional&lt; Data &gt;::ComponentPointEvaluation&lt; Space &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -103,41 +103,42 @@ $(document).ready(function(){initNavTree('classFeel_1_1functional_1_1ComponentPo
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Feel::functional::ComponentPointEvaluation&lt; Space &gt; Class Template Reference</div>  </div>
+<div class="title">Feel::functional&lt; Data &gt;::ComponentPointEvaluation&lt; Space &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="functionals_8hpp_source.html">functionals.hpp</a>&gt;</code></p>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Space&gt;<br/>
-class Feel::functional::ComponentPointEvaluation&lt; Space &gt;</h3>
+<div class="textblock"><h3>template&lt;typename Data&gt;<br/>
+template&lt;typename Space&gt;<br/>
+class Feel::functional&lt; Data &gt;::ComponentPointEvaluation&lt; Space &gt;</h3>
 
 <p>generate the functional associated with a point evaluation associated with a component </p>
 <p>Given a function space <img class="formulaInl" alt="$ E $" src="form_86.png"/>, generate the functional <img class="formulaInl" alt="$ \ell : E \longrightarrow R $" src="form_87.png"/> associated with the evaluation of the basis functions of the function space at a point in the geometric space.</p>
 <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
 </div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Feel::functional::ComponentPointEvaluation&lt; Space &gt;:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Feel::functional&lt; Data &gt;::ComponentPointEvaluation&lt; Space &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
  <div class="center">
-  <img src="classFeel_1_1functional_1_1ComponentPointEvaluation.png" usemap="#Feel::functional::ComponentPointEvaluation&lt; Space &gt;_map" alt=""/>
-  <map id="Feel::functional::ComponentPointEvaluation&lt; Space &gt;_map" name="Feel::functional::ComponentPointEvaluation&lt; Space &gt;_map">
-<area href="classFeel_1_1Functional.html" title="represents a linear functional" alt="Feel::Functional&lt; Space &gt;" shape="rect" coords="0,0,314,24"/>
+  <img src="classFeel_1_1functional_1_1ComponentPointEvaluation.png" usemap="#Feel::functional&lt; Data &gt;::ComponentPointEvaluation&lt; Space &gt;_map" alt=""/>
+  <map id="Feel::functional&lt; Data &gt;::ComponentPointEvaluation&lt; Space &gt;_map" name="Feel::functional&lt; Data &gt;::ComponentPointEvaluation&lt; Space &gt;_map">
+<area href="classFeel_1_1Functional.html" title="represents a linear functional" alt="Feel::Functional&lt; Space &gt;" shape="rect" coords="0,0,364,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a678394747f1cb2e4d9bb5813fd2e8caf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a678394747f1cb2e4d9bb5813fd2e8caf"></a>
-typedef <a class="el" href="structFeel_1_1node.html">node</a>&lt; value_type &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>node_type</b></td></tr>
-<tr class="memitem:a0ee215951b30319002504adfd30371c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ee215951b30319002504adfd30371c9"></a>
+<tr class="memitem:af936000a06beb9d2346a4816532c14ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af936000a06beb9d2346a4816532c14ba"></a>
+typedef <a class="el" href="structFeel_1_1node.html">node</a>&lt; <a class="el" href="classFeel_1_1core__data.html#aee2aed1d215276cd470455b928965403">value_type</a> &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>node_type</b></td></tr>
+<tr class="memitem:ae004f9ca5f47ac753292eb4d98ebcae6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae004f9ca5f47ac753292eb4d98ebcae6"></a>
 typedef <br class="typebreak"/>
 <a class="el" href="classFeel_1_1functional_1_1ComponentPointEvaluation.html">ComponentPointEvaluation</a><br class="typebreak"/>
 &lt; Space &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>self_type</b></td></tr>
-<tr class="memitem:acb8f2c67818efaf65148ece670b3f0f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb8f2c67818efaf65148ece670b3f0f0"></a>
+<tr class="memitem:accfd87716f88e8ee668871d248372339"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="accfd87716f88e8ee668871d248372339"></a>
 typedef super::space_type&#160;</td><td class="memItemRight" valign="bottom"><b>space_type</b></td></tr>
-<tr class="memitem:a42dbb767a2830f5d54b9dbb42668bdc5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42dbb767a2830f5d54b9dbb42668bdc5"></a>
+<tr class="memitem:ab41db01cc90ab7106d73c556da953e36"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab41db01cc90ab7106d73c556da953e36"></a>
 typedef space_type::value_type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
 <tr class="inherit_header pub_types_classFeel_1_1Functional"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1Functional')"><img src="closed.png" alt="-"/>&nbsp;Public Types inherited from <a class="el" href="classFeel_1_1Functional.html">Feel::Functional< Space ></a></td></tr>
 <tr class="memitem:ac0adf3b5174cee7e2433d4fd77a383db inherit pub_types_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0adf3b5174cee7e2433d4fd77a383db"></a>
@@ -159,7 +160,7 @@ typedef ublas::matrix&lt; value_type &gt;&#160;</td><td class="memItemRight" val
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a669b4fda85f379527d4cfefa162033bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a669b4fda85f379527d4cfefa162033bd"></a>
+<tr class="memitem:a85bf15aa2dc6efb417a6e0dc1f6257c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85bf15aa2dc6efb417a6e0dc1f6257c8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ComponentPointEvaluation</b> (space_type const &amp;b, uint16_type __c, node_type const &amp;__pt)</td></tr>
 <tr class="inherit_header pub_methods_classFeel_1_1Functional"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classFeel_1_1Functional')"><img src="closed.png" alt="-"/>&nbsp;Public Member Functions inherited from <a class="el" href="classFeel_1_1Functional.html">Feel::Functional< Space ></a></td></tr>
 <tr class="memitem:a4cc42f54ea01e4a987f452b86c7703ee inherit pub_methods_classFeel_1_1Functional"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cc42f54ea01e4a987f452b86c7703ee"></a>
@@ -195,8 +196,8 @@ static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>n
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><b>functional</b></li><li class="navelem"><a class="el" href="classFeel_1_1functional_1_1ComponentPointEvaluation.html">ComponentPointEvaluation</a></li>
-    <li class="footer">Generated on Wed Apr 24 2013 16:50:58 for Feel++ by
+    <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1functional.html">functional</a></li><li class="navelem"><a class="el" href="classFeel_1_1functional_1_1ComponentPointEvaluation.html">ComponentPointEvaluation</a></li>
+    <li class="footer">Generated on Thu Apr 25 2013 16:44:11 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

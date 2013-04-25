@@ -9,6 +9,7 @@ var searchData=
   ['environment_2ecpp',['environment.cpp',['../environment_8cpp.html',1,'']]],
   ['environment_2ehpp',['environment.hpp',['../environment_8hpp.html',1,'']]],
   ['equispaced_2ehpp',['equispaced.hpp',['../equispaced_8hpp.html',1,'']]],
+  ['evaluator_2ehpp',['evaluator.hpp',['../evaluator_8hpp.html',1,'']]],
   ['expansions_2ehpp',['expansions.hpp',['../expansions_8hpp.html',1,'']]],
   ['expansiontypes_2ehpp',['expansiontypes.hpp',['../expansiontypes_8hpp.html',1,'']]],
   ['exporter_2ecpp',['exporter.cpp',['../exporter_8cpp.html',1,'']]],
@@ -17,5 +18,10 @@ var searchData=
   ['exportergnuplot_2ecpp',['exportergnuplot.cpp',['../exportergnuplot_8cpp.html',1,'']]],
   ['exportergnuplot_2ehpp',['exportergnuplot.hpp',['../exportergnuplot_8hpp.html',1,'']]],
   ['exporterimpl_2ehpp',['exporterimpl.hpp',['../exporterimpl_8hpp.html',1,'']]],
-  ['exporterquick_2ehpp',['exporterquick.hpp',['../exporterquick_8hpp.html',1,'']]]
+  ['exporterquick_2ehpp',['exporterquick.hpp',['../exporterquick_8hpp.html',1,'']]],
+  ['expr_2ecpp',['expr.cpp',['../expr_8cpp.html',1,'']]],
+  ['expr_2ehpp',['expr.hpp',['../expr_8hpp.html',1,'']]],
+  ['exprbase_2ecpp',['exprbase.cpp',['../exprbase_8cpp.html',1,'']]],
+  ['exprbase_2ehpp',['exprbase.hpp',['../exprbase_8hpp.html',1,'']]],
+  ['eye_2ehpp',['eye.hpp',['../eye_8hpp.html',1,'']]]
 ];

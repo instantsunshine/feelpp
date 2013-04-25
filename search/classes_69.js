@@ -4,6 +4,7 @@ var searchData=
   ['imgeneral',['IMGeneral',['../classFeel_1_1IMGeneral.html',1,'Feel']]],
   ['importer',['Importer',['../classFeel_1_1Importer.html',1,'Feel']]],
   ['importergmsh',['ImporterGmsh',['../classFeel_1_1ImporterGmsh.html',1,'Feel']]],
+  ['inequalities',['inequalities',['../classFeel_1_1inequalities.html',1,'Feel']]],
   ['info',['Info',['../classFeel_1_1Info.html',1,'Feel']]],
   ['integralmoment',['IntegralMoment',['../classFeel_1_1functional_1_1IntegralMoment.html',1,'Feel::functional']]],
   ['integralmomentofderivative',['IntegralMomentOfDerivative',['../classFeel_1_1functional_1_1IntegralMomentOfDerivative.html',1,'Feel::functional']]],

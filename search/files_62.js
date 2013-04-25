@@ -13,6 +13,9 @@ var searchData=
   ['bdf_2ehpp',['bdf.hpp',['../bdf_8hpp.html',1,'']]],
   ['bdf2_2ecpp',['bdf2.cpp',['../bdf2_8cpp.html',1,'']]],
   ['bfgs_2ehpp',['bfgs.hpp',['../bfgs_8hpp.html',1,'']]],
+  ['bilinearform_2ehpp',['bilinearform.hpp',['../bilinearform_8hpp.html',1,'']]],
+  ['bilinearformcontext_2ehpp',['bilinearformcontext.hpp',['../bilinearformcontext_8hpp.html',1,'']]],
+  ['block_2ehpp',['block.hpp',['../block_8hpp.html',1,'']]],
   ['boundadapted_2ehpp',['boundadapted.hpp',['../boundadapted_8hpp.html',1,'']]],
   ['boundaryadaptedpolynomialset_2ehpp',['boundaryadaptedpolynomialset.hpp',['../boundaryadaptedpolynomialset_8hpp.html',1,'']]],
   ['boundingbox_2ehpp',['boundingbox.hpp',['../boundingbox_8hpp.html',1,'']]]

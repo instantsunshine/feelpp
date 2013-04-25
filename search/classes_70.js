@@ -31,10 +31,12 @@ var searchData=
   ['polynomialset',['PolynomialSet',['../classFeel_1_1PolynomialSet.html',1,'Feel']]],
   ['polynomialset_3c_20dubiner_3c_20dim_2c_20order_2c_20normalized_3c_20false_20_3e_2c_20t_2c_20storageublas_20_3e_2c_20polysettype_20_3e',['PolynomialSet&lt; Dubiner&lt; Dim, Order, Normalized&lt; false &gt;, T, StorageUBlas &gt;, PolySetType &gt;',['../classFeel_1_1PolynomialSet.html',1,'Feel']]],
   ['polynomialset_3c_20legendre_3c_20dim_2c_20order_2c_20normalized_3c_20false_20_3e_2c_20t_20_3e_2c_20polysettype_20_3e',['PolynomialSet&lt; Legendre&lt; Dim, Order, Normalized&lt; false &gt;, T &gt;, PolySetType &gt;',['../classFeel_1_1PolynomialSet.html',1,'Feel']]],
-  ['preassembleobject',['PreAssembleObject',['../classPreAssembleObject.html',1,'']]],
+  ['preassembleobjectbase',['PreAssembleObjectBase',['../classFeel_1_1PreAssembleObjectBase.html',1,'Feel']]],
   ['preconditioner',['Preconditioner',['../classFeel_1_1Preconditioner.html',1,'Feel']]],
   ['preconditionerpetsc',['PreconditionerPetsc',['../classFeel_1_1PreconditionerPetsc.html',1,'Feel']]],
   ['principal',['Principal',['../classFeel_1_1Principal.html',1,'Feel']]],
+  ['problem',['problem',['../classFeel_1_1problem.html',1,'Feel']]],
+  ['projector',['Projector',['../classFeel_1_1vf_1_1details_1_1Projector.html',1,'Feel::vf::details']]],
   ['projector',['Projector',['../classFeel_1_1Projector.html',1,'Feel']]],
   ['pslogger',['PsLogger',['../classPsLogger.html',1,'']]]
 ];

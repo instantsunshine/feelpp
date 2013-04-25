@@ -25,7 +25,7 @@ var searchData=
   ['m_5fmatsolverpackage_5ftype',['M_matSolverPackage_type',['../classFeel_1_1Preconditioner.html#afabfa4a2c0816962103c8280cb5a80eb',1,'Feel::Preconditioner::M_matSolverPackage_type()'],['../classFeel_1_1SolverLinear.html#a191b84d3fbcc0f52f179f555dedaf394',1,'Feel::SolverLinear::M_matSolverPackage_type()'],['../classFeel_1_1SolverNonLinear.html#a043b59ccac2ca8ef918bda2b697cf045',1,'Feel::SolverNonLinear::M_matSolverPackage_type()']]],
   ['m_5fmaxit',['M_maxit',['../classFeel_1_1SolverEigen.html#afcd6f8382b7c9076d89d42efc1e0a099',1,'Feel::SolverEigen::M_maxit()'],['../classFeel_1_1SolverLinear.html#a65f80c291989c1b906862fac2b25cc16',1,'Feel::SolverLinear::M_maxit()']]],
   ['m_5fmqm',['M_Mqm',['../classFeel_1_1CRBModel.html#a5444317fa8a857d75bb458d0990a0eca',1,'Feel::CRBModel']]],
-  ['m_5fname',['M_name',['../classFeel_1_1Preconditioner.html#adac9b259564bb6bc86a0be18bcd31207',1,'Feel::Preconditioner']]],
+  ['m_5fname',['M_name',['../classFeel_1_1Preconditioner.html#adac9b259564bb6bc86a0be18bcd31207',1,'Feel::Preconditioner::M_name()'],['../classFeel_1_1Material.html#ae918c33e5cf15ae0b496a2a9fcfb4ae6',1,'Feel::Material::M_name()']]],
   ['m_5fnbitmax',['M_nbItMax',['../classFeel_1_1SolverNonLinear.html#ab53d2853b7825d9ed335df2f5cb51829',1,'Feel::SolverNonLinear']]],
   ['m_5fncv',['M_ncv',['../classFeel_1_1SolverEigen.html#a70a38fa62c2afa43e966e08e7e35e129',1,'Feel::SolverEigen']]],
   ['m_5fnev',['M_nev',['../classFeel_1_1SolverEigen.html#a2906d7e18e029b25afdb816dfa8c2795',1,'Feel::SolverEigen']]],

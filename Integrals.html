@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.1.2"/>
-<title>Feel++: Integration, Operators and Norms</title>
+<title>Feel++: Integrations, Operators and Norms</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('Integrals.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Integration, Operators and Norms </div>  </div>
+<div class="title">Integrations, Operators and Norms </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('Integrals.html','');});
 </div>
 <div class="textblock"><ul>
 <li><b>Previous:</b> <a class="el" href="Spaces.html">Function Spaces</a> </li>
-<li><b>Next:</b> <a class="el" href="Forms.html">Forms</a></li>
+<li><b>Next:</b> <a class="el" href="Forms.html">Forms and Solver</a></li>
 </ul>
 <hr/>
  <h1><a class="anchor" id="Integrals_Introduction"></a>
@@ -238,25 +238,25 @@ Computing my first Integrals</h2>
 <div class="line">                     _about=about( _name=<span class="stringliteral">&quot;myintegrals&quot;</span> ,</div>
 <div class="line">                                   _author=<span class="stringliteral">&quot;Feel++ Consortium&quot;</span>,</div>
 <div class="line">                                   _email=<span class="stringliteral">&quot;feelpp-devel@feelpp.org&quot;</span> ) );</div>
-<div class="line"></div>
+<div class="line">                                 </div>
 <div class="line">    <span class="comment">// create the mesh (specify the dimension of geometric entity)</span></div>
 <div class="line">    <span class="keyword">auto</span> mesh = unitHypercube&lt;3&gt;();</div>
-<div class="line"></div>
+<div class="line">                                 </div>
 <div class="line">    <span class="comment">// our function to integrate</span></div>
 <div class="line">    <span class="keyword">auto</span> f = Px()*Px() + Py()*Py() + Pz()*Pz();</div>
-<div class="line"></div>
+<div class="line">                                 </div>
 <div class="line">    <span class="comment">// compute integral of f (global contribution)</span></div>
 <div class="line">    <span class="keywordtype">double</span> intf_1 = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range = <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ),</div>
 <div class="line">                               _expr = f ).evaluate()( 0,0 );</div>
-<div class="line"></div>
+<div class="line">                                 </div>
 <div class="line">    <span class="comment">// compute integral of f (local contribution)</span></div>
 <div class="line">    <span class="keywordtype">double</span> intf_2 = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range = <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ),</div>
 <div class="line">                               _expr = f ).evaluate(<span class="keyword">false</span>)( 0,0 );</div>
-<div class="line"></div>
+<div class="line">                                 </div>
 <div class="line">    <span class="comment">// compute integral f on boundary</span></div>
 <div class="line">    <span class="keywordtype">double</span> intf_3 = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range = <a class="code" href="namespaceFeel.html#a6d4deea03257c3f53b0e9df514a7bf00">boundaryfaces</a>( mesh ),</div>
 <div class="line">                               _expr = f ).evaluate()( 0,0 );</div>
-<div class="line"></div>
+<div class="line">                                 </div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;int global ; local ; boundary&quot;</span> &lt;&lt; std::endl</div>
 <div class="line">              &lt;&lt; intf_1 &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; intf_2 &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; intf_3 &lt;&lt; std::endl;</div>
 <div class="line">}</div>
@@ -407,14 +407,14 @@ normLinf</h2>
 <div class="line">              _pset=_Q&lt;5&gt;() );</div>
 </div><!-- fragment --><p><a href="#" class="top">top</a> <hr/>
 <ul>
-<li><b>Next:</b> <a class="el" href="Solver.html">Solver</a> </li>
+<li><b>Next:</b> <a class="el" href="Forms.html#Solver">Solver</a> </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 24 2013 16:50:54 for Feel++ by
+    <li class="footer">Generated on Thu Apr 25 2013 16:44:09 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

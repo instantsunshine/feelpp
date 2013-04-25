@@ -34,7 +34,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src=""/></a>
+    <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
    &#160;<span id="projectnumber">0.92.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
@@ -202,7 +202,7 @@ $(document).ready(function(){initNavTree('smartassert_8hpp_source.html','');});
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">return</span> _M_vals;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// adds one value and its corresponding string</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> add_val( <span class="keyword">const</span> <span class="keywordtype">string</span> &amp; val, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp; str )</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> add_val( <span class="keyword">const</span> <span class="keywordtype">string</span> &amp; <a class="code" href="val_8hpp.html#a4c2eeba6d70e9edf83ff70349e3470a9" title="precompute expression tensor">val</a>, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp; str )</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    {</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        _M_vals.push_back( val_and_str( val, str ) );</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
@@ -286,7 +286,7 @@ $(document).ready(function(){initNavTree('smartassert_8hpp_source.html','');});
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="keyword">struct </span>isNullFinder&lt; char*&gt;</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;{</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordtype">bool</span> is( <span class="keywordtype">char</span> * <span class="keyword">const</span> &amp; val )</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordtype">bool</span> is( <span class="keywordtype">char</span> * <span class="keyword">const</span> &amp; <a class="code" href="val_8hpp.html#a4c2eeba6d70e9edf83ff70349e3470a9" title="precompute expression tensor">val</a> )</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    {</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">return</span> val == 0;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
@@ -295,7 +295,7 @@ $(document).ready(function(){initNavTree('smartassert_8hpp_source.html','');});
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keyword">struct </span>isNullFinder&lt; const char*&gt;</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;{</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">bool</span> is( <span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> &amp; val )</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">bool</span> is( <span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> &amp; <a class="code" href="val_8hpp.html#a4c2eeba6d70e9edf83ff70349e3470a9" title="precompute expression tensor">val</a> )</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    {</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">return</span> val == 0;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
@@ -343,7 +343,7 @@ $(document).ready(function(){initNavTree('smartassert_8hpp_source.html','');});
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keyword">template</span>&lt; <span class="keyword">class</span> type&gt;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    Assert &amp; printCurrentValue( <span class="keyword">const</span> type &amp; val, <span class="keyword">const</span> <span class="keywordtype">char</span> * msg );</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    Assert &amp; printCurrentValue( <span class="keyword">const</span> type &amp; <a class="code" href="val_8hpp.html#a4c2eeba6d70e9edf83ff70349e3470a9" title="precompute expression tensor">val</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> * msg );</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    Assert &amp; printContext( <span class="keyword">const</span> <span class="keywordtype">char</span> * file, <span class="keywordtype">int</span> line )</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    {</div>
@@ -559,7 +559,7 @@ $(document).ready(function(){initNavTree('smartassert_8hpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_aee4c96ffc3ed41ef7d25ec330d2b2e2.html">feelcore</a></li><li class="navelem"><b>smartassert.hpp</b></li>
-    <li class="footer">Generated on Wed Apr 24 2013 16:50:53 for Feel++ by
+    <li class="footer">Generated on Thu Apr 25 2013 16:44:07 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>
