@@ -1,0 +1,297 @@
+\batchmode
+\documentclass{article}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\pagestyle{empty}
+\begin{document}
+\[ \Omega=[0,1]^d\ \subset\ \mathbb{R}^d \]
+\pagebreak
+
+\[ \Omega=\{ \mathbf{x} \in \mathbb{R}^d | x_i \geq 0, \sum_{i=1}{d} x_i \leq 1 \} \]
+\pagebreak
+
+$ d=1,2,3 $
+\pagebreak
+
+$ \mathbf{x}=(x_1,...,x_d) $
+\pagebreak
+
+$ \int_\Omega 1 $
+\pagebreak
+
+$ \int_{\partial\Omega} 1 $
+\pagebreak
+
+$ \int_{\Omega} x^2+y^2+z^2 $
+\pagebreak
+
+$ (x,y,z) \mapsto x^2+y^2+z^2$
+\pagebreak
+
+$y=z=0$
+\pagebreak
+
+$ z=0 $
+\pagebreak
+
+$ \int_{\Omega} sin(x^2+y^2+z^2) $
+\pagebreak
+
+$ (x,y,z) \mapsto sin(x^2+y^2+z^2)$
+\pagebreak
+
+$ X_h $
+\pagebreak
+
+$ X_h$
+\pagebreak
+
+\begin{eqnarray} g(x,y,z) &=& \sin(\pi x/2)\ \cos(\pi y/2)\ \cos(\pi*z/2) \\ f(x,y,z) &=& (1-x^2)\ (1-y^2)\ (1-z^2)\ (x^2+y^2+z^2)^{\alpha/2.0},\quad \alpha=3 \end{eqnarray}
+\pagebreak
+
+\[ -\Delta u = f\ \text{in}\ \Omega = [-1;1]^2 \]
+\pagebreak
+
+\[ f= 2 \pi^2 g \]
+\pagebreak
+
+\[ g=\sin(\pi x) \cos(\pi y) \]
+\pagebreak
+
+\[ u=g_{|x=\pm 1}, \quad \frac{\partial u}{\partial n} = 0_{|y=\pm 1} \]
+\pagebreak
+
+\[ \mathcal{X} = \Big\{ v \in H_1(\Omega) \text{ such that } v=g_{|x=-1,x=1} \Big\} \]
+\pagebreak
+
+\[ \mathcal{V} = \Big\{ v \in H_1(\Omega) \text{ such that } v=0_{|x=-1,x=1} \Big\} \]
+\pagebreak
+
+$v \in \mathcal{V}$
+\pagebreak
+
+\begin{equation} \label{eq:13} \int_\Omega -\Delta u v = \int_\Omega f v \end{equation}
+\pagebreak
+
+$u \in \mathcal{X}$
+\pagebreak
+
+\[ \int_\Omega \nabla u \cdot \nabla v = \int_\Omega f v \]
+\pagebreak
+
+\[ \int_{\partial \Omega} \frac{\partial u}{\partial n} v = 0, \]
+\pagebreak
+
+\[ \label{eq:21} \frac{\partial u}{\partial n} \stackrel{\text{def}}{=} \nabla u \cdot n \]
+\pagebreak
+
+$\partial \Omega$
+\pagebreak
+
+\[ \label{eq:10} \Omega = \cup_{e=1}^\nel \Omega^e \]
+\pagebreak
+
+$d$
+\pagebreak
+
+$\nel$
+\pagebreak
+
+$N$
+\pagebreak
+
+\[ \label{eq:17} X_h = \Big\{ v_h \in C^0(\Omega),\ {v_h}_{|\Omega^e} \in \mathbb{P}_N( \Omega^e ),\ v_h=g_{|x=-1,x=1}\Big\} \]
+\pagebreak
+
+\[ \label{eq:18} V_h = \Big\{ v_h \in C^0(\Omega),\ {v_h}_{|\Omega^e} \in \mathbb{P}_N( \Omega^e ),\ v_h=0_{|x=-1,x=1}\Big\} \]
+\pagebreak
+
+$u_h \in X_h \subset \mathcal{X}$
+\pagebreak
+
+$v \in V_h \subset \mathcal{V}$
+\pagebreak
+
+\[ \int_\Omega \nabla u_h \cdot \nabla v_h = \int_\Omega f v_h \]
+\pagebreak
+
+$u \in X_h \subset H_1(\Omega)$
+\pagebreak
+
+$v \in X_h$
+\pagebreak
+
+\[ \int_\Omega \nabla u \cdot \nabla v + \int_{|x=-1,x=1} -\frac{\partial u}{\partial n} v - u \frac{\partial v}{\partial n} + \frac{\mu}{h} u v = \int_\Omega f v + \int_{|x=-1,x=1} - g \frac{\partial v}{\partial n} + \frac{\mu}{h} g v \]
+\pagebreak
+
+\[ \label{eq:19} X_h = \Big\{ v_h \in C^0(\Omega),\ {v_h}_{|\Omega^e} \in \mathbb{P}_N( \Omega^e ) \Big\} \]
+\pagebreak
+
+$> 0$
+\pagebreak
+
+$h$
+\pagebreak
+
+\[ \begin{array}{rccl} \ell: & X_h & \mapsto & \mathbb{R}\\ & v_h & \rightarrow &\ell(v_h)=\int_\Omega f v_h \end{array} \]
+\pagebreak
+
+$x=\pm 1$
+\pagebreak
+
+$1$
+\pagebreak
+
+$3$
+\pagebreak
+
+$x=-1$
+\pagebreak
+
+$x=1$
+\pagebreak
+
+\[ D u = F \]
+\pagebreak
+
+$L_2$
+\pagebreak
+
+\begin{equation} \label{eq:7} \|u-u_h\|_{L_2}\ =\ \sqrt{\int_\Omega (u-u_h)^2} = \sqrt{\int_\Omega (g-u_h)^2} \end{equation}
+\pagebreak
+
+$u_h$
+\pagebreak
+
+$h^{-(N+1)}$
+\pagebreak
+
+$h^{-N}$
+\pagebreak
+
+$(\mathbf{u},p)$
+\pagebreak
+
+$p$
+\pagebreak
+
+$p+c$
+\pagebreak
+
+\[ \label{eq:26} \int_\Omega p = 0 \]
+\pagebreak
+
+$(\mathbf{u},p,\lambda)$
+\pagebreak
+
+\[ - \mu \Delta \mathbf{u} +\nabla p = \mathbf{f}\quad, \quad \nabla \cdot \mathbf{u} + \lambda = 0, \quad \text{and}\quad \int_\Omega p = 0,\quad \text{in}\ \Omega = [-1;1]^2 \]
+\pagebreak
+
+\[ \mathbf{f} = \mathbf{0} \]
+\pagebreak
+
+\[ \mathbf{u}=\mathbf{1}_{|y=1}, \quad \mathbf{u}=\mathbf{0}_{|\partial \Omega \backslash \{(x,y) \in \Omega | y=1\}} \]
+\pagebreak
+
+$\mathbf{u}$
+\pagebreak
+
+$H^1_0(\Omega)$
+\pagebreak
+
+$L^2_0(\Omega)$
+\pagebreak
+
+$L^2(\Omega)$
+\pagebreak
+
+$\mathbb{P}_0(\Omega)$
+\pagebreak
+
+$\mathcal{X} = H^1_0(\Omega)\times L^2(\Omega)\times\mathbb{P}_0(\Omega)$
+\pagebreak
+
+$(\mathbf{u}, p, \lambda) \in \mathcal{X}$
+\pagebreak
+
+$(\mathbf{v},q,\nu) \in \mathcal{X}$
+\pagebreak
+
+\[ \int_\Omega \mu \nabla \mathbf{u} : \nabla \mathbf{v} + \nabla \cdot \mathbf{v} p + \nabla \cdot \mathbf{u}\ q + q \lambda + p \nu \ = \ \int_\Omega \mathbf{f} \cdot \mathbf{v} \]
+\pagebreak
+
+$\Omega_h$
+\pagebreak
+
+$M_h$
+\pagebreak
+
+$\mathbb{P}_N/\mathbb{P}_{N-1}$
+\pagebreak
+
+$\mathcal{X}_h=X_h\times M_h \times \mathbb{P}_0(\Omega)$
+\pagebreak
+
+$(\mathbf{u}_h,p_h,\lambda_h) \in \mathcal{X}_h$
+\pagebreak
+
+$(\mathbf{v}_h,q_h,\nu_h) \in \mathcal{X}_h$
+\pagebreak
+
+\[ \label{eq:27} \int_{\Omega_h} \mu \nabla \mathbf{u}_h \cdot \nabla \mathbf{v}_h + \nabla \cdot \mathbf{v}_h \ p_h + \nabla \cdot \mathbf{u}_h\ q_h + p_h \nu_h + q_h \lambda_h = \ \int_{\Omega_h} \mathbf{f} \cdot \mathbf{v}_h \]
+\pagebreak
+
+\[ \label{eq:28} \underbrace{\begin{pmatrix} A & B & 0\\ B^T & 0 & C\\ 0 & C^T & 0 \end{pmatrix}}_{\mathcal{A}} \underbrace{ \begin{pmatrix} \mathbf{u}_h\\ p_h\\ \lambda_h \end{pmatrix}}_{\mathcal{U}} = \underbrace{\begin{pmatrix} F\\ 0\\ 0 \end{pmatrix}}_{\mathcal{F}} \]
+\pagebreak
+
+$(\mathbf{u},\mathbf{v})$
+\pagebreak
+
+$(\mathbf{u},q)$
+\pagebreak
+
+$C$
+\pagebreak
+
+$(p,\nu)$
+\pagebreak
+
+$\mathcal{A}$
+\pagebreak
+
+$\mathcal{A} \mathcal{U} = \mathcal{F}$
+\pagebreak
+
+$\mathcal{X}_h$
+\pagebreak
+
+$\mathcal{U}$
+\pagebreak
+
+$\mathcal{F}$
+\pagebreak
+
+$\lambda$
+\pagebreak
+
+$\mathbb{P}_0(\Omega_h)$
+\pagebreak
+
+$\tau(\mathbf{u}) = \frac{1}{2}(\nabla \mathbf{u} + \nabla \mathbf{u}^T)$
+\pagebreak
+
+$\tau(\mathbf{u}) = \nabla \mathbf{u}$
+\pagebreak
+
+$\bar{\sigma}(\mathbf{u},p) \mathbf{n} = -p \mathbf{n} + 2 \mu \tau(\mathbf{u}) \mathbf{n}$
+\pagebreak
+
+$\mathbf{n}$
+\pagebreak
+
+$\bar{\sigma}(\mathbf{u},p) = -p \mathbb{I} + 2 \mu \tau(\mathbf{u})$
+\pagebreak
+
+\end{document}
