@@ -10,6 +10,7 @@ var searchData=
   ['hasregiontree',['hasRegionTree',['../classFeel_1_1FunctionSpace.html#a59bdae47631a540513d2b3e8345cadc6',1,'Feel::FunctionSpace']]],
   ['hasshape',['hasShape',['../classFeel_1_1GeoEntity.html#a6dbea56c0d2bdfeed841b3ba00923e26',1,'Feel::GeoEntity']]],
   ['hassubmeshdata',['hasSubMeshData',['../classFeel_1_1MeshBase.html#ab9cd5b8ba76773a6619c9b45575d72b9',1,'Feel::MeshBase']]],
+  ['heat_20sink',['Heat Sink',['../HeatSink.html',1,'Learning']]],
   ['hermite',['Hermite',['../classFeel_1_1fem_1_1Hermite.html',1,'Feel::fem']]],
   ['hermite_2ehpp',['hermite.hpp',['../hermite_8hpp.html',1,'']]],
   ['hermitian',['HERMITIAN',['../namespaceFeel.html#afacc311419d607ce6ac26decbbd04917a7b32254885d5d667b513bed40bfc949b',1,'Feel']]],

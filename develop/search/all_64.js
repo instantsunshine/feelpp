@@ -12,6 +12,7 @@ var searchData=
   ['debug_2ehpp',['debug.hpp',['../debug_8hpp.html',1,'']]],
   ['debuglevels',['DebugLevels',['../namespaceFeel.html#ae90df41f69fcb79f06345d1acd0d6d6f',1,'Feel']]],
   ['decode',['decode',['../classFeel_1_1Mesh.html#ada1d1269a2c435879dbf6d8f48db087e',1,'Feel::Mesh']]],
+  ['domain_20decomposition_20methods',['Domain Decomposition Methods',['../Decomposition.html',1,'Learning']]],
   ['deepcopy',['deepCopy',['../classFeel_1_1Bdf.html#ade84b617e6bac38223e4a92bca8eaa11',1,'Feel::Bdf']]],
   ['define_5fproblem',['define_problem',['../classFeel_1_1problem.html#a57036fdc39472b994ae62d314629dd7a',1,'Feel::problem']]],
   ['degree',['degree',['../classFeel_1_1BoundaryAdapted.html#ace19ded489aabbc15ec5496376ac0ca7',1,'Feel::BoundaryAdapted::degree()'],['../classFeel_1_1Dubiner.html#abdde1d3ddc1c50dd7713c2ea7783cdeb',1,'Feel::Dubiner::degree()'],['../classFeel_1_1Legendre.html#a4c3e6e28aa4a8b8087072c9925a3ac11',1,'Feel::Legendre::degree()'],['../classFeel_1_1PolynomialSet.html#afc10049b897d6a52ad83c43febd871f9',1,'Feel::PolynomialSet::degree()'],['../classFeel_1_1TensorisedBoundaryAdapted.html#a47ec9b31be6cd0233a1723fabfb4bf0b',1,'Feel::TensorisedBoundaryAdapted::degree()']]],

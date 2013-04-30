@@ -70,6 +70,7 @@ var classFeel_1_1FunctionSpace =
     [ "basisOrder", "classFeel_1_1FunctionSpace.html#af1424ec781d3cb2a1f8bcf278f8800c5", null ],
     [ "basisOrder", "classFeel_1_1FunctionSpace.html#acccb79d02f3c28d88ce0dcf8f23ae94e", null ],
     [ "basisOrder", "classFeel_1_1FunctionSpace.html#a6a2492da884aec2f09608590e50cee45", null ],
+    [ "BOOST_MPL_ASSERT_NOT", "classFeel_1_1FunctionSpace.html#ae1998d8dedc77ca58024f57d832f87d9", null ],
     [ "compSpace", "classFeel_1_1FunctionSpace.html#a5f5a494915874f9c7ab01bd67b6f8bfd", null ],
     [ "dof", "classFeel_1_1FunctionSpace.html#a5cb4ed608fd8f47e2ba158119a803977", null ],
     [ "dof", "classFeel_1_1FunctionSpace.html#a94f5676d40b694dcbce91eb891f4c6cf", null ],

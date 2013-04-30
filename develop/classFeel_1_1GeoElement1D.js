@@ -17,6 +17,7 @@ var classFeel_1_1GeoElement1D =
     [ "GeoElement1D", "classFeel_1_1GeoElement1D.html#ab4c63b33cd978889d399d4cb8411baad", null ],
     [ "GeoElement1D", "classFeel_1_1GeoElement1D.html#a5e0ef3af91dace898868007c4666514c", null ],
     [ "~GeoElement1D", "classFeel_1_1GeoElement1D.html#a55083244cf3399e8cbe779121626b998", null ],
+    [ "BOOST_MPL_ASSERT_MSG", "classFeel_1_1GeoElement1D.html#adaf099a298233a9ee015b253836bf404", null ],
     [ "edge", "classFeel_1_1GeoElement1D.html#ada870aedbfc3c9adf35038c4b1d205d6", null ],
     [ "face", "classFeel_1_1GeoElement1D.html#a07562b634e3d63306478618b1de54f36", null ],
     [ "facePermutation", "classFeel_1_1GeoElement1D.html#ac3bcc857c285bf34e005983dd4317fae", null ],

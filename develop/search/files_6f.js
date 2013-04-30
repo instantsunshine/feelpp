@@ -5,6 +5,7 @@ var searchData=
   ['operator_2ehpp',['operator.hpp',['../operator_8hpp.html',1,'']]],
   ['operatorinterpolation_2ehpp',['operatorinterpolation.hpp',['../operatorinterpolation_8hpp.html',1,'']]],
   ['operatorlinear_2ehpp',['operatorlinear.hpp',['../operatorlinear_8hpp.html',1,'']]],
+  ['operatorlinearfree_2ehpp',['operatorlinearfree.hpp',['../operatorlinearfree_8hpp.html',1,'']]],
   ['operatorlinearparametrized_2ehpp',['operatorlinearparametrized.hpp',['../operatorlinearparametrized_8hpp.html',1,'']]],
   ['operators_2ehpp',['operators.hpp',['../operators_8hpp.html',1,'']]],
   ['operators2_2ehpp',['operators2.hpp',['../operators2_8hpp.html',1,'']]],

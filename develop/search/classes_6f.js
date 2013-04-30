@@ -12,6 +12,7 @@ var searchData=
   ['operatorlinear_3c_20fs_5ftype_2c_20fs_5ftype_20_3e',['OperatorLinear&lt; fs_type, fs_type &gt;',['../classFeel_1_1OperatorLinear.html',1,'Feel']]],
   ['operatorlinear_3c_20space_5ftype_2c_20space_5ftype_20_3e',['OperatorLinear&lt; space_type, space_type &gt;',['../classFeel_1_1OperatorLinear.html',1,'Feel']]],
   ['operatorlinear_3c_20spacetype_2c_20detailoplagp1_3a_3aspacetolagrangep1space_3c_20spacetype_20_3e_3a_3aimage_5fspace_5ftype_20_3e',['OperatorLinear&lt; SpaceType, detailOpLagP1::SpaceToLagrangeP1Space&lt; SpaceType &gt;::image_space_type &gt;',['../classFeel_1_1OperatorLinear.html',1,'Feel']]],
+  ['operatorlinearfree',['OperatorLinearFree',['../classFeel_1_1OperatorLinearFree.html',1,'Feel']]],
   ['operatorlinearparametrized',['OperatorLinearParametrized',['../classFeel_1_1OperatorLinearParametrized.html',1,'Feel']]],
   ['operatorsteklovpc',['OperatorSteklovPc',['../classFeel_1_1OperatorSteklovPc.html',1,'Feel']]],
   ['operatortrace',['OperatorTrace',['../classFeel_1_1OperatorTrace.html',1,'Feel']]],

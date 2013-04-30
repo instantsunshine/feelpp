@@ -13,6 +13,7 @@ var classFeel_1_1fem_1_1Nedelec =
     [ "Nedelec", "classFeel_1_1fem_1_1Nedelec.html#acdac9b5e5ffadad37202c4498cfa0e21", null ],
     [ "Nedelec", "classFeel_1_1fem_1_1Nedelec.html#ae0db8df5494d9d33959d4efe0a901058", null ],
     [ "~Nedelec", "classFeel_1_1fem_1_1Nedelec.html#a8c600d28b3ca335bb534e6ae59c42d70", null ],
+    [ "BOOST_STATIC_ASSERT", "classFeel_1_1fem_1_1Nedelec.html#a39d30e52a44e8d68773036adf95591cd", null ],
     [ "familyName", "classFeel_1_1fem_1_1Nedelec.html#aff2a6b45ab6d5164cde53f47dfb4bdd3", null ],
     [ "isomorphism", "classFeel_1_1fem_1_1Nedelec.html#ad80003957be79152b8a3da31b7a3e126", null ],
     [ "referenceConvex", "classFeel_1_1fem_1_1Nedelec.html#ad1a4508cbe062d06cc57e072b5540032", null ],

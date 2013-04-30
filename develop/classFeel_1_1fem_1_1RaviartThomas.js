@@ -13,6 +13,7 @@ var classFeel_1_1fem_1_1RaviartThomas =
     [ "RaviartThomas", "classFeel_1_1fem_1_1RaviartThomas.html#af8e68c7f3a750f8c9f8c5abb6a310493", null ],
     [ "RaviartThomas", "classFeel_1_1fem_1_1RaviartThomas.html#a2fdcc8f07f202ea31925c774fa95402c", null ],
     [ "~RaviartThomas", "classFeel_1_1fem_1_1RaviartThomas.html#a121cab57976fde8b4b218c5263be5f06", null ],
+    [ "BOOST_STATIC_ASSERT", "classFeel_1_1fem_1_1RaviartThomas.html#a7410826e16f3edb835ab0a2d824276a5", null ],
     [ "familyName", "classFeel_1_1fem_1_1RaviartThomas.html#a93a2a25676929073e935821ac0e320b7", null ],
     [ "isomorphism", "classFeel_1_1fem_1_1RaviartThomas.html#a74aab40b9ee162a0726243de1ec01bb4", null ],
     [ "referenceConvex", "classFeel_1_1fem_1_1RaviartThomas.html#a36f403612facbcd602fec0425da9a435", null ],

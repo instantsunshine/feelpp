@@ -8,6 +8,7 @@ var classFeel_1_1FilterFromVtk3D =
     [ "point_type", "classFeel_1_1FilterFromVtk3D.html#a316d8af45a66e4ce9893a010e56dbdcc", null ],
     [ "FilterFromVtk3D", "classFeel_1_1FilterFromVtk3D.html#a4c09d0ec815361e95480a8af7665db2a", null ],
     [ "~FilterFromVtk3D", "classFeel_1_1FilterFromVtk3D.html#a6e5d244abece64b6918ed225396b28cd", null ],
+    [ "BOOST_STATIC_ASSERT", "classFeel_1_1FilterFromVtk3D.html#a09ad110c35feb0197f9fc38e42e44734", null ],
     [ "visit", "classFeel_1_1FilterFromVtk3D.html#a3c3926c6173618b382fee8e55b6b54a0", null ],
     [ "nDim", "classFeel_1_1FilterFromVtk3D.html#a50ca953eb584901aaf701f70176bdce5", null ]
 ];
