@@ -3,6 +3,8 @@ var searchData=
   ['parameter',['Parameter',['../classFeel_1_1Parameter.html',1,'Feel']]],
   ['parameterspace',['ParameterSpace',['../classFeel_1_1ParameterSpace.html',1,'Feel']]],
   ['periodic',['Periodic',['../classFeel_1_1Periodic.html',1,'Feel']]],
+  ['periodiclaplacian',['PeriodicLaplacian',['../classFeel_1_1PeriodicLaplacian.html',1,'Feel']]],
+  ['periodicstokes',['PeriodicStokes',['../classFeel_1_1PeriodicStokes.html',1,'Feel']]],
   ['pfemapp',['PFemApp',['../classFeel_1_1PFemApp.html',1,'Feel']]],
   ['pod',['POD',['../classFeel_1_1POD.html',1,'Feel']]],
   ['pointderivative',['PointDerivative',['../classFeel_1_1functional_1_1PointDerivative.html',1,'Feel::functional']]],

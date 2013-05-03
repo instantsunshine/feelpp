@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.1</span>
+   &#160;<span id="projectnumber">0.92.90</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -200,10 +200,10 @@ integrate</h2>
 </li>
 </ul>
 <p><b>Examples :</b><br/>
- From <code>doc/manual/tutorial/dar.cpp</code> : </p>
+ From <code><a class="el" href="dar_8cpp.html">doc/manual/tutorial/dar.cpp</a></code> : </p>
 <div class="fragment"><div class="line">form1( ... ) = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range = <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ),</div>
 <div class="line">                          _expr = f*<span class="keywordtype">id</span>( v ) );</div>
-</div><!-- fragment --><p>From <code>doc/manual/tutorial/myintegrals.cpp</code> : </p>
+</div><!-- fragment --><p>From <code><a class="el" href="myintegrals_8cpp.html">doc/manual/tutorial/myintegrals.cpp</a></code> : </p>
 <div class="fragment"><div class="line"><span class="comment">// compute integral f on boundary</span></div>
 <div class="line"><span class="keywordtype">double</span> intf_3 = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range = <a class="code" href="namespaceFeel.html#a6d4deea03257c3f53b0e9df514a7bf00">boundaryfaces</a>( mesh ),</div>
 <div class="line">                           _expr = f );</div>
@@ -214,7 +214,7 @@ integrate</h2>
 <div class="line">             _expr = ( averaget( trans( beta )*idt( u ) ) * jump( <span class="keywordtype">id</span>( v ) ) )</div>
 <div class="line">                   + penalisation*beta_abs*( trans( jumpt( trans( idt( u ) ) ) )*jump( trans( <span class="keywordtype">id</span>( v ) ) ) ),</div>
 <div class="line">             _geomap = geomap );</div>
-</div><!-- fragment --><p>From <code>doc/manual/laplacian/laplacian.cpp</code> : </p>
+</div><!-- fragment --><p>From <code><a class="el" href="laplacian_8cpp.html">doc/manual/laplacian/laplacian.cpp</a></code> : </p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> l = form1( _test=Xh, _vector=F );</div>
 <div class="line">l = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range = <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ),</div>
 <div class="line">               _expr=f*<span class="keywordtype">id</span>( v ) ) +</div>
@@ -223,11 +223,11 @@ integrate</h2>
 </div><!-- fragment --><h2><a class="anchor" id="Integrals_Computing"></a>
 Computing my first Integrals</h2>
 <p>This part explains how to integrate on a mesh with <a href="http://www.feelpp.org">Feel++</a> (source <code>"doc/manual/tutorial/myintegrals.cpp"</code>).</p>
-<p>Let's consider the domain <img class="formulaInl" alt="$\Omega=[0,1]^d$" src="form_323.png"/> and associated meshes.<br/>
+<p>Let's consider the domain <img class="formulaInl" alt="$\Omega=[0,1]^d$" src="form_228.png"/> and associated meshes.<br/>
  Here, we want to integrate the following function <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} f(x,y,z) = x^2 + y^2 + z^2 \end{aligned} $" src="form_324.png"/></center><p><br/>
- on the whole domain <img class="formulaInl" alt="$\Omega$" src="form_203.png"/> and on part of the boundary <img class="formulaInl" alt="$\Omega$" src="form_203.png"/>.</p>
+<center> <img class="formulaInl" alt="$ \begin{aligned} f(x,y,z) = x^2 + y^2 + z^2 \end{aligned} $" src="form_229.png"/></center><p><br/>
+ on the whole domain <img class="formulaInl" alt="$\Omega$" src="form_219.png"/> and on part of the boundary <img class="formulaInl" alt="$\Omega$" src="form_219.png"/>.</p>
 <p>There is the appropriate code : </p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span></div>
 <div class="line">main( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv )</div>
@@ -280,7 +280,7 @@ project</h2>
 <li><code>_geomap</code> : type of geometric mapping. Default = <code>GEOMAP_OPT</code></li>
 </ul>
 <p><b>Examples :</b><br/>
- From <code>doc/manual/laplacian/laplacian.cpp</code> : </p>
+ From <code><a class="el" href="laplacian_8cpp.html">doc/manual/laplacian/laplacian.cpp</a></code> : </p>
 <div class="fragment"><div class="line">element_type e( Xh, <span class="stringliteral">&quot;e&quot;</span> );</div>
 <div class="line">e = <a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">project</a>( _space = Xh,</div>
 <div class="line">             _range = <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ),</div>
@@ -291,9 +291,9 @@ project</h2>
 <div class="line">              _expr = constant( 300 ) );</div>
 </div><!-- fragment --><h2><a class="anchor" id="Mean"></a>
 mean</h2>
-<p>Let <img class="formulaInl" alt="$f$" src="form_206.png"/> a bounded function on domain <img class="formulaInl" alt="$\Omega$" src="form_203.png"/>. You can evaluate the mean value : <br/>
+<p>Let <img class="formulaInl" alt="$f$" src="form_230.png"/> a bounded function on domain <img class="formulaInl" alt="$\Omega$" src="form_219.png"/>. You can evaluate the mean value : <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} \bar{f}&amp;=\frac{1}{|\Omega|}\int_\Omega f\\ &amp;=\frac{1}{\int\limits_\Omega 1}\int_\Omega f. \end{aligned} $" src="form_207.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ \begin{aligned} \bar{f}&amp;=\frac{1}{|\Omega|}\int_\Omega f\\ &amp;=\frac{1}{\int\limits_\Omega 1}\int_\Omega f. \end{aligned} $" src="form_231.png"/></center><p><br/>
 </p>
 <p><b>Interface :</b><br/>
  </p>
@@ -309,19 +309,19 @@ mean</h2>
 <li><code>_geomap</code> = type of geometric mapping. Default = <code>GEOMAP_OPT</code></li>
 </ul>
 <p><b>Examples :</b><br/>
- From <code>doc/manual/stokes/stokes.cpp</code> : </p>
+ From <code><a class="el" href="stokes_8cpp.html">doc/manual/stokes/stokes.cpp</a></code> : </p>
 <div class="fragment"><div class="line"><span class="keywordtype">double</span> mean_p = mean( _range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( u.mesh() ),</div>
 <div class="line">                      _expr=idv( p ) );</div>
-</div><!-- fragment --><p>From <code>doc/manual/laplacian/periodic.cpp</code> : </p>
+</div><!-- fragment --><p>From <code><a class="el" href="periodic_8cpp.html">doc/manual/laplacian/periodic.cpp</a></code> : </p>
 <div class="fragment"><div class="line">LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;mean(u)  = &quot;</span> &lt;&lt; mean( _range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ), _expr=idv( u ) ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 </div><!-- fragment --><p><a href="#" class="top">top</a> <hr/>
  <h1><a class="anchor" id="Norms"></a>
 Norms</h1>
 <h2><a class="anchor" id="NormL2"></a>
 normL2</h2>
-<p>Let <img class="formulaInl" alt="$f \in L^2(\Omega)$" src="form_208.png"/> you can evaluate the L2 norm : <br/>
+<p>Let <img class="formulaInl" alt="$f \in L^2(\Omega)$" src="form_232.png"/> you can evaluate the L2 norm : <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} \parallel f\parallel_{L^2(\Omega)}=\sqrt{\int_\Omega |f|^2} \end{aligned} $" src="form_209.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ \begin{aligned} \parallel f\parallel_{L^2(\Omega)}=\sqrt{\int_\Omega |f|^2} \end{aligned} $" src="form_233.png"/></center><p><br/>
 </p>
 <p><b>Interface :</b><br/>
  </p>
@@ -339,17 +339,17 @@ normL2</h2>
 <li><code>_geomap</code> = type of geometric mapping. Default = <code>GEOMAP_OPT</code></li>
 </ul>
 <p><b>Examples :</b><br/>
- From <code>doc/manual/laplacian/laplacian.cpp</code> : </p>
+ From <code><a class="el" href="laplacian_8cpp.html">doc/manual/laplacian/laplacian.cpp</a></code> : </p>
 <div class="fragment"><div class="line"><span class="keywordtype">double</span> L2error =normL2( _range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ),</div>
 <div class="line">                        _expr=( idv( u )-g ) );</div>
-</div><!-- fragment --><p>From <code>doc/manual/stokes/stokes.cpp</code> : </p>
+</div><!-- fragment --><p>From <code><a class="el" href="stokes_8cpp.html">doc/manual/stokes/stokes.cpp</a></code> : </p>
 <div class="fragment"><div class="line"><span class="keywordtype">double</span> p_errorL2 = normL2( _range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( u.mesh() ),</div>
 <div class="line">                           _expr=( idv( p )-mean_p - p_exact ) );</div>
 </div><!-- fragment --><h2><a class="anchor" id="NormH1"></a>
 normH1</h2>
-<p>In the same idea, you can evaluate the H1 norm or semi norm, for any function <img class="formulaInl" alt="$f \in H^1(\Omega)$" src="form_210.png"/> : <br/>
+<p>In the same idea, you can evaluate the H1 norm or semi norm, for any function <img class="formulaInl" alt="$f \in H^1(\Omega)$" src="form_234.png"/> : <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} \parallel f \parallel_{H^1(\Omega)}&amp;=\sqrt{\int_\Omega |f|^2+|\nabla f|^2}\\ &amp;=\sqrt{\int_\Omega |f|^2+\nabla f*\nabla f^T}\\ |f|_{H^1(\Omega)}&amp;=\sqrt{\int_\Omega |\nabla f|^2} \end{aligned} $" src="form_211.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ \begin{aligned} \parallel f \parallel_{H^1(\Omega)}&amp;=\sqrt{\int_\Omega |f|^2+|\nabla f|^2}\\ &amp;=\sqrt{\int_\Omega |f|^2+\nabla f*\nabla f^T}\\ |f|_{H^1(\Omega)}&amp;=\sqrt{\int_\Omega |\nabla f|^2} \end{aligned} $" src="form_235.png"/></center><p><br/>
 </p>
 <p><b>Interface :</b><br/>
  </p>
@@ -383,9 +383,9 @@ normH1</h2>
 <div class="line">                         _grad_expr=(gradv(u)-trans(gradg)) );</div>
 </div><!-- fragment --><h2><a class="anchor" id="normLinf"></a>
 normLinf</h2>
-<p>Let <img class="formulaInl" alt="$f$" src="form_206.png"/> a bounded function on domain <img class="formulaInl" alt="$\Omega$" src="form_203.png"/>. You can evaluate the infinity norm : <br/>
+<p>Let <img class="formulaInl" alt="$f$" src="form_230.png"/> a bounded function on domain <img class="formulaInl" alt="$\Omega$" src="form_219.png"/>. You can evaluate the infinity norm : <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \parallel f \parallel_\infty=\sup_\Omega(|f|) $" src="form_212.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ \parallel f \parallel_\infty=\sup_\Omega(|f|) $" src="form_236.png"/></center><p><br/>
 </p>
 <p><b>Interface :</b><br/>
  : </p>
@@ -414,7 +414,7 @@ normLinf</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Apr 30 2013 11:53:20 for Feel++ by
+    <li class="footer">Generated on Fri May 3 2013 13:13:39 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

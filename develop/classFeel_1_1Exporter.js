@@ -45,11 +45,13 @@ var classFeel_1_1Exporter =
     [ "setOptions", "classFeel_1_1Exporter.html#a9f556c9ddc72fc7f54ac3cb25dda9806", null ],
     [ "setPrefix", "classFeel_1_1Exporter.html#ae3bba0a66e5982b327b2592a4d92100f", null ],
     [ "setType", "classFeel_1_1Exporter.html#a39545fa33171ab565d74be13b0595cf1", null ],
+    [ "setUseSingleTransientFile", "classFeel_1_1Exporter.html#add8fd3b333fe9eaa20ae108304f1ca6f", null ],
     [ "setWorldComm", "classFeel_1_1Exporter.html#ad0c83bdac99f7bc9c946f7d6250fb9db", null ],
     [ "step", "classFeel_1_1Exporter.html#aba84ef870214b28200ba3e7d97b2f71e", null ],
     [ "step", "classFeel_1_1Exporter.html#a86598ee5198f0d1e674e617b79d02859", null ],
     [ "timeSet", "classFeel_1_1Exporter.html#af42d7238ad782f13095692885b1c90c3", null ],
     [ "type", "classFeel_1_1Exporter.html#a05214764672a228e2b93f4199833283c", null ],
+    [ "useSingleTransientFile", "classFeel_1_1Exporter.html#adbb31c871f49755c9a60396b16fc95bf", null ],
     [ "worldComm", "classFeel_1_1Exporter.html#ac85a2765501450d78bcdf853e5cba6c5", null ],
     [ "M_cptOfSave", "classFeel_1_1Exporter.html#a36cebfcf4a10c8143e848a532810ba7d", null ],
     [ "M_do_export", "classFeel_1_1Exporter.html#accd0ce956edf10823833c56687b0c845", null ],
@@ -60,5 +62,6 @@ var classFeel_1_1Exporter =
     [ "M_prefix", "classFeel_1_1Exporter.html#ae05cd1241e4556be718248a5da12bf96", null ],
     [ "M_ts_set", "classFeel_1_1Exporter.html#a3489fb2b439ff03a03a1504053ed1846", null ],
     [ "M_type", "classFeel_1_1Exporter.html#a48951e826e924cd6ffffeff181eaa0dc", null ],
+    [ "M_use_single_transient_file", "classFeel_1_1Exporter.html#ae914ec73c956339c279d1073102444e1", null ],
     [ "M_worldComm", "classFeel_1_1Exporter.html#a7f312c1e89f4727daa9d8fcde5d4de16", null ]
 ];

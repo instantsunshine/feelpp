@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.1</span>
+   &#160;<span id="projectnumber">0.92.90</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -187,10 +187,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6647de58940f9532e23e5118d0cfd156"><td class="memItemLeft" align="right" valign="top">MatSolverPackageType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a6647de58940f9532e23e5118d0cfd156">matSolverPackageEnumType</a> () const </td></tr>
 <tr class="memitem:a580834220331e6c9a43174189c5ec270"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a3d7a6c5948e669b187f2d4620499715a">MatrixStructure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a580834220331e6c9a43174189c5ec270">precMatrixStructure</a> () const </td></tr>
 <tr class="memitem:aa058f17538ffb5404e15908c47f18948"><td class="memItemLeft" align="right" valign="top">value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#aa058f17538ffb5404e15908c47f18948">rTolerance</a> () const </td></tr>
+<tr class="memitem:a4c21e11b63ddc00718d0f6922bf690e8"><td class="memItemLeft" align="right" valign="top">value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a4c21e11b63ddc00718d0f6922bf690e8">rToleranceSNES</a> () const </td></tr>
 <tr class="memitem:ae96c86a02db04d2b5977107acd79bf72"><td class="memItemLeft" align="right" valign="top">value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ae96c86a02db04d2b5977107acd79bf72">dTolerance</a> () const </td></tr>
+<tr class="memitem:a1e6ad534eddcdc36e1a3ed5e5f4718da"><td class="memItemLeft" align="right" valign="top">value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a1e6ad534eddcdc36e1a3ed5e5f4718da">sToleranceSNES</a> () const </td></tr>
 <tr class="memitem:a202996a34fde4501cd8dce1153720212"><td class="memItemLeft" align="right" valign="top">value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a202996a34fde4501cd8dce1153720212">aTolerance</a> () const </td></tr>
+<tr class="memitem:a1dc6ac9a62e7c9e7fc5c3b37b006c6d6"><td class="memItemLeft" align="right" valign="top">value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a1dc6ac9a62e7c9e7fc5c3b37b006c6d6">aToleranceSNES</a> () const </td></tr>
 <tr class="memitem:a8fd53f677dd9379166c2287d9cc69abe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a8fd53f677dd9379166c2287d9cc69abe">maxIterations</a> () const </td></tr>
 <tr class="memitem:a2a16730b57206a63511c1c547f91a55e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a2a16730b57206a63511c1c547f91a55e">maxIterationsSNES</a> () const </td></tr>
+<tr class="memitem:ae7cb75f6f20d1dccaefed350a5e96859"><td class="memItemLeft" align="right" valign="top">value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ae7cb75f6f20d1dccaefed350a5e96859">rtoleranceKSPinSNES</a> () const </td></tr>
 <tr class="memitem:a20a6e9f6e150caae30d2db15d8316850"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20a6e9f6e150caae30d2db15d8316850"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>converged</b> () const </td></tr>
 <tr class="memitem:a497f9f6fc49d46330fb9345e2341216d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a497f9f6fc49d46330fb9345e2341216d"></a>
@@ -376,6 +380,32 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a1dc6ac9a62e7c9e7fc5c3b37b006c6d6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">value_type <a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::aToleranceSNES </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the SNES absolute tolerance </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aa7ce4ac2e7d7146834d56fb6afc2a318"></a>
 <div class="memitem">
 <div class="memproto">
@@ -543,7 +573,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>clean up </p>
-<dl class="section return"><dt>Returns</dt><dd><img class="formulaInl" alt="$ r = x^T * y $" src="form_12.png"/> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><img class="formulaInl" alt="$ r = x^T * y $" src="form_0.png"/> </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classFeel_1_1BackendEigen.html#a5fbb4e60ed7b9b7168ab1e7cb3d79bdd">Feel::BackendEigen&lt; T, _Options &gt;</a>.</p>
 
@@ -584,7 +614,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd><img class="formulaInl" alt="$ r = x^T * y $" src="form_12.png"/> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><img class="formulaInl" alt="$ r = x^T * y $" src="form_0.png"/> </dd></dl>
 
 <p>References <a class="el" href="classFeel_1_1Backend.html#aaab49985927760d5cf50810d8d0c21c9">Feel::Backend&lt; T &gt;::dot()</a>.</p>
 
@@ -1392,7 +1422,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>solve for the nonlinear problem <img class="formulaInl" alt="$F( u ) = 0$" src="form_18.png"/> </p>
+<p>solve for the nonlinear problem <img class="formulaInl" alt="$F( u ) = 0$" src="form_6.png"/> </p>
 
 </div>
 </div>
@@ -1459,7 +1489,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>solve for the nonlinear problem <img class="formulaInl" alt="$F( u ) = 0$" src="form_18.png"/> with an adaptive strategy to reuse the preconditioner </p>
+<p>solve for the nonlinear problem <img class="formulaInl" alt="$F( u ) = 0$" src="form_6.png"/> with an adaptive strategy to reuse the preconditioner </p>
 
 </div>
 </div>
@@ -1650,7 +1680,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd><img class="formulaInl" alt="$ y = A * x $" src="form_13.png"/> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><img class="formulaInl" alt="$ y = A * x $" src="form_1.png"/> </dd></dl>
 
 <p>Implemented in <a class="el" href="classFeel_1_1BackendEigen.html#a69c376087409a581aefd019ddea31410">Feel::BackendEigen&lt; T, _Options &gt;</a>.</p>
 
@@ -1695,7 +1725,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd><img class="formulaInl" alt="$ y = A * x $" src="form_13.png"/> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><img class="formulaInl" alt="$ y = A * x $" src="form_1.png"/> </dd></dl>
 
 <p>References <a class="el" href="classFeel_1_1Backend.html#aa3eff8e69436b9d28fb8cc39ba6c52ec">Feel::Backend&lt; T &gt;::prod()</a>.</p>
 
@@ -1724,6 +1754,58 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the relative tolerance </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae7cb75f6f20d1dccaefed350a5e96859"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">value_type <a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::rtoleranceKSPinSNES </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the KSP relative tolerance in SNES </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4c21e11b63ddc00718d0f6922bf690e8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">value_type <a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::rToleranceSNES </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the relative tolerance SNES </dd></dl>
 
 </div>
 </div>
@@ -1825,7 +1907,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>solve for <img class="formulaInl" alt="$P A x = P b$" src="form_14.png"/> where <img class="formulaInl" alt="$P$" src="form_15.png"/> is an approximation of the inverse of <img class="formulaInl" alt="$A$" src="form_16.png"/>.</p>
+<p>solve for <img class="formulaInl" alt="$P A x = P b$" src="form_2.png"/> where <img class="formulaInl" alt="$P$" src="form_3.png"/> is an approximation of the inverse of <img class="formulaInl" alt="$A$" src="form_4.png"/>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>matrix to inverse </td></tr>
@@ -1887,7 +1969,7 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>solve for <img class="formulaInl" alt="$P A x = P b$" src="form_14.png"/> where <img class="formulaInl" alt="$P$" src="form_15.png"/> is an approximation of the inverse of <img class="formulaInl" alt="$A$" src="form_16.png"/> using an adaptive preconditioning strategy.</p>
+<p>solve for <img class="formulaInl" alt="$P A x = P b$" src="form_2.png"/> where <img class="formulaInl" alt="$P$" src="form_3.png"/> is an approximation of the inverse of <img class="formulaInl" alt="$A$" src="form_4.png"/> using an adaptive preconditioning strategy.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>matrix to inverse </td></tr>
@@ -1904,6 +1986,32 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a1e6ad534eddcdc36e1a3ed5e5f4718da"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">value_type <a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::sToleranceSNES </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the SNES step length tolerance </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="backend_8hpp_source.html">backend.hpp</a></li>
 <li><a class="el" href="backend_8cpp.html">backend.cpp</a></li>
@@ -1914,7 +2022,7 @@ template&lt;typename T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1Backend.html">Backend</a></li>
-    <li class="footer">Generated on Tue Apr 30 2013 11:53:20 for Feel++ by
+    <li class="footer">Generated on Fri May 3 2013 13:13:39 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

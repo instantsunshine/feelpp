@@ -20,6 +20,13 @@ var classFeel_1_1PeriodicLaplacian =
     [ "value_type", "classFeel_1_1PeriodicLaplacian.html#a402ee936e695a3df949d2673edb4b3d5", null ],
     [ "vec_element_type", "classFeel_1_1PeriodicLaplacian.html#a69d545d183ad2e2f11ecc52186805741", null ],
     [ "PeriodicLaplacian", "classFeel_1_1PeriodicLaplacian.html#a34c3b6bc793878494a5396c0e7e3a36f", null ],
+    [ "BOOST_MPL_ASSERT", "classFeel_1_1PeriodicLaplacian.html#aa37839899239a97c267b24162f14e454", null ],
+    [ "BOOST_MPL_ASSERT", "classFeel_1_1PeriodicLaplacian.html#a802fb885029e0c399b84343502dd9d6e", null ],
+    [ "BOOST_MPL_ASSERT", "classFeel_1_1PeriodicLaplacian.html#a990ba8d958746fa6b15577d2dc9e1e03", null ],
+    [ "BOOST_MPL_ASSERT", "classFeel_1_1PeriodicLaplacian.html#ae009492992c455cc4d287b50032691ca", null ],
+    [ "BOOST_MPL_ASSERT", "classFeel_1_1PeriodicLaplacian.html#a594a296a852a1c898dc5450c91c32fb9", null ],
+    [ "BOOST_MPL_ASSERT", "classFeel_1_1PeriodicLaplacian.html#a39babb8b4a7574472f16ea60de1fb164", null ],
+    [ "BOOST_MPL_ASSERT", "classFeel_1_1PeriodicLaplacian.html#a98758f14c922e7b27840e3ee6f7a3503", null ],
     [ "run", "classFeel_1_1PeriodicLaplacian.html#ae12b3a340b6dfdfc1e23ae584621f131", null ],
     [ "imOrder", "classFeel_1_1PeriodicLaplacian.html#afbf49c61d506c3b3fe736145ee27a8a0", null ]
 ];

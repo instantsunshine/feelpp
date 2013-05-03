@@ -19,5 +19,6 @@ var searchData=
   ['gmshellipsoiddomain',['GmshEllipsoidDomain',['../classFeel_1_1GmshEllipsoidDomain.html',1,'Feel']]],
   ['gmshhypercubedomain',['GmshHypercubeDomain',['../classFeel_1_1GmshHypercubeDomain.html',1,'Feel']]],
   ['gmshsimplexdomain',['GmshSimplexDomain',['../classFeel_1_1GmshSimplexDomain.html',1,'Feel']]],
-  ['graphcsr',['GraphCSR',['../classFeel_1_1GraphCSR.html',1,'Feel']]]
+  ['graphcsr',['GraphCSR',['../classFeel_1_1GraphCSR.html',1,'Feel']]],
+  ['ground',['Ground',['../classFeel_1_1Ground.html',1,'Feel']]]
 ];

@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.1</span>
+   &#160;<span id="projectnumber">0.92.90</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -115,10 +115,10 @@ class Feel::Iteration&lt; Real &gt;</h3>
 <p>The <a class="el" href="classFeel_1_1Iteration.html" title="brief description">Iteration</a> object calculates whether the solution has reached the desired accuracy, or whether the maximum number of iterations has been reached. The method <code><a class="el" href="classFeel_1_1Iteration.html#a863927ce2f5952d9c309855aa29b235a" title="tells if the iteration finished">isFinished()</a></code> checks both convergence and number of iterations. The method <code>isConverged()</code> only checks convergence. The <code>isFirst()</code> method is used to determine the first iteration of the loop.</p>
 <p>The following notation will be used </p>
 <ul>
-<li><img class="formulaInl" alt="$r$" src="form_21.png"/> the residual </li>
-<li><img class="formulaInl" alt="$\epsilon$" src="form_22.png"/> the relative precision </li>
-<li><img class="formulaInl" alt="$I$" src="form_23.png"/> the number of already performed iterations </li>
-<li><img class="formulaInl" alt="$M$" src="form_24.png"/> the maximum number of iterations allowed <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
+<li><img class="formulaInl" alt="$r$" src="form_9.png"/> the residual </li>
+<li><img class="formulaInl" alt="$\epsilon$" src="form_10.png"/> the relative precision </li>
+<li><img class="formulaInl" alt="$I$" src="form_11.png"/> the number of already performed iterations </li>
+<li><img class="formulaInl" alt="$M$" src="form_12.png"/> the maximum number of iterations allowed <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd></dd></dl>
 <dl class="section version"><dt>Version</dt><dd></dd></dl>
 <dl class="section rcs"><dt>Id:</dt><dd>Iteration.hpp,v 1.6 2002/08/22 13:09:56 prudhomm Exp </dd></dl>
@@ -270,8 +270,8 @@ template&lt;typename Real&gt; </div>
 <p>tells if the iteration finished </p>
 <p>Three cases can occur: </p>
 <ul>
-<li>if <img class="formulaInl" alt="$ r < \epsilon $" src="form_25.png"/> then the iteration is over </li>
-<li>if <img class="formulaInl" alt="$ I > M $" src="form_26.png"/> then the iteration is over </li>
+<li>if <img class="formulaInl" alt="$ r < \epsilon $" src="form_13.png"/> then the iteration is over </li>
+<li>if <img class="formulaInl" alt="$ I > M $" src="form_14.png"/> then the iteration is over </li>
 <li>else the iteration must continue</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -396,7 +396,7 @@ template&lt;typename Real&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1Iteration.html">Iteration</a></li>
-    <li class="footer">Generated on Tue Apr 30 2013 11:53:22 for Feel++ by
+    <li class="footer">Generated on Fri May 3 2013 13:13:42 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -33,7 +33,7 @@ var classFeel_1_1OperatorLinearFree =
     [ "applyInverse", "classFeel_1_1OperatorLinearFree.html#ad1094a9dfcfb30ed1bbba47568a49384", null ],
     [ "energy", "classFeel_1_1OperatorLinearFree.html#a6a55ebbbe1376084f201779a036d43a1", null ],
     [ "expr", "classFeel_1_1OperatorLinearFree.html#ad6ff205990c2de27a72be74c982f1c0b", null ],
-    [ "init", "classFeel_1_1OperatorLinearFree.html#a9f8fa8b5b6d5c06024e6d0b716759502", null ],
+    [ "init", "classFeel_1_1OperatorLinearFree.html#ae594b56f03d745c0b72dee58871dc1d0", null ],
     [ "matPtr", "classFeel_1_1OperatorLinearFree.html#aaf3047170f506a8147f0e00eda502247", null ],
     [ "operator=", "classFeel_1_1OperatorLinearFree.html#a0db1acdafb083ad922ad491858c421f3", null ]
 ];

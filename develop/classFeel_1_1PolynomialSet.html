@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.1</span>
+   &#160;<span id="projectnumber">0.92.90</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -113,9 +113,9 @@ $(document).ready(function(){initNavTree('classFeel_1_1PolynomialSet.html','');}
 class Feel::PolynomialSet&lt; Poly, PolySetType &gt;</h3>
 
 <p>a Set of polynomials </p>
-<p>This class represents a set of polynomials <img class="formulaInl" alt="$ {p_i}_{i=1...N} $" src="form_110.png"/> defined in a certain basis given by the template argument. The coefficients of the polynomials in the basis are represented by a matrix whose line represents the polynomials and columns the basis index <img class="formulaInl" alt="$ C_{i,j} = \mathcal{R}( p_i)_j $" src="form_111.png"/> where <img class="formulaInl" alt="$\mathcal{R}$" src="form_112.png"/> is the mapping between the polynomial and its coefficients. We have that the polynomial set is represented as follows: </p>
+<p>This class represents a set of polynomials <img class="formulaInl" alt="$ {p_i}_{i=1...N} $" src="form_196.png"/> defined in a certain basis given by the template argument. The coefficients of the polynomials in the basis are represented by a matrix whose line represents the polynomials and columns the basis index <img class="formulaInl" alt="$ C_{i,j} = \mathcal{R}( p_i)_j $" src="form_197.png"/> where <img class="formulaInl" alt="$\mathcal{R}$" src="form_198.png"/> is the mapping between the polynomial and its coefficients. We have that the polynomial set is represented as follows: </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[p_i = \sum_j=1^N \mathcal{R}( p_i )_j \phi_j\]" src="form_113.png"/>
+<img class="formulaDsp" alt="\[p_i = \sum_j=1^N \mathcal{R}( p_i )_j \phi_j\]" src="form_199.png"/>
 </p>
 <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd></dd></dl>
@@ -381,16 +381,16 @@ template&lt;typename Poly, template&lt; uint16_type &gt; class PolySetType = Sca
 </div><div class="memdoc">
 
 <p>derivatives of <a class="el" href="classFeel_1_1Dubiner.html" title="Dubiner polynomial orthonormal basis.">Dubiner</a> polynomials the derivatives are computed at the nodes of the lattice </p>
-<p>Derivate with respect to the <img class="formulaInl" alt="$\ell$" src="form_115.png"/> coordinates at the nodes where the polynomials basis have been constructed.</p>
+<p>Derivate with respect to the <img class="formulaInl" alt="$\ell$" src="form_201.png"/> coordinates at the nodes where the polynomials basis have been constructed.</p>
 <p>We construct the matrix </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{eqnarray*} A_{i,j} &amp;= \frac{\partial p_i(x_j)}{\partial x_\ell}\\ &amp;= \sum_{k=1}^N \mathcal{R}(p_i)_k \frac{\partial \phi_k(x_j)}{\partial x_\ell} \end{eqnarray*}" src="form_116.png"/>
+<img class="formulaDsp" alt="\begin{eqnarray*} A_{i,j} &amp;= \frac{\partial p_i(x_j)}{\partial x_\ell}\\ &amp;= \sum_{k=1}^N \mathcal{R}(p_i)_k \frac{\partial \phi_k(x_j)}{\partial x_\ell} \end{eqnarray*}" src="form_202.png"/>
 </p>
 <ul>
-<li>l the derivation index <img class="formulaInl" alt="$\ell$" src="form_115.png"/> </li>
+<li>l the derivation index <img class="formulaInl" alt="$\ell$" src="form_201.png"/> </li>
 <li>__pts a column oriented matrix contained the node coordinates (in the columns).</li>
 </ul>
-<dl class="section return"><dt>Returns</dt><dd>the matrix <img class="formulaInl" alt="$A$" src="form_16.png"/> <ul>
+<dl class="section return"><dt>Returns</dt><dd>the matrix <img class="formulaInl" alt="$A$" src="form_4.png"/> <ul>
 <li>i index of the derivative (0 : x, 1 : y, 2 : z ) </li>
 </ul>
 </dd></dl>
@@ -548,11 +548,11 @@ template&lt;typename AE &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>evaluate all polynomials of the set at a set of nodes</p>
-<p>Constructs <img class="formulaInl" alt="$A_{i,j} = p_i(x_j) = \sum_{k=1}^N \mathcal{R}(p_i)_k \phi_k(x_j)$" src="form_114.png"/></p>
+<p>Constructs <img class="formulaInl" alt="$A_{i,j} = p_i(x_j) = \sum_{k=1}^N \mathcal{R}(p_i)_k \phi_k(x_j)$" src="form_200.png"/></p>
 <ul>
 <li>__pts a column oriented matrix contained the node coordinates (in the columns).</li>
 </ul>
-<dl class="section return"><dt>Returns</dt><dd>the matrix <img class="formulaInl" alt="$A$" src="form_16.png"/> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the matrix <img class="formulaInl" alt="$A$" src="form_4.png"/> </dd></dl>
 
 </div>
 </div>
@@ -1064,7 +1064,7 @@ template&lt;typename Poly, template&lt; uint16_type &gt; class PolySetType = Sca
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a></li>
-    <li class="footer">Generated on Tue Apr 30 2013 11:53:23 for Feel++ by
+    <li class="footer">Generated on Fri May 3 2013 13:13:43 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

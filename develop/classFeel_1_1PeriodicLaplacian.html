@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.1</span>
+   &#160;<span id="projectnumber">0.92.90</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -187,6 +187,20 @@ functionspace_vec_type::element_type&#160;</td><td class="memItemRight" valign="
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aa37839899239a97c267b24162f14e454"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa37839899239a97c267b24162f14e454"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_MPL_ASSERT</b> ((boost::is_base_and_derived&lt; Feel::detail::periodicity_base, Periodicity&lt; <a class="el" href="classFeel_1_1Periodic.html">Periodic</a>&lt;&gt; &gt; &gt;))</td></tr>
+<tr class="memitem:a802fb885029e0c399b84343502dd9d6e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a802fb885029e0c399b84343502dd9d6e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_MPL_ASSERT</b> ((boost::is_base_and_derived&lt; Feel::detail::periodic_base, Periodicity&lt; <a class="el" href="classFeel_1_1Periodic.html">Periodic</a>&lt;&gt; &gt; &gt;))</td></tr>
+<tr class="memitem:a990ba8d958746fa6b15577d2dc9e1e03"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a990ba8d958746fa6b15577d2dc9e1e03"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_MPL_ASSERT</b> ((boost::is_same&lt; typename functionspace_type::periodicity_type, Periodicity&lt; <a class="el" href="classFeel_1_1Periodic.html">Periodic</a>&lt;&gt; &gt; &gt;))</td></tr>
+<tr class="memitem:ae009492992c455cc4d287b50032691ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae009492992c455cc4d287b50032691ca"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_MPL_ASSERT</b> ((boost::is_same&lt; mpl::bool_&lt; functionspace_type::is_periodic &gt;, mpl::bool_&lt; true &gt; &gt;))</td></tr>
+<tr class="memitem:a594a296a852a1c898dc5450c91c32fb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a594a296a852a1c898dc5450c91c32fb9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_MPL_ASSERT</b> ((boost::is_same&lt; mpl::bool_&lt; functionspace_vec_type::is_periodic &gt;, mpl::bool_&lt; true &gt; &gt;))</td></tr>
+<tr class="memitem:a39babb8b4a7574472f16ea60de1fb164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39babb8b4a7574472f16ea60de1fb164"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_MPL_ASSERT</b> ((boost::is_same&lt; mpl::bool_&lt; functionspace_composite_type::template sub_functionspace&lt; 0 &gt;::type::value_type::is_periodic &gt;, mpl::bool_&lt; true &gt; &gt;))</td></tr>
+<tr class="memitem:a98758f14c922e7b27840e3ee6f7a3503"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98758f14c922e7b27840e3ee6f7a3503"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_MPL_ASSERT</b> ((boost::is_same&lt; mpl::bool_&lt; functionspace_composite_type::template sub_functionspace&lt; 1 &gt;::type::value_type::is_periodic &gt;, mpl::bool_&lt; false &gt; &gt;))</td></tr>
 <tr class="memitem:a34c3b6bc793878494a5396c0e7e3a36f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1PeriodicLaplacian.html#a34c3b6bc793878494a5396c0e7e3a36f">PeriodicLaplacian</a> ()</td></tr>
 <tr class="memitem:ae12b3a340b6dfdfc1e23ae584621f131"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1PeriodicLaplacian.html#ae12b3a340b6dfdfc1e23ae584621f131">run</a> ()</td></tr>
 <tr class="inherit_header pub_methods_classFeel_1_1Simget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classFeel_1_1Simget')"><img src="closed.png" alt="-"/>&nbsp;Public Member Functions inherited from <a class="el" href="classFeel_1_1Simget.html">Feel::Simget</a></td></tr>
@@ -297,7 +311,7 @@ template&lt;int Dim, int Order&gt; </div>
 
 <p>Implements <a class="el" href="classFeel_1_1Simget.html#ae4cebdea070b7aadc9cb5ada1969e5a9">Feel::Simget</a>.</p>
 
-<p>References <a class="el" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">Feel::elements()</a>, <a class="el" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049">Feel::integrate()</a>, <a class="el" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">Feel::markedfaces()</a>, and <a class="el" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">Feel::project()</a>.</p>
+<p>References <a class="el" href="vf_8hpp.html#ac402cae9a14df11a4fb8ebaf44c9e49a">AUTO</a>, <a class="el" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">Feel::elements()</a>, <a class="el" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049">Feel::integrate()</a>, <a class="el" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">Feel::markedfaces()</a>, and <a class="el" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">Feel::project()</a>.</p>
 
 </div>
 </div>
@@ -310,7 +324,7 @@ template&lt;int Dim, int Order&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1PeriodicLaplacian.html">PeriodicLaplacian</a></li>
-    <li class="footer">Generated on Thu Apr 25 2013 09:40:28 for Feel++ by
+    <li class="footer">Generated on Fri May 3 2013 13:13:43 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

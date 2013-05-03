@@ -11,5 +11,6 @@ var searchData=
   ['bdf',['Bdf',['../classFeel_1_1Bdf.html',1,'Feel']]],
   ['bfgsinvhessian',['BFGSInvHessian',['../structFeel_1_1BFGSInvHessian.html',1,'Feel']]],
   ['boundaryadapted',['BoundaryAdapted',['../classFeel_1_1BoundaryAdapted.html',1,'Feel']]],
+  ['boundarycondition',['BoundaryCondition',['../classFeel_1_1detail_1_1BoundaryCondition.html',1,'Feel::detail']]],
   ['boundingbox',['BoundingBox',['../structFeel_1_1BoundingBox.html',1,'Feel']]]
 ];

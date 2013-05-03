@@ -1,6 +1,8 @@
 var searchData=
 [
+  ['dar',['DAR',['../classFeel_1_1DAR.html',1,'Feel']]],
   ['datamap',['DataMap',['../classFeel_1_1DataMap.html',1,'Feel']]],
+  ['diode',['Diode',['../classDiode.html',1,'']]],
   ['directionalcomponentpointevaluation',['DirectionalComponentPointEvaluation',['../structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html',1,'Feel::functional']]],
   ['directionalcomponentpointsevaluation',['DirectionalComponentPointsEvaluation',['../structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html',1,'Feel::functional']]],
   ['dirscalingmatrix',['DirScalingMatrix',['../classFeel_1_1DirScalingMatrix.html',1,'Feel']]],

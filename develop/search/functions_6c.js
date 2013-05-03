@@ -2,7 +2,9 @@ var searchData=
 [
   ['l1norm',['l1Norm',['../classFeel_1_1MatrixEigenDense.html#a4552ba7df416b067962c469121a67198',1,'Feel::MatrixEigenDense::l1Norm()'],['../classFeel_1_1MatrixEigenSparse.html#ac39fa3074a774d7fcf66cc38864348f7',1,'Feel::MatrixEigenSparse::l1Norm()'],['../classFeel_1_1MatrixSparse.html#a82b896d0669d8ba227aaa189663c587a',1,'Feel::MatrixSparse::l1Norm()'],['../classFeel_1_1Vector.html#a83d41ddedb49b1b0d66990ad6176305e',1,'Feel::Vector::l1Norm()'],['../classFeel_1_1VectorEigen.html#aea64c290fa883b885e3ad9d8533bfa73',1,'Feel::VectorEigen::l1Norm()'],['../classFeel_1_1VectorUblas.html#aec63f0c370ed848fc8ed66833f0cd5fa',1,'Feel::VectorUblas::l1Norm()']]],
   ['l2norm',['l2Norm',['../classFeel_1_1Vector.html#ab02f4bb16b05492b3999d00d4732d31a',1,'Feel::Vector::l2Norm()'],['../classFeel_1_1VectorEigen.html#a67c8633bab6e36bd3a2d815a81f7c3fc',1,'Feel::VectorEigen::l2Norm()'],['../classFeel_1_1VectorUblas.html#aec81e78a04ed883284a5f7ae570da014',1,'Feel::VectorUblas::l2Norm()']]],
-  ['l2solve',['l2solve',['../classFeel_1_1CRBModel.html#a38dc11edf1470cde41b18140deaa6a0e',1,'Feel::CRBModel::l2solve()'],['../classFeel_1_1CRBModelTrilinear.html#a703dab919b23307b41b121303845f3e1',1,'Feel::CRBModelTrilinear::l2solve()']]],
+  ['l2solve',['l2solve',['../classFeel_1_1CRBModel.html#a38dc11edf1470cde41b18140deaa6a0e',1,'Feel::CRBModel::l2solve()'],['../classFeel_1_1CRBModelTrilinear.html#a703dab919b23307b41b121303845f3e1',1,'Feel::CRBModelTrilinear::l2solve()'],['../classConvectionCrb.html#a318611095aae981b547238f68e88227e',1,'ConvectionCrb::l2solve()']]],
+  ['laplacian',['Laplacian',['../classLaplacian.html#a1dfb41a8a0f0bb745db18c711e16d6b8',1,'Laplacian::Laplacian(po::variables_map const &amp;vm, AboutData const &amp;about)'],['../classLaplacian.html#a132e129d24df420673d84f1583a4ea5a',1,'Laplacian::Laplacian()']]],
+  ['laplacianlm',['LaplacianLM',['../classFeel_1_1LaplacianLM.html#aff4ccf3da914ca379599bfe6a1b19410',1,'Feel::LaplacianLM']]],
   ['lastcolentryonproc',['lastColEntryOnProc',['../classFeel_1_1GraphCSR.html#a3b8a5fec59a13899a4b595dbb55f838d',1,'Feel::GraphCSR']]],
   ['lastdof',['lastDof',['../classFeel_1_1DataMap.html#ac4be1d1253345a313f8be0a4687bdf78',1,'Feel::DataMap::lastDof() const '],['../classFeel_1_1DataMap.html#abf4d0054f85e7781ea6a4bd3410c25de',1,'Feel::DataMap::lastDof(const unsigned int proc) const ']]],
   ['lastdofglobalcluster',['lastDofGlobalCluster',['../classFeel_1_1DataMap.html#a0079f6b697b0cb52e9399f6540752d0d',1,'Feel::DataMap']]],
@@ -35,5 +37,6 @@ var searchData=
   ['logmiddle',['logMiddle',['../classFeel_1_1ParameterSpace.html#adc264707fd47a365269248b4b1d5b291',1,'Feel::ParameterSpace']]],
   ['lograndom',['logRandom',['../classFeel_1_1ParameterSpace.html#a4e30b9730c09f8f2fc7fe4a3371f86f2',1,'Feel::ParameterSpace']]],
   ['lookfordb',['lookForDB',['../classFeel_1_1CRBDB.html#ac80c6f91b8fffec72cbc69a13bef3ab0',1,'Feel::CRBDB']]],
+  ['lshape',['LShape',['../classLShape.html#a57a32bd0a184a192e125e30fc4789035',1,'LShape']]],
   ['lu',['LU',['../classFeel_1_1LU.html#a3dff1dd8de836298409aafc6ace10513',1,'Feel::LU']]]
 ];

@@ -11,5 +11,7 @@ var classFeel_1_1PeriodicStokes =
     [ "mesh_type", "classFeel_1_1PeriodicStokes.html#aa1dee2bc5280543f48fa15e5d9c5b449", null ],
     [ "value_type", "classFeel_1_1PeriodicStokes.html#a0c56ef2750fc0168d35b4b4d791f46ab", null ],
     [ "PeriodicStokes", "classFeel_1_1PeriodicStokes.html#ab1817c421963a1094d0a74d6506213bb", null ],
+    [ "BOOST_MPL_ASSERT", "classFeel_1_1PeriodicStokes.html#aa34db09547fd8f73d71388b7111898f1", null ],
+    [ "BOOST_MPL_ASSERT", "classFeel_1_1PeriodicStokes.html#a96043884953af74c31c9f2a16e21e49e", null ],
     [ "run", "classFeel_1_1PeriodicStokes.html#a2b14e8c158cd99912456d1eb2574e526", null ]
 ];

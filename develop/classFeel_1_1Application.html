@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.1</span>
+   &#160;<span id="projectnumber">0.92.90</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -124,11 +124,19 @@ Christophe Prud'homme </dd></dl>
  <div class="center">
   <img src="classFeel_1_1Application.png" usemap="#Feel::Application_map" alt=""/>
   <map id="Feel::Application_map" name="Feel::Application_map">
-<area href="classFeel_1_1ApplicationXML.html" title="XML application." alt="Feel::ApplicationXML" shape="rect" coords="0,56,255,80"/>
-<area href="classFeel_1_1CRBApp.html" title="Certified Reduced Basis application." alt="Feel::CRBApp&lt; ModelType &gt;" shape="rect" coords="265,56,520,80"/>
-<area href="classFeel_1_1OpusApp.html" title="Certified Reduced Basis application." alt="Feel::OpusApp&lt; ModelType, RM, Model &gt;" shape="rect" coords="530,56,785,80"/>
-<area href="classFeel_1_1PFemApp.html" title="Parametrized Finite Element Method Application." alt="Feel::PFemApp&lt; ModelType &gt;" shape="rect" coords="795,56,1050,80"/>
-<area href="classFeel_1_1OpusAppEigs.html" title="Opus application." alt="Feel::OpusAppEigs" shape="rect" coords="0,112,255,136"/>
+<area href="classConvection.html" alt="Convection" shape="rect" coords="316,56,622,80"/>
+<area href="classFeel_1_1Advection.html" alt="Feel::Advection&lt; Dim, Order, Cont, Entity &gt;" shape="rect" coords="316,112,622,136"/>
+<area href="classFeel_1_1ApplicationXML.html" title="XML application." alt="Feel::ApplicationXML" shape="rect" coords="316,168,622,192"/>
+<area href="classFeel_1_1CRBApp.html" title="Certified Reduced Basis application." alt="Feel::CRBApp&lt; ModelType &gt;" shape="rect" coords="316,224,622,248"/>
+<area href="classFeel_1_1Elaxi.html" alt="Feel::Elaxi&lt; Order, Entity &gt;" shape="rect" coords="316,280,622,304"/>
+<area href="classFeel_1_1Ground.html" title="Heating and Cooling of the ground due to surface temperature." alt="Feel::Ground&lt; Dim, Order &gt;" shape="rect" coords="316,336,622,360"/>
+<area href="classFeel_1_1HeatSink.html" alt="Feel::HeatSink&lt; Dim, Order &gt;" shape="rect" coords="316,392,622,416"/>
+<area href="classFeel_1_1Laplacian.html" alt="Feel::Laplacian&lt; Dim, Order, Cont, Entity, FType &gt;" shape="rect" coords="316,448,622,472"/>
+<area href="classFeel_1_1LaplacianLM.html" alt="Feel::LaplacianLM&lt; Dim, Order &gt;" shape="rect" coords="316,504,622,528"/>
+<area href="classFeel_1_1OpusApp.html" title="Certified Reduced Basis application." alt="Feel::OpusApp&lt; ModelType, RM, Model &gt;" shape="rect" coords="316,560,622,584"/>
+<area href="classFeel_1_1PFemApp.html" title="Parametrized Finite Element Method Application." alt="Feel::PFemApp&lt; ModelType &gt;" shape="rect" coords="316,616,622,640"/>
+<area href="classFeel_1_1ResistanceLaplacian.html" alt="Feel::ResistanceLaplacian&lt; Dim, Order &gt;" shape="rect" coords="316,672,622,696"/>
+<area href="classFeel_1_1ThermalFin.html" alt="Feel::ThermalFin" shape="rect" coords="316,728,622,752"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -1329,7 +1337,7 @@ template&lt;class T &gt; </td></tr>
 </div><div class="memdoc">
 <p>execute the set of <a class="el" href="classFeel_1_1Simget.html" title="Simulation Object.">Simget</a> stored in the <a class="el" href="classFeel_1_1Application.html" title="provides information about the Application">Application</a> </p>
 
-<p>Reimplemented in <a class="el" href="classFeel_1_1OpusApp.html#aff1eec52dc259a58db7f68cefb4ae29d">Feel::OpusApp&lt; ModelType, RM, Model &gt;</a>, <a class="el" href="classFeel_1_1OpusAppEigs.html#abc46ddbfadda861b9b388442a4574bc2">Feel::OpusAppEigs</a>, <a class="el" href="classFeel_1_1CRBApp.html#ad74464be29b6bc203b43b475f613a50b">Feel::CRBApp&lt; ModelType &gt;</a>, and <a class="el" href="classFeel_1_1PFemApp.html#a795188d3a77c37cd70d6b58eb58d5431">Feel::PFemApp&lt; ModelType &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classFeel_1_1HeatSink.html#a6f676d65462ba73cbad17bc6df339f87">Feel::HeatSink&lt; Dim, Order &gt;</a>, <a class="el" href="classFeel_1_1OpusApp.html#aff1eec52dc259a58db7f68cefb4ae29d">Feel::OpusApp&lt; ModelType, RM, Model &gt;</a>, <a class="el" href="classFeel_1_1Advection.html#af10ef0eb25d33db2f66675e08f4a3d84">Feel::Advection&lt; Dim, Order, Cont, Entity &gt;</a>, <a class="el" href="classFeel_1_1ThermalFin.html#a00579c0c8b8669ba48e2eac43fbf0c48">Feel::ThermalFin</a>, <a class="el" href="classFeel_1_1Laplacian.html#a1142b736ac02d39a250582f802abc97f">Feel::Laplacian&lt; Dim, Order, Cont, Entity, FType &gt;</a>, <a class="el" href="classFeel_1_1Elaxi.html#a4ddecc401234a5aede2f13ae9a9515ee">Feel::Elaxi&lt; Order, Entity &gt;</a>, <a class="el" href="classConvection.html#ab85307576cd08947310013cf75c7ec3f">Convection</a>, <a class="el" href="classFeel_1_1ResistanceLaplacian.html#abccfa412f1e5d43c78c32ba87877fe04">Feel::ResistanceLaplacian&lt; Dim, Order &gt;</a>, <a class="el" href="classFeel_1_1Ground.html#ab98c0463b8e3c504d2969e95b6aaa44d">Feel::Ground&lt; Dim, Order &gt;</a>, <a class="el" href="classFeel_1_1OpusAppEigs.html#abc46ddbfadda861b9b388442a4574bc2">Feel::OpusAppEigs</a>, <a class="el" href="classFeel_1_1LaplacianLM.html#a851ef8c8001bec21ed743013e89aa33d">Feel::LaplacianLM&lt; Dim, Order &gt;</a>, <a class="el" href="classFeel_1_1CRBApp.html#ad74464be29b6bc203b43b475f613a50b">Feel::CRBApp&lt; ModelType &gt;</a>, and <a class="el" href="classFeel_1_1PFemApp.html#a795188d3a77c37cd70d6b58eb58d5431">Feel::PFemApp&lt; ModelType &gt;</a>.</p>
 
 <p>References <a class="el" href="classFeel_1_1Application.html#a27a15d96e978f33f8d73d3d29d97a4c3">end()</a>, and <a class="el" href="classFeel_1_1Application.html#a9eaf40b33641a5003e199b498802770d">printStats()</a>.</p>
 
@@ -1378,7 +1386,7 @@ template&lt;class T &gt; </td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>execute the set of <a class="el" href="classFeel_1_1Simget.html" title="Simulation Object.">Simget</a> stored in the <a class="el" href="classFeel_1_1Application.html" title="provides information about the Application">Application</a> following the input/output model <img class="formulaInl" alt="$ Y=F(X) $" src="form_0.png"/>. <img class="formulaInl" alt="$ P$" src="form_1.png"/> is the number of inputs and <img class="formulaInl" alt="$ N$" src="form_2.png"/> the number of outputs. Denote <img class="formulaInl" alt="$ S $" src="form_3.png"/> (<code><a class="el" href="classFeel_1_1Application.html#a758b341daa04445ba856780f9a4ba517">nSimgets()</a></code>) the number of simgets stored in the <a class="el" href="classFeel_1_1Application.html" title="provides information about the Application">Application</a>. <img class="formulaInl" alt="$ X $" src="form_4.png"/> and <img class="formulaInl" alt="$ Y$" src="form_5.png"/> must be of size <img class="formulaInl" alt="$ S P$" src="form_6.png"/> and <img class="formulaInl" alt="$ S N $" src="form_7.png"/> respectively. </p>
+<p>execute the set of <a class="el" href="classFeel_1_1Simget.html" title="Simulation Object.">Simget</a> stored in the <a class="el" href="classFeel_1_1Application.html" title="provides information about the Application">Application</a> following the input/output model <img class="formulaInl" alt="$ Y=F(X) $" src="form_52.png"/>. <img class="formulaInl" alt="$ P$" src="form_53.png"/> is the number of inputs and <img class="formulaInl" alt="$ N$" src="form_54.png"/> the number of outputs. Denote <img class="formulaInl" alt="$ S $" src="form_55.png"/> (<code><a class="el" href="classFeel_1_1Application.html#a758b341daa04445ba856780f9a4ba517">nSimgets()</a></code>) the number of simgets stored in the <a class="el" href="classFeel_1_1Application.html" title="provides information about the Application">Application</a>. <img class="formulaInl" alt="$ X $" src="form_31.png"/> and <img class="formulaInl" alt="$ Y$" src="form_56.png"/> must be of size <img class="formulaInl" alt="$ S P$" src="form_57.png"/> and <img class="formulaInl" alt="$ S N $" src="form_58.png"/> respectively. </p>
 
 <p>Reimplemented in <a class="el" href="classFeel_1_1OpusApp.html#a82cf5b840d265c90262be1e1ef6a2938">Feel::OpusApp&lt; ModelType, RM, Model &gt;</a>, <a class="el" href="classFeel_1_1CRBApp.html#a2fe0260b16fdbb0ffc1a247c291155e2">Feel::CRBApp&lt; ModelType &gt;</a>, and <a class="el" href="classFeel_1_1PFemApp.html#a74cd2d198d46c54191b91146bc5cfd06">Feel::PFemApp&lt; ModelType &gt;</a>.</p>
 
@@ -1614,7 +1622,7 @@ template&lt;class T &gt; </td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1Application.html">Application</a></li>
-    <li class="footer">Generated on Tue Apr 30 2013 11:53:20 for Feel++ by
+    <li class="footer">Generated on Fri May 3 2013 13:13:39 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

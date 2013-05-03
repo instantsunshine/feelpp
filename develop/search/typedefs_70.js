@@ -1,5 +1,10 @@
 var searchData=
 [
+  ['p0_5fbasis_5ftype',['p0_basis_type',['../classLShape.html#a281ca4a5ef0bec2c0787ef4c0cf8d4d3',1,'LShape']]],
+  ['p0_5felement_5ftype',['p0_element_type',['../classResidualEstimator.html#aab2d3c57134999f992b319853cdb9b23',1,'ResidualEstimator::p0_element_type()'],['../classLaplacian.html#a120bee872ebec3cb70c3fbd77e4b7f32',1,'Laplacian::p0_element_type()']]],
+  ['p0_5fspace_5ftype',['p0_space_type',['../classResidualEstimator.html#a125d97fcd2d780263c9a18fb8a43aa1e',1,'ResidualEstimator::p0_space_type()'],['../classLaplacian.html#a75a4de922161de7df1e86ef069cab95d',1,'Laplacian::p0_space_type()']]],
+  ['p1_5fbasis_5ftype',['p1_basis_type',['../classResidualEstimator.html#a37fa8c31d656425fcd7f12faa41637be',1,'ResidualEstimator']]],
+  ['p1vec_5fbasis_5ftype',['p1vec_basis_type',['../classLShape.html#aa5510fa7f312b5ea39e64729d1316302',1,'LShape']]],
   ['permutation_5fvector_5ftype',['permutation_vector_type',['../classFeel_1_1DofTable.html#a7ecd80ed4cf6b0b5edc18526806c395b',1,'Feel::DofTable']]],
   ['pod_5ftype',['pod_type',['../classFeel_1_1CRB.html#a7b4c7d89ae5e544759e88bab9122f16b',1,'Feel::CRB']]],
   ['polynomial_5fview_5ftype',['polynomial_view_type',['../classFeel_1_1FiniteElement.html#a147c98f74c89e0893cedc9c036b521f3',1,'Feel::FiniteElement']]],

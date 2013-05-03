@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.1</span>
+   &#160;<span id="projectnumber">0.92.90</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -111,8 +111,8 @@ $(document).ready(function(){initNavTree('classFeel_1_1SVD.html','');});
 class Feel::SVD&lt; MatrixA &gt;</h3>
 
 <p>Singular Value Decomposition of a rectangular matrix. </p>
-<p><img class="formulaInl" alt="$ A = U * S * V^T $" src="form_44.png"/></p>
-<p>where matrices <img class="formulaInl" alt="$ U$" src="form_45.png"/> and <img class="formulaInl" alt="$ V$" src="form_46.png"/> are orthogonal and Sig is a digonal matrix.</p>
+<p><img class="formulaInl" alt="$ A = U * S * V^T $" src="form_33.png"/></p>
+<p>where matrices <img class="formulaInl" alt="$ U$" src="form_34.png"/> and <img class="formulaInl" alt="$ V$" src="form_35.png"/> are orthogonal and Sig is a digonal matrix.</p>
 <p>The singular value decomposition is performed by constructing an <a class="el" href="classFeel_1_1SVD.html" title="Singular Value Decomposition of a rectangular matrix.">SVD</a> object from an M*N matrix A with M&gt;=N (that is, at least as many rows as columns). Note, in case M &gt; N, matrix Sig has to be a M*N diagonal matrix. However, it has only N diag elements, which we store in a 1:N <a class="el" href="classFeel_1_1Vector.html">Vector</a> sig.</p>
 <p>Algorithm Bidiagonalization with Householder reflections followed by a modification of a QR-algorithm. For more details, see G.E. Forsythe, M.A. Malcolm, C.B. Moler Computer methods for mathematical computations. - Prentice-Hall, 1977 However, in the present implementation, matrices U and V are computed right away rather than delayed until after all Householder reflections.</p>
 <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
@@ -168,7 +168,7 @@ template&lt;typename MatrixA&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Computes <img class="formulaInl" alt="$ C = \frac{\sigma^\mathrm{max}}{\sigma^\mathrm{min}} $" src="form_47.png"/> which represents the condition number of the matrix that was decomposed in singular values</p>
+<p>Computes <img class="formulaInl" alt="$ C = \frac{\sigma^\mathrm{max}}{\sigma^\mathrm{min}} $" src="form_36.png"/> which represents the condition number of the matrix that was decomposed in singular values</p>
 <dl class="section return"><dt>Returns</dt><dd>$C$ the condition number of the matrix </dd></dl>
 
 </div>
@@ -260,7 +260,7 @@ template&lt;typename MatrixA&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1SVD.html">SVD</a></li>
-    <li class="footer">Generated on Tue Apr 30 2013 11:53:23 for Feel++ by
+    <li class="footer">Generated on Fri May 3 2013 13:13:44 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

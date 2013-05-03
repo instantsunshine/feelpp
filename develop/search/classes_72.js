@@ -22,5 +22,7 @@ var searchData=
   ['regionmarker3',['RegionMarker3',['../structFeel_1_1RegionMarker3.html',1,'Feel']]],
   ['regionmarkre',['RegionMarkre',['../structFeel_1_1RegionMarkre.html',1,'Feel']]],
   ['regionprocess',['RegionProcess',['../structFeel_1_1RegionProcess.html',1,'Feel']]],
-  ['regiontree',['RegionTree',['../classFeel_1_1RegionTree.html',1,'Feel']]]
+  ['regiontree',['RegionTree',['../classFeel_1_1RegionTree.html',1,'Feel']]],
+  ['residualestimator',['ResidualEstimator',['../classResidualEstimator.html',1,'']]],
+  ['resistancelaplacian',['ResistanceLaplacian',['../classFeel_1_1ResistanceLaplacian.html',1,'Feel']]]
 ];

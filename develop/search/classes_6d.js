@@ -22,5 +22,6 @@ var searchData=
   ['meshhighorder',['MeshHighOrder',['../classFeel_1_1MeshHighOrder.html',1,'Feel']]],
   ['meshmover',['MeshMover',['../classFeel_1_1MeshMover.html',1,'Feel']]],
   ['meshtraits',['MeshTraits',['../structFeel_1_1MeshTraits.html',1,'Feel']]],
-  ['mortar',['Mortar',['../classFeel_1_1Mortar.html',1,'Feel']]]
+  ['mortar',['Mortar',['../classFeel_1_1Mortar.html',1,'Feel']]],
+  ['mortarlaplacian',['MortarLaplacian',['../classMortarLaplacian.html',1,'']]]
 ];

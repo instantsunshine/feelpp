@@ -6,6 +6,7 @@ var searchData=
   ['adexpr',['ADExpr',['../classFeel_1_1ADExpr.html',1,'Feel']]],
   ['adfuncpow',['AdFuncPow',['../classFeel_1_1Feel_1_1detail_1_1AdFuncPow.html',1,'Feel::Feel::detail']]],
   ['adtype',['ADType',['../classFeel_1_1ADType.html',1,'Feel']]],
+  ['advection',['Advection',['../classFeel_1_1Advection.html',1,'Feel']]],
   ['advreact',['AdvReact',['../classFeel_1_1AdvReact.html',1,'Feel']]],
   ['air',['Air',['../classFeel_1_1Air.html',1,'Feel']]],
   ['aitken',['Aitken',['../classFeel_1_1Aitken.html',1,'Feel']]],

@@ -36,6 +36,8 @@ var searchData=
   ['areglobalvaluesupdated',['areGlobalValuesUpdated',['../classFeel_1_1VectorUblas.html#a50866b9e782d229b69bcc980fd3771ea',1,'Feel::VectorUblas']]],
   ['assemble',['assemble',['../classFeel_1_1System.html#a874f4a03ebb9bffbc3639234447c74fa',1,'Feel::System']]],
   ['atolerance',['aTolerance',['../classFeel_1_1Backend.html#a202996a34fde4501cd8dce1153720212',1,'Feel::Backend::aTolerance()'],['../classFeel_1_1SolverLinear.html#a5357452ff316826e3fdee36bc96d25f5',1,'Feel::SolverLinear::aTolerance()']]],
+  ['atoleranceksp',['atoleranceKSP',['../classFeel_1_1SolverNonLinear.html#a0bb18675cc569f343da74a996252afcb',1,'Feel::SolverNonLinear']]],
+  ['atolerancesnes',['aToleranceSNES',['../classFeel_1_1Backend.html#a1dc6ac9a62e7c9e7fc5c3b37b006c6d6',1,'Feel::Backend']]],
   ['attachpreconditioner',['attachPreconditioner',['../classFeel_1_1Backend.html#aa7ce4ac2e7d7146834d56fb6afc2a318',1,'Feel::Backend::attachPreconditioner()'],['../classFeel_1_1SolverLinear.html#aadbdb48a9e4587b02240be88cc36beca',1,'Feel::SolverLinear::attachPreconditioner()'],['../classFeel_1_1SolverNonLinear.html#a01f70a123bc367f9f34bc39c231f540a',1,'Feel::SolverNonLinear::attachPreconditioner()']]],
   ['authors',['authors',['../classFeel_1_1AboutData.html#a32d206aa794b8cc9b2b50dd0dee74e78',1,'Feel::AboutData']]]
 ];

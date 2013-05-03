@@ -21,7 +21,7 @@ var classFeel_1_1OperatorLinear =
     [ "vector_type", "classFeel_1_1OperatorLinear.html#ad3e578ceeb438420ace0ee703897b027", null ],
     [ "OperatorLinear", "classFeel_1_1OperatorLinear.html#a259dbde76adb96ec5b1fe42e3b46a76f", null ],
     [ "OperatorLinear", "classFeel_1_1OperatorLinear.html#a93d33d006abeb6e5f9a5862038bb803c", null ],
-    [ "OperatorLinear", "classFeel_1_1OperatorLinear.html#a9bf416053aa87ac95ee4921208c3c01d", null ],
+    [ "OperatorLinear", "classFeel_1_1OperatorLinear.html#a551623161a09882ded43dbbbb1f9be30", null ],
     [ "~OperatorLinear", "classFeel_1_1OperatorLinear.html#a24d9f7708556dbfb88cfea5e35bc7162", null ],
     [ "add", "classFeel_1_1OperatorLinear.html#a622ee6a0d70c94040162d4f9b4ca9189", null ],
     [ "add", "classFeel_1_1OperatorLinear.html#a1308383d71f3f99b0eb5be45ce1fc8fe", null ],
@@ -40,7 +40,7 @@ var classFeel_1_1OperatorLinear =
     [ "backend", "classFeel_1_1OperatorLinear.html#a800c00033823003ab20aef22f21fe0b7", null ],
     [ "close", "classFeel_1_1OperatorLinear.html#ad90408c29db857e6ba90fb338f420cbe", null ],
     [ "energy", "classFeel_1_1OperatorLinear.html#ad9269a5d43ecfd8d55ae2120d802ec3e", null ],
-    [ "init", "classFeel_1_1OperatorLinear.html#ac3ac05ab9f2aca41c58d3461681601e0", null ],
+    [ "init", "classFeel_1_1OperatorLinear.html#ad6b668a9a2617c79b1ac656918099a3f", null ],
     [ "inv", "classFeel_1_1OperatorLinear.html#ae90e2269f5b963645139b8cee7328a10", null ],
     [ "mat", "classFeel_1_1OperatorLinear.html#af13144ac72bcb168062d5671e3c0e6a3", null ],
     [ "mat", "classFeel_1_1OperatorLinear.html#a5a1a00f996d0054e73f2df0dd7022ef6", null ],
@@ -53,5 +53,6 @@ var classFeel_1_1OperatorLinear =
     [ "operator+", "classFeel_1_1OperatorLinear.html#a7175db098b38c9a35f1ea56266391d7f", null ],
     [ "operator+=", "classFeel_1_1OperatorLinear.html#a07ea726263937324025ec360933d119a", null ],
     [ "operator=", "classFeel_1_1OperatorLinear.html#a3223e71f50de796ab7ae86669e0eb785", null ],
-    [ "operator=", "classFeel_1_1OperatorLinear.html#aa4437780b0a6b42d9c60c0dbc434d008", null ]
+    [ "operator=", "classFeel_1_1OperatorLinear.html#aa4437780b0a6b42d9c60c0dbc434d008", null ],
+    [ "pattern", "classFeel_1_1OperatorLinear.html#a1ada6a019fd13b778f65d514cd34c941", null ]
 ];

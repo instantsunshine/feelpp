@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['stokes_20problem',['Stokes Problem',['../Stokes.html',1,'Learning']]]
+  ['solid_20mechanics',['Solid Mechanics',['../SolidMechanics.html',1,'Learning']]],
+  ['stokes_20tutorial',['Stokes Tutorial',['../StokesTutorial.html',1,'Generic']]]
 ];

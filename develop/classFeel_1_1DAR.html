@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.1</span>
+   &#160;<span id="projectnumber">0.92.90</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('classFeel_1_1DAR.html','');});
 <div class="textblock"><h3>template&lt;int Dim&gt;<br/>
 class Feel::DAR&lt; Dim &gt;</h3>
 
-<p><a class="el" href="classFeel_1_1DAR.html">DAR</a> Solver using continuous approximation spaces solve <img class="formulaInl" alt="$ -\Delta u = f$" src="form_340.png"/> on <img class="formulaInl" alt="$\Omega$" src="form_203.png"/> and <img class="formulaInl" alt="$u= g$" src="form_341.png"/> on <img class="formulaInl" alt="$\Gamma$" src="form_342.png"/></p>
+<p><a class="el" href="classFeel_1_1DAR.html">DAR</a> Solver using continuous approximation spaces solve <img class="formulaInl" alt="$ -\Delta u = f$" src="form_691.png"/> on <img class="formulaInl" alt="$\Omega$" src="form_219.png"/> and <img class="formulaInl" alt="$u= g$" src="form_692.png"/> on <img class="formulaInl" alt="$\Gamma$" src="form_402.png"/></p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Dim</td><td>the geometric dimension of the problem (e.g. Dim=1, 2 or 3) </td></tr>
@@ -217,7 +217,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a4d25d9e21d936f7f45547ec75b1e61d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d25d9e21d936f7f45547ec75b1e61d5"></a>
 static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DAR.html#a4d25d9e21d936f7f45547ec75b1e61d5">Order</a> = 2</td></tr>
-<tr class="memdesc:a4d25d9e21d936f7f45547ec75b1e61d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polynomial order <img class="formulaInl" alt="$P_2$" src="form_343.png"/>. <br/></td></tr>
+<tr class="memdesc:a4d25d9e21d936f7f45547ec75b1e61d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polynomial order <img class="formulaInl" alt="$P_2$" src="form_693.png"/>. <br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -290,7 +290,7 @@ template&lt;int Dim&gt; </div>
 <div class="line"><a class="code" href="classFeel_1_1DAR.html#a22bd88fe7db6ef2452600e86bce86c10" title="an element type of the approximation function space">element_type</a> u( Xh, <span class="stringliteral">&quot;u&quot;</span> );</div>
 <div class="line"><a class="code" href="classFeel_1_1DAR.html#a22bd88fe7db6ef2452600e86bce86c10" title="an element type of the approximation function space">element_type</a> v( Xh, <span class="stringliteral">&quot;v&quot;</span> );</div>
 <div class="line"><a class="code" href="classFeel_1_1DAR.html#a22bd88fe7db6ef2452600e86bce86c10" title="an element type of the approximation function space">element_type</a> gproj( Xh, <span class="stringliteral">&quot;v&quot;</span> );</div>
-</div><!-- fragment --><p>define <img class="formulaInl" alt="$g$" src="form_172.png"/> the expression of the exact solution and <img class="formulaInl" alt="$f$" src="form_206.png"/> the expression of the right hand side such that <img class="formulaInl" alt="$g$" src="form_172.png"/> is the exact solution</p>
+</div><!-- fragment --><p>define <img class="formulaInl" alt="$g$" src="form_115.png"/> the expression of the exact solution and <img class="formulaInl" alt="$f$" src="form_230.png"/> the expression of the right hand side such that <img class="formulaInl" alt="$g$" src="form_115.png"/> is the exact solution</p>
 <div class="fragment"><div class="line"> */</div>
 <div class="line"><span class="comment">//# marker1 #</span></div>
 <div class="line"><span class="comment"></span><span class="keyword">auto</span> g = sin( pi*Px() )*cos( pi*Py() )*cos( pi*Pz() );</div>
@@ -334,9 +334,9 @@ template&lt;int Dim&gt; </div>
 <div class="line">               _expr=( epsilon*gradt( u )*trans( grad( v ) )+( gradt( u )*beta )*<span class="keywordtype">id</span>( v )+mu*idt( u )*<span class="keywordtype">id</span>( v ) ) );</div>
 </div><!-- fragment --><p>weak dirichlet conditions treatment for the boundaries marked 1 and 3</p>
 <ol type="1">
-<li>assemble <img class="formulaInl" alt="$\int_{\partial \Omega} -\nabla u \cdot \mathbf{n} v$" src="form_344.png"/></li>
-<li>assemble <img class="formulaInl" alt="$\int_{\partial \Omega} -\nabla v \cdot \mathbf{n} u$" src="form_345.png"/></li>
-<li><p class="startli">assemble <img class="formulaInl" alt="$\int_{\partial \Omega} \frac{\gamma}{h} u v$" src="form_346.png"/></p>
+<li>assemble <img class="formulaInl" alt="$\int_{\partial \Omega} -\nabla u \cdot \mathbf{n} v$" src="form_694.png"/></li>
+<li>assemble <img class="formulaInl" alt="$\int_{\partial \Omega} -\nabla v \cdot \mathbf{n} u$" src="form_695.png"/></li>
+<li><p class="startli">assemble <img class="formulaInl" alt="$\int_{\partial \Omega} \frac{\gamma}{h} u v$" src="form_696.png"/></p>
 <div class="fragment"><div class="line"> */</div>
 <div class="line">        <span class="comment">//# marker10 #</span></div>
 <div class="line"><span class="preprocessor">#if 1</span></div>
@@ -418,7 +418,7 @@ template&lt;int Dim&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1DAR.html">DAR</a></li>
-    <li class="footer">Generated on Thu Apr 25 2013 09:40:26 for Feel++ by
+    <li class="footer">Generated on Fri May 3 2013 13:13:40 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

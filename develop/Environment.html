@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.1</span>
+   &#160;<span id="projectnumber">0.92.90</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -149,7 +149,7 @@ Add Options</h2>
 <div class="line"></div>
 <div class="line"><span class="keyword">inline</span></div>
 <div class="line">po::options_description</div>
-<div class="line">makeOptions()</div>
+<div class="line"><a class="code" href="namespaceFeel.html#a846e3404cb41fc1eb5bcd4b2db85f687">makeOptions</a>()</div>
 <div class="line">{</div>
 <div class="line">  po::options_description myappOptions( <span class="stringliteral">&quot;My app options&quot;</span> );</div>
 <div class="line">  myappOptions.add_options()</div>
@@ -170,7 +170,7 @@ Add Options</h2>
 <p>The data returned is typically used as an argument of a <a class="el" href="classFeel_1_1Application.html" title="provides information about the Application">Feel::Application</a> subclass.</p>
 <p>This routine has to be declared before your <code>main</code> function. Then you can use it to initialize <a href="http://www.feelpp.org">Feel++</a> Environment : </p>
 <div class="fragment"><div class="line">Environment env( _argc=argc, _argv=argv,</div>
-<div class="line">                 _desc=makeOptions(),</div>
+<div class="line">                 _desc=<a class="code" href="namespaceFeel.html#a846e3404cb41fc1eb5bcd4b2db85f687">makeOptions</a>(),</div>
 <div class="line">                 _about=about(_name=<span class="stringliteral">&quot;myapp&quot;</span>,</div>
 <div class="line">                              _author=<span class="stringliteral">&quot;myname&quot;</span>,</div>
 <div class="line">                              _email=<span class="stringliteral">&quot;my@email.com&quot;</span>) );</div>
@@ -182,7 +182,7 @@ Add Options</h2>
 <div class="line"></div>
 <div class="line"><span class="keyword">inline</span></div>
 <div class="line">po::options_description</div>
-<div class="line">makeOptions()</div>
+<div class="line"><a class="code" href="namespaceFeel.html#a846e3404cb41fc1eb5bcd4b2db85f687">makeOptions</a>()</div>
 <div class="line">{</div>
 <div class="line">    po::options_description laplacianoptions( <span class="stringliteral">&quot;Laplacian options&quot;</span> );</div>
 <div class="line">    laplacianoptions.add_options()</div>
@@ -284,7 +284,7 @@ setLogs</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Apr 30 2013 11:53:20 for Feel++ by
+    <li class="footer">Generated on Fri May 3 2013 13:13:39 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

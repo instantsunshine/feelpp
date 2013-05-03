@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.1</span>
+   &#160;<span id="projectnumber">0.92.90</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -381,92 +381,108 @@ $(document).ready(function(){initNavTree('solvernonlinear_8hpp_source.html','');
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordtype">void</span> setShowKSPConvergedReason( <span class="keywordtype">bool</span> b ) { M_showKSPConvergedReason=b; }</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <span class="keyword">virtual</span> std::pair&lt;int, real_type&gt; <a class="code" href="classFeel_1_1SolverNonLinear.html#aa02b71975bc5c88e83f6e21d7a0b9d9a">solve</a> ( sparse_matrix_ptrtype&amp;,  <span class="comment">// System Jacobian Matrix</span></div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            vector_ptrtype&amp;, <span class="comment">// Solution vector</span></div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            vector_ptrtype&amp;, <span class="comment">// Residual vector</span></div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span>,      <span class="comment">// Stopping tolerance</span></div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ) = 0; <span class="comment">// N. Iterations</span></div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keyword">virtual</span> std::pair&lt;unsigned int, real_type&gt; <a class="code" href="classFeel_1_1SolverNonLinear.html#aa02b71975bc5c88e83f6e21d7a0b9d9a">solve</a> ( dense_matrix_type&amp;,  <span class="comment">// System Jacobian Matrix</span></div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            dense_vector_type&amp;, <span class="comment">// Solution vector</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;            dense_vector_type&amp;, <span class="comment">// Residual vector</span></div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span>,      <span class="comment">// Stopping tolerance</span></div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ) = 0; <span class="comment">// N. Iterations</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a8bc989960bd577ab4966bdfc3c62653c">  416</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a8bc989960bd577ab4966bdfc3c62653c">rtoleranceKSP</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a72091468327530c0fc248b6c53c33b78">M_rtoleranceKSP</a>; }</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <span class="keywordtype">void</span> setRtoleranceKSP( <span class="keywordtype">double</span> tol ) { <a class="code" href="classFeel_1_1SolverNonLinear.html#a72091468327530c0fc248b6c53c33b78">M_rtoleranceKSP</a>=tol; }</div>
+<div class="line"><a name="l00421"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a456d7353479bd4f0b354b1a1213f5beb">  421</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a456d7353479bd4f0b354b1a1213f5beb">dtoleranceKSP</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#ad695590285ac486f8cdf03b8ecb62d8b">M_dtoleranceKSP</a>; }</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keywordtype">void</span> setDtoleranceKSP( <span class="keywordtype">double</span> tol ) { <a class="code" href="classFeel_1_1SolverNonLinear.html#ad695590285ac486f8cdf03b8ecb62d8b">M_dtoleranceKSP</a>=tol; }</div>
+<div class="line"><a name="l00426"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a0bb18675cc569f343da74a996252afcb">  426</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a0bb18675cc569f343da74a996252afcb">atoleranceKSP</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a83ddd38fa63dd9ef8f4b6a5e98c6b9e4">M_atoleranceKSP</a>; }</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keywordtype">void</span> setAtoleranceKSP( <span class="keywordtype">double</span> tol ) { <a class="code" href="classFeel_1_1SolverNonLinear.html#a83ddd38fa63dd9ef8f4b6a5e98c6b9e4">M_atoleranceKSP</a>=tol; }</div>
+<div class="line"><a name="l00431"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a1c2db80b0be7b6568ee2c6dcab15c70f">  431</a></span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a> <a class="code" href="classFeel_1_1SolverNonLinear.html#a1c2db80b0be7b6568ee2c6dcab15c70f">maxitKSP</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a03488f7ec2ba862f864eaabb36eeebc5">M_maxitKSP</a>; }</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <span class="keywordtype">void</span> setMaxitKSP( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a> n) { <a class="code" href="classFeel_1_1SolverNonLinear.html#a03488f7ec2ba862f864eaabb36eeebc5">M_maxitKSP</a>=n; }</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keyword">virtual</span> std::pair&lt;unsigned int, real_type&gt; <a class="code" href="classFeel_1_1SolverNonLinear.html#aa02b71975bc5c88e83f6e21d7a0b9d9a">solve</a> ( map_dense_matrix_type&amp;,  <span class="comment">// System Jacobian Matrix</span></div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;            map_dense_vector_type&amp;, <span class="comment">// Solution vector</span></div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;            map_dense_vector_type&amp;, <span class="comment">// Residual vector</span></div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span>,      <span class="comment">// Stopping tolerance</span></div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ) = 0; <span class="comment">// N. Iterations</span></div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;</div>
-<div class="line"><a name="l00448"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a1e3c100f15203768c7f9a7bde30f4345">  448</a></span>&#160;    residual_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#a1e3c100f15203768c7f9a7bde30f4345">residual</a>;</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;</div>
-<div class="line"><a name="l00454"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a9026428561a9764c611d9ba47c7937e4">  454</a></span>&#160;    jacobian_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#a9026428561a9764c611d9ba47c7937e4">jacobian</a>;</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;</div>
-<div class="line"><a name="l00462"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#ac5cc43ea14d8e3273684f4e34277d0d4">  462</a></span>&#160;    matvec_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#ac5cc43ea14d8e3273684f4e34277d0d4">matvec</a>;</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;</div>
-<div class="line"><a name="l00468"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a80715a2d934df5519cdb5b402bcb0e8c">  468</a></span>&#160;    dense_residual_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#a80715a2d934df5519cdb5b402bcb0e8c">dense_residual</a>;</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;</div>
-<div class="line"><a name="l00474"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a39b3f7c0ff20d1741ea88d933827dfc8">  474</a></span>&#160;    map_dense_residual_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#a39b3f7c0ff20d1741ea88d933827dfc8">map_dense_residual</a>;</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;</div>
-<div class="line"><a name="l00480"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#aced49ed51526b2edf8e387ccc4e4de27">  480</a></span>&#160;    dense_jacobian_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#aced49ed51526b2edf8e387ccc4e4de27">dense_jacobian</a>;</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;</div>
-<div class="line"><a name="l00486"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a6fc4635ccfabd1909fd334322ab73690">  486</a></span>&#160;    map_dense_jacobian_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#a6fc4635ccfabd1909fd334322ab73690">map_dense_jacobian</a>;</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;</div>
-<div class="line"><a name="l00494"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#adc8db7d8c987d42bfc85b0d93adcfa2f">  494</a></span>&#160;    dense_matvec_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#adc8db7d8c987d42bfc85b0d93adcfa2f">dense_matvec</a>;</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div>
-<div class="line"><a name="l00502"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a3b921c2ce2e025a7d73157c0cde7af89">  502</a></span>&#160;    map_dense_matvec_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#a3b921c2ce2e025a7d73157c0cde7af89">map_dense_matvec</a>;</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="keyword">virtual</span> std::pair&lt;int, real_type&gt; <a class="code" href="classFeel_1_1SolverNonLinear.html#aa02b71975bc5c88e83f6e21d7a0b9d9a">solve</a> ( sparse_matrix_ptrtype&amp;,  <span class="comment">// System Jacobian Matrix</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;            vector_ptrtype&amp;, <span class="comment">// Solution vector</span></div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;            vector_ptrtype&amp;, <span class="comment">// Residual vector</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span>,      <span class="comment">// Stopping tolerance</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ) = 0; <span class="comment">// N. Iterations</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="keyword">virtual</span> std::pair&lt;unsigned int, real_type&gt; <a class="code" href="classFeel_1_1SolverNonLinear.html#aa02b71975bc5c88e83f6e21d7a0b9d9a">solve</a> ( dense_matrix_type&amp;,  <span class="comment">// System Jacobian Matrix</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;            dense_vector_type&amp;, <span class="comment">// Solution vector</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;            dense_vector_type&amp;, <span class="comment">// Residual vector</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span>,      <span class="comment">// Stopping tolerance</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ) = 0; <span class="comment">// N. Iterations</span></div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keyword">virtual</span> std::pair&lt;unsigned int, real_type&gt; <a class="code" href="classFeel_1_1SolverNonLinear.html#aa02b71975bc5c88e83f6e21d7a0b9d9a">solve</a> ( map_dense_matrix_type&amp;,  <span class="comment">// System Jacobian Matrix</span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;            map_dense_vector_type&amp;, <span class="comment">// Solution vector</span></div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;            map_dense_vector_type&amp;, <span class="comment">// Residual vector</span></div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span>,      <span class="comment">// Stopping tolerance</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ) = 0; <span class="comment">// N. Iterations</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;</div>
+<div class="line"><a name="l00470"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a1e3c100f15203768c7f9a7bde30f4345">  470</a></span>&#160;    residual_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#a1e3c100f15203768c7f9a7bde30f4345">residual</a>;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;</div>
+<div class="line"><a name="l00476"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a9026428561a9764c611d9ba47c7937e4">  476</a></span>&#160;    jacobian_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#a9026428561a9764c611d9ba47c7937e4">jacobian</a>;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;</div>
+<div class="line"><a name="l00484"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#ac5cc43ea14d8e3273684f4e34277d0d4">  484</a></span>&#160;    matvec_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#ac5cc43ea14d8e3273684f4e34277d0d4">matvec</a>;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;</div>
+<div class="line"><a name="l00490"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a80715a2d934df5519cdb5b402bcb0e8c">  490</a></span>&#160;    dense_residual_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#a80715a2d934df5519cdb5b402bcb0e8c">dense_residual</a>;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;</div>
+<div class="line"><a name="l00496"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a39b3f7c0ff20d1741ea88d933827dfc8">  496</a></span>&#160;    map_dense_residual_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#a39b3f7c0ff20d1741ea88d933827dfc8">map_dense_residual</a>;</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;</div>
+<div class="line"><a name="l00502"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#aced49ed51526b2edf8e387ccc4e4de27">  502</a></span>&#160;    dense_jacobian_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#aced49ed51526b2edf8e387ccc4e4de27">dense_jacobian</a>;</div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00508"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a6fc4635ccfabd1909fd334322ab73690">  508</a></span>&#160;    map_dense_jacobian_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#a6fc4635ccfabd1909fd334322ab73690">map_dense_jacobian</a>;</div>
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    WorldComm M_worldComm;</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;</div>
-<div class="line"><a name="l00515"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a8ee58c12ff06fe1086944c25ec50640b">  515</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a8ee58c12ff06fe1086944c25ec50640b">M_is_initialized</a>;</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    <a class="code" href="namespaceFeel.html#a3d7a6c5948e669b187f2d4620499715a">MatrixStructure</a> M_prec_matrix_structure;</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    std::string M_prefix;</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;</div>
-<div class="line"><a name="l00524"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#ae8402c5a51b0dec4b59e8b240f6cce0a">  524</a></span>&#160;    <a class="code" href="namespaceFeel.html#a63d6d444a7e0d7bd77b307219a00ce2b">SolverNonLinearType</a> <a class="code" href="classFeel_1_1SolverNonLinear.html#ae8402c5a51b0dec4b59e8b240f6cce0a">M_snl_type</a>;</div>
+<div class="line"><a name="l00516"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#adc8db7d8c987d42bfc85b0d93adcfa2f">  516</a></span>&#160;    dense_matvec_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#adc8db7d8c987d42bfc85b0d93adcfa2f">dense_matvec</a>;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;</div>
+<div class="line"><a name="l00524"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a3b921c2ce2e025a7d73157c0cde7af89">  524</a></span>&#160;    map_dense_matvec_function_type <a class="code" href="classFeel_1_1SolverNonLinear.html#a3b921c2ce2e025a7d73157c0cde7af89">map_dense_matvec</a>;</div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;</div>
-<div class="line"><a name="l00529"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#ab0961b309cb3633721616eaecf840e90">  529</a></span>&#160;    <a class="code" href="namespaceFeel.html#a75d37378df29bc4c9a393504b87fdc51">SolverType</a> <a class="code" href="classFeel_1_1SolverNonLinear.html#ab0961b309cb3633721616eaecf840e90">M_kspSolver_type</a>;</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;</div>
-<div class="line"><a name="l00534"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#aecfb0c0ab7f6662a2f7e9f6d0dbcf91f">  534</a></span>&#160;    <a class="code" href="namespaceFeel.html#affe8f1716191835c1f39a4f88c8f7299">PreconditionerType</a> <a class="code" href="classFeel_1_1SolverNonLinear.html#aecfb0c0ab7f6662a2f7e9f6d0dbcf91f">M_preconditioner_type</a>;</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;</div>
-<div class="line"><a name="l00539"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#adcde8c1c73e5adc4fcdf15e964fb7072">  539</a></span>&#160;    preconditioner_ptrtype <a class="code" href="classFeel_1_1SolverNonLinear.html#adcde8c1c73e5adc4fcdf15e964fb7072">M_preconditioner</a>;</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    WorldComm M_worldComm;</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;</div>
+<div class="line"><a name="l00537"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a8ee58c12ff06fe1086944c25ec50640b">  537</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a8ee58c12ff06fe1086944c25ec50640b">M_is_initialized</a>;</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    <a class="code" href="namespaceFeel.html#a3d7a6c5948e669b187f2d4620499715a">MatrixStructure</a> M_prec_matrix_structure;</div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;</div>
-<div class="line"><a name="l00544"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a043b59ccac2ca8ef918bda2b697cf045">  544</a></span>&#160;    MatSolverPackageType <a class="code" href="classFeel_1_1SolverNonLinear.html#a043b59ccac2ca8ef918bda2b697cf045">M_matSolverPackage_type</a>;</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;</div>
-<div class="line"><a name="l00549"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a4670ac30011f9874d2c03afcc2650392">  549</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a4670ac30011f9874d2c03afcc2650392">M_relativeResidualTol</a>;</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    <span class="keywordtype">double</span> M_absoluteResidualTol;</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;</div>
-<div class="line"><a name="l00555"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a3ecb956a49bfc73cd11feae676f957fc">  555</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a3ecb956a49bfc73cd11feae676f957fc">M_absoluteSolutionTol</a>;</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;</div>
-<div class="line"><a name="l00560"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#ab53d2853b7825d9ed335df2f5cb51829">  560</a></span>&#160;    uint <a class="code" href="classFeel_1_1SolverNonLinear.html#ab53d2853b7825d9ed335df2f5cb51829">M_nbItMax</a>;</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;</div>
-<div class="line"><a name="l00565"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a7f69f36a7851b5f78dd1c18a76e58035">  565</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a7f69f36a7851b5f78dd1c18a76e58035">M_reuse_jac</a>;</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;</div>
-<div class="line"><a name="l00570"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#aa65aa08fd8aadad6d4cc668528a9ec48">  570</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#aa65aa08fd8aadad6d4cc668528a9ec48">M_reuse_prec</a>;</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    <span class="keywordtype">bool</span> M_showKSPMonitor, M_showSNESMonitor;</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    <span class="keywordtype">bool</span> M_showKSPConvergedReason, M_showSNESConvergedReason;</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;};</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;} <span class="comment">// Feel</span></div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __SolverNonLinear_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    std::string M_prefix;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;</div>
+<div class="line"><a name="l00546"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#ae8402c5a51b0dec4b59e8b240f6cce0a">  546</a></span>&#160;    <a class="code" href="namespaceFeel.html#a63d6d444a7e0d7bd77b307219a00ce2b">SolverNonLinearType</a> <a class="code" href="classFeel_1_1SolverNonLinear.html#ae8402c5a51b0dec4b59e8b240f6cce0a">M_snl_type</a>;</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;</div>
+<div class="line"><a name="l00551"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#ab0961b309cb3633721616eaecf840e90">  551</a></span>&#160;    <a class="code" href="namespaceFeel.html#a75d37378df29bc4c9a393504b87fdc51">SolverType</a> <a class="code" href="classFeel_1_1SolverNonLinear.html#ab0961b309cb3633721616eaecf840e90">M_kspSolver_type</a>;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;</div>
+<div class="line"><a name="l00556"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#aecfb0c0ab7f6662a2f7e9f6d0dbcf91f">  556</a></span>&#160;    <a class="code" href="namespaceFeel.html#affe8f1716191835c1f39a4f88c8f7299">PreconditionerType</a> <a class="code" href="classFeel_1_1SolverNonLinear.html#aecfb0c0ab7f6662a2f7e9f6d0dbcf91f">M_preconditioner_type</a>;</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;</div>
+<div class="line"><a name="l00561"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#adcde8c1c73e5adc4fcdf15e964fb7072">  561</a></span>&#160;    preconditioner_ptrtype <a class="code" href="classFeel_1_1SolverNonLinear.html#adcde8c1c73e5adc4fcdf15e964fb7072">M_preconditioner</a>;</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;</div>
+<div class="line"><a name="l00566"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a043b59ccac2ca8ef918bda2b697cf045">  566</a></span>&#160;    MatSolverPackageType <a class="code" href="classFeel_1_1SolverNonLinear.html#a043b59ccac2ca8ef918bda2b697cf045">M_matSolverPackage_type</a>;</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;</div>
+<div class="line"><a name="l00571"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a4670ac30011f9874d2c03afcc2650392">  571</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a4670ac30011f9874d2c03afcc2650392">M_relativeResidualTol</a>;</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    <span class="keywordtype">double</span> M_absoluteResidualTol;</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;</div>
+<div class="line"><a name="l00577"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a3ecb956a49bfc73cd11feae676f957fc">  577</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a3ecb956a49bfc73cd11feae676f957fc">M_absoluteSolutionTol</a>;</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;</div>
+<div class="line"><a name="l00582"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#ab53d2853b7825d9ed335df2f5cb51829">  582</a></span>&#160;    uint <a class="code" href="classFeel_1_1SolverNonLinear.html#ab53d2853b7825d9ed335df2f5cb51829">M_nbItMax</a>;</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;</div>
+<div class="line"><a name="l00587"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a7f69f36a7851b5f78dd1c18a76e58035">  587</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a7f69f36a7851b5f78dd1c18a76e58035">M_reuse_jac</a>;</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;</div>
+<div class="line"><a name="l00592"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#aa65aa08fd8aadad6d4cc668528a9ec48">  592</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#aa65aa08fd8aadad6d4cc668528a9ec48">M_reuse_prec</a>;</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    <span class="keywordtype">bool</span> M_showKSPMonitor, M_showSNESMonitor;</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;    <span class="keywordtype">bool</span> M_showKSPConvergedReason, M_showSNESConvergedReason;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;</div>
+<div class="line"><a name="l00600"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a72091468327530c0fc248b6c53c33b78">  600</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a72091468327530c0fc248b6c53c33b78">M_rtoleranceKSP</a>;</div>
+<div class="line"><a name="l00604"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#ad695590285ac486f8cdf03b8ecb62d8b">  604</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#ad695590285ac486f8cdf03b8ecb62d8b">M_dtoleranceKSP</a>;</div>
+<div class="line"><a name="l00608"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a83ddd38fa63dd9ef8f4b6a5e98c6b9e4">  608</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a83ddd38fa63dd9ef8f4b6a5e98c6b9e4">M_atoleranceKSP</a>;</div>
+<div class="line"><a name="l00612"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a03488f7ec2ba862f864eaabb36eeebc5">  612</a></span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a> <a class="code" href="classFeel_1_1SolverNonLinear.html#a03488f7ec2ba862f864eaabb36eeebc5">M_maxitKSP</a>;</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;};</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;} <span class="comment">// Feel</span></div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __SolverNonLinear_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d216174e8dd00ff0ee6a16cf9a6cc94e.html">feel</a></li><li class="navelem"><a class="el" href="dir_a85c05f67ecc6f105d16a4f081031243.html">feelalg</a></li><li class="navelem"><a class="el" href="solvernonlinear_8hpp.html">solvernonlinear.hpp</a></li>
-    <li class="footer">Generated on Tue Apr 30 2013 11:53:17 for Feel++ by
+    <li class="navelem"><a class="el" href="dir_e3d3ab79b6bccc87210af694bcbfeb28.html">feel</a></li><li class="navelem"><a class="el" href="dir_a0f98f552c2d10986d40f0722dc05407.html">feelalg</a></li><li class="navelem"><a class="el" href="solvernonlinear_8hpp.html">solvernonlinear.hpp</a></li>
+    <li class="footer">Generated on Fri May 3 2013 13:13:35 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

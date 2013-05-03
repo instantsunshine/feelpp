@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.1</span>
+   &#160;<span id="projectnumber">0.92.90</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -122,7 +122,7 @@ class Feel::Exporter&lt; MeshType, N &gt;</h3>
 <div class="line"><span class="comment">// U is an element of a function space which we want to visualise</span></div>
 <div class="line">exporter-&gt;step(0)-&gt;setMesh( U.functionSpace()-&gt;mesh() );</div>
 <div class="line">exporter-&gt;step(0)-&gt;add( <span class="stringliteral">&quot;u&quot;</span>, U );</div>
-</div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd>Laplacian</dd></dl>
+</div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><a class="el" href="classFeel_1_1Laplacian.html">Laplacian</a></dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
 </div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Feel::Exporter&lt; MeshType, N &gt;:</div>
@@ -132,10 +132,12 @@ class Feel::Exporter&lt; MeshType, N &gt;</h3>
  <div class="center">
   <img src="classFeel_1_1Exporter.png" usemap="#Feel::Exporter&lt; MeshType, N &gt;_map" alt=""/>
   <map id="Feel::Exporter&lt; MeshType, N &gt;_map" name="Feel::Exporter&lt; MeshType, N &gt;_map">
-<area href="classFeel_1_1VisitorBase.html" title="The base class of any Acyclic Visitor." alt="Feel::VisitorBase" shape="rect" coords="0,0,233,24"/>
-<area href="classFeel_1_1Visitor.html" alt="Feel::Visitor&lt; MeshType &gt;" shape="rect" coords="243,0,476,24"/>
-<area href="classFeel_1_1ExporterEnsight.html" title="exporter to Ensight format" alt="Feel::ExporterEnsight&lt; MeshType, N &gt;" shape="rect" coords="0,112,233,136"/>
-<area href="classFeel_1_1ExporterGmsh.html" title="Exporter to GMSH format." alt="Feel::ExporterGmsh&lt; MeshType, N &gt;" shape="rect" coords="243,112,476,136"/>
+<area href="classFeel_1_1VisitorBase.html" title="The base class of any Acyclic Visitor." alt="Feel::VisitorBase" shape="rect" coords="269,0,528,24"/>
+<area href="classFeel_1_1Visitor.html" alt="Feel::Visitor&lt; MeshType &gt;" shape="rect" coords="538,0,797,24"/>
+<area href="classFeel_1_1ExporterEnsight.html" title="exporter to Ensight format" alt="Feel::ExporterEnsight&lt; MeshType, N &gt;" shape="rect" coords="0,112,259,136"/>
+<area href="classFeel_1_1ExporterEnsightGold.html" title="exporter to EnsightGold format" alt="Feel::ExporterEnsightGold&lt; MeshType, N &gt;" shape="rect" coords="269,112,528,136"/>
+<area href="classFeel_1_1ExporterExodus.html" title="exporter to Exodus format" alt="Feel::ExporterExodus&lt; MeshType, N &gt;" shape="rect" coords="538,112,797,136"/>
+<area href="classFeel_1_1ExporterGmsh.html" title="Exporter to GMSH format." alt="Feel::ExporterGmsh&lt; MeshType, N &gt;" shape="rect" coords="807,112,1066,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -202,6 +204,10 @@ timeset_const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>end
 timeset_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>defaultTimeSet</b> ()</td></tr>
 <tr class="memitem:af42d7238ad782f13095692885b1c90c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af42d7238ad782f13095692885b1c90c3"></a>
 timeset_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>timeSet</b> (int ts)</td></tr>
+<tr class="memitem:adbb31c871f49755c9a60396b16fc95bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbb31c871f49755c9a60396b16fc95bf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>useSingleTransientFile</b> () const </td></tr>
+<tr class="memitem:add8fd3b333fe9eaa20ae108304f1ca6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add8fd3b333fe9eaa20ae108304f1ca6f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setUseSingleTransientFile</b> (bool s)</td></tr>
 <tr class="memitem:a47a365ae00633367a2b700c6fc62eb59"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47a365ae00633367a2b700c6fc62eb59"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setMesh</b> (mesh_ptrtype mesh, ExporterGeometry exgeo=EXPORTER_GEOMETRY_CHANGE_COORDS_ONLY)</td></tr>
 <tr class="memitem:ae751a35694cbc5506e8982b27b437fe3"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae751a35694cbc5506e8982b27b437fe3"></a>
@@ -255,6 +261,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>M_prefix</b></
 timeset_set_type&#160;</td><td class="memItemRight" valign="bottom"><b>M_ts_set</b></td></tr>
 <tr class="memitem:a48951e826e924cd6ffffeff181eaa0dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48951e826e924cd6ffffeff181eaa0dc"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>M_type</b></td></tr>
+<tr class="memitem:ae914ec73c956339c279d1073102444e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae914ec73c956339c279d1073102444e1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_use_single_transient_file</b></td></tr>
 <tr class="memitem:a7f312c1e89f4727daa9d8fcde5d4de16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f312c1e89f4727daa9d8fcde5d4de16"></a>
 WorldComm&#160;</td><td class="memItemRight" valign="bottom"><b>M_worldComm</b></td></tr>
 </table><table class="memberdecls">
@@ -775,7 +783,7 @@ template&lt;typename MeshType, int N = 1&gt; </div>
 </div><div class="memdoc">
 <p>this p save function is defined by the <a class="el" href="classFeel_1_1Exporter.html" title="export Feel generated data to some file formatsUse the visitor and factory pattern.">Exporter</a> subclasses and implement saving the data to files </p>
 
-<p>Implemented in <a class="el" href="classFeel_1_1ExporterEnsight.html#a45b24f971a04cf4488d0d3eb25686ec0">Feel::ExporterEnsight&lt; MeshType, N &gt;</a>, <a class="el" href="classFeel_1_1ExporterGnuplot.html#ade1d55d71feed03ef6692cbf8ed7df0f">Feel::ExporterGnuplot&lt; MeshType &gt;</a>, and <a class="el" href="classFeel_1_1ExporterGmsh.html#a928c5e0eb52fd4b39886d53dac112b3e">Feel::ExporterGmsh&lt; MeshType, N &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classFeel_1_1ExporterEnsight.html#a45b24f971a04cf4488d0d3eb25686ec0">Feel::ExporterEnsight&lt; MeshType, N &gt;</a>, <a class="el" href="classFeel_1_1ExporterEnsightGold.html#a1062f34077c784de6ae47acd209c1457">Feel::ExporterEnsightGold&lt; MeshType, N &gt;</a>, <a class="el" href="classFeel_1_1ExporterExodus.html#a041eec65761530979ac6a409b2d6daa6">Feel::ExporterExodus&lt; MeshType, N &gt;</a>, <a class="el" href="classFeel_1_1ExporterGnuplot.html#ade1d55d71feed03ef6692cbf8ed7df0f">Feel::ExporterGnuplot&lt; MeshType &gt;</a>, and <a class="el" href="classFeel_1_1ExporterGmsh.html#a928c5e0eb52fd4b39886d53dac112b3e">Feel::ExporterGmsh&lt; MeshType, N &gt;</a>.</p>
 
 </div>
 </div>
@@ -911,7 +919,7 @@ template&lt;typename MeshType , int N&gt; </div>
 </div><div class="memdoc">
 <p>set the options from the <code>variables_map</code> <code>vm</code> as well as the prefix <code>exp_prefix</code> </p>
 
-<p>Reimplemented in <a class="el" href="classFeel_1_1ExporterEnsight.html#a9f19772f4a5e9f847f4b3ee913b6cd5a">Feel::ExporterEnsight&lt; MeshType, N &gt;</a>, and <a class="el" href="classFeel_1_1ExporterGmsh.html#a47b8c426c3c40fd8fa152a6795ce896e">Feel::ExporterGmsh&lt; MeshType, N &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classFeel_1_1ExporterEnsight.html#a9f19772f4a5e9f847f4b3ee913b6cd5a">Feel::ExporterEnsight&lt; MeshType, N &gt;</a>, <a class="el" href="classFeel_1_1ExporterEnsightGold.html#a614c0e79deddcee3194dee35e105fdd4">Feel::ExporterEnsightGold&lt; MeshType, N &gt;</a>, <a class="el" href="classFeel_1_1ExporterExodus.html#ad3208d0ccdb4a6f1b2a367785fa8f6dc">Feel::ExporterExodus&lt; MeshType, N &gt;</a>, and <a class="el" href="classFeel_1_1ExporterGmsh.html#a47b8c426c3c40fd8fa152a6795ce896e">Feel::ExporterGmsh&lt; MeshType, N &gt;</a>.</p>
 
 </div>
 </div>
@@ -950,7 +958,7 @@ template&lt;typename MeshType, int N = 1&gt; </div>
 </div><div class="memdoc">
 <p>set the options from the <code>variables_map</code> <code>vm</code> as well as the prefix <code>exp_prefix</code> </p>
 
-<p>Reimplemented in <a class="el" href="classFeel_1_1ExporterEnsight.html#a67770c209bf283fc4d3bb5d619cf6b36">Feel::ExporterEnsight&lt; MeshType, N &gt;</a>, <a class="el" href="classFeel_1_1ExporterGnuplot.html#acf1f7eb11bb1cb9fd4e01bc0a72cba2e">Feel::ExporterGnuplot&lt; MeshType &gt;</a>, and <a class="el" href="classFeel_1_1ExporterGmsh.html#ac2793bc63547041f964dbf2e799d2639">Feel::ExporterGmsh&lt; MeshType, N &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classFeel_1_1ExporterEnsight.html#a67770c209bf283fc4d3bb5d619cf6b36">Feel::ExporterEnsight&lt; MeshType, N &gt;</a>, <a class="el" href="classFeel_1_1ExporterEnsightGold.html#aa6bcb54ca0a5b026468645f7a2f9bfc2">Feel::ExporterEnsightGold&lt; MeshType, N &gt;</a>, <a class="el" href="classFeel_1_1ExporterExodus.html#a1e87e6d974e7895e6b4fa0c498aa7df5">Feel::ExporterExodus&lt; MeshType, N &gt;</a>, <a class="el" href="classFeel_1_1ExporterGnuplot.html#acf1f7eb11bb1cb9fd4e01bc0a72cba2e">Feel::ExporterGnuplot&lt; MeshType &gt;</a>, and <a class="el" href="classFeel_1_1ExporterGmsh.html#ac2793bc63547041f964dbf2e799d2639">Feel::ExporterGmsh&lt; MeshType, N &gt;</a>.</p>
 
 </div>
 </div>
@@ -1044,7 +1052,7 @@ template&lt;typename MeshType, int N = 1&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1Exporter.html">Exporter</a></li>
-    <li class="footer">Generated on Tue Apr 30 2013 11:53:21 for Feel++ by
+    <li class="footer">Generated on Fri May 3 2013 13:13:40 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

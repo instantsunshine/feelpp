@@ -3,6 +3,7 @@ var searchData=
   ['_7eaitken',['~Aitken',['../classFeel_1_1Aitken.html#aaa91f0f4248c20876ea7f59e8bd44278',1,'Feel::Aitken::~Aitken()'],['../classFeel_1_1Aitken.html#aaa91f0f4248c20876ea7f59e8bd44278',1,'Feel::Aitken::~Aitken()']]],
   ['_7eapplicationxml',['~ApplicationXML',['../classFeel_1_1ApplicationXML.html#aa0bf06c8d8f5a9e49a6025586d45ced4',1,'Feel::ApplicationXML']]],
   ['_7ebasis',['~Basis',['../classFeel_1_1Basis.html#a26e0a33a2e27bd2fd24f02b63a70fabb',1,'Feel::Basis']]],
+  ['_7eboundarycondition',['~BoundaryCondition',['../classFeel_1_1detail_1_1BoundaryCondition.html#a872ddc08a6718d31522f64a20fe25688',1,'Feel::detail::BoundaryCondition']]],
   ['_7econtext',['~Context',['../classFeel_1_1Context.html#a5000554c34e7d10db1b49057dbda49df',1,'Feel::Context']]],
   ['_7econtinuous',['~Continuous',['../classFeel_1_1Continuous.html#adf93d438f2c933ebafad95ba4e3483ba',1,'Feel::Continuous']]],
   ['_7econvex',['~Convex',['../classFeel_1_1Convex.html#a1e12a82a25e337703849a44b35a78f46',1,'Feel::Convex']]],

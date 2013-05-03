@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.1</span>
+   &#160;<span id="projectnumber">0.92.90</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -193,6 +193,18 @@ map_dense_matrix_type &amp;J)&gt;&#160;</td><td class="memItemRight" valign="bot
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a0bb18675cc569f343da74a996252afcb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a0bb18675cc569f343da74a996252afcb">atoleranceKSP</a> () const </td></tr>
+<tr class="memitem:a456d7353479bd4f0b354b1a1213f5beb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a456d7353479bd4f0b354b1a1213f5beb">dtoleranceKSP</a> () const </td></tr>
+<tr class="memitem:a1c2db80b0be7b6568ee2c6dcab15c70f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a1c2db80b0be7b6568ee2c6dcab15c70f">maxitKSP</a> () const </td></tr>
+<tr class="memitem:a8bc989960bd577ab4966bdfc3c62653c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a8bc989960bd577ab4966bdfc3c62653c">rtoleranceKSP</a> () const </td></tr>
+<tr class="memitem:a459a326f9d743b48aa8573ac02e484f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a459a326f9d743b48aa8573ac02e484f2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setAtoleranceKSP</b> (double tol)</td></tr>
+<tr class="memitem:aea0a01f2494933b861d3249954c629d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea0a01f2494933b861d3249954c629d8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDtoleranceKSP</b> (double tol)</td></tr>
+<tr class="memitem:a40ead60abd7763411710eeaaad893e03"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40ead60abd7763411710eeaaad893e03"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMaxitKSP</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n)</td></tr>
+<tr class="memitem:a8dd9a3a7f44d33849dc0495e15c90080"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8dd9a3a7f44d33849dc0495e15c90080"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setRtoleranceKSP</b> (double tol)</td></tr>
 <tr class="memitem:ad24a596d95627b51efc9631b23152fd8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad24a596d95627b51efc9631b23152fd8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setShowKSPConvergedReason</b> (bool b)</td></tr>
 <tr class="memitem:a96568666705f427d6a7d832dc65c3c5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96568666705f427d6a7d832dc65c3c5c"></a>
@@ -252,9 +264,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a2e9cc8f037487a98611e5826ed1ed307"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e9cc8f037487a98611e5826ed1ed307"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>M_absoluteResidualTol</b></td></tr>
 <tr class="memitem:a3ecb956a49bfc73cd11feae676f957fc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a3ecb956a49bfc73cd11feae676f957fc">M_absoluteSolutionTol</a></td></tr>
+<tr class="memitem:a83ddd38fa63dd9ef8f4b6a5e98c6b9e4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a83ddd38fa63dd9ef8f4b6a5e98c6b9e4">M_atoleranceKSP</a></td></tr>
+<tr class="memitem:ad695590285ac486f8cdf03b8ecb62d8b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#ad695590285ac486f8cdf03b8ecb62d8b">M_dtoleranceKSP</a></td></tr>
 <tr class="memitem:a8ee58c12ff06fe1086944c25ec50640b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a8ee58c12ff06fe1086944c25ec50640b">M_is_initialized</a></td></tr>
 <tr class="memitem:ab0961b309cb3633721616eaecf840e90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a75d37378df29bc4c9a393504b87fdc51">SolverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#ab0961b309cb3633721616eaecf840e90">M_kspSolver_type</a></td></tr>
 <tr class="memitem:a043b59ccac2ca8ef918bda2b697cf045"><td class="memItemLeft" align="right" valign="top">MatSolverPackageType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a043b59ccac2ca8ef918bda2b697cf045">M_matSolverPackage_type</a></td></tr>
+<tr class="memitem:a03488f7ec2ba862f864eaabb36eeebc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a03488f7ec2ba862f864eaabb36eeebc5">M_maxitKSP</a></td></tr>
 <tr class="memitem:ab53d2853b7825d9ed335df2f5cb51829"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#ab53d2853b7825d9ed335df2f5cb51829">M_nbItMax</a></td></tr>
 <tr class="memitem:a2b8a2e9621fab4b5e0951fedfce0956e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b8a2e9621fab4b5e0951fedfce0956e"></a>
 <a class="el" href="namespaceFeel.html#a3d7a6c5948e669b187f2d4620499715a">MatrixStructure</a>&#160;</td><td class="memItemRight" valign="bottom"><b>M_prec_matrix_structure</b></td></tr>
@@ -265,6 +280,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>M_prefix</b></
 <tr class="memitem:a4670ac30011f9874d2c03afcc2650392"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a4670ac30011f9874d2c03afcc2650392">M_relativeResidualTol</a></td></tr>
 <tr class="memitem:a7f69f36a7851b5f78dd1c18a76e58035"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a7f69f36a7851b5f78dd1c18a76e58035">M_reuse_jac</a></td></tr>
 <tr class="memitem:aa65aa08fd8aadad6d4cc668528a9ec48"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#aa65aa08fd8aadad6d4cc668528a9ec48">M_reuse_prec</a></td></tr>
+<tr class="memitem:a72091468327530c0fc248b6c53c33b78"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverNonLinear.html#a72091468327530c0fc248b6c53c33b78">M_rtoleranceKSP</a></td></tr>
 <tr class="memitem:a4a8c723d2c20da178df6ba142c0c059d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a8c723d2c20da178df6ba142c0c059d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_showKSPConvergedReason</b></td></tr>
 <tr class="memitem:ab040e4b982dc7f4f6fd80b816e39acf4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab040e4b982dc7f4f6fd80b816e39acf4"></a>
@@ -385,6 +401,34 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2>Member Function Documentation</h2>
+<a class="anchor" id="a0bb18675cc569f343da74a996252afcb"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classFeel_1_1SolverNonLinear.html">Feel::SolverNonLinear</a>&lt; T &gt;::atoleranceKSP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>KSP absolute tolerance </p>
+
+<p>References <a class="el" href="classFeel_1_1SolverNonLinear.html#a83ddd38fa63dd9ef8f4b6a5e98c6b9e4">Feel::SolverNonLinear&lt; T &gt;::M_atoleranceKSP</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a01f70a123bc367f9f34bc39c231f540a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -546,6 +590,34 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a456d7353479bd4f0b354b1a1213f5beb"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classFeel_1_1SolverNonLinear.html">Feel::SolverNonLinear</a>&lt; T &gt;::dtoleranceKSP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>KSP divergence tolerance </p>
+
+<p>References <a class="el" href="classFeel_1_1SolverNonLinear.html#ad695590285ac486f8cdf03b8ecb62d8b">Feel::SolverNonLinear&lt; T &gt;::M_dtoleranceKSP</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aedb19152beceb0b5902f5b2ea1f068f7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -656,6 +728,34 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a1c2db80b0be7b6568ee2c6dcab15c70f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1SolverNonLinear.html">Feel::SolverNonLinear</a>&lt; T &gt;::maxitKSP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>KSP maximum number of iterations </p>
+
+<p>References <a class="el" href="classFeel_1_1SolverNonLinear.html#a03488f7ec2ba862f864eaabb36eeebc5">Feel::SolverNonLinear&lt; T &gt;::M_maxitKSP</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a24e20d4d06065687e1980cc577c5a4fd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -761,6 +861,34 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the prefix </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8bc989960bd577ab4966bdfc3c62653c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classFeel_1_1SolverNonLinear.html">Feel::SolverNonLinear</a>&lt; T &gt;::rtoleranceKSP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>KSP relative tolerance </p>
+
+<p>References <a class="el" href="classFeel_1_1SolverNonLinear.html#a72091468327530c0fc248b6c53c33b78">Feel::SolverNonLinear&lt; T &gt;::M_rtoleranceKSP</a>.</p>
 
 </div>
 </div>
@@ -1335,7 +1463,7 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Function that computes either the residual <img class="formulaInl" alt="$ R(X) $" src="form_41.png"/> or the Jacobian <img class="formulaInl" alt="$ J(X) $" src="form_42.png"/> of the nonlinear system at the input iterate <img class="formulaInl" alt="$ X $" src="form_4.png"/>. Note that either <code>R</code> or <code>J</code> could be <code>XSNULL</code>. </p>
+<p>Function that computes either the residual <img class="formulaInl" alt="$ R(X) $" src="form_29.png"/> or the Jacobian <img class="formulaInl" alt="$ J(X) $" src="form_30.png"/> of the nonlinear system at the input iterate <img class="formulaInl" alt="$ X $" src="form_31.png"/>. Note that either <code>R</code> or <code>J</code> could be <code>XSNULL</code>. </p>
 
 </div>
 </div>
@@ -1389,6 +1517,52 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Absolute tolerances between successive iteration </p>
+
+</div>
+</div>
+<a class="anchor" id="a83ddd38fa63dd9ef8f4b6a5e98c6b9e4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classFeel_1_1SolverNonLinear.html">Feel::SolverNonLinear</a>&lt; T &gt;::M_atoleranceKSP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>KSP absolute tolerance </p>
+
+</div>
+</div>
+<a class="anchor" id="ad695590285ac486f8cdf03b8ecb62d8b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classFeel_1_1SolverNonLinear.html">Feel::SolverNonLinear</a>&lt; T &gt;::M_dtoleranceKSP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>KSP divergence tolerance </p>
 
 </div>
 </div>
@@ -1458,6 +1632,29 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Enum the software that is used to perform the factorization </p>
+
+</div>
+</div>
+<a class="anchor" id="a03488f7ec2ba862f864eaabb36eeebc5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1SolverNonLinear.html">Feel::SolverNonLinear</a>&lt; T &gt;::M_maxitKSP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>KSP maximum number of iterations </p>
 
 </div>
 </div>
@@ -1599,6 +1796,29 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a72091468327530c0fc248b6c53c33b78"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classFeel_1_1SolverNonLinear.html">Feel::SolverNonLinear</a>&lt; T &gt;::M_rtoleranceKSP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>KSP relative tolerance </p>
+
+</div>
+</div>
 <a class="anchor" id="ae8402c5a51b0dec4b59e8b240f6cce0a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1648,7 +1868,7 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Function that computes either the residual <img class="formulaInl" alt="$ R(X) $" src="form_41.png"/> or the Jacobian <img class="formulaInl" alt="$ J(X) $" src="form_42.png"/> of the nonlinear system at the input iterate <img class="formulaInl" alt="$ X $" src="form_4.png"/>. Note that either <code>R</code> or <code>J</code> could be <code>XSNULL</code>. </p>
+<p>Function that computes either the residual <img class="formulaInl" alt="$ R(X) $" src="form_29.png"/> or the Jacobian <img class="formulaInl" alt="$ J(X) $" src="form_30.png"/> of the nonlinear system at the input iterate <img class="formulaInl" alt="$ X $" src="form_31.png"/>. Note that either <code>R</code> or <code>J</code> could be <code>XSNULL</code>. </p>
 
 </div>
 </div>
@@ -1678,7 +1898,7 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Function that computes either the residual <img class="formulaInl" alt="$ R(X) $" src="form_41.png"/> or the Jacobian <img class="formulaInl" alt="$ J(X) $" src="form_42.png"/> of the nonlinear system at the input iterate <img class="formulaInl" alt="$ X $" src="form_4.png"/>. Note that either <code>R</code> or <code>J</code> could be <code>XSNULL</code>. </p>
+<p>Function that computes either the residual <img class="formulaInl" alt="$ R(X) $" src="form_29.png"/> or the Jacobian <img class="formulaInl" alt="$ J(X) $" src="form_30.png"/> of the nonlinear system at the input iterate <img class="formulaInl" alt="$ X $" src="form_31.png"/>. Note that either <code>R</code> or <code>J</code> could be <code>XSNULL</code>. </p>
 
 </div>
 </div>
@@ -1707,7 +1927,7 @@ template&lt;typename T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1SolverNonLinear.html">SolverNonLinear</a></li>
-    <li class="footer">Generated on Tue Apr 30 2013 11:53:23 for Feel++ by
+    <li class="footer">Generated on Fri May 3 2013 13:13:43 for Feel++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

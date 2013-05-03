@@ -11,6 +11,8 @@ var searchData=
   ['context',['Context',['../classFeel_1_1Context.html',1,'Feel']]],
   ['context',['Context',['../classFeel_1_1GeoMap_1_1Context.html',1,'Feel::GeoMap']]],
   ['continuous',['Continuous',['../classFeel_1_1Continuous.html',1,'Feel']]],
+  ['convection',['Convection',['../classConvection.html',1,'']]],
+  ['convectioncrb',['ConvectionCrb',['../classConvectionCrb.html',1,'']]],
   ['convex',['Convex',['../classFeel_1_1Convex.html',1,'Feel']]],
   ['convex_3c_20dim_2c_20order_2c_20dim_20_3e',['Convex&lt; Dim, Order, Dim &gt;',['../classFeel_1_1Convex.html',1,'Feel']]],
   ['coptions',['COptions',['../structFeel_1_1SolverConstrained_1_1COptions.html',1,'Feel::SolverConstrained']]],
