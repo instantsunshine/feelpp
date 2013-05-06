@@ -27,6 +27,5 @@ var classFeel_1_1PeriodicLaplacian =
     [ "BOOST_MPL_ASSERT", "classFeel_1_1PeriodicLaplacian.html#a594a296a852a1c898dc5450c91c32fb9", null ],
     [ "BOOST_MPL_ASSERT", "classFeel_1_1PeriodicLaplacian.html#a39babb8b4a7574472f16ea60de1fb164", null ],
     [ "BOOST_MPL_ASSERT", "classFeel_1_1PeriodicLaplacian.html#a98758f14c922e7b27840e3ee6f7a3503", null ],
-    [ "run", "classFeel_1_1PeriodicLaplacian.html#ae12b3a340b6dfdfc1e23ae584621f131", null ],
-    [ "imOrder", "classFeel_1_1PeriodicLaplacian.html#afbf49c61d506c3b3fe736145ee27a8a0", null ]
+    [ "run", "classFeel_1_1PeriodicLaplacian.html#ae12b3a340b6dfdfc1e23ae584621f131", null ]
 ];

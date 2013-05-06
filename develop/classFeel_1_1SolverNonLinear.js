@@ -27,8 +27,6 @@ var classFeel_1_1SolverNonLinear =
     [ "~SolverNonLinear", "classFeel_1_1SolverNonLinear.html#a71cba7696250ccc67224712fa91226c7", null ],
     [ "atoleranceKSP", "classFeel_1_1SolverNonLinear.html#a0bb18675cc569f343da74a996252afcb", null ],
     [ "attachPreconditioner", "classFeel_1_1SolverNonLinear.html#a01f70a123bc367f9f34bc39c231f540a", null ],
-    [ "build", "classFeel_1_1SolverNonLinear.html#a18ee965215859d3c5536cfc16cc90006", null ],
-    [ "build", "classFeel_1_1SolverNonLinear.html#ab107377d55ef428df4fb497d5a5c330b", null ],
     [ "clear", "classFeel_1_1SolverNonLinear.html#a4213c79a91facb14143cbb3d984300bb", null ],
     [ "comm", "classFeel_1_1SolverNonLinear.html#a18b9eeb268eefdfc42c49a1280b4fb6d", null ],
     [ "dtoleranceKSP", "classFeel_1_1SolverNonLinear.html#a456d7353479bd4f0b354b1a1213f5beb", null ],

@@ -8,6 +8,5 @@ var classFeel_1_1functional_1_1IntegralMomentsOnFace =
     [ "self_type", "classFeel_1_1functional_1_1IntegralMomentsOnFace.html#a3e8957652d762d2956bef5a820ea4879", null ],
     [ "space_type", "classFeel_1_1functional_1_1IntegralMomentsOnFace.html#aaba2abee7b71bc1d1db11bbfbc049be3", null ],
     [ "value_type", "classFeel_1_1functional_1_1IntegralMomentsOnFace.html#aa240eeb828780f2053ec03171baf2a4a", null ],
-    [ "IntegralMomentsOnFace", "classFeel_1_1functional_1_1IntegralMomentsOnFace.html#a9a676c9e4ad11098af890f854c404645", null ],
-    [ "nComponents", "classFeel_1_1functional_1_1IntegralMomentsOnFace.html#ab0b8d9ff407a495a19f77992755bb4f8", null ]
+    [ "IntegralMomentsOnFace", "classFeel_1_1functional_1_1IntegralMomentsOnFace.html#a9a676c9e4ad11098af890f854c404645", null ]
 ];

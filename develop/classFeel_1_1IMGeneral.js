@@ -11,9 +11,5 @@ var classFeel_1_1IMGeneral =
     [ "weights_type", "classFeel_1_1IMGeneral.html#a5c2d8a7132029b02437063461cc13ea8", null ],
     [ "IMGeneral", "classFeel_1_1IMGeneral.html#ad3de203f2b2a0ad322876af7b92a5f0b", null ],
     [ "~IMGeneral", "classFeel_1_1IMGeneral.html#aed0a937bd2ee190301c12f8fc64b1a95", null ],
-    [ "data", "classFeel_1_1IMGeneral.html#a6d0205127701c26c2ec4d0ddeb269203", null ],
-    [ "is_exact", "classFeel_1_1IMGeneral.html#a7409b9e8736c1967bb48f756d106d4db", null ],
-    [ "nDim", "classFeel_1_1IMGeneral.html#a5abdc61b4873e033bd7f5e59de3fd590", null ],
-    [ "nNodes", "classFeel_1_1IMGeneral.html#ab4800fe18635f11128a36eaacb9a19f7", null ],
-    [ "nOrder", "classFeel_1_1IMGeneral.html#a3dc77bb70bf12309ba6c19c190ecd17a", null ]
+    [ "data", "classFeel_1_1IMGeneral.html#a6d0205127701c26c2ec4d0ddeb269203", null ]
 ];

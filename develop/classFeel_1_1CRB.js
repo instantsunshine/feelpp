@@ -140,6 +140,5 @@ var classFeel_1_1CRB =
     [ "wndu", "classFeel_1_1CRB.html#ae6a4add510e9dd34e56d98d31bdb0515", null ],
     [ "wnmu", "classFeel_1_1CRB.html#aa0962029f8ac6c79c3e4bf57201b0dfa", null ],
     [ "worldComm", "classFeel_1_1CRB.html#ae450b535c04870c615e4f555ea20349b", null ],
-    [ "boost::serialization::access", "classFeel_1_1CRB.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ],
-    [ "nb_spaces", "classFeel_1_1CRB.html#a596db1b39ce435c808d89bddb11fc83e", null ]
+    [ "boost::serialization::access", "classFeel_1_1CRB.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ]
 ];

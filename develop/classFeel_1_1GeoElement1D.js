@@ -40,12 +40,5 @@ var classFeel_1_1GeoElement1D =
     [ "processId", "classFeel_1_1GeoElement1D.html#a465db081606b10fdccb917098732b36c", null ],
     [ "setFace", "classFeel_1_1GeoElement1D.html#a0bad435cac1777b8d175b32347e237d4", null ],
     [ "setMap", "classFeel_1_1GeoElement1D.html#a07fbee35a6e5f4e9de2a7f8394a27730", null ],
-    [ "boost::serialization::access", "classFeel_1_1GeoElement1D.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ],
-    [ "condition", "classFeel_1_1GeoElement1D.html#a5f7cb606d25f94f8e4b4026e20ec3d26", null ],
-    [ "nDim", "group__GeoEle.html#ga13a9c0d6d5c777c01634c19087c9064d", null ],
-    [ "nOrder", "classFeel_1_1GeoElement1D.html#af921634461af861ae64578c7865c83e3", null ],
-    [ "nRealDim", "classFeel_1_1GeoElement1D.html#a715460dbd62fec13c6072902e18f94e5", null ],
-    [ "numLocalEdges", "classFeel_1_1GeoElement1D.html#aff5fe92b965414e6333053c18e84ffb3", null ],
-    [ "numLocalFaces", "classFeel_1_1GeoElement1D.html#a456cd1d2fee3c0b4b7c4c654851062cb", null ],
-    [ "numLocalVertices", "group__GeoEle.html#ga66557b49da0ab6943299a282f4583ed5", null ]
+    [ "boost::serialization::access", "classFeel_1_1GeoElement1D.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ]
 ];

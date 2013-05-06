@@ -4,7 +4,6 @@ var classFeel_1_1SolverBase =
     [ "solver_type", "classFeel_1_1SolverBase.html#a405d4badbb443a5e19315539aded9aa5", null ],
     [ "value_type", "classFeel_1_1SolverBase.html#a07084dfc5416505d0b544fad96d1eaa4", null ],
     [ "~SolverBase", "classFeel_1_1SolverBase.html#a13a83cc0ddebb7abb26bea6fb0e464ad", null ],
-    [ "New", "classFeel_1_1SolverBase.html#af9bd228e8bbdc39ab30667ba1ff0e298", null ],
     [ "residualNorm", "classFeel_1_1SolverBase.html#aa217195aba240bf8e24e67e8c9e3f366", null ],
     [ "setMatrix", "classFeel_1_1SolverBase.html#af600ede595225336cd76b08fd15d31ad", null ],
     [ "setOptionsFromGetPot", "classFeel_1_1SolverBase.html#a6f075ecfa1eea8e773779d55af26ae0d", null ],

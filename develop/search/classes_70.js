@@ -2,6 +2,7 @@ var searchData=
 [
   ['parameter',['Parameter',['../classFeel_1_1Parameter.html',1,'Feel']]],
   ['parameterspace',['ParameterSpace',['../classFeel_1_1ParameterSpace.html',1,'Feel']]],
+  ['partitioner',['Partitioner',['../classFeel_1_1Partitioner.html',1,'Feel']]],
   ['periodic',['Periodic',['../classFeel_1_1Periodic.html',1,'Feel']]],
   ['periodiclaplacian',['PeriodicLaplacian',['../classFeel_1_1PeriodicLaplacian.html',1,'Feel']]],
   ['periodicstokes',['PeriodicStokes',['../classFeel_1_1PeriodicStokes.html',1,'Feel']]],
@@ -37,7 +38,7 @@ var searchData=
   ['preconditionerpetsc',['PreconditionerPetsc',['../classFeel_1_1PreconditionerPetsc.html',1,'Feel']]],
   ['principal',['Principal',['../classFeel_1_1Principal.html',1,'Feel']]],
   ['problem',['problem',['../classFeel_1_1problem.html',1,'Feel']]],
-  ['projector',['Projector',['../classFeel_1_1vf_1_1details_1_1Projector.html',1,'Feel::vf::details']]],
   ['projector',['Projector',['../classFeel_1_1Projector.html',1,'Feel']]],
+  ['projector',['Projector',['../classFeel_1_1vf_1_1details_1_1Projector.html',1,'Feel::vf::details']]],
   ['pslogger',['PsLogger',['../classPsLogger.html',1,'']]]
 ];

@@ -9,7 +9,6 @@ var classFeel_1_1Preconditioner =
     [ "~Preconditioner", "classFeel_1_1Preconditioner.html#abc069203478f30db0bd3930cd9ab54ef", null ],
     [ "apply", "classFeel_1_1Preconditioner.html#a797ec630b280d5012a407012c303dd95", null ],
     [ "apply", "classFeel_1_1Preconditioner.html#aa5f947d7b9252d2df0ccc070740ef5a8", null ],
-    [ "build", "classFeel_1_1Preconditioner.html#a07ccb38179524806a744b78efa60b514", null ],
     [ "clear", "classFeel_1_1Preconditioner.html#a0fdfac32d1804cb3b5d7b2938f2f4af4", null ],
     [ "init", "classFeel_1_1Preconditioner.html#a76a877afa7a329c9d6a34ab8fff44aa3", null ],
     [ "initialized", "classFeel_1_1Preconditioner.html#a94802ca4f63a7fec34b659e2d137433e", null ],

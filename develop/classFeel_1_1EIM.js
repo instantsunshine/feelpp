@@ -56,6 +56,5 @@ var classFeel_1_1EIM =
     [ "M_tol", "classFeel_1_1EIM.html#a8b6586cd7b4cabbe358e7f95868ba068", null ],
     [ "M_trainset", "classFeel_1_1EIM.html#a5ff9bcdaa07555b7ffa0190f72ba0bb7", null ],
     [ "M_vm", "classFeel_1_1EIM.html#ad1ff1b1a7b3927384e2eecb58e426dfa", null ],
-    [ "M_WN", "classFeel_1_1EIM.html#adfb95db458021cc8175114ecead47e83", null ],
-    [ "nDim", "classFeel_1_1EIM.html#a00061e3976ab27db2284e22cc9bde1fd", null ]
+    [ "M_WN", "classFeel_1_1EIM.html#adfb95db458021cc8175114ecead47e83", null ]
 ];

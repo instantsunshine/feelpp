@@ -15,6 +15,7 @@ var classFeel_1_1Stokes =
     [ "space_type", "classFeel_1_1Stokes.html#a9d5e0935065fb753e12f8ddf74d8dacc", null ],
     [ "value_type", "classFeel_1_1Stokes.html#af5732ab884b55d6f9feb7527af78d7c4", null ],
     [ "Stokes", "classFeel_1_1Stokes.html#a1e018da9d075297afd42e49419530f7d", null ],
+    [ "exportResults", "classFeel_1_1Stokes.html#ab4e421209990deb3cda70d01c040cf8c", null ],
     [ "init", "classFeel_1_1Stokes.html#ad8d2f62cb27a596122d71f619928e602", null ],
     [ "run", "classFeel_1_1Stokes.html#a670c636f87581b7acdb98d4a7b16fc89", null ]
 ];

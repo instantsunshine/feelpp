@@ -23,16 +23,5 @@ var classFeel_1_1FiniteElement =
     [ "operator=", "classFeel_1_1FiniteElement.html#a41ad991d81db3456dcbd6d56ac39e9e1", null ],
     [ "points", "classFeel_1_1FiniteElement.html#ae58299f7d72885e853e278a324e777d1", null ],
     [ "points", "classFeel_1_1FiniteElement.html#a8d59ccb6dd47411e9f08a4d2be232b51", null ],
-    [ "primal", "classFeel_1_1FiniteElement.html#a3201ef023a1ac4c199f634d682efe783", null ],
-    [ "is_modal", "classFeel_1_1FiniteElement.html#a7fb334a24de4e506673b4ddfb743eb44", null ],
-    [ "nDof", "classFeel_1_1FiniteElement.html#a2e75abe80a37459903eed5ab33074bfd", null ],
-    [ "nDofGrad", "classFeel_1_1FiniteElement.html#af9500bee1dbbb6ea99d0f7707bdedb72", null ],
-    [ "nDofHess", "classFeel_1_1FiniteElement.html#a8090cf438fcbfbb40b2bc1628c5a0dd8", null ],
-    [ "nDofPerEdge", "classFeel_1_1FiniteElement.html#a1f2eaffa29856ddf3d0df0583d64a02d", null ],
-    [ "nDofPerFace", "classFeel_1_1FiniteElement.html#a2d8bb76394e1fe7dcdf16449b7419c58", null ],
-    [ "nDofPerVertex", "classFeel_1_1FiniteElement.html#acef8218cafd8450f2e6d772faff6f4ac", null ],
-    [ "nDofPerVolume", "classFeel_1_1FiniteElement.html#a04ca37ddbde3acb5cdd97de5902d5726", null ],
-    [ "nLocalDof", "classFeel_1_1FiniteElement.html#ac38357bcbdddffaafac72bed7c3ea72e", null ],
-    [ "nNodes", "classFeel_1_1FiniteElement.html#a7c021de63e56b531f2b84a8400415234", null ],
-    [ "trans", "classFeel_1_1FiniteElement.html#a05e755fe3381e61bfb9121e83553268f", null ]
+    [ "primal", "classFeel_1_1FiniteElement.html#a3201ef023a1ac4c199f634d682efe783", null ]
 ];

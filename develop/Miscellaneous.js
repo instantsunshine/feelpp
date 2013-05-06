@@ -13,5 +13,13 @@ var Miscellaneous =
         [ "Real Numbers", "Types.html#real", null ]
       ] ],
       [ "Integers", "Types.html#ints", null ]
+    ] ],
+    [ "Layout Example", "Layout.html", [
+      [ "Description", "Layout.html#Example_Description", [
+        [ "First sub section", "Layout.html#Description_First", null ]
+      ] ],
+      [ "Theory", "Layout.html#Example_Theory", null ],
+      [ "Implementation", "Layout.html#Example_Implementation", null ],
+      [ "Results", "Layout.html#Example_Results", null ]
     ] ]
 ];

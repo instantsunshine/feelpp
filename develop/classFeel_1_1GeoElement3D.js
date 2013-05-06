@@ -49,9 +49,5 @@ var classFeel_1_1GeoElement3D =
     [ "setEdgePermutation", "classFeel_1_1GeoElement3D.html#a00cb12496adefe6f6d14f6536ddcac27", null ],
     [ "setFace", "classFeel_1_1GeoElement3D.html#a5d43050a657af63854130e6db6951c6e", null ],
     [ "setFacePermutation", "classFeel_1_1GeoElement3D.html#af69734993b6cde215fd4b810070762a7", null ],
-    [ "boost::serialization::access", "classFeel_1_1GeoElement3D.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ],
-    [ "nDim", "classFeel_1_1GeoElement3D.html#abb5efa77507bc426737ab784d888987c", null ],
-    [ "numLocalEdges", "classFeel_1_1GeoElement3D.html#a50a1b8957e74fecc340284028909a22d", null ],
-    [ "numLocalFaces", "classFeel_1_1GeoElement3D.html#a22ba9a233e3e59f4e4133599dd001241", null ],
-    [ "numLocalVertices", "classFeel_1_1GeoElement3D.html#ad6bea0366a26f6796f3228212989f9fa", null ]
+    [ "boost::serialization::access", "classFeel_1_1GeoElement3D.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ]
 ];

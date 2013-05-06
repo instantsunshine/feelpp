@@ -16,21 +16,6 @@ var classFeel_1_1fem_1_1CrouzeixRaviart =
     [ "~CrouzeixRaviart", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a4966100814dfcc50fe8780b7599aca23", null ],
     [ "BOOST_STATIC_ASSERT", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a4b8a3804e51749b6d61ec44f76fcae76", null ],
     [ "familyName", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a7192d728aa636aab547f4ebf536a4e95", null ],
-    [ "isomorphism", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a300635b5589ce6569c8ee0d40c32e683", null ],
     [ "referenceConvex", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a8eb9bef8c4011e886247f4c70cec8a40", null ],
-    [ "_M_refconvex", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a56488cc6aac2588cf602ecac095e1ef5", null ],
-    [ "is_product", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a293d06e5a6e108b3953f7a0022dd0012", null ],
-    [ "is_scalar", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a917596a552d146e219552ca3a8a36afe", null ],
-    [ "is_vectorial", "classFeel_1_1fem_1_1CrouzeixRaviart.html#aa418b75cbdf6b902b1f05209a32b0284", null ],
-    [ "isContinuous", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a9762bad95d818ac2f19f5562d4c25405", null ],
-    [ "isTransformationEquivalent", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a9e198a689b73392a2c622edfdd6617e5", null ],
-    [ "nbPtsPerEdge", "classFeel_1_1fem_1_1CrouzeixRaviart.html#aeaadd1c47582f1c9c3cc79ea4a07c4a5", null ],
-    [ "nbPtsPerFace", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a38a0296f2152bdbd1d2ce78e9b3d9a1b", null ],
-    [ "nbPtsPerVertex", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a7441d39ca6282856fabdeadac2366b20", null ],
-    [ "nbPtsPerVolume", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a918d95317052e9051f147ed84c3f1893", null ],
-    [ "nComponents", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a9541d5809254d2870008fb549abf1919", null ],
-    [ "nDim", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a60dc56843b542f76f3f57bfbc370eda1", null ],
-    [ "nOrder", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a03f1cee5706dfe1a003ff15e8360b19f", null ],
-    [ "numPoints", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a9d824a9fb20b92230cdec318c9186c0e", null ],
-    [ "TAG", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a62628966688753a7cde55b1df5f10c1f", null ]
+    [ "_M_refconvex", "classFeel_1_1fem_1_1CrouzeixRaviart.html#a56488cc6aac2588cf602ecac095e1ef5", null ]
 ];

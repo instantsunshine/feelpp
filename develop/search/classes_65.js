@@ -5,6 +5,7 @@ var searchData=
   ['element',['Element',['../classFeel_1_1ParameterSpace_1_1Element.html',1,'Feel::ParameterSpace']]],
   ['environment',['Environment',['../classFeel_1_1detail_1_1Environment.html',1,'Feel::detail']]],
   ['equalities',['equalities',['../classFeel_1_1equalities.html',1,'Feel']]],
+  ['example',['Example',['../classFeel_1_1Example.html',1,'Feel']]],
   ['exporter',['Exporter',['../classFeel_1_1Exporter.html',1,'Feel']]],
   ['exporter_3c_20meshtype_20_3e',['Exporter&lt; MeshType &gt;',['../classFeel_1_1Exporter.html',1,'Feel']]],
   ['exporterensight',['ExporterEnsight',['../classFeel_1_1ExporterEnsight.html',1,'Feel']]],
