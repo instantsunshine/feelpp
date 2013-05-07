@@ -47,6 +47,7 @@ var classFeel_1_1OperatorLinear =
     [ "matPtr", "classFeel_1_1OperatorLinear.html#a8eec54e248558a6fe820543b746454cd", null ],
     [ "matPtr", "classFeel_1_1OperatorLinear.html#af981b6d31cae03ee28bcd67651358b1a", null ],
     [ "matPtr", "classFeel_1_1OperatorLinear.html#a3acece622a51bb3b5789b10b3e88b3fd", null ],
+    [ "name", "classFeel_1_1OperatorLinear.html#aaa12a65bebaab72af0049a2520f75569", null ],
     [ "operator()", "classFeel_1_1OperatorLinear.html#aac865e750028a1917cf72019a2050216", null ],
     [ "operator()", "classFeel_1_1OperatorLinear.html#a160fb734a28d120a1af51dd87355f495", null ],
     [ "operator+", "classFeel_1_1OperatorLinear.html#ae8abd730cefe177063c8509429b858c2", null ],
@@ -54,5 +55,6 @@ var classFeel_1_1OperatorLinear =
     [ "operator+=", "classFeel_1_1OperatorLinear.html#a07ea726263937324025ec360933d119a", null ],
     [ "operator=", "classFeel_1_1OperatorLinear.html#a3223e71f50de796ab7ae86669e0eb785", null ],
     [ "operator=", "classFeel_1_1OperatorLinear.html#aa4437780b0a6b42d9c60c0dbc434d008", null ],
-    [ "pattern", "classFeel_1_1OperatorLinear.html#a1ada6a019fd13b778f65d514cd34c941", null ]
+    [ "pattern", "classFeel_1_1OperatorLinear.html#a1ada6a019fd13b778f65d514cd34c941", null ],
+    [ "setName", "classFeel_1_1OperatorLinear.html#a39fe2d313c6b8e0cdfcc62dafcf504b3", null ]
 ];

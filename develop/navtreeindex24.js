@@ -1,5 +1,9 @@
 var NAVTREEINDEX24 =
 {
+"index.html":[0],
+"namespaceFeel.html":[6,0],
+"namespaceFeel_1_1detail.html":[6,0,0],
+"namespaceFeel_1_1math.html":[6,0,4],
 "pages.html":[],
 "structFeel_1_1BFGSInvHessian.html":[6,0,25],
 "structFeel_1_1BFGSInvHessian.html#a0d5d4ce7e15779dd8a6e375f3820cbd0":[6,0,25,13],

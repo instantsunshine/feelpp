@@ -1,5 +1,9 @@
 var NAVTREEINDEX17 =
 {
+"classFeel_1_1PointSetQuadrature.html#a5fd7e84ecd076cf106cc6fe47d21ea12":[6,0,161,46],
+"classFeel_1_1PointSetQuadrature.html#a6111431f0a3efaae7da1a3196b7da0cc":[6,0,161,37],
+"classFeel_1_1PointSetQuadrature.html#a647687f6f9e454f113ce79033a36c206":[6,0,161,2],
+"classFeel_1_1PointSetQuadrature.html#a6549a5e98d6e8770edeecaccce3773e7":[6,0,161,34],
 "classFeel_1_1PointSetQuadrature.html#a6ca38bbe16edec47b01078648701d504":[6,0,161,0],
 "classFeel_1_1PointSetQuadrature.html#a74b633ce86a5efaefa2098c80d4a521a":[6,0,161,41],
 "classFeel_1_1PointSetQuadrature.html#a75a6a713cd581b77bf7a180ae18322a3":[6,0,161,21],
@@ -245,9 +249,5 @@ var NAVTREEINDEX17 =
 "classFeel_1_1ResistanceLaplacian.html#abfcfe533b30f372603fe7fe7d699725c":[6,0,178,12],
 "classFeel_1_1ResistanceLaplacian.html#ad8d3f3bfe2d669dde3865eb24f8f4ebb":[6,0,178,22],
 "classFeel_1_1ResistanceLaplacian.html#add5e99d32a1da0cbc3312729a497b1e5":[6,0,178,24],
-"classFeel_1_1ResistanceLaplacian.html#af32b14a88935edf909e2c33e381c3623":[6,0,178,2],
-"classFeel_1_1ResistanceLaplacian.html#af43127789726887d9744131a2ddb45ce":[6,0,178,13],
-"classFeel_1_1ResistanceLaplacian.html#af5ae909fedacead149a9d5ea0236c3e2":[6,0,178,9],
-"classFeel_1_1ResistanceLaplacian.html#af704687b421ddf474bbfb4535e51f580":[6,0,178,0],
-"classFeel_1_1SVD.html":[6,0,197]
+"classFeel_1_1ResistanceLaplacian.html#af32b14a88935edf909e2c33e381c3623":[6,0,178,2]
 };

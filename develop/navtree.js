@@ -29,15 +29,15 @@ var NAVTREEINDEX =
 "classFeel_1_1MatrixSparse.html#aa221b9a6afc9a2dedf12759cb5418aca",
 "classFeel_1_1Mesh1D.html#a5686bde067ddae0a12185fa4c89f5d1d",
 "classFeel_1_1OperatorInterpolation.html#a3bcffc0255a3d1ab83f5f29af20a09e1",
-"classFeel_1_1PFemApp.html#ae18e9257030979190a0315bd0fc60355",
-"classFeel_1_1PointSetQuadrature.html#a6ca38bbe16edec47b01078648701d504",
-"classFeel_1_1SVD.html#a09462c4f9f073af64a3bd5242e6a631d",
-"classFeel_1_1SolverNonLinear.html#a9026428561a9764c611d9ba47c7937e4",
-"classFeel_1_1SystemImplicitNonLinear.html#a0c75471bcc9101051e4e3b7de2e36bca",
-"classFeel_1_1TimeSet_1_1Step.html#ae1b9003832290b9477d375356151e4b3",
-"classFeel_1_1VectorUblas.html#ac1f72ed654aaa9b8febb81a061119aa0",
-"classFeel_1_1functional_1_1IntegralMomentOfDivergence.html#a2bb6b7169da8019a44a76655c11b0761",
-"pages.html"
+"classFeel_1_1PFemApp.html#a2999834f082e6d6b38f6651462a2186e",
+"classFeel_1_1PointSetQuadrature.html#a5fd7e84ecd076cf106cc6fe47d21ea12",
+"classFeel_1_1ResistanceLaplacian.html#af43127789726887d9744131a2ddb45ce",
+"classFeel_1_1SolverNonLinear.html#a8a4c45fc3038105f0049898884900444",
+"classFeel_1_1SystemImplicitLinear.html#ae4626fcecfc2253096d4fd9553da048a",
+"classFeel_1_1TimeSet_1_1Step.html#ad7f0cff32a51bb174f6aca632aeddd0c",
+"classFeel_1_1VectorUblas.html#abdf32b9f7498837eda9b7d897758c806",
+"classFeel_1_1functional_1_1IntegralMomentOfDivergence.html#a06ad90e94c5884fbfc9fedf73669f291",
+"index.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
