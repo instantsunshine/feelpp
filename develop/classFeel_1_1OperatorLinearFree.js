@@ -35,7 +35,5 @@ var classFeel_1_1OperatorLinearFree =
     [ "expr", "classFeel_1_1OperatorLinearFree.html#ad6ff205990c2de27a72be74c982f1c0b", null ],
     [ "init", "classFeel_1_1OperatorLinearFree.html#ae594b56f03d745c0b72dee58871dc1d0", null ],
     [ "matPtr", "classFeel_1_1OperatorLinearFree.html#aaf3047170f506a8147f0e00eda502247", null ],
-    [ "name", "classFeel_1_1OperatorLinearFree.html#a3676019b4f9e91855d160e4a3ac5aaf7", null ],
-    [ "operator=", "classFeel_1_1OperatorLinearFree.html#a0db1acdafb083ad922ad491858c421f3", null ],
-    [ "setName", "classFeel_1_1OperatorLinearFree.html#afa14286b524145ef545a24eb15191554", null ]
+    [ "operator=", "classFeel_1_1OperatorLinearFree.html#a0db1acdafb083ad922ad491858c421f3", null ]
 ];

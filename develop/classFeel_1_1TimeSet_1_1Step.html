@@ -210,14 +210,14 @@ vector_p1_space_type::element_type&#160;</td><td class="memItemRight" valign="bo
 typedef <br class="typebreak"/>
 tensor2_p1_space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><b>nodal_tensor2_type</b></td></tr>
 <tr class="separator:a173483b83eceae9a742f4b2a82eda062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00f12f22ff37394f9458f2c0f12acf55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00f12f22ff37394f9458f2c0f12acf55"></a>
+<tr class="memitem:ad8cd2be74c983b46d9fbbd2721d54de0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8cd2be74c983b46d9fbbd2721d54de0"></a>
 typedef std::map&lt; std::string, <br class="typebreak"/>
-scalar_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>map_scalar_type</b></td></tr>
-<tr class="separator:a00f12f22ff37394f9458f2c0f12acf55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bd58d463736f1c8bf5f252881e74db5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5bd58d463736f1c8bf5f252881e74db5"></a>
+std::pair&lt; scalar_type, bool &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>map_scalar_type</b></td></tr>
+<tr class="separator:ad8cd2be74c983b46d9fbbd2721d54de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d7206b510e1969ae68e513be8f86e8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d7206b510e1969ae68e513be8f86e8a"></a>
 typedef std::map&lt; std::string, <br class="typebreak"/>
-complex_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>map_complex_type</b></td></tr>
-<tr class="separator:a5bd58d463736f1c8bf5f252881e74db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+std::pair&lt; complex_type, bool &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>map_complex_type</b></td></tr>
+<tr class="separator:a6d7206b510e1969ae68e513be8f86e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1b9003832290b9477d375356151e4b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1b9003832290b9477d375356151e4b3"></a>
 typedef std::map&lt; std::string, <br class="typebreak"/>
 nodal_scalar_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>map_nodal_scalar_type</b></td></tr>
@@ -326,6 +326,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afb1f334fc8c74565ff9452f109f2e9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64ee3ada5772d4c875d577aa09d07745"><td class="memItemLeft" align="right" valign="top">mesh_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1TimeSet_1_1Step.html#a64ee3ada5772d4c875d577aa09d07745">mesh</a> ()</td></tr>
 <tr class="separator:a64ee3ada5772d4c875d577aa09d07745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4d261de79c7bb2b2ac56ed648c5753b"><td class="memItemLeft" align="right" valign="top">scalar_const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1TimeSet_1_1Step.html#ad4d261de79c7bb2b2ac56ed648c5753b">beginScalar</a> () const </td></tr>
+<tr class="separator:ad4d261de79c7bb2b2ac56ed648c5753b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa555976c2b76f6e068e6b61f56ca7b3e"><td class="memItemLeft" align="right" valign="top">scalar_const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1TimeSet_1_1Step.html#aa555976c2b76f6e068e6b61f56ca7b3e">endScalar</a> () const </td></tr>
+<tr class="separator:aa555976c2b76f6e068e6b61f56ca7b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebcc2c16698d198f874132117b511834"><td class="memItemLeft" align="right" valign="top">scalar_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1TimeSet_1_1Step.html#aebcc2c16698d198f874132117b511834">scalar</a> (std::string const &amp;__n) const </td></tr>
 <tr class="separator:aebcc2c16698d198f874132117b511834"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66d696f2b620b519228e640a054e1bcb"><td class="memItemLeft" align="right" valign="top">nodal_scalar_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1TimeSet_1_1Step.html#a66d696f2b620b519228e640a054e1bcb">nodalScalar</a> (std::string const &amp;__n) const </td></tr>
@@ -347,9 +351,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setState</b> (<a clas
 <tr class="memitem:aecaa243155b3b7567d27daac14153073"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aecaa243155b3b7567d27daac14153073"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setMesh</b> (mesh_ptrtype const &amp;__m)</td></tr>
 <tr class="separator:aecaa243155b3b7567d27daac14153073"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b00c67b36747ea213d0a3b0587ac71c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b00c67b36747ea213d0a3b0587ac71c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addScalar</b> (std::string const &amp;<a class="el" href="classFeel_1_1TimeSet.html#a089f134efa92dbfa7576b73e48f2e442">name</a>, scalar_type const &amp;__s)</td></tr>
-<tr class="separator:a9b00c67b36747ea213d0a3b0587ac71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb215c2938206cf0ddd5c7be5c995026"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb215c2938206cf0ddd5c7be5c995026"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addScalar</b> (std::string const &amp;<a class="el" href="classFeel_1_1TimeSet.html#a089f134efa92dbfa7576b73e48f2e442">name</a>, scalar_type const &amp;__s, bool cst=false)</td></tr>
+<tr class="separator:adb215c2938206cf0ddd5c7be5c995026"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7018ef9efc62085828f9411037c551b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7018ef9efc62085828f9411037c551b2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addComplex</b> (std::string const &amp;<a class="el" href="classFeel_1_1TimeSet.html#a089f134efa92dbfa7576b73e48f2e442">name</a>, complex_type const &amp;__s)</td></tr>
 <tr class="separator:a7018ef9efc62085828f9411037c551b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -497,6 +501,32 @@ template&lt;typename MeshType , int N&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad4d261de79c7bb2b2ac56ed648c5753b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MeshType, int N = 1&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">scalar_const_iterator <a class="el" href="classFeel_1_1TimeSet.html">Feel::TimeSet</a>&lt; MeshType, N &gt;::Step::beginScalar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the begin iterator for scalars </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="acd333a3295783910008b1a5e12b5ff71"></a>
 <div class="memitem">
 <div class="memproto">
@@ -596,6 +626,32 @@ template&lt;typename MeshType, int N = 1&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the element vector field </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa555976c2b76f6e068e6b61f56ca7b3e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MeshType, int N = 1&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">scalar_const_iterator <a class="el" href="classFeel_1_1TimeSet.html">Feel::TimeSet</a>&lt; MeshType, N &gt;::Step::endScalar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the end iterator for scalars </dd></dl>
 
 </div>
 </div>
@@ -1001,14 +1057,15 @@ template&lt;typename MeshType, int N = 1&gt; </div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="namespaceFeel.html">Feel</a></li><li class="navelem"><a class="el" href="classFeel_1_1TimeSet.html">TimeSet</a></li><li class="navelem"><a class="el" href="classFeel_1_1TimeSet_1_1Step.html">Step</a></li>
-    <li class="footer">Generated on Tue May 7 2013 09:47:22 for Feel++ by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
-  </ul>
-</div>
+<hr size="1"><address style="text-align: right;"><small>
+Generated on Wed May 8 2013 10:17:22 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-40726726-1', 'github.io');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

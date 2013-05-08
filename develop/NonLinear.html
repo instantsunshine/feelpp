@@ -187,32 +187,34 @@ Solving Nonlinear Equations</h1>
 <div class="line">  backend_ptrtype M_backend;</div>
 <div class="line">};</div>
 <div class="line">} <span class="comment">// namespace Feel</span></div>
-</div><!-- fragment --><p>The function <code>updateJacobian</code> and <code>updateResidual</code> implement the assmebly of the matrix <img class="formulaInl" alt="$J$" src="form_582.png"/> (jacobian matrix) and the vector <img class="formulaInl" alt="$R$" src="form_704.png"/> (residual vector) respectively.</p>
+</div><!-- fragment --><p>The function <code>updateJacobian</code> and <code>updateResidual</code> implement the assmebly of the matrix <img class="formulaInl" alt="$J$" src="form_584.png"/> (jacobian matrix) and the vector <img class="formulaInl" alt="$R$" src="form_706.png"/> (residual vector) respectively.</p>
 <h2><a class="anchor" id="Solving_First"></a>
 A first nonlinear problem</h2>
-<p>As a simple example, let <img class="formulaInl" alt="$\Omega $" src="form_705.png"/> be a subset of <img class="formulaInl" alt="$\mathbb{R}^d, d=1,2,3$" src="form_706.png"/>, (<em>i.e</em>. <img class="formulaInl" alt="$\Omega=[-1,1]^d$" src="form_707.png"/>) with boundary <img class="formulaInl" alt="$\partial \Omega$" src="form_708.png"/>. Consider now the following equation and boundary condition <br/>
+<p>As a simple example, let <img class="formulaInl" alt="$\Omega $" src="form_707.png"/> be a subset of <img class="formulaInl" alt="$\mathbb{R}^d, d=1,2,3$" src="form_708.png"/>, (<em>i.e</em>. <img class="formulaInl" alt="$\Omega=[-1,1]^d$" src="form_709.png"/>) with boundary <img class="formulaInl" alt="$\partial \Omega$" src="form_710.png"/>. Consider now the following equation and boundary condition <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} -\Delta u + u^\lambda = f,\quad u = 0 \text{ on } \partial \Omega. \end{aligned} $" src="form_709.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ \begin{aligned} -\Delta u + u^\lambda = f,\quad u = 0 \text{ on } \partial \Omega. \end{aligned} $" src="form_711.png"/></center><p><br/>
 </p>
-<p>where <img class="formulaInl" alt="$\lambda \in \mathbb{R_+}$" src="form_710.png"/> is a given parameter and <img class="formulaInl" alt="$f=1$" src="form_419.png"/>.</p>
+<p>where <img class="formulaInl" alt="$\lambda \in \mathbb{R_+}$" src="form_712.png"/> is a given parameter and <img class="formulaInl" alt="$f=1$" src="form_419.png"/>.</p>
 <dl class="section note"><dt>Note</dt><dd>To be described in this section. For now see <code>"doc/manual/nonlinear/nonlinearpow.cpp"</code> for an implementation of this problem.</dd></dl>
 <h2><a class="anchor" id="Solving_Simplified"></a>
 Simplified combustion problem: Bratu</h2>
-<p>As a simple example, let <img class="formulaInl" alt="$\Omega$" src="form_211.png"/> be a subset of <img class="formulaInl" alt="$\mathbb{R}^d, d=1,2,3$" src="form_706.png"/>,(<em>i.e</em>. <img class="formulaInl" alt="$\Omega=[-1,1]^d$" src="form_707.png"/>) with boundary <img class="formulaInl" alt="$\partial\Omega$" src="form_711.png"/>. Consider now the following equation and boundary condition <br/>
+<p>As a simple example, let <img class="formulaInl" alt="$\Omega$" src="form_211.png"/> be a subset of <img class="formulaInl" alt="$\mathbb{R}^d, d=1,2,3$" src="form_708.png"/>,(<em>i.e</em>. <img class="formulaInl" alt="$\Omega=[-1,1]^d$" src="form_709.png"/>) with boundary <img class="formulaInl" alt="$\partial\Omega$" src="form_713.png"/>. Consider now the following equation and boundary condition <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} -\Delta u + \lambda e^u = f,\quad u = 0 \text{ on } \partial \Omega \end{aligned} $" src="form_712.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ \begin{aligned} -\Delta u + \lambda e^u = f,\quad u = 0 \text{ on } \partial \Omega \end{aligned} $" src="form_714.png"/></center><p><br/>
 </p>
-<p>where <img class="formulaInl" alt="$\lambda$" src="form_639.png"/> is a given parameter. This is usually called the Bratu problem and appears in the simplification of nonlinear diffusion process for example in the field of combustion.</p>
+<p>where <img class="formulaInl" alt="$\lambda$" src="form_641.png"/> is a given parameter. This is usually called the Bratu problem and appears in the simplification of nonlinear diffusion process for example in the field of combustion.</p>
 <dl class="section note"><dt>Note</dt><dd>To be described in this section. For now see <code>"doc/manual/nonlinear/bratu.cpp"</code> for an implementation of this problem. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
-<!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated on Tue May 7 2013 09:47:16 for Feel++ by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
-  </ul>
-</div>
+<hr size="1"><address style="text-align: right;"><small>
+Generated on Wed May 8 2013 10:17:15 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-40726726-1', 'github.io');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

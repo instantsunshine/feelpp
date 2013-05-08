@@ -21,6 +21,7 @@ var searchData=
   ['bdf_5foptions',['bdf_options',['../namespaceFeel.html#a42f2fd19e68d4f42ca91774b81763086',1,'Feel']]],
   ['before',['before',['../classFeel_1_1TypeInfo.html#abd3d09d3b35ef984805ef27509f59fba',1,'Feel::TypeInfo']]],
   ['begin',['begin',['../classFeel_1_1GraphCSR.html#a6548a5741f94d66b0224e942ccf735d8',1,'Feel::GraphCSR::begin()'],['../classFeel_1_1GraphCSR.html#ac9f925aca2d09700be5cb5398fbd500b',1,'Feel::GraphCSR::begin() const '],['../classFeel_1_1Application.html#aec60ec2e94b8fb0ad0110a56dd306c74',1,'Feel::Application::begin()']]],
+  ['beginscalar',['beginScalar',['../classFeel_1_1TimeSet_1_1Step.html#ad4d261de79c7bb2b2ac56ed648c5753b',1,'Feel::TimeSet::Step']]],
   ['belowsurface',['belowSurface',['../classFeel_1_1Sphere.html#a19f638218d6937b225b74526965f1412',1,'Feel::Sphere::belowSurface()'],['../classFeel_1_1Surface.html#a4900151eb57d720cf4b627cec8473a6e',1,'Feel::Surface::belowSurface()']]],
   ['benchmark_5foptions',['benchmark_options',['../namespaceFeel.html#a0269c708b09e8c351ed875ebb158032f',1,'Feel']]],
   ['beta',['beta',['../classFeel_1_1EIM.html#a24933b72d48f543fdb68796082dd0a98',1,'Feel::EIM']]],

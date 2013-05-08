@@ -1,6 +1,6 @@
 var NAVTREEINDEX24 =
 {
-"index.html":[0],
+"index.html":[],
 "namespaceFeel.html":[6,0],
 "namespaceFeel_1_1detail.html":[6,0,0],
 "namespaceFeel_1_1math.html":[6,0,4],

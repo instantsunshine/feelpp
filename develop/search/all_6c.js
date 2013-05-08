@@ -10,6 +10,7 @@ var searchData=
   ['laplacian_2ecpp',['laplacian.cpp',['../laplacian_8cpp.html',1,'']]],
   ['laplacian_5fdg_2ecpp',['laplacian_dg.cpp',['../laplacian__dg_8cpp.html',1,'']]],
   ['laplacian_5fpolar_2ecpp',['laplacian_polar.cpp',['../laplacian__polar_8cpp.html',1,'']]],
+  ['laplacian_5fquad_2ecpp',['laplacian_quad.cpp',['../laplacian__quad_8cpp.html',1,'']]],
   ['laplacianlm',['LaplacianLM',['../classFeel_1_1LaplacianLM.html',1,'Feel']]],
   ['laplacianlm',['LaplacianLM',['../classFeel_1_1LaplacianLM.html#aff4ccf3da914ca379599bfe6a1b19410',1,'Feel::LaplacianLM']]],
   ['lastcolentryonproc',['lastColEntryOnProc',['../classFeel_1_1GraphCSR.html#a3b8a5fec59a13899a4b595dbb55f838d',1,'Feel::GraphCSR']]],

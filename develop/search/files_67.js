@@ -2,6 +2,8 @@ var searchData=
 [
   ['gauss_2ehpp',['gauss.hpp',['../gauss_8hpp.html',1,'']]],
   ['gausslobatto_2ehpp',['gausslobatto.hpp',['../gausslobatto_8hpp.html',1,'']]],
+  ['geo0d_2ehpp',['geo0d.hpp',['../geo0d_8hpp.html',1,'']]],
+  ['geoelement_2ehpp',['geoelement.hpp',['../geoelement_8hpp.html',1,'']]],
   ['geoentity_2ehpp',['geoentity.hpp',['../geoentity_8hpp.html',1,'']]],
   ['geomapinv_2ehpp',['geomapinv.hpp',['../geomapinv_8hpp.html',1,'']]],
   ['geometricdata_2ehpp',['geometricdata.hpp',['../geometricdata_8hpp.html',1,'']]],

@@ -9,7 +9,10 @@ var searchData=
   ['timer_2ehpp',['timer.hpp',['../timer_8hpp.html',1,'']]],
   ['timermap_2ehpp',['timermap.hpp',['../timermap_8hpp.html',1,'']]],
   ['timeset_2ecpp',['timeset.cpp',['../timeset_8cpp.html',1,'']]],
+  ['timeset_2ehpp',['timeset.hpp',['../timeset_8hpp.html',1,'']]],
   ['trace_2ehpp',['trace.hpp',['../trace_8hpp.html',1,'']]],
   ['twovalued_2ehpp',['twovalued.hpp',['../twovalued_8hpp.html',1,'']]],
+  ['typeinfo_2ecpp',['typeinfo.cpp',['../typeinfo_8cpp.html',1,'']]],
+  ['typeinfo_2ehpp',['typeinfo.hpp',['../typeinfo_8hpp.html',1,'']]],
   ['typetraits_2ehpp',['typetraits.hpp',['../typetraits_8hpp.html',1,'']]]
 ];
