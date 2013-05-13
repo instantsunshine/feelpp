@@ -97,8 +97,8 @@ var searchData=
   ['crbmodeltrilinear',['CRBModelTrilinear',['../classFeel_1_1CRBModelTrilinear.html#af602e175d80ad0116551e05698d3547e',1,'Feel::CRBModelTrilinear::CRBModelTrilinear(model_ptrtype &amp;model)'],['../classFeel_1_1CRBModelTrilinear.html#af8adb85f17426703c1952e4272b57214',1,'Feel::CRBModelTrilinear::CRBModelTrilinear(CRBModelTrilinear const &amp;o)']]],
   ['crbmodeltrilinear',['CRBModelTrilinear',['../classFeel_1_1CRBModelTrilinear.html',1,'Feel']]],
   ['crbmodeltrilinear_2ehpp',['crbmodeltrilinear.hpp',['../crbmodeltrilinear_8hpp.html',1,'']]],
-  ['crbscm',['CRBSCM',['../classFeel_1_1CRBSCM.html#a8ea04971c7311a7c037a275521b98c57',1,'Feel::CRBSCM::CRBSCM()'],['../classFeel_1_1CRBSCM.html#ab788227d5cc3ddb71ba78baec0b5e27f',1,'Feel::CRBSCM::CRBSCM(std::string const &amp;name, po::variables_map const &amp;vm)'],['../classFeel_1_1CRBSCM.html#a2b9f3065f9e26b5e240e20df910e1f34',1,'Feel::CRBSCM::CRBSCM(std::string const &amp;name, po::variables_map const &amp;vm, truth_model_ptrtype const &amp;model)'],['../classFeel_1_1CRBSCM.html#ae4e0e3fa89cd899d2f084529ff99a6dd',1,'Feel::CRBSCM::CRBSCM(CRBSCM const &amp;o)']]],
   ['crbscm',['CRBSCM',['../classFeel_1_1CRBSCM.html',1,'Feel']]],
+  ['crbscm',['CRBSCM',['../classFeel_1_1CRBSCM.html#a8ea04971c7311a7c037a275521b98c57',1,'Feel::CRBSCM::CRBSCM()'],['../classFeel_1_1CRBSCM.html#ab788227d5cc3ddb71ba78baec0b5e27f',1,'Feel::CRBSCM::CRBSCM(std::string const &amp;name, po::variables_map const &amp;vm)'],['../classFeel_1_1CRBSCM.html#a2b9f3065f9e26b5e240e20df910e1f34',1,'Feel::CRBSCM::CRBSCM(std::string const &amp;name, po::variables_map const &amp;vm, truth_model_ptrtype const &amp;model)'],['../classFeel_1_1CRBSCM.html#ae4e0e3fa89cd899d2f084529ff99a6dd',1,'Feel::CRBSCM::CRBSCM(CRBSCM const &amp;o)']]],
   ['crbscm_2ecpp',['crbscm.cpp',['../crbscm_8cpp.html',1,'']]],
   ['crbtrilinear',['CRBTrilinear',['../classFeel_1_1CRBTrilinear.html#a57b8742fca7e280dec8500b01adf98ac',1,'Feel::CRBTrilinear::CRBTrilinear()'],['../classFeel_1_1CRBTrilinear.html#ad0eac0ff980277e5cb6ec6b55b9d67b1',1,'Feel::CRBTrilinear::CRBTrilinear(std::string name, po::variables_map const &amp;vm)'],['../classFeel_1_1CRBTrilinear.html#a7fdd806fa11c82b5b8a108c4ccf20d81',1,'Feel::CRBTrilinear::CRBTrilinear(std::string name, po::variables_map const &amp;vm, truth_model_ptrtype const &amp;model)'],['../classFeel_1_1CRBTrilinear.html#a5d5584a6daf09c1730f089823bf24248',1,'Feel::CRBTrilinear::CRBTrilinear(CRBTrilinear const &amp;o)']]],
   ['crbtrilinear',['CRBTrilinear',['../classFeel_1_1CRBTrilinear.html',1,'Feel']]],
@@ -116,5 +116,7 @@ var searchData=
   ['crouzeixraviart_2ehpp',['crouzeixraviart.hpp',['../crouzeixraviart_8hpp.html',1,'']]],
   ['curl',['curl',['../namespaceFeel.html#af0e68f5f62e0b915cf3b9ac73b5c4080',1,'Feel::curl(Polynomial&lt; Poly, Vectorial &gt; const &amp;p)'],['../namespaceFeel.html#a3788c225ebee3147f0bcd32c6d77478d',1,'Feel::curl(PolynomialSet&lt; Poly, Vectorial &gt; const &amp;p)']]],
   ['curlt',['curlt',['../namespaceFeel.html#a31844ce9bde57a55518ab057fd040744',1,'Feel::curlt(Polynomial&lt; Poly, Vectorial &gt; const &amp;p)'],['../namespaceFeel.html#ad711a250106c87c0df471a90881a2dfb',1,'Feel::curlt(PolynomialSet&lt; Poly, Vectorial &gt; const &amp;p)']]],
-  ['custom_5finitialize_5fx0',['custom_initialize_x0',['../classFeel_1_1problem.html#acf094906107e6fffa949c92e54a380af',1,'Feel::problem']]]
+  ['custom_5finitialize_5fx0',['custom_initialize_x0',['../classFeel_1_1problem.html#acf094906107e6fffa949c92e54a380af',1,'Feel::problem']]],
+  ['copyright',['Copyright',['../md_COPYING.html',1,'']]],
+  ['credits',['Credits',['../md_Credits.html',1,'']]]
 ];

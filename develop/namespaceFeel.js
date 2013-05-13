@@ -170,7 +170,6 @@ var namespaceFeel =
     [ "ParameterSpace", "classFeel_1_1ParameterSpace.html", "classFeel_1_1ParameterSpace" ],
     [ "Partitioner", "classFeel_1_1Partitioner.html", null ],
     [ "Periodic", "classFeel_1_1Periodic.html", "classFeel_1_1Periodic" ],
-    [ "PeriodicLaplacian", "classFeel_1_1PeriodicLaplacian.html", "classFeel_1_1PeriodicLaplacian" ],
     [ "PeriodicStokes", "classFeel_1_1PeriodicStokes.html", "classFeel_1_1PeriodicStokes" ],
     [ "PFemApp", "classFeel_1_1PFemApp.html", "classFeel_1_1PFemApp" ],
     [ "POD", "classFeel_1_1POD.html", "classFeel_1_1POD" ],

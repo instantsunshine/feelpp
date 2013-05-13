@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.90</span>
+   &#160;<span id="projectnumber">0.93.0</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -228,10 +228,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>mMaxF</b> (int output_
 parameterspace_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a52a4c67f9142cd5110c8583ba87f05d8">parameterSpace</a> () const </td></tr>
 <tr class="memdesc:a52a4c67f9142cd5110c8583ba87f05d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the parameter space <br/></td></tr>
 <tr class="separator:a52a4c67f9142cd5110c8583ba87f05d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Mutators</div></td></tr>
-<tr class="memitem:a82687058c4dd3fa195c88c022268f95f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a82687058c4dd3fa195c88c022268f95f">setMeshSize</a> (double s)</td></tr>
-<tr class="separator:a82687058c4dd3fa195c88c022268f95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Methods</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>set the mesh characteristic length to <code>s</code> </p>
+</div></td></tr>
 <tr class="memitem:ada2e2c3e906fff93681e8c297129c011"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada2e2c3e906fff93681e8c297129c011"></a>
 beta_vector_type&#160;</td><td class="memItemRight" valign="bottom"><b>computeBetaInitialGuess</b> (parameter_type const &amp;mu) const </td></tr>
 <tr class="separator:ada2e2c3e906fff93681e8c297129c011"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -338,49 +337,9 @@ vector_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>InitialGues
 <tr class="memitem:a9ed8ccb5599c83632182d149b0470fa0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1CRBModel.html#ada0c365d6d269ce7005241092e7dcc2b">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a9ed8ccb5599c83632182d149b0470fa0">Mqm</a> (uint16_type q, uint16_type m, <a class="el" href="classFeel_1_1CRBModel.html#a9a32d976cdcfb1585f71243e7b618ddc">element_type</a> const &amp;xi_i, <a class="el" href="classFeel_1_1CRBModel.html#a9a32d976cdcfb1585f71243e7b618ddc">element_type</a> const &amp;xi_j, bool transpose=false) const </td></tr>
 <tr class="memdesc:a9ed8ccb5599c83632182d149b0470fa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">the inner product <img class="formulaInl" alt="$m_{qm}(\xi_i, \xi_j) = \xi_j^T M_{qm} \xi_i$" src="form_71.png"/>  <a href="#a9ed8ccb5599c83632182d149b0470fa0">More...</a><br/></td></tr>
 <tr class="separator:a9ed8ccb5599c83632182d149b0470fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2261ab37c28075f5b8a82d3ac201eb74"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2261ab37c28075f5b8a82d3ac201eb74"></a>
-beta_vector_type const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a2261ab37c28075f5b8a82d3ac201eb74">betaAqm</a> () const </td></tr>
-<tr class="memdesc:a2261ab37c28075f5b8a82d3ac201eb74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector coefficients. <br/></td></tr>
-<tr class="separator:a2261ab37c28075f5b8a82d3ac201eb74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6312924788da11217b1f8b2bf20cfb7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6312924788da11217b1f8b2bf20cfb7"></a>
-beta_vector_type const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#ab6312924788da11217b1f8b2bf20cfb7">betaMqm</a> () const </td></tr>
-<tr class="memdesc:ab6312924788da11217b1f8b2bf20cfb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector coefficients. <br/></td></tr>
-<tr class="separator:ab6312924788da11217b1f8b2bf20cfb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a394bddef86d033b58b9a81e74efe02cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a394bddef86d033b58b9a81e74efe02cc"></a>
-beta_vector_type const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>betaMqm</b> (mpl::bool_&lt; true &gt;) const </td></tr>
-<tr class="separator:a394bddef86d033b58b9a81e74efe02cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28041ce1186e738d52841219e35885e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28041ce1186e738d52841219e35885e4"></a>
-beta_vector_type const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>betaMqm</b> (mpl::bool_&lt; false &gt;) const </td></tr>
-<tr class="separator:a28041ce1186e738d52841219e35885e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00bcdf87e038048e46d9fc1381195378"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00bcdf87e038048e46d9fc1381195378"></a>
 beta_vector_type const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>betaInitialGuessQm</b> (mpl::bool_&lt; true &gt;) const </td></tr>
 <tr class="separator:a00bcdf87e038048e46d9fc1381195378"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1c2adf018e90b3e36a00464aace532a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1c2adf018e90b3e36a00464aace532a"></a>
-<a class="el" href="classFeel_1_1CRBModel.html#ada0c365d6d269ce7005241092e7dcc2b">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#ab1c2adf018e90b3e36a00464aace532a">betaAqm</a> (int q, int m) const </td></tr>
-<tr class="memdesc:ab1c2adf018e90b3e36a00464aace532a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the <img class="formulaInl" alt="$A_{qm}$" src="form_72.png"/> coefficient at <img class="formulaInl" alt="$\mu$" src="form_65.png"/>. <br/></td></tr>
-<tr class="separator:ab1c2adf018e90b3e36a00464aace532a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad833e8bb9b06ed407b1b611cd2393d7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad833e8bb9b06ed407b1b611cd2393d7a"></a>
-<a class="el" href="classFeel_1_1CRBModel.html#ada0c365d6d269ce7005241092e7dcc2b">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#ad833e8bb9b06ed407b1b611cd2393d7a">betaMqm</a> (int q, int m) const </td></tr>
-<tr class="memdesc:ad833e8bb9b06ed407b1b611cd2393d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the <img class="formulaInl" alt="$M_{qm}$" src="form_73.png"/> coefficient at <img class="formulaInl" alt="$\mu$" src="form_65.png"/>. <br/></td></tr>
-<tr class="separator:ad833e8bb9b06ed407b1b611cd2393d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34f6008d20f7ac5f431fe8919abff512"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34f6008d20f7ac5f431fe8919abff512"></a>
-<a class="el" href="classFeel_1_1CRBModel.html#ada0c365d6d269ce7005241092e7dcc2b">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>betaMqm</b> (int q, int m, mpl::bool_&lt; false &gt;) const </td></tr>
-<tr class="separator:a34f6008d20f7ac5f431fe8919abff512"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b4455c72efc86450ad049a63da40907"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b4455c72efc86450ad049a63da40907"></a>
-<a class="el" href="classFeel_1_1CRBModel.html#ada0c365d6d269ce7005241092e7dcc2b">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>betaMqm</b> (int q, int m, mpl::bool_&lt; true &gt;) const </td></tr>
-<tr class="separator:a1b4455c72efc86450ad049a63da40907"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add626f328e5b8124818c3a5b6401b40d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add626f328e5b8124818c3a5b6401b40d"></a>
-<a class="el" href="classFeel_1_1CRBModel.html#ada0c365d6d269ce7005241092e7dcc2b">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>betaInitialGuessQm</b> (int q, int m) const </td></tr>
-<tr class="separator:add626f328e5b8124818c3a5b6401b40d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa780efa321c903927a08ded19542c882"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa780efa321c903927a08ded19542c882"></a>
-std::vector&lt; beta_vector_type &gt;<br class="typebreak"/>
- const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#aa780efa321c903927a08ded19542c882">betaL</a> () const </td></tr>
-<tr class="memdesc:aa780efa321c903927a08ded19542c882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector coefficients. <br/></td></tr>
-<tr class="separator:aa780efa321c903927a08ded19542c882"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59c5c1b9fb4b6ec42967b81cd9a3f047"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59c5c1b9fb4b6ec42967b81cd9a3f047"></a>
-<a class="el" href="classFeel_1_1CRBModel.html#ada0c365d6d269ce7005241092e7dcc2b">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a59c5c1b9fb4b6ec42967b81cd9a3f047">betaL</a> (int l, int q, int m) const </td></tr>
-<tr class="memdesc:a59c5c1b9fb4b6ec42967b81cd9a3f047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the <img class="formulaInl" alt="$L_qm$" src="form_74.png"/> coefficient at <img class="formulaInl" alt="$\mu$" src="form_65.png"/>. <br/></td></tr>
-<tr class="separator:a59c5c1b9fb4b6ec42967b81cd9a3f047"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9d312fb3f3b022a2468606b6a16439f"><td class="memItemLeft" align="right" valign="top">vector_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#af9d312fb3f3b022a2468606b6a16439f">Fqm</a> (uint16_type l, uint16_type q, int m) const </td></tr>
 <tr class="memdesc:af9d312fb3f3b022a2468606b6a16439f"><td class="mdescLeft">&#160;</td><td class="mdescRight">the vector <code>Fq</code>[q][m] of the affine decomposition of the right hand side  <a href="#af9d312fb3f3b022a2468606b6a16439f">More...</a><br/></td></tr>
 <tr class="separator:af9d312fb3f3b022a2468606b6a16439f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -388,10 +347,10 @@ std::vector&lt; beta_vector_type &gt;<br class="typebreak"/>
 element_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>InitialGuessQm</b> (uint16_type q, int m) const </td></tr>
 <tr class="separator:a8e8fd8ec6181eebb99ac4e4b5d6502a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22ca0e787aeeb6c6ec0fc430c3f90730"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1CRBModel.html#ada0c365d6d269ce7005241092e7dcc2b">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a22ca0e787aeeb6c6ec0fc430c3f90730">Fqm</a> (uint16_type l, uint16_type q, uint16_type m, <a class="el" href="classFeel_1_1CRBModel.html#a9a32d976cdcfb1585f71243e7b618ddc">element_type</a> const &amp;xi)</td></tr>
-<tr class="memdesc:a22ca0e787aeeb6c6ec0fc430c3f90730"><td class="mdescLeft">&#160;</td><td class="mdescRight">the inner product <img class="formulaInl" alt="$f_{qm}(\xi) = \xi^T F_{qm} $" src="form_76.png"/>  <a href="#a22ca0e787aeeb6c6ec0fc430c3f90730">More...</a><br/></td></tr>
+<tr class="memdesc:a22ca0e787aeeb6c6ec0fc430c3f90730"><td class="mdescLeft">&#160;</td><td class="mdescRight">the inner product <img class="formulaInl" alt="$f_{qm}(\xi) = \xi^T F_{qm} $" src="form_73.png"/>  <a href="#a22ca0e787aeeb6c6ec0fc430c3f90730">More...</a><br/></td></tr>
 <tr class="separator:a22ca0e787aeeb6c6ec0fc430c3f90730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7803bbbacd885bd86cf5f536723ff179"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1CRBModel.html#ada0c365d6d269ce7005241092e7dcc2b">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a7803bbbacd885bd86cf5f536723ff179">Fqm</a> (uint16_type l, uint16_type q, uint16_type m, element_ptrtype const &amp;xi)</td></tr>
-<tr class="memdesc:a7803bbbacd885bd86cf5f536723ff179"><td class="mdescLeft">&#160;</td><td class="mdescRight">the inner product <img class="formulaInl" alt="$f_{qm}(\xi) = \xi^T F_{qm} $" src="form_76.png"/>  <a href="#a7803bbbacd885bd86cf5f536723ff179">More...</a><br/></td></tr>
+<tr class="memdesc:a7803bbbacd885bd86cf5f536723ff179"><td class="mdescLeft">&#160;</td><td class="mdescRight">the inner product <img class="formulaInl" alt="$f_{qm}(\xi) = \xi^T F_{qm} $" src="form_73.png"/>  <a href="#a7803bbbacd885bd86cf5f536723ff179">More...</a><br/></td></tr>
 <tr class="separator:a7803bbbacd885bd86cf5f536723ff179"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e3692d7bb508e90426de653a9172bea"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a5e3692d7bb508e90426de653a9172bea">scalarProduct</a> (vector_type const &amp;X, vector_type const &amp;Y)</td></tr>
 <tr class="separator:a5e3692d7bb508e90426de653a9172bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -422,7 +381,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>scalarProductForPod
 <tr class="memitem:a38dc11edf1470cde41b18140deaa6a0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a38dc11edf1470cde41b18140deaa6a0e">l2solve</a> (vector_ptrtype &amp;u, vector_ptrtype const &amp;f)</td></tr>
 <tr class="separator:a38dc11edf1470cde41b18140deaa6a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88d6a5a607a93f7446eb347e5ae314f5"><td class="memItemLeft" align="right" valign="top">boost::tuple&lt; int, <a class="el" href="classFeel_1_1CRBModel.html#ada0c365d6d269ce7005241092e7dcc2b">value_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a88d6a5a607a93f7446eb347e5ae314f5">solve</a> (sparse_matrix_ptrtype const &amp;A, vector_ptrtype &amp;x, vector_ptrtype const &amp;f, bool tranpose=false)</td></tr>
-<tr class="memdesc:a88d6a5a607a93f7446eb347e5ae314f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">solve <img class="formulaInl" alt="$A x = f$" src="form_80.png"/>  <a href="#a88d6a5a607a93f7446eb347e5ae314f5">More...</a><br/></td></tr>
+<tr class="memdesc:a88d6a5a607a93f7446eb347e5ae314f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">solve <img class="formulaInl" alt="$A x = f$" src="form_77.png"/>  <a href="#a88d6a5a607a93f7446eb347e5ae314f5">More...</a><br/></td></tr>
 <tr class="separator:a88d6a5a607a93f7446eb347e5ae314f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adacd9a4045e9fe853f10fd035267bc17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#adacd9a4045e9fe853f10fd035267bc17">run</a> (const double *X, unsigned long N, double *Y, unsigned long P)</td></tr>
 <tr class="memdesc:adacd9a4045e9fe853f10fd035267bc17"><td class="mdescLeft">&#160;</td><td class="mdescRight">export a vector of elements  <a href="#adacd9a4045e9fe853f10fd035267bc17">More...</a><br/></td></tr>
@@ -998,7 +957,7 @@ template&lt;typename ModelType&gt; </div>
 </div><div class="memdoc">
 
 <p>the vector <code>Fq</code>[q][m] of the affine decomposition of the right hand side </p>
-<dl class="section return"><dt>Returns</dt><dd>the vector associated with <img class="formulaInl" alt="$F_{qm}$" src="form_75.png"/> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the vector associated with <img class="formulaInl" alt="$F_{qm}$" src="form_72.png"/> </dd></dl>
 
 <p>References <a class="el" href="classFeel_1_1CRBModel.html#afc7d7aa5dbfb1fa17e03e82cacab3aed">Feel::CRBModel&lt; ModelType &gt;::M_Fqm</a>.</p>
 
@@ -1050,8 +1009,8 @@ template&lt;typename ModelType&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>the inner product <img class="formulaInl" alt="$f_{qm}(\xi) = \xi^T F_{qm} $" src="form_76.png"/> </p>
-<p>Denote <img class="formulaInl" alt="$F_{qm}$" src="form_75.png"/> the algebraic representation of the linear form associated with the right hand side.</p>
+<p>the inner product <img class="formulaInl" alt="$f_{qm}(\xi) = \xi^T F_{qm} $" src="form_73.png"/> </p>
+<p>Denote <img class="formulaInl" alt="$F_{qm}$" src="form_72.png"/> the algebraic representation of the linear form associated with the right hand side.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">q</td><td>and m index of the component in the affine decomposition </td></tr>
@@ -1059,7 +1018,7 @@ template&lt;typename ModelType&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the inner product <img class="formulaInl" alt="$f_{qm}(\xi) = \xi^T F_{qm} $" src="form_76.png"/> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the inner product <img class="formulaInl" alt="$f_{qm}(\xi) = \xi^T F_{qm} $" src="form_73.png"/> </dd></dl>
 
 <p>References <a class="el" href="namespaceFeel.html#a73707c3e6d405359ea9b4e1f21c9e530">Feel::inner_product()</a>, and <a class="el" href="classFeel_1_1CRBModel.html#afc7d7aa5dbfb1fa17e03e82cacab3aed">Feel::CRBModel&lt; ModelType &gt;::M_Fqm</a>.</p>
 
@@ -1111,8 +1070,8 @@ template&lt;typename ModelType&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>the inner product <img class="formulaInl" alt="$f_{qm}(\xi) = \xi^T F_{qm} $" src="form_76.png"/> </p>
-<p>Denote <img class="formulaInl" alt="$F_{qm}$" src="form_75.png"/> the algebraic representation of the linear form associated with the right hand side.</p>
+<p>the inner product <img class="formulaInl" alt="$f_{qm}(\xi) = \xi^T F_{qm} $" src="form_73.png"/> </p>
+<p>Denote <img class="formulaInl" alt="$F_{qm}$" src="form_72.png"/> the algebraic representation of the linear form associated with the right hand side.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">q</td><td>and m index of the component in the affine decomposition </td></tr>
@@ -1120,7 +1079,7 @@ template&lt;typename ModelType&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the inner product <img class="formulaInl" alt="$f_{qm}(\xi) = \xi^T F_{qm} $" src="form_76.png"/> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the inner product <img class="formulaInl" alt="$f_{qm}(\xi) = \xi^T F_{qm} $" src="form_73.png"/> </dd></dl>
 
 <p>References <a class="el" href="namespaceFeel.html#a73707c3e6d405359ea9b4e1f21c9e530">Feel::inner_product()</a>, and <a class="el" href="classFeel_1_1CRBModel.html#afc7d7aa5dbfb1fa17e03e82cacab3aed">Feel::CRBModel&lt; ModelType &gt;::M_Fqm</a>.</p>
 
@@ -1269,7 +1228,7 @@ template&lt;typename ModelType&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>solve <img class="formulaInl" alt="$M u = f$" src="form_77.png"/> where <img class="formulaInl" alt="$ M $" src="form_78.png"/> is the matrix associated to the <img class="formulaInl" alt="$ L_2 $" src="form_79.png"/> norm </p>
+<p>solve <img class="formulaInl" alt="$M u = f$" src="form_74.png"/> where <img class="formulaInl" alt="$ M $" src="form_75.png"/> is the matrix associated to the <img class="formulaInl" alt="$ L_2 $" src="form_76.png"/> norm </p>
 
 </div>
 </div>
@@ -1790,33 +1749,6 @@ template&lt;typename ModelType&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a82687058c4dd3fa195c88c022268f95f"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ModelType&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1CRBModel.html">Feel::CRBModel</a>&lt; ModelType &gt;::setMeshSize </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>s</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>set the mesh characteristic length to <code>s</code> </p>
-
-</div>
-</div>
 <a class="anchor" id="a01e5f87fe5ba2e8e9624683ca0da56d0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1982,14 +1914,14 @@ template&lt;typename ModelType&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>solve <img class="formulaInl" alt="$A x = f$" src="form_80.png"/> </p>
-<dl class="section note"><dt>Note</dt><dd>if <code>tranpose</code> is true then solve for <img class="formulaInl" alt="$A^T x = f$" src="form_81.png"/>.</dd></dl>
+<p>solve <img class="formulaInl" alt="$A x = f$" src="form_77.png"/> </p>
+<dl class="section note"><dt>Note</dt><dd>if <code>tranpose</code> is true then solve for <img class="formulaInl" alt="$A^T x = f$" src="form_78.png"/>.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>matrix </td></tr>
     <tr><td class="paramname">x</td><td>solution vector </td></tr>
     <tr><td class="paramname">f</td><td>right hand side vector </td></tr>
-    <tr><td class="paramname">transpose</td><td>if is true solve for <img class="formulaInl" alt="$A^T x = f$" src="form_81.png"/>, otherwise solve <img class="formulaInl" alt="$A x = f$" src="form_80.png"/>.</td></tr>
+    <tr><td class="paramname">transpose</td><td>if is true solve for <img class="formulaInl" alt="$A^T x = f$" src="form_78.png"/>, otherwise solve <img class="formulaInl" alt="$A x = f$" src="form_77.png"/>.</td></tr>
   </table>
   </dd>
 </dl>
@@ -2029,7 +1961,7 @@ template&lt;typename ModelType&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed May 8 2013 10:17:16 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+Generated on Mon May 13 2013 17:02:48 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

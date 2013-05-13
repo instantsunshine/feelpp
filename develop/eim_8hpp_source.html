@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.90</span>
+   &#160;<span id="projectnumber">0.93.0</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -678,8 +678,8 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        <span class="keyword">auto</span> g_bestfit = M_model-&gt;operator()( bestfit.template get&lt;1&gt;() );</div>
 <div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;        <span class="keyword">auto</span> gmax = normLinf( _range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>(M_model-&gt;mesh()), _pset=_Q&lt;5&gt;(), _expr=idv(g_bestfit) );</div>
 <div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;best fit max error = &quot;</span> &lt;&lt; bestfit.template get&lt;0&gt;() &lt;&lt; <span class="stringliteral">&quot; relative error = &quot;</span> &lt;&lt; bestfit.template get&lt;0&gt;()/gmax.template get&lt;0&gt;() &lt;&lt; <span class="stringliteral">&quot; at mu = &quot;</span></div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;                  &lt;&lt; bestfit.template get&lt;1&gt;() &lt;&lt; <span class="stringliteral">&quot;  tolerance=&quot;</span> &lt;&lt; M_vm[<span class="stringliteral">&quot;eim.error-max&quot;</span>].template as&lt;double&gt;() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;best fit max error = &quot;</span> &lt;&lt; bestfit.template get&lt;0&gt;() &lt;&lt; <span class="stringliteral">&quot; relative error = &quot;</span> &lt;&lt; bestfit.template get&lt;0&gt;()/gmax.template get&lt;0&gt;() &lt;&lt; <span class="stringliteral">&quot; at mu = &quot;</span></div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;                 &lt;&lt; bestfit.template get&lt;1&gt;() &lt;&lt; <span class="stringliteral">&quot;  tolerance=&quot;</span> &lt;&lt; M_vm[<span class="stringliteral">&quot;eim.error-max&quot;</span>].template as&lt;double&gt;() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;</div>
 <div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;        <span class="comment">//if we want to impose the use of dimension-max functions, we don&#39;t want to stop here</span></div>
 <div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        <span class="keywordflow">if</span> ( (bestfit.template get&lt;0&gt;()/gmax.template get&lt;0&gt;()) &lt; M_vm[<span class="stringliteral">&quot;eim.error-max&quot;</span>].template as&lt;double&gt;() &amp;&amp;  ! M_vm[<span class="stringliteral">&quot;eim.use-dimension-max-functions&quot;</span>].<span class="keyword">template</span> as&lt;bool&gt;() )</div>
@@ -707,7 +707,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;store new basis function...&quot;</span> &lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;        M_q.push_back( res );</div>
 <div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;        std::for_each( M_t.begin(), M_t.end(), []( node_type <span class="keyword">const</span>&amp; t ) { LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;t=&quot;</span> &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>; } );</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;        std::for_each( M_t.begin(), M_t.end(), []( node_type <span class="keyword">const</span>&amp; t ) { DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;t=&quot;</span> &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>; } );</div>
 <div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;        <span class="comment">// update interpolation matrix</span></div>
 <div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;        M_B.conservativeResize( M_M, M_M );</div>
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">int</span> __i = 0; __i &lt; M_M; ++__i )</div>
@@ -718,7 +718,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;</div>
 <div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;            }</div>
 <div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;        }</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;[offline] Interpolation matrix: M_B = &quot;</span> &lt;&lt; this-&gt;M_B &lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[offline] Interpolation matrix: M_B = &quot;</span> &lt;&lt; this-&gt;M_B &lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;<span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">for</span>( <span class="keywordtype">int</span> __i = 0; __i &lt; M_M; ++__i )</div>
 <div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;        {</div>
@@ -1313,7 +1313,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed May 8 2013 10:16:52 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+Generated on Mon May 13 2013 17:02:24 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -1,9 +1,6 @@
 var Generic =
 [
-    [ "Laplacian Problem", "Laplacian.html", [
-      [ "Theory", "Laplacian.html#Laplacian_Theory", null ],
-      [ "Implementation", "Laplacian.html#Laplacian_Implementation", null ]
-    ] ],
+    [ "Laplacian Examples", "Laplacian.html", "Laplacian" ],
     [ "Stokes Tutorial", "StokesTutorial.html", [
       [ "Theory", "StokesTutorial.html#Stokes_Theory", null ],
       [ "Implementation", "StokesTutorial.html#Stokes_Implementation", null ]

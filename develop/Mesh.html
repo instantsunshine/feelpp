@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.90</span>
+   &#160;<span id="projectnumber">0.93.0</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -135,10 +135,10 @@ Introduction</h1>
 <div class="line">                   _about=about( _name=<span class="stringliteral">&quot;mymesh&quot;</span> ,</div>
 <div class="line">                                 _author=<span class="stringliteral">&quot;Feel++ Consortium&quot;</span>,</div>
 <div class="line">                                 _email=<span class="stringliteral">&quot;feelpp-devel@feelpp.org&quot;</span> ) );</div>
-<div class="line">                                 </div>
+<div class="line"></div>
 <div class="line">  <span class="comment">// create a mesh with GMSH using Feel++ geometry tool</span></div>
 <div class="line">  <span class="keyword">auto</span> mesh = <a class="code" href="namespaceFeel.html#ae825fbe687017d967220cf4674ac4f21">unitSquare</a>();</div>
-<div class="line">                                 </div>
+<div class="line"></div>
 <div class="line">  <span class="comment">// export results for post processing</span></div>
 <div class="line">  <span class="keyword">auto</span> e = exporter( _mesh=mesh );</div>
 <div class="line">  e-&gt;addRegions();</div>
@@ -159,13 +159,13 @@ Basic Meshes</h1>
 <tr>
 <th>Feel++ function</th><th>Dim</th><th>Description&lt;/th </th></tr>
 <tr>
-<td><code><a class="el" href="namespaceFeel.html#a0a1f9cc8a7334a06b823b76866aaba04">unitSegment()</a></code>;</td><td>1</td><td>Build a mesh of the unit segment <img class="formulaInl" alt="$[0,1]$" src="form_587.png"/> </td></tr>
+<td><code><a class="el" href="namespaceFeel.html#a0a1f9cc8a7334a06b823b76866aaba04">unitSegment()</a></code>;</td><td>1</td><td>Build a mesh of the unit segment <img class="formulaInl" alt="$[0,1]$" src="form_597.png"/> </td></tr>
 <tr>
-<td><code><a class="el" href="namespaceFeel.html#ae825fbe687017d967220cf4674ac4f21">unitSquare()</a></code>;</td><td>2</td><td>Build a mesh of the unit square <img class="formulaInl" alt="$[0,1]^2$" src="form_588.png"/> using triangles </td></tr>
+<td><code><a class="el" href="namespaceFeel.html#ae825fbe687017d967220cf4674ac4f21">unitSquare()</a></code>;</td><td>2</td><td>Build a mesh of the unit square <img class="formulaInl" alt="$[0,1]^2$" src="form_598.png"/> using triangles </td></tr>
 <tr>
 <td><code><a class="el" href="namespaceFeel.html#acb52ee369375c35506744aa7b7f77850">unitCircle()</a></code>;</td><td>2</td><td>Build a mesh of the unit circle using triangles </td></tr>
 <tr>
-<td><code>unitHypercube()</code>;</td><td>3</td><td>Build a mesh of the unit hypercube <img class="formulaInl" alt="$[0,1]^3$" src="form_589.png"/> using tetrahedrons </td></tr>
+<td><code>unitHypercube()</code>;</td><td>3</td><td>Build a mesh of the unit hypercube <img class="formulaInl" alt="$[0,1]^3$" src="form_599.png"/> using tetrahedrons </td></tr>
 <tr>
 <td><code><a class="el" href="namespaceFeel.html#a5f23b38aeff08e0c33d858c57e5093ab">unitSphere()</a></code>;</td><td>3</td><td>Build a mesh of the unit sphere using tetrahedrons </td></tr>
 </table>
@@ -190,12 +190,52 @@ loadMesh</h2>
 <ul>
 <li><code>_mesh</code> : a mesh data structure.</li>
 </ul>
-<p>Optional Parameters : </p>
+<p>Optional Parameters :</p>
 <ul>
-<li><code>_filename</code> : filename with extension. By default = <code>"feel.geo"</code>. </li>
-<li><code>_refine</code> : optionally refine with <code>refine</code> levels the mesh. Default =<code>0</code>. </li>
-<li><code>_update</code> : update the mesh data structure (build internal faces and edges). Default =<code>true</code>. </li>
-<li><code>_physical_are_elementary_regions</code> : to load specific meshes formats. Default = <code>false</code>.</li>
+<li><code>_hsize</code> (double) : characteristic size of the mesh. This option will edit the <code></code>.geo file and change the variable <code>h</code> if defined<ul>
+<li>Default : <code>0.1</code> </li>
+<li>Option : <code>gmsh.hsize</code> </li>
+</ul>
+</li>
+<li><code>_geo_variables_list</code> (string) : Set a list of variable that may be defined in a <code></code>.geo file<ul>
+<li>Default : <code>""</code> </li>
+<li>Option : <code>gmsh.geo-variables-list</code> </li>
+</ul>
+</li>
+<li><code>_filename</code> (string) : filename with extension.<ul>
+<li>Default : <code>"feel.geo"</code> </li>
+<li>Option : <code>gmsh.filename</code> </li>
+</ul>
+</li>
+<li><code>_depends</code> (string) : list of files (separated by , or ;) on which <code>gmsh.filename</code> depends<ul>
+<li>Default : <code>""</code> </li>
+<li>Option : <code>gmsh.depends</code> </li>
+</ul>
+</li>
+<li><code>_refine</code> (boolean) : optionally refine with <code>refine</code> levels the mesh.<ul>
+<li>Default : <code>0</code>.</li>
+<li>Option : <code>gmsh.refine</code> </li>
+</ul>
+</li>
+<li><code>_update</code> (integer) : update the mesh data structure (build internal faces and edges).<ul>
+<li>Default : <code>true</code> </li>
+</ul>
+</li>
+<li><code>_physical_are_elementary_regions</code> (boolean): to load specific meshes formats.<ul>
+<li>Default : <code>false</code>.</li>
+<li>Option : gmsh.physical_are_elementary_regions</li>
+</ul>
+</li>
+<li><code>_straighten</code> (boolean): in case of curvilinear elements, straighten the elements which are not touching with a face the boundary of the domain<ul>
+<li>Default : <code>true</code> </li>
+<li>Option : <code>gmsh.straighten</code> </li>
+</ul>
+</li>
+<li><code>_partitioner</code> (integer) : define the mesh partitioner to use :<ul>
+<li>Default : <code>1</code> (if Metis is available) <code>0</code> if not (CHACO)</li>
+<li>Option : gmsh.partitioner</li>
+</ul>
+</li>
 </ul>
 <p><br/>
  The file you want to load has to be in an appropriate repository.<br/>
@@ -364,7 +404,7 @@ Todo</h1>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed May 8 2013 10:17:15 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+Generated on Mon May 13 2013 17:02:47 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -2,10 +2,27 @@ var NAVTREE =
 [
   [ "Feel++", "index.html", [
     [ "Introduction", "index.html", null ],
+    [ "Credits", "md_Credits.html", null ],
+    [ "ChangeLog", "ChangeLog.html", [
+      [ "Feel++ Release 0.93.0", "ChangeLog.html#feelpp0930", [
+        [ "Changes", "ChangeLog.html#changes0930", null ],
+        [ "Features", "ChangeLog.html#features0930", null ],
+        [ "Issues", "ChangeLog.html#issues0930", null ]
+      ] ],
+      [ "Feel++ Release 0.92.0", "ChangeLog.html#feelpp0920", [
+        [ "Changes", "ChangeLog.html#changes0920", null ],
+        [ "Bugs", "ChangeLog.html#bugs0920", null ]
+      ] ],
+      [ "Feel++ Release 0.91.1", "ChangeLog.html#feelpp0911", null ],
+      [ "Feel++ Release 0.91.0", "ChangeLog.html#feelpp0910", [
+        [ "Developer changes", "ChangeLog.html#changes0910", null ]
+      ] ]
+    ] ],
     [ "Getting Started", "GettingStarted.html", "GettingStarted" ],
     [ "Quick Reference", "QuickRef.html", "QuickRef" ],
     [ "Learning by Examples", "Learning.html", "Learning" ],
     [ "Miscellaneous", "Miscellaneous.html", "Miscellaneous" ],
+    [ "Copyright", "md_COPYING.html", null ],
     [ "Bibliographic References", "citelist.html", null ],
     [ "Feel Objects", "annotated.html", "annotated" ]
   ] ]
@@ -14,30 +31,30 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classConvectionCrb.html#a13a33eb5842a72f8688d66b978046ca8",
-"classFeel_1_1Aitken.html#aa5b5ac816e44dd9317437741d2f50c42",
-"classFeel_1_1Bdf.html#a084a507832dd320f4777f9beed2653be",
-"classFeel_1_1CRBDB.html#a6ab0476785ef1a656f50e0a86fe81703",
-"classFeel_1_1CRBModelTrilinear.html#af27cf882e87f388859dd99630280b717",
-"classFeel_1_1DataMap.html#ac41b4c1bb2c71bd4771421fa83947f7c",
-"classFeel_1_1EIM.html#a24933b72d48f543fdb68796082dd0a98",
-"classFeel_1_1ExporterQuick.html#a520ac9f6fac93ed263d262622037e016",
-"classFeel_1_1FunctionalSet.html#a14c969944141f3e457707b39578d1a8e",
-"classFeel_1_1GeoMap_1_1Inverse.html#a293682a48abc0f5d09b3a9e9684b95c3",
-"classFeel_1_1GraphCSR.html#ae47592f5e256c90b83542bf74c880472",
-"classFeel_1_1Material.html#a16b2ff8393c295cb3459d027d905ef30",
-"classFeel_1_1MatrixSparse.html#aa221b9a6afc9a2dedf12759cb5418aca",
-"classFeel_1_1Mesh1D.html#a5686bde067ddae0a12185fa4c89f5d1d",
-"classFeel_1_1OperatorInterpolation.html#a3bcffc0255a3d1ab83f5f29af20a09e1",
-"classFeel_1_1PFemApp.html#a795188d3a77c37cd70d6b58eb58d5431",
-"classFeel_1_1PointSetQuadrature.html#a647687f6f9e454f113ce79033a36c206",
-"classFeel_1_1ResistanceLaplacian.html#af704687b421ddf474bbfb4535e51f580",
-"classFeel_1_1SolverNonLinear.html#a8dd9a3a7f44d33849dc0495e15c90080",
-"classFeel_1_1SystemImplicitLinear.html#aebc0ee6b365cb000e59d45c7a048d269",
-"classFeel_1_1TimeSet_1_1Step.html#ad8cd2be74c983b46d9fbbd2721d54de0",
-"classFeel_1_1VectorUblas.html#abdf32b9f7498837eda9b7d897758c806",
-"classFeel_1_1functional_1_1IntegralMomentOfDivergence.html#a06ad90e94c5884fbfc9fedf73669f291",
-"index.html"
+"classConvection.html#a9cd8971314a2e3cec7296032f1154fcb",
+"classFeel_1_1Aitken.html#a4247e0df981567edf0782ceb0947ce4b",
+"classFeel_1_1BackendEigen.html#acf9854c7490c6e237fbf86ae532de92b",
+"classFeel_1_1CRB.html#aef4dda6785fd9443524efea913f8268f",
+"classFeel_1_1CRBModelTrilinear.html#ab9025aa1a4651258fb45af72ce723476",
+"classFeel_1_1DataMap.html#aa980e5ebd94c8e13ac284412e38dcea3",
+"classFeel_1_1Dubiner.html#adbf52f1419cb829f7c8d7642542cb1de",
+"classFeel_1_1ExporterGnuplot.html#a5c3132ff5e3f49c42169ac996516b28ba989b5b5fe61dd2d597f246d51002d91c",
+"classFeel_1_1Functional.html#a55a42066fd2fa5c7c1e391242c1cf794",
+"classFeel_1_1GeoMap_1_1Context.html#acd439ac54046bbf9aec41d7fcdff7fd1",
+"classFeel_1_1GraphCSR.html#a8420a0e12eb4049a288c28897b3dc5a3",
+"classFeel_1_1Legendre.html#a652d25086c6583f06c58e4cdcc7b919c",
+"classFeel_1_1MatrixSparse.html#a81a8ba09d68f8a21789396ccead57132",
+"classFeel_1_1Mesh0D.html#ad4f8cd1c6ee8cf60cabd2ed54c4e7034",
+"classFeel_1_1Operator.html#abe05cd652d9c72ec29fbfc5a36674c89",
+"classFeel_1_1OpusApp.html#ae5307bb2df6d5fb6325429f4c26327de",
+"classFeel_1_1PointSetQuadrature.html#a961814f36b564224edd556b9fda7b8cc",
+"classFeel_1_1Simget.html#a0ca236a46ce6f367fc2dd43dd8f28b1f",
+"classFeel_1_1SolverNonLinear.html#aafd1d3d40b5769456801a9a60d745d76",
+"classFeel_1_1SystemImplicitNonLinear.html#a911f35cc35c68d2d862b05ef7ef99132",
+"classFeel_1_1TimeSet_1_1Step.html#af99416f3f3de0d12afd289275355fb88",
+"classFeel_1_1VectorUblas.html#ae268064acbfdefab80c99af59257ed12",
+"classFeel_1_1functional_1_1IntegralMomentOnFace.html#a876973e3bbda85ddc2e9fc7462b474fe",
+"structFeel_1_1BFGSInvHessian.html#a81ef191fd80d4d4f4353a4ee5af076d8"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -25,5 +25,6 @@ var searchData=
   ['howmany',['howMany',['../classFeel_1_1BareItemsHandler.html#ae1e8777a3464b9c2e5c9b533d2df9b73',1,'Feel::BareItemsHandler']]],
   ['hypercube_2ecpp',['hypercube.cpp',['../hypercube_8cpp.html',1,'']]],
   ['hypercube_2ehpp',['hypercube.hpp',['../hypercube_8hpp.html',1,'']]],
-  ['hypercubeordering_2ehpp',['hypercubeordering.hpp',['../hypercubeordering_8hpp.html',1,'']]]
+  ['hypercubeordering_2ehpp',['hypercubeordering.hpp',['../hypercubeordering_8hpp.html',1,'']]],
+  ['harmonic_20extension_20of_20a_20boundary_20displacement',['Harmonic extension of a boundary displacement',['../LaplacianHarmonic.html',1,'Laplacian']]]
 ];

@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.92.90</span>
+   &#160;<span id="projectnumber">0.93.0</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -125,35 +125,35 @@ Christophe Prud'homme </dd></dl>
 Description</h1>
 <p>The Maxwell equations read: </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{eqnarray*} \frac{-1}{c^{2}}\frac{\partial \ensuremath{{\bm E}}\xspace}{\partial t}+\nabla\times \ensuremath{{\bm B}}\xspace &amp; = &amp; \mu_{0} \ensuremath{{\bm J}}\xspace\\ \ensuremath{{\bm B}}\xspace_{t}+\nabla\times \ensuremath{{\bm E}}\xspace &amp; = &amp; 0\\ \nabla \cdot \ensuremath{{\bm B}}\xspace &amp; = &amp; 0\\ \nabla \cdot \ensuremath{{\bm E}}\xspace &amp; = &amp; \frac{\rho}{\epsilon_{o}} \end{eqnarray*}" src="form_380.png"/>
+<img class="formulaDsp" alt="\begin{eqnarray*} \frac{-1}{c^{2}}\frac{\partial \ensuremath{{\bm E}}\xspace}{\partial t}+\nabla\times \ensuremath{{\bm B}}\xspace &amp; = &amp; \mu_{0} \ensuremath{{\bm J}}\xspace\\ \ensuremath{{\bm B}}\xspace_{t}+\nabla\times \ensuremath{{\bm E}}\xspace &amp; = &amp; 0\\ \nabla \cdot \ensuremath{{\bm B}}\xspace &amp; = &amp; 0\\ \nabla \cdot \ensuremath{{\bm E}}\xspace &amp; = &amp; \frac{\rho}{\epsilon_{o}} \end{eqnarray*}" src="form_397.png"/>
 </p>
-<p>where <img class="formulaInl" alt="$\ensuremath{{\bm E}}\xspace$" src="form_381.png"/> is the electric field, <img class="formulaInl" alt="$\ensuremath{{\bm B}}\xspace$" src="form_382.png"/> the magnetic field, <img class="formulaInl" alt="$\ensuremath{{\bm J}}\xspace$" src="form_383.png"/> the current density, <img class="formulaInl" alt="$ c $" src="form_384.png"/> the speed of light, <img class="formulaInl" alt="$ \ rho $" src="form_385.png"/> density of electric charge, <img class="formulaInl" alt="$ \ mu_ {0} $" src="form_386.png"/> the vacuum permeability and <img class="formulaInl" alt="$ \ epsilon_ {0} $" src="form_387.png"/> the vacuum permittivity.<br/>
+<p>where <img class="formulaInl" alt="$\ensuremath{{\bm E}}\xspace$" src="form_398.png"/> is the electric field, <img class="formulaInl" alt="$\ensuremath{{\bm B}}\xspace$" src="form_399.png"/> the magnetic field, <img class="formulaInl" alt="$\ensuremath{{\bm J}}\xspace$" src="form_400.png"/> the current density, <img class="formulaInl" alt="$ c $" src="form_401.png"/> the speed of light, <img class="formulaInl" alt="$ \ rho $" src="form_402.png"/> density of electric charge, <img class="formulaInl" alt="$ \ mu_ {0} $" src="form_403.png"/> the vacuum permeability and <img class="formulaInl" alt="$ \ epsilon_ {0} $" src="form_404.png"/> the vacuum permittivity.<br/>
  In the midst industrial notament in aeronautics, systems Products must verify certain standards such as the receipt an electromagnetic wave emitted by a radar does not cause the inefficassité of part or all of the hardware in the system.<br/>
  Thus, the simulation of such situations can develop when or during the certification of a new product to test its reaction to such attacks.<br/>
- Also note that the last two equations are actually initial conditions, since if we assume they are true at the moment <img class="formulaInl" alt="$ t = 0$" src="form_388.png"/> then it can be deduced from the first two.<br/>
+ Also note that the last two equations are actually initial conditions, since if we assume they are true at the moment <img class="formulaInl" alt="$ t = 0$" src="form_405.png"/> then it can be deduced from the first two.<br/>
  At $t=0s$, we suppose that </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{eqnarray} \nabla \cdot \ensuremath{{\bm B}}\xspace &amp; = &amp; 0\\ \nabla \cdot \ensuremath{{\bm E}}\xspace &amp; = &amp; \frac{\rho}{\epsilon_{o}} \end{eqnarray}" src="form_389.png"/>
+<img class="formulaDsp" alt="\begin{eqnarray} \nabla \cdot \ensuremath{{\bm B}}\xspace &amp; = &amp; 0\\ \nabla \cdot \ensuremath{{\bm E}}\xspace &amp; = &amp; \frac{\rho}{\epsilon_{o}} \end{eqnarray}" src="form_406.png"/>
 </p>
-<p>Suppose that <img class="formulaInl" alt="$\ensuremath{{\bm B}}\xspace = (B_x, B_y, B_z )^T$" src="form_390.png"/> and <img class="formulaInl" alt="$\ensuremath{{\bm E}}\xspace=(E_x,E_y,E_z)^T$" src="form_391.png"/> i.e. </p>
+<p>Suppose that <img class="formulaInl" alt="$\ensuremath{{\bm B}}\xspace = (B_x, B_y, B_z )^T$" src="form_407.png"/> and <img class="formulaInl" alt="$\ensuremath{{\bm E}}\xspace=(E_x,E_y,E_z)^T$" src="form_408.png"/> i.e. </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{eqnarray} \frac{\partial B_{x}}{\partial x}(t=0)+\frac{\partial B_{y}}{\partial y}(t=0)+\frac{\partial B_{z}}{\partial z} &amp; (t=0)= &amp; 0\\ \frac{\partial E_{x}}{\partial x}(t=0)+\frac{\partial E_{y}}{\partial y}(t=0)+\frac{\partial E_{z}}{\partial z} &amp; (t=0)= &amp; \frac{\rho}{\epsilon_{o}} \end{eqnarray}" src="form_392.png"/>
+<img class="formulaDsp" alt="\begin{eqnarray} \frac{\partial B_{x}}{\partial x}(t=0)+\frac{\partial B_{y}}{\partial y}(t=0)+\frac{\partial B_{z}}{\partial z} &amp; (t=0)= &amp; 0\\ \frac{\partial E_{x}}{\partial x}(t=0)+\frac{\partial E_{y}}{\partial y}(t=0)+\frac{\partial E_{z}}{\partial z} &amp; (t=0)= &amp; \frac{\rho}{\epsilon_{o}} \end{eqnarray}" src="form_409.png"/>
 </p>
 <p>Differentiating the first of these two equations with respect to time, we get: </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{multline} \label{eq:6} \frac{\partial}{\partial t}\frac{\partial}{\partial x}B_{x}+\frac{\partial}{\partial t}\frac{\partial}{\partial y}B_{y}+\frac{\partial}{\partial t}\frac{\partial}{\partial z}B_{z} = \\ \frac{\partial}{\partial x}\left(\frac{\partial}{\partial y}E_{z}-\frac{\partial}{\partial z}E_{y}\right)+\frac{\partial}{\partial y}\left(\frac{\partial}{\partial z}E_{x}-\frac{\partial}{\partial x}E_{z}\right)+\frac{\partial}{\partial z}\left(\frac{\partial}{\partial x}E_{y}-\frac{\partial}{\partial y}E_{x}\right)\\ = 0 \end{multline}" src="form_393.png"/>
+<img class="formulaDsp" alt="\begin{multline} \label{eq:6} \frac{\partial}{\partial t}\frac{\partial}{\partial x}B_{x}+\frac{\partial}{\partial t}\frac{\partial}{\partial y}B_{y}+\frac{\partial}{\partial t}\frac{\partial}{\partial z}B_{z} = \\ \frac{\partial}{\partial x}\left(\frac{\partial}{\partial y}E_{z}-\frac{\partial}{\partial z}E_{y}\right)+\frac{\partial}{\partial y}\left(\frac{\partial}{\partial z}E_{x}-\frac{\partial}{\partial x}E_{z}\right)+\frac{\partial}{\partial z}\left(\frac{\partial}{\partial x}E_{y}-\frac{\partial}{\partial y}E_{x}\right)\\ = 0 \end{multline}" src="form_410.png"/>
 </p>
 <p>thanks to </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{equation} \label{eq:3} \ensuremath{{\bm B}}\xspace_{t}+\nabla\times \ensuremath{{\bm E}}\xspace =0 \end{equation}" src="form_394.png"/>
+<img class="formulaDsp" alt="\begin{equation} \label{eq:3} \ensuremath{{\bm B}}\xspace_{t}+\nabla\times \ensuremath{{\bm E}}\xspace =0 \end{equation}" src="form_411.png"/>
 </p>
-<p>So, for all <img class="formulaInl" alt="$t\geq0$" src="form_395.png"/>, </p>
+<p>So, for all <img class="formulaInl" alt="$t\geq0$" src="form_412.png"/>, </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{equation} \label{eq:4} \nabla \cdot \ensuremath{{\bm B}}\xspace(t)=\nabla\cdot\B(0)=0 \end{equation}" src="form_396.png"/>
+<img class="formulaDsp" alt="\begin{equation} \label{eq:4} \nabla \cdot \ensuremath{{\bm B}}\xspace(t)=\nabla\cdot\B(0)=0 \end{equation}" src="form_413.png"/>
 </p>
 <p>We deduce the same way the second equation, using the charge conservation equation : </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{equation} \label{eq:2} \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \ensuremath{{\bm J}}\xspace) = 0 \end{equation}" src="form_397.png"/>
+<img class="formulaDsp" alt="\begin{equation} \label{eq:2} \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \ensuremath{{\bm J}}\xspace) = 0 \end{equation}" src="form_414.png"/>
 </p>
 <h1><a class="anchor" id="Diode_Theory"></a>
 Theory</h1>
@@ -164,7 +164,7 @@ Results</h1>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed May 8 2013 10:17:15 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+Generated on Mon May 13 2013 17:02:47 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
