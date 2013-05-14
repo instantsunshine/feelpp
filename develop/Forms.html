@@ -143,7 +143,7 @@ form1</h2>
 </ul>
 <p>By default, a new linear form is : </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ l(v)=\int_\Omega v \]" src="form_472.png"/>
+<img class="formulaDsp" alt="\[ l(v)=\int_\Omega v \]" src="form_551.png"/>
 </p>
 <p> Then you can custom it using integrations tools.</p>
 <p><b>Examples :</b><br/>
@@ -174,7 +174,7 @@ form2</h2>
 </ul>
 <p>By default, a new bilinear form is : </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ a(u,v)=\int_\Omega uv \]" src="form_473.png"/>
+<img class="formulaDsp" alt="\[ a(u,v)=\int_\Omega uv \]" src="form_552.png"/>
 </p>
 <p> Then you can custom it using integrations tools</p>
 <p>From <code>"doc/manual/tutorial/mylaplacian.cpp"</code> : </p>
@@ -217,7 +217,7 @@ solve</h2>
 <p><b>Examples :</b><br/>
  From <code>"doc/manual/tutorial/laplacian.cpp"</code> : </p>
 <div class="fragment"><div class="line">a.solve(_rhs=l,_solution=u);</div>
-</div><!-- fragment --><p> Solve the linear problem <img class="formulaInl" alt="$a(u,v)=l(v)$" src="form_474.png"/>.</p>
+</div><!-- fragment --><p> Solve the linear problem <img class="formulaInl" alt="$a(u,v)=l(v)$" src="form_553.png"/>.</p>
 <h2><a class="anchor" id="on"></a>
 on</h2>
 <p>The function <code>on()</code> allows you to add conditions to your bilinear form before using the <code>solve</code> function.<br/>
@@ -238,7 +238,7 @@ on</h2>
 <div class="line">   a+=on(_range=<a class="code" href="namespaceFeel.html#a6d4deea03257c3f53b0e9df514a7bf00">boundaryfaces</a>(mesh),</div>
 <div class="line">         _rhs=l, _element=u,</div>
 <div class="line">         _expr=constant(0.) );</div>
-</div><!-- fragment --><p> There we add the condition : <img class="formulaInl" alt="$ u = 0 \text{ on }\;\partial\Omega \;$" src="form_475.png"/>.</p>
+</div><!-- fragment --><p> There we add the condition : <img class="formulaInl" alt="$ u = 0 \text{ on }\;\partial\Omega \;$" src="form_554.png"/>.</p>
 <p>From <code>"doc/manual/tutorial/mystokes.cpp"</code> : </p>
 <div class="fragment"><div class="line">a+=on(_range=<a class="code" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">markedfaces</a>(mesh,<span class="stringliteral">&quot;inlet&quot;</span>),</div>
 <div class="line">      _rhs=l, _element=u,</div>
@@ -246,13 +246,13 @@ on</h2>
 <div class="line">a+=on(_range=<a class="code" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">markedfaces</a>(mesh,<span class="stringliteral">&quot;wall&quot;</span>),</div>
 <div class="line">      _rhs=l, _element=u,</div>
 <div class="line">      _expr=vec(cst(0.),cst(0.)));</div>
-</div><!-- fragment --><p> There we add the conditions <img class="formulaInl" alt="$ u=\left( \begin{aligned} y(1-y) \\ 0 \\ \end{aligned} \right) $" src="form_476.png"/> on the face identified by "inlet" and <img class="formulaInl" alt="$ u=\left( \begin{aligned} 0 \\ 0 \\ \end{aligned} \right) $" src="form_477.png"/> on the face identified by "wall".</p>
+</div><!-- fragment --><p> There we add the conditions <img class="formulaInl" alt="$ u=\left( \begin{aligned} y(1-y) \\ 0 \\ \end{aligned} \right) $" src="form_555.png"/> on the face identified by "inlet" and <img class="formulaInl" alt="$ u=\left( \begin{aligned} 0 \\ 0 \\ \end{aligned} \right) $" src="form_556.png"/> on the face identified by "wall".</p>
 <p><a href="#" class="top">top</a> </p>
 <hr/>
  </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Tue May 14 2013 08:58:09 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+Generated on Tue May 14 2013 23:57:14 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

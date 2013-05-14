@@ -11,7 +11,7 @@ var NumericalMethods =
       ] ]
     ] ],
     [ "Domain Decomposition Methods", "Decomposition.html", [
-      [ "A Really Short Introduction", "Decomposition.html#Introduction", null ],
+      [ "Introduction", "Decomposition.html#Introduction", null ],
       [ "A 1D Model", "Decomposition.html#D1", [
         [ "Schwartz Algorithms", "Decomposition.html#D1_Schwartz", null ],
         [ "Variational formulations", "Decomposition.html#D1_Variational", null ]

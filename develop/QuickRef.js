@@ -44,7 +44,8 @@ var QuickRef =
       [ "Todo", "Mesh.html#MeshTodo", null ]
     ] ],
     [ "Function Spaces", "Spaces.html", [
-      [ "Todo : first section", "Spaces.html#Todo", null ]
+      [ "Function Space", "Spaces.html#QRFunctionSpace", null ],
+      [ "Function Space helper functions", "Spaces.html#QRFunctionSpaceFn", null ]
     ] ],
     [ "Integrations, Operators and Norms", "Integrals.html", [
       [ "Introduction", "Integrals.html#Integrals_Introduction", null ],
@@ -73,6 +74,7 @@ var QuickRef =
       ] ]
     ] ],
     [ "Exporter", "Exporter.html", [
-      [ "Todo : first section", "Exporter.html#Todo", null ]
+      [ "Introduction", "Exporter.html#Introduction", null ],
+      [ "Visualisation", "Exporter.html#Visualisation", null ]
     ] ]
 ];
