@@ -117,21 +117,21 @@ $(document).ready(function(){initNavTree('LaplacianWithHoles.html','');});
 Problem statement</h1>
 <p>We solve for the laplacian with homogeneous Dirichlet conditions in a domain with a hole </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \left\{ \begin{aligned} -\Delta u &amp; = f &amp; \text{on}\;\Omega \;, \\ u &amp; = 0 &amp; \text{on}\;\partial\Omega \;,\\ \end{aligned} \right. \]" src="form_384.png"/>
+<img class="formulaDsp" alt="\[ \left\{ \begin{aligned} -\Delta u &amp; = f &amp; \text{on}\;\Omega \;, \\ u &amp; = 0 &amp; \text{on}\;\partial\Omega \;,\\ \end{aligned} \right. \]" src="form_409.png"/>
 </p>
-<p> where <img class="formulaInl" alt="$u\in\Omega$" src="form_385.png"/> is the unknown "trial" function and <img class="formulaInl" alt="$\Omega$" src="form_210.png"/> the domain.</p>
-<p>The variational formulation reads, find <img class="formulaInl" alt="$u \in H^1_0(\Omega)$" src="form_386.png"/> such that <img class="formulaInl" alt="$\forall v \in H^1_0(\Omega)$" src="form_387.png"/></p>
+<p> where <img class="formulaInl" alt="$u\in\Omega$" src="form_410.png"/> is the unknown "trial" function and <img class="formulaInl" alt="$\Omega$" src="form_208.png"/> the domain.</p>
+<p>The variational formulation reads, find <img class="formulaInl" alt="$u \in H^1_0(\Omega)$" src="form_411.png"/> such that <img class="formulaInl" alt="$\forall v \in H^1_0(\Omega)$" src="form_412.png"/></p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \int_\Omega \nabla u \cdot \nabla v -\underbrace{ \int_{\partial\Omega} \frac{\partial u}{\partial n} v }_{= 0}\ =\ \int_\Omega f v \; \]" src="form_388.png"/>
+<img class="formulaDsp" alt="\[ \int_\Omega \nabla u \cdot \nabla v -\underbrace{ \int_{\partial\Omega} \frac{\partial u}{\partial n} v }_{= 0}\ =\ \int_\Omega f v \; \]" src="form_413.png"/>
 </p>
-<p>where <img class="formulaInl" alt="$n$" src="form_389.png"/> denotes a unit outward normal vector to the boundary. We can rewrite the problem as find <img class="formulaInl" alt="$u\in H_0^1(\Omega)$" src="form_390.png"/> such that for all <img class="formulaInl" alt="$v\in H_0^1(\Omega)$" src="form_391.png"/>,</p>
+<p>where <img class="formulaInl" alt="$n$" src="form_414.png"/> denotes a unit outward normal vector to the boundary. We can rewrite the problem as find <img class="formulaInl" alt="$u\in H_0^1(\Omega)$" src="form_415.png"/> such that for all <img class="formulaInl" alt="$v\in H_0^1(\Omega)$" src="form_416.png"/>,</p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ a(u,v)&amp;=l(v) \;, \]" src="form_392.png"/>
+<img class="formulaDsp" alt="\[ a(u,v)&amp;=l(v) \;, \]" src="form_417.png"/>
 </p>
-<p>where <img class="formulaInl" alt="$a$" src="form_393.png"/> is a bilinear form, continuous, coercive and <img class="formulaInl" alt="$l$" src="form_394.png"/> a linear form.</p>
+<p>where <img class="formulaInl" alt="$a$" src="form_418.png"/> is a bilinear form, continuous, coercive and <img class="formulaInl" alt="$l$" src="form_419.png"/> a linear form.</p>
 <h1><a class="anchor" id="Laplacian_Implementation"></a>
 Implementation</h1>
-<p>We defined <img class="formulaInl" alt="$\Omega$" src="form_210.png"/> as the unit square with a circle inside of radius <img class="formulaInl" alt="$0.25$" src="form_395.png"/> </p>
+<p>We defined <img class="formulaInl" alt="$\Omega$" src="form_208.png"/> as the unit square with a circle inside of radius <img class="formulaInl" alt="$0.25$" src="form_420.png"/> </p>
 <div class="fragment"><div class="line">    <span class="keyword">typedef</span> Mesh&lt;Simplex&lt;2&gt; &gt; mesh_type;</div>
 <div class="line"></div>
 <div class="line">    GeoTool::Rectangle R1( 0.05,<span class="stringliteral">&quot;R1&quot;</span>,GeoTool::Node( 0,0 ),GeoTool::Node( 1,1 ) );</div>
@@ -140,7 +140,7 @@ Implementation</h1>
 <div class="line">    <span class="keyword">auto</span> R1mesh = R1.createMesh(_mesh=<span class="keyword">new</span> mesh_type,_name=<span class="stringliteral">&quot;R1&quot;</span> );</div>
 <div class="line">    <span class="keyword">auto</span> C1mesh = C1.createMesh(_mesh=<span class="keyword">new</span> mesh_type,_name=<span class="stringliteral">&quot;C1&quot;</span> );</div>
 <div class="line">    <span class="keyword">auto</span> R1mC1mesh = ( R1-C1 ).createMesh(_mesh=<span class="keyword">new</span> mesh_type,_name=<span class="stringliteral">&quot;R1-C1&quot;</span> );</div>
-</div><!-- fragment --><p> We consider for this example <img class="formulaInl" alt="$f=1$" src="form_396.png"/> constant. </p>
+</div><!-- fragment --><p> We consider for this example <img class="formulaInl" alt="$f=1$" src="form_421.png"/> constant. </p>
 <div class="fragment"><div class="line">    <span class="keyword">auto</span> l = form1( _test=Vh );</div>
 <div class="line">    l = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>(_range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>(mesh),</div>
 <div class="line">                  _expr=<span class="keywordtype">id</span>(v));</div>
@@ -194,7 +194,7 @@ Results</h1>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed May 15 2013 06:51:11 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+Generated on Fri May 17 2013 11:46:26 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

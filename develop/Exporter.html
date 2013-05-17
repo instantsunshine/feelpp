@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Feel++: Exporter</title>
+<title>Feel++: Post-Processing and Visualisation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -100,17 +100,18 @@ $(document).ready(function(){initNavTree('Exporter.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title"><a class="el" href="classFeel_1_1Exporter.html" title="export Feel generated data to some file formatsUse the visitor and factory pattern.">Exporter</a> </div>  </div>
+<div class="title">Post-Processing and Visualisation </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
 <ul><li class="level1"><a href="#Introduction">Introduction</a></li>
+<li class="level1"><a href="#VisPrinciples">General principles</a></li>
 <li class="level1"><a href="#Visualisation">Visualisation</a></li>
 </ul>
 </div>
 <div class="textblock"><ul>
 <li><b>Previous:</b> <a class="el" href="Forms.html#Solver">Solver</a> </li>
-<li><b>Next:</b> <hr/>
+<li><b>Next:</b>  <hr/>
 </li>
 </ul>
 <h1><a class="anchor" id="Introduction"></a>
@@ -123,21 +124,84 @@ Introduction</h1>
 <li>use standard visualisation tools such as Paraview, Ensight and even <a class="el" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator.">Gmsh</a></li>
 </ul>
 <p>To achieve this, Feel++ defines a so-called <code><a class="el" href="classFeel_1_1Exporter.html" title="export Feel generated data to some file formatsUse the visitor and factory pattern.">Exporter</a></code> object</p>
-<h1><a class="anchor" id="Visualisation"></a>
+<h1><a class="anchor" id="VisPrinciples"></a>
+General principles</h1>
+<p>The library <a class="el" href="namespaceFeel.html">Feel</a> itself does not have any visualization capabilities. However, it provides tools to export both scalar and vector fields into two formats: <code>EnSight</code> and <code><a class="el" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator.">Gmsh</a></code>. The EnSight format can be read by the visualization software EnSight <a href="http://www.ensight.com">http://www.ensight.com</a> or, for instance, by the open source package Paraview <a href="http://www.paraview.org">http://www.paraview.org</a>.</p>
+<p>The choice of format depends on several factors, some of them being the robustness/capabilities of the visualization packages associated and the type of data to be plotted.</p>
+<p>For first (at most second) degree piecewise polynomials defined in straight edge/faces meshes, Paraview (or any other software that reads the EnSight format) is a very good choice. A trick to use Paraview (or any other visualization software that plots first order geometrical and finite elements) to visualize high degree polynomials in curved meshes, is to use an interpolation operator built on high order nodes associated with the polynomial space, see~<a class="el" href="citelist.html#CITEREF_gpena_cprudhomme_acomen">[10]</a>. However, for high degree polynomials or meshes with curved elements, <a class="el" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator.">Gmsh</a> <a href="http://geuz.org/gmsh">http://geuz.org/gmsh</a> is prefered due to its adaptive visualization algorithm for this type of finite/geometrical element, see<a class="el" href="citelist.html#CITEREF_Gmsh">[5]</a>.</p>
+<p>To illustrate both approaches in visualizing high degree polynomials in curved meshes, we plot, in the Figures below, the nodal projection of the function <img class="formulaInl" alt="$f(x,y)=\cos(5x) \sin(5y)$" src="form_572.png"/> in the unit circle onto several function spaces. Notice the improved <code>look</code> of the projection using high degree polynomials instead of linear projections in a finer mesh. We remark also that the difference between the two approaches fades away as we increase the degree of the polynomials and the order of the geometrical elements. However, the additional cost of building the piecewise first order finite element space associated with the finer mesh, the calculation of the projection onto this space and the smoothness of the graphics makes <a class="el" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator.">Gmsh</a>'s approach more appealing to visualize this type of finite elements. We highlight that these algorithms are available for meshes composed only of simplices or quadrilaterals (see <a class="el" href="Notations.html">Mathematical Concepts and Notations</a>), in 1D, 2D and 3D.</p>
+<center> <table  border="0px">
+<tr>
+<td style="width:30%"><div class="image">
+<img src="circle_p1p1.png" alt="circle_p1p1.png"/>
+<div class="caption">
+P1</div></div>
+ </td><td style="width:30%"><div class="image">
+<img src="circle_p2p2.png" alt="circle_p2p2.png"/>
+</div>
+ </td><td style="width:30%"><div class="image">
+<img src="circle_p2p2_p1interpolator.png" alt="circle_p2p2_p1interpolator.png"/>
+</div>
+  </td></tr>
+<tr>
+<td><center> <img class="formulaInl" alt="$u$" src="form_227.png"/>: <img class="formulaInl" alt="$P_1$" src="form_573.png"/>, <img class="formulaInl" alt="$P_2/P_2$" src="form_574.png"/> and <img class="formulaInl" alt="$P_2/P_2$" src="form_574.png"/> with <img class="formulaInl" alt="$P_1$" src="form_573.png"/> interpolation </center>  </td></tr>
+<tr>
+<td width="15%"><div class="image">
+<img src="circle_p3p3.png" alt="circle_p3p3.png"/>
+</div>
+ </td><td width="15%"><div class="image">
+<img src="circle_p3p3_p1interpolator.png" alt="circle_p3p3_p1interpolator.png"/>
+</div>
+ </td><td width="15%"><div class="image">
+<img src="circle_p4p4.png" alt="circle_p4p4.png"/>
+</div>
+ </td><td width="15%"><div class="image">
+<img src="circle_p4p4_p1interpolator.png" alt="circle_p4p4_p1interpolator.png"/>
+</div>
+ </td><td width="15%"><div class="image">
+<img src="circle_p5p5.png" alt="circle_p5p5.png"/>
+</div>
+ </td><td width="15%"><div class="image">
+<img src="circle_p5p5_p1interpolator.png" alt="circle_p5p5_p1interpolator.png"/>
+</div>
+  </td></tr>
+<tr>
+<td><center> <img class="formulaInl" alt="$u$" src="form_227.png"/>: <img class="formulaInl" alt="$P_1$" src="form_573.png"/>, <img class="formulaInl" alt="$P_2/P_2$" src="form_574.png"/> and <img class="formulaInl" alt="$P_2/P_2$" src="form_574.png"/> with <img class="formulaInl" alt="$P_1$" src="form_573.png"/> interpolation </center>  </td></tr>
+</table>
+</center><p>To further illustrate the capabilities of the <a class="el" href="namespaceFeel.html">Feel</a>'s exporter to <a class="el" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator.">Gmsh</a>, we plot in Figures 1D and 3D functions defined in the <img class="formulaInl" alt="$[-1,1]$" src="form_184.png"/> interval and the unit sphere, respectively.</p>
+<center> <table  border="0px">
+<tr>
+<td width="25%"><div class="image">
+<img src="sphere_p1.png" alt="sphere_p1.png"/>
+</div>
+ </td><td width="25%"><div class="image">
+<img src="sphere_p2.png" alt="sphere_p2.png"/>
+</div>
+ </td><td width="25%"><div class="image">
+<img src="sphere_p3.png" alt="sphere_p3.png"/>
+</div>
+ </td><td width="25%"><div class="image">
+<img src="sphere_p4.png" alt="sphere_p4.png"/>
+</div>
+  </td></tr>
+<tr>
+<td><center>Low to high order visualisation of <img class="formulaInl" alt="$u$" src="form_227.png"/></center>  </td></tr>
+</table>
+</center><h1><a class="anchor" id="Visualisation"></a>
 Visualisation</h1>
-<p>We would like to visualise the function <img class="formulaInl" alt="$u=\sin(\pi x)$" src="form_548.png"/> over <img class="formulaInl" alt="$\Omega=\{(x,y) \in \mathbb{R}^2 | x^2 + y^2 < 1\}$" src="form_549.png"/>. <img class="formulaInl" alt="$\Omega$" src="form_210.png"/> is approximated by <img class="formulaInl" alt="$\Omega_h$" src="form_519.png"/>.</p>
-<p>To define <img class="formulaInl" alt="$\Omega$" src="form_210.png"/> and <img class="formulaInl" alt="$u$" src="form_229.png"/>, the code reads </p>
+<p>We would like to visualise the function <img class="formulaInl" alt="$u=\sin(\pi x)$" src="form_575.png"/> over <img class="formulaInl" alt="$\Omega=\{(x,y) \in \mathbb{R}^2 | x^2 + y^2 < 1\}$" src="form_576.png"/>. <img class="formulaInl" alt="$\Omega$" src="form_208.png"/> is approximated by <img class="formulaInl" alt="$\Omega_h$" src="form_543.png"/>.</p>
+<p>To define <img class="formulaInl" alt="$\Omega$" src="form_208.png"/> and <img class="formulaInl" alt="$u$" src="form_227.png"/>, the code reads </p>
 <div class="fragment"><div class="line">    <span class="keyword">auto</span> mesh = unitCircle&lt;2&gt;(); <span class="comment">// ``order 2&#39;&#39; circle</span></div>
 <div class="line">    <span class="keyword">auto</span> Xh = Pch&lt;2&gt;( mesh ); <span class="comment">// $\mathbb{p}_2$ space</span></div>
 <div class="line">    <span class="keyword">auto</span> v = <a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">project</a>( _space=Xh, _range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>(mesh),</div>
 <div class="line">                    _expr=sin(pi*Px()));</div>
-</div><!-- fragment --><p> We start with an <code><a class="el" href="classFeel_1_1Exporter.html" title="export Feel generated data to some file formatsUse the visitor and factory pattern.">Exporter</a></code> object that allows to visualise the <img class="formulaInl" alt="$P_1$" src="form_550.png"/> interpolant of <img class="formulaInl" alt="$u$" src="form_229.png"/> over</p>
+</div><!-- fragment --><p> We start with an <code><a class="el" href="classFeel_1_1Exporter.html" title="export Feel generated data to some file formatsUse the visitor and factory pattern.">Exporter</a></code> object that allows to visualise the <img class="formulaInl" alt="$P_1$" src="form_573.png"/> interpolant of <img class="formulaInl" alt="$u$" src="form_227.png"/> over</p>
 <p><a href="#" class="top">top</a> </p>
 <hr/>
  </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed May 15 2013 06:51:12 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+Generated on Fri May 17 2013 11:46:26 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

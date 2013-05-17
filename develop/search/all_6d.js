@@ -219,5 +219,5 @@ var searchData=
   ['myintegrals_2ecpp',['myintegrals.cpp',['../myintegrals_8cpp.html',1,'']]],
   ['mylid',['myLID',['../classFeel_1_1DataMap.html#ae2636e7ea59b7ebe6608082f7923b1aa',1,'Feel::DataMap']]],
   ['mymesh_2ecpp',['mymesh.cpp',['../mymesh_8cpp.html',1,'']]],
-  ['mathematical_20notations',['Mathematical Notations',['../Notations.html',1,'']]]
+  ['mathematical_20concepts_20and_20notations',['Mathematical Concepts and Notations',['../Notations.html',1,'']]]
 ];

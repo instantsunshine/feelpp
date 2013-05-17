@@ -114,9 +114,9 @@ $(document).ready(function(){initNavTree('classFeel_1_1PolynomialSet.html','');}
 class Feel::PolynomialSet&lt; Poly, PolySetType &gt;</h3>
 
 <p>a Set of polynomials </p>
-<p>This class represents a set of polynomials <img class="formulaInl" alt="$ {p_i}_{i=1...N} $" src="form_195.png"/> defined in a certain basis given by the template argument. The coefficients of the polynomials in the basis are represented by a matrix whose line represents the polynomials and columns the basis index <img class="formulaInl" alt="$ C_{i,j} = \mathcal{R}( p_i)_j $" src="form_196.png"/> where <img class="formulaInl" alt="$\mathcal{R}$" src="form_197.png"/> is the mapping between the polynomial and its coefficients. We have that the polynomial set is represented as follows: </p>
+<p>This class represents a set of polynomials <img class="formulaInl" alt="$ {p_i}_{i=1...N} $" src="form_193.png"/> defined in a certain basis given by the template argument. The coefficients of the polynomials in the basis are represented by a matrix whose line represents the polynomials and columns the basis index <img class="formulaInl" alt="$ C_{i,j} = \mathcal{R}( p_i)_j $" src="form_194.png"/> where <img class="formulaInl" alt="$\mathcal{R}$" src="form_195.png"/> is the mapping between the polynomial and its coefficients. We have that the polynomial set is represented as follows: </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[p_i = \sum_j=1^N \mathcal{R}( p_i )_j \phi_j\]" src="form_198.png"/>
+<img class="formulaDsp" alt="\[p_i = \sum_j=1^N \mathcal{R}( p_i )_j \phi_j\]" src="form_196.png"/>
 </p>
 <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd></dd></dl>
@@ -453,13 +453,13 @@ template&lt;typename Poly, template&lt; uint16_type &gt; class PolySetType&gt; <
 </div><div class="memdoc">
 
 <p>derivatives of <a class="el" href="classFeel_1_1Dubiner.html" title="Dubiner polynomial orthonormal basis.">Dubiner</a> polynomials the derivatives are computed at the nodes of the lattice </p>
-<p>Derivate with respect to the <img class="formulaInl" alt="$\ell$" src="form_200.png"/> coordinates at the nodes where the polynomials basis have been constructed.</p>
+<p>Derivate with respect to the <img class="formulaInl" alt="$\ell$" src="form_198.png"/> coordinates at the nodes where the polynomials basis have been constructed.</p>
 <p>We construct the matrix </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{eqnarray*} A_{i,j} &amp;= \frac{\partial p_i(x_j)}{\partial x_\ell}\\ &amp;= \sum_{k=1}^N \mathcal{R}(p_i)_k \frac{\partial \phi_k(x_j)}{\partial x_\ell} \end{eqnarray*}" src="form_201.png"/>
+<img class="formulaDsp" alt="\begin{eqnarray*} A_{i,j} &amp;= \frac{\partial p_i(x_j)}{\partial x_\ell}\\ &amp;= \sum_{k=1}^N \mathcal{R}(p_i)_k \frac{\partial \phi_k(x_j)}{\partial x_\ell} \end{eqnarray*}" src="form_199.png"/>
 </p>
 <ul>
-<li>l the derivation index <img class="formulaInl" alt="$\ell$" src="form_200.png"/> </li>
+<li>l the derivation index <img class="formulaInl" alt="$\ell$" src="form_198.png"/> </li>
 <li>__pts a column oriented matrix contained the node coordinates (in the columns).</li>
 </ul>
 <dl class="section return"><dt>Returns</dt><dd>the matrix <img class="formulaInl" alt="$A$" src="form_4.png"/> <ul>
@@ -620,7 +620,7 @@ template&lt;typename AE &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>evaluate all polynomials of the set at a set of nodes</p>
-<p>Constructs <img class="formulaInl" alt="$A_{i,j} = p_i(x_j) = \sum_{k=1}^N \mathcal{R}(p_i)_k \phi_k(x_j)$" src="form_199.png"/></p>
+<p>Constructs <img class="formulaInl" alt="$A_{i,j} = p_i(x_j) = \sum_{k=1}^N \mathcal{R}(p_i)_k \phi_k(x_j)$" src="form_197.png"/></p>
 <ul>
 <li>__pts a column oriented matrix contained the node coordinates (in the columns).</li>
 </ul>
@@ -1134,7 +1134,7 @@ template&lt;typename Poly, template&lt; uint16_type &gt; class PolySetType&gt; <
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed May 15 2013 06:51:18 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+Generated on Fri May 17 2013 11:46:33 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

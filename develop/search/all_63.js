@@ -35,7 +35,7 @@ var searchData=
   ['compspace',['compSpace',['../classFeel_1_1FunctionSpace.html#a5f5a494915874f9c7ab01bd67b6f8bfd',1,'Feel::FunctionSpace']]],
   ['computationaltimestatistics',['computationalTimeStatistics',['../classFeel_1_1CRB.html#a859c151122fa4104dd7700f926c7ad93',1,'Feel::CRB']]],
   ['computeaffinedecomposition',['computeAffineDecomposition',['../classFeel_1_1CRBModel.html#ae1c64ea134a6ee99d6376d6f8967e534',1,'Feel::CRBModel::computeAffineDecomposition()'],['../classFeel_1_1CRBModelTrilinear.html#ab3670e0d3353cf8246c7bb8713b9f423',1,'Feel::CRBModelTrilinear::computeAffineDecomposition()']]],
-  ['computebetaqm',['computeBetaQm',['../classFeel_1_1CRBModel.html#aaeb4f52b9f0c2fed81845949b58bf306',1,'Feel::CRBModel::computeBetaQm()'],['../classFeel_1_1CRBModelTrilinear.html#a95e97cdd7b2b6ae9c1fab27e1b785b52',1,'Feel::CRBModelTrilinear::computeBetaQm()'],['../classConvectionCrb.html#a13a33eb5842a72f8688d66b978046ca8',1,'ConvectionCrb::computeBetaQm()']]],
+  ['computebetaqm',['computeBetaQm',['../classFeel_1_1CRBModel.html#aaeb4f52b9f0c2fed81845949b58bf306',1,'Feel::CRBModel::computeBetaQm()'],['../classFeel_1_1CRBModelTrilinear.html#a95e97cdd7b2b6ae9c1fab27e1b785b52',1,'Feel::CRBModelTrilinear::computeBetaQm()'],['../classConvectionCrb.html#a18adb6ea2a44952d146b2d124ce9eff9',1,'ConvectionCrb::computeBetaQm()']]],
   ['computeconditioning',['computeConditioning',['../classFeel_1_1CRB.html#a641db99e003d2c860fc7682993fffa91',1,'Feel::CRB']]],
   ['computeerrorestimationefficiencyindicator',['computeErrorEstimationEfficiencyIndicator',['../classFeel_1_1CRB.html#a9e1d3f886f35357eb0fd93330c543228',1,'Feel::CRB']]],
   ['computeresidualnorm',['computeResidualNorm',['../classFeel_1_1Aitken.html#a49e55c70cab51f33bb8c79f3ccc6dc02',1,'Feel::Aitken']]],

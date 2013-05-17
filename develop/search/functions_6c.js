@@ -31,7 +31,7 @@ var searchData=
   ['localtoglobalindicesoncluster',['localToGlobalIndicesOnCluster',['../classFeel_1_1DofTable.html#ac05a60609ca34116f1a1af629a7bed11',1,'Feel::DofTable']]],
   ['localtoglobalmap',['localToGlobalMap',['../classFeel_1_1DofTable.html#a3b92f037c89de4b808e1d3c16ea5cdab',1,'Feel::DofTable']]],
   ['localtoglobalsigns',['localToGlobalSigns',['../classFeel_1_1DofTable.html#a85f9a74b3beb5487bb171751ae3b819e',1,'Feel::DofTable']]],
-  ['log',['log',['../classPsLogger.html#ac40b5e398513bd6db8ff41972e15b807',1,'PsLogger']]],
+  ['log',['log',['../classFeel_1_1PsLogger.html#a3c4ce13cbcf63b671928171d16689e84',1,'Feel::PsLogger']]],
   ['logequidistribute',['logEquidistribute',['../classFeel_1_1ParameterSpace_1_1Sampling.html#a7e548c709c2414474877004bda9e8147',1,'Feel::ParameterSpace::Sampling']]],
   ['logequidistributed',['logEquidistributed',['../classFeel_1_1ParameterSpace.html#a3f1aad049517877600bf7f1774477495',1,'Feel::ParameterSpace']]],
   ['logmiddle',['logMiddle',['../classFeel_1_1ParameterSpace.html#adc264707fd47a365269248b4b1d5b291',1,'Feel::ParameterSpace']]],

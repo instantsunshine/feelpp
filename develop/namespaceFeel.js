@@ -186,6 +186,7 @@ var namespaceFeel =
     [ "Principal", "classFeel_1_1Principal.html", "classFeel_1_1Principal" ],
     [ "problem", "classFeel_1_1problem.html", "classFeel_1_1problem" ],
     [ "Projector", "classFeel_1_1Projector.html", "classFeel_1_1Projector" ],
+    [ "PsLogger", "classFeel_1_1PsLogger.html", "classFeel_1_1PsLogger" ],
     [ "RankUp", "structFeel_1_1RankUp.html", "structFeel_1_1RankUp" ],
     [ "Reference", "classFeel_1_1Reference.html", null ],
     [ "RegionMarker2", "structFeel_1_1RegionMarker2.html", "structFeel_1_1RegionMarker2" ],

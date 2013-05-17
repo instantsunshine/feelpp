@@ -225,11 +225,11 @@ integrate</h2>
 </div><!-- fragment --><h2><a class="anchor" id="Integrals_Computing"></a>
 Computing my first Integrals</h2>
 <p>This part explains how to integrate on a mesh with <a href="http://www.feelpp.org">Feel++</a> (source <code>"doc/manual/tutorial/myintegrals.cpp"</code>).</p>
-<p>Let's consider the domain <img class="formulaInl" alt="$\Omega=[0,1]^d$" src="form_557.png"/> and associated meshes.<br/>
+<p>Let's consider the domain <img class="formulaInl" alt="$\Omega=[0,1]^d$" src="form_583.png"/> and associated meshes.<br/>
  Here, we want to integrate the following function <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} f(x,y,z) = x^2 + y^2 + z^2 \end{aligned} $" src="form_558.png"/></center><p><br/>
- on the whole domain <img class="formulaInl" alt="$\Omega$" src="form_210.png"/> and on part of the boundary <img class="formulaInl" alt="$\Omega$" src="form_210.png"/>.</p>
+<center> <img class="formulaInl" alt="$ \begin{aligned} f(x,y,z) = x^2 + y^2 + z^2 \end{aligned} $" src="form_584.png"/></center><p><br/>
+ on the whole domain <img class="formulaInl" alt="$\Omega$" src="form_208.png"/> and on part of the boundary <img class="formulaInl" alt="$\Omega$" src="form_208.png"/>.</p>
 <p>There is the appropriate code : </p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span></div>
 <div class="line">main( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv )</div>
@@ -240,25 +240,25 @@ Computing my first Integrals</h2>
 <div class="line">                     _about=about( _name=<span class="stringliteral">&quot;myintegrals&quot;</span> ,</div>
 <div class="line">                                   _author=<span class="stringliteral">&quot;Feel++ Consortium&quot;</span>,</div>
 <div class="line">                                   _email=<span class="stringliteral">&quot;feelpp-devel@feelpp.org&quot;</span> ) );</div>
-<div class="line">                                 </div>
+<div class="line"></div>
 <div class="line">    <span class="comment">// create the mesh (specify the dimension of geometric entity)</span></div>
 <div class="line">    <span class="keyword">auto</span> mesh = unitHypercube&lt;3&gt;();</div>
-<div class="line">                                 </div>
+<div class="line"></div>
 <div class="line">    <span class="comment">// our function to integrate</span></div>
 <div class="line">    <span class="keyword">auto</span> f = Px()*Px() + Py()*Py() + Pz()*Pz();</div>
-<div class="line">                                 </div>
+<div class="line"></div>
 <div class="line">    <span class="comment">// compute integral of f (global contribution)</span></div>
 <div class="line">    <span class="keywordtype">double</span> intf_1 = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range = <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ),</div>
 <div class="line">                               _expr = f ).evaluate()( 0,0 );</div>
-<div class="line">                                 </div>
+<div class="line"></div>
 <div class="line">    <span class="comment">// compute integral of f (local contribution)</span></div>
 <div class="line">    <span class="keywordtype">double</span> intf_2 = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range = <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ),</div>
 <div class="line">                               _expr = f ).evaluate(<span class="keyword">false</span>)( 0,0 );</div>
-<div class="line">                                 </div>
+<div class="line"></div>
 <div class="line">    <span class="comment">// compute integral f on boundary</span></div>
 <div class="line">    <span class="keywordtype">double</span> intf_3 = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range = <a class="code" href="namespaceFeel.html#a6d4deea03257c3f53b0e9df514a7bf00">boundaryfaces</a>( mesh ),</div>
 <div class="line">                               _expr = f ).evaluate()( 0,0 );</div>
-<div class="line">                                 </div>
+<div class="line"></div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;int global ; local ; boundary&quot;</span> &lt;&lt; std::endl</div>
 <div class="line">              &lt;&lt; intf_1 &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; intf_2 &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; intf_3 &lt;&lt; std::endl;</div>
 <div class="line">}</div>
@@ -294,9 +294,9 @@ project</h2>
 <div class="line">              _expr = constant( 300 ) );</div>
 </div><!-- fragment --><h2><a class="anchor" id="Mean"></a>
 mean</h2>
-<p>Let <img class="formulaInl" alt="$f$" src="form_214.png"/> a bounded function on domain <img class="formulaInl" alt="$\Omega$" src="form_210.png"/>. You can evaluate the mean value : <br/>
+<p>Let <img class="formulaInl" alt="$f$" src="form_212.png"/> a bounded function on domain <img class="formulaInl" alt="$\Omega$" src="form_208.png"/>. You can evaluate the mean value : <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} \bar{f}&amp;=\frac{1}{|\Omega|}\int_\Omega f\\ &amp;=\frac{1}{\int\limits_\Omega 1}\int_\Omega f. \end{aligned} $" src="form_559.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ \begin{aligned} \bar{f}&amp;=\frac{1}{|\Omega|}\int_\Omega f\\ &amp;=\frac{1}{\int\limits_\Omega 1}\int_\Omega f. \end{aligned} $" src="form_585.png"/></center><p><br/>
 </p>
 <p><b>Interface :</b><br/>
  </p>
@@ -323,9 +323,9 @@ mean</h2>
 Norms</h1>
 <h2><a class="anchor" id="NormL2"></a>
 normL2</h2>
-<p>Let <img class="formulaInl" alt="$f \in L^2(\Omega)$" src="form_560.png"/> you can evaluate the L2 norm : <br/>
+<p>Let <img class="formulaInl" alt="$f \in L^2(\Omega)$" src="form_586.png"/> you can evaluate the L2 norm : <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} \parallel f\parallel_{L^2(\Omega)}=\sqrt{\int_\Omega |f|^2} \end{aligned} $" src="form_561.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ \begin{aligned} \parallel f\parallel_{L^2(\Omega)}=\sqrt{\int_\Omega |f|^2} \end{aligned} $" src="form_587.png"/></center><p><br/>
 </p>
 <p><b>Interface :</b><br/>
  </p>
@@ -351,9 +351,9 @@ normL2</h2>
 <div class="line">                           _expr=( idv( p )-mean_p - p_exact ) );</div>
 </div><!-- fragment --><h2><a class="anchor" id="NormH1"></a>
 normH1</h2>
-<p>In the same idea, you can evaluate the H1 norm or semi norm, for any function <img class="formulaInl" alt="$f \in H^1(\Omega)$" src="form_562.png"/> : <br/>
+<p>In the same idea, you can evaluate the H1 norm or semi norm, for any function <img class="formulaInl" alt="$f \in H^1(\Omega)$" src="form_588.png"/> : <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} \parallel f \parallel_{H^1(\Omega)}&amp;=\sqrt{\int_\Omega |f|^2+|\nabla f|^2}\\ &amp;=\sqrt{\int_\Omega |f|^2+\nabla f*\nabla f^T}\\ |f|_{H^1(\Omega)}&amp;=\sqrt{\int_\Omega |\nabla f|^2} \end{aligned} $" src="form_563.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ \begin{aligned} \parallel f \parallel_{H^1(\Omega)}&amp;=\sqrt{\int_\Omega |f|^2+|\nabla f|^2}\\ &amp;=\sqrt{\int_\Omega |f|^2+\nabla f*\nabla f^T}\\ |f|_{H^1(\Omega)}&amp;=\sqrt{\int_\Omega |\nabla f|^2} \end{aligned} $" src="form_589.png"/></center><p><br/>
 </p>
 <p><b>Interface :</b><br/>
  </p>
@@ -387,9 +387,9 @@ normH1</h2>
 <div class="line">                         _grad_expr=(gradv(u)-trans(gradg)) );</div>
 </div><!-- fragment --><h2><a class="anchor" id="normLinf"></a>
 normLinf</h2>
-<p>Let <img class="formulaInl" alt="$f$" src="form_214.png"/> a bounded function on domain <img class="formulaInl" alt="$\Omega$" src="form_210.png"/>. You can evaluate the infinity norm : <br/>
+<p>Let <img class="formulaInl" alt="$f$" src="form_212.png"/> a bounded function on domain <img class="formulaInl" alt="$\Omega$" src="form_208.png"/>. You can evaluate the infinity norm : <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \parallel f \parallel_\infty=\sup_\Omega(|f|) $" src="form_564.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ \parallel f \parallel_\infty=\sup_\Omega(|f|) $" src="form_590.png"/></center><p><br/>
 </p>
 <p><b>Interface :</b><br/>
  : </p>
@@ -417,7 +417,7 @@ normLinf</h2>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed May 15 2013 06:51:12 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+Generated on Fri May 17 2013 11:46:26 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

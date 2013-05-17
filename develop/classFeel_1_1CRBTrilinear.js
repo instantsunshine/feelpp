@@ -42,6 +42,7 @@ var classFeel_1_1CRBTrilinear =
     [ "CRBTrilinear", "classFeel_1_1CRBTrilinear.html#a5d5584a6daf09c1730f089823bf24248", null ],
     [ "~CRBTrilinear", "classFeel_1_1CRBTrilinear.html#a5747b7cfadc6a23ec8f063b08a055a03", null ],
     [ "checkOrthonormality", "classFeel_1_1CRBTrilinear.html#a4726ac4daabb57d6af995784998ff074", null ],
+    [ "computationalTimeStatistics", "classFeel_1_1CRBTrilinear.html#a74e4a162bf17b50582acc8b0d6739b78", null ],
     [ "dimension", "classFeel_1_1CRBTrilinear.html#a3193992d36e09e73e558c44d2a5e1da0", null ],
     [ "displayMatrix", "classFeel_1_1CRBTrilinear.html#a24b003fbf3eb843be8cf339829436c21", null ],
     [ "displayVector", "classFeel_1_1CRBTrilinear.html#af274f76dabce85a9c3c87543c23c49dd", null ],

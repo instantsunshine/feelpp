@@ -3,7 +3,7 @@ var NAVTREE =
   [ "Feel++", "index.html", [
     [ "Introduction", "index.html", null ],
     [ "Credits", "md_Credits.html", null ],
-    [ "Mathematical Notations", "Notations.html", [
+    [ "Mathematical Concepts and Notations", "Notations.html", [
       [ "Polynomial Library", "Notations.html#PolynomialNotations", [
         [ "Convexes", "Notations.html#Notations_Convexes", null ],
         [ "Prime basis: L^2 Orthonormal Polynomials", "Notations.html#Notations_PrimeBasis", null ],
@@ -33,6 +33,7 @@ var NAVTREE =
     [ "Quick Reference", "QuickRef.html", "QuickRef" ],
     [ "Learning by Examples", "Learning.html", "Learning" ],
     [ "Miscellaneous", "Miscellaneous.html", "Miscellaneous" ],
+    [ "Projection", "Projection.html", null ],
     [ "Copyright", "md_COPYING.html", null ],
     [ "Bibliographic References", "citelist.html", null ],
     [ "Feel Objects", "annotated.html", "annotated" ]
@@ -42,30 +43,30 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classConvection.html#a49c77a380ace50637f4e567ab7f4a2a8",
-"classFeel_1_1Air.html#a228959c93d4586003a00c1f075b1f102",
-"classFeel_1_1BackendEigen.html#a758f3e7e06b3b8ab9bf0cf67ec3157de",
-"classFeel_1_1CRB.html#adacd0345d2ac6bcf723efffc55d03fc4",
-"classFeel_1_1CRBModelTrilinear.html#a9ac49ba261661bf4a18da5e25d66943d",
-"classFeel_1_1DataMap.html#a8b33f1ae8055c9225cb641c4850f3624",
-"classFeel_1_1Dubiner.html#a836e67e1513578dc194b0ab934921121",
-"classFeel_1_1ExporterGnuplot.html",
-"classFeel_1_1FunctionSpace.html#afec10ecfe1c702cdc2acdb25e449acb3",
-"classFeel_1_1GeoMap_1_1Context.html#a9f76ecea6acbfa6cb6d72f3f0fe76196",
-"classFeel_1_1GraphCSR.html#a5188fa1ad8554998600eaf317e32c995",
-"classFeel_1_1Legendre.html#a1f36100abb047acc7ae1d0486b68d0b2",
-"classFeel_1_1MatrixSparse.html#a6127986ed9b1bcd2a5c61e9b3e5b716b",
-"classFeel_1_1Mesh0D.html#a9135396d9a2a6df16253545cfb1828db",
-"classFeel_1_1Operator.html#a3fcd7f19a4af7887e7376cc1ac92f764",
-"classFeel_1_1OpusApp.html#a5b0a06f978b501c6950dfa226fbf1315",
-"classFeel_1_1PointSetQuadrature.html#a6ca38bbe16edec47b01078648701d504",
-"classFeel_1_1SVD.html#a09462c4f9f073af64a3bd5242e6a631d",
-"classFeel_1_1SolverNonLinear.html#a9026428561a9764c611d9ba47c7937e4",
-"classFeel_1_1SystemImplicitNonLinear.html#a0c75471bcc9101051e4e3b7de2e36bca",
-"classFeel_1_1TimeSet_1_1Step.html#adb215c2938206cf0ddd5c7be5c995026",
-"classFeel_1_1VectorUblas.html#ac021eca36c5c83b82197b851c9bb69c0",
-"classFeel_1_1functional_1_1IntegralMomentOfDivergence.html#a23ebefe1b2b9f8bc943a152bd4713eab",
-"md_Credits.html"
+"classConvection.html#a12709ef7734fee7de52be61acc7fc3cc",
+"classFeel_1_1Air.html#a1a04e138e3851122a6e9a9e5312c26dd",
+"classFeel_1_1BackendEigen.html#a7302b378e2eb20202c4d7fd3ddabeb0e",
+"classFeel_1_1CRB.html#ad76f72d97fec4edee81757b9cdc480de",
+"classFeel_1_1CRBModelTrilinear.html#aa9a4c20c6174b54bc750bb25b66c3f38",
+"classFeel_1_1DataMap.html#a9491ee580ee0caa1ce90d8b1bdcf23e0",
+"classFeel_1_1Dubiner.html#a8debb58341991fc8b0a0cfe78438d842",
+"classFeel_1_1ExporterGnuplot.html#a080f8a9416993e063fa06a7310948468",
+"classFeel_1_1FunctionSpace.html#affbca73b54c06fcacd48524e8c618ce7",
+"classFeel_1_1GeoMap_1_1Context.html#aa58e65be8a6d13a11b5af923254eaf9a",
+"classFeel_1_1GraphCSR.html#a5335adc1551456840535b9460e841f44",
+"classFeel_1_1Legendre.html#a1fd6149fb70226a9f3519302ce0235b1",
+"classFeel_1_1MatrixSparse.html#a6732a796c995d4cb15671ca57cc30afe",
+"classFeel_1_1Mesh0D.html#a99f63f4ac8ade17dd334c654b346e7bb",
+"classFeel_1_1Operator.html#a6f6bd9d1fdb866a92f17208c0bd90b12",
+"classFeel_1_1OpusApp.html#a601536c8d49e48978abead8a9d38d3b2",
+"classFeel_1_1PointSetQuadrature.html#a74b633ce86a5efaefa2098c80d4a521a",
+"classFeel_1_1ResistanceLaplacian.html#af43127789726887d9744131a2ddb45ce",
+"classFeel_1_1SolverNonLinear.html#a8a4c45fc3038105f0049898884900444",
+"classFeel_1_1SystemImplicitLinear.html#ae4626fcecfc2253096d4fd9553da048a",
+"classFeel_1_1TimeSet_1_1Step.html#ad7f0cff32a51bb174f6aca632aeddd0c",
+"classFeel_1_1VectorUblas.html#aba73202f14c7c6f46ee64d430a3e86d7",
+"classFeel_1_1functional_1_1IntegralMomentOfDerivative.html#adb4c87dbe71115057bc64db4d703db2c",
+"md_COPYING.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

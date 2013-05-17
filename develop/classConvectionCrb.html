@@ -125,15 +125,13 @@ $(document).ready(function(){initNavTree('classConvectionCrb.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a9566465a18d09ded942ef7c9d6b77331"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9566465a18d09ded942ef7c9d6b77331"></a>
+<tr class="memitem:abc27e1572e3ad6bd911187f4a10dd4ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc27e1572e3ad6bd911187f4a10dd4ce"></a>
 typedef boost::tuple<br class="typebreak"/>
 &lt; std::vector&lt; std::vector<br class="typebreak"/>
 &lt; sparse_matrix_ptrtype &gt;<br class="typebreak"/>
  &gt;, std::vector&lt; std::vector<br class="typebreak"/>
-&lt; std::vector&lt; vector_ptrtype &gt;<br class="typebreak"/>
- &gt; &gt;, std::vector&lt; std::vector<br class="typebreak"/>
-&lt; element_ptrtype &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>affine_decomposition_type</b></td></tr>
-<tr class="separator:a9566465a18d09ded942ef7c9d6b77331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+&lt; std::vector&lt; vector_ptrtype &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>affine_decomposition_type</b></td></tr>
+<tr class="separator:abc27e1572e3ad6bd911187f4a10dd4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a951e290494e0885c7b6b1330d309d085"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a951e290494e0885c7b6b1330d309d085"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Backend.html">backend_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>backend_ptrtype</b></td></tr>
@@ -284,10 +282,11 @@ backend_type::sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="b
 typedef <br class="typebreak"/>
 <a class="el" href="classFeel_1_1MatrixSparse.html">backend_type::sparse_matrix_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>sparse_matrix_type</b></td></tr>
 <tr class="separator:ae2d16322544f685c995db966f570cb05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36a9070be5f951b47a73a9da84a20d1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36a9070be5f951b47a73a9da84a20d1e"></a>
+<tr class="memitem:a65e55300213b5e5c1b8d6e7c540211f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65e55300213b5e5c1b8d6e7c540211f8"></a>
 typedef ModelCrbBase<br class="typebreak"/>
-&lt; ParameterDefinition &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>super_type</b></td></tr>
-<tr class="separator:a36a9070be5f951b47a73a9da84a20d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+&lt; ParameterDefinition, <br class="typebreak"/>
+FunctionSpaceDefinition &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>super_type</b></td></tr>
+<tr class="separator:a65e55300213b5e5c1b8d6e7c540211f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f88d274dd2cdb40098b662f43ec71b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f88d274dd2cdb40098b662f43ec71b3"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1FunctionSpace.html">T_space_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>T_space_ptrtype</b></td></tr>
@@ -354,37 +353,17 @@ typedef Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><b>ve
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a84c9faf1aae1b84d59de70c529e16a4d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84c9faf1aae1b84d59de70c529e16a4d"></a>
-beta_vector_type const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionCrb.html#a84c9faf1aae1b84d59de70c529e16a4d">betaAqm</a> () const </td></tr>
-<tr class="memdesc:a84c9faf1aae1b84d59de70c529e16a4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the coefficient vector <br/></td></tr>
-<tr class="separator:a84c9faf1aae1b84d59de70c529e16a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab47d21e8e9467b2bb8b2d8e612f1ee83"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab47d21e8e9467b2bb8b2d8e612f1ee83"></a>
-<a class="el" href="classConvectionCrb.html#a961a537b3f22b9d265b6c142a3d72ddc">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionCrb.html#ab47d21e8e9467b2bb8b2d8e612f1ee83">betaAqm</a> (int q, int m) const </td></tr>
-<tr class="memdesc:ab47d21e8e9467b2bb8b2d8e612f1ee83"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the coefficient vector <code>q</code> component <br/></td></tr>
-<tr class="separator:ab47d21e8e9467b2bb8b2d8e612f1ee83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f602f372b5268d4a8d947d205c6cbfd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f602f372b5268d4a8d947d205c6cbfd"></a>
-std::vector&lt; beta_vector_type &gt;<br class="typebreak"/>
- const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionCrb.html#a5f602f372b5268d4a8d947d205c6cbfd">betaFqm</a> () const </td></tr>
-<tr class="memdesc:a5f602f372b5268d4a8d947d205c6cbfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the coefficient vector <br/></td></tr>
-<tr class="separator:a5f602f372b5268d4a8d947d205c6cbfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0c5d5dd1b4b1c6a3e95212b25a9e9ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0c5d5dd1b4b1c6a3e95212b25a9e9ef"></a>
-<a class="el" href="classConvectionCrb.html#a961a537b3f22b9d265b6c142a3d72ddc">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>betaInitialGuessQm</b> (int q, int m) const </td></tr>
-<tr class="separator:ac0c5d5dd1b4b1c6a3e95212b25a9e9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adae6807da5ef4ef5d9677d4ddcfcefdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConvectionCrb.html#a961a537b3f22b9d265b6c142a3d72ddc">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionCrb.html#adae6807da5ef4ef5d9677d4ddcfcefdc">betaL</a> (int l, int q, int m) const </td></tr>
-<tr class="separator:adae6807da5ef4ef5d9677d4ddcfcefdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b28678b90b40f20781ae230c8168a3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b28678b90b40f20781ae230c8168a3a"></a>
 affine_decomposition_type&#160;</td><td class="memItemRight" valign="bottom"><b>computeAffineDecomposition</b> ()</td></tr>
 <tr class="separator:a1b28678b90b40f20781ae230c8168a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13a33eb5842a72f8688d66b978046ca8"><td class="memItemLeft" align="right" valign="top">boost::tuple&lt; beta_vector_type, <br class="typebreak"/>
-std::vector&lt; beta_vector_type &gt;<br class="typebreak"/>
-, beta_vector_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionCrb.html#a13a33eb5842a72f8688d66b978046ca8">computeBetaQm</a> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, double time=0)</td></tr>
-<tr class="memdesc:a13a33eb5842a72f8688d66b978046ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the beta coefficient for both bilinear and linear form  <a href="#a13a33eb5842a72f8688d66b978046ca8">More...</a><br/></td></tr>
-<tr class="separator:a13a33eb5842a72f8688d66b978046ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33877f9bcbc86eae5455a8aa615c0e1f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33877f9bcbc86eae5455a8aa615c0e1f"></a>
+<tr class="memitem:a18adb6ea2a44952d146b2d124ce9eff9"><td class="memItemLeft" align="right" valign="top">boost::tuple&lt; beta_vector_type, <br class="typebreak"/>
+std::vector&lt; beta_vector_type &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionCrb.html#a18adb6ea2a44952d146b2d124ce9eff9">computeBetaQm</a> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, double time=0)</td></tr>
+<tr class="memdesc:a18adb6ea2a44952d146b2d124ce9eff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the beta coefficient for both bilinear and linear form  <a href="#a18adb6ea2a44952d146b2d124ce9eff9">More...</a><br/></td></tr>
+<tr class="separator:a18adb6ea2a44952d146b2d124ce9eff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894f28ad547b5cd5072c276bb588e66e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a894f28ad547b5cd5072c276bb588e66e"></a>
 boost::tuple&lt; beta_vector_type, <br class="typebreak"/>
-std::vector&lt; beta_vector_type &gt;<br class="typebreak"/>
-, beta_vector_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>computeBetaQm</b> (element_type const &amp;T, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, double time=0)</td></tr>
-<tr class="separator:a33877f9bcbc86eae5455a8aa615c0e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+std::vector&lt; beta_vector_type &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>computeBetaQm</b> (element_type const &amp;T, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, double time=0)</td></tr>
+<tr class="separator:a894f28ad547b5cd5072c276bb588e66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6efd81b10d5127b26354b3b6364cfd3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6efd81b10d5127b26354b3b6364cfd3"></a>
 sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>computeTrilinearForm</b> (const element_type &amp;X)</td></tr>
 <tr class="separator:af6efd81b10d5127b26354b3b6364cfd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -405,9 +384,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>exportResults</b> (el
 <tr class="memitem:a899175c4758e12c27ffd86f0a4b911cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a899175c4758e12c27ffd86f0a4b911cf"></a>
 space_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>functionSpace</b> ()</td></tr>
 <tr class="separator:a899175c4758e12c27ffd86f0a4b911cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1ffa26e13df3147fe60197833c86308"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1ffa26e13df3147fe60197833c86308"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
-<tr class="separator:ae1ffa26e13df3147fe60197833c86308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca5da5dcf13c73a5bff9e344d2f04ad6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca5da5dcf13c73a5bff9e344d2f04ad6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>initModel</b> ()</td></tr>
+<tr class="separator:aca5da5dcf13c73a5bff9e344d2f04ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a030e86e05db5380bf319b265d71adeec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a030e86e05db5380bf319b265d71adeec"></a>
 sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>innerProduct</b> ()</td></tr>
 <tr class="separator:a030e86e05db5380bf319b265d71adeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -552,53 +531,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_is_initialized</b><
 <tr class="separator:a9f0dbc1abe8d5c7fbccd2a29687ce683 inherit pro_attribs_classFeel_1_1ModelCrbBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="adae6807da5ef4ef5d9677d4ddcfcefdc"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classConvectionCrb.html#a961a537b3f22b9d265b6c142a3d72ddc">value_type</a> ConvectionCrb::betaL </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>q</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>m</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>the <code>q</code> -th term of the <code>l</code> -th output </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a13a33eb5842a72f8688d66b978046ca8"></a>
+<a class="anchor" id="a18adb6ea2a44952d146b2d124ce9eff9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boost::tuple&lt; beta_vector_type, std::vector&lt; beta_vector_type &gt;, beta_vector_type &gt; ConvectionCrb::computeBetaQm </td>
+          <td class="memname">boost::tuple&lt; beta_vector_type, std::vector&lt; beta_vector_type &gt; &gt; ConvectionCrb::computeBetaQm </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;&#160;</td>
           <td class="paramname"><em>mu</em>, </td>
@@ -669,7 +607,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_is_initialized</b><
         </tr>
       </table>
 </div><div class="memdoc">
-<p>solve <img class="formulaInl" alt="$ M u = f $" src="form_376.png"/> </p>
+<p>solve <img class="formulaInl" alt="$ M u = f $" src="form_401.png"/> </p>
 
 </div>
 </div>
@@ -877,7 +815,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_is_initialized</b><
   </dd>
 </dl>
 
-<p>References <a class="el" href="classConvectionCrb.html#a13a33eb5842a72f8688d66b978046ca8">computeBetaQm()</a>, <a class="el" href="classConvectionCrb.html#aae368a987ceec6d263808cd8d161419f">exportResults()</a>, and <a class="el" href="classConvectionCrb.html#a4bc1198ecf66b447b755bcfe5d53ca92">vm()</a>.</p>
+<p>References <a class="el" href="classConvectionCrb.html#a18adb6ea2a44952d146b2d124ce9eff9">computeBetaQm()</a>, <a class="el" href="classConvectionCrb.html#aae368a987ceec6d263808cd8d161419f">exportResults()</a>, and <a class="el" href="classConvectionCrb.html#a4bc1198ecf66b447b755bcfe5d53ca92">vm()</a>.</p>
 
 </div>
 </div>
@@ -932,7 +870,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_is_initialized</b><
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed May 15 2013 06:51:12 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+Generated on Fri May 17 2013 11:46:27 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

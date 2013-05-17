@@ -116,19 +116,19 @@ $(document).ready(function(){initNavTree('LaplacianHarmonic.html','');});
 </p>
 <h1><a class="anchor" id="LaplacianHarmonicProblem"></a>
 Problem</h1>
-<p>This program <code>feelpp_doc_harmonic</code> shows how to solve for the harmonic extension of a displacement given at a boundary of a domain. Given <img class="formulaInl" alt="$\eta$" src="form_377.png"/> on <img class="formulaInl" alt="$\partial \Omega$" src="form_378.png"/>, find <img class="formulaInl" alt="$\eta^H$" src="form_379.png"/> such that</p>
+<p>This program <code>feelpp_doc_harmonic</code> shows how to solve for the harmonic extension of a displacement given at a boundary of a domain. Given <img class="formulaInl" alt="$\eta$" src="form_402.png"/> on <img class="formulaInl" alt="$\partial \Omega$" src="form_403.png"/>, find <img class="formulaInl" alt="$\eta^H$" src="form_404.png"/> such that</p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \begin{split} -\Delta \eta^H &amp;= 0 \mbox{ in } \Omega\\ \eta^H &amp;=\eta \mbox{ on } \partial \Omega. \end{split} \]" src="form_380.png"/>
+<img class="formulaDsp" alt="\[ \begin{split} -\Delta \eta^H &amp;= 0 \mbox{ in } \Omega\\ \eta^H &amp;=\eta \mbox{ on } \partial \Omega. \end{split} \]" src="form_405.png"/>
 </p>
-<p><img class="formulaInl" alt="$\eta^H$" src="form_379.png"/> is the <b>harmonic</b> <b>extension</b> of <img class="formulaInl" alt="$\eta$" src="form_377.png"/> in <img class="formulaInl" alt="$\Omega$" src="form_210.png"/>, then we move the mesh vertices using <img class="formulaInl" alt="$\eta^H$" src="form_379.png"/>.</p>
-<dl class="section remark"><dt>Remarks</dt><dd>Note that the degrees of freedom of <img class="formulaInl" alt="$\eta^H$" src="form_379.png"/> must coincide with the mesh vertices which implies that the mesh order (the order of the geometric transformation) should be the same as <img class="formulaInl" alt="$\eta^H$" src="form_379.png"/>. If <img class="formulaInl" alt="$\eta^H$" src="form_379.png"/> is piecewise polynomial of degree <img class="formulaInl" alt="$N$" src="form_381.png"/> then the geometric transformation associated to the mesh should be of degree <img class="formulaInl" alt="$N$" src="form_381.png"/> too, i.e. <code>Mesh&lt;Simplex&lt;2,N&gt;&gt;</code>.</dd></dl>
+<p><img class="formulaInl" alt="$\eta^H$" src="form_404.png"/> is the <b>harmonic</b> <b>extension</b> of <img class="formulaInl" alt="$\eta$" src="form_402.png"/> in <img class="formulaInl" alt="$\Omega$" src="form_208.png"/>, then we move the mesh vertices using <img class="formulaInl" alt="$\eta^H$" src="form_404.png"/>.</p>
+<dl class="section remark"><dt>Remarks</dt><dd>Note that the degrees of freedom of <img class="formulaInl" alt="$\eta^H$" src="form_404.png"/> must coincide with the mesh vertices which implies that the mesh order (the order of the geometric transformation) should be the same as <img class="formulaInl" alt="$\eta^H$" src="form_404.png"/>. If <img class="formulaInl" alt="$\eta^H$" src="form_404.png"/> is piecewise polynomial of degree <img class="formulaInl" alt="$N$" src="form_406.png"/> then the geometric transformation associated to the mesh should be of degree <img class="formulaInl" alt="$N$" src="form_406.png"/> too, i.e. <code>Mesh&lt;Simplex&lt;2,N&gt;&gt;</code>.</dd></dl>
 <h1><a class="anchor" id="LaplacianHarmonicResults"></a>
 Results</h1>
 <p>We consider the following displacement</p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \eta = ( 0, 0.08 (x+0.5) (x-1) (x^2-1) )^T \]" src="form_382.png"/>
+<img class="formulaDsp" alt="\[ \eta = ( 0, 0.08 (x+0.5) (x-1) (x^2-1) )^T \]" src="form_407.png"/>
 </p>
-<p>on the bottom boundary and <img class="formulaInl" alt="$\eta$" src="form_377.png"/> being 0 on the remaining borders and we look for <img class="formulaInl" alt="$\eta^H$" src="form_379.png"/> as a <img class="formulaInl" alt="$P_2$" src="form_213.png"/> piecewise polynomial function in <img class="formulaInl" alt="$\Omega$" src="form_210.png"/> and the mesh associated is of the same order i.e. <code>Mesh&lt;Simplex&lt;2,2&gt;&gt;</code>.</p>
+<p>on the bottom boundary and <img class="formulaInl" alt="$\eta$" src="form_402.png"/> being 0 on the remaining borders and we look for <img class="formulaInl" alt="$\eta^H$" src="form_404.png"/> as a <img class="formulaInl" alt="$P_2$" src="form_211.png"/> piecewise polynomial function in <img class="formulaInl" alt="$\Omega$" src="form_208.png"/> and the mesh associated is of the same order i.e. <code>Mesh&lt;Simplex&lt;2,2&gt;&gt;</code>.</p>
 <h1><a class="anchor" id="LaplacianHarmonicImplementation"></a>
 Implementation</h1>
 <p>The implementation is as follows </p>
@@ -193,7 +193,7 @@ Implementation</h1>
 </div><!-- fragment --></div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed May 15 2013 06:51:11 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+Generated on Fri May 17 2013 11:46:26 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

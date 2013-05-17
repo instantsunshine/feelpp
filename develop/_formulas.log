@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_9) (format=latex 2012.10.9)  15 MAY 2013 06:51
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_9) (format=latex 2012.10.9)  17 MAY 2013 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -569,24 +569,24 @@ LaTeX Font Info:    Try loading font information for U+bbold on input line 193.
 203] [204] [205] [206] [207] [208] [209] [210] [211] [212] [213] [214] [215] [2
 16] [217] [218] [219] [220] [221] [222] [223] [224] [225] [226] [227] [228] [22
 9] [230] [231] [232] [233] [234] [235] [236] [237] [238] [239] [240] [241] [242
-] [243] [244] [245] [246] [247] [248]
+] [243] [244] [245] [246]
 
-! LaTeX Error: \begin{equation} on input line 754 ended by \end{equation*}.
+! LaTeX Error: \begin{equation} on input line 748 ended by \end{equation*}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.754 ...mma \end{aligned} \right. \end{equation*}
+l.748 ...mma \end{aligned} \right. \end{equation*}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[249] [250] [251] [252] [253] [254] [255] [256] [257] [258] [259] [260] [261] [
-262] [263] [264] [265]
+[247] [248] [249] [250] [251] [252] [253] [254] [255] [256] [257] [258] [259] [
+260] [261] [262] [263]
 ! Undefined control sequence.
-l.805 $ B = \mathlarger
+l.799 $ B = \mathlarger
                         \int_\Gamma \kappa v w $
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -594,9 +594,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[266]
+[264]
 ! Undefined control sequence.
-l.808 $ A = \mathlarger
+l.802 $ A = \mathlarger
                         \int_\Omega \eta v w + \kappa \nabla v \cdot \nabla w $
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -604,12 +604,44 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[267] [268] [269] [270] [271] [272] [273] [274] [275] [276] [277] [278] [279] [
-280] [281] [282] [283] [284] [285] [286] [287] [288] [289] [290] [291] [292] [2
-93] [294] [295] [296] [297] [298] [299] [300] [301] [302] [303] [304] [305] [30
-6] [307] [308] [309] [310] [311] [312] [313] [314] [315] [316] [317] [318] [319
-] [320] [321] [322] [323] [324] [325] [326] [327] [328] [329] [330] [331] [332]
-[333] [334] [335] [336] [337] [338] [339] [340] [341] [342]
+[265] [266] [267]
+! Undefined control sequence.
+<recently read> \unit 
+                      
+l.811 $\unit
+            {60}{\micro\meter}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.811 $\unit{60}{\micro
+                       \meter}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.811 $\unit{60}{\micro\meter
+                             }$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[268] [269] [270] [271] [272] [273] [274] [275] [276] [277] [278] [279] [280] [
+281] [282] [283] [284] [285] [286] [287] [288] [289] [290] [291] [292] [293] [2
+94] [295] [296] [297] [298] [299] [300] [301] [302] [303] [304] [305] [306] [30
+7] [308] [309] [310] [311] [312] [313] [314] [315] [316] [317] [318] [319] [320
+] [321] [322] [323] [324] [325] [326] [327] [328] [329] [330] [331] [332] [333]
+[334] [335] [336] [337] [338] [339] [340] [341] [342] [343] [344] [345] [346] [
+347] [348] [349] [350] [351] [352] [353] [354] [355] [356] [357] [358] [359] [3
+60] [361] [362] [363] [364] [365] [366] [367]
 
 ! LaTeX Error: Too many columns in eqnarray environment.
 
@@ -617,7 +649,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1036 ...partial T}{\partial t} & =& 0& \\ \kappa
+l.1111 ...partial T}{\partial t} & =& 0& \\ \kappa
                                                   _1 \frac{\partial T}{\part...
 
 Try typing  <return>  to proceed.
@@ -626,7 +658,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1036 ...}{\partial n} &= & 0 & \text{on } \Gamma
+l.1111 ...}{\partial n} &= & 0 & \text{on } \Gamma
                                                   _2 \text{ and } \Gamma_6\q...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -638,7 +670,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1036 ...text{ and } \Gamma_6\quad\quad \\ \kappa
+l.1111 ...text{ and } \Gamma_6\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 
 Try typing  <return>  to proceed.
@@ -647,7 +679,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra }, or forgotten $.
 <template> \egroup 
                    \endtemplate 
-l.1036 ...text{ and } \Gamma_6\quad\quad \\ \kappa
+l.1111 ...text{ and } \Gamma_6\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -658,7 +690,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1036 ...text{ and } \Gamma_6\quad\quad \\ \kappa
+l.1111 ...text{ and } \Gamma_6\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -666,7 +698,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1036 ...text{ and } \Gamma_6\quad\quad \\ \kappa
+l.1111 ...text{ and } \Gamma_6\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -677,7 +709,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1036 ...}{\partial n} &= & 0 & \text{on } \Gamma
+l.1111 ...}{\partial n} &= & 0 & \text{on } \Gamma
                                                   _5 , \Gamma_7 \text{ and }...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -689,7 +721,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1036 ...text{ and } \Gamma_8\quad\quad \\ \kappa
+l.1111 ...text{ and } \Gamma_8\quad\quad \\ \kappa
                                                   _1 \frac{\partial T}{\part...
 
 Try typing  <return>  to proceed.
@@ -698,7 +730,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra }, or forgotten $.
 <template> \egroup 
                    \endtemplate 
-l.1036 ...text{ and } \Gamma_8\quad\quad \\ \kappa
+l.1111 ...text{ and } \Gamma_8\quad\quad \\ \kappa
                                                   _1 \frac{\partial T}{\part...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -709,7 +741,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1036 ...text{ and } \Gamma_8\quad\quad \\ \kappa
+l.1111 ...text{ and } \Gamma_8\quad\quad \\ \kappa
                                                   _1 \frac{\partial T}{\part...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -717,7 +749,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1036 ...text{ and } \Gamma_8\quad\quad \\ \kappa
+l.1111 ...text{ and } \Gamma_8\quad\quad \\ \kappa
                                                   _1 \frac{\partial T}{\part...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -728,7 +760,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1036 ...= &- h( T - T_{amb}) & \text{on } \Gamma
+l.1111 ...= &- h( T - T_{amb}) & \text{on } \Gamma
                                                   _1\quad\quad \\ \kappa_2 \...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -740,7 +772,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1036 ... \text{on } \Gamma_1\quad\quad \\ \kappa
+l.1111 ... \text{on } \Gamma_1\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 
 Try typing  <return>  to proceed.
@@ -749,7 +781,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra }, or forgotten $.
 <template> \egroup 
                    \endtemplate 
-l.1036 ... \text{on } \Gamma_1\quad\quad \\ \kappa
+l.1111 ... \text{on } \Gamma_1\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -760,7 +792,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1036 ... \text{on } \Gamma_1\quad\quad \\ \kappa
+l.1111 ... \text{on } \Gamma_1\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -768,7 +800,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1036 ... \text{on } \Gamma_1\quad\quad \\ \kappa
+l.1111 ... \text{on } \Gamma_1\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -779,7 +811,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1036 ... n} &= & Q(1-e^{-t}) & \text{on } \Gamma
+l.1111 ... n} &= & Q(1-e^{-t}) & \text{on } \Gamma
                                                   _4\quad\quad \\ T_{|\varOm...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -791,7 +823,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1036 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
+l.1111 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
                                                   _{|\varOmega_1} &= &T_{| \...
 
 Try typing  <return>  to proceed.
@@ -800,7 +832,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra }, or forgotten $.
 <template> \egroup 
                    \endtemplate 
-l.1036 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
+l.1111 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
                                                   _{|\varOmega_1} &= &T_{| \...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -811,7 +843,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1036 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
+l.1111 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
                                                   _{|\varOmega_1} &= &T_{| \...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -819,7 +851,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1036 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
+l.1111 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
                                                   _{|\varOmega_1} &= &T_{| \...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -830,7 +862,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1036 ...= &T_{| \varOmega_2} & \text{on } \Gamma
+l.1111 ...= &T_{| \varOmega_2} & \text{on } \Gamma
                                                   _3\quad\quad \\ \kappa_1 \...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -842,7 +874,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1036 ... \text{on } \Gamma_3\quad\quad \\ \kappa
+l.1111 ... \text{on } \Gamma_3\quad\quad \\ \kappa
                                                   _1 \nabla T \cdot n &=& \k...
 
 Try typing  <return>  to proceed.
@@ -851,7 +883,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra }, or forgotten $.
 <template> \egroup 
                    \endtemplate 
-l.1036 ... \text{on } \Gamma_3\quad\quad \\ \kappa
+l.1111 ... \text{on } \Gamma_3\quad\quad \\ \kappa
                                                   _1 \nabla T \cdot n &=& \k...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -862,7 +894,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1036 ... \text{on } \Gamma_3\quad\quad \\ \kappa
+l.1111 ... \text{on } \Gamma_3\quad\quad \\ \kappa
                                                   _1 \nabla T \cdot n &=& \k...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -870,7 +902,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1036 ... \text{on } \Gamma_3\quad\quad \\ \kappa
+l.1111 ... \text{on } \Gamma_3\quad\quad \\ \kappa
                                                   _1 \nabla T \cdot n &=& \k...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -881,7 +913,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1036 ...a_2 \nabla T \cdot n & \text{on } \Gamma
+l.1111 ...a_2 \nabla T \cdot n & \text{on } \Gamma
                                                   _3\quad\quad \end{eqnarray}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -893,7 +925,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1036 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
+l.1111 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -901,7 +933,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra }, or forgotten $.
 <template> \egroup 
                    \endtemplate 
-l.1036 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
+l.1111 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -912,7 +944,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1036 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
+l.1111 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -920,7 +952,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1036 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
+l.1111 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -928,10 +960,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[343] [344] [345] [346] [347] [348] [349] [350] [351] [352] [353] [354] [355] [
-356]
+[368] [369] [370] [371] [372] [373] [374] [375] [376] [377] [378] [379] [380] [
+381]
 ! Misplaced alignment tab character &.
-l.1078 ... \kappa_i \int_{\varOmega_i} v\Delta T &
+l.1153 ... \kappa_i \int_{\varOmega_i} v\Delta T &
                                                    = 0 \end{equation*}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -940,9 +972,9 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[357]
+[382]
 ! Misplaced alignment tab character &.
-l.1081 ...al \varOmega_i} {(\nabla T \cdot n) v} &
+l.1156 ...al \varOmega_i} {(\nabla T \cdot n) v} &
                                                    = 0 \end{equation*}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -951,9 +983,9 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[358] [359] [360]
+[383] [384] [385]
 ! Misplaced alignment tab character &.
-l.1090 ..._3}{(\nabla T \cdot n) v}}_{\text{=0}} &
+l.1165 ..._3}{(\nabla T \cdot n) v}}_{\text{=0}} &
                                                    = 0 \end{equation*}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -962,11 +994,11 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[361] [362] [363] [364] [365] [366] [367] [368] [369] [370] [371] [372] [373] [
-374] [375] [376] [377] [378] [379] [380] [381] [382] [383] [384] [385] [386] [3
-87] [388] [389] [390] [391] [392]
+[386] [387] [388] [389] [390] [391] [392] [393] [394] [395] [396] [397] [398] [
+399] [400] [401] [402] [403] [404] [405] [406] [407] [408] [409] [410] [411] [4
+12] [413] [414] [415] [416] [417]
 ! Misplaced alignment tab character &.
-l.1186 \[ a(u,v)&
+l.1261 \[ a(u,v)&
                  =l(v) \;, \]
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -975,10 +1007,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[393] [394] [395] [396] [397] [398] [399] [400] [401] [402] [403] [404] [405] [
-406] [407] [408] [409] [410] [411] [412] [413]
+[418] [419] [420] [421] [422] [423] [424] [425] [426] [427] [428] [429] [430] [
+431] [432] [433] [434] [435] [436] [437] [438]
 ! Undefined control sequence.
-l.1249 ...uremath{{\bm B}}\xspace(t)=\nabla\cdot\B
+l.1324 ...uremath{{\bm B}}\xspace(t)=\nabla\cdot\B
                                                   (0)=0 \end{equation}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -986,9 +1018,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[414] [415] [416] [417] [418]
+[439] [440] [441] [442] [443]
 ! Undefined control sequence.
-l.1264 $ -\nu \Delta \bvec
+l.1339 $ -\nu \Delta \bvec
                           {u} + \nabla p = \bvec{f},\quad \nabla \cdot \bvec...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -997,7 +1029,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.1264 $ -\nu \Delta \bvec{u} + \nabla p = \bvec
+l.1339 $ -\nu \Delta \bvec{u} + \nabla p = \bvec
                                                 {f},\quad \nabla \cdot \bvec...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1006,7 +1038,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.1264 ...la p = \bvec{f},\quad \nabla \cdot \bvec
+l.1339 ...la p = \bvec{f},\quad \nabla \cdot \bvec
                                                   {u} = 0 $
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1014,9 +1046,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[419] [420] [421] [422] [423] [424]
+[444] [445] [446] [447] [448] [449]
 ! Undefined control sequence.
-l.1282 ...egin{aligned} -\epsilon\Delta u + \bbeta
+l.1357 ...egin{aligned} -\epsilon\Delta u + \bbeta
                                                    \cdot \nabla u + \mu u & ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1027,7 +1059,7 @@ and I'll forget about whatever was undefined.
 ! Missing delimiter (. inserted).
 <to be read again> 
                    $
-l.1282 ...tial\Omega \;, \\ \end{aligned} \right $
+l.1357 ...tial\Omega \;, \\ \end{aligned} \right $
                                                   
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1036,9 +1068,9 @@ braces don't get unbalanced. Otherwise just proceed.
 Acceptable delimiters are characters whose \delcode is
 nonnegative, or you can use `\delimiter <delimiter code>'.
 
-[425] [426]
+[450] [451]
 ! Undefined control sequence.
-l.1288 ...epsilon \Delta u\ v + \int_\Omega \bbeta
+l.1363 ...epsilon \Delta u\ v + \int_\Omega \bbeta
                                                    \cdot \nabla u\ v + \int_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1046,11 +1078,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[427] [428] [429] [430] [431] [432] [433]
+[452] [453] [454] [455] [456] [457] [458]
 ! Undefined control sequence.
 <recently read> \bbeta 
                        
-l.1309 $\bbeta
+l.1384 $\bbeta
               =(1,1)^T$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1058,11 +1090,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[434] [435] [436] [437] [438] [439] [440] [441] [442] [443]
+[459] [460] [461] [462] [463] [464] [465] [466] [467] [468]
 ! Missing delimiter (. inserted).
 <to be read again> 
                    $
-l.1339 ...}\; \Gamma \;, \\ \end{aligned} \right $
+l.1414 ...}\; \Gamma \;, \\ \end{aligned} \right $
                                                   
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1071,53 +1103,53 @@ braces don't get unbalanced. Otherwise just proceed.
 Acceptable delimiters are characters whose \delcode is
 nonnegative, or you can use `\delimiter <delimiter code>'.
 
-[444] [445] [446] [447] [448]
+[469] [470] [471] [472] [473]
 ! Extra \right.
-l.1354 ...cdot \mathbf v \;. \end{aligned} \right)
+l.1429 ...cdot \mathbf v \;. \end{aligned} \right)
                                                    $
 I'm ignoring a \right that had no matching \left.
 
-[449]
+[474]
 ! Extra \right.
-l.1357 ...cdot \mathbf n \;. \end{aligned} \right)
+l.1432 ...cdot \mathbf n \;. \end{aligned} \right)
                                                    $
 I'm ignoring a \right that had no matching \left.
 
-[450] [451]
+[475] [476]
 ! Extra \right.
-l.1363 ...mathbf u q = 0 \;, \end{aligned} \right)
+l.1438 ...mathbf u q = 0 \;, \end{aligned} \right)
                                                    $
 I'm ignoring a \right that had no matching \left.
 
-[452]
+[477]
 ! Extra \right.
-l.1366 ... f \cdot \mathbf v \end{aligned} \right)
+l.1441 ... f \cdot \mathbf v \end{aligned} \right)
                                                    $
 I'm ignoring a \right that had no matching \left.
 
-[453] [454] [455]
+[478] [479] [480]
 ! Extra \right.
-l.1375 ...= l((\mathbf v,q)) \end{aligned} \right)
+l.1450 ...= l((\mathbf v,q)) \end{aligned} \right)
                                                    $
 I'm ignoring a \right that had no matching \left.
 
-[456] [457] [458] [459] [460] [461] [462] [463] [464] [465] [466] [467] [468] [
-469] [470] [471] [472] [473] [474] [475] [476] [477] [478] [479] [480] [481] [4
-82] [483] [484] [485] [486] [487] [488] [489] [490] [491] [492] [493] [494] [49
-5] [496] [497] [498] [499] [500] [501] [502] [503] [504] [505] [506] [507] [508
-] [509] [510] [511] [512] [513] [514] [515] [516] [517] [518] [519] [520] [521]
-[522] [523] [524] [525] [526] [527] [528] [529] [530] [531] [532] [533] [534] [
-535] [536] [537] [538] [539] [540] [541] [542] [543] [544] [545] [546] [547] [5
-48] [549] [550] [551] [552] [553] [554] [555] [556] [557] [558] [559] [560] [56
-1] [562] [563] [564] [565] [566] [567] [568] [569] [570] [571] [572] [573] [574
-] [575] [576] [577] [578] [579] [580] [581] [582] [583] [584] [585] [586] [587]
-[588] [589] [590] [591] [592] [593] [594] [595] [596] [597] [598] [599] [600] [
-601] [602] [603] [604] [605] [606] [607] [608] [609] [610] [611] [612] [613] [6
-14] [615] [616] [617] [618] [619] [620] [621] [622]
+[481] [482] [483] [484] [485] [486] [487] [488] [489] [490] [491] [492] [493] [
+494] [495] [496] [497] [498] [499] [500] [501] [502] [503] [504] [505] [506] [5
+07] [508] [509] [510] [511] [512] [513] [514] [515] [516] [517] [518] [519] [52
+0] [521] [522] [523] [524] [525] [526] [527] [528] [529] [530] [531] [532] [533
+] [534] [535] [536] [537] [538] [539] [540] [541] [542] [543] [544] [545] [546]
+[547] [548] [549] [550] [551] [552] [553] [554] [555] [556] [557] [558] [559] [
+560] [561] [562] [563] [564] [565] [566] [567] [568] [569] [570] [571] [572] [5
+73] [574] [575] [576] [577] [578] [579] [580] [581] [582] [583] [584] [585] [58
+6] [587] [588] [589] [590] [591] [592] [593] [594] [595] [596] [597] [598] [599
+] [600] [601] [602] [603] [604] [605] [606] [607] [608] [609] [610] [611] [612]
+[613] [614] [615] [616] [617] [618] [619] [620] [621] [622] [623] [624] [625] [
+626] [627] [628] [629] [630] [631] [632] [633] [634] [635] [636] [637] [638] [6
+39] [640] [641] [642] [643] [644] [645] [646] [647] [648]
 ! Undefined control sequence.
 <recently read> \acos 
                       
-l.1876 $\acos
+l.1954 $\acos
              (f(\overrightarrow{x}))$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1125,11 +1157,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[623]
+[649]
 ! Undefined control sequence.
 <recently read> \asin 
                       
-l.1879 $\asin
+l.1957 $\asin
              (f(\overrightarrow{x}))$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1137,11 +1169,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[624]
+[650]
 ! Undefined control sequence.
 <recently read> \atan 
                       
-l.1882 $\atan
+l.1960 $\atan
              (f(\overrightarrow{x}))$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1149,15 +1181,15 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[625] [626] [627] [628] [629] [630] [631] [632] [633] [634] [635] [636] [637] [
-638] [639] [640] [641] [642] [643] [644] [645] [646] [647] [648] [649] [650] [6
-51] [652] [653] [654] [655] [656] [657] [658] [659] [660] [661] [662] [663] [66
-4] [665] [666] [667] [668] [669] [670] [671] [672] [673] [674] [675] [676] [677
-] [678] [679] [680] [681] [682]
+[651] [652] [653] [654] [655] [656] [657] [658] [659] [660] [661] [662] [663] [
+664] [665] [666] [667] [668] [669] [670] [671] [672] [673] [674] [675] [676] [6
+77] [678] [679] [680] [681] [682] [683] [684] [685] [686] [687] [688] [689] [69
+0] [691] [692] [693] [694] [695] [696] [697] [698] [699] [700] [701] [702] [703
+] [704] [705] [706] [707] [708]
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2056 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
+l.2134 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
                                                   _F = 0\}\\ \mathbb{H}_h &=...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1168,7 +1200,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2056 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
+l.2134 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
                                                   _F = 0\}\\ \mathbb{H}_h &=...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1177,14 +1209,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Double subscript.
-l.2056 ...orall F \in \mathcal{F}^i_h\ \jump{v_h}_
+l.2134 ...orall F \in \mathcal{F}^i_h\ \jump{v_h}_
                                                   F = 0\}\\ \mathbb{H}_h &= ...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2056 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
+l.2134 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
                                                   _F = \jump{\nabla v_h}_F =...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1195,7 +1227,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2056 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
+l.2134 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
                                                   _F = \jump{\nabla v_h}_F =...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1204,14 +1236,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Double subscript.
-l.2056 ...orall F \in \mathcal{F}^i_h\ \jump{v_h}_
+l.2134 ...orall F \in \mathcal{F}^i_h\ \jump{v_h}_
                                                   F = \jump{\nabla v_h}_F = ...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2056 ...F}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}
+l.2134 ...F}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}
                                                   _F = 0\}\\ \CR_h &= \{ v_h...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1222,7 +1254,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2056 ...F}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}
+l.2134 ...F}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}
                                                   _F = 0\}\\ \CR_h &= \{ v_h...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1231,14 +1263,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Double subscript.
-l.2056 ...}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}_
+l.2134 ...}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}_
                                                   F = 0\}\\ \CR_h &= \{ v_h ...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2056 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
+l.2134 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
                                                    = 0 \}\\ \RaTu_h &= \{ v_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1249,7 +1281,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2056 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
+l.2134 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
                                                    = 0 \}\\ \RaTu_h &= \{ v_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1260,7 +1292,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2056 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
+l.2134 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
                                                    = 0 \}\\ \RT_h&=\{\bm{v}_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1271,7 +1303,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2056 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
+l.2134 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
                                                    = 0 \}\\ \RT_h&=\{\bm{v}_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1282,7 +1314,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2056 ...\calF^i_h\ \jump{\bm{v}_h \cdot \normal}
+l.2134 ...\calF^i_h\ \jump{\bm{v}_h \cdot \normal}
                                                   _F = 0 \}\\ \N_h&=\{\bm{v}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1293,7 +1325,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2056 ...\calF^i_h\ \jump{\bm{v}_h \cdot \normal}
+l.2134 ...\calF^i_h\ \jump{\bm{v}_h \cdot \normal}
                                                   _F = 0 \}\\ \N_h&=\{\bm{v}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1304,7 +1336,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2056 ...calF^i_h\ \jump{\bm{v}_h \times \normal}
+l.2134 ...calF^i_h\ \jump{\bm{v}_h \times \normal}
                                                   _F = 0 \} \end{aligned} \]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1315,7 +1347,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2056 ...calF^i_h\ \jump{\bm{v}_h \times \normal}
+l.2134 ...calF^i_h\ \jump{\bm{v}_h \times \normal}
                                                   _F = 0 \} \end{aligned} \]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1323,13 +1355,13 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[683] [684] [685] [686] [687] [688] [689] [690] [691] [692] [693] [694] [695] [
-696] [697] [698] [699] [700] [701] [702] [703] [704] [705] [706] [707] [708] [7
-09] [710] [711] [712] [713] [714] [715] [716] [717]
+[709] [710] [711] [712] [713] [714] [715] [716] [717] [718] [719] [720] [721] [
+722] [723] [724] [725] [726] [727] [728] [729] [730] [731] [732] [733] [734] [7
+35] [736] [737] [738] [739] [740] [741] [742]
 ! Undefined control sequence.
 <argument> \sqrt {\Gr 
                       }
-l.2161 ... \text{sur}\ \partial \Omega \end{split}
+l.2236 ... \text{sur}\ \partial \Omega \end{split}
                                                    \end{equation*}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1340,7 +1372,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \sqrt {\Gr 
                       }
-l.2161 ... \text{sur}\ \partial \Omega \end{split}
+l.2236 ... \text{sur}\ \partial \Omega \end{split}
                                                    \end{equation*}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1348,11 +1380,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[718]
+[743]
 ! Undefined control sequence.
 <recently read> \Gr 
                     
-l.2164 $\Gr
+l.2239 $\Gr
            $
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1360,11 +1392,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[719] [720]
+[744] [745]
 ! Undefined control sequence.
 <argument> \sqrt {\Gr 
                       }\Pr 
-l.2170 ...} &= 1\ \text{sur}\ \Gamma_3 \end{split}
+l.2245 ...} &= 1\ \text{sur}\ \Gamma_3 \end{split}
                                                    \end{equation*}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1375,7 +1407,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \sqrt {\Gr 
                       }\Pr 
-l.2170 ...} &= 1\ \text{sur}\ \Gamma_3 \end{split}
+l.2245 ...} &= 1\ \text{sur}\ \Gamma_3 \end{split}
                                                    \end{equation*}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1383,25 +1415,25 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[721] [722] [723] [724] [725] [726] [727] [728] [729] [730] [731] [732] [733] [
-734] [735] [736] [737] [738] [739] [740] [741] [742] [743] [744] [745] [746] [7
-47] [748] [749] [750] [751] [752] [753] [754] [755] [756] [757] [758] [759] [76
-0] [761] [762] [763] [764] [765] [766] [767] [768] [769] [770] [771] [772] [773
-] [774] [775] [776] [777] [778] [779] [780] [781] [782] [783] [784] [785] [786]
-[787] [788] [789] [790] [791] [792] [793] [794] [795] [796] [797] [798] [799] [
-800] [801] [802] [803] [804] [805] [806] [807] [808] [809] [810] [811] [812] [8
-13] [814] [815] [816] [817] [818] [819] [820] [821] (./_formulas.aux)
+[746] [747] [748] [749] [750] [751] [752] [753] [754] [755] [756] [757] [758] [
+759] [760] [761] [762] [763] [764] [765] [766] [767] [768] [769] [770] [771] [7
+72] [773] [774] [775] [776] [777] [778] [779] [780] [781] [782] [783] [784] [78
+5] [786] [787] [788] [789] [790] [791] [792] [793] [794] [795] [796] [797] [798
+] [799] [800] [801] [802] [803] [804] [805] [806] [807] [808] [809] [810] [811]
+[812] [813] [814] [815] [816] [817] [818] [819] [820] [821] [822] [823] [824] [
+825] [826] [827] [828] [829] [830] [831] [832] [833] [834] [835] [836] [837] [8
+38] [839] [840] [841] [842] [843] [844] (./_formulas.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 11218 strings out of 494764
- 204786 string characters out of 3171465
- 250125 words of memory out of 3000000
- 14186 multiletter control sequences out of 15000+200000
+ 11233 strings out of 494764
+ 205025 string characters out of 3171465
+ 250126 words of memory out of 3000000
+ 14201 multiletter control sequences out of 15000+200000
  18346 words of font info for 56 fonts, out of 3000000 for 9000
  134 hyphenation exceptions out of 8191
  70i,22n,59p,1012b,183s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on _formulas.dvi (821 pages, 185540 bytes).
+Output written on _formulas.dvi (844 pages, 192008 bytes).

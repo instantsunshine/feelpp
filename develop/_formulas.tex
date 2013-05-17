@@ -244,12 +244,6 @@ $A x = f$
 $A^T x = f$
 \pagebreak
 
-$A_{qm}$
-\pagebreak
-
-$L_qm$
-\pagebreak
-
 $C_K$
 \pagebreak
 
@@ -812,6 +806,87 @@ $ Av = \lambda B v $
 \pagebreak
 
 $\mu = \kappa = 1.$
+\pagebreak
+
+$\unit{60}{\micro\meter}$
+\pagebreak
+
+$Re=10^{-1}$
+\pagebreak
+
+$\Omega_f$
+\pagebreak
+
+$\Omega = \Omega_f \cup B$
+\pagebreak
+
+\begin{eqnarray} - 2 \nu \nabla \cdot \bm{D(u)} + \nabla p &=& 0 \: \text{ in } \Omega_f, \label{eq:stokes_1}\\ \nabla \cdot \bm{u} &=& 0 \: \text{ in } \Omega_f, \label{eq:stokes_2} \\ \bm{u} &=& \bm{f} \: \text{ on } \partial \Omega_f\setminus\partial B, \label{eq:stokes_3} \end{eqnarray}
+\pagebreak
+
+$\bm{u}$
+\pagebreak
+
+$\bm{D(u)} = \dfrac{\nabla \bm{u} + \nabla \bm{u}^T}{2}$
+\pagebreak
+
+$p$
+\pagebreak
+
+$\bm{f}$
+\pagebreak
+
+$\partial\Omega$
+\pagebreak
+
+$\partial B$
+\pagebreak
+
+$\lambda$
+\pagebreak
+
+$(\bm{u}, p, \lambda) \in H^1(\Omega_f)^2\times L^2_0(\Omega_f)\times\mathbb{R}$
+\pagebreak
+
+$\forall (\bm{v}, q, \mu) \in H^1(\Omega_f)^2\times L^2_0(\Omega_f)\times\mathbb{R}$
+\pagebreak
+
+\begin{eqnarray} 2 \nu \int_{\Omega_f} \bm{D(u)} : \bm{D(v)} - \int_{\Omega_f} p \nabla \cdot \bm{v} &&\nonumber\\ + \int_{\Omega_f} \lambda q &=& 0, \label{eq:varstokes_1}\\ \int_{\Omega_f} q \nabla \cdot \bm{u} &=& 0, \label{eq:varstokes_2} \\ \int_{\Omega_f} \mu p &=& 0, \label{eq:varstokes_4}\\ \bm{u} &=& \bm{f} \: \text{ on } \partial \Omega. \label{eq:varstokes_3}\nonumber \end{eqnarray}
+\pagebreak
+
+\[ \bm{D(u)} = 0, \: \text{ in } B. \label{eq:rigidbody} \]
+\pagebreak
+
+$\varepsilon$
+\pagebreak
+
+$(\bm{u},p, \lambda) \in H^1(\Omega)^2 \times L^2_0(\Omega) \times \mathbb{R}$
+\pagebreak
+
+$\forall (\bm{v}, q, \mu) \in H^1(\Omega)^2 \times L^2_0(\Omega) \times \mathbb{R}$
+\pagebreak
+
+\begin{eqnarray} 2 \nu \int_{\Omega} \bm{D(u)} : \bm{D(v)} - \int_{\Omega} p \nabla \cdot \bm{v} && \nonumber\\ +\int_{\Omega} \lambda q + \frac{2}{\varepsilon} \int_B \chi ( \bm{D(u)} : \bm{D(v)} ) &=& 0, \label{eq:varstokespenal_1}\\ \int_{\Omega} q \nabla \cdot \bm{u} &=& 0, \label{eq:varstokespenal_2} \\ \int_{\Omega} \mu p &=& 0, \label{eq:varstokespenal_4}\\ \bm{u} &=& \bm{f} \: \text{ on } \partial \Omega. \label{eq:varstokespenal_3}\nonumber \end{eqnarray}
+\pagebreak
+
+$\chi$
+\pagebreak
+
+$\Delta t$
+\pagebreak
+
+$(\bm{u}_n,p_n,\lambda_n)$
+\pagebreak
+
+$t_n=n\Delta t$
+\pagebreak
+
+$\bm{V}_n$
+\pagebreak
+
+$\bm{X}_n$
+\pagebreak
+
+\begin{eqnarray} \bm{V}_n &=& \frac{1}{\int_{\Omega} \chi} \int_{\Omega} \chi \, \bm{u}_n, \label{eq:velocitypart}\\ \bm{X}_{n+1} &=& \bm{X}_{n} + \Delta t \bm{V}_n, \label{eq:positionpart} \end{eqnarray}
 \pagebreak
 
 $i=1$
@@ -1528,9 +1603,6 @@ $p\leqslant d \leqslant 3$
 $\calT_h$
 \pagebreak
 
-$p$
-\pagebreak
-
 $d$
 \pagebreak
 
@@ -1651,13 +1723,19 @@ $\calE_h$
 $\calT_h, \calF_h, \calE_h, \calN_h$
 \pagebreak
 
+$f(x,y)=\cos(5x) \sin(5y)$
+\pagebreak
+
+$P_1$
+\pagebreak
+
+$P_2/P_2$
+\pagebreak
+
 $u=\sin(\pi x)$
 \pagebreak
 
 $\Omega=\{(x,y) \in \mathbb{R}^2 | x^2 + y^2 < 1\}$
-\pagebreak
-
-$P_1$
 \pagebreak
 
 \[ l(v)=\int_\Omega v \]
@@ -2071,9 +2149,6 @@ $\RT_h$
 $\N_h$
 \pagebreak
 
-$\bm{f}$
-\pagebreak
-
 $\bm{f}: \Omega_h \subset \R^d \mapsto \R^d$
 \pagebreak
 
@@ -2255,9 +2330,6 @@ $(\mathbf{u},p,\lambda)$
 \pagebreak
 
 $\nabla \cdot \mathbf{u} = 0$
-\pagebreak
-
-$\lambda$
 \pagebreak
 
 $h \rightarrow 0$
@@ -2462,9 +2534,6 @@ $ \begin{aligned} -\Delta u + u^\lambda = f,\quad u = 0 \text{ on } \partial \Om
 \pagebreak
 
 $\lambda \in \mathbb{R_+}$
-\pagebreak
-
-$\partial\Omega$
 \pagebreak
 
 $ \begin{aligned} -\Delta u + \lambda e^u = f,\quad u = 0 \text{ on } \partial \Omega \end{aligned} $

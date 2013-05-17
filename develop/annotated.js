@@ -7,7 +7,6 @@ var annotated =
     [ "Laplacian", "classLaplacian.html", "classLaplacian" ],
     [ "LShape", "classLShape.html", "classLShape" ],
     [ "MortarLaplacian", "classMortarLaplacian.html", "classMortarLaplacian" ],
-    [ "PsLogger", "classPsLogger.html", "classPsLogger" ],
     [ "ResidualEstimator", "classResidualEstimator.html", "classResidualEstimator" ],
     [ "ThreeFields", "classThreeFields.html", "classThreeFields" ]
 ];

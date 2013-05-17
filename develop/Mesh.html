@@ -148,7 +148,7 @@ Introduction</h1>
 </div><!-- fragment --><p>As always, we initialise the <a href="http://www.feelpp.org">Feel++</a> environment (see section <a class="el" href="FirstApp.html">First Feel++ Application</a> ).<br/>
  The <code><a class="el" href="namespaceFeel.html#ae825fbe687017d967220cf4674ac4f21">unitSquare()</a></code> will generate a mesh for a square geometry. <a href="http://www.feelpp.org">Feel++</a> provides several functions to automate the GMSH mesh generation for different topologies. These functions will create a geometry file <code></code>.geo and a mesh file <code></code>.msh. We can visualize them in GMSH. </p>
 <pre class="fragment">  gmsh &lt;entity_name&gt;.msh
-</pre><p>Finally we use the <code>exporter()</code> (see <a class="el" href="Exporter.html">Exporter</a> ) function to export the mesh for post processing. It will create by default a Paraview format file <code></code>.sos and an Ensight format file <code></code>.case. </p>
+</pre><p>Finally we use the <code>exporter()</code> (see <a class="el" href="Exporter.html">Post-Processing and Visualisation</a> ) function to export the mesh for post processing. It will create by default a Paraview format file <code></code>.sos and an Ensight format file <code></code>.case. </p>
 <pre class="fragment">  paraview &lt;app_name&gt;.sos
 </pre><p>In this section, we present some of the mesh definition and manipulation tools provided by <a href="http://www.feelpp.org">Feel++</a>. For more information you can also see <a class="el" href="classFeel_1_1Gmsh.html">Gmsh</a>.<br/>
 </p>
@@ -159,13 +159,13 @@ Basic Meshes</h1>
 <tr>
 <th>Feel++ function</th><th>Dim</th><th>Description&lt;/th </th></tr>
 <tr>
-<td><code><a class="el" href="namespaceFeel.html#a0a1f9cc8a7334a06b823b76866aaba04">unitSegment()</a></code>;</td><td>1</td><td>Build a mesh of the unit segment <img class="formulaInl" alt="$[0,1]$" src="form_675.png"/> </td></tr>
+<td><code><a class="el" href="namespaceFeel.html#a0a1f9cc8a7334a06b823b76866aaba04">unitSegment()</a></code>;</td><td>1</td><td>Build a mesh of the unit segment <img class="formulaInl" alt="$[0,1]$" src="form_701.png"/> </td></tr>
 <tr>
-<td><code><a class="el" href="namespaceFeel.html#ae825fbe687017d967220cf4674ac4f21">unitSquare()</a></code>;</td><td>2</td><td>Build a mesh of the unit square <img class="formulaInl" alt="$[0,1]^2$" src="form_676.png"/> using triangles </td></tr>
+<td><code><a class="el" href="namespaceFeel.html#ae825fbe687017d967220cf4674ac4f21">unitSquare()</a></code>;</td><td>2</td><td>Build a mesh of the unit square <img class="formulaInl" alt="$[0,1]^2$" src="form_702.png"/> using triangles </td></tr>
 <tr>
 <td><code><a class="el" href="namespaceFeel.html#acb52ee369375c35506744aa7b7f77850">unitCircle()</a></code>;</td><td>2</td><td>Build a mesh of the unit circle using triangles </td></tr>
 <tr>
-<td><code>unitHypercube()</code>;</td><td>3</td><td>Build a mesh of the unit hypercube <img class="formulaInl" alt="$[0,1]^3$" src="form_677.png"/> using tetrahedrons </td></tr>
+<td><code>unitHypercube()</code>;</td><td>3</td><td>Build a mesh of the unit hypercube <img class="formulaInl" alt="$[0,1]^3$" src="form_703.png"/> using tetrahedrons </td></tr>
 <tr>
 <td><code><a class="el" href="namespaceFeel.html#a5f23b38aeff08e0c33d858c57e5093ab">unitSphere()</a></code>;</td><td>3</td><td>Build a mesh of the unit sphere using tetrahedrons </td></tr>
 </table>
@@ -404,7 +404,7 @@ Todo</h1>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed May 15 2013 06:51:12 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+Generated on Fri May 17 2013 11:46:26 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
