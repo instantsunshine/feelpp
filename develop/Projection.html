@@ -103,12 +103,19 @@ $(document).ready(function(){initNavTree('Projection.html','');});
 <div class="title">Projection </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#NodalProjection">Nodal Projection</a></li>
+<li class="level1"><a href="#ProjectionProjector">Projection Operator</a></li>
+</ul>
+</div>
 <div class="textblock"><ul>
 <li><b>Previous:</b> <a class="el" href="Spaces.html">Function Spaces</a> </li>
 <li><b>Next:</b> <a class="el" href="Forms.html">Forms and Solver</a></li>
 </ul>
 <hr/>
-<p>Another important keyword is <code>project</code> which allows to compute the interpolant of an expression with respect to a nodal function space over a part of the mesh or the whole mesh. The interface is as follows </p>
+<h1><a class="anchor" id="NodalProjection"></a>
+Nodal Projection</h1>
+<p>An important keyword is <code>project</code> which allows to compute the interpolant of an expression with respect to a nodal function space over a part of the mesh or the whole mesh. The interface is as follows </p>
 <div class="fragment"><div class="line"><a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">project</a>( _space=&lt;nodal <span class="keyword">function</span> space in which the interpolant lives&gt;</div>
 <div class="line">         _range=&lt;domain range iterators&gt;,</div>
 <div class="line">         _expr=&lt;expression to be interpolated&gt;, .... )</div>
@@ -122,12 +129,19 @@ $(document).ready(function(){initNavTree('Projection.html','');});
 <div class="line"><span class="comment">// compute the x derivative of the coord function</span></div>
 <div class="line"><span class="keyword">auto</span> dx_coord = <a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">project</a>( _space=Xhv, _range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>(mesh), _expr=dxv(coord) );</div>
 <div class="line"><span class="keyword">auto</span> dy_coord = <a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">project</a>( _space=Xhv, _range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>(mesh), _expr=dyv(coord) );</div>
-</div><!-- fragment --><p><a href="#" class="top">top</a> </p>
+</div><!-- fragment --><h1><a class="anchor" id="ProjectionProjector"></a>
+Projection Operator</h1>
+<p>A projection operator is available that supports</p>
+<ul>
+<li><img class="formulaInl" alt="$L_2$" src="form_704.png"/> projection</li>
+<li><img class="formulaInl" alt="$H_1$" src="form_67.png"/> projection</li>
+</ul>
+<p><a href="#" class="top">top</a> </p>
 <hr/>
  </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri May 17 2013 11:46:26 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+Generated on Fri May 17 2013 13:06:20 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

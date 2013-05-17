@@ -135,7 +135,7 @@ var searchData=
   ['products_2ehpp',['products.hpp',['../products_8hpp.html',1,'']]],
   ['programname',['programName',['../classFeel_1_1AboutData.html#ac7becc92639e0e4500ac2fbefa2030c9',1,'Feel::AboutData']]],
   ['project',['project',['../namespaceFeel.html#ae89776231eca6bd68ba734da512759b3',1,'Feel']]],
-  ['projection',['Projection',['../Projection.html',1,'']]],
+  ['projection',['Projection',['../Projection.html',1,'QuickRef']]],
   ['projectiononpodspace',['projectionOnPodSpace',['../classFeel_1_1CRB.html#adda8104e4be7ee8a4e7996963c63be62',1,'Feel::CRB']]],
   ['projector',['projector',['../namespaceFeel.html#aa91126beaf7894e8c7f5198230253625',1,'Feel']]],
   ['projector',['Projector',['../classFeel_1_1vf_1_1details_1_1Projector.html',1,'Feel::vf::details']]],

@@ -63,6 +63,10 @@ var QuickRef =
         [ "normLinf", "Integrals.html#normLinf", null ]
       ] ]
     ] ],
+    [ "Projection", "Projection.html", [
+      [ "Nodal Projection", "Projection.html#NodalProjection", null ],
+      [ "Projection Operator", "Projection.html#ProjectionProjector", null ]
+    ] ],
     [ "Forms and Solver", "Forms.html", [
       [ "Building Forms", "Forms.html#Forms_Building", [
         [ "form1", "Forms.html#form1", null ],
