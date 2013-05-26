@@ -19,6 +19,7 @@ var classFeel_1_1GeoElement2D =
     [ "GeoElement2D", "classFeel_1_1GeoElement2D.html#a4ad051f61ec3924d0d85a6782753fc4a", null ],
     [ "GeoElement2D", "classFeel_1_1GeoElement2D.html#a3c89d115ac3c71ef358b384bc629f5b0", null ],
     [ "~GeoElement2D", "classFeel_1_1GeoElement2D.html#a5c9d2a863ae73fb30cf94ef758afe951", null ],
+    [ "BOOST_MPL_ASSERT_MSG", "classFeel_1_1GeoElement2D.html#a2b203c9a6313431755d5a5cb841e8464", null ],
     [ "disconnectSubEntities", "classFeel_1_1GeoElement2D.html#a107a058b282a81427bcf29f8336338bc", null ],
     [ "edge", "classFeel_1_1GeoElement2D.html#a5ad0ae48278bd7903ae72d241c3c1562", null ],
     [ "edge", "classFeel_1_1GeoElement2D.html#a547bc8176148376aa8c41d71d22c08b0", null ],
@@ -44,11 +45,5 @@ var classFeel_1_1GeoElement2D =
     [ "setEdge", "classFeel_1_1GeoElement2D.html#af71469f3216af4f496ff4472f3638612", null ],
     [ "setEdgePermutation", "classFeel_1_1GeoElement2D.html#ab47bd98aa8faba9d397ef9d0141c40f9", null ],
     [ "setFace", "classFeel_1_1GeoElement2D.html#ac0830602013b3f2753965b95258757f9", null ],
-    [ "boost::serialization::access", "classFeel_1_1GeoElement2D.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ],
-    [ "condition", "classFeel_1_1GeoElement2D.html#a2202ffde14a98ab4f4e5f52a2542a008", null ],
-    [ "nDim", "group__GeoEle.html#ga0731618735b8b2324dde62a84526ba64", null ],
-    [ "nOrder", "classFeel_1_1GeoElement2D.html#a4bd69c9310194aa93719fdffe7e74639", null ],
-    [ "nRealDim", "classFeel_1_1GeoElement2D.html#ae9fb8f3643b1611298209a462be45ca7", null ],
-    [ "numLocalEdges", "group__GeoEle.html#ga626a94933fc89b16a56e9c05716540a1", null ],
-    [ "numLocalFaces", "classFeel_1_1GeoElement2D.html#a400cead4308716f8865320ea7e100f71", null ]
+    [ "boost::serialization::access", "classFeel_1_1GeoElement2D.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ]
 ];

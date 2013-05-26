@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['solving_20linear_20algebra_20problems',['Solving Linear Algebra Problems',['../_solving_linear_algebra.html',1,'']]]
+  ['solid_20mechanics',['Solid Mechanics',['../SolidMechanics.html',1,'Learning']]],
+  ['stokes_20tutorial',['Stokes Tutorial',['../StokesTutorial.html',1,'FluidMechanics']]]
 ];

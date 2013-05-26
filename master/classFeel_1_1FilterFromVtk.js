@@ -8,6 +8,6 @@ var classFeel_1_1FilterFromVtk =
     [ "point_type", "classFeel_1_1FilterFromVtk.html#a936cf4b1a3f08792801ce88d673cdfad", null ],
     [ "FilterFromVtk", "classFeel_1_1FilterFromVtk.html#aa21a6a21b294c4a570302778e2e9f54a", null ],
     [ "~FilterFromVtk", "classFeel_1_1FilterFromVtk.html#a32abb2f99f0e84e13bd123817ab7c495", null ],
-    [ "visit", "classFeel_1_1FilterFromVtk.html#aebeacc4de84f38ffb45cdbc2557f3eaa", null ],
-    [ "nDim", "classFeel_1_1FilterFromVtk.html#ad1b9ddb580184847bdf9715f1b8379ab", null ]
+    [ "BOOST_STATIC_ASSERT", "classFeel_1_1FilterFromVtk.html#a5743c166430c3d3fda9d0763429c7c3d", null ],
+    [ "visit", "classFeel_1_1FilterFromVtk.html#aebeacc4de84f38ffb45cdbc2557f3eaa", null ]
 ];

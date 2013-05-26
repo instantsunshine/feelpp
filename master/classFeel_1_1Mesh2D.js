@@ -48,6 +48,5 @@ var classFeel_1_1Mesh2D =
     [ "updateEntitiesCoDimensionOnePermutation", "classFeel_1_1Mesh2D.html#aee01a9ad30cfd468932544bd70060198", null ],
     [ "updateEntitiesCoDimensionOnePermutation", "classFeel_1_1Mesh2D.html#a07eb52c32916cfd88152a492b6d33ca7", null ],
     [ "updateEntitiesCoDimensionTwo", "classFeel_1_1Mesh2D.html#a634eef66fde7f6ef2fc6b9fc037632d4", null ],
-    [ "boost::serialization::access", "classFeel_1_1Mesh2D.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ],
-    [ "nDim", "classFeel_1_1Mesh2D.html#a09a8bc65dd9fa69841c5a0c3c8198351", null ]
+    [ "boost::serialization::access", "classFeel_1_1Mesh2D.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ]
 ];

@@ -57,6 +57,5 @@ var classFeel_1_1Geo0D =
     [ "u", "group__GeoXD.html#ga34eb8201d0c8fdb61bd9e2718272e74e", null ],
     [ "v", "group__GeoXD.html#ga7b199d1ec35ab1bd392e19f660e35a0f", null ],
     [ "vertices", "group__GeoXD.html#ga23ad7f1fba9bd38e68e81ab0b06617d3", null ],
-    [ "boost::serialization::access", "group__GeoXD.html#gac98d07dd8f7b70e16ccb9a01abf56b9c", null ],
-    [ "nDim", "group__GeoXD.html#gabde4d34df01c18a1f4ca3f815eb1e824", null ]
+    [ "boost::serialization::access", "group__GeoXD.html#gac98d07dd8f7b70e16ccb9a01abf56b9c", null ]
 ];

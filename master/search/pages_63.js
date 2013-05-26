@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['computing_20integrals',['Computing integrals',['../_computing_integrals.html',1,'']]],
-  ['creating_20applications',['Creating applications',['../_creating_applications.html',1,'']]]
+  ['crash_20course',['Crash Course',['../CrashCourse.html',1,'GettingStarted']]],
+  ['copyright',['Copyright',['../md_COPYING.html',1,'']]],
+  ['credits',['Credits',['../md_Credits.html',1,'']]]
 ];

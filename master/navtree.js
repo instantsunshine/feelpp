@@ -2,9 +2,40 @@ var NAVTREE =
 [
   [ "Feel++", "index.html", [
     [ "Introduction", "index.html", null ],
-    [ "Getting Started", "usergroup0.html", "usergroup0" ],
-    [ "Quick Reference", "usergroup1.html", "usergroup1" ],
-    [ "Tutorial", "usergroup2.html", "usergroup2" ],
+    [ "Credits", "md_Credits.html", null ],
+    [ "Mathematical Concepts and Notations", "Notations.html", [
+      [ "Polynomial Library", "Notations.html#PolynomialNotations", [
+        [ "Convexes", "Notations.html#Notations_Convexes", null ],
+        [ "Prime basis: L^2 Orthonormal Polynomials", "Notations.html#Notations_PrimeBasis", null ],
+        [ "Point Sets on Convexes", "Notations.html#Notations_psetconvex", null ],
+        [ "Polynomial Set", "Notations.html#Notatiopns_Pset", null ],
+        [ "Finite Elements and Other Polynomial Basis", "Notations.html#Notations_fem", null ],
+        [ "Geometry", "Notations.html#Notations_Geometry", null ]
+      ] ],
+      [ "Mesh Notations", "Notations.html#MeshNotations", null ]
+    ] ],
+    [ "ChangeLog", "ChangeLog.html", [
+      [ "Feel++ Release 0.93.0", "ChangeLog.html#feelpp0930", [
+        [ "Changes", "ChangeLog.html#changes0930", null ],
+        [ "Features", "ChangeLog.html#features0930", null ],
+        [ "Issues", "ChangeLog.html#issues0930", null ]
+      ] ],
+      [ "Feel++ Release 0.92.0", "ChangeLog.html#feelpp0920", [
+        [ "Changes", "ChangeLog.html#changes0920", null ],
+        [ "Bugs", "ChangeLog.html#bugs0920", null ]
+      ] ],
+      [ "Feel++ Release 0.91.1", "ChangeLog.html#feelpp0911", null ],
+      [ "Feel++ Release 0.91.0", "ChangeLog.html#feelpp0910", [
+        [ "Developer changes", "ChangeLog.html#changes0910", null ]
+      ] ]
+    ] ],
+    [ "Getting Started", "GettingStarted.html", "GettingStarted" ],
+    [ "Quick Reference", "QuickRef.html", "QuickRef" ],
+    [ "Learning by Examples", "Learning.html", "Learning" ],
+    [ "Miscellaneous", "Miscellaneous.html", "Miscellaneous" ],
+    [ "Modules", "Modules.html", null ],
+    [ "Copyright", "md_COPYING.html", null ],
+    [ "Bibliographic References", "citelist.html", null ],
     [ "Feel Objects", "annotated.html", "annotated" ]
   ] ]
 ];
@@ -12,32 +43,34 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classFeel_1_1AssertContext.html#a1d2c5ca741839e2921d7ef371270727b",
-"classFeel_1_1BoundaryAdapted.html#ac78ec93a203b6cd2ff6eb665f83ab22b",
-"classFeel_1_1CRBModel.html#a57b71c5b554c1a3ca0c65930e856197a",
-"classFeel_1_1CRBTrilinear.html#a1be0328d17b984e9b547705748bc22a0",
-"classFeel_1_1DofTable.html#a0e7d4903b51674698bb55c12acd2e1e6",
-"classFeel_1_1EIM.html#ae71552e6cd00818e81353d62408c0abd",
-"classFeel_1_1FunctionSpace.html#a154020ebb040098eccce8b76a6cbd85b",
-"classFeel_1_1GeoElement1D.html#a684c137cc988e0ae1d3092ebe409b185",
-"classFeel_1_1GeoMap.html#a6987c68f68a7faaca35ea489dccd7f9d",
-"classFeel_1_1GeoND.html#ae88dfcf0fb760774fa814e3c2c37305b",
-"classFeel_1_1Iteration.html#a68145b236686259b84f830a2630c72eb",
-"classFeel_1_1MatrixShellSparse.html#a3f2b4566f7658f51af1107c8a8edfb39",
-"classFeel_1_1Mesh.html#ad0b1c05e105d05482d7b5db128fda8bc",
-"classFeel_1_1MeshBase.html#abf053c0c4f9069b531a11e31b8ee04b7",
-"classFeel_1_1OpusApp.html#a0c94f4110bdae1e891ea760edbaecbd3",
-"classFeel_1_1PointSetQuadrature.html#a3a109e3e47834243cee93941b08ad4a0",
-"classFeel_1_1RegionTree.html#a58a7e47007dea144314f9694df818d48",
-"classFeel_1_1SolverNonLinear.html#a0d78640e5c566f529b07d5391f886344",
-"classFeel_1_1SystemImplicitLinear.html#aebc0ee6b365cb000e59d45c7a048d269",
-"classFeel_1_1TimerMap.html#a8aaddd24ff48202d0bb54edcae006a1c",
-"classFeel_1_1VectorUblas.html#aed76f0169870469061d2e54be6b07fac",
-"classFeel_1_1fem_1_1Nedelec.html#ab9c17a5b2caf891bfee5e18448e31e3f",
-"structFeel_1_1BFGSInvHessian.html#a0f3b22ef2dc359cf348c44a7805c634a",
-"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a20e58be26b198c6b4ad61cec330937bf"
+"citelist.html",
+"classFeel_1_1Advection.html#af10ef0eb25d33db2f66675e08f4a3d84",
+"classFeel_1_1BackendEigen.html#a6cfe8059e5fe1a2cdde7e80459563856",
+"classFeel_1_1CRB.html#ad30b13e38d3cc657ba1f72a5f09d61f9",
+"classFeel_1_1CRBModelTrilinear.html#a9ac49ba261661bf4a18da5e25d66943d",
+"classFeel_1_1DataMap.html#a7f7b69ea53256e1c2042104be211b4ff",
+"classFeel_1_1Dubiner.html#a67c28781673ed82e47ce2ddd26c17047",
+"classFeel_1_1ExporterGmsh.html#af38e5cd3e4466b50e3ac808cf6e37a5b",
+"classFeel_1_1FunctionSpace.html#afa7901285a19870d5da7f766d447e0b5",
+"classFeel_1_1GeoMap_1_1Context.html#a98615baef35775fe64588726fe7e9641",
+"classFeel_1_1GraphCSR.html#a4ac3e9dc523d43c570c62a32ff82d7b5",
+"classFeel_1_1Legendre.html#a1820b48c10247e58d36e25031a822941",
+"classFeel_1_1MatrixSparse.html#a58cd69e3eedd8ef74f910dea12b77f9b",
+"classFeel_1_1Mesh0D.html#a7e87a656c619b4bce5392a2b69b6904a",
+"classFeel_1_1Operator.html#a300d0ab026806c1a8463cfee327d40b9",
+"classFeel_1_1OpusApp.html#a553b332344f4a1174472a0916c27915d",
+"classFeel_1_1PointSetQuadrature.html#a647687f6f9e454f113ce79033a36c206",
+"classFeel_1_1ResistanceLaplacian.html#ad8d3f3bfe2d669dde3865eb24f8f4ebb",
+"classFeel_1_1SolverNonLinear.html#a83ddd38fa63dd9ef8f4b6a5e98c6b9e4",
+"classFeel_1_1SystemImplicitLinear.html#ac042cc6788ed23897fd0f025928a6ced",
+"classFeel_1_1TimeSet_1_1Step.html#acd333a3295783910008b1a5e12b5ff71",
+"classFeel_1_1VectorUblas.html#aaec8a14619ad1bd62cc4a930f1325bb4",
+"classFeel_1_1functional_1_1IntegralMomentOfDerivative.html#aa91b9d76d3da121ae2ddd35eaeff76d8",
+"index.html"
 ];
 
+var SYNCONMSG = 'click to disable panel synchronisation';
+var SYNCOFFMSG = 'click to enable panel synchronisation';
 var navTreeSubIndices = new Array();
 
 function getData(varName)
@@ -62,8 +95,14 @@ function stripPath2(uri)
 
 function localStorageSupported()
 {
-  return 'localStorage' in window && window['localStorage'] !== null;
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null && window.localStorage.getItem;
+  }
+  catch(e) {
+    return false;
+  }
 }
+
 
 function storeLink(link)
 {
@@ -97,7 +136,7 @@ function getScript(scriptName,func,show)
   script.onload = func; 
   script.src = scriptName+'.js'; 
   if ($.browser.msie && $.browser.version<=8) { 
-    // script.onload does work with older versions of IE
+    // script.onload does not work with older versions of IE
     script.onreadystatechange = function() {
       if (script.readyState=='complete' || script.readyState=='loaded') { 
         func(); if (show) showRoot(); 
@@ -109,24 +148,22 @@ function getScript(scriptName,func,show)
 
 function createIndent(o,domNode,node,level)
 {
-  if (node.parentNode && node.parentNode.parentNode) {
-    createIndent(o,domNode,node.parentNode,level+1);
-  }
+  var level=-1;
+  var n = node;
+  while (n.parentNode) { level++; n=n.parentNode; }
   var imgNode = document.createElement("img");
-  imgNode.width = 16;
+  imgNode.style.paddingLeft=(16*level).toString()+'px';
+  imgNode.width  = 16;
   imgNode.height = 22;
-  if (level==0 && node.childrenData) {
+  imgNode.border = 0;
+  if (node.childrenData) {
     node.plus_img = imgNode;
     node.expandToggle = document.createElement("a");
     node.expandToggle.href = "javascript:void(0)";
     node.expandToggle.onclick = function() {
       if (node.expanded) {
         $(node.getChildrenUL()).slideUp("fast");
-        if (node.isLast) {
-          node.plus_img.src = node.relpath+"ftv2plastnode.png";
-        } else {
-          node.plus_img.src = node.relpath+"ftv2pnode.png";
-        }
+        node.plus_img.src = node.relpath+"ftv2pnode.png";
         node.expanded = false;
       } else {
         expandNode(o, node, false, false);
@@ -134,33 +171,39 @@ function createIndent(o,domNode,node,level)
     }
     node.expandToggle.appendChild(imgNode);
     domNode.appendChild(node.expandToggle);
+    imgNode.src = node.relpath+"ftv2pnode.png";
   } else {
+    imgNode.src = node.relpath+"ftv2node.png";
     domNode.appendChild(imgNode);
+  } 
+}
+
+var animationInProgress = false;
+
+function gotoAnchor(anchor,aname,updateLocation)
+{
+  var pos, docContent = $('#doc-content');
+  if (anchor.parent().attr('class')=='memItemLeft' ||
+      anchor.parent().attr('class')=='fieldtype' ||
+      anchor.parent().is(':header')) 
+  {
+    pos = anchor.parent().position().top;
+  } else if (anchor.position()) {
+    pos = anchor.position().top;
   }
-  if (level==0) {
-    if (node.isLast) {
-      if (node.childrenData) {
-        imgNode.src = node.relpath+"ftv2plastnode.png";
-      } else {
-        imgNode.src = node.relpath+"ftv2lastnode.png";
-        domNode.appendChild(imgNode);
-      }
-    } else {
-      if (node.childrenData) {
-        imgNode.src = node.relpath+"ftv2pnode.png";
-      } else {
-        imgNode.src = node.relpath+"ftv2node.png";
-        domNode.appendChild(imgNode);
-      }
-    }
-  } else {
-    if (node.isLast) {
-      imgNode.src = node.relpath+"ftv2blank.png";
-    } else {
-      imgNode.src = node.relpath+"ftv2vertline.png";
-    }
+  if (pos) {
+    var dist = Math.abs(Math.min(
+               pos-docContent.offset().top,
+               docContent[0].scrollHeight-
+               docContent.height()-docContent.scrollTop()));
+    animationInProgress=true;
+    docContent.animate({
+      scrollTop: pos + docContent.scrollTop() - docContent.offset().top
+    },Math.max(50,Math.min(500,dist)),function(){
+      if (updateLocation) window.location.href=aname;
+      animationInProgress=false;
+    });
   }
-  imgNode.border = "0";
 }
 
 function newNode(o, po, text, link, childrenData, lastNode)
@@ -204,7 +247,7 @@ function newNode(o, po, text, link, childrenData, lastNode)
       var aname = '#'+link.split('#')[1];
       var srcPage = stripPath($(location).attr('pathname'));
       var targetPage = stripPath(link.split('#')[0]);
-      a.href = srcPage!=targetPage ? url : '#';
+      a.href = srcPage!=targetPage ? url : "javascript:void(0)"; 
       a.onclick = function(){
         storeLink(link);
         if (!$(a).parent().parent().hasClass('selected'))
@@ -214,23 +257,8 @@ function newNode(o, po, text, link, childrenData, lastNode)
           $(a).parent().parent().addClass('selected');
           $(a).parent().parent().attr('id','selected');
         }
-        var pos, anchor = $(aname), docContent = $('#doc-content');
-        if (anchor.parent().attr('class')=='memItemLeft') {
-          pos = anchor.parent().position().top;
-        } else if (anchor.position()) {
-          pos = anchor.position().top;
-        }
-        if (pos) {
-          var dist = Math.abs(Math.min(
-                     pos-docContent.offset().top,
-                     docContent[0].scrollHeight-
-                     docContent.height()-docContent.scrollTop()));
-          docContent.animate({
-            scrollTop: pos + docContent.scrollTop() - docContent.offset().top
-          },Math.max(50,Math.min(500,dist)),function(){
-            window.location.replace(aname);
-          });
-        }
+        var anchor = $(aname);
+        gotoAnchor(anchor,aname,true);
       };
     } else {
       a.href = url;
@@ -311,7 +339,8 @@ function glowEffect(n,duration)
 
 function highlightAnchor()
 {
-  var anchor = $($(location).attr('hash'));
+  var aname = $(location).attr('hash');
+  var anchor = $(aname);
   if (anchor.parent().attr('class')=='memItemLeft'){
     var rows = $('.memberdecls tr[class$="'+
                window.location.hash.substring(1)+'"]');
@@ -325,6 +354,7 @@ function highlightAnchor()
   } else {
     glowEffect(anchor.next(),1000); // normal member
   }
+  gotoAnchor(anchor,aname,false);
 }
 
 function selectAndHighlight(hash,n)
@@ -341,6 +371,11 @@ function selectAndHighlight(hash,n)
   } else if (n) {
     $(n.itemDiv).addClass('selected');
     $(n.itemDiv).attr('id','selected');
+  }
+  if ($('#nav-tree-contents .item:first').hasClass('selected')) {
+    $('#nav-sync').css('top','30px');
+  } else {
+    $('#nav-sync').css('top','5px');
   }
   showRoot();
 }
@@ -378,7 +413,7 @@ function showNode(o, node, index, hash)
           },true);
         } else {
           var rootBase = stripPath(o.toroot.replace(/\..+$/, ''));
-          if (rootBase=="index" || rootBase=="pages") {
+          if (rootBase=="index" || rootBase=="pages" || rootBase=="search") {
             expandNode(o, n, true, true);
           }
           selectAndHighlight(hash,n);
@@ -425,11 +460,6 @@ function navTo(o,root,hash,relpath)
     if (parts.length>1) hash = '#'+parts[1];
     else hash='';
   }
-  if (root==NAVTREE[0][1]) {
-    $('#nav-sync').css('top','30px');
-  } else {
-    $('#nav-sync').css('top','5px');
-  }
   if (hash.match(/^#l\d+$/)) {
     var anchor=$('a[name='+hash.substring(1)+']');
     glowEffect(anchor.parent(),1000); // line number
@@ -439,6 +469,7 @@ function navTo(o,root,hash,relpath)
   var url=root+hash;
   var i=-1;
   while (NAVTREEINDEX[i+1]<=url) i++;
+  if (i==-1) { i=0; root=NAVTREE[0][1]; } // fallback: show index
   if (navTreeSubIndices[i]) {
     gotoNode(o,i,root,hash,relpath)
   } else {
@@ -451,16 +482,26 @@ function navTo(o,root,hash,relpath)
   }
 }
 
+function showSyncOff(n,relpath)
+{
+    n.html('<img src="'+relpath+'sync_off.png" title="'+SYNCOFFMSG+'"/>');
+}
+
+function showSyncOn(n,relpath)
+{
+    n.html('<img src="'+relpath+'sync_on.png" title="'+SYNCONMSG+'"/>');
+}
+
 function toggleSyncButton(relpath)
 {
   var navSync = $('#nav-sync');
   if (navSync.hasClass('sync')) {
     navSync.removeClass('sync');
-    navSync.html('<img src="'+relpath+'sync_off.png"/>');
+    showSyncOff(navSync,relpath);
     storeLink(stripPath2($(location).attr('pathname'))+$(location).attr('hash'));
   } else {
     navSync.addClass('sync');
-    navSync.html('<img src="'+relpath+'sync_on.png"/>');
+    showSyncOn(navSync,relpath);
     deleteLink();
   }
 }
@@ -488,10 +529,10 @@ function initNavTree(toroot,relpath)
   if (localStorageSupported()) {
     var navSync = $('#nav-sync');
     if (cachedLink()) {
-      navSync.html('<img src="'+relpath+'sync_off.png"/>');
+      showSyncOff(navSync,relpath);
       navSync.removeClass('sync');
     } else {
-      navSync.html('<img src="'+relpath+'sync_on.png"/>');
+      showSyncOn(navSync,relpath);
     }
     navSync.click(function(){ toggleSyncButton(relpath); });
   }
@@ -512,6 +553,11 @@ function initNavTree(toroot,relpath)
        }
        var link=stripPath2($(location).attr('pathname'));
        navTo(o,link,$(location).attr('hash'),relpath);
+     } else if (!animationInProgress) {
+       $('#doc-content').scrollTop(0);
+       $('.item').removeClass('selected');
+       $('.item').removeAttr('id');
+       navTo(o,toroot,window.location.hash,relpath);
      }
   })
 

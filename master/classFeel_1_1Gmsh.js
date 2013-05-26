@@ -22,8 +22,6 @@ var classFeel_1_1Gmsh =
     [ "isASCIIFormat", "classFeel_1_1Gmsh.html#a1e4a6b73498427f501bf58c310fee21c", null ],
     [ "isBinaryFormat", "classFeel_1_1Gmsh.html#add7ec80ccfea1b1d8f293c30db9bf67f", null ],
     [ "mshFileByPartition", "classFeel_1_1Gmsh.html#a8cc60b34354ffa3be9d81227ddc38d02", null ],
-    [ "New", "classFeel_1_1Gmsh.html#ae9e5e667f022dc36ee5b38a81daa1a3f", null ],
-    [ "New", "classFeel_1_1Gmsh.html#ab29793b57b74bbf1af1e7e7431f86ff1", null ],
     [ "numberOfPartitions", "classFeel_1_1Gmsh.html#a1322e596ec2e515a23241565a3cb2e11", null ],
     [ "operator=", "classFeel_1_1Gmsh.html#a893f65f84416a7a157ac1984e7500bf2", null ],
     [ "order", "classFeel_1_1Gmsh.html#a988f7731c0fe999eb32023a40f0bdc15", null ],

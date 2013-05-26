@@ -48,7 +48,5 @@ var classFeel_1_1PointSetQuadrature =
     [ "_M_n_face", "classFeel_1_1PointSetQuadrature.html#a0ea0a05c42238c0d09354852acbba854", null ],
     [ "_M_prod", "classFeel_1_1PointSetQuadrature.html#a5fd7e84ecd076cf106cc6fe47d21ea12", null ],
     [ "_M_w", "classFeel_1_1PointSetQuadrature.html#aa3218cbb9ee0c87ca00c7d7774c925d7", null ],
-    [ "_M_w_face", "classFeel_1_1PointSetQuadrature.html#a961814f36b564224edd556b9fda7b8cc", null ],
-    [ "I_deg", "classFeel_1_1PointSetQuadrature.html#afd229c89c5705589f1b1c03e2732ff2e", null ],
-    [ "is_face_im", "classFeel_1_1PointSetQuadrature.html#a8bbff48fb58ec568dc7ffb1061dba6b5", null ]
+    [ "_M_w_face", "classFeel_1_1PointSetQuadrature.html#a961814f36b564224edd556b9fda7b8cc", null ]
 ];

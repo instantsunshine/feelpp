@@ -13,8 +13,5 @@ var classFeel_1_1vf_1_1details_1_1Projector =
     [ "Projector", "classFeel_1_1vf_1_1details_1_1Projector.html#a04bd2db9f6a5b11914e89193b517f0ab", null ],
     [ "~Projector", "classFeel_1_1vf_1_1details_1_1Projector.html#aa508b63fc20b3c2059061596e796daea", null ],
     [ "expression", "classFeel_1_1vf_1_1details_1_1Projector.html#af6ce91a91972c004249887c5484a5b61", null ],
-    [ "operator()", "classFeel_1_1vf_1_1details_1_1Projector.html#a002ddf36eee7cda8a04326e2263b8472", null ],
-    [ "context", "classFeel_1_1vf_1_1details_1_1Projector.html#a35cb50649e46c7ef88f58c8e7e6c49d7", null ],
-    [ "imIsPoly", "classFeel_1_1vf_1_1details_1_1Projector.html#af4ba0d4b492c150ff4cbd95c706f5126", null ],
-    [ "imorder", "classFeel_1_1vf_1_1details_1_1Projector.html#ab860ac0e7ce1034f7ca1cd9e3f97b8d6", null ]
+    [ "operator()", "classFeel_1_1vf_1_1details_1_1Projector.html#a002ddf36eee7cda8a04326e2263b8472", null ]
 ];
