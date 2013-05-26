@@ -107,6 +107,7 @@ $(document).ready(function(){initNavTree('ginac_8hpp.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;ginac/ginac.h&gt;</code><br/>
+<code>#include &lt;boost/parameter/preprocessor.hpp&gt;</code><br/>
 </div>
 <p><a href="ginac_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -117,6 +118,12 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a07cbc6e38a36962307107418c46992ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07cbc6e38a36962307107418c46992ad"></a>
+ex&#160;</td><td class="memItemRight" valign="bottom"><b>GiNaC::diff</b> (ex const &amp;f, symbol const &amp;l, const int n)</td></tr>
+<tr class="separator:a07cbc6e38a36962307107418c46992ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68b331136975f2adf99ac29b8c2cd240"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a68b331136975f2adf99ac29b8c2cd240"></a>
+matrix&#160;</td><td class="memItemRight" valign="bottom"><b>GiNaC::diff</b> (matrix const &amp;f, symbol const &amp;l, const int n)</td></tr>
+<tr class="separator:a68b331136975f2adf99ac29b8c2cd240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b7177f313bb680add53255ef22b42e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b7177f313bb680add53255ef22b42e9"></a>
 matrix&#160;</td><td class="memItemRight" valign="bottom"><b>GiNaC::div</b> (matrix const &amp;f, std::vector&lt; symbol &gt; const &amp;l)</td></tr>
 <tr class="separator:a4b7177f313bb680add53255ef22b42e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,9 +153,15 @@ ex&#160;</td><td class="memItemRight" valign="bottom"><b>GiNaC::laplacian</b> (s
 <tr class="memitem:a40b21887be934c3e6008404c7215ce24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40b21887be934c3e6008404c7215ce24"></a>
 matrix&#160;</td><td class="memItemRight" valign="bottom"><b>GiNaC::laplacian</b> (matrix const &amp;f, std::vector&lt; symbol &gt; const &amp;l)</td></tr>
 <tr class="separator:a40b21887be934c3e6008404c7215ce24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a370e3a4c5d4964ed312726e766f87047"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a370e3a4c5d4964ed312726e766f87047"></a>
-ex&#160;</td><td class="memItemRight" valign="bottom"><b>GiNaC::parse</b> (std::string const &amp;str, std::vector&lt; symbol &gt; const &amp;syms)</td></tr>
-<tr class="separator:a370e3a4c5d4964ed312726e766f87047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7b51ae92a2ed918f31eb653ecafdb4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7b51ae92a2ed918f31eb653ecafdb4a"></a>
+ex&#160;</td><td class="memItemRight" valign="bottom"><b>GiNaC::parse</b> (std::string const &amp;str, std::vector&lt; symbol &gt; const &amp;syms, std::vector&lt; symbol &gt; const &amp;params=std::vector&lt; symbol &gt;())</td></tr>
+<tr class="separator:ae7b51ae92a2ed918f31eb653ecafdb4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42e2e73f37d0793409f02bcd658aadf4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42e2e73f37d0793409f02bcd658aadf4"></a>
+ex&#160;</td><td class="memItemRight" valign="bottom"><b>GiNaC::substitute</b> (ex const &amp;f, symbol const &amp;s, const double <a class="el" href="val_8hpp.html#a4c2eeba6d70e9edf83ff70349e3470a9">val</a>)</td></tr>
+<tr class="separator:a42e2e73f37d0793409f02bcd658aadf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece971c0b5c269e02826b987211e9cb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aece971c0b5c269e02826b987211e9cb1"></a>
+ex&#160;</td><td class="memItemRight" valign="bottom"><b>GiNaC::substitute</b> (ex const &amp;f, symbol const &amp;s, ex const &amp;g)</td></tr>
+<tr class="separator:aece971c0b5c269e02826b987211e9cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e64fdb909e259b135b193ba2adeca13"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0e64fdb909e259b135b193ba2adeca13"></a>
 template&lt;int Dim&gt; </td></tr>
 <tr class="memitem:a0e64fdb909e259b135b193ba2adeca13"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; symbol &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Feel::symbols</b> ()</td></tr>
@@ -156,6 +169,9 @@ template&lt;int Dim&gt; </td></tr>
 <tr class="memitem:ac9bdd6a8aaa43f8de444c620a6416b15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9bdd6a8aaa43f8de444c620a6416b15"></a>
 std::vector&lt; symbol &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::symbols</b> (std::initializer_list&lt; std::string &gt; l)</td></tr>
 <tr class="separator:ac9bdd6a8aaa43f8de444c620a6416b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b9bdc77e8e0b9b4027561371ae8e5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61b9bdc77e8e0b9b4027561371ae8e5c"></a>
+std::vector&lt; symbol &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::symbols</b> (std::vector&lt; std::string &gt; l)</td></tr>
+<tr class="separator:a61b9bdc77e8e0b9b4027561371ae8e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01ff455ab0392ec62ad9f1193408e383"><td class="memTemplParams" colspan="2"><a class="anchor" id="a01ff455ab0392ec62ad9f1193408e383"></a>
 template&lt;&gt; </td></tr>
 <tr class="memitem:a01ff455ab0392ec62ad9f1193408e383"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; symbol &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Feel::symbols&lt; 1 &gt;</b> ()</td></tr>
@@ -175,7 +191,7 @@ template&lt;&gt; </td></tr>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri May 17 2013 13:06:14 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+Generated on Sun May 26 2013 21:57:47 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

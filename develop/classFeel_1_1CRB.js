@@ -99,7 +99,7 @@ var classFeel_1_1CRB =
     [ "maxIter", "classFeel_1_1CRB.html#ad7345c7cd25c7eb439e5c44818ae91cf", null ],
     [ "newton", "classFeel_1_1CRB.html#aa3a21070b770129456dc505d065270e4", null ],
     [ "offline", "classFeel_1_1CRB.html#a1f57b4d35d346b8fccd5c7fee678cbfe", null ],
-    [ "offlineFixedPointPrimal", "classFeel_1_1CRB.html#a2d42d99b629295615e349beb8d9e90f7", null ],
+    [ "offlineFixedPointPrimal", "classFeel_1_1CRB.html#a73c876621d9720574c39569b0dea1352", null ],
     [ "offlineResidual", "classFeel_1_1CRB.html#a8084a3cd7bc559a3d39dba3b89cf7a17", null ],
     [ "offlineResidual", "classFeel_1_1CRB.html#adacd0345d2ac6bcf723efffc55d03fc4", null ],
     [ "offlineResidual", "classFeel_1_1CRB.html#aacfd9442a240b6230944f903fe7d5662", null ],

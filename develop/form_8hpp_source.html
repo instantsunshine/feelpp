@@ -323,57 +323,59 @@ $(document).ready(function(){initNavTree('form_8hpp_source.html','');});
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                            ( test,             * )</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                            ( trial,            * )</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                          ) <span class="comment">// required</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                          ( optional                                  <span class="comment">//    four optional parameters, with defaults</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                            ( in_out( matrix ),   *, backend()-&gt;newMatrix( _test=test, _trial=trial ) )</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                            ( init,             *( boost::is_integral&lt;mpl::_&gt; ), <span class="keyword">false</span> )</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                            ( pattern,          *( boost::is_integral&lt;mpl::_&gt; ), <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a>( Pattern::COUPLED ) )</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                            ( rowstart,         *( boost::is_integral&lt;mpl::_&gt; ), 0 )</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                            ( colstart,         *( boost::is_integral&lt;mpl::_&gt; ), 0 )</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                          ) <span class="comment">// optional</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                        )</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;{</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    Feel::detail::ignore_unused_variable_warning( args );</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="comment">//return form( test, trial, *matrix, init, false, 1e-16, pattern );</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">//if (!matrix) matrix.reset( backend()-&gt;newMatrix( _trial=trial, _test=test ) );</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">bool</span> do_threshold = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">double</span> threshold = 1e-16;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordflow">return</span> form( test, trial, matrix, rowstart, colstart, init, do_threshold, threshold, pattern );</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">//return form( test, trial, *matrix, init, false, threshold, pattern );</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="comment">//return form( test, trial, *matrix, init, false, threshold, 0 );</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;} <span class="comment">//</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="preprocessor"></span>BOOST_PARAMETER_FUNCTION(</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    ( <span class="keyword">typename</span> compute_form2_return&lt;Args,mpl::bool_&lt;boost::is_same&lt;<span class="keyword">typename</span> parameter::value_type&lt;Args, tag::trial&gt;::type, boost::parameter::void_&gt;::value&gt; &gt;::type ), <span class="comment">// 1. return type</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    blform,                                       <span class="comment">// 2. name of the function template</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    tag,                                        <span class="comment">// 3. namespace of tag types</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    ( required                                  <span class="comment">// 4. one required parameter, and</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      ( test,             *( boost::is_convertible&lt;mpl::_,boost::shared_ptr&lt;FunctionSpaceBase&gt; &gt; ) )</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      ( trial,            *( boost::is_convertible&lt;mpl::_,boost::shared_ptr&lt;FunctionSpaceBase&gt; &gt; ) )</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      ( in_out( matrix ),   *(detail::is_matrix_ptr&lt;mpl::_&gt; ) ) ) <span class="comment">// required</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    ( optional                                  <span class="comment">//    four optional parameters, with defaults</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      ( init,             *( boost::is_integral&lt;mpl::_&gt; ), <span class="keyword">false</span> )</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      ( do_threshold,     *( boost::is_integral&lt;mpl::_&gt; ), <span class="keywordtype">bool</span>( <span class="keyword">false</span> ) )</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      ( threshold,        *( boost::is_floating_point&lt;mpl::_&gt; ), type_traits&lt;double&gt;::epsilon() )</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      ( pattern,          *( boost::is_integral&lt;mpl::_&gt; ), <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a>( Pattern::COUPLED ) )</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    )</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;)</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;{</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">return</span> form( test, trial, *matrix, init, do_threshold, threshold, pattern );</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="comment">//return form( test, trial, *matrix, init, false, 1e-16, pattern );</span></div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;} <span class="comment">//</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;} <span class="comment">// Feel</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __Form_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                          (deduced</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                           ( optional                                  <span class="comment">//    four optional parameters, with defaults</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                             ( init,             *( boost::is_integral&lt;mpl::_&gt; ), <span class="keyword">false</span> )</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                             ( pattern,          *( boost::is_integral&lt;mpl::_&gt; ), <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a>( Pattern::COUPLED ) )</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                             ( in_out( matrix ),   *(boost::is_convertible&lt;mpl::_, boost::shared_ptr&lt;MatrixSparse&lt;double&gt;&gt;&gt;), backend()-&gt;newMatrix( _test=test, _trial=trial, _pattern=pattern ) )</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                             ( rowstart,         *( boost::is_integral&lt;mpl::_&gt; ), 0 )</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                             ( colstart,         *( boost::is_integral&lt;mpl::_&gt; ), 0 )</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                               ) <span class="comment">// optional</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                              ) <span class="comment">// deduced</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                        )</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;{</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    Feel::detail::ignore_unused_variable_warning( args );</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="comment">//return form( test, trial, *matrix, init, false, 1e-16, pattern );</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="comment">//if (!matrix) matrix.reset( backend()-&gt;newMatrix( _trial=trial, _test=test ) );</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">bool</span> do_threshold = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">double</span> threshold = 1e-16;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">return</span> form( test, trial, matrix, rowstart, colstart, init, do_threshold, threshold, pattern );</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="comment">//return form( test, trial, *matrix, init, false, threshold, pattern );</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="comment">//return form( test, trial, *matrix, init, false, threshold, 0 );</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;} <span class="comment">//</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="preprocessor">#if 0</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor"></span>BOOST_PARAMETER_FUNCTION(</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    ( <span class="keyword">typename</span> compute_form2_return&lt;Args,mpl::bool_&lt;boost::is_same&lt;<span class="keyword">typename</span> parameter::value_type&lt;Args, tag::trial&gt;::type, boost::parameter::void_&gt;::value&gt; &gt;::type ), <span class="comment">// 1. return type</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    blform,                                       <span class="comment">// 2. name of the function template</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    tag,                                        <span class="comment">// 3. namespace of tag types</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    ( required                                  <span class="comment">// 4. one required parameter, and</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      ( test,             *( boost::is_convertible&lt;mpl::_,boost::shared_ptr&lt;FunctionSpaceBase&gt; &gt; ) )</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      ( trial,            *( boost::is_convertible&lt;mpl::_,boost::shared_ptr&lt;FunctionSpaceBase&gt; &gt; ) )</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      ( in_out( matrix ),   *(detail::is_matrix_ptr&lt;mpl::_&gt; ) ) ) <span class="comment">// required</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    ( optional                                  <span class="comment">//    four optional parameters, with defaults</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      ( init,             *( boost::is_integral&lt;mpl::_&gt; ), <span class="keyword">false</span> )</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      ( do_threshold,     *( boost::is_integral&lt;mpl::_&gt; ), <span class="keywordtype">bool</span>( <span class="keyword">false</span> ) )</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      ( threshold,        *( boost::is_floating_point&lt;mpl::_&gt; ), type_traits&lt;double&gt;::epsilon() )</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      ( pattern,          *( boost::is_integral&lt;mpl::_&gt; ), <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a>( Pattern::COUPLED ) )</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    )</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;)</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;{</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">return</span> form( test, trial, *matrix, init, do_threshold, threshold, pattern );</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="comment">//return form( test, trial, *matrix, init, false, 1e-16, pattern );</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;} <span class="comment">//</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;} <span class="comment">// Feel</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __Form_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri May 17 2013 13:05:53 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
+Generated on Sun May 26 2013 21:57:26 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.3.1</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
