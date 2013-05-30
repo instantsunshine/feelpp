@@ -180,7 +180,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~PolynomialSet</b>
 <tr class="memitem:a8e938c6148dcddaa959a292677bd3d1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, PolySetType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1PolynomialSet.html#a8e938c6148dcddaa959a292677bd3d1c">polynomials</a> (std::vector&lt; uint16_type &gt; const &amp;list_p) const </td></tr>
 <tr class="memitem:abd900d138922da2de657c7cffb56e76e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, PolySetType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1PolynomialSet.html#abd900d138922da2de657c7cffb56e76e">polynomialsUpToDimension</a> (int dim_p) const </td></tr>
 <tr class="memitem:a452cf21fa77f2b1860b457a12d1f778e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, PolySetType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1PolynomialSet.html#a452cf21fa77f2b1860b457a12d1f778e">polynomialsRange</a> (uint16_type dim_bot, uint16_type dim_top) const </td></tr>
-<tr class="memitem:a1b4ac82b1fdf8cbfee703ed5157f5dc8"><td class="memItemLeft" align="right" valign="top">Polynomial&lt; Poly, PolySetType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1PolynomialSet.html#a1b4ac82b1fdf8cbfee703ed5157f5dc8">polynomial</a> (uint16_type i) const </td></tr>
+<tr class="memitem:a1b4ac82b1fdf8cbfee703ed5157f5dc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, PolySetType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1PolynomialSet.html#a1b4ac82b1fdf8cbfee703ed5157f5dc8">polynomial</a> (uint16_type i) const </td></tr>
 <tr class="memitem:a80c3dd9cc134f00ec4ed06600ff1d8d4"><td class="memTemplParams" colspan="2">template&lt;typename AE &gt; </td></tr>
 <tr class="memitem:a80c3dd9cc134f00ec4ed06600ff1d8d4"><td class="memTemplItemLeft" align="right" valign="top">ublas::vector&lt; value_type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFeel_1_1PolynomialSet.html#a80c3dd9cc134f00ec4ed06600ff1d8d4">evaluate</a> (uint16_type i, ublas::vector_expression&lt; AE &gt; const &amp;__pt) const </td></tr>
 <tr class="memitem:a53b63c10f2ef69c84420a8f51ed4e468"><td class="memTemplParams" colspan="2">template&lt;typename AE &gt; </td></tr>
@@ -238,10 +238,10 @@ typedef PolySetType&lt; nRealDim &gt;&#160;</td><td class="memItemRight" valign=
 typedef <a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, <br class="typebreak"/>
 <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>component_type</b></td></tr>
 <tr class="memitem:a0d7e686150e14dd11dfe3ff799dc489a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d7e686150e14dd11dfe3ff799dc489a"></a>
-typedef Polynomial&lt; Poly, <br class="typebreak"/>
+typedef <a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, <br class="typebreak"/>
 PolySetType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>polynomial_type</b></td></tr>
 <tr class="memitem:a555a2d0381ede169887f8688147a84b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a555a2d0381ede169887f8688147a84b5"></a>
-typedef polynomial_type&#160;</td><td class="memItemRight" valign="bottom"><b>polynomial_view_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1Polynomial.html">polynomial_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>polynomial_view_type</b></td></tr>
 <tr class="memitem:a74ed782c9fd7f18a7ac4130468ed2e6a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74ed782c9fd7f18a7ac4130468ed2e6a"></a>
 typedef Poly::convex_type&#160;</td><td class="memItemRight" valign="bottom"><b>convex_type</b></td></tr>
 <tr class="memitem:a53ae35b2ed740a0c12654919c5b9d2bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53ae35b2ed740a0c12654919c5b9d2bc"></a>
@@ -829,7 +829,7 @@ template&lt;typename Poly, template&lt; uint16_type &gt; class PolySetType = Sca
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Polynomial&lt;Poly, PolySetType&gt; <a class="el" href="classFeel_1_1PolynomialSet.html">Feel::PolynomialSet</a>&lt; Poly, PolySetType &gt;::polynomial </td>
+          <td class="memname"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt;Poly, PolySetType&gt; <a class="el" href="classFeel_1_1PolynomialSet.html">Feel::PolynomialSet</a>&lt; Poly, PolySetType &gt;::polynomial </td>
           <td>(</td>
           <td class="paramtype">uint16_type&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -1061,7 +1061,7 @@ template&lt;typename Poly, template&lt; uint16_type &gt; class PolySetType = Sca
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Thu May 30 2013 14:05:16 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Fri May 31 2013 01:01:12 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

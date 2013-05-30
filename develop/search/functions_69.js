@@ -85,6 +85,6 @@ var searchData=
   ['isupdatedforuse',['isUpdatedForUse',['../classFeel_1_1MeshBase.html#a3d226fd28e57bfd81f91de01922b7f3d',1,'Feel::MeshBase']]],
   ['isvectorial',['isVectorial',['../classFeel_1_1PolynomialSet.html#a568d75ab82529571d050baeb4a05afb5',1,'Feel::PolynomialSet']]],
   ['isvertex',['isVertex',['../group__GeoXD.html#ga687c5a4ceb94411b600c1c15776b94a2',1,'Feel::Geo0D']]],
-  ['iszero',['isZero',['../classFeel_1_1PolynomialSet.html#a1367b281b8f8dddbbcc8d32e5c474e69',1,'Feel::PolynomialSet']]],
+  ['iszero',['isZero',['../classFeel_1_1Polynomial.html#ab599e227390129b4edd27a9059c78051',1,'Feel::Polynomial::isZero()'],['../classFeel_1_1PolynomialSet.html#a1367b281b8f8dddbbcc8d32e5c474e69',1,'Feel::PolynomialSet::isZero()']]],
   ['iteration',['Iteration',['../classFeel_1_1Iteration.html#a99749bde486ab0272043bb19d9026f89',1,'Feel::Iteration']]]
 ];

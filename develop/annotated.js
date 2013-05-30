@@ -4,6 +4,7 @@ var annotated =
     [ "Convection", "classConvection.html", "classConvection" ],
     [ "ConvectionCrb", "classConvectionCrb.html", "classConvectionCrb" ],
     [ "Diode", "classDiode.html", "classDiode" ],
+    [ "IMSimplex", "classIMSimplex.html", "classIMSimplex" ],
     [ "Laplacian", "classLaplacian.html", "classLaplacian" ],
     [ "LShape", "classLShape.html", "classLShape" ],
     [ "MortarLaplacian", "classMortarLaplacian.html", "classMortarLaplacian" ],

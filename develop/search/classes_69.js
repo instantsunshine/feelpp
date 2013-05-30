@@ -4,6 +4,8 @@ var searchData=
   ['imgeneral',['IMGeneral',['../classFeel_1_1IMGeneral.html',1,'Feel']]],
   ['importer',['Importer',['../classFeel_1_1Importer.html',1,'Feel']]],
   ['importergmsh',['ImporterGmsh',['../classFeel_1_1ImporterGmsh.html',1,'Feel']]],
+  ['imsimplex',['IMSimplex',['../classIMSimplex.html',1,'']]],
+  ['imtetrahedra_3c_201_2c_20t_20_3e',['IMTetrahedra&lt; 1, T &gt;',['../structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html',1,'Feel']]],
   ['inequalities',['inequalities',['../classFeel_1_1inequalities.html',1,'Feel']]],
   ['info',['Info',['../classFeel_1_1Info.html',1,'Feel']]],
   ['integralmoment',['IntegralMoment',['../classFeel_1_1functional_1_1IntegralMoment.html',1,'Feel::functional']]],

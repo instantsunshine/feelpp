@@ -286,6 +286,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Importer.html">Importer</a></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1ImporterGmsh.html">ImporterGmsh</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">gmsh importer class  <a href="classFeel_1_1ImporterGmsh.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html">IMTetrahedra&lt; 1, T &gt;</a></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1inequalities.html">inequalities</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">define the inequalities type  <a href="classFeel_1_1inequalities.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Info.html">Info</a></td></tr>
@@ -395,6 +396,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">transform a point set to a mesh data structure using a Delaunay  <a href="classFeel_1_1PointSetToMesh.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1PolicyCreationUsingNew.html">PolicyCreationUsingNew</a></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1PolicyFeelTimeDefault.html">PolicyFeelTimeDefault</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">polynomial class  <a href="classFeel_1_1Polynomial.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">a Set of polynomials  <a href="classFeel_1_1PolynomialSet.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html">Preconditioner</a></td></tr>
@@ -1053,7 +1056,13 @@ Enumerations</h2></td></tr>
 <tr class="memitem:afacc311419d607ce6ac26decbbd04917"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917">MatrixProperties</a> { <br/>
 &#160;&#160;<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917a7b32254885d5d667b513bed40bfc949b">HERMITIAN</a> =  0x1, 
 <br/>
-&#160;&#160;<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae">NON_HERMITIAN</a> =  0x2
+&#160;&#160;<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae">NON_HERMITIAN</a> =  0x2, 
+<br/>
+&#160;&#160;<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917a064407d999698cec1ab0d139fe115fe9">POSITIVE_DEFINITE</a> =  0x4, 
+<br/>
+&#160;&#160;<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917a545ae7d41ffeb9cfd1fb7d0c2daf9f0c">SINGULAR</a> =  0x8, 
+<br/>
+&#160;&#160;<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917a467b261a8f71dfea7e2627b8348eb085">DENSE</a> =  0x10
 <br/>
  }</td></tr>
 <tr class="memitem:a3d7a6c5948e669b187f2d4620499715a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a3d7a6c5948e669b187f2d4620499715a">MatrixStructure</a> { <br/>
@@ -1478,13 +1487,13 @@ template&lt;typename E1 , typename E2 &gt; </td></tr>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ga78d09bc6139f4dadcdff4afc2b6b745b"><td class="memTemplItemLeft" align="right" valign="top">ublas::vector&lt; double &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cross</b> (<a class="el" href="classFeel_1_1Geo0D.html">Geo0D</a>&lt; 3, T &gt; p1, <a class="el" href="classFeel_1_1Geo0D.html">Geo0D</a>&lt; 3, T &gt; p2)</td></tr>
 <tr class="memitem:af0e68f5f62e0b915cf3b9ac73b5c4080"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
-<tr class="memitem:af0e68f5f62e0b915cf3b9ac73b5c4080"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#af0e68f5f62e0b915cf3b9ac73b5c4080">curl</a> (Polynomial&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt; const &amp;p)</td></tr>
+<tr class="memitem:af0e68f5f62e0b915cf3b9ac73b5c4080"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#af0e68f5f62e0b915cf3b9ac73b5c4080">curl</a> (<a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt; const &amp;p)</td></tr>
 <tr class="memdesc:af0e68f5f62e0b915cf3b9ac73b5c4080"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the curl of a vectorial polynomial <code>p</code>  <a href="#af0e68f5f62e0b915cf3b9ac73b5c4080"></a><br/></td></tr>
 <tr class="memitem:a3788c225ebee3147f0bcd32c6d77478d"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
 <tr class="memitem:a3788c225ebee3147f0bcd32c6d77478d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a3788c225ebee3147f0bcd32c6d77478d">curl</a> (<a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt; const &amp;p)</td></tr>
 <tr class="memdesc:a3788c225ebee3147f0bcd32c6d77478d"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the curl of a vectorial polynomial set <code>p</code>  <a href="#a3788c225ebee3147f0bcd32c6d77478d"></a><br/></td></tr>
 <tr class="memitem:a31844ce9bde57a55518ab057fd040744"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
-<tr class="memitem:a31844ce9bde57a55518ab057fd040744"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a31844ce9bde57a55518ab057fd040744">curlt</a> (Polynomial&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt; const &amp;p)</td></tr>
+<tr class="memitem:a31844ce9bde57a55518ab057fd040744"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a31844ce9bde57a55518ab057fd040744">curlt</a> (<a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt; const &amp;p)</td></tr>
 <tr class="memdesc:a31844ce9bde57a55518ab057fd040744"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the transpose of the curl of a vectorial polynomial <code>p</code>  <a href="#a31844ce9bde57a55518ab057fd040744"></a><br/></td></tr>
 <tr class="memitem:ad711a250106c87c0df471a90881a2dfb"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
 <tr class="memitem:ad711a250106c87c0df471a90881a2dfb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#ad711a250106c87c0df471a90881a2dfb">curlt</a> (<a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt; const &amp;p)</td></tr>
@@ -1517,7 +1526,7 @@ template&lt;typename T &gt; </td></tr>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:gaf283b6a618148fbc7cb15d9312758863"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>distance</b> (<a class="el" href="classFeel_1_1Geo0D.html">Geo0D</a>&lt; 3, T &gt; const &amp;p1, <a class="el" href="classFeel_1_1Geo0D.html">Geo0D</a>&lt; 3, T &gt; const &amp;p2)</td></tr>
 <tr class="memitem:a552129f28d2fad48c78b92a1baccbdb9"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
-<tr class="memitem:a552129f28d2fad48c78b92a1baccbdb9"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Poly, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a552129f28d2fad48c78b92a1baccbdb9">divergence</a> (Polynomial&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt; const &amp;p)</td></tr>
+<tr class="memitem:a552129f28d2fad48c78b92a1baccbdb9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a552129f28d2fad48c78b92a1baccbdb9">divergence</a> (<a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt; const &amp;p)</td></tr>
 <tr class="memdesc:a552129f28d2fad48c78b92a1baccbdb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the divergence of a vectorial polynomial <code>p</code>  <a href="#a552129f28d2fad48c78b92a1baccbdb9"></a><br/></td></tr>
 <tr class="memitem:a9f140d4902cd2b28cd758430f1af2f6e"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
 <tr class="memitem:a9f140d4902cd2b28cd758430f1af2f6e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a9f140d4902cd2b28cd758430f1af2f6e">divergence</a> (<a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt; const &amp;p)</td></tr>
@@ -1531,19 +1540,19 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a648859452fcbc4987d83379a6ef1aae2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a648859452fcbc4987d83379a6ef1aae2"></a>
 <a class="el" href="feelmacros_8hpp.html#afd589deb669a64692fc8abc1e1a4c0d3">FEELPP_NO_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>dump</b> (RegionTree::element_base *p, int level, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &amp;count)</td></tr>
 <tr class="memitem:a03f3303c5b91e975155799efa3f30b25"><td class="memTemplParams" colspan="2">template&lt;typename Poly , template&lt; uint16_type &gt; class Type&gt; </td></tr>
-<tr class="memitem:a03f3303c5b91e975155799efa3f30b25"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Poly, Type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a03f3303c5b91e975155799efa3f30b25">dx</a> (Polynomial&lt; Poly, Type &gt; const &amp;p)</td></tr>
+<tr class="memitem:a03f3303c5b91e975155799efa3f30b25"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, Type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a03f3303c5b91e975155799efa3f30b25">dx</a> (<a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, Type &gt; const &amp;p)</td></tr>
 <tr class="memdesc:a03f3303c5b91e975155799efa3f30b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute <img class="formulaInl" alt="$\frac{\partial \cdot}{\partial x}$" src="form_187.png"/> of a polynomial <code>p</code>  <a href="#a03f3303c5b91e975155799efa3f30b25"></a><br/></td></tr>
 <tr class="memitem:a9b0561a03e47fc0b47a793d158dc636f"><td class="memTemplParams" colspan="2">template&lt;typename Poly , template&lt; uint16_type &gt; class Type&gt; </td></tr>
 <tr class="memitem:a9b0561a03e47fc0b47a793d158dc636f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, Type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a9b0561a03e47fc0b47a793d158dc636f">dx</a> (<a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, Type &gt; const &amp;p)</td></tr>
 <tr class="memdesc:a9b0561a03e47fc0b47a793d158dc636f"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute <img class="formulaInl" alt="$\frac{\partial \cdot}{\partial x}$" src="form_187.png"/> of a polynomial set <code>p</code>  <a href="#a9b0561a03e47fc0b47a793d158dc636f"></a><br/></td></tr>
 <tr class="memitem:abd65f7117df9527c0c921c5ff3a5b922"><td class="memTemplParams" colspan="2">template&lt;typename Poly , template&lt; uint16_type &gt; class Type&gt; </td></tr>
-<tr class="memitem:abd65f7117df9527c0c921c5ff3a5b922"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Poly, Type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#abd65f7117df9527c0c921c5ff3a5b922">dy</a> (Polynomial&lt; Poly, Type &gt; const &amp;p)</td></tr>
+<tr class="memitem:abd65f7117df9527c0c921c5ff3a5b922"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, Type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#abd65f7117df9527c0c921c5ff3a5b922">dy</a> (<a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, Type &gt; const &amp;p)</td></tr>
 <tr class="memdesc:abd65f7117df9527c0c921c5ff3a5b922"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute <img class="formulaInl" alt="$\frac{\partial \cdot}{\partial y}$" src="form_188.png"/> of a polynomial <code>p</code>  <a href="#abd65f7117df9527c0c921c5ff3a5b922"></a><br/></td></tr>
 <tr class="memitem:a678cc45753409e5de39afc9d4fd91388"><td class="memTemplParams" colspan="2">template&lt;typename Poly , template&lt; uint16_type &gt; class Type&gt; </td></tr>
 <tr class="memitem:a678cc45753409e5de39afc9d4fd91388"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, Type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a678cc45753409e5de39afc9d4fd91388">dy</a> (<a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, Type &gt; const &amp;p)</td></tr>
 <tr class="memdesc:a678cc45753409e5de39afc9d4fd91388"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute <img class="formulaInl" alt="$\frac{\partial \cdot}{\partial y}$" src="form_188.png"/> of a polynomial set <code>p</code>  <a href="#a678cc45753409e5de39afc9d4fd91388"></a><br/></td></tr>
 <tr class="memitem:a44337dbc65effaa525948f8939733b22"><td class="memTemplParams" colspan="2">template&lt;typename Poly , template&lt; uint16_type &gt; class Type&gt; </td></tr>
-<tr class="memitem:a44337dbc65effaa525948f8939733b22"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Poly, Type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a44337dbc65effaa525948f8939733b22">dz</a> (Polynomial&lt; Poly, Type &gt; const &amp;p)</td></tr>
+<tr class="memitem:a44337dbc65effaa525948f8939733b22"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, Type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a44337dbc65effaa525948f8939733b22">dz</a> (<a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, Type &gt; const &amp;p)</td></tr>
 <tr class="memdesc:a44337dbc65effaa525948f8939733b22"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute <img class="formulaInl" alt="$\frac{\partial \cdot}{\partial z}$" src="form_189.png"/> of a polynomial <code>p</code>  <a href="#a44337dbc65effaa525948f8939733b22"></a><br/></td></tr>
 <tr class="memitem:a035d345518f6a629318edcd57ce3275d"><td class="memTemplParams" colspan="2">template&lt;typename Poly , template&lt; uint16_type &gt; class Type&gt; </td></tr>
 <tr class="memitem:a035d345518f6a629318edcd57ce3275d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, Type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a035d345518f6a629318edcd57ce3275d">dz</a> (<a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, Type &gt; const &amp;p)</td></tr>
@@ -1647,10 +1656,10 @@ po::options_description&#160;</td><td class="memItemRight" valign="bottom"><b>gi
 <tr class="memitem:a1a63c58bc95a55fd6d693b18e48923f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a63c58bc95a55fd6d693b18e48923f5"></a>
 po::options_description&#160;</td><td class="memItemRight" valign="bottom"><b>gmsh_options</b> (std::string const &amp;prefix)</td></tr>
 <tr class="memitem:a2afbcddff5e3a84e885a5c20363c4099"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
-<tr class="memitem:a2afbcddff5e3a84e885a5c20363c4099"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a2afbcddff5e3a84e885a5c20363c4099">gradient</a> (Polynomial&lt; Poly, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt; const &amp;p)</td></tr>
+<tr class="memitem:a2afbcddff5e3a84e885a5c20363c4099"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a2afbcddff5e3a84e885a5c20363c4099">gradient</a> (<a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt; const &amp;p)</td></tr>
 <tr class="memdesc:a2afbcddff5e3a84e885a5c20363c4099"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the gradient of a scalar polynomial <code>p</code>  <a href="#a2afbcddff5e3a84e885a5c20363c4099"></a><br/></td></tr>
 <tr class="memitem:a2585c1fb3a5f58b5557aefb63f446de0"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
-<tr class="memitem:a2585c1fb3a5f58b5557aefb63f446de0"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Poly, <a class="el" href="structFeel_1_1Tensor2.html">Tensor2</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a2585c1fb3a5f58b5557aefb63f446de0">gradient</a> (Polynomial&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt; const &amp;p)</td></tr>
+<tr class="memitem:a2585c1fb3a5f58b5557aefb63f446de0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, <a class="el" href="structFeel_1_1Tensor2.html">Tensor2</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a2585c1fb3a5f58b5557aefb63f446de0">gradient</a> (<a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt; const &amp;p)</td></tr>
 <tr class="memdesc:a2585c1fb3a5f58b5557aefb63f446de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the gradient of a vectorial polynomial <code>p</code>  <a href="#a2585c1fb3a5f58b5557aefb63f446de0"></a><br/></td></tr>
 <tr class="memitem:a100886326e76f552a3b3fc936981f480"><td class="memTemplParams" colspan="2">template&lt;typename Poly &gt; </td></tr>
 <tr class="memitem:a100886326e76f552a3b3fc936981f480"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a100886326e76f552a3b3fc936981f480">gradient</a> (<a class="el" href="classFeel_1_1PolynomialSet.html">PolynomialSet</a>&lt; Poly, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt; const &amp;p)</td></tr>
@@ -1680,7 +1689,7 @@ typename <a class="el" href="structFeel_1_1MeshTraits.html">MeshTraits</a>&lt; M
 <tr class="memitem:aae630433d7cade6d2278e84af1e0cb36"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aae630433d7cade6d2278e84af1e0cb36"><td class="memTemplItemLeft" align="right" valign="top">type_traits&lt; T &gt;::real_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#aae630433d7cade6d2278e84af1e0cb36">inner_product</a> (boost::shared_ptr&lt; <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; T &gt; &gt; const &amp;v1, boost::shared_ptr&lt; <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; T &gt; &gt; const &amp;v2)</td></tr>
 <tr class="memitem:a4c300b4c137594540a9428af36363049"><td class="memTemplParams" colspan="2">template&lt;typename Poly , template&lt; uint16_type &gt; class PsetType&gt; </td></tr>
-<tr class="memitem:a4c300b4c137594540a9428af36363049"><td class="memTemplItemLeft" align="right" valign="top">Poly::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049">integrate</a> (Polynomial&lt; Poly, PsetType &gt; const &amp;p)</td></tr>
+<tr class="memitem:a4c300b4c137594540a9428af36363049"><td class="memTemplItemLeft" align="right" valign="top">Poly::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049">integrate</a> (<a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, PsetType &gt; const &amp;p)</td></tr>
 <tr class="memdesc:a4c300b4c137594540a9428af36363049"><td class="mdescLeft">&#160;</td><td class="mdescRight">integrate a polynomial over a convex  <a href="#a4c300b4c137594540a9428af36363049"></a><br/></td></tr>
 <tr class="memitem:a9decd4d08511d44ea9e33cdb35758ec1"><td class="memTemplParams" colspan="2">template&lt;typename MeshType &gt; </td></tr>
 <tr class="memitem:a9decd4d08511d44ea9e33cdb35758ec1"><td class="memTemplItemLeft" align="right" valign="top">boost::tuple&lt; mpl::size_t<br class="typebreak"/>
@@ -2076,6 +2085,9 @@ template&lt;typename fs_type &gt; </td></tr>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a5da399ea6d7d2f6e33c9fa0aaa37e23c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1ADExpr.html">ADExpr</a>&lt; ADUnaryMinus&lt; <a class="el" href="classFeel_1_1ADExpr.html">ADExpr</a><br class="typebreak"/>
 &lt; T &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const <a class="el" href="classFeel_1_1ADExpr.html">ADExpr</a>&lt; T &gt; &amp;expr)</td></tr>
+<tr class="memitem:a99c28e6384e15d25a8bae169bcdc1b62"><td class="memTemplParams" colspan="2"><a class="anchor" id="a99c28e6384e15d25a8bae169bcdc1b62"></a>
+template&lt;typename Poly , template&lt; uint16_type &gt; class PolySetType&gt; </td></tr>
+<tr class="memitem:a99c28e6384e15d25a8bae169bcdc1b62"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, PolySetType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (<a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, PolySetType &gt; const &amp;p1, <a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Poly, PolySetType &gt; const &amp;p2)</td></tr>
 <tr class="memitem:a797cb01027644ba296cd7d5aaa9bf630"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a797cb01027644ba296cd7d5aaa9bf630"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="classFeel_1_1TypeInfo.html">TypeInfo</a> &amp;lhs, const <a class="el" href="classFeel_1_1TypeInfo.html">TypeInfo</a> &amp;rhs)</td></tr>
 <tr class="memitem:ga80e4fd4470b9d20f244d72378c4f9c76"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__comparison.html#ga80e4fd4470b9d20f244d72378c4f9c76">operator&lt;</a> (const <a class="el" href="structFeel_1_1BareEdge.html">BareEdge</a> &amp;e1, const <a class="el" href="structFeel_1_1BareEdge.html">BareEdge</a> &amp;e2)</td></tr>
@@ -2238,7 +2250,7 @@ template&lt;typename StatsIterator &gt; </td></tr>
 template&lt;typename StatsIterator &gt; </td></tr>
 <tr class="memitem:ab423ceee4ece6ecd4a7ae0e1a45e6bad"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>printTime</b> (std::ostream &amp;out, StatsIterator statsit, StatsIterator statsen, std::string const &amp;key, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> stats=Application::ALL|Application::HEADER)</td></tr>
 <tr class="memitem:ae89776231eca6bd68ba734da512759b3"><td class="memTemplParams" colspan="2">template&lt;typename Pset , typename Func , typename IM &gt; </td></tr>
-<tr class="memitem:ae89776231eca6bd68ba734da512759b3"><td class="memTemplItemLeft" align="right" valign="top">Polynomial&lt; Pset, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">project</a> (Pset const &amp;pset, Func const &amp;f, IM const &amp;im)</td></tr>
+<tr class="memitem:ae89776231eca6bd68ba734da512759b3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt; Pset, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">project</a> (Pset const &amp;pset, Func const &amp;f, IM const &amp;im)</td></tr>
 <tr class="memitem:aa91126beaf7894e8c7f5198230253625"><td class="memTemplParams" colspan="2">template&lt;typename TDomainSpace , typename TDualImageSpace &gt; </td></tr>
 <tr class="memitem:aa91126beaf7894e8c7f5198230253625"><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classFeel_1_1Projector.html">Projector</a><br class="typebreak"/>
 &lt; TDomainSpace, <br class="typebreak"/>
@@ -2838,6 +2850,15 @@ const double&#160;</td><td class="memItemRight" valign="bottom"><b>two_pi</b> = 
 <tr><td valign="top"><em><a class="anchor" id="afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae"></a>NON_HERMITIAN</em>&nbsp;</td><td>
 <p>non hermitian : <img class="formulaInl" alt="$A^* != A$" src="form_8.png"/> </p>
 </td></tr>
+<tr><td valign="top"><em><a class="anchor" id="afacc311419d607ce6ac26decbbd04917a064407d999698cec1ab0d139fe115fe9"></a>POSITIVE_DEFINITE</em>&nbsp;</td><td>
+<p>positive definite matrix : <img class="formulaInl" alt="$v^* A v > 0 $" src="form_849.png"/> for all non-zero v </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="afacc311419d607ce6ac26decbbd04917a545ae7d41ffeb9cfd1fb7d0c2daf9f0c"></a>SINGULAR</em>&nbsp;</td><td>
+<p>singular matrix : <img class="formulaInl" alt="$det(A)=0$" src="form_850.png"/> and 0 is an eigenvalue </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="afacc311419d607ce6ac26decbbd04917a467b261a8f71dfea7e2627b8348eb085"></a>DENSE</em>&nbsp;</td><td>
+<p>dense matrix </p>
+</td></tr>
 </table>
 </dd>
 </dl>
@@ -3194,7 +3215,7 @@ template&lt;typename MeshType &gt; </div>
 template&lt;typename Poly &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Polynomial&lt;Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a>&gt; Feel::curl </td>
+          <td class="memname"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt;Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a>&gt; Feel::curl </td>
           <td>(</td>
           <td class="paramtype">Polynomial&lt; Poly, Vectorial &gt; const &amp;&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -3206,7 +3227,7 @@ template&lt;typename Poly &gt; </div>
 <p>compute the curl of a vectorial polynomial <code>p</code> </p>
 <dl class="section return"><dt>Returns</dt><dd>the curl of the vectorial polynomial </dd></dl>
 
-<p>References <a class="el" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">project()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1Polynomial.html#af8d53fa9dd4da09dd672a324c932b35f">Feel::Polynomial&lt; Poly, PolySetType, Container &gt;::coeff()</a>, and <a class="el" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">project()</a>.</p>
 
 </div>
 </div>
@@ -3240,7 +3261,7 @@ template&lt;typename Poly &gt; </div>
 template&lt;typename Poly &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Polynomial&lt;Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a>&gt; Feel::curlt </td>
+          <td class="memname"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt;Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a>&gt; Feel::curlt </td>
           <td>(</td>
           <td class="paramtype">Polynomial&lt; Poly, Vectorial &gt; const &amp;&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -3253,7 +3274,7 @@ template&lt;typename Poly &gt; </div>
 <dl class="section note"><dt>Note</dt><dd>swap the signs of the curl matrix operator </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the transpose of the curl of the vectorial polynomial </dd></dl>
 
-<p>References <a class="el" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">project()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1Polynomial.html#af8d53fa9dd4da09dd672a324c932b35f">Feel::Polynomial&lt; Poly, PolySetType, Container &gt;::coeff()</a>, and <a class="el" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">project()</a>.</p>
 
 </div>
 </div>
@@ -3288,7 +3309,7 @@ template&lt;typename Poly &gt; </div>
 template&lt;typename Poly &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Polynomial&lt;Poly, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a>&gt; Feel::divergence </td>
+          <td class="memname"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt;Poly, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a>&gt; Feel::divergence </td>
           <td>(</td>
           <td class="paramtype">Polynomial&lt; Poly, Vectorial &gt; const &amp;&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -3299,6 +3320,8 @@ template&lt;typename Poly &gt; </div>
 
 <p>compute the divergence of a vectorial polynomial <code>p</code> </p>
 <dl class="section return"><dt>Returns</dt><dd>the divergence of the vectorial polynomial </dd></dl>
+
+<p>References <a class="el" href="classFeel_1_1Polynomial.html#ae7fa919e8e81cacbf15c6c55a42a738f">Feel::Polynomial&lt; Poly, PolySetType, Container &gt;::basis()</a>, and <a class="el" href="classFeel_1_1Polynomial.html#af8d53fa9dd4da09dd672a324c932b35f">Feel::Polynomial&lt; Poly, PolySetType, Container &gt;::coeff()</a>.</p>
 
 </div>
 </div>
@@ -3332,7 +3355,7 @@ template&lt;typename Poly &gt; </div>
 template&lt;typename Poly , template&lt; uint16_type &gt; class Type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Polynomial&lt;Poly, Type&gt; Feel::dx </td>
+          <td class="memname"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt;Poly, Type&gt; Feel::dx </td>
           <td>(</td>
           <td class="paramtype">Polynomial&lt; Poly, Type &gt; const &amp;&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -3343,6 +3366,8 @@ template&lt;typename Poly , template&lt; uint16_type &gt; class Type&gt; </div>
 
 <p>compute <img class="formulaInl" alt="$\frac{\partial \cdot}{\partial x}$" src="form_187.png"/> of a polynomial <code>p</code> </p>
 <dl class="section return"><dt>Returns</dt><dd>the gradient of the scalar polynomial </dd></dl>
+
+<p>References <a class="el" href="classFeel_1_1Polynomial.html#ae7fa919e8e81cacbf15c6c55a42a738f">Feel::Polynomial&lt; Poly, PolySetType, Container &gt;::basis()</a>, and <a class="el" href="classFeel_1_1Polynomial.html#af8d53fa9dd4da09dd672a324c932b35f">Feel::Polynomial&lt; Poly, PolySetType, Container &gt;::coeff()</a>.</p>
 
 </div>
 </div>
@@ -3376,7 +3401,7 @@ template&lt;typename Poly , template&lt; uint16_type &gt; class Type&gt; </div>
 template&lt;typename Poly , template&lt; uint16_type &gt; class Type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Polynomial&lt;Poly, Type&gt; Feel::dy </td>
+          <td class="memname"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt;Poly, Type&gt; Feel::dy </td>
           <td>(</td>
           <td class="paramtype">Polynomial&lt; Poly, Type &gt; const &amp;&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -3387,6 +3412,8 @@ template&lt;typename Poly , template&lt; uint16_type &gt; class Type&gt; </div>
 
 <p>compute <img class="formulaInl" alt="$\frac{\partial \cdot}{\partial y}$" src="form_188.png"/> of a polynomial <code>p</code> </p>
 <dl class="section return"><dt>Returns</dt><dd>the gradient of the scalar polynomial </dd></dl>
+
+<p>References <a class="el" href="classFeel_1_1Polynomial.html#ae7fa919e8e81cacbf15c6c55a42a738f">Feel::Polynomial&lt; Poly, PolySetType, Container &gt;::basis()</a>, and <a class="el" href="classFeel_1_1Polynomial.html#af8d53fa9dd4da09dd672a324c932b35f">Feel::Polynomial&lt; Poly, PolySetType, Container &gt;::coeff()</a>.</p>
 
 </div>
 </div>
@@ -3420,7 +3447,7 @@ template&lt;typename Poly , template&lt; uint16_type &gt; class Type&gt; </div>
 template&lt;typename Poly , template&lt; uint16_type &gt; class Type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Polynomial&lt;Poly, Type&gt; Feel::dz </td>
+          <td class="memname"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt;Poly, Type&gt; Feel::dz </td>
           <td>(</td>
           <td class="paramtype">Polynomial&lt; Poly, Type &gt; const &amp;&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -3431,6 +3458,8 @@ template&lt;typename Poly , template&lt; uint16_type &gt; class Type&gt; </div>
 
 <p>compute <img class="formulaInl" alt="$\frac{\partial \cdot}{\partial z}$" src="form_189.png"/> of a polynomial <code>p</code> </p>
 <dl class="section return"><dt>Returns</dt><dd>the gradient of the scalar polynomial </dd></dl>
+
+<p>References <a class="el" href="classFeel_1_1Polynomial.html#ae7fa919e8e81cacbf15c6c55a42a738f">Feel::Polynomial&lt; Poly, PolySetType, Container &gt;::basis()</a>, and <a class="el" href="classFeel_1_1Polynomial.html#af8d53fa9dd4da09dd672a324c932b35f">Feel::Polynomial&lt; Poly, PolySetType, Container &gt;::coeff()</a>.</p>
 
 </div>
 </div>
@@ -3783,7 +3812,7 @@ template&lt;typename MeshType &gt; </div>
 template&lt;typename Poly &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Polynomial&lt;Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a>&gt; Feel::gradient </td>
+          <td class="memname"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt;Poly, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a>&gt; Feel::gradient </td>
           <td>(</td>
           <td class="paramtype">Polynomial&lt; Poly, Scalar &gt; const &amp;&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -3795,6 +3824,8 @@ template&lt;typename Poly &gt; </div>
 <p>compute the gradient of a scalar polynomial <code>p</code> </p>
 <dl class="section return"><dt>Returns</dt><dd>the gradient of the scalar polynomial </dd></dl>
 
+<p>References <a class="el" href="classFeel_1_1Polynomial.html#ae7fa919e8e81cacbf15c6c55a42a738f">Feel::Polynomial&lt; Poly, PolySetType, Container &gt;::basis()</a>, and <a class="el" href="classFeel_1_1Polynomial.html#af8d53fa9dd4da09dd672a324c932b35f">Feel::Polynomial&lt; Poly, PolySetType, Container &gt;::coeff()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a2585c1fb3a5f58b5557aefb63f446de0"></a>
@@ -3804,7 +3835,7 @@ template&lt;typename Poly &gt; </div>
 template&lt;typename Poly &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Polynomial&lt;Poly, <a class="el" href="structFeel_1_1Tensor2.html">Tensor2</a>&gt; Feel::gradient </td>
+          <td class="memname"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt;Poly, <a class="el" href="structFeel_1_1Tensor2.html">Tensor2</a>&gt; Feel::gradient </td>
           <td>(</td>
           <td class="paramtype">Polynomial&lt; Poly, Vectorial &gt; const &amp;&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -3815,6 +3846,8 @@ template&lt;typename Poly &gt; </div>
 
 <p>compute the gradient of a vectorial polynomial <code>p</code> </p>
 <dl class="section return"><dt>Returns</dt><dd>the gradient of the vectorial polynomial </dd></dl>
+
+<p>References <a class="el" href="classFeel_1_1Polynomial.html#ae7fa919e8e81cacbf15c6c55a42a738f">Feel::Polynomial&lt; Poly, PolySetType, Container &gt;::basis()</a>, and <a class="el" href="classFeel_1_1Polynomial.html#af8d53fa9dd4da09dd672a324c932b35f">Feel::Polynomial&lt; Poly, PolySetType, Container &gt;::coeff()</a>.</p>
 
 </div>
 </div>
@@ -4041,6 +4074,8 @@ template&lt;typename Poly , template&lt; uint16_type &gt; class PsetType&gt; </d
 
 <p>integrate a polynomial over a convex </p>
 <p>since we use a L2 orthonormal basis, the integral of the polynomial is equal to the first first coefficient of the polynomial </p>
+
+<p>References <a class="el" href="classFeel_1_1Polynomial.html#af8d53fa9dd4da09dd672a324c932b35f">Feel::Polynomial&lt; Poly, PolySetType, Container &gt;::coeff()</a>.</p>
 
 </div>
 </div>
@@ -4831,7 +4866,7 @@ template&lt;typename MeshType &gt; </div>
 template&lt;typename Pset , typename Func , typename IM &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Polynomial&lt;Pset, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a>&gt; Feel::project </td>
+          <td class="memname"><a class="el" href="classFeel_1_1Polynomial.html">Polynomial</a>&lt;Pset, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a>&gt; Feel::project </td>
           <td>(</td>
           <td class="paramtype">Pset const &amp;&#160;</td>
           <td class="paramname"><em>pset</em>, </td>
@@ -5220,7 +5255,7 @@ template&lt;int Ngeo = 1&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Thu May 30 2013 14:05:11 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Fri May 31 2013 01:01:06 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

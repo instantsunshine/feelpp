@@ -29,6 +29,7 @@ var searchData=
   ['policycreationusingnew',['PolicyCreationUsingNew',['../structFeel_1_1PolicyCreationUsingNew.html',1,'Feel']]],
   ['policyfeeltimedefault',['PolicyFeelTimeDefault',['../structFeel_1_1PolicyFeelTimeDefault.html',1,'Feel']]],
   ['polydims',['PolyDims',['../structFeel_1_1Hypercube_1_1PolyDims.html',1,'Feel::Hypercube']]],
+  ['polynomial',['Polynomial',['../classFeel_1_1Polynomial.html',1,'Feel']]],
   ['polynomialset',['PolynomialSet',['../classFeel_1_1PolynomialSet.html',1,'Feel']]],
   ['polynomialset_3c_20dubiner_3c_20dim_2c_20order_2c_20normalized_3c_20false_20_3e_2c_20t_2c_20storageublas_20_3e_2c_20polysettype_20_3e',['PolynomialSet&lt; Dubiner&lt; Dim, Order, Normalized&lt; false &gt;, T, StorageUBlas &gt;, PolySetType &gt;',['../classFeel_1_1PolynomialSet.html',1,'Feel']]],
   ['polynomialset_3c_20legendre_3c_20dim_2c_20order_2c_20normalized_3c_20false_20_3e_2c_20t_20_3e_2c_20polysettype_20_3e',['PolynomialSet&lt; Legendre&lt; Dim, Order, Normalized&lt; false &gt;, T &gt;, PolySetType &gt;',['../classFeel_1_1PolynomialSet.html',1,'Feel']]],
@@ -36,7 +37,7 @@ var searchData=
   ['preconditionerpetsc',['PreconditionerPetsc',['../classFeel_1_1PreconditionerPetsc.html',1,'Feel']]],
   ['principal',['Principal',['../classFeel_1_1Principal.html',1,'Feel']]],
   ['problem',['problem',['../classFeel_1_1problem.html',1,'Feel']]],
-  ['projector',['Projector',['../classFeel_1_1Projector.html',1,'Feel']]],
   ['projector',['Projector',['../classFeel_1_1vf_1_1details_1_1Projector.html',1,'Feel::vf::details']]],
+  ['projector',['Projector',['../classFeel_1_1Projector.html',1,'Feel']]],
   ['pslogger',['PsLogger',['../classFeel_1_1PsLogger.html',1,'Feel']]]
 ];

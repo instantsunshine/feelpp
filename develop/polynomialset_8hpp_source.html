@@ -181,9 +181,9 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type rank = polyset_type::rank;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1PolynomialSet.html" title="a Set of polynomials">PolynomialSet&lt;Poly, Scalar&gt;</a> <a class="code" href="classFeel_1_1PolynomialSet.html" title="a Set of polynomials">component_type</a>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">typedef</span> Polynomial&lt;Poly, PolySetType&gt; polynomial_type;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Polynomial.html" title="polynomial class">Polynomial&lt;Poly, PolySetType&gt;</a> <a class="code" href="classFeel_1_1Polynomial.html" title="polynomial class">polynomial_type</a>;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">//typedef Polynomial&lt;Poly, PolySetType, ublas::vector_range&lt;ublas::vector&lt;value_type&gt; &gt; &gt; polynomial_type;</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">typedef</span> polynomial_type polynomial_view_type;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Polynomial.html" title="polynomial class">polynomial_type</a> <a class="code" href="classFeel_1_1Polynomial.html" title="polynomial class">polynomial_view_type</a>;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Poly::convex_type convex_type;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> basis_type::matrix_type matrix_type;</div>
@@ -431,7 +431,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1PolynomialSet.html" title="a Set of polynomials">PolynomialSet&lt;Poly, PolySetType&gt;</a>( Poly(), <a class="code" href="classFeel_1_1PolynomialSet.html#a47c3378ff4692aa26fe75815bbd92033">coeff</a>, true );</div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    }</div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;</div>
-<div class="line"><a name="l00459"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet.html#a1b4ac82b1fdf8cbfee703ed5157f5dc8">  459</a></span>&#160;    Polynomial&lt;Poly, PolySetType&gt; <a class="code" href="classFeel_1_1PolynomialSet.html#a1b4ac82b1fdf8cbfee703ed5157f5dc8">polynomial</a>( uint16_type i  )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00459"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet.html#a1b4ac82b1fdf8cbfee703ed5157f5dc8">  459</a></span>&#160;    <a class="code" href="classFeel_1_1Polynomial.html" title="polynomial class">Polynomial&lt;Poly, PolySetType&gt;</a> <a class="code" href="classFeel_1_1PolynomialSet.html#a1b4ac82b1fdf8cbfee703ed5157f5dc8">polynomial</a>( uint16_type i  )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a> dim_p = this-&gt;<a class="code" href="classFeel_1_1PolynomialSet.html#af36c805df20976f49b0bb6c469046a99">polynomialDimension</a>();</div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        matrix_type <a class="code" href="classFeel_1_1PolynomialSet.html#a47c3378ff4692aa26fe75815bbd92033">coeff</a>( nComponents, _M_coeff.size2() );</div>
@@ -445,7 +445,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;                                                ublas::range( nComponents*i, nComponents*( i+1 ) ),</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                                                ublas::range( 0, _M_coeff.size2() ) );</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        }</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        <span class="keywordflow">return</span> Polynomial&lt;Poly, PolySetType&gt; ( Poly(), <a class="code" href="classFeel_1_1PolynomialSet.html#a47c3378ff4692aa26fe75815bbd92033">coeff</a>, true );</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1Polynomial.html" title="polynomial class">Polynomial&lt;Poly, PolySetType&gt;</a> ( Poly(), <a class="code" href="classFeel_1_1PolynomialSet.html#a47c3378ff4692aa26fe75815bbd92033">coeff</a>, true );</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    }</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;</div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;</div>
@@ -2047,7 +2047,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Thu May 30 2013 14:05:04 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Fri May 31 2013 01:00:59 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -27,6 +27,7 @@ var searchData=
   ['tolatex',['toLatex',['../classFeel_1_1ExprBase.html#a39c83168ccd0945ea2789fdf96a8716e',1,'Feel::ExprBase']]],
   ['tolerance',['tolerance',['../classFeel_1_1SolverEigen.html#a3bffbfc17979de150e1c4dbebb359256',1,'Feel::SolverEigen']]],
   ['topologicaldimension',['topologicalDimension',['../classFeel_1_1Simplex.html#a4ad3ac59a77f5ef44d2a30d64c8e5a85',1,'Feel::Simplex']]],
+  ['toset',['toSet',['../classFeel_1_1Polynomial.html#aa2a48cab6a39f9cc19bd0d93292fd746',1,'Feel::Polynomial']]],
   ['tostring',['toString',['../classFeel_1_1ExprBase.html#ae5418942aec261290021388db40d1da6',1,'Feel::ExprBase']]],
   ['totext',['toText',['../classFeel_1_1ExprBase.html#aa268791c253d266b474dcb93400affeb',1,'Feel::ExprBase']]],
   ['trace',['trace',['../classFeel_1_1FunctionSpace.html#ae33afdfc2163ae92e4ce3959cff05e08',1,'Feel::FunctionSpace::trace()'],['../classFeel_1_1Mesh.html#a5f5e8e6c41b8d3334fbe3aa845245e42',1,'Feel::Mesh::trace()']]],

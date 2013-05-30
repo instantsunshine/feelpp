@@ -27,7 +27,7 @@ var searchData=
   ['setbugaddress',['setBugAddress',['../classFeel_1_1AboutData.html#aebc7927a2b1e7fe7a501e4471a2bfca6',1,'Feel::AboutData']]],
   ['setcenter',['setCenter',['../classFeel_1_1Sphere.html#afe25bd44afa4ee40bcc4b85c04db6194',1,'Feel::Sphere']]],
   ['setcharacteristiclength',['setCharacteristicLength',['../classFeel_1_1Gmsh.html#aac2ef4eaa0bcb7c0e17aa347a327ff81',1,'Feel::Gmsh']]],
-  ['setcoefficient',['setCoefficient',['../classFeel_1_1PolynomialSet.html#a4b48cdd141c5bdd03465fa3764f4b21d',1,'Feel::PolynomialSet']]],
+  ['setcoefficient',['setCoefficient',['../classFeel_1_1Polynomial.html#abe2aafac028eae50b0d7dd8a94fecc91',1,'Feel::Polynomial::setCoefficient()'],['../classFeel_1_1PolynomialSet.html#a4b48cdd141c5bdd03465fa3764f4b21d',1,'Feel::PolynomialSet::setCoefficient()']]],
   ['setcomponents',['setComponents',['../classFeel_1_1MeshBase.html#a6e1a5b28ac7eda38abd8ae60c6af54fb',1,'Feel::MeshBase']]],
   ['setconstant',['setConstant',['../classFeel_1_1Vector.html#a802efdc1a50b73df1263540b0febd23b',1,'Feel::Vector::setConstant()'],['../classFeel_1_1VectorEigen.html#a12ccb65a672903d51f992cd2ee6bf528',1,'Feel::VectorEigen::setConstant()'],['../classFeel_1_1VectorUblas.html#a52288c4b56d1663a01173f0d198da5af',1,'Feel::VectorUblas::setConstant()']]],
   ['setcontext',['setContext',['../classFeel_1_1Context.html#af28313ecda636da435a7d9226166761d',1,'Feel::Context']]],
