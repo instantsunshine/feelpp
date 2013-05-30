@@ -36,5 +36,6 @@ var classFeel_1_1OperatorInterpolation =
     [ "isDomainMeshRelatedToImageMesh", "classFeel_1_1OperatorInterpolation.html#a17412d7a7c1c8c8b1a8191a0fa3259c4", null ],
     [ "isImageMeshRelatedToDomainMesh", "classFeel_1_1OperatorInterpolation.html#a564da77c8396af23816370ccf1a36758", null ],
     [ "update", "classFeel_1_1OperatorInterpolation.html#a0c45f9f03c0bd53e553def2639e1a83b", null ],
-    [ "worldCommFusion", "classFeel_1_1OperatorInterpolation.html#a470f347c036a40cb065eb4d06b13e789", null ]
+    [ "worldCommFusion", "classFeel_1_1OperatorInterpolation.html#a470f347c036a40cb065eb4d06b13e789", null ],
+    [ "nLocalDofInDualImageElt", "classFeel_1_1OperatorInterpolation.html#a75a554a7273d702d2d815e84abefee07", null ]
 ];

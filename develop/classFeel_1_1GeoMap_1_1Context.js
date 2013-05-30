@@ -73,5 +73,13 @@ var classFeel_1_1GeoMap_1_1Context =
     [ "xReal", "classFeel_1_1GeoMap_1_1Context.html#ac50941ae3c4e047722704060f08186f9", null ],
     [ "xReal", "classFeel_1_1GeoMap_1_1Context.html#a66ea38e319fa04ffe99e4e7cdaa9c663", null ],
     [ "xRef", "classFeel_1_1GeoMap_1_1Context.html#a2151f92726eb85453824291dd36bc376", null ],
-    [ "xRefs", "classFeel_1_1GeoMap_1_1Context.html#a9f76ecea6acbfa6cb6d72f3f0fe76196", null ]
+    [ "xRefs", "classFeel_1_1GeoMap_1_1Context.html#a9f76ecea6acbfa6cb6d72f3f0fe76196", null ],
+    [ "condition", "classFeel_1_1GeoMap_1_1Context.html#a781542c13abaa94dca9c145a66367ee5", null ],
+    [ "context", "classFeel_1_1GeoMap_1_1Context.html#a839c88ed7bfab7bc47b276b4a1f3dfb0", null ],
+    [ "contextv", "classFeel_1_1GeoMap_1_1Context.html#a1f4df65e01713b034c917f561314af06", null ],
+    [ "is_linear", "classFeel_1_1GeoMap_1_1Context.html#ad283a3b52d3ef24d1fed45327034c617", null ],
+    [ "NDim", "classFeel_1_1GeoMap_1_1Context.html#ada5785d176cedcdfc47b6d33909614a3", null ],
+    [ "nDim", "classFeel_1_1GeoMap_1_1Context.html#a9eb7b83d523d0426b84adad34055c251", null ],
+    [ "PDim", "classFeel_1_1GeoMap_1_1Context.html#acae3c979b062b9aea32a59eee88e2e6f", null ],
+    [ "trans", "classFeel_1_1GeoMap_1_1Context.html#a5b795b86c8c6c63127c1375d62a3d508", null ]
 ];

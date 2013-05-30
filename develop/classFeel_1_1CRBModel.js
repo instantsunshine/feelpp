@@ -138,9 +138,12 @@ var classFeel_1_1CRBModel =
     [ "update", "classFeel_1_1CRBModel.html#a5c631a31e170d12a4db9cfdaa67abe5d", null ],
     [ "update", "classFeel_1_1CRBModel.html#a21028f41d19c439a5a98e58fec542caf", null ],
     [ "vm", "classFeel_1_1CRBModel.html#a3f10b11c9ba853f8d810f312b62375e3", null ],
+    [ "is_time_dependent", "classFeel_1_1CRBModel.html#ad042a8623ea702270a201d3f586683e7", null ],
     [ "M_Aqm", "classFeel_1_1CRBModel.html#a014aa8871e6b7c994474583bdc1ceeff", null ],
     [ "M_Fqm", "classFeel_1_1CRBModel.html#afc7d7aa5dbfb1fa17e03e82cacab3aed", null ],
     [ "M_InitialGuessV", "classFeel_1_1CRBModel.html#ac703ce7a1d1b34626e2fda35ffb14329", null ],
     [ "M_InitialGuessVector", "classFeel_1_1CRBModel.html#af815b9e17a24fa533b6de75eb9c85d83", null ],
-    [ "M_Mqm", "classFeel_1_1CRBModel.html#a5444317fa8a857d75bb458d0990a0eca", null ]
+    [ "M_Mqm", "classFeel_1_1CRBModel.html#a5444317fa8a857d75bb458d0990a0eca", null ],
+    [ "nb_spaces", "classFeel_1_1CRBModel.html#a936f56bf53145997f528428a4072dd93", null ],
+    [ "ParameterSpaceDimension", "classFeel_1_1CRBModel.html#afbc5d974e29c3ecfc167d7a77a6dd24c", null ]
 ];

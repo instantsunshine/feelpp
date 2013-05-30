@@ -13,5 +13,7 @@ var classFeel_1_1AdvReact =
     [ "set_stabcoeff", "classFeel_1_1AdvReact.html#a271840226d0a078160173315cab8fe88", null ],
     [ "setStabMethod", "classFeel_1_1AdvReact.html#aef22693017daf7ec2c9956c8843457fe", null ],
     [ "solve", "classFeel_1_1AdvReact.html#a2273d8e10d7f3bf5e6d6958df240d778", null ],
-    [ "update", "classFeel_1_1AdvReact.html#a03edcc2d226303b8144a0986980ee3d0", null ]
+    [ "update", "classFeel_1_1AdvReact.html#a03edcc2d226303b8144a0986980ee3d0", null ],
+    [ "Dim", "classFeel_1_1AdvReact.html#a3677496ec2191b41de3efb6f7484a991", null ],
+    [ "polyOrder", "classFeel_1_1AdvReact.html#ac6c215a7215fdbe09dd1d58412daf0c4", null ]
 ];

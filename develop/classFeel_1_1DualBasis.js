@@ -9,5 +9,7 @@ var classFeel_1_1DualBasis =
     [ "basis", "classFeel_1_1DualBasis.html#ad1bdf5b52125f731aef43e99156ffa76", null ],
     [ "operator()", "classFeel_1_1DualBasis.html#a6679e2ce1801be6d3319f36eb74d4ee9", null ],
     [ "operator=", "classFeel_1_1DualBasis.html#ad2165431afe94e822195a5d3c2603984", null ],
-    [ "primalSpace", "classFeel_1_1DualBasis.html#a78b221f71fa5bc09f3058487fbd8cd87", null ]
+    [ "primalSpace", "classFeel_1_1DualBasis.html#a78b221f71fa5bc09f3058487fbd8cd87", null ],
+    [ "nDim", "classFeel_1_1DualBasis.html#a466ed9ad29d93be41caafb317ecc277c", null ],
+    [ "nOrder", "classFeel_1_1DualBasis.html#a58e13ddff4ddb002c1472141de03588a", null ]
 ];

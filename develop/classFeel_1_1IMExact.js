@@ -8,5 +8,7 @@ var classFeel_1_1IMExact =
     [ "~IMExact", "classFeel_1_1IMExact.html#af29b4ad2726676005003839261c0a097", null ],
     [ "integrate", "classFeel_1_1IMExact.html#a445a64dee34f87ee271cc35b3e81de67", null ],
     [ "nPoints", "classFeel_1_1IMExact.html#a41205c84c3d0c885b62d5745b0621591", null ],
-    [ "points", "classFeel_1_1IMExact.html#a0834a0e4ec826e2fedd1bebed76419c9", null ]
+    [ "points", "classFeel_1_1IMExact.html#a0834a0e4ec826e2fedd1bebed76419c9", null ],
+    [ "is_exact", "classFeel_1_1IMExact.html#a3a5128cb895a9dbaf2daa7da30ad15f8", null ],
+    [ "is_face_im", "classFeel_1_1IMExact.html#a003709c5e35e0cf1cc9ce434ecd3936f", null ]
 ];

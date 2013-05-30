@@ -8,5 +8,8 @@ var classFeel_1_1MatrixBlock =
     [ "MatrixBlock", "classFeel_1_1MatrixBlock.html#acebf610465198ed966ed26262c024ec2", null ],
     [ "MatrixBlock", "classFeel_1_1MatrixBlock.html#af9c6e13c2e5ea290a10cd700951650af", null ],
     [ "operator=", "classFeel_1_1MatrixBlock.html#acf30c973da84881469665549b6836939", null ],
-    [ "operator=", "classFeel_1_1MatrixBlock.html#a439f1675a0413f20fc3da7a5c7a63cb4", null ]
+    [ "operator=", "classFeel_1_1MatrixBlock.html#a439f1675a0413f20fc3da7a5c7a63cb4", null ],
+    [ "NBLOCKCOLS", "classFeel_1_1MatrixBlock.html#a2a5835cc1714f73e62eaaed98b6e15eb", null ],
+    [ "NBLOCKROWS", "classFeel_1_1MatrixBlock.html#a8b1befb1f637ea20c8f79456eedeba7d", null ],
+    [ "NBLOCKSIZE", "classFeel_1_1MatrixBlock.html#ac68ba6864f21fb11585910b70d770a9b", null ]
 ];

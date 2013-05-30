@@ -24,12 +24,18 @@ var classFeel_1_1BoundaryAdapted =
     [ "basis", "classFeel_1_1BoundaryAdapted.html#a358b8b269788407ff9d08dc1602ef438", null ],
     [ "coeff", "classFeel_1_1BoundaryAdapted.html#aa1fe3247f0428e35dbcaba99f059f40c", null ],
     [ "degree", "classFeel_1_1BoundaryAdapted.html#ace19ded489aabbc15ec5496376ac0ca7", null ],
-    [ "derivate", "classFeel_1_1BoundaryAdapted.html#a76fc1bd580785c15d4329dc33aa72225", null ],
-    [ "derivate", "classFeel_1_1BoundaryAdapted.html#a9b7cb1566087f9d547c2435abf8bbf63", null ],
+    [ "derivate", "classFeel_1_1BoundaryAdapted.html#a3390d243aa62c2fe625045c8082ea406", null ],
+    [ "evaluate", "classFeel_1_1BoundaryAdapted.html#a830f7338e62edb0708775197e8735ea3", null ],
     [ "familyName", "classFeel_1_1BoundaryAdapted.html#add0cd1edaa37f12fa192ec5cab4b15be", null ],
     [ "operator()", "classFeel_1_1BoundaryAdapted.html#af4dcf6026739c6fa7f5487e2d7caf2ef", null ],
     [ "operator()", "classFeel_1_1BoundaryAdapted.html#af9462b05c4b028290eb379366ba5501a", null ],
     [ "operator=", "classFeel_1_1BoundaryAdapted.html#a6cf4d1e882216709ac3d5273ac716f05", null ],
     [ "points", "classFeel_1_1BoundaryAdapted.html#ab042720d548200991f162726aa5c5021", null ],
-    [ "points", "classFeel_1_1BoundaryAdapted.html#a61441c6cf46bd3869dd62caa4909e977", null ]
+    [ "points", "classFeel_1_1BoundaryAdapted.html#a61441c6cf46bd3869dd62caa4909e977", null ],
+    [ "is_normalized", "classFeel_1_1BoundaryAdapted.html#a49fba2497788ae040191ef87b9f7976f", null ],
+    [ "nConvexOrderDiff", "classFeel_1_1BoundaryAdapted.html#a35533b2c70d52bd4ef3a0e7b9703ba39", null ],
+    [ "nDim", "classFeel_1_1BoundaryAdapted.html#a58be7d6ce90171804fb36fd8b6b92376", null ],
+    [ "nOrder", "classFeel_1_1BoundaryAdapted.html#a3cf02577a3667766d7c550874807ec13", null ],
+    [ "numFaces", "classFeel_1_1BoundaryAdapted.html#a278104267d10da69bc55039526b85c4d", null ],
+    [ "numVertices", "classFeel_1_1BoundaryAdapted.html#a9970ed14750f095f8882f0e89bf3de3f", null ]
 ];

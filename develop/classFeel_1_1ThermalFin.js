@@ -19,5 +19,8 @@ var classFeel_1_1ThermalFin =
     [ "vector_type", "classFeel_1_1ThermalFin.html#ab549c9dd57578506f06b46f235c22b1d", null ],
     [ "ThermalFin", "classFeel_1_1ThermalFin.html#a2f9e08c3cece4d705276061c403e7945", null ],
     [ "createMesh", "classFeel_1_1ThermalFin.html#a1bd06fca4949f0cce19e9d0cd556fd7e", null ],
-    [ "run", "classFeel_1_1ThermalFin.html#a00579c0c8b8669ba48e2eac43fbf0c48", null ]
+    [ "run", "classFeel_1_1ThermalFin.html#a00579c0c8b8669ba48e2eac43fbf0c48", null ],
+    [ "Dim", "classFeel_1_1ThermalFin.html#adaf66725ff7875b9d3c423a7d58d918c", null ],
+    [ "imOrder", "classFeel_1_1ThermalFin.html#ae15a6cd476a4b83b8742228feb45703c", null ],
+    [ "Order", "classFeel_1_1ThermalFin.html#a9dbe997443f1f9a58eb23e49ac3b1698", null ]
 ];

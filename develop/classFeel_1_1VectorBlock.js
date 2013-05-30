@@ -8,5 +8,6 @@ var classFeel_1_1VectorBlock =
     [ "VectorBlock", "classFeel_1_1VectorBlock.html#ac93c8edf319520be98093383147e0f42", null ],
     [ "VectorBlock", "classFeel_1_1VectorBlock.html#ab99a570a38939ae0d3badb240b4657b5", null ],
     [ "operator=", "classFeel_1_1VectorBlock.html#a2acc5d7403533a700eb70aaf147ee701", null ],
-    [ "operator=", "classFeel_1_1VectorBlock.html#a67bd66b7621d0790119ecdaef12df997", null ]
+    [ "operator=", "classFeel_1_1VectorBlock.html#a67bd66b7621d0790119ecdaef12df997", null ],
+    [ "NBLOCKROWS", "classFeel_1_1VectorBlock.html#a4137ef4b08536eb14b94dce90d4ccc25", null ]
 ];

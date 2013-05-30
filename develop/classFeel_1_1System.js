@@ -14,5 +14,6 @@ var classFeel_1_1System =
     [ "setFunctionSpace", "classFeel_1_1System.html#a20b88c2db47f68bbf0af07acaf633a90", null ],
     [ "setVm", "classFeel_1_1System.html#a1d4420a111001201e14394c2b3b9c990", null ],
     [ "solve", "classFeel_1_1System.html#ad77a2d94fed456f3f481872e2e606609", null ],
-    [ "vm", "classFeel_1_1System.html#af548db7223fe5fd17227a0b9a331b095", null ]
+    [ "vm", "classFeel_1_1System.html#af548db7223fe5fd17227a0b9a331b095", null ],
+    [ "Dim", "classFeel_1_1System.html#ac4b0ea9de1f83a411319c9aa8cb80a32", null ]
 ];

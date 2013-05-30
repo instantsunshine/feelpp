@@ -18,5 +18,8 @@ var classFeel_1_1ImporterGmsh =
     [ "setVersion", "classFeel_1_1ImporterGmsh.html#a8a84be5f2458c87692b02a65e9b3648a", null ],
     [ "showMe", "classFeel_1_1ImporterGmsh.html#a1f2f1c2f8e2759f25684831a76ebc8d8", null ],
     [ "version", "classFeel_1_1ImporterGmsh.html#a2f605f0fb7d5a1d767bcb49c394b33fa", null ],
-    [ "visit", "classFeel_1_1ImporterGmsh.html#a3af15c3fb4a73372cb150bb9c2c8aa0b", null ]
+    [ "visit", "classFeel_1_1ImporterGmsh.html#a3af15c3fb4a73372cb150bb9c2c8aa0b", null ],
+    [ "npoints_per_edge", "classFeel_1_1ImporterGmsh.html#a43ef5235f7af47cb41370497c11166f5", null ],
+    [ "npoints_per_element", "classFeel_1_1ImporterGmsh.html#a59b792a1b0d98380d7a77d08f035a9b6", null ],
+    [ "npoints_per_face", "classFeel_1_1ImporterGmsh.html#ae728b7a693b39ed8a3bbb70f4f8f6fb5", null ]
 ];

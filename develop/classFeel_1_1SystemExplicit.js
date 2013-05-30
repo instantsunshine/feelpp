@@ -7,5 +7,6 @@ var classFeel_1_1SystemExplicit =
     [ "value_type", "classFeel_1_1SystemExplicit.html#adb2e1e68e6b549256b872a63ae57da1a", null ],
     [ "SystemExplicit", "classFeel_1_1SystemExplicit.html#a42ced505e19ef4c463398984b1e74bd3", null ],
     [ "SystemExplicit", "classFeel_1_1SystemExplicit.html#ad1f73796e73e549476e91f33484f085a", null ],
-    [ "~SystemExplicit", "classFeel_1_1SystemExplicit.html#ae548ea490cc6c98e8fd2f57c903c33eb", null ]
+    [ "~SystemExplicit", "classFeel_1_1SystemExplicit.html#ae548ea490cc6c98e8fd2f57c903c33eb", null ],
+    [ "Dim", "classFeel_1_1SystemExplicit.html#a78899c9d848245920cecea4ac0a84023", null ]
 ];

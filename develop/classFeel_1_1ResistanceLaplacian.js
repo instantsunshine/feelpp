@@ -29,5 +29,6 @@ var classFeel_1_1ResistanceLaplacian =
     [ "ResistanceLaplacian", "classFeel_1_1ResistanceLaplacian.html#a4f15b503e3c1a44a2dc4c39d08e19a59", null ],
     [ "createLine", "classFeel_1_1ResistanceLaplacian.html#a77bd54489dfd6d29806c9879b1fa4813", null ],
     [ "createMesh", "classFeel_1_1ResistanceLaplacian.html#a95f01f427e7216768833931620f65717", null ],
-    [ "run", "classFeel_1_1ResistanceLaplacian.html#abccfa412f1e5d43c78c32ba87877fe04", null ]
+    [ "run", "classFeel_1_1ResistanceLaplacian.html#abccfa412f1e5d43c78c32ba87877fe04", null ],
+    [ "imOrder", "classFeel_1_1ResistanceLaplacian.html#a025693d8de94d375f593235bdcd0cb33", null ]
 ];

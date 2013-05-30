@@ -28,5 +28,14 @@ var classFeel_1_1PointSetInterpolation =
     [ "pointToEntity", "classFeel_1_1PointSetInterpolation.html#a26013efd307c47ad35dbd435806e0a33", null ],
     [ "setEid", "classFeel_1_1PointSetInterpolation.html#a5f6d7b350abcbb38c4cef7a64ea3c0a9", null ],
     [ "setPtE", "classFeel_1_1PointSetInterpolation.html#afae7a73971ae5e5648713fdfc168d884", null ],
-    [ "RefConv", "classFeel_1_1PointSetInterpolation.html#a18866bd3a69d0054acc16346fd6532c2", null ]
+    [ "convexOrder", "classFeel_1_1PointSetInterpolation.html#a3ca7973c00f30fc99937cfc0d547cd0e", null ],
+    [ "is_hypercube", "classFeel_1_1PointSetInterpolation.html#a83927f1561be8e992fc832a173b23256", null ],
+    [ "is_simplex", "classFeel_1_1PointSetInterpolation.html#a340f00e72c6f78b18cd18b8d5a56dfa9", null ],
+    [ "nbPtsPerEdge", "classFeel_1_1PointSetInterpolation.html#a133d3644228d7ac3ad749dcf5992728d", null ],
+    [ "nbPtsPerFace", "classFeel_1_1PointSetInterpolation.html#a6ff5d589c596967550dd90a7281b7d57", null ],
+    [ "nbPtsPerVertex", "classFeel_1_1PointSetInterpolation.html#a8ddbbb2c1206e5088d445137b5b96508", null ],
+    [ "nbPtsPerVolume", "classFeel_1_1PointSetInterpolation.html#a97b2d159b7befca31328850098a2bbe6", null ],
+    [ "numPoints", "classFeel_1_1PointSetInterpolation.html#a09b59314d6419d4be064e0ff399c269b", null ],
+    [ "RefConv", "classFeel_1_1PointSetInterpolation.html#a18866bd3a69d0054acc16346fd6532c2", null ],
+    [ "topological_dimension", "classFeel_1_1PointSetInterpolation.html#ab1eac99dca0c75d4e3994a6e85b3be1f", null ]
 ];

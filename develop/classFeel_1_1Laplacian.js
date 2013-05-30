@@ -16,5 +16,6 @@ var classFeel_1_1Laplacian =
     [ "vector_type", "classFeel_1_1Laplacian.html#a2904df7e73c0982463e71ce8c60a5e25", null ],
     [ "Laplacian", "classFeel_1_1Laplacian.html#a31a572cb34e887b81000e29046343628", null ],
     [ "operator()", "classFeel_1_1Laplacian.html#a66ae48b25cdd09190373f48c0bbc68eb", null ],
-    [ "run", "classFeel_1_1Laplacian.html#a1142b736ac02d39a250582f802abc97f", null ]
+    [ "run", "classFeel_1_1Laplacian.html#a1142b736ac02d39a250582f802abc97f", null ],
+    [ "imOrder", "classFeel_1_1Laplacian.html#a37d6b18b6dadd15d0717437b99ec1c37", null ]
 ];

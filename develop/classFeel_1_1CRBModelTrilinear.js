@@ -80,7 +80,10 @@ var classFeel_1_1CRBModelTrilinear =
     [ "solveFemUsingOnlineEimPicard", "classFeel_1_1CRBModelTrilinear.html#a4e2043ea4440f256905b719d4bdb8f49", null ],
     [ "update", "classFeel_1_1CRBModelTrilinear.html#ab2e361a2d6cd6e4c1fdb4145ca1bd482", null ],
     [ "vm", "classFeel_1_1CRBModelTrilinear.html#aba37a8c1f0775dcd61aca876682d180c", null ],
+    [ "is_time_dependent", "classFeel_1_1CRBModelTrilinear.html#ab1192985140c21fac75a6e181bc00bc9", null ],
     [ "M_Aqm", "classFeel_1_1CRBModelTrilinear.html#a418cd0a8d2c4be174b3a93ac80962f1f", null ],
     [ "M_Fqm", "classFeel_1_1CRBModelTrilinear.html#aaaf2beb675a5e1e2557f37a4593eb103", null ],
+    [ "nb_spaces", "classFeel_1_1CRBModelTrilinear.html#a2e6a7c9f5fd0d4586e0b1b0a48bba700", null ],
+    [ "ParameterSpaceDimension", "classFeel_1_1CRBModelTrilinear.html#a872f78eb007026d787ef9a620d5681db", null ],
     [ "result_offline_merge_type", "classFeel_1_1CRBModelTrilinear.html#a858cabbb6f412ebe7f9904acbab1c123", null ]
 ];

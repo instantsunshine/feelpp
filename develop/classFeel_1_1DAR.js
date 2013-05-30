@@ -11,5 +11,6 @@ var classFeel_1_1DAR =
     [ "space_type", "classFeel_1_1DAR.html#a4269011899f4dae0b8c743a90ddb7898", null ],
     [ "value_type", "classFeel_1_1DAR.html#ae998e9fce973feafd4cd9bdb3ad3ee8c", null ],
     [ "DAR", "classFeel_1_1DAR.html#aefea8cbbfc4038fe8f1504c6f2b9263c", null ],
-    [ "run", "classFeel_1_1DAR.html#a8afabe347c36be4b29a07284a2f45597", null ]
+    [ "run", "classFeel_1_1DAR.html#a8afabe347c36be4b29a07284a2f45597", null ],
+    [ "Order", "classFeel_1_1DAR.html#a4d25d9e21d936f7f45547ec75b1e61d5", null ]
 ];

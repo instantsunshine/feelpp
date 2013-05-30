@@ -19,5 +19,6 @@ var classFeel_1_1Sound =
     [ "vector_type", "classFeel_1_1Sound.html#a0fa8fcc698e1fcf8538e0b9978e1205e", null ],
     [ "Sound", "classFeel_1_1Sound.html#a05e6aa8f243c84bc3a81b936883f91b5", null ],
     [ "name", "classFeel_1_1Sound.html#a6b7ed5ae55c1b8e2a5721e95a54e2a09", null ],
-    [ "run", "classFeel_1_1Sound.html#a948829038b99e7b8daad0d59d8a39d5c", null ]
+    [ "run", "classFeel_1_1Sound.html#a948829038b99e7b8daad0d59d8a39d5c", null ],
+    [ "imOrder", "classFeel_1_1Sound.html#a2bd46367f7359556b0d700d01ea7baa5", null ]
 ];

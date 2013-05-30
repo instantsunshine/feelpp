@@ -6,5 +6,6 @@ var classFeel_1_1functional_1_1IntegralMomentOnFace =
     [ "space_type", "classFeel_1_1functional_1_1IntegralMomentOnFace.html#a876973e3bbda85ddc2e9fc7462b474fe", null ],
     [ "value_type", "classFeel_1_1functional_1_1IntegralMomentOnFace.html#a14f665aebe56e3e0084f21e04f0c89ac", null ],
     [ "IntegralMomentOnFace", "classFeel_1_1functional_1_1IntegralMomentOnFace.html#a1e6046af2f998ed356f69399cb7dd3f7", null ],
-    [ "IntegralMomentOnFace", "classFeel_1_1functional_1_1IntegralMomentOnFace.html#af2175817915d6531523c91ee3462bb25", null ]
+    [ "IntegralMomentOnFace", "classFeel_1_1functional_1_1IntegralMomentOnFace.html#af2175817915d6531523c91ee3462bb25", null ],
+    [ "nComponents", "classFeel_1_1functional_1_1IntegralMomentOnFace.html#a306cf90bc852e634d63039c6f0fd6ca8", null ]
 ];

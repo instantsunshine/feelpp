@@ -22,5 +22,6 @@ var classFeel_1_1GeoMap_1_1Inverse =
     [ "P", "classFeel_1_1GeoMap_1_1Inverse.html#a0bd7bbf67dfabdd71e0894910ad53f4f", null ],
     [ "setXReal", "classFeel_1_1GeoMap_1_1Inverse.html#a6af4c4e333a7697ba62bb0500772626c", null ],
     [ "xReal", "classFeel_1_1GeoMap_1_1Inverse.html#aa1bff2eed9d44d4632ca1f80cf660642", null ],
-    [ "xRef", "classFeel_1_1GeoMap_1_1Inverse.html#a8b553628c1673ed10b72520497093b10", null ]
+    [ "xRef", "classFeel_1_1GeoMap_1_1Inverse.html#a8b553628c1673ed10b72520497093b10", null ],
+    [ "trans", "classFeel_1_1GeoMap_1_1Inverse.html#a966411d4dd8dc4f0ca0003817675798f", null ]
 ];

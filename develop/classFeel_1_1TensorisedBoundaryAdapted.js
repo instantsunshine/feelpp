@@ -24,13 +24,16 @@ var classFeel_1_1TensorisedBoundaryAdapted =
     [ "degree", "classFeel_1_1TensorisedBoundaryAdapted.html#a47ec9b31be6cd0233a1723fabfb4bf0b", null ],
     [ "derivate", "classFeel_1_1TensorisedBoundaryAdapted.html#a06fe82960c0c6ad89a0e794e507e9165", null ],
     [ "derivate", "classFeel_1_1TensorisedBoundaryAdapted.html#a99f39ac16079afe7667c84161ccb9643", null ],
-    [ "derivate", "classFeel_1_1TensorisedBoundaryAdapted.html#a3157e6fdff0283beffd0ab46d80db5bc", null ],
-    [ "derivate", "classFeel_1_1TensorisedBoundaryAdapted.html#ae4cb71a20530fffbf2ad17b544f51e9f", null ],
     [ "evaluate", "classFeel_1_1TensorisedBoundaryAdapted.html#a5f18121cf910c7a9675d99ac9e0866a3", null ],
     [ "familyName", "classFeel_1_1TensorisedBoundaryAdapted.html#a96997688463d93b1efb8157f2b1bd2c9", null ],
     [ "operator()", "classFeel_1_1TensorisedBoundaryAdapted.html#ab8dc87a3900f323a26ac5842667ff733", null ],
     [ "operator()", "classFeel_1_1TensorisedBoundaryAdapted.html#a6c44eb2adb77b40fdc9b7c0ab01f3407", null ],
     [ "operator=", "classFeel_1_1TensorisedBoundaryAdapted.html#af8cc06139d72cd5844345fc8ed2a9821", null ],
     [ "points", "classFeel_1_1TensorisedBoundaryAdapted.html#ad61db683b0fb988912bdfb431b02ee0e", null ],
-    [ "points", "classFeel_1_1TensorisedBoundaryAdapted.html#afdd4bfea25032aaa865ffdd0a17a6cf6", null ]
+    [ "points", "classFeel_1_1TensorisedBoundaryAdapted.html#afdd4bfea25032aaa865ffdd0a17a6cf6", null ],
+    [ "nConvexOrder", "classFeel_1_1TensorisedBoundaryAdapted.html#acbbdae2c0e9c502becc3a5f3d43164fd", null ],
+    [ "nDim", "classFeel_1_1TensorisedBoundaryAdapted.html#a636f7e87c56ab608f4159a29a75956b1", null ],
+    [ "nOrder", "classFeel_1_1TensorisedBoundaryAdapted.html#a02a681ab63d406e1095475f427137d03", null ],
+    [ "numFaces", "classFeel_1_1TensorisedBoundaryAdapted.html#a83af9cfa640a32396afca27e4d018fe7", null ],
+    [ "numVertices", "classFeel_1_1TensorisedBoundaryAdapted.html#a4730c6450bf1b17708ad3c3d40b6be83", null ]
 ];

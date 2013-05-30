@@ -17,5 +17,6 @@ var classFeel_1_1PointSetToMesh =
     [ "~PointSetToMesh", "classFeel_1_1PointSetToMesh.html#abc2513c759abfaf1e51bf87669233071", null ],
     [ "addBoundaryPoints", "classFeel_1_1PointSetToMesh.html#ac58ef47c929a35e8241ea261ec8ebb49", null ],
     [ "mesh", "classFeel_1_1PointSetToMesh.html#a11ea86df96f368d42ccd2ba0c601cab9", null ],
-    [ "visit", "classFeel_1_1PointSetToMesh.html#ac540fae4a23b988ace4700749271197e", null ]
+    [ "visit", "classFeel_1_1PointSetToMesh.html#ac540fae4a23b988ace4700749271197e", null ],
+    [ "nDim", "classFeel_1_1PointSetToMesh.html#a04e76381f5038c85febe23fcb0487027", null ]
 ];

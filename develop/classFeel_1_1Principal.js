@@ -21,5 +21,6 @@ var classFeel_1_1Principal =
     [ "evaluate_1", "classFeel_1_1Principal.html#aee5673edc93963a3bc69f7d336d3ad73", null ],
     [ "evaluate_2", "classFeel_1_1Principal.html#a97afbda62c8454ecb9b2a2beeade1768", null ],
     [ "evaluate_3", "classFeel_1_1Principal.html#ab55c69d7f052feb55bb8291480022e2f", null ],
-    [ "operator=", "classFeel_1_1Principal.html#ae5136bf06155c4925124083c20da6de0", null ]
+    [ "operator=", "classFeel_1_1Principal.html#ae5136bf06155c4925124083c20da6de0", null ],
+    [ "nOrder", "classFeel_1_1Principal.html#a6ef536a070337d8d7422fdfc33e9d70a", null ]
 ];

@@ -18,5 +18,7 @@ var classFeel_1_1Elaxi =
     [ "value_type", "classFeel_1_1Elaxi.html#aef96e5dbb4cf54a91d80fe66ac6cbee9", null ],
     [ "vector_ptrtype", "classFeel_1_1Elaxi.html#af6233df4c7204d7522a0bf32c0cb086c", null ],
     [ "Elaxi", "classFeel_1_1Elaxi.html#a7ef2dcd20a25cb939fe6780e08051964", null ],
-    [ "run", "classFeel_1_1Elaxi.html#a4ddecc401234a5aede2f13ae9a9515ee", null ]
+    [ "run", "classFeel_1_1Elaxi.html#a4ddecc401234a5aede2f13ae9a9515ee", null ],
+    [ "Dim", "classFeel_1_1Elaxi.html#a4ba4398abbf34e4e41fded4b161faa31", null ],
+    [ "imOrder", "classFeel_1_1Elaxi.html#a1eb84f5fd7bbac7ed3def9a16c13fcc6", null ]
 ];

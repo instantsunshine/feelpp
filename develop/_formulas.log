@@ -1,18 +1,16 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_9) (format=latex 2012.10.9)  26 MAY 2013 21:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2013.2.26)  30 MAY 2013 14:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **_formulas.tex
 (./_formulas.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, cz
-ech, slovak, dutch, ukenglish, usenglishmax, basque, french, german-x-2012-05-3
-0, ngerman-x-2012-05-30, german, ngerman, swissgerman, italian, polish, portugu
-ese, spanish, catalan, galician, loaded.
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
+aded.
 
-(/opt/local/share/texmf-texlive-dist/tex/latex/base/article.cls
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/opt/local/share/texmf-texlive-dist/tex/latex/base/size10.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -26,22 +24,22 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (/opt/local/share/texmf-texlive-dist/tex/latex/graphics/epsfig.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
-(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
-(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
-) (/opt/local/share/texmf-texlive-dist/tex/latex/graphics/graphics.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
-(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
-) (/opt/local/share/texmf-texlive-dist/tex/latex/latexconfig/graphics.cfg
+) (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: dvips.def on input line 91.
-(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/dvips.def
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen103
@@ -49,20 +47,20 @@ File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 )
 \epsfxsize=\dimen105
 \epsfysize=\dimen106
-) (/opt/local/share/texmf-texlive-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip43
 For additional information on amsmath, use the `?' option.
-(/opt/local/share/texmf-texlive-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
-(/opt/local/share/texmf-texlive-dist/tex/latex/amsmath/amsgen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks15
 \ex@=\dimen107
-)) (/opt/local/share/texmf-texlive-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen108
-) (/opt/local/share/texmf-texlive-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count87
@@ -102,15 +100,15 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
-) (/opt/local/share/texmf-texlive-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2009/06/22 v3.00
-(/opt/local/share/texmf-texlive-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
-)) (/opt/local/share/texmf-texlive-dist/tex/latex/amscls/amsthm.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2009/07/02 v2.20.1
 \thm@style=\toks20
 \thm@bodyfont=\toks21
@@ -121,32 +119,32 @@ Package: amsthm 2009/07/02 v2.20.1
 \thm@postskip=\skip47
 \thm@headsep=\skip48
 \dth@everypar=\toks25
-) (/Users/prudhomm/Devel/FEEL/Documentation/feelpp.git/doc/api/feelppmacros.sty
-(/opt/local/share/texmf-texlive-dist/tex/latex/bbold/bbold.sty
+) (/home/vhuber/feelpp/doc/api/feelppmacros.sty (/usr/share/texlive/texmf-dist/
+tex/latex/bbold/bbold.sty
 Package: bbold 1994/04/06 Bbold symbol package
 LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 42.
-) (/opt/local/share/texmf-texlive-dist/tex/latex/tools/bm.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
 \symboldsymbols=\mathgroup8
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
 LaTeX Info: Redefining \bm on input line 204.
-) (/opt/local/share/texmf-texlive-dist/tex/latex/todonotes/todonotes.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/todonotes/todonotes.sty
 Package: todonotes 2011/10/22 .dtx Todonotes source and documentation.
 Package: todonotes 2011/10/22
-(/opt/local/share/texmf-texlive-dist/tex/latex/base/ifthen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-) (/opt/local/share/texmf-texlive-dist/tex/latex/xkeyval/xkeyval.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
-(/opt/local/share/texmf-texlive-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks26
 \XKV@tempa@toks=\toks27
 \XKV@depth=\count99
 File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
-)) (/opt/local/share/texmf-texlive-dist/tex/latex/xcolor/xcolor.sty
+)) (/usr/share/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
-(/opt/local/share/texmf-texlive-dist/tex/latex/latexconfig/color.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: dvips.def on input line 225.
@@ -158,27 +156,26 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-) (/opt/local/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty (/opt/local/shar
-e/texmf/tex/latex/pgf/basiclayer/pgf.sty (/opt/local/share/texmf/tex/latex/pgf/
-utilities/pgfrcs.sty (/opt/local/share/texmf/tex/generic/pgf/utilities/pgfutil-
-common.tex
+) (/usr/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texmf/tex/
+latex/pgf/basiclayer/pgf.sty (/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.s
+ty (/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks28
-) (/opt/local/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box28
-(/opt/local/share/texmf-texlive-dist/tex/latex/ms/everyshi.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-)) (/opt/local/share/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
+)) (/usr/share/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
 Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
 ))
 Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
-(/opt/local/share/texmf/tex/latex/pgf/basiclayer/pgfcore.sty (/opt/local/share/
-texmf/tex/latex/pgf/systemlayer/pgfsys.sty (/opt/local/share/texmf/tex/generic/
-pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texmf/tex/la
+tex/pgf/systemlayer/pgfsys.sty (/usr/share/texmf/tex/generic/pgf/systemlayer/pg
+fsys.code.tex
 Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
-(/opt/local/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks29
 \pgfkeys@temptoks=\toks30
-(/opt/local/share/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks31
 ))
 \pgf@x=\dimen116
@@ -195,47 +192,44 @@ Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 \c@pgf@countb=\count101
 \c@pgf@countc=\count102
 \c@pgf@countd=\count103
-(/opt/local/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Package pgfsys Info: Driver file for pgf: pgfsys-dvips.def on input line 900.
-(/opt/local/share/texmf/tex/generic/pgf/systemlayer/pgfsys-dvips.def
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-dvips.def
 File: pgfsys-dvips.def 2008/04/03  (rcs-revision 1.20)
-
-(/opt/local/share/texmf/tex/generic/pgf/systemlayer/pgfsys-common-postscript.de
-f
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-common-postscript.def
 File: pgfsys-common-postscript.def 2008/10/01  (rcs-revision 1.22)
 \pgf@objectcount=\count104
-))) (/opt/local/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+))) (/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
 \pgfsyssoftpath@smallbuffer@items=\count105
 \pgfsyssoftpath@bigbuffer@items=\count106
-) (/opt/local/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+) (/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-)) (/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
+)) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
-(/opt/local/share/texmf/tex/generic/pgf/math/pgfmath.code.tex (/opt/local/share
-/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex (/opt/local/share/texmf/tex/ge
-neric/pgf/math/pgfmathutil.code.tex) (/opt/local/share/texmf/tex/generic/pgf/ma
-th/pgfmathparser.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texmf/tex/g
+eneric/pgf/math/pgfmathcalc.code.tex (/usr/share/texmf/tex/generic/pgf/math/pgf
+mathutil.code.tex) (/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.te
+x
 \pgfmath@dimen=\dimen124
 \pgfmath@count=\count107
 \pgfmath@box=\box29
 \pgfmath@toks=\toks32
 \pgfmath@stack@operand=\toks33
 \pgfmath@stack@operation=\toks34
-) (/opt/local/share/texmf/tex/generic/pgf/math/pgfmathfunctions.code.tex (/opt/
-local/share/texmf/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
-(/opt/local/share/texmf/tex/generic/pgf/math/pgfmathfunctions.trigonometric.cod
-e.tex) (/opt/local/share/texmf/tex/generic/pgf/math/pgfmathfunctions.random.cod
-e.tex)
-(/opt/local/share/texmf/tex/generic/pgf/math/pgfmathfunctions.comparison.code.t
-ex) (/opt/local/share/texmf/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
-) (/opt/local/share/texmf/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
-(/opt/local/share/texmf/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex))) 
-(/opt/local/share/texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
+) (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/share/
+texmf/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texmf/t
+ex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texmf/
+tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texmf/tex/ge
+neric/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texmf/tex/gene
+ric/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texmf/tex/generic/pgf/
+math/pgfmathfunctions.round.code.tex) (/usr/share/texmf/tex/generic/pgf/math/pg
+fmathfunctions.misc.code.tex))) (/usr/share/texmf/tex/generic/pgf/math/pgfmathf
+loat.code.tex
 \c@pgfmathroundto@lastzeros=\count108
-)) (/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+)) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
 \pgf@picminx=\dimen125
 \pgf@picmaxx=\dimen126
@@ -251,84 +245,73 @@ File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
 \pgf@yy=\dimen136
 \pgf@zx=\dimen137
 \pgf@zy=\dimen138
-)
-(/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.te
-x
+) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
 \pgf@path@lastx=\dimen139
 \pgf@path@lasty=\dimen140
-) (/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
 \pgf@shorten@end@additional=\dimen141
 \pgf@shorten@start@additional=\dimen142
-) (/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 \pgfpic=\box30
 \pgf@hbox=\box31
 \pgf@layerbox@main=\box32
 \pgf@picture@serial@count=\count109
-)
-(/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
 \pgflinewidth=\dimen143
-)
-(/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.
-tex
+) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
 \pgf@pt@x=\dimen144
 \pgf@pt@y=\dimen145
 \pgf@pt@temp=\dimen146
-) (/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
-) (/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
-)
-(/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.t
-ex
+) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
-) (/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
-) (/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
 \pgf@max=\dimen147
 \pgf@sys@shading@range@num=\count110
-) (/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
-(/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
 \pgfexternal@startupbox=\box33
-)) (/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+)) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
-)
-(/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
-) (/opt/local/share/texmf/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+) (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
-))) (/opt/local/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+))) (/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
 \pgfnodeparttextbox=\box34
-) (/opt/local/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+) (/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
-) (/opt/local/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+) (/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen148
 \pgf@nodesepend=\dimen149
-) (/opt/local/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+) (/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
-)) (/opt/local/share/texmf/tex/latex/pgf/utilities/pgffor.sty (/opt/local/share
-/texmf/tex/latex/pgf/utilities/pgfkeys.sty (/opt/local/share/texmf/tex/generic/
-pgf/utilities/pgfkeys.code.tex)) (/opt/local/share/texmf/tex/generic/pgf/utilit
-ies/pgffor.code.tex
+)) (/usr/share/texmf/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texmf/tex/l
+atex/pgf/utilities/pgfkeys.sty (/usr/share/texmf/tex/generic/pgf/utilities/pgfk
+eys.code.tex)) (/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
 \pgffor@iter=\dimen150
 \pgffor@skip=\dimen151
 \pgffor@stack=\toks35
 \pgffor@toks=\toks36
-)) (/opt/local/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+)) (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
-
-(/opt/local/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.t
-ex
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \pgf@plot@mark@count=\count111
 \pgfplotmarksize=\dimen152
@@ -345,7 +328,7 @@ File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \tikznumberofchildren=\count113
 \tikznumberofcurrentchild=\count114
 \tikz@fig@count=\count115
-(/opt/local/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 \pgfmatrixcurrentrow=\count116
 \pgfmatrixcurrentcolumn=\count117
@@ -353,14 +336,14 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 )
 \tikz@expandcount=\count119
 
-(/opt/local/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrar
-ytopaths.code.tex
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
+hs.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 )))
-(/opt/local/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrar
-ypositioning.code.tex
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryposit
+ioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
-) (/opt/local/share/texmf-texlive-dist/tex/latex/tools/calc.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count120
 \calc@Bcount=\count121
@@ -374,7 +357,7 @@ LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Cskip=\skip51
 )
 \c@@todonotes@numberoftodonotes=\count123
-) (/opt/local/share/texmf-texlive-dist/tex/latex/tools/longtable.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip52
 \LTright=\skip53
@@ -391,7 +374,7 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@tables=\count127
 \c@LT@chunks=\count128
 \LT@p@ftn=\toks37
-) (/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/mathptmx.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/mathptmx.sty
 Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -422,7 +405,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
 LaTeX Info: Redefining \hbar on input line 50.
-) (/opt/local/share/texmf-texlive-dist/tex/latex/tools/multicol.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \c@tracingmulticols=\count129
 \mult@box=\box41
@@ -469,12 +452,12 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \mult@nat@firstbox=\box65
 \colbreak@box=\box66
 \multicol@sort@counter=\count137
-) (/opt/local/share/texmf-texlive-dist/tex/latex/beamer/multimedia/xmpmulti.sty
+) (/usr/share/texmf/tex/latex/beamer/base/multimedia/xmpmulti.sty
 \@mpm@count=\count138
-) (/opt/local/share/texmf-texlive-dist/tex/latex/preprint/fullpage.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip58
-) (/opt/local/share/texmf-texlive-dist/tex/latex/subfigure/subfigure.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip59
 \subfigcapskip=\skip60
@@ -489,17 +472,17 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(/opt/local/share/texmf-texlive-dist/tex/latex/subfigure/subfigure.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip63
 \subfig@bottom=\skip64
-) (/opt/local/share/texmf-texlive-dist/tex/latex/paralist/paralist.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/paralist/paralist.sty
 Package: paralist 2002/03/18 v2.3b Extended list environments (BS)
 \pltopsep=\skip65
 \plpartopsep=\skip66
 \plitemsep=\skip67
 \plparsep=\skip68
 \pl@lab=\toks38
-) (/opt/local/share/texmf-texlive-dist/tex/latex/tools/xspace.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 ))
 No file _formulas.aux.
@@ -518,27 +501,27 @@ LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 9.
-(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/ot1ptm.fd
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) ABD: EveryShipout initializing macros
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 10
 .
-(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/ot1ztmcm.fd
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 10
 .
-(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/omlztmcm.fd
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 10
 .
-(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/omsztmcm.fd
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 10
 .
-(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/omxztmcm.fd
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
@@ -555,38 +538,38 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61]
 LaTeX Font Info:    Try loading font information for U+bbold on input line 193.
 
-(/opt/local/share/texmf-texlive-dist/tex/latex/bbold/Ubbold.fd) [62] [63] [64] 
-[65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80]
-[81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96]
-[97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110
-] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123]
-[124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [
-137] [138] [139] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [1
-50] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162] [16
-3] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173] [174] [175] [176
-] [177] [178] [179] [180] [181] [182] [183] [184] [185] [186] [187] [188] [189]
-[190] [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] [201] [202] [
-203] [204] [205] [206] [207] [208] [209] [210] [211] [212] [213] [214] [215] [2
-16] [217] [218] [219] [220] [221] [222] [223] [224] [225] [226] [227] [228] [22
-9] [230] [231] [232] [233] [234] [235] [236] [237] [238] [239] [240] [241] [242
-] [243] [244] [245] [246]
+(/usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd) [62] [63] [64] [65] [
+66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] 
+[82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97]
+[98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [11
+1] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124
+] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137]
+[138] [139] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [
+151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162] [163] [1
+64] [165] [166] [167] [168] [169] [170] [171] [172] [173] [174] [175] [176] [17
+7] [178] [179] [180] [181] [182] [183] [184] [185] [186] [187] [188] [189] [190
+] [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] [201] [202] [203]
+[204] [205] [206] [207] [208] [209] [210] [211] [212] [213] [214] [215] [216] [
+217] [218] [219] [220] [221] [222] [223] [224] [225] [226] [227] [228] [229] [2
+30] [231] [232] [233] [234] [235] [236] [237] [238] [239] [240] [241] [242] [24
+3] [244] [245] [246] [247] [248] [249] [250] [251] [252]
 
-! LaTeX Error: \begin{equation} on input line 748 ended by \end{equation*}.
+! LaTeX Error: \begin{equation} on input line 766 ended by \end{equation*}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.748 ...mma \end{aligned} \right. \end{equation*}
+l.766 ...mma \end{aligned} \right. \end{equation*}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[247] [248] [249] [250] [251] [252] [253] [254] [255] [256] [257] [258] [259] [
-260] [261] [262] [263]
+[253] [254] [255] [256] [257] [258] [259] [260] [261] [262] [263] [264] [265] [
+266] [267] [268] [269]
 ! Undefined control sequence.
-l.799 $ B = \mathlarger
+l.817 $ B = \mathlarger
                         \int_\Gamma \kappa v w $
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -594,9 +577,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[264]
+[270]
 ! Undefined control sequence.
-l.802 $ A = \mathlarger
+l.820 $ A = \mathlarger
                         \int_\Omega \eta v w + \kappa \nabla v \cdot \nabla w $
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -604,11 +587,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[265] [266] [267]
+[271] [272] [273]
 ! Undefined control sequence.
 <recently read> \unit 
                       
-l.811 $\unit
+l.829 $\unit
             {60}{\micro\meter}$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -617,7 +600,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.811 $\unit{60}{\micro
+l.829 $\unit{60}{\micro
                        \meter}$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -626,7 +609,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.811 $\unit{60}{\micro\meter
+l.829 $\unit{60}{\micro\meter
                              }$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -634,14 +617,14 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[268] [269] [270] [271] [272] [273] [274] [275] [276] [277] [278] [279] [280] [
-281] [282] [283] [284] [285] [286] [287] [288] [289] [290] [291] [292] [293] [2
-94] [295] [296] [297] [298] [299] [300] [301] [302] [303] [304] [305] [306] [30
-7] [308] [309] [310] [311] [312] [313] [314] [315] [316] [317] [318] [319] [320
-] [321] [322] [323] [324] [325] [326] [327] [328] [329] [330] [331] [332] [333]
-[334] [335] [336] [337] [338] [339] [340] [341] [342] [343] [344] [345] [346] [
-347] [348] [349] [350] [351] [352] [353] [354] [355] [356] [357] [358] [359] [3
-60] [361] [362] [363] [364] [365] [366] [367]
+[274] [275] [276] [277] [278] [279] [280] [281] [282] [283] [284] [285] [286] [
+287] [288] [289] [290] [291] [292] [293] [294] [295] [296] [297] [298] [299] [3
+00] [301] [302] [303] [304] [305] [306] [307] [308] [309] [310] [311] [312] [31
+3] [314] [315] [316] [317] [318] [319] [320] [321] [322] [323] [324] [325] [326
+] [327] [328] [329] [330] [331] [332] [333] [334] [335] [336] [337] [338] [339]
+[340] [341] [342] [343] [344] [345] [346] [347] [348] [349] [350] [351] [352] [
+353] [354] [355] [356] [357] [358] [359] [360] [361] [362] [363] [364] [365] [3
+66] [367] [368] [369] [370] [371] [372] [373]
 
 ! LaTeX Error: Too many columns in eqnarray environment.
 
@@ -649,7 +632,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1111 ...partial T}{\partial t} & =& 0& \\ \kappa
+l.1129 ...partial T}{\partial t} & =& 0& \\ \kappa
                                                   _1 \frac{\partial T}{\part...
 
 Try typing  <return>  to proceed.
@@ -658,7 +641,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1111 ...}{\partial n} &= & 0 & \text{on } \Gamma
+l.1129 ...}{\partial n} &= & 0 & \text{on } \Gamma
                                                   _2 \text{ and } \Gamma_6\q...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -670,7 +653,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1111 ...text{ and } \Gamma_6\quad\quad \\ \kappa
+l.1129 ...text{ and } \Gamma_6\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 
 Try typing  <return>  to proceed.
@@ -679,7 +662,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra }, or forgotten $.
 <template> \egroup 
                    \endtemplate 
-l.1111 ...text{ and } \Gamma_6\quad\quad \\ \kappa
+l.1129 ...text{ and } \Gamma_6\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -690,7 +673,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1111 ...text{ and } \Gamma_6\quad\quad \\ \kappa
+l.1129 ...text{ and } \Gamma_6\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -698,7 +681,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1111 ...text{ and } \Gamma_6\quad\quad \\ \kappa
+l.1129 ...text{ and } \Gamma_6\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -709,7 +692,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1111 ...}{\partial n} &= & 0 & \text{on } \Gamma
+l.1129 ...}{\partial n} &= & 0 & \text{on } \Gamma
                                                   _5 , \Gamma_7 \text{ and }...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -721,7 +704,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1111 ...text{ and } \Gamma_8\quad\quad \\ \kappa
+l.1129 ...text{ and } \Gamma_8\quad\quad \\ \kappa
                                                   _1 \frac{\partial T}{\part...
 
 Try typing  <return>  to proceed.
@@ -730,7 +713,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra }, or forgotten $.
 <template> \egroup 
                    \endtemplate 
-l.1111 ...text{ and } \Gamma_8\quad\quad \\ \kappa
+l.1129 ...text{ and } \Gamma_8\quad\quad \\ \kappa
                                                   _1 \frac{\partial T}{\part...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -741,7 +724,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1111 ...text{ and } \Gamma_8\quad\quad \\ \kappa
+l.1129 ...text{ and } \Gamma_8\quad\quad \\ \kappa
                                                   _1 \frac{\partial T}{\part...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -749,7 +732,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1111 ...text{ and } \Gamma_8\quad\quad \\ \kappa
+l.1129 ...text{ and } \Gamma_8\quad\quad \\ \kappa
                                                   _1 \frac{\partial T}{\part...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -760,7 +743,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1111 ...= &- h( T - T_{amb}) & \text{on } \Gamma
+l.1129 ...= &- h( T - T_{amb}) & \text{on } \Gamma
                                                   _1\quad\quad \\ \kappa_2 \...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -772,7 +755,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1111 ... \text{on } \Gamma_1\quad\quad \\ \kappa
+l.1129 ... \text{on } \Gamma_1\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 
 Try typing  <return>  to proceed.
@@ -781,7 +764,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra }, or forgotten $.
 <template> \egroup 
                    \endtemplate 
-l.1111 ... \text{on } \Gamma_1\quad\quad \\ \kappa
+l.1129 ... \text{on } \Gamma_1\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -792,7 +775,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1111 ... \text{on } \Gamma_1\quad\quad \\ \kappa
+l.1129 ... \text{on } \Gamma_1\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -800,7 +783,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1111 ... \text{on } \Gamma_1\quad\quad \\ \kappa
+l.1129 ... \text{on } \Gamma_1\quad\quad \\ \kappa
                                                   _2 \frac{\partial T}{\part...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -811,7 +794,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1111 ... n} &= & Q(1-e^{-t}) & \text{on } \Gamma
+l.1129 ... n} &= & Q(1-e^{-t}) & \text{on } \Gamma
                                                   _4\quad\quad \\ T_{|\varOm...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -823,7 +806,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1111 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
+l.1129 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
                                                   _{|\varOmega_1} &= &T_{| \...
 
 Try typing  <return>  to proceed.
@@ -832,7 +815,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra }, or forgotten $.
 <template> \egroup 
                    \endtemplate 
-l.1111 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
+l.1129 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
                                                   _{|\varOmega_1} &= &T_{| \...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -843,7 +826,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1111 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
+l.1129 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
                                                   _{|\varOmega_1} &= &T_{| \...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -851,7 +834,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1111 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
+l.1129 ...t}) & \text{on } \Gamma_4\quad\quad \\ T
                                                   _{|\varOmega_1} &= &T_{| \...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -862,7 +845,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1111 ...= &T_{| \varOmega_2} & \text{on } \Gamma
+l.1129 ...= &T_{| \varOmega_2} & \text{on } \Gamma
                                                   _3\quad\quad \\ \kappa_1 \...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -874,7 +857,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1111 ... \text{on } \Gamma_3\quad\quad \\ \kappa
+l.1129 ... \text{on } \Gamma_3\quad\quad \\ \kappa
                                                   _1 \nabla T \cdot n &=& \k...
 
 Try typing  <return>  to proceed.
@@ -883,7 +866,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra }, or forgotten $.
 <template> \egroup 
                    \endtemplate 
-l.1111 ... \text{on } \Gamma_3\quad\quad \\ \kappa
+l.1129 ... \text{on } \Gamma_3\quad\quad \\ \kappa
                                                   _1 \nabla T \cdot n &=& \k...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -894,7 +877,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1111 ... \text{on } \Gamma_3\quad\quad \\ \kappa
+l.1129 ... \text{on } \Gamma_3\quad\quad \\ \kappa
                                                   _1 \nabla T \cdot n &=& \k...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -902,7 +885,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1111 ... \text{on } \Gamma_3\quad\quad \\ \kappa
+l.1129 ... \text{on } \Gamma_3\quad\quad \\ \kappa
                                                   _1 \nabla T \cdot n &=& \k...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -913,7 +896,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1111 ...a_2 \nabla T \cdot n & \text{on } \Gamma
+l.1129 ...a_2 \nabla T \cdot n & \text{on } \Gamma
                                                   _3\quad\quad \end{eqnarray}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -925,7 +908,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1111 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
+l.1129 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -933,7 +916,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra }, or forgotten $.
 <template> \egroup 
                    \endtemplate 
-l.1111 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
+l.1129 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -944,7 +927,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1111 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
+l.1129 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -952,7 +935,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1111 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
+l.1129 ...t{on } \Gamma_3\quad\quad \end{eqnarray}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -960,10 +943,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[368] [369] [370] [371] [372] [373] [374] [375] [376] [377] [378] [379] [380] [
-381]
+[374] [375] [376] [377] [378] [379] [380] [381] [382] [383] [384] [385] [386] [
+387]
 ! Misplaced alignment tab character &.
-l.1153 ... \kappa_i \int_{\varOmega_i} v\Delta T &
+l.1171 ... \kappa_i \int_{\varOmega_i} v\Delta T &
                                                    = 0 \end{equation*}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -972,9 +955,9 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[382]
+[388]
 ! Misplaced alignment tab character &.
-l.1156 ...al \varOmega_i} {(\nabla T \cdot n) v} &
+l.1174 ...al \varOmega_i} {(\nabla T \cdot n) v} &
                                                    = 0 \end{equation*}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -983,9 +966,9 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[383] [384] [385]
+[389] [390] [391]
 ! Misplaced alignment tab character &.
-l.1165 ..._3}{(\nabla T \cdot n) v}}_{\text{=0}} &
+l.1183 ..._3}{(\nabla T \cdot n) v}}_{\text{=0}} &
                                                    = 0 \end{equation*}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -994,11 +977,11 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[386] [387] [388] [389] [390] [391] [392] [393] [394] [395] [396] [397] [398] [
-399] [400] [401] [402] [403] [404] [405] [406] [407] [408] [409] [410] [411] [4
-12] [413] [414] [415] [416] [417]
+[392] [393] [394] [395] [396] [397] [398] [399] [400] [401] [402] [403] [404] [
+405] [406] [407] [408] [409] [410] [411] [412] [413] [414] [415] [416] [417] [4
+18] [419] [420] [421] [422] [423]
 ! Misplaced alignment tab character &.
-l.1261 \[ a(u,v)&
+l.1279 \[ a(u,v)&
                  =l(v) \;, \]
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1007,10 +990,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[418] [419] [420] [421] [422] [423] [424] [425] [426] [427] [428] [429] [430] [
-431] [432] [433] [434] [435] [436] [437] [438]
+[424] [425] [426] [427] [428] [429] [430] [431] [432] [433] [434] [435] [436] [
+437] [438] [439] [440] [441] [442] [443] [444]
 ! Undefined control sequence.
-l.1324 ...uremath{{\bm B}}\xspace(t)=\nabla\cdot\B
+l.1342 ...uremath{{\bm B}}\xspace(t)=\nabla\cdot\B
                                                   (0)=0 \end{equation}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1018,9 +1001,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[439] [440] [441] [442] [443]
+[445] [446] [447] [448] [449]
 ! Undefined control sequence.
-l.1339 $ -\nu \Delta \bvec
+l.1357 $ -\nu \Delta \bvec
                           {u} + \nabla p = \bvec{f},\quad \nabla \cdot \bvec...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1029,7 +1012,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.1339 $ -\nu \Delta \bvec{u} + \nabla p = \bvec
+l.1357 $ -\nu \Delta \bvec{u} + \nabla p = \bvec
                                                 {f},\quad \nabla \cdot \bvec...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1038,7 +1021,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.1339 ...la p = \bvec{f},\quad \nabla \cdot \bvec
+l.1357 ...la p = \bvec{f},\quad \nabla \cdot \bvec
                                                   {u} = 0 $
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1046,9 +1029,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[444] [445] [446] [447] [448] [449]
+[450] [451] [452] [453] [454] [455]
 ! Undefined control sequence.
-l.1357 ...egin{aligned} -\epsilon\Delta u + \bbeta
+l.1375 ...egin{aligned} -\epsilon\Delta u + \bbeta
                                                    \cdot \nabla u + \mu u & ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1059,7 +1042,7 @@ and I'll forget about whatever was undefined.
 ! Missing delimiter (. inserted).
 <to be read again> 
                    $
-l.1357 ...tial\Omega \;, \\ \end{aligned} \right $
+l.1375 ...tial\Omega \;, \\ \end{aligned} \right $
                                                   
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1068,9 +1051,9 @@ braces don't get unbalanced. Otherwise just proceed.
 Acceptable delimiters are characters whose \delcode is
 nonnegative, or you can use `\delimiter <delimiter code>'.
 
-[450] [451]
+[456] [457]
 ! Undefined control sequence.
-l.1363 ...epsilon \Delta u\ v + \int_\Omega \bbeta
+l.1381 ...epsilon \Delta u\ v + \int_\Omega \bbeta
                                                    \cdot \nabla u\ v + \int_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1078,11 +1061,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[452] [453] [454] [455] [456] [457] [458]
+[458] [459] [460] [461] [462] [463] [464]
 ! Undefined control sequence.
 <recently read> \bbeta 
                        
-l.1384 $\bbeta
+l.1402 $\bbeta
               =(1,1)^T$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1090,11 +1073,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[459] [460] [461] [462] [463] [464] [465] [466] [467] [468]
+[465] [466] [467] [468] [469] [470] [471] [472] [473] [474]
 ! Missing delimiter (. inserted).
 <to be read again> 
                    $
-l.1414 ...}\; \Gamma \;, \\ \end{aligned} \right $
+l.1432 ...}\; \Gamma \;, \\ \end{aligned} \right $
                                                   
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1103,53 +1086,53 @@ braces don't get unbalanced. Otherwise just proceed.
 Acceptable delimiters are characters whose \delcode is
 nonnegative, or you can use `\delimiter <delimiter code>'.
 
-[469] [470] [471] [472] [473]
+[475] [476] [477] [478] [479]
 ! Extra \right.
-l.1429 ...cdot \mathbf v \;. \end{aligned} \right)
+l.1447 ...cdot \mathbf v \;. \end{aligned} \right)
                                                    $
 I'm ignoring a \right that had no matching \left.
 
-[474]
+[480]
 ! Extra \right.
-l.1432 ...cdot \mathbf n \;. \end{aligned} \right)
+l.1450 ...cdot \mathbf n \;. \end{aligned} \right)
                                                    $
 I'm ignoring a \right that had no matching \left.
 
-[475] [476]
+[481] [482]
 ! Extra \right.
-l.1438 ...mathbf u q = 0 \;, \end{aligned} \right)
+l.1456 ...mathbf u q = 0 \;, \end{aligned} \right)
                                                    $
 I'm ignoring a \right that had no matching \left.
 
-[477]
+[483]
 ! Extra \right.
-l.1441 ... f \cdot \mathbf v \end{aligned} \right)
+l.1459 ... f \cdot \mathbf v \end{aligned} \right)
                                                    $
 I'm ignoring a \right that had no matching \left.
 
-[478] [479] [480]
+[484] [485] [486]
 ! Extra \right.
-l.1450 ...= l((\mathbf v,q)) \end{aligned} \right)
+l.1468 ...= l((\mathbf v,q)) \end{aligned} \right)
                                                    $
 I'm ignoring a \right that had no matching \left.
 
-[481] [482] [483] [484] [485] [486] [487] [488] [489] [490] [491] [492] [493] [
-494] [495] [496] [497] [498] [499] [500] [501] [502] [503] [504] [505] [506] [5
-07] [508] [509] [510] [511] [512] [513] [514] [515] [516] [517] [518] [519] [52
-0] [521] [522] [523] [524] [525] [526] [527] [528] [529] [530] [531] [532] [533
-] [534] [535] [536] [537] [538] [539] [540] [541] [542] [543] [544] [545] [546]
-[547] [548] [549] [550] [551] [552] [553] [554] [555] [556] [557] [558] [559] [
-560] [561] [562] [563] [564] [565] [566] [567] [568] [569] [570] [571] [572] [5
-73] [574] [575] [576] [577] [578] [579] [580] [581] [582] [583] [584] [585] [58
-6] [587] [588] [589] [590] [591] [592] [593] [594] [595] [596] [597] [598] [599
-] [600] [601] [602] [603] [604] [605] [606] [607] [608] [609] [610] [611] [612]
-[613] [614] [615] [616] [617] [618] [619] [620] [621] [622] [623] [624] [625] [
-626] [627] [628] [629] [630] [631] [632] [633] [634] [635] [636] [637] [638] [6
-39] [640] [641] [642] [643] [644] [645] [646] [647] [648]
+[487] [488] [489] [490] [491] [492] [493] [494] [495] [496] [497] [498] [499] [
+500] [501] [502] [503] [504] [505] [506] [507] [508] [509] [510] [511] [512] [5
+13] [514] [515] [516] [517] [518] [519] [520] [521] [522] [523] [524] [525] [52
+6] [527] [528] [529] [530] [531] [532] [533] [534] [535] [536] [537] [538] [539
+] [540] [541] [542] [543] [544] [545] [546] [547] [548] [549] [550] [551] [552]
+[553] [554] [555] [556] [557] [558] [559] [560] [561] [562] [563] [564] [565] [
+566] [567] [568] [569] [570] [571] [572] [573] [574] [575] [576] [577] [578] [5
+79] [580] [581] [582] [583] [584] [585] [586] [587] [588] [589] [590] [591] [59
+2] [593] [594] [595] [596] [597] [598] [599] [600] [601] [602] [603] [604] [605
+] [606] [607] [608] [609] [610] [611] [612] [613] [614] [615] [616] [617] [618]
+[619] [620] [621] [622] [623] [624] [625] [626] [627] [628] [629] [630] [631] [
+632] [633] [634] [635] [636] [637] [638] [639] [640] [641] [642] [643] [644] [6
+45] [646] [647] [648] [649] [650] [651] [652] [653] [654]
 ! Undefined control sequence.
 <recently read> \acos 
                       
-l.1954 $\acos
+l.1972 $\acos
              (f(\overrightarrow{x}))$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1157,11 +1140,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[649]
+[655]
 ! Undefined control sequence.
 <recently read> \asin 
                       
-l.1957 $\asin
+l.1975 $\asin
              (f(\overrightarrow{x}))$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1169,11 +1152,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[650]
+[656]
 ! Undefined control sequence.
 <recently read> \atan 
                       
-l.1960 $\atan
+l.1978 $\atan
              (f(\overrightarrow{x}))$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1181,15 +1164,15 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[651] [652] [653] [654] [655] [656] [657] [658] [659] [660] [661] [662] [663] [
-664] [665] [666] [667] [668] [669] [670] [671] [672] [673] [674] [675] [676] [6
-77] [678] [679] [680] [681] [682] [683] [684] [685] [686] [687] [688] [689] [69
-0] [691] [692] [693] [694] [695] [696] [697] [698] [699] [700] [701] [702] [703
-] [704] [705] [706] [707] [708] [709]
+[657] [658] [659] [660] [661] [662] [663] [664] [665] [666] [667] [668] [669] [
+670] [671] [672] [673] [674] [675] [676] [677] [678] [679] [680] [681] [682] [6
+83] [684] [685] [686] [687] [688] [689] [690] [691] [692] [693] [694] [695] [69
+6] [697] [698] [699] [700] [701] [702] [703] [704] [705] [706] [707] [708] [709
+] [710] [711] [712] [713] [714]
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2137 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
+l.2152 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
                                                   _F = 0\}\\ \mathbb{H}_h &=...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1200,7 +1183,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2137 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
+l.2152 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
                                                   _F = 0\}\\ \mathbb{H}_h &=...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1209,14 +1192,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Double subscript.
-l.2137 ...orall F \in \mathcal{F}^i_h\ \jump{v_h}_
+l.2152 ...orall F \in \mathcal{F}^i_h\ \jump{v_h}_
                                                   F = 0\}\\ \mathbb{H}_h &= ...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2137 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
+l.2152 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
                                                   _F = \jump{\nabla v_h}_F =...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1227,7 +1210,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2137 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
+l.2152 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
                                                   _F = \jump{\nabla v_h}_F =...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1236,14 +1219,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Double subscript.
-l.2137 ...orall F \in \mathcal{F}^i_h\ \jump{v_h}_
+l.2152 ...orall F \in \mathcal{F}^i_h\ \jump{v_h}_
                                                   F = \jump{\nabla v_h}_F = ...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2137 ...F}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}
+l.2152 ...F}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}
                                                   _F = 0\}\\ \CR_h &= \{ v_h...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1254,7 +1237,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2137 ...F}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}
+l.2152 ...F}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}
                                                   _F = 0\}\\ \CR_h &= \{ v_h...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1263,14 +1246,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Double subscript.
-l.2137 ...}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}_
+l.2152 ...}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}_
                                                   F = 0\}\\ \CR_h &= \{ v_h ...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2137 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
+l.2152 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
                                                    = 0 \}\\ \RaTu_h &= \{ v_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1281,7 +1264,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2137 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
+l.2152 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
                                                    = 0 \}\\ \RaTu_h &= \{ v_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1292,7 +1275,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2137 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
+l.2152 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
                                                    = 0 \}\\ \RT_h&=\{\bm{v}_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1303,7 +1286,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2137 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
+l.2152 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
                                                    = 0 \}\\ \RT_h&=\{\bm{v}_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1314,7 +1297,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2137 ...\calF^i_h\ \jump{\bm{v}_h \cdot \normal}
+l.2152 ...\calF^i_h\ \jump{\bm{v}_h \cdot \normal}
                                                   _F = 0 \}\\ \N_h&=\{\bm{v}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1325,7 +1308,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2137 ...\calF^i_h\ \jump{\bm{v}_h \cdot \normal}
+l.2152 ...\calF^i_h\ \jump{\bm{v}_h \cdot \normal}
                                                   _F = 0 \}\\ \N_h&=\{\bm{v}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1336,7 +1319,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2137 ...calF^i_h\ \jump{\bm{v}_h \times \normal}
+l.2152 ...calF^i_h\ \jump{\bm{v}_h \times \normal}
                                                   _F = 0 \} \end{aligned} \]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1347,7 +1330,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2137 ...calF^i_h\ \jump{\bm{v}_h \times \normal}
+l.2152 ...calF^i_h\ \jump{\bm{v}_h \times \normal}
                                                   _F = 0 \} \end{aligned} \]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1355,13 +1338,13 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[710] [711] [712] [713] [714] [715] [716] [717] [718] [719] [720] [721] [722] [
-723] [724] [725] [726] [727] [728] [729] [730] [731] [732] [733] [734] [735] [7
-36] [737] [738] [739] [740] [741] [742] [743]
+[715] [716] [717] [718] [719] [720] [721] [722] [723] [724] [725] [726] [727] [
+728] [729] [730] [731] [732] [733] [734] [735] [736] [737] [738] [739] [740] [7
+41] [742] [743] [744] [745] [746] [747] [748]
 ! Undefined control sequence.
 <argument> \sqrt {\Gr 
                       }
-l.2239 ... \text{sur}\ \partial \Omega \end{split}
+l.2254 ... \text{sur}\ \partial \Omega \end{split}
                                                    \end{equation*}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1372,7 +1355,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \sqrt {\Gr 
                       }
-l.2239 ... \text{sur}\ \partial \Omega \end{split}
+l.2254 ... \text{sur}\ \partial \Omega \end{split}
                                                    \end{equation*}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1380,11 +1363,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[744]
+[749]
 ! Undefined control sequence.
 <recently read> \Gr 
                     
-l.2242 $\Gr
+l.2257 $\Gr
            $
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1392,11 +1375,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[745] [746]
+[750] [751]
 ! Undefined control sequence.
 <argument> \sqrt {\Gr 
                       }\Pr 
-l.2248 ...} &= 1\ \text{sur}\ \Gamma_3 \end{split}
+l.2263 ...} &= 1\ \text{sur}\ \Gamma_3 \end{split}
                                                    \end{equation*}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1407,7 +1390,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \sqrt {\Gr 
                       }\Pr 
-l.2248 ...} &= 1\ \text{sur}\ \Gamma_3 \end{split}
+l.2263 ...} &= 1\ \text{sur}\ \Gamma_3 \end{split}
                                                    \end{equation*}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1415,25 +1398,25 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[747] [748] [749] [750] [751] [752] [753] [754] [755] [756] [757] [758] [759] [
-760] [761] [762] [763] [764] [765] [766] [767] [768] [769] [770] [771] [772] [7
-73] [774] [775] [776] [777] [778] [779] [780] [781] [782] [783] [784] [785] [78
-6] [787] [788] [789] [790] [791] [792] [793] [794] [795] [796] [797] [798] [799
-] [800] [801] [802] [803] [804] [805] [806] [807] [808] [809] [810] [811] [812]
-[813] [814] [815] [816] [817] [818] [819] [820] [821] [822] [823] [824] [825] [
-826] [827] [828] [829] [830] [831] [832] [833] [834] [835] [836] [837] [838] [8
-39] [840] [841] [842] [843] [844] (./_formulas.aux)
+[752] [753] [754] [755] [756] [757] [758] [759] [760] [761] [762] [763] [764] [
+765] [766] [767] [768] [769] [770] [771] [772] [773] [774] [775] [776] [777] [7
+78] [779] [780] [781] [782] [783] [784] [785] [786] [787] [788] [789] [790] [79
+1] [792] [793] [794] [795] [796] [797] [798] [799] [800] [801] [802] [803] [804
+] [805] [806] [807] [808] [809] [810] [811] [812] [813] [814] [815] [816] [817]
+[818] [819] [820] [821] [822] [823] [824] [825] [826] [827] [828] [829] [830] [
+831] [832] [833] [834] [835] [836] [837] [838] [839] [840] [841] [842] [843] [8
+44] [845] [846] [847] [848] [849] (./_formulas.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 11233 strings out of 494764
- 205025 string characters out of 3171465
- 250126 words of memory out of 3000000
- 14201 multiletter control sequences out of 15000+200000
+ 11233 strings out of 495060
+ 203375 string characters out of 3182053
+ 249864 words of memory out of 3000000
+ 14156 multiletter control sequences out of 15000+200000
  18346 words of font info for 56 fonts, out of 3000000 for 9000
- 134 hyphenation exceptions out of 8191
+ 14 hyphenation exceptions out of 8191
  70i,22n,59p,1012b,183s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on _formulas.dvi (844 pages, 192008 bytes).
+Output written on _formulas.dvi (849 pages, 192872 bytes).

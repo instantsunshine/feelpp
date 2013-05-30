@@ -53,5 +53,7 @@ var classFeel_1_1Mesh3D =
     [ "setWorldComm", "classFeel_1_1Mesh3D.html#a88c77406a9ea84e3a7ffb6b0c11ea8fa", null ],
     [ "updateEntitiesCoDimensionOnePermutation", "classFeel_1_1Mesh3D.html#a2a9b260a6d5a0a6fc3d3b28e26cf0a19", null ],
     [ "updateEntitiesCoDimensionTwo", "classFeel_1_1Mesh3D.html#acfb7ba4e4a1d5768eee084687c4a5fbf", null ],
-    [ "boost::serialization::access", "classFeel_1_1Mesh3D.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ]
+    [ "boost::serialization::access", "classFeel_1_1Mesh3D.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ],
+    [ "nDim", "classFeel_1_1Mesh3D.html#a4511899adb027a2a4b87018d284ae777", null ],
+    [ "SHAPE", "classFeel_1_1Mesh3D.html#a0bc915826e121614d66017b6061328ad", null ]
 ];

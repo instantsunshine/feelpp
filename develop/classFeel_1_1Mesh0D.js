@@ -31,5 +31,7 @@ var classFeel_1_1Mesh0D =
     [ "renumber", "classFeel_1_1Mesh0D.html#a35084da94d7c29956b374fd8ee55c7d3", null ],
     [ "updateEntitiesCoDimensionOnePermutation", "classFeel_1_1Mesh0D.html#afb56bec36c44a84f73403c4a95d732ec", null ],
     [ "updateEntitiesCoDimensionTwo", "classFeel_1_1Mesh0D.html#a6965a1f1802c172c91df3ea5fd4b1963", null ],
-    [ "boost::serialization::access", "classFeel_1_1Mesh0D.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ]
+    [ "boost::serialization::access", "classFeel_1_1Mesh0D.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ],
+    [ "nDim", "classFeel_1_1Mesh0D.html#a0ae725656fb4db68361ef4fe8c7b2205", null ],
+    [ "nRealDim", "classFeel_1_1Mesh0D.html#a59d5c00ca10822f96ce79c6b835cbb33", null ]
 ];

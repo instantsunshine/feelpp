@@ -15,6 +15,7 @@ var classFeel_1_1Iteration =
     [ "isFirst", "classFeel_1_1Iteration.html#a4b3f875ef540e0addc22d27fc14bacb3", null ],
     [ "iteration", "classFeel_1_1Iteration.html#adf6c98229a9bd439ec8394beb093fea2", null ],
     [ "maximumNumberOfIterations", "classFeel_1_1Iteration.html#a33085e5d7c9ecaacc706523de89869f8", null ],
+    [ "New", "classFeel_1_1Iteration.html#a68145b236686259b84f830a2630c72eb", null ],
     [ "numberOfIterations", "classFeel_1_1Iteration.html#a284b91870caf8026dba3dd92303482fb", null ],
     [ "operator++", "classFeel_1_1Iteration.html#a8f43323f16f7469a8e1f611958b7fc15", null ],
     [ "operator=", "classFeel_1_1Iteration.html#ab1421a865a41c10e8d7958dd5308c2e1", null ],

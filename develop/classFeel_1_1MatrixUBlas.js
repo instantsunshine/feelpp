@@ -28,5 +28,6 @@ var classFeel_1_1MatrixUBlas =
     [ "size1", "classFeel_1_1MatrixUBlas.html#a4dec54812b500df4f0619851d1737df9", null ],
     [ "size2", "classFeel_1_1MatrixUBlas.html#a3a5dc093f280a2c5ede7e41fce630a50", null ],
     [ "zero", "classFeel_1_1MatrixUBlas.html#ad5acbe1be16c2943c1a038f006f17ad0", null ],
-    [ "zero", "classFeel_1_1MatrixUBlas.html#af94c3381cb61651eefcb058a1e8d2e3b", null ]
+    [ "zero", "classFeel_1_1MatrixUBlas.html#af94c3381cb61651eefcb058a1e8d2e3b", null ],
+    [ "is_row_major", "classFeel_1_1MatrixUBlas.html#aa9ed770526001ce781afcc7969fcc676", null ]
 ];

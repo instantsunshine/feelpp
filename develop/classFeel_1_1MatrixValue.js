@@ -28,5 +28,6 @@ var classFeel_1_1MatrixValue =
     [ "wmat", "classFeel_1_1MatrixValue.html#a821b6aa5bc3ff02b0795853892339a8a", null ],
     [ "wmat", "classFeel_1_1MatrixValue.html#a66cc004e0279f47d072c607b3543771c", null ],
     [ "zero", "classFeel_1_1MatrixValue.html#a7396215aac6a6d20c8d846dfff1fa696", null ],
-    [ "zero", "classFeel_1_1MatrixValue.html#ac84126653fec129fc17adf77899ca99d", null ]
+    [ "zero", "classFeel_1_1MatrixValue.html#ac84126653fec129fc17adf77899ca99d", null ],
+    [ "is_row_major", "classFeel_1_1MatrixValue.html#afda2538179b5cfe1ba22f025538731d3", null ]
 ];
