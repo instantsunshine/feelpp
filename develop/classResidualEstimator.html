@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('classResidualEstimator.html','');});
 <div class="textblock"><h3>template&lt;int Dim, int Order = 1&gt;<br/>
 class ResidualEstimator&lt; Dim, Order &gt;</h3>
 
-<p><a class="el" href="classLaplacian.html">Laplacian</a> Solver using continuous approximation spaces solve <img class="formulaInl" alt="$ -\Delta u = f $" src="form_212.png"/> on <img class="formulaInl" alt="$\Omega$" src="form_208.png"/> and <img class="formulaInl" alt="$ u= g $" src="form_213.png"/> on <img class="formulaInl" alt="$\Gamma $" src="form_214.png"/></p>
+<p><a class="el" href="classLaplacian.html">Laplacian</a> Solver using continuous approximation spaces solve <img class="formulaInl" alt="$ -\Delta u = f $" src="form_214.png"/> on <img class="formulaInl" alt="$\Omega$" src="form_210.png"/> and <img class="formulaInl" alt="$ u= g $" src="form_215.png"/> on <img class="formulaInl" alt="$\Gamma $" src="form_216.png"/></p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Dim</td><td>the geometric dimension of the problem (e.g. Dim=1, 2 or 3) </td></tr>
@@ -167,7 +167,7 @@ typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; <a class="el" h
 <tr class="memdesc:adca4ee6f2ccac1101dc0f184d592f2db"><td class="mdescLeft">&#160;</td><td class="mdescRight">mesh type <br/></td></tr>
 <tr class="memitem:aab2d3c57134999f992b319853cdb9b23"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab2d3c57134999f992b319853cdb9b23"></a>
 typedef p0_space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResidualEstimator.html#aab2d3c57134999f992b319853cdb9b23">p0_element_type</a></td></tr>
-<tr class="memdesc:aab2d3c57134999f992b319853cdb9b23"><td class="mdescLeft">&#160;</td><td class="mdescRight">an element type of the <img class="formulaInl" alt="$P_0$" src="form_222.png"/> discontinuous function space <br/></td></tr>
+<tr class="memdesc:aab2d3c57134999f992b319853cdb9b23"><td class="mdescLeft">&#160;</td><td class="mdescRight">an element type of the <img class="formulaInl" alt="$P_0$" src="form_224.png"/> discontinuous function space <br/></td></tr>
 <tr class="memitem:a9f078fa0c62f12866cdbfd0a962ec98e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f078fa0c62f12866cdbfd0a962ec98e"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classResidualEstimator.html#a125d97fcd2d780263c9a18fb8a43aa1e">p0_space_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>p0_space_ptrtype</b></td></tr>
@@ -175,7 +175,7 @@ typedef boost::shared_ptr<br class="typebreak"/>
 typedef <a class="el" href="classFeel_1_1FunctionSpace.html">FunctionSpace</a><br class="typebreak"/>
 &lt; <a class="el" href="classResidualEstimator.html#adca4ee6f2ccac1101dc0f184d592f2db">mesh_type</a>, bases&lt; Lagrange<br class="typebreak"/>
 &lt; 0, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a>, Discontinuous &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResidualEstimator.html#a125d97fcd2d780263c9a18fb8a43aa1e">p0_space_type</a></td></tr>
-<tr class="memdesc:a125d97fcd2d780263c9a18fb8a43aa1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">function space that holds piecewise constant ( <img class="formulaInl" alt="$P_0$" src="form_222.png"/>) functions (e.g. to store material properties or partitioning <br/></td></tr>
+<tr class="memdesc:a125d97fcd2d780263c9a18fb8a43aa1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">function space that holds piecewise constant ( <img class="formulaInl" alt="$P_0$" src="form_224.png"/>) functions (e.g. to store material properties or partitioning <br/></td></tr>
 <tr class="memitem:a37fa8c31d656425fcd7f12faa41637be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37fa8c31d656425fcd7f12faa41637be"></a>
 typedef bases&lt; Lagrange<br class="typebreak"/>
 &lt; 1, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResidualEstimator.html#a37fa8c31d656425fcd7f12faa41637be">p1_basis_type</a></td></tr>
@@ -376,14 +376,14 @@ template&lt;int Dim, int Order&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>models the input/output relation <img class="formulaInl" alt="$ Y=F(X) $" src="form_52.png"/> </p>
+<p>models the input/output relation <img class="formulaInl" alt="$ Y=F(X) $" src="form_54.png"/> </p>
 <p>The function space and some associated elements(functions) are then defined </p>
 <div class="fragment"><div class="line">    P0h = <a class="code" href="classFeel_1_1FunctionSpace.html#af986feaf33ceca1594e63456834cd47d">p0_space_type::New</a>( mesh );</div>
 <div class="line">    P1h = <a class="code" href="classFeel_1_1FunctionSpace.html#af986feaf33ceca1594e63456834cd47d">p1_space_type::New</a>( mesh );</div>
 <div class="line">    <a class="code" href="classResidualEstimator.html#abfc3e509f6b268114ca34d921ad5214e" title="the approximation function space type (shared_ptr&lt;&gt; type)">space_ptrtype</a> Xh = <a class="code" href="classFeel_1_1FunctionSpace.html#af986feaf33ceca1594e63456834cd47d">space_type::New</a>( mesh );</div>
 <div class="line">    <a class="code" href="classResidualEstimator.html#a994984fd63cc1d6f056989fbee9bf17c" title="an element type of the approximation function space">element_type</a> u( Xh, <span class="stringliteral">&quot;u&quot;</span> );</div>
 <div class="line">    <a class="code" href="classResidualEstimator.html#a994984fd63cc1d6f056989fbee9bf17c" title="an element type of the approximation function space">element_type</a> v( Xh, <span class="stringliteral">&quot;v&quot;</span> );</div>
-</div><!-- fragment --><p>define <img class="formulaInl" alt="$g$" src="form_112.png"/> the expression of the exact solution and <img class="formulaInl" alt="$f$" src="form_215.png"/> the expression of the right hand side such that <img class="formulaInl" alt="$g$" src="form_112.png"/> is the exact solution </p>
+</div><!-- fragment --><p>define <img class="formulaInl" alt="$g$" src="form_114.png"/> the expression of the exact solution and <img class="formulaInl" alt="$f$" src="form_217.png"/> the expression of the right hand side such that <img class="formulaInl" alt="$g$" src="form_114.png"/> is the exact solution </p>
 <div class="fragment"><div class="line">    <span class="comment">//# marker1 #</span></div>
 <div class="line">    <a class="code" href="classResidualEstimator.html#a798ee513cee195c0067d2616dd94ae6b" title="numerical type is double">value_type</a> pi = M_PI;</div>
 <div class="line">    <span class="keyword">auto</span> fn1 = ( 1-Px()*Px() )*( 1-Py()*Py() )*( 1-Pz()*Pz() )*exp( beta*Px() );</div>
@@ -431,14 +431,14 @@ template&lt;int Dim, int Order&gt; </div>
 <div class="line"></div>
 </div><!-- fragment --><p>create the matrix that will hold the algebraic representation of the left hand side </p>
 <div class="fragment"><div class="line">    <a class="code" href="classResidualEstimator.html#a70ce10b8aa154b6dbbfffc6ef2836702" title="sparse matrix type associated with backend (shared_ptr&lt;&gt; type)">sparse_matrix_ptrtype</a> D( M_backend-&gt;newMatrix( Xh, Xh ) );</div>
-</div><!-- fragment --><p>assemble <img class="formulaInl" alt="$\int_\Omega \nu \nabla u \cdot \nabla v$" src="form_216.png"/> </p>
+</div><!-- fragment --><p>assemble <img class="formulaInl" alt="$\int_\Omega \nu \nabla u \cdot \nabla v$" src="form_218.png"/> </p>
 <div class="fragment"><div class="line">    form2( Xh, Xh, D, _init=<span class="keyword">true</span> ) =</div>
 <div class="line">        <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ), gradt( u )*trans( grad( v ) ) );</div>
 </div><!-- fragment --> <pre class="fragment">weak dirichlet conditions treatment for the boundaries marked 1 and 3
 </pre><ol type="1">
-<li>assemble <img class="formulaInl" alt="$\int_{\partial \Omega} -\nabla u \cdot \mathbf{n} v$" src="form_217.png"/></li>
-<li>assemble <img class="formulaInl" alt="$\int_{\partial \Omega} -\nabla v \cdot \mathbf{n} u$" src="form_218.png"/></li>
-<li><p class="startli">assemble <img class="formulaInl" alt="$\int_{\partial \Omega} \frac{\gamma}{h} u v$" src="form_219.png"/> </p>
+<li>assemble <img class="formulaInl" alt="$\int_{\partial \Omega} -\nabla u \cdot \mathbf{n} v$" src="form_219.png"/></li>
+<li>assemble <img class="formulaInl" alt="$\int_{\partial \Omega} -\nabla v \cdot \mathbf{n} u$" src="form_220.png"/></li>
+<li><p class="startli">assemble <img class="formulaInl" alt="$\int_{\partial \Omega} \frac{\gamma}{h} u v$" src="form_221.png"/> </p>
 <div class="fragment"><div class="line">        <span class="comment">//# marker10 #</span></div>
 <div class="line">        form2( Xh, Xh, D ) +=</div>
 <div class="line">            <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( <a class="code" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">markedfaces</a>( mesh,tag_Dirichlet ),</div>
@@ -460,8 +460,8 @@ template&lt;int Dim, int Order&gt; </div>
 <p>solve the system </p>
 <div class="fragment"><div class="line"></div>
 <div class="line">    <a class="code" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">backend_type::build</a>()-&gt;solve( _matrix=D, _solution=u, _rhs=F );</div>
-</div><!-- fragment --><p>solve <img class="formulaInl" alt="$ D u = F $" src="form_220.png"/></p>
-<p>compute the <img class="formulaInl" alt="$L_2$" src="form_221.png"/> norm of the error </p>
+</div><!-- fragment --><p>solve <img class="formulaInl" alt="$ D u = F $" src="form_222.png"/></p>
+<p>compute the <img class="formulaInl" alt="$L_2$" src="form_223.png"/> norm of the error </p>
 <div class="fragment"><div class="line">    <span class="comment">//# marker7 #</span></div>
 <div class="line">    <span class="keywordtype">double</span> L2exact = math::sqrt( <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ),g*g ).evaluate()( 0,0 ) );</div>
 <div class="line">    <span class="keywordtype">double</span> L2error2 =<a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ),( idv( u )-g )*( idv( u )-g ) ).evaluate()( 0,0 );</div>
@@ -480,7 +480,7 @@ template&lt;int Dim, int Order&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Jun 3 2013 00:01:28 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Mon Jun 3 2013 12:00:21 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

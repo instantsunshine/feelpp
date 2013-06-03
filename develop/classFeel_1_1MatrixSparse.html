@@ -576,7 +576,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Add a Sparse matrix <code>_X</code>, scaled with <code>_a</code>, to <code>this</code>, stores the result in <code>this:</code> <img class="formulaInl" alt="$\texttt{this} = \_a*\_X + \texttt{this} $" src="form_18.png"/>. </p>
+<p>Add a Sparse matrix <code>_X</code>, scaled with <code>_a</code>, to <code>this</code>, stores the result in <code>this:</code> <img class="formulaInl" alt="$\texttt{this} = \_a*\_X + \texttt{this} $" src="form_20.png"/>. </p>
 
 <p>Implemented in <a class="el" href="classFeel_1_1MatrixEigenSparse.html#a782621237770e7a455d7b95b17f2c96f">Feel::MatrixEigenSparse&lt; T &gt;</a>, and <a class="el" href="classFeel_1_1MatrixEigenDense.html#a82838fb17b2134425f6ee3cd6b020802">Feel::MatrixEigenDense&lt; T &gt;</a>.</p>
 
@@ -615,7 +615,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Add a Sparse matrix <code>_X</code>, scaled with <code>_a</code>, to <code>this</code>, stores the result in <code>this:</code> <img class="formulaInl" alt="$\texttt{this} = \_a*\_X + \texttt{this} $" src="form_18.png"/>. </p>
+<p>Add a Sparse matrix <code>_X</code>, scaled with <code>_a</code>, to <code>this</code>, stores the result in <code>this:</code> <img class="formulaInl" alt="$\texttt{this} = \_a*\_X + \texttt{this} $" src="form_20.png"/>. </p>
 
 <p>References <a class="el" href="classFeel_1_1MatrixSparse.html#a2bf1685918b0346985a4647e3a40e3d8">Feel::MatrixSparse&lt; T &gt;::addMatrix()</a>.</p>
 
@@ -875,16 +875,16 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>compute the A scalar product <img class="formulaInl" alt="$v^T A u$" src="form_24.png"/></p>
+<p>compute the A scalar product <img class="formulaInl" alt="$v^T A u$" src="form_26.png"/></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">u</td><td>a vector </td></tr>
     <tr><td class="paramname">v</td><td>a vector </td></tr>
-    <tr><td class="paramname">transpose</td><td>true to compute <img class="formulaInl" alt="$v^T A^T u$" src="form_25.png"/> </td></tr>
+    <tr><td class="paramname">transpose</td><td>true to compute <img class="formulaInl" alt="$v^T A^T u$" src="form_27.png"/> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the energy <img class="formulaInl" alt="$v^T A u$" src="form_24.png"/> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the energy <img class="formulaInl" alt="$v^T A u$" src="form_26.png"/> </dd></dl>
 
 </div>
 </div>
@@ -927,16 +927,16 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Compute the scalar product <img class="formulaInl" alt="$(Au, v)= v^T A u$" src="form_26.png"/></p>
+<p>Compute the scalar product <img class="formulaInl" alt="$(Au, v)= v^T A u$" src="form_28.png"/></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">u</td><td>a vector </td></tr>
     <tr><td class="paramname">v</td><td>a vector </td></tr>
-    <tr><td class="paramname">transpose</td><td>true to compute <img class="formulaInl" alt="$v^T A^T u$" src="form_25.png"/> instead, false otherwise </td></tr>
+    <tr><td class="paramname">transpose</td><td>true to compute <img class="formulaInl" alt="$v^T A^T u$" src="form_27.png"/> instead, false otherwise </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the energy <img class="formulaInl" alt="$v^T A u$" src="form_24.png"/> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the energy <img class="formulaInl" alt="$v^T A u$" src="form_26.png"/> </dd></dl>
 
 <p>References <a class="el" href="classFeel_1_1MatrixSparse.html#aec47bcf734704ed4305b0fd57b9c61bb">Feel::MatrixSparse&lt; T &gt;::energy()</a>.</p>
 
@@ -1051,7 +1051,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initialize a Sparse matrix that is of global dimension <img class="formulaInl" alt="$ m \times n $" src="form_15.png"/> with local dimensions <img class="formulaInl" alt="$ m_l \times n_l $" src="form_16.png"/>. <code>nnz</code> is the number of on-processor nonzeros per row (defaults to 30). <code>noz</code> is the number of on-processor nonzeros per row (defaults to 10). </p>
+<p>Initialize a Sparse matrix that is of global dimension <img class="formulaInl" alt="$ m \times n $" src="form_17.png"/> with local dimensions <img class="formulaInl" alt="$ m_l \times n_l $" src="form_18.png"/>. <code>nnz</code> is the number of on-processor nonzeros per row (defaults to 30). <code>noz</code> is the number of on-processor nonzeros per row (defaults to 10). </p>
 
 <p>Implemented in <a class="el" href="classFeel_1_1MatrixEigenSparse.html#a971abf8cb9602b16392d9915c44f7784">Feel::MatrixEigenSparse&lt; T &gt;</a>, and <a class="el" href="classFeel_1_1MatrixEigenDense.html#a5f5dd5dfd25937050c8d15aca83453ee">Feel::MatrixEigenDense&lt; T &gt;</a>.</p>
 
@@ -1306,8 +1306,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return the l1-norm of the matrix, that is <img class="formulaInl" alt="$|M|_1=max_{all columns j}\sum_{all rows i} |M_ij|$" src="form_20.png"/>, (max. sum of columns).</p>
-<p>This is the natural matrix norm that is compatible to the l1-norm for vectors, i.e. <img class="formulaInl" alt="$|Mv|_1\leq |M|_1 |v|_1$" src="form_21.png"/>. </p>
+<p>Return the l1-norm of the matrix, that is <img class="formulaInl" alt="$|M|_1=max_{all columns j}\sum_{all rows i} |M_ij|$" src="form_22.png"/>, (max. sum of columns).</p>
+<p>This is the natural matrix norm that is compatible to the l1-norm for vectors, i.e. <img class="formulaInl" alt="$|Mv|_1\leq |M|_1 |v|_1$" src="form_23.png"/>. </p>
 
 <p>Implemented in <a class="el" href="classFeel_1_1MatrixEigenSparse.html#ac39fa3074a774d7fcf66cc38864348f7">Feel::MatrixEigenSparse&lt; T &gt;</a>, and <a class="el" href="classFeel_1_1MatrixEigenDense.html#a4552ba7df416b067962c469121a67198">Feel::MatrixEigenDense&lt; T &gt;</a>.</p>
 
@@ -1336,8 +1336,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Return the linfty-norm of the matrix, that is</p>
-<p><img class="formulaInl" alt="$|M|_\infty=max_{all rows i}\sum_{all columns j} |M_ij|$" src="form_22.png"/>,</p>
-<p>(max. sum of rows). This is the natural matrix norm that is compatible to the linfty-norm of vectors, i.e. <img class="formulaInl" alt="$|Mv|_\infty \leq |M|_\infty |v|_\infty$" src="form_23.png"/>. </p>
+<p><img class="formulaInl" alt="$|M|_\infty=max_{all rows i}\sum_{all columns j} |M_ij|$" src="form_24.png"/>,</p>
+<p>(max. sum of rows). This is the natural matrix norm that is compatible to the linfty-norm of vectors, i.e. <img class="formulaInl" alt="$|Mv|_\infty \leq |M|_\infty |v|_\infty$" src="form_25.png"/>. </p>
 
 <p>Implemented in <a class="el" href="classFeel_1_1MatrixEigenSparse.html#a7126dc6c49bd3fdc3c4c1600802d459b">Feel::MatrixEigenSparse&lt; T &gt;</a>, and <a class="el" href="classFeel_1_1MatrixEigenDense.html#abec8a09202aa50f2905a8724e4b7ce8b">Feel::MatrixEigenDense&lt; T &gt;</a>.</p>
 
@@ -1875,7 +1875,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd><code>m</code>, the row-dimension of the matrix where the marix is <img class="formulaInl" alt="$ M \times N $" src="form_17.png"/>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>m</code>, the row-dimension of the matrix where the marix is <img class="formulaInl" alt="$ M \times N $" src="form_19.png"/>. </dd></dl>
 
 <p>Implemented in <a class="el" href="classFeel_1_1MatrixEigenSparse.html#a0c68e8205cc0a17a77083fea667d62b9">Feel::MatrixEigenSparse&lt; T &gt;</a>, and <a class="el" href="classFeel_1_1MatrixEigenDense.html#ad6a1adc0c299942186a44253ef436436">Feel::MatrixEigenDense&lt; T &gt;</a>.</p>
 
@@ -1903,7 +1903,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd><code>n</code>, the column-dimension of the matrix where the marix is <img class="formulaInl" alt="$ M \times N $" src="form_17.png"/>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>n</code>, the column-dimension of the matrix where the marix is <img class="formulaInl" alt="$ M \times N $" src="form_19.png"/>. </dd></dl>
 
 <p>Implemented in <a class="el" href="classFeel_1_1MatrixEigenSparse.html#acdec914bc97bc13809af4524b440072e">Feel::MatrixEigenSparse&lt; T &gt;</a>, and <a class="el" href="classFeel_1_1MatrixEigenDense.html#aaa3ab8d1a592eb3f62ab3109c12829ea">Feel::MatrixEigenDense&lt; T &gt;</a>.</p>
 
@@ -2358,7 +2358,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Jun 3 2013 00:01:33 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Mon Jun 3 2013 12:00:25 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

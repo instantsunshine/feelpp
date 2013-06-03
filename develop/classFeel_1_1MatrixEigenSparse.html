@@ -446,7 +446,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Add a Sparse matrix <code>_X</code>, scaled with <code>_a</code>, to <code>this</code>, stores the result in <code>this:</code> <img class="formulaInl" alt="$\texttt{this} = \_a*\_X + \texttt{this} $" src="form_18.png"/>. </p>
+<p>Add a Sparse matrix <code>_X</code>, scaled with <code>_a</code>, to <code>this</code>, stores the result in <code>this:</code> <img class="formulaInl" alt="$\texttt{this} = \_a*\_X + \texttt{this} $" src="form_20.png"/>. </p>
 
 <p>Implements <a class="el" href="classFeel_1_1MatrixSparse.html#a96089b112fb4ba40acb3d293ad81fdca">Feel::MatrixSparse&lt; T &gt;</a>.</p>
 
@@ -655,7 +655,7 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd><img class="formulaInl" alt="$ v^T M u $" src="form_19.png"/> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><img class="formulaInl" alt="$ v^T M u $" src="form_21.png"/> </dd></dl>
 
 <p>References <a class="el" href="classFeel_1_1Vector.html#aa72e2b2dd8e668a5770d637d6cc5df48">Feel::Vector&lt; T &gt;::size()</a>, and <a class="el" href="classFeel_1_1VectorUblas.html#a4938bfc05b0ef99a6613667fffbc7171">Feel::VectorUblas&lt; T, Storage &gt;::vec()</a>.</p>
 
@@ -718,7 +718,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initialize a Eigen matrix that is of global dimension <img class="formulaInl" alt="$ m \times n $" src="form_15.png"/> with local dimensions <img class="formulaInl" alt="$ m_l \times n_l $" src="form_16.png"/>. <code>nnz</code> is the number of on-processor nonzeros per row (defaults to 30). <code>noz</code> is the number of on-processor nonzeros per row (defaults to 30). </p>
+<p>Initialize a Eigen matrix that is of global dimension <img class="formulaInl" alt="$ m \times n $" src="form_17.png"/> with local dimensions <img class="formulaInl" alt="$ m_l \times n_l $" src="form_18.png"/>. <code>nnz</code> is the number of on-processor nonzeros per row (defaults to 30). <code>noz</code> is the number of on-processor nonzeros per row (defaults to 30). </p>
 
 <p>Implements <a class="el" href="classFeel_1_1MatrixSparse.html#a912ef58fbd90fbad544f010b25310065">Feel::MatrixSparse&lt; T &gt;</a>.</p>
 
@@ -831,8 +831,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return the l1-norm of the matrix, that is <img class="formulaInl" alt="$|M|_1=max_{all columns j}\sum_{all rows i} |M_ij|$" src="form_20.png"/>, (max. sum of columns).</p>
-<p>This is the natural matrix norm that is compatible to the l1-norm for vectors, i.e. <img class="formulaInl" alt="$|Mv|_1\leq |M|_1 |v|_1$" src="form_21.png"/>. </p>
+<p>Return the l1-norm of the matrix, that is <img class="formulaInl" alt="$|M|_1=max_{all columns j}\sum_{all rows i} |M_ij|$" src="form_22.png"/>, (max. sum of columns).</p>
+<p>This is the natural matrix norm that is compatible to the l1-norm for vectors, i.e. <img class="formulaInl" alt="$|Mv|_1\leq |M|_1 |v|_1$" src="form_23.png"/>. </p>
 
 <p>Implements <a class="el" href="classFeel_1_1MatrixSparse.html#a82b896d0669d8ba227aaa189663c587a">Feel::MatrixSparse&lt; T &gt;</a>.</p>
 
@@ -861,8 +861,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Return the linfty-norm of the matrix, that is</p>
-<p><img class="formulaInl" alt="$|M|_\infty=max_{all rows i}\sum_{all columns j} |M_ij|$" src="form_22.png"/>,</p>
-<p>(max. sum of rows). This is the natural matrix norm that is compatible to the linfty-norm of vectors, i.e. <img class="formulaInl" alt="$|Mv|_\infty \leq |M|_\infty |v|_\infty$" src="form_23.png"/>. </p>
+<p><img class="formulaInl" alt="$|M|_\infty=max_{all rows i}\sum_{all columns j} |M_ij|$" src="form_24.png"/>,</p>
+<p>(max. sum of rows). This is the natural matrix norm that is compatible to the linfty-norm of vectors, i.e. <img class="formulaInl" alt="$|Mv|_\infty \leq |M|_\infty |v|_\infty$" src="form_25.png"/>. </p>
 
 <p>Implements <a class="el" href="classFeel_1_1MatrixSparse.html#ab1aeca146775f1151a3669e03c546538">Feel::MatrixSparse&lt; T &gt;</a>.</p>
 
@@ -1138,7 +1138,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd><code>m</code>, the row-dimension of the matrix where the marix is <img class="formulaInl" alt="$ M \times N $" src="form_17.png"/>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>m</code>, the row-dimension of the matrix where the marix is <img class="formulaInl" alt="$ M \times N $" src="form_19.png"/>. </dd></dl>
 
 <p>Implements <a class="el" href="classFeel_1_1MatrixSparse.html#a45f5d30f75f23a6a9c39e2de2ffd4ff2">Feel::MatrixSparse&lt; T &gt;</a>.</p>
 
@@ -1166,7 +1166,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd><code>n</code>, the column-dimension of the matrix where the marix is <img class="formulaInl" alt="$ M \times N $" src="form_17.png"/>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>n</code>, the column-dimension of the matrix where the marix is <img class="formulaInl" alt="$ M \times N $" src="form_19.png"/>. </dd></dl>
 
 <p>Implements <a class="el" href="classFeel_1_1MatrixSparse.html#a67d70a92c696bf3c398d8f1ba3515674">Feel::MatrixSparse&lt; T &gt;</a>.</p>
 
@@ -1393,7 +1393,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Jun 3 2013 00:01:33 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Mon Jun 3 2013 12:00:25 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -115,18 +115,18 @@ class Feel::Bdf&lt; SpaceType &gt;</h3>
 
 <p>Backward differencing formula time discretization. </p>
 <p>A differential equation of the form</p>
-<p><img class="formulaInl" alt="$ M u' = A u + f $" src="form_122.png"/></p>
+<p><img class="formulaInl" alt="$ M u' = A u + f $" src="form_124.png"/></p>
 <p>is discretized in time as</p>
-<p><img class="formulaInl" alt="$ M p'(t_{k+1}) = A u_{k+1} + f_{k+1} $" src="form_123.png"/></p>
+<p><img class="formulaInl" alt="$ M p'(t_{k+1}) = A u_{k+1} + f_{k+1} $" src="form_125.png"/></p>
 <p>where p denotes the polynomial of order n in t that interpolates (t_i,u_i) for i = k-n+1,...,k+1.</p>
-<p>The approximative time derivative <img class="formulaInl" alt="$ p'(t_{k+1}) $" src="form_124.png"/> is a linear combination of state vectors u_i:</p>
-<p><img class="formulaInl" alt="$ p'(t_{k+1}) = \frac{1}{\Delta t} (\alpha_0 u_{k+1} - \sum_{i=0}^n \alpha_i u_{k+1-i} )$" src="form_125.png"/></p>
+<p>The approximative time derivative <img class="formulaInl" alt="$ p'(t_{k+1}) $" src="form_126.png"/> is a linear combination of state vectors u_i:</p>
+<p><img class="formulaInl" alt="$ p'(t_{k+1}) = \frac{1}{\Delta t} (\alpha_0 u_{k+1} - \sum_{i=0}^n \alpha_i u_{k+1-i} )$" src="form_127.png"/></p>
 <p>Thus we have</p>
-<p><img class="formulaInl" alt="$ \frac{\alpha_0}{\Delta t} M u_{k+1} = A u_{k+1} + f + M \bar{p} $" src="form_126.png"/></p>
+<p><img class="formulaInl" alt="$ \frac{\alpha_0}{\Delta t} M u_{k+1} = A u_{k+1} + f + M \bar{p} $" src="form_128.png"/></p>
 <p>with</p>
-<p><img class="formulaInl" alt="$ \bar{p} = \frac{1}{\Delta t} \sum_{i=1}^n \alpha_i u_{k+1-i} $" src="form_127.png"/></p>
-<p>This class stores the n last state vectors in order to be able to calculate <img class="formulaInl" alt="$ \bar{p} $" src="form_128.png"/>. It also provides alpha_i and can extrapolate the the new state from the n last states with a polynomial of order n-1:</p>
-<p><img class="formulaInl" alt="$ u_{k+1} \approx \sum_{i=0}^{n-1} \beta_i u_{k-i} $" src="form_129.png"/> </p>
+<p><img class="formulaInl" alt="$ \bar{p} = \frac{1}{\Delta t} \sum_{i=1}^n \alpha_i u_{k+1-i} $" src="form_129.png"/></p>
+<p>This class stores the n last state vectors in order to be able to calculate <img class="formulaInl" alt="$ \bar{p} $" src="form_130.png"/>. It also provides alpha_i and can extrapolate the the new state from the n last states with a polynomial of order n-1:</p>
+<p><img class="formulaInl" alt="$ u_{k+1} \approx \sum_{i=0}^{n-1} \beta_i u_{k-i} $" src="form_131.png"/> </p>
 </div>
 <p>Inherits Feel::BdfBase.</p>
 <table class="memberdecls">
@@ -375,11 +375,11 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ab97baabd82c2510fe9aef5f73ac5ed71 inherit pro_attribs_classFeel_1_1BdfBase"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab97baabd82c2510fe9aef5f73ac5ed71"></a>
 std::vector&lt; ublas::vector<br class="typebreak"/>
 &lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>M_alpha</b></td></tr>
-<tr class="memdesc:ab97baabd82c2510fe9aef5f73ac5ed71 inherit pro_attribs_classFeel_1_1BdfBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coefficients <img class="formulaInl" alt="$ \alpha_i $" src="form_131.png"/> of the time bdf discretization. <br/></td></tr>
+<tr class="memdesc:ab97baabd82c2510fe9aef5f73ac5ed71 inherit pro_attribs_classFeel_1_1BdfBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coefficients <img class="formulaInl" alt="$ \alpha_i $" src="form_133.png"/> of the time bdf discretization. <br/></td></tr>
 <tr class="memitem:af325b2ded818c3e0130e3c7d4f45906c inherit pro_attribs_classFeel_1_1BdfBase"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af325b2ded818c3e0130e3c7d4f45906c"></a>
 std::vector&lt; ublas::vector<br class="typebreak"/>
 &lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>M_beta</b></td></tr>
-<tr class="memdesc:af325b2ded818c3e0130e3c7d4f45906c inherit pro_attribs_classFeel_1_1BdfBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coefficients <img class="formulaInl" alt="$ \beta_i $" src="form_132.png"/> of the extrapolation. <br/></td></tr>
+<tr class="memdesc:af325b2ded818c3e0130e3c7d4f45906c inherit pro_attribs_classFeel_1_1BdfBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coefficients <img class="formulaInl" alt="$ \beta_i $" src="form_134.png"/> of the extrapolation. <br/></td></tr>
 <tr class="memitem:a31529132baf4e7fb11e4fd48f8a722fb inherit pro_attribs_classFeel_1_1BdfBase"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31529132baf4e7fb11e4fd48f8a722fb"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>M_dt</b></td></tr>
 <tr class="memdesc:a31529132baf4e7fb11e4fd48f8a722fb inherit pro_attribs_classFeel_1_1BdfBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">timestep <br/></td></tr>
@@ -589,7 +589,7 @@ template&lt;typename SpaceType &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the right hand side <img class="formulaInl" alt="$ \bar{p} $" src="form_128.png"/> of the time derivative formula </p>
+<p>Returns the right hand side <img class="formulaInl" alt="$ \bar{p} $" src="form_130.png"/> of the time derivative formula </p>
 
 </div>
 </div>
@@ -608,7 +608,7 @@ template&lt;typename SpaceType &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the right hand side <img class="formulaInl" alt="$ \bar{p} \Delta t $" src="form_130.png"/> of the time derivative formula. The timestep is taken into account elsewhere, e. g. in the mass matrix. </p>
+<p>Returns the right hand side <img class="formulaInl" alt="$ \bar{p} \Delta t $" src="form_132.png"/> of the time derivative formula. The timestep is taken into account elsewhere, e. g. in the mass matrix. </p>
 
 </div>
 </div>
@@ -768,7 +768,7 @@ template&lt;typename SpaceType &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the right hand side <img class="formulaInl" alt="$ \bar{p} $" src="form_128.png"/> of the time derivative formula </p>
+<p>Returns the right hand side <img class="formulaInl" alt="$ \bar{p} $" src="form_130.png"/> of the time derivative formula </p>
 
 </div>
 </div>
@@ -871,7 +871,7 @@ template&lt;typename SpaceType &gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Jun 3 2013 00:01:28 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Mon Jun 3 2013 12:00:22 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
