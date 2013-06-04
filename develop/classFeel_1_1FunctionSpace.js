@@ -74,7 +74,7 @@ var classFeel_1_1FunctionSpace =
     [ "compSpace", "classFeel_1_1FunctionSpace.html#a5f5a494915874f9c7ab01bd67b6f8bfd", null ],
     [ "dof", "classFeel_1_1FunctionSpace.html#a5cb4ed608fd8f47e2ba158119a803977", null ],
     [ "dof", "classFeel_1_1FunctionSpace.html#a94f5676d40b694dcbce91eb891f4c6cf", null ],
-    [ "dofIndexSplit", "classFeel_1_1FunctionSpace.html#a7d35ab5ff655e326b259db60fbd748a3", null ],
+    [ "dofIndexSplit", "classFeel_1_1FunctionSpace.html#a50ec8e35c3f06ec6bfdd43a2a56c28d6", null ],
     [ "dofOn", "classFeel_1_1FunctionSpace.html#acc33790849af02a25b3ef2aa20fcf885", null ],
     [ "dofOn", "classFeel_1_1FunctionSpace.html#ac5faa558acc0ba817ac096f797ae8eb9", null ],
     [ "dofOnOff", "classFeel_1_1FunctionSpace.html#a11aabf587474dc46c394a66de06b35be", null ],

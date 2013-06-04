@@ -28,6 +28,7 @@ var classFeel_1_1BackendEigen =
     [ "newVector", "classFeel_1_1BackendEigen.html#a9584b53cc60101a051ea327c5d01d476", null ],
     [ "newZeroMatrix", "classFeel_1_1BackendEigen.html#af41f39b00658e72f8e628778f6cf2528", null ],
     [ "newZeroMatrix", "classFeel_1_1BackendEigen.html#ac7d722056bf6689cf6e41d420e5edff0", null ],
+    [ "newZeroMatrix", "classFeel_1_1BackendEigen.html#a4844c5a963cf1c4a606d80a8aff3d75d", null ],
     [ "prod", "classFeel_1_1BackendEigen.html#a69c376087409a581aefd019ddea31410", null ],
     [ "solve", "classFeel_1_1BackendEigen.html#a0428390812a505217891d68e89691397", null ],
     [ "solve", "classFeel_1_1BackendEigen.html#af912e1aba5531297c168af4c79eb5247", null ],

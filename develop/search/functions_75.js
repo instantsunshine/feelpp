@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['u',['U',['../classFeel_1_1SVD.html#a9a8e75cf72a20bda520e843d2dbf1b2a',1,'Feel::SVD::U()'],['../group__GeoXD.html#ga34eb8201d0c8fdb61bd9e2718272e74e',1,'Feel::Geo0D::u()']]],
+  ['u',['u',['../group__GeoXD.html#ga34eb8201d0c8fdb61bd9e2718272e74e',1,'Feel::Geo0D::u()'],['../classFeel_1_1SVD.html#a9a8e75cf72a20bda520e843d2dbf1b2a',1,'Feel::SVD::U()']]],
   ['ub',['ub',['../classFeel_1_1CRB.html#a2e3675cdd7b5f8a6d0045d1371e2a9d2',1,'Feel::CRB::ub(size_type N, parameter_type const &amp;mu, std::vector&lt; vectorN_type &gt; &amp;uN, std::vector&lt; vectorN_type &gt; &amp;uNdu) const '],['../classFeel_1_1CRB.html#a01376bad4656812518f9909ae9679684',1,'Feel::CRB::ub(size_type K, parameter_ptrtype const &amp;mu, std::vector&lt; vectorN_type &gt; &amp;uN, std::vector&lt; vectorN_type &gt; &amp;uNdu) const '],['../classFeel_1_1CRBSCM.html#a9f4e5e040647df091f5bf25af26376af',1,'Feel::CRBSCM::ub(parameter_type const &amp;mu, size_type K=invalid_size_type_value) const '],['../classFeel_1_1CRBSCM.html#a5f3d38ba13973f12b1d5a946f91c8352',1,'Feel::CRBSCM::ub(parameter_ptrtype const &amp;mu, size_type K=invalid_size_type_value) const ']]],
   ['unitcircle',['unitCircle',['../namespaceFeel.html#acb52ee369375c35506744aa7b7f77850',1,'Feel']]],
   ['unitcube',['unitCube',['../namespaceFeel.html#a13fd553670b9336583ef4affee5d9fbb',1,'Feel']]],

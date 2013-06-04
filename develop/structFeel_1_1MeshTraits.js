@@ -7,6 +7,8 @@ var structFeel_1_1MeshTraits =
     [ "face_const_iterator", "structFeel_1_1MeshTraits.html#a49dbf75e7c11f6286f39337449fcd872", null ],
     [ "face_iterator", "structFeel_1_1MeshTraits.html#ab59818b5b37163cf0a0b4ba399519484", null ],
     [ "face_type", "structFeel_1_1MeshTraits.html#a20ace478f3b83d1a94f7427883c7c9be", null ],
+    [ "interprocess_face_const_iterator", "structFeel_1_1MeshTraits.html#a767e3ffcf8e2c07028266147ca5b2435", null ],
+    [ "interprocess_face_iterator", "structFeel_1_1MeshTraits.html#a3f9d303c445ade0578eaad23892258e7", null ],
     [ "location_element_const_iterator", "structFeel_1_1MeshTraits.html#aea0c4136e682ec6d362e14a7994651a0", null ],
     [ "location_element_iterator", "structFeel_1_1MeshTraits.html#a2da701fc5e3d124e6fa3c3017fa74dd7", null ],
     [ "location_face_const_iterator", "structFeel_1_1MeshTraits.html#aeb611e8c669c1ca15439823fff2d20ca", null ],

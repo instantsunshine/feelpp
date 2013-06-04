@@ -155,11 +155,15 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~DataMap</b> ()</t
 <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>firstDofGlobalCluster</b> () const </td></tr>
 <tr class="memitem:ad1cf9d19c6087f862f297502f0bf7176"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1cf9d19c6087f862f297502f0bf7176"></a>
 <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>firstDofGlobalCluster</b> (uint16_type proc) const </td></tr>
+<tr class="memitem:a98e08015d188b51a9fc878d5aef30a0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98e08015d188b51a9fc878d5aef30a0f"></a>
+std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>firstDofGlobalClusterWorld</b> () const </td></tr>
 <tr class="memitem:ac4be1d1253345a313f8be0a4687bdf78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#ac4be1d1253345a313f8be0a4687bdf78">lastDof</a> () const </td></tr>
 <tr class="memitem:abf4d0054f85e7781ea6a4bd3410c25de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#abf4d0054f85e7781ea6a4bd3410c25de">lastDof</a> (const unsigned int proc) const </td></tr>
 <tr class="memitem:a0079f6b697b0cb52e9399f6540752d0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#a0079f6b697b0cb52e9399f6540752d0d">lastDofGlobalCluster</a> () const </td></tr>
 <tr class="memitem:aec25fed9526d3ba58be19ec5a229d92c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec25fed9526d3ba58be19ec5a229d92c"></a>
 <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lastDofGlobalCluster</b> (uint16_type proc) const </td></tr>
+<tr class="memitem:a603d86d48e963dc5c7b032e323714928"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a603d86d48e963dc5c7b032e323714928"></a>
+std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>lastDofGlobalClusterWorld</b> () const </td></tr>
 <tr class="memitem:a1b9b5e3bf873e00f71454b6ab5190251"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b9b5e3bf873e00f71454b6ab5190251"></a>
 uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>procOnGlobalCluster</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> globDof) const </td></tr>
 <tr class="memitem:aa03fb5d74d82d0327572368c09804e12"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa03fb5d74d82d0327572368c09804e12"></a>
@@ -168,6 +172,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>dofGlobalClusterIsOnP
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>dofGlobalClusterIsOnProc</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> globDof, int proc) const </td></tr>
 <tr class="memitem:a7a0c9dda983d2272916175be9dfe5602"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a0c9dda983d2272916175be9dfe5602"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>dofGlobalProcessIsGhost</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> dof) const </td></tr>
+<tr class="memitem:a8a1bb18f54a221bd5c9c7c323dc719e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a1bb18f54a221bd5c9c7c323dc719e3"></a>
+boost::tuple&lt; bool, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>searchGlobalProcessDof</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> gpdof) const </td></tr>
 <tr class="memitem:a0700603b97007239380aed3d5674af4b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0700603b97007239380aed3d5674af4b"></a>
 <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#a0700603b97007239380aed3d5674af4b">lid</a> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> GID) const </td></tr>
 <tr class="memdesc:a0700603b97007239380aed3d5674af4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns local ID of global ID, return invalid_size_type_value if not found on this processor. <br/></td></tr>
@@ -964,7 +970,7 @@ std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Jun 3 2013 12:00:22 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Wed Jun 5 2013 00:08:21 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
