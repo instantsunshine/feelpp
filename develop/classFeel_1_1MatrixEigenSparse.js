@@ -40,7 +40,7 @@ var classFeel_1_1MatrixEigenSparse =
     [ "size1", "classFeel_1_1MatrixEigenSparse.html#a0c68e8205cc0a17a77083fea667d62b9", null ],
     [ "size2", "classFeel_1_1MatrixEigenSparse.html#acdec914bc97bc13809af4524b440072e", null ],
     [ "transpose", "classFeel_1_1MatrixEigenSparse.html#a9c053d2a505941fcb12759728dbaf8b6", null ],
-    [ "updateBlockMat", "classFeel_1_1MatrixEigenSparse.html#a7621382a61967e47f23af3f34b420854", null ],
+    [ "updateBlockMat", "classFeel_1_1MatrixEigenSparse.html#a55fa2da74463b93e967cb8d32923ff56", null ],
     [ "zero", "classFeel_1_1MatrixEigenSparse.html#a2ba0cc28606d7c84c84cc57e6856aea1", null ],
     [ "zero", "classFeel_1_1MatrixEigenSparse.html#a9cb31a0ff3a64ccd7ede499bbb4afe12", null ],
     [ "zeroRows", "classFeel_1_1MatrixEigenSparse.html#a08490ebb927e2c061c21bbcd8394bd8e", null ]

@@ -70,7 +70,7 @@ var classFeel_1_1MatrixSparse =
     [ "transpose", "classFeel_1_1MatrixSparse.html#aaeeddee7317e64c79c562a8703480aec", null ],
     [ "transpose", "classFeel_1_1MatrixSparse.html#a6f9427fc081c1099b3e8d3b4e7729bad", null ],
     [ "transpose", "classFeel_1_1MatrixSparse.html#aa221b9a6afc9a2dedf12759cb5418aca", null ],
-    [ "updateBlockMat", "classFeel_1_1MatrixSparse.html#a1ad143c3d85e11b5645ca3f12e983859", null ],
+    [ "updateBlockMat", "classFeel_1_1MatrixSparse.html#a3f3eebe2cc134097f3bf93d9664c02d0", null ],
     [ "updateSparsityPattern", "classFeel_1_1MatrixSparse.html#add28dc9976b0a149d2816cc881cc4037", null ],
     [ "zero", "classFeel_1_1MatrixSparse.html#a86b388887b1de2436fb1a870194b9094", null ],
     [ "zero", "classFeel_1_1MatrixSparse.html#a6127986ed9b1bcd2a5c61e9b3e5b716b", null ],

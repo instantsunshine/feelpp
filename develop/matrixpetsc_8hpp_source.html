@@ -312,7 +312,7 @@ $(document).ready(function(){initNavTree('matrixpetsc_8hpp_source.html','');});
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    <span class="keywordtype">void</span> zeroRows( std::vector&lt;int&gt; <span class="keyword">const</span>&amp; rows, std::vector&lt;value_type&gt; <span class="keyword">const</span>&amp; values, Vector&lt;value_type&gt;&amp; rhs, Context <span class="keyword">const</span>&amp; on_context );</div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <span class="keywordtype">void</span> updateBlockMat( boost::shared_ptr&lt;MatrixSparse&lt;T&gt; &gt; m, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a> start_i, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a> start_j );</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <span class="keywordtype">void</span> updateBlockMat( boost::shared_ptr&lt;MatrixSparse&lt;T&gt; &gt; m, std::vector&lt;size_type&gt; start_i, std::vector&lt;size_type&gt; start_j );</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;</div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;</div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keywordtype">void</span> updatePCFieldSplit( PC &amp; pc );</div>
@@ -439,7 +439,7 @@ $(document).ready(function(){initNavTree('matrixpetsc_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Thu Jun 6 2013 00:08:08 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Fri Jun 7 2013 00:07:28 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

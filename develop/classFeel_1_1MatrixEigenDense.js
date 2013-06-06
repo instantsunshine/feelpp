@@ -39,7 +39,7 @@ var classFeel_1_1MatrixEigenDense =
     [ "size1", "classFeel_1_1MatrixEigenDense.html#ad6a1adc0c299942186a44253ef436436", null ],
     [ "size2", "classFeel_1_1MatrixEigenDense.html#aaa3ab8d1a592eb3f62ab3109c12829ea", null ],
     [ "transpose", "classFeel_1_1MatrixEigenDense.html#a9aa76b9d1721e8094198f974e811de91", null ],
-    [ "updateBlockMat", "classFeel_1_1MatrixEigenDense.html#a92a07f9f5125c8e9fd7ef347060432ef", null ],
+    [ "updateBlockMat", "classFeel_1_1MatrixEigenDense.html#a00188e23fd36b1ecf4724a521adbccf5", null ],
     [ "zero", "classFeel_1_1MatrixEigenDense.html#a8ac4c0515c81d5cfe75c780399d6757e", null ],
     [ "zero", "classFeel_1_1MatrixEigenDense.html#a866b92198b4d294e714166b90b050050", null ],
     [ "zeroRows", "classFeel_1_1MatrixEigenDense.html#a20e017f104ab693738ac62933cabc485", null ]
