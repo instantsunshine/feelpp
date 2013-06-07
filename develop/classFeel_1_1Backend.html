@@ -171,6 +171,11 @@ typedef boost::tuple&lt; bool, <br class="typebreak"/>
 <tr class="memitem:ac09a918cec2b174b1eec7ac35d92f730"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac09a918cec2b174b1eec7ac35d92f730"></a>
 typedef boost::tuple&lt; bool, <br class="typebreak"/>
 <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>, value_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nl_solve_return_type</b></td></tr>
+<tr class="memitem:ac85c3f38c995d02938ac2ad71562fca6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac85c3f38c995d02938ac2ad71562fca6"></a>
+typedef <a class="el" href="classFeel_1_1DataMap.html">DataMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>datamap_type</b></td></tr>
+<tr class="memitem:a2e589f3e05ca2e68282a3beed31fa505"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e589f3e05ca2e68282a3beed31fa505"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classFeel_1_1DataMap.html">datamap_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>datamap_ptrtype</b></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -275,13 +280,11 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Backend</b> ()</t
 <tr class="memitem:ae9cc4a2666705823d5d435637b24483d"><td class="memItemLeft" align="right" valign="top">virtual sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ae9cc4a2666705823d5d435637b24483d">newMatrix</a> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> m, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> m_l, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n_l, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> nnz=30, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> noz=10, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> prop=<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae">NON_HERMITIAN</a>)=0</td></tr>
 <tr class="memitem:ad60108577ae6d3e27ea67a335561cbd4"><td class="memItemLeft" align="right" valign="top">virtual sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ad60108577ae6d3e27ea67a335561cbd4">newMatrix</a> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> m, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> m_l, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n_l, graph_ptrtype const &amp;graph, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> matrix_properties=<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae">NON_HERMITIAN</a>)=0</td></tr>
 <tr class="memitem:ab0a023deb49907946b586b99ceadbed1"><td class="memItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ab0a023deb49907946b586b99ceadbed1">newMatrix</a> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> m, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> m_l, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n_l, graph_ptrtype const &amp;graph, std::vector&lt; std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt; &gt; indexSplit, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> matrix_properties=<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae">NON_HERMITIAN</a>)</td></tr>
-<tr class="memitem:a111bba751ca8abc86a5f44b965da66a5"><td class="memItemLeft" align="right" valign="top">virtual sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a111bba751ca8abc86a5f44b965da66a5">newMatrix</a> (<a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;dm1, <a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;dm2, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> prop=<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae">NON_HERMITIAN</a>, bool init=true)=0</td></tr>
-<tr class="memitem:a08b60866e5aa72ab809b3906de62571a"><td class="memItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a08b60866e5aa72ab809b3906de62571a">newMatrix</a> (<a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;domainmap, <a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;imagemap, graph_ptrtype const &amp;graph, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> matrix_properties=<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae">NON_HERMITIAN</a>, bool init=true)</td></tr>
+<tr class="memitem:a43b8c99df9086cd2ce6d0d949e37159e"><td class="memItemLeft" align="right" valign="top">virtual sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a43b8c99df9086cd2ce6d0d949e37159e">newMatrix</a> (datamap_ptrtype const &amp;dm1, datamap_ptrtype const &amp;dm2, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> prop=<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae">NON_HERMITIAN</a>, bool init=true)=0</td></tr>
+<tr class="memitem:a1d1b63b8276629a13a2e03fcb7f03b43"><td class="memItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a1d1b63b8276629a13a2e03fcb7f03b43">newMatrix</a> (datamap_ptrtype const &amp;domainmap, datamap_ptrtype const &amp;imagemap, graph_ptrtype const &amp;graph, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> matrix_properties=<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae">NON_HERMITIAN</a>, bool init=true)</td></tr>
 <tr class="memitem:ad9d817212ebf3ddebf2a7b9f71232d10"><td class="memItemLeft" align="right" valign="top">virtual sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ad9d817212ebf3ddebf2a7b9f71232d10">newZeroMatrix</a> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> m, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> m_l, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n_l)=0</td></tr>
-<tr class="memitem:a16048207b66c731bdc6a9aae6baadb53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16048207b66c731bdc6a9aae6baadb53"></a>
-virtual sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>newZeroMatrix</b> (<a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;dm1, <a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;dm2)=0</td></tr>
-<tr class="memitem:a835f8592366508c472e7be051ef3b06a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a835f8592366508c472e7be051ef3b06a"></a>
-virtual sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>newZeroMatrix</b> (boost::shared_ptr&lt; <a class="el" href="classFeel_1_1DataMap.html">DataMap</a> &gt; const &amp;dm1, boost::shared_ptr&lt; <a class="el" href="classFeel_1_1DataMap.html">DataMap</a> &gt; const &amp;dm2)=0</td></tr>
+<tr class="memitem:a3b2f89d2688a19fb42a6963628bae785"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b2f89d2688a19fb42a6963628bae785"></a>
+virtual sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>newZeroMatrix</b> (datamap_ptrtype const &amp;dm1, datamap_ptrtype const &amp;dm2)=0</td></tr>
 <tr class="memitem:a1b38302501043eb08a7a58f43312b966"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1b38302501043eb08a7a58f43312b966"></a>
 template&lt;typename DomainSpace , typename ImageSpace &gt; </td></tr>
 <tr class="memitem:a1b38302501043eb08a7a58f43312b966"><td class="memTemplItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>newMatrix</b> (DomainSpace const &amp;dm, ImageSpace const &amp;im, sparse_matrix_ptrtype const &amp;M, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> prop=<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae">NON_HERMITIAN</a>)</td></tr>
@@ -290,10 +293,8 @@ template&lt;typename DomainSpace , typename ImageSpace &gt; </td></tr>
 sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>newBlockMatrixImpl</b> (vf::BlocksBase&lt; boost::shared_ptr&lt; <a class="el" href="classFeel_1_1GraphCSR.html">GraphCSR</a> &gt; &gt; const &amp;b, bool copy_values=true, bool diag_is_nonzero=true)</td></tr>
 <tr class="memitem:a339c85259745dbf2d883c9464b994a8c"><td class="memTemplParams" colspan="2">template&lt;typename BlockType  = vector_ptrtype&gt; </td></tr>
 <tr class="memitem:a339c85259745dbf2d883c9464b994a8c"><td class="memTemplItemLeft" align="right" valign="top">vector_ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a339c85259745dbf2d883c9464b994a8c">newBlockVectorImpl</a> (vf::BlocksBase&lt; BlockType &gt; const &amp;b, bool copy_values=true)</td></tr>
-<tr class="memitem:af2490c7116ddd7218b6fc59cff3ff8cc"><td class="memItemLeft" align="right" valign="top">virtual vector_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#af2490c7116ddd7218b6fc59cff3ff8cc">newVector</a> (<a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;dm)=0</td></tr>
+<tr class="memitem:aa6df4b22de06a12fb97d95a35e08cd0c"><td class="memItemLeft" align="right" valign="top">virtual vector_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#aa6df4b22de06a12fb97d95a35e08cd0c">newVector</a> (datamap_ptrtype const &amp;dm)=0</td></tr>
 <tr class="memitem:aa94fb4e059fa9ef32e77b22b9f6a6b1e"><td class="memItemLeft" align="right" valign="top">virtual vector_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#aa94fb4e059fa9ef32e77b22b9f6a6b1e">newVector</a> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n_local)=0</td></tr>
-<tr class="memitem:ae4268c3a3e792a44d417ddc21a3e63cb"><td class="memTemplParams" colspan="2">template&lt;typename DomainSpace &gt; </td></tr>
-<tr class="memitem:ae4268c3a3e792a44d417ddc21a3e63cb"><td class="memTemplItemLeft" align="right" valign="top">vector_ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ae4268c3a3e792a44d417ddc21a3e63cb">newVector</a> (DomainSpace const &amp;dm)</td></tr>
 <tr class="memitem:ab5bc3b49e46db5039d07ac87ec3fdd42"><td class="memItemLeft" align="right" valign="top">static backend_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">build</a> (<a class="el" href="namespaceFeel.html#a4da28efa430cc4bd3a6a86cde30a9809">BackendType</a>=BACKEND_GMM, WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
 <tr class="memitem:a32239a0ae0d141e881606ba4dc29497d"><td class="memItemLeft" align="right" valign="top">static backend_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a32239a0ae0d141e881606ba4dc29497d">build</a> (po::variables_map const &amp;vm, std::string const &amp;<a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">prefix</a>=&quot;&quot;, WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
 </table>
@@ -1115,7 +1116,7 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a111bba751ca8abc86a5f44b965da66a5"></a>
+<a class="anchor" id="a43b8c99df9086cd2ce6d0d949e37159e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1127,13 +1128,13 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">virtual sparse_matrix_ptrtype <a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::newMatrix </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;&#160;</td>
+          <td class="paramtype">datamap_ptrtype const &amp;&#160;</td>
           <td class="paramname"><em>dm1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;&#160;</td>
+          <td class="paramtype">datamap_ptrtype const &amp;&#160;</td>
           <td class="paramname"><em>dm2</em>, </td>
         </tr>
         <tr>
@@ -1162,11 +1163,11 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>instantiate a new sparse vector </p>
 
-<p>Implemented in <a class="el" href="classFeel_1_1BackendEigen.html#ab77ff0706ee0a1a50bfcfa549f3abbe7">Feel::BackendEigen&lt; T, _Options &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classFeel_1_1BackendEigen.html#ae412439d8af3e55035d5701252e67a78">Feel::BackendEigen&lt; T, _Options &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a08b60866e5aa72ab809b3906de62571a"></a>
+<a class="anchor" id="a1d1b63b8276629a13a2e03fcb7f03b43"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1178,13 +1179,13 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">sparse_matrix_ptrtype <a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::newMatrix </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;&#160;</td>
+          <td class="paramtype">datamap_ptrtype const &amp;&#160;</td>
           <td class="paramname"><em>domainmap</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;&#160;</td>
+          <td class="paramtype">datamap_ptrtype const &amp;&#160;</td>
           <td class="paramname"><em>imagemap</em>, </td>
         </tr>
         <tr>
@@ -1219,11 +1220,11 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>instantiate a new sparse vector </p>
 
-<p>References <a class="el" href="classFeel_1_1DataMap.html#ae824d566b31908f88345c35f121fe382">Feel::DataMap::nDof()</a>, <a class="el" href="classFeel_1_1Backend.html#ae9cc4a2666705823d5d435637b24483d">Feel::Backend&lt; T &gt;::newMatrix()</a>, and <a class="el" href="classFeel_1_1DataMap.html#aa1d950e30f739d380bfdbfc37b697a68">Feel::DataMap::nLocalDofWithoutGhost()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1Backend.html#ae9cc4a2666705823d5d435637b24483d">Feel::Backend&lt; T &gt;::newMatrix()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af2490c7116ddd7218b6fc59cff3ff8cc"></a>
+<a class="anchor" id="aa6df4b22de06a12fb97d95a35e08cd0c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1235,7 +1236,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">virtual vector_ptrtype <a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::newVector </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;&#160;</td>
+          <td class="paramtype">datamap_ptrtype const &amp;&#160;</td>
           <td class="paramname"><em>dm</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1248,7 +1249,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>instantiate a new vector </p>
 
-<p>Implemented in <a class="el" href="classFeel_1_1BackendEigen.html#a6cfe8059e5fe1a2cdde7e80459563856">Feel::BackendEigen&lt; T, _Options &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classFeel_1_1BackendEigen.html#a86d5baf060c585024766b900c6281487">Feel::BackendEigen&lt; T, _Options &gt;</a>.</p>
 
 </div>
 </div>
@@ -1288,37 +1289,6 @@ template&lt;typename T&gt; </div>
 <p>instantiate a new vector </p>
 
 <p>Implemented in <a class="el" href="classFeel_1_1BackendEigen.html#a9584b53cc60101a051ea327c5d01d476">Feel::BackendEigen&lt; T, _Options &gt;</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae4268c3a3e792a44d417ddc21a3e63cb"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<div class="memtemplate">
-template&lt;typename DomainSpace &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector_ptrtype <a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::newVector </td>
-          <td>(</td>
-          <td class="paramtype">DomainSpace const &amp;&#160;</td>
-          <td class="paramname"><em>dm</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>helper function </p>
-
-<p>References <a class="el" href="classFeel_1_1Backend.html#af2490c7116ddd7218b6fc59cff3ff8cc">Feel::Backend&lt; T &gt;::newVector()</a>.</p>
 
 </div>
 </div>
@@ -2021,7 +1991,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Jun 7 2013 00:07:42 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Sat Jun 8 2013 00:10:08 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

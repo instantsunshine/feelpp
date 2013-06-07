@@ -157,10 +157,19 @@ typedef <a class="el" href="classFeel_1_1VectorUblas.html">VectorUblas</a><br cl
 typedef vector_type::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b></td></tr>
 <tr class="memitem:a60a3addb6436e0143940701bc35e4008"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60a3addb6436e0143940701bc35e4008"></a>
 typedef vector_type::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b></td></tr>
+<tr class="memitem:aac65c2b1133ac9075f551cd27f734abc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac65c2b1133ac9075f551cd27f734abc"></a>
+typedef <a class="el" href="classFeel_1_1DataMap.html">super1::datamap_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>datamap_type</b></td></tr>
+<tr class="memitem:ab4f2bdf2e4ce8c7faa07a0f19a47656b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4f2bdf2e4ce8c7faa07a0f19a47656b"></a>
+typedef super1::datamap_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>datamap_ptrtype</b></td></tr>
 <tr class="inherit_header pub_types_classFeel_1_1Vector"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1Vector')"><img src="closed.png" alt="-"/>&nbsp;Public Types inherited from <a class="el" href="classFeel_1_1Vector.html">Feel::Vector< T ></a></td></tr>
 <tr class="memitem:a0b8b2025b99c4e88939719873afe6a6a inherit pub_types_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b8b2025b99c4e88939719873afe6a6a"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>clone_ptrtype</b></td></tr>
+<tr class="memitem:ae9539882b1a9390d6623dd078a71b898 inherit pub_types_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9539882b1a9390d6623dd078a71b898"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classFeel_1_1DataMap.html">datamap_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>datamap_ptrtype</b></td></tr>
+<tr class="memitem:a55e357c2883ae22a1ab3d5160234a271 inherit pub_types_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55e357c2883ae22a1ab3d5160234a271"></a>
+typedef <a class="el" href="classFeel_1_1DataMap.html">DataMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>datamap_type</b></td></tr>
 <tr class="memitem:a17759a986f195ee336edf9a5c4323647 inherit pub_types_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17759a986f195ee336edf9a5c4323647"></a>
 typedef type_traits&lt; T &gt;::real_type&#160;</td><td class="memItemRight" valign="bottom"><b>real_type</b></td></tr>
 <tr class="memitem:a98dacdd5252b7045fb6cc4e9f1f39052 inherit pub_types_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98dacdd5252b7045fb6cc4e9f1f39052"></a>
@@ -178,14 +187,14 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>VectorUblas</b> ()</td></tr>
 <tr class="memitem:adad7ad6faefc9c87abe9a52025c9a76f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adad7ad6faefc9c87abe9a52025c9a76f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>VectorUblas</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> __s)</td></tr>
-<tr class="memitem:aca1fb99e59a5f86b0a3fda07c5ba20f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca1fb99e59a5f86b0a3fda07c5ba20f3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VectorUblas</b> (<a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;dm)</td></tr>
+<tr class="memitem:a1cbf336042cb6a9e3e3273cfe3ba8711"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cbf336042cb6a9e3e3273cfe3ba8711"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>VectorUblas</b> (datamap_ptrtype const &amp;dm)</td></tr>
 <tr class="memitem:acb1ccc0a2c777ce4d7674325cfb7797a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb1ccc0a2c777ce4d7674325cfb7797a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>VectorUblas</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> __s, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> __n_local)</td></tr>
 <tr class="memitem:a517d80356f3e87dcba1fd17ff5513c53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a517d80356f3e87dcba1fd17ff5513c53"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>VectorUblas</b> (<a class="el" href="classFeel_1_1VectorUblas.html">VectorUblas</a> const &amp;m)</td></tr>
-<tr class="memitem:a3db2f5771d16c33d6d553da5e184c0e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3db2f5771d16c33d6d553da5e184c0e1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VectorUblas</b> (<a class="el" href="classFeel_1_1VectorUblas.html">VectorUblas</a>&lt; value_type &gt; &amp;m, range_type const &amp;range, <a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;dm)</td></tr>
+<tr class="memitem:abb848fb65003df319cd33d54779cb53a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb848fb65003df319cd33d54779cb53a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>VectorUblas</b> (<a class="el" href="classFeel_1_1VectorUblas.html">VectorUblas</a>&lt; value_type &gt; &amp;m, range_type const &amp;range, datamap_ptrtype const &amp;dm)</td></tr>
 <tr class="memitem:a2bbb138015effbd7e289d47ebf501a10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bbb138015effbd7e289d47ebf501a10"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>VectorUblas</b> (ublas::vector&lt; value_type &gt; &amp;m, range_type const &amp;range)</td></tr>
 <tr class="memitem:a7365970981d0ded5b7e43f15d522c842"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7365970981d0ded5b7e43f15d522c842"></a>
@@ -196,7 +205,7 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~VectorUblas</b> ()</td></tr>
 <tr class="memitem:a0a7d185a2a530d5c764352b7dbc19d62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorUblas.html#a0a7d185a2a530d5c764352b7dbc19d62">init</a> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n_local, const bool fast=false)</td></tr>
 <tr class="memitem:a47b686ab43d4652641db32a33eea0a71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorUblas.html#a47b686ab43d4652641db32a33eea0a71">init</a> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n, const bool fast=false)</td></tr>
-<tr class="memitem:ad4ee119a6988226686da02ad2a093120"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorUblas.html#ad4ee119a6988226686da02ad2a093120">init</a> (<a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;dm)</td></tr>
+<tr class="memitem:a40b38aa880c77eb4a0631645a80d068c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorUblas.html#a40b38aa880c77eb4a0631645a80d068c">init</a> (datamap_ptrtype const &amp;dm)</td></tr>
 <tr class="memitem:a049a80f70c7c87fe1375dc22304dc2c3"><td class="memItemLeft" align="right" valign="top">clone_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorUblas.html#a049a80f70c7c87fe1375dc22304dc2c3">clone</a> () const </td></tr>
 <tr><td colspan="2"><div class="groupHeader">Operator overloads</div></td></tr>
 <tr class="memitem:a82836f9f5aa1c5406579fc352d1e9c4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; value_type &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorUblas.html#a82836f9f5aa1c5406579fc352d1e9c4b">operator=</a> (const <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; value_type &gt; &amp;V)</td></tr>
@@ -298,21 +307,25 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>localIndexIsG
 <tr class="memitem:ae95ee3c43b31d4af288cbab0fff47025 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae95ee3c43b31d4af288cbab0fff47025"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>localize</b> (const <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; T &gt; &amp;V)</td></tr>
 <tr class="memitem:ab2206523b4a31eca0f22681f09fd5ccf inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Vector.html#ab2206523b4a31eca0f22681f09fd5ccf">localSize</a> () const </td></tr>
-<tr class="memitem:a1b1a9d9ef02cb82e73987fd62ccf3b9e inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b1a9d9ef02cb82e73987fd62ccf3b9e"></a>
-<a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>map</b> () const </td></tr>
+<tr class="memitem:a6948444eacce868f18efdf902db532d1 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6948444eacce868f18efdf902db532d1"></a>
+<a class="el" href="classFeel_1_1DataMap.html">datamap_type</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>map</b> () const </td></tr>
+<tr class="memitem:a865655ae78e2b1a5405e7a51ddfbe519 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a865655ae78e2b1a5405e7a51ddfbe519"></a>
+datamap_ptrtype const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>mapPtr</b> () const </td></tr>
 <tr class="memitem:a8e4f96dfe19926e203a12f7b5162fa38 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Vector.html#a8e4f96dfe19926e203a12f7b5162fa38">operator=</a> (const T s)</td></tr>
 <tr class="memitem:a64fa57e0d589dded83d114f703571777 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Vector.html#a64fa57e0d589dded83d114f703571777">operator=</a> (const std::vector&lt; T &gt; &amp;v)</td></tr>
 <tr class="memitem:ac6e0c2d5b7a43518a689ad438d93c637 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Vector.html#ac6e0c2d5b7a43518a689ad438d93c637">print</a> (std::ostream &amp;os=std::cout) const </td></tr>
-<tr class="memitem:a2ecd0e6965ad23d5cac7aab440b34750 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ecd0e6965ad23d5cac7aab440b34750"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setMap</b> (<a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;d)</td></tr>
+<tr class="memitem:a7d24e4af5e723073589f4257ab178db8 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d24e4af5e723073589f4257ab178db8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMap</b> (datamap_ptrtype const &amp;d)</td></tr>
 <tr class="memitem:ac8ff1990d9058f9d574a6921a52d8f89 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Vector.html#ac8ff1990d9058f9d574a6921a52d8f89">setOnes</a> ()</td></tr>
 <tr class="memitem:a9700d04dc71e1005a6566b0473791285 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Vector.html#a9700d04dc71e1005a6566b0473791285">setZero</a> ()</td></tr>
 <tr class="memitem:aa72e2b2dd8e668a5770d637d6cc5df48 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Vector.html#aa72e2b2dd8e668a5770d637d6cc5df48">size</a> () const </td></tr>
 <tr class="memitem:aeae03d306c99af6cb09412e2d8a5ccd9 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Vector.html#aeae03d306c99af6cb09412e2d8a5ccd9">Vector</a> ()</td></tr>
-<tr class="memitem:a72bf00a6658308c9dba0d6676d03d388 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72bf00a6658308c9dba0d6676d03d388"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Vector</b> (<a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;n)</td></tr>
+<tr class="memitem:aaace34c49fb03efaba99b5f5a210bc78 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaace34c49fb03efaba99b5f5a210bc78"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Vector</b> (datamap_ptrtype const &amp;n)</td></tr>
 <tr class="memitem:a2b1bd2f2bdf2ef21016ae44832bd735f inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Vector.html#a2b1bd2f2bdf2ef21016ae44832bd735f">Vector</a> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n, WorldComm const &amp;_worldComm=Environment::worldComm())</td></tr>
 <tr class="memitem:af9f494708700fb1f524805788b94c500 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Vector.html#af9f494708700fb1f524805788b94c500">Vector</a> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n_local, WorldComm const &amp;_worldComm=Environment::worldComm())</td></tr>
+<tr class="memitem:abe03fa771d65302bfed23a020cfa4e07 inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe03fa771d65302bfed23a020cfa4e07"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Vector</b> (<a class="el" href="classFeel_1_1Vector.html">Vector</a> const &amp;v)</td></tr>
 <tr class="memitem:a65c96e11807cb8e4f7b837c965f018fa inherit pub_methods_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Vector.html#a65c96e11807cb8e4f7b837c965f018fa">~Vector</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
@@ -320,7 +333,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classFeel_1_1Vector"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classFeel_1_1Vector')"><img src="closed.png" alt="-"/>&nbsp;Protected Attributes inherited from <a class="el" href="classFeel_1_1Vector.html">Feel::Vector< T ></a></td></tr>
 <tr class="memitem:a8bb58529298dbdfa71aed1eaffb84872 inherit pro_attribs_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Vector.html#a8bb58529298dbdfa71aed1eaffb84872">M_is_closed</a></td></tr>
 <tr class="memitem:a680e5401f8aa711ecd49fe3b6b7c409d inherit pro_attribs_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Vector.html#a680e5401f8aa711ecd49fe3b6b7c409d">M_is_initialized</a></td></tr>
-<tr class="memitem:a804b8da8d3d7077a1795fdb0f9adfa1f inherit pro_attribs_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1DataMap.html">DataMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Vector.html#a804b8da8d3d7077a1795fdb0f9adfa1f">M_map</a></td></tr>
+<tr class="memitem:a4853175f01b878e3ecc4a7406b0a4390 inherit pro_attribs_classFeel_1_1Vector"><td class="memItemLeft" align="right" valign="top">datamap_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Vector.html#a4853175f01b878e3ecc4a7406b0a4390">M_map</a></td></tr>
 </table>
 <h2>Member Function Documentation</h2>
 <a class="anchor" id="af03c3e19845fdc2ac864de55a228d0c7"></a>
@@ -943,7 +956,7 @@ template&lt;typename T , typename Storage &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ad4ee119a6988226686da02ad2a093120"></a>
+<a class="anchor" id="a40b38aa880c77eb4a0631645a80d068c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -952,7 +965,7 @@ template&lt;typename T , typename Storage &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classFeel_1_1VectorUblas.html">Feel::VectorUblas</a>&lt; T, Storage &gt;::init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classFeel_1_1DataMap.html">DataMap</a> const &amp;&#160;</td>
+          <td class="paramtype">datamap_ptrtype const &amp;&#160;</td>
           <td class="paramname"><em>dm</em></td><td>)</td>
           <td></td>
         </tr>
@@ -961,8 +974,6 @@ template&lt;typename T , typename Storage &gt; </div>
 <p>init from a <code><a class="el" href="classFeel_1_1DataMap.html" title="data layout in a multi-processor environnement">DataMap</a></code> </p>
 
 <p>Reimplemented from <a class="el" href="classFeel_1_1Vector.html">Feel::Vector&lt; T &gt;</a>.</p>
-
-<p>References <a class="el" href="classFeel_1_1DataMap.html#ae824d566b31908f88345c35f121fe382">Feel::DataMap::nDof()</a>, and <a class="el" href="classFeel_1_1DataMap.html#ab74e76b5d3fba69cdca3a11a6b8a55f3">Feel::DataMap::nLocalDofWithGhost()</a>.</p>
 
 </div>
 </div>
@@ -2243,7 +2254,7 @@ template&lt;typename T, typename Storage = ublas::vector&lt;T&gt;&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Jun 7 2013 00:07:48 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Sat Jun 8 2013 00:10:14 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

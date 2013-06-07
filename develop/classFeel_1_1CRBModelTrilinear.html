@@ -347,9 +347,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>scalarProductForPod
 <tr class="memitem:af2a2107f825e1cec334ae0177fb6b09e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1CRBModelTrilinear.html#a1f2f3ff4bc5cd9d55e526665ee7df3e6">element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModelTrilinear.html#af2a2107f825e1cec334ae0177fb6b09e">solve</a> (parameter_type const &amp;mu)</td></tr>
 <tr class="memitem:a703dab919b23307b41b121303845f3e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModelTrilinear.html#a703dab919b23307b41b121303845f3e1">l2solve</a> (vector_ptrtype &amp;u, vector_ptrtype const &amp;f)</td></tr>
 <tr class="memitem:a70bf637ae8f16f68633b27646f42cc24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModelTrilinear.html#a70bf637ae8f16f68633b27646f42cc24">run</a> (const double *X, unsigned long N, double *Y, unsigned long P)</td></tr>
-<tr class="memitem:ab08118d6658ca7a2e9ec93decf4d0bef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1CRBModelTrilinear.html#aea0d63d8e676792dace7f77bffc5a945">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModelTrilinear.html#ab08118d6658ca7a2e9ec93decf4d0bef">output</a> (int output_index, parameter_type const &amp;mu)</td></tr>
-<tr class="memitem:a4e2043ea4440f256905b719d4bdb8f49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e2043ea4440f256905b719d4bdb8f49"></a>
-<a class="el" href="classFeel_1_1CRBModelTrilinear.html#a1f2f3ff4bc5cd9d55e526665ee7df3e6">element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>solveFemUsingOnlineEimPicard</b> (parameter_type const &amp;mu)</td></tr>
+<tr class="memitem:a048a2e90ff79372050dcedd14fa42f8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1CRBModelTrilinear.html#aea0d63d8e676792dace7f77bffc5a945">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModelTrilinear.html#a048a2e90ff79372050dcedd14fa42f8a">output</a> (int output_index, parameter_type const &amp;mu, <a class="el" href="classFeel_1_1CRBModelTrilinear.html#a1f2f3ff4bc5cd9d55e526665ee7df3e6">element_type</a> &amp;u, bool need_to_solve=false)</td></tr>
+<tr class="memitem:aafa1e2f2cc98b03b1aab644904f5d0c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafa1e2f2cc98b03b1aab644904f5d0c7"></a>
+<a class="el" href="classFeel_1_1CRBModelTrilinear.html#a1f2f3ff4bc5cd9d55e526665ee7df3e6">element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>solveFemUsingAffineDecompositionFixedPoint</b> (parameter_type const &amp;mu)</td></tr>
 <tr class="memitem:ab6b7c13a0e386fc99f5f4b55d10f5655"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6b7c13a0e386fc99f5f4b55d10f5655"></a>
 <a class="el" href="classFeel_1_1CRBModelTrilinear.html#a1f2f3ff4bc5cd9d55e526665ee7df3e6">element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>solveFemUsingOfflineEim</b> (parameter_type const &amp;mu)</td></tr>
 <tr class="memitem:ab2e361a2d6cd6e4c1fdb4145ca1bd482"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2e361a2d6cd6e4c1fdb4145ca1bd482"></a>
@@ -846,7 +846,7 @@ template&lt;typename ModelType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ab08118d6658ca7a2e9ec93decf4d0bef"></a>
+<a class="anchor" id="a048a2e90ff79372050dcedd14fa42f8a"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -865,7 +865,19 @@ template&lt;typename ModelType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">parameter_type const &amp;&#160;</td>
-          <td class="paramname"><em>mu</em>&#160;</td>
+          <td class="paramname"><em>mu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classFeel_1_1CRBModelTrilinear.html#a1f2f3ff4bc5cd9d55e526665ee7df3e6">element_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>need_to_solve</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1173,7 +1185,7 @@ template&lt;typename ModelType &gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Jun 7 2013 00:07:42 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Sat Jun 8 2013 00:10:08 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

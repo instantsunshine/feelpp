@@ -35,6 +35,8 @@ var classFeel_1_1CRB =
     [ "parameterspace_type", "classFeel_1_1CRB.html#aed8a6de6184917048cf7c6af1a7398ad", null ],
     [ "pod_ptrtype", "classFeel_1_1CRB.html#a2b88f7076a996be962a600683696f4e7", null ],
     [ "pod_type", "classFeel_1_1CRB.html#a7b4c7d89ae5e544759e88bab9122f16b", null ],
+    [ "preconditioner_ptrtype", "classFeel_1_1CRB.html#ad2496134a506b9c57f8a2e7b12ff193d", null ],
+    [ "preconditioner_type", "classFeel_1_1CRB.html#afb394c421d733f9ae71d2728ba3cce6a", null ],
     [ "relative_error_type", "classFeel_1_1CRB.html#a2c4ea81fe652bbedfd12bc2d94b53e4e", null ],
     [ "residual_error_type", "classFeel_1_1CRB.html#a6177aee458c76e050aedb95888339c57", null ],
     [ "sampling_ptrtype", "classFeel_1_1CRB.html#aaaf5123bd01e177851da1e5b391a9bf7", null ],

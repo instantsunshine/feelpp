@@ -483,13 +483,13 @@ $(document).ready(function(){initNavTree('crbmodeltrilinear_8hpp_source.html',''
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;</div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1CRBModelTrilinear.html#a70bf637ae8f16f68633b27646f42cc24">run</a>( <span class="keyword">const</span> <span class="keywordtype">double</span> * X, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> N, <span class="keywordtype">double</span> * Y, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> P );</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;</div>
-<div class="line"><a name="l00543"></a><span class="lineno"><a class="code" href="classFeel_1_1CRBModelTrilinear.html#ab08118d6658ca7a2e9ec93decf4d0bef">  543</a></span>&#160;    <a class="code" href="classFeel_1_1CRBModelTrilinear.html#aea0d63d8e676792dace7f77bffc5a945" title="value_type">value_type</a> <a class="code" href="classFeel_1_1CRBModelTrilinear.html#ab08118d6658ca7a2e9ec93decf4d0bef">output</a>( <span class="keywordtype">int</span> output_index, parameter_type <span class="keyword">const</span>&amp; mu )</div>
+<div class="line"><a name="l00543"></a><span class="lineno"><a class="code" href="classFeel_1_1CRBModelTrilinear.html#a048a2e90ff79372050dcedd14fa42f8a">  543</a></span>&#160;    <a class="code" href="classFeel_1_1CRBModelTrilinear.html#aea0d63d8e676792dace7f77bffc5a945" title="value_type">value_type</a> <a class="code" href="classFeel_1_1CRBModelTrilinear.html#a048a2e90ff79372050dcedd14fa42f8a">output</a>( <span class="keywordtype">int</span> output_index, parameter_type <span class="keyword">const</span>&amp; mu, <a class="code" href="classFeel_1_1CRBModelTrilinear.html#a1f2f3ff4bc5cd9d55e526665ee7df3e6" title="element of the functionspace type">element_type</a> &amp;u, <span class="keywordtype">bool</span> need_to_solve=<span class="keyword">false</span>  )</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    {</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        <span class="keywordflow">return</span> M_model-&gt;output( output_index, mu );</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        <span class="keywordflow">return</span> M_model-&gt;output( output_index, mu , u , need_to_solve);</div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    }</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;</div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    <span class="comment">//only to compile</span></div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    <a class="code" href="classFeel_1_1CRBModelTrilinear.html#a1f2f3ff4bc5cd9d55e526665ee7df3e6" title="element of the functionspace type">element_type</a> solveFemUsingOnlineEimPicard( parameter_type <span class="keyword">const</span>&amp; mu ){};</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    <a class="code" href="classFeel_1_1CRBModelTrilinear.html#a1f2f3ff4bc5cd9d55e526665ee7df3e6" title="element of the functionspace type">element_type</a> solveFemUsingAffineDecompositionFixedPoint( parameter_type <span class="keyword">const</span>&amp; mu ){};</div>
 <div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    <a class="code" href="classFeel_1_1CRBModelTrilinear.html#a1f2f3ff4bc5cd9d55e526665ee7df3e6" title="element of the functionspace type">element_type</a> solveFemUsingOfflineEim( parameter_type <span class="keyword">const</span>&amp; mu ){};</div>
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    offline_merge_type result_offline_merge_type;</div>
 <div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    offline_merge_type update( parameter_type <span class="keyword">const</span>&amp; mu,  <span class="keywordtype">double</span> time=0 )  <span class="comment">// for scm</span></div>
@@ -588,7 +588,7 @@ $(document).ready(function(){initNavTree('crbmodeltrilinear_8hpp_source.html',''
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Jun 7 2013 00:07:14 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Sat Jun 8 2013 00:09:38 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

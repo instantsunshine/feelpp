@@ -1089,7 +1089,7 @@ $(document).ready(function(){initNavTree('functionspace_8hpp_source.html','');})
 <div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;    <span class="keywordtype">void</span> operator()( boost::shared_ptr&lt;T&gt; &amp; x )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;        <span class="keywordflow">if</span> ( _M_cursor==i &amp;&amp; !x )</div>
-<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;            x = boost::shared_ptr&lt;T&gt;( <span class="keyword">new</span> T( _M_space-&gt;template functionSpace&lt;i&gt;()-&gt;map() ) );</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;            x = boost::shared_ptr&lt;T&gt;( <span class="keyword">new</span> T( _M_space-&gt;template functionSpace&lt;i&gt;()-&gt;dof() ) );</div>
 <div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;</div>
 <div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;        ++_M_cursor;<span class="comment">// warning _M_cursor &lt; nb color</span></div>
 <div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;    }</div>
@@ -2620,7 +2620,7 @@ $(document).ready(function(){initNavTree('functionspace_8hpp_source.html','');})
 <div class="line"><a name="l02687"></a><span class="lineno"> 2687</span>&#160;            <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classFeel_1_1FunctionSpace.html#a5ffd7ab6be49fdf2f8b109a8f9645b29">functionSpace</a>()-&gt;<span class="keyword">template</span> functionSpace&lt;i&gt;()-&gt;worldComm().isActive() )</div>
 <div class="line"><a name="l02688"></a><span class="lineno"> 2688</span>&#160;            {</div>
 <div class="line"><a name="l02689"></a><span class="lineno"> 2689</span>&#160;                ct_type ct( *<span class="keyword">this</span>, ublas::range( nbdof_start, nbdof_start+space-&gt;nLocalDof() ),</div>
-<div class="line"><a name="l02690"></a><span class="lineno"> 2690</span>&#160;                            _M_functionspace-&gt;template functionSpace&lt;i&gt;()-&gt;map() );</div>
+<div class="line"><a name="l02690"></a><span class="lineno"> 2690</span>&#160;                            _M_functionspace-&gt;template functionSpace&lt;i&gt;()-&gt;dof() );</div>
 <div class="line"><a name="l02691"></a><span class="lineno"> 2691</span>&#160;</div>
 <div class="line"><a name="l02692"></a><span class="lineno"> 2692</span>&#160;<span class="preprocessor">#if defined(FEELPP_ENABLE_MPI_MODE)</span></div>
 <div class="line"><a name="l02693"></a><span class="lineno"> 2693</span>&#160;<span class="preprocessor"></span></div>
@@ -2660,7 +2660,7 @@ $(document).ready(function(){initNavTree('functionspace_8hpp_source.html','');})
 <div class="line"><a name="l02727"></a><span class="lineno"> 2727</span>&#160;<span class="preprocessor"></span>                <span class="comment">// build a subrange view identical</span></div>
 <div class="line"><a name="l02728"></a><span class="lineno"> 2728</span>&#160;                ct_type ct( *fusion::at_c&lt;i&gt;( *_M_containersOffProcess ),</div>
 <div class="line"><a name="l02729"></a><span class="lineno"> 2729</span>&#160;                            ublas::range( 0, space-&gt;nLocalDof() ),</div>
-<div class="line"><a name="l02730"></a><span class="lineno"> 2730</span>&#160;                            _M_functionspace-&gt;template functionSpace&lt;i&gt;()-&gt;map() );</div>
+<div class="line"><a name="l02730"></a><span class="lineno"> 2730</span>&#160;                            _M_functionspace-&gt;template functionSpace&lt;i&gt;()-&gt;dof() );</div>
 <div class="line"><a name="l02731"></a><span class="lineno"> 2731</span>&#160;</div>
 <div class="line"><a name="l02732"></a><span class="lineno"> 2732</span>&#160;                DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;Element &lt;&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;&gt;::range.size :  &quot;</span>&lt;&lt;  ct.size()&lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l02733"></a><span class="lineno"> 2733</span>&#160;                DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;Element &lt;&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;&gt;::range.start :  &quot;</span>&lt;&lt;  ct.start()&lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -2687,7 +2687,7 @@ $(document).ready(function(){initNavTree('functionspace_8hpp_source.html','');})
 <div class="line"><a name="l02754"></a><span class="lineno"> 2754</span>&#160;            {</div>
 <div class="line"><a name="l02755"></a><span class="lineno"> 2755</span>&#160;                ct_type ct( <span class="keyword">const_cast&lt;</span>VectorUblas&lt;value_type&gt;&amp;<span class="keyword">&gt;</span>( <span class="keyword">dynamic_cast&lt;</span>VectorUblas&lt;value_type&gt; const&amp;<span class="keyword">&gt;</span>( *<span class="keyword">this</span> ) ),</div>
 <div class="line"><a name="l02756"></a><span class="lineno"> 2756</span>&#160;                            ublas::range( nbdof_start, nbdof_start+space-&gt;nLocalDof() ),</div>
-<div class="line"><a name="l02757"></a><span class="lineno"> 2757</span>&#160;                            _M_functionspace-&gt;template functionSpace&lt;i&gt;()-&gt;map() );</div>
+<div class="line"><a name="l02757"></a><span class="lineno"> 2757</span>&#160;                            _M_functionspace-&gt;template functionSpace&lt;i&gt;()-&gt;dof() );</div>
 <div class="line"><a name="l02758"></a><span class="lineno"> 2758</span>&#160;</div>
 <div class="line"><a name="l02759"></a><span class="lineno"> 2759</span>&#160;<span class="preprocessor">#if defined(FEELPP_ENABLE_MPI_MODE)</span></div>
 <div class="line"><a name="l02760"></a><span class="lineno"> 2760</span>&#160;<span class="preprocessor"></span></div>
@@ -2724,7 +2724,7 @@ $(document).ready(function(){initNavTree('functionspace_8hpp_source.html','');})
 <div class="line"><a name="l02791"></a><span class="lineno"> 2791</span>&#160;                <span class="comment">// build a subrange view identical</span></div>
 <div class="line"><a name="l02792"></a><span class="lineno"> 2792</span>&#160;                ct_type ct( *fusion::at_c&lt;i&gt;( *_M_containersOffProcess ),</div>
 <div class="line"><a name="l02793"></a><span class="lineno"> 2793</span>&#160;                            ublas::range( 0, space-&gt;nLocalDof() ),</div>
-<div class="line"><a name="l02794"></a><span class="lineno"> 2794</span>&#160;                            _M_functionspace-&gt;template functionSpace&lt;i&gt;()-&gt;map() );</div>
+<div class="line"><a name="l02794"></a><span class="lineno"> 2794</span>&#160;                            _M_functionspace-&gt;template functionSpace&lt;i&gt;()-&gt;dof() );</div>
 <div class="line"><a name="l02795"></a><span class="lineno"> 2795</span>&#160;</div>
 <div class="line"><a name="l02796"></a><span class="lineno"> 2796</span>&#160;                DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;Element &lt;&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;&gt;::range.size :  &quot;</span>&lt;&lt;  ct.size()&lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l02797"></a><span class="lineno"> 2797</span>&#160;                DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;Element &lt;&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;&gt;::range.start :  &quot;</span>&lt;&lt;  ct.start()&lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -2826,7 +2826,7 @@ $(document).ready(function(){initNavTree('functionspace_8hpp_source.html','');})
 <div class="line"><a name="l02923"></a><span class="lineno"> 2923</span>&#160;        <span class="keywordtype">void</span> setFunctionSpace( functionspace_ptrtype space )</div>
 <div class="line"><a name="l02924"></a><span class="lineno"> 2924</span>&#160;        {</div>
 <div class="line"><a name="l02925"></a><span class="lineno"> 2925</span>&#160;            _M_functionspace = space;</div>
-<div class="line"><a name="l02926"></a><span class="lineno"> 2926</span>&#160;            <a class="code" href="classFeel_1_1FunctionSpace.html#a0bd50afb8346722d026545717913bba1">super::init</a>( _M_functionspace-&gt;map() );</div>
+<div class="line"><a name="l02926"></a><span class="lineno"> 2926</span>&#160;            <a class="code" href="classFeel_1_1FunctionSpace.html#a0bd50afb8346722d026545717913bba1">super::init</a>( _M_functionspace-&gt;dof() );</div>
 <div class="line"><a name="l02927"></a><span class="lineno"> 2927</span>&#160;            <span class="comment">//super::init( _M_functionspace-&gt;nDof(),  _M_functionspace-&gt;nLocalDof() );</span></div>
 <div class="line"><a name="l02928"></a><span class="lineno"> 2928</span>&#160;        }</div>
 <div class="line"><a name="l02929"></a><span class="lineno"> 2929</span>&#160;</div>
@@ -4193,7 +4193,7 @@ $(document).ready(function(){initNavTree('functionspace_8hpp_source.html','');})
 <div class="line"><a name="l04459"></a><span class="lineno"> 4459</span>&#160;        <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a> __start,</div>
 <div class="line"><a name="l04460"></a><span class="lineno"> 4460</span>&#160;        ComponentType __ct )</div>
 <div class="line"><a name="l04461"></a><span class="lineno"> 4461</span>&#160;    :</div>
-<div class="line"><a name="l04462"></a><span class="lineno"> 4462</span>&#160;    super( __functionspace-&gt;map() ),</div>
+<div class="line"><a name="l04462"></a><span class="lineno"> 4462</span>&#160;    super( __functionspace-&gt;dof() ),</div>
 <div class="line"><a name="l04463"></a><span class="lineno"> 4463</span>&#160;    _M_functionspace( __functionspace ),</div>
 <div class="line"><a name="l04464"></a><span class="lineno"> 4464</span>&#160;    _M_name( __name ),</div>
 <div class="line"><a name="l04465"></a><span class="lineno"> 4465</span>&#160;    _M_start( __start ),</div>
@@ -6107,7 +6107,7 @@ $(document).ready(function(){initNavTree('functionspace_8hpp_source.html','');})
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Jun 7 2013 00:07:22 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Sat Jun 8 2013 00:09:47 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

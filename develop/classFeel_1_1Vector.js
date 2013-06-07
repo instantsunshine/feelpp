@@ -1,14 +1,17 @@
 var classFeel_1_1Vector =
 [
     [ "clone_ptrtype", "classFeel_1_1Vector.html#a0b8b2025b99c4e88939719873afe6a6a", null ],
+    [ "datamap_ptrtype", "classFeel_1_1Vector.html#ae9539882b1a9390d6623dd078a71b898", null ],
+    [ "datamap_type", "classFeel_1_1Vector.html#a55e357c2883ae22a1ab3d5160234a271", null ],
     [ "real_type", "classFeel_1_1Vector.html#a17759a986f195ee336edf9a5c4323647", null ],
     [ "self_ptrtype", "classFeel_1_1Vector.html#a98dacdd5252b7045fb6cc4e9f1f39052", null ],
     [ "self_type", "classFeel_1_1Vector.html#a55b89613939a338c42e16d8018af8725", null ],
     [ "value_type", "classFeel_1_1Vector.html#af8431cb232027e05ea646005790d7670", null ],
     [ "Vector", "classFeel_1_1Vector.html#aeae03d306c99af6cb09412e2d8a5ccd9", null ],
-    [ "Vector", "classFeel_1_1Vector.html#a72bf00a6658308c9dba0d6676d03d388", null ],
+    [ "Vector", "classFeel_1_1Vector.html#aaace34c49fb03efaba99b5f5a210bc78", null ],
     [ "Vector", "classFeel_1_1Vector.html#a2b1bd2f2bdf2ef21016ae44832bd735f", null ],
     [ "Vector", "classFeel_1_1Vector.html#af9f494708700fb1f524805788b94c500", null ],
+    [ "Vector", "classFeel_1_1Vector.html#abe03fa771d65302bfed23a020cfa4e07", null ],
     [ "~Vector", "classFeel_1_1Vector.html#a65c96e11807cb8e4f7b837c965f018fa", null ],
     [ "add", "classFeel_1_1Vector.html#acb5ba1c3b8d338d51f06495ac57d05ff", null ],
     [ "add", "classFeel_1_1Vector.html#aec185fd73755d8c1c065599d1ce68038", null ],
@@ -36,7 +39,7 @@ var classFeel_1_1Vector =
     [ "firstLocalIndex", "classFeel_1_1Vector.html#afe3818fde80c29bc2e20da7cbf667e16", null ],
     [ "init", "classFeel_1_1Vector.html#a64b0a6a0ffe1520e31ef41e7596fc045", null ],
     [ "init", "classFeel_1_1Vector.html#ac2d59083e4edb99fd1c175dbf9927b98", null ],
-    [ "init", "classFeel_1_1Vector.html#a9dfcb635386d463a56114d1b37dfbf33", null ],
+    [ "init", "classFeel_1_1Vector.html#ac12a12e84fc8a38d7bbbccff583d5b53", null ],
     [ "insert", "classFeel_1_1Vector.html#a978783b69e9d5a2dc406f1914b2b419f", null ],
     [ "insert", "classFeel_1_1Vector.html#ade8b49e2047830bd1e5a0f1c5ee722dc", null ],
     [ "insert", "classFeel_1_1Vector.html#a74bc99bddfb6b773d595da8006948b18", null ],
@@ -48,7 +51,8 @@ var classFeel_1_1Vector =
     [ "localIndexIsGhost", "classFeel_1_1Vector.html#a9713d9a7c70404ad7557e7ad08aa558f", null ],
     [ "localize", "classFeel_1_1Vector.html#ae95ee3c43b31d4af288cbab0fff47025", null ],
     [ "localSize", "classFeel_1_1Vector.html#ab2206523b4a31eca0f22681f09fd5ccf", null ],
-    [ "map", "classFeel_1_1Vector.html#a1b1a9d9ef02cb82e73987fd62ccf3b9e", null ],
+    [ "map", "classFeel_1_1Vector.html#a6948444eacce868f18efdf902db532d1", null ],
+    [ "mapPtr", "classFeel_1_1Vector.html#a865655ae78e2b1a5405e7a51ddfbe519", null ],
     [ "max", "classFeel_1_1Vector.html#a4ff083f28a01c228e59849ec8d6e3ba8", null ],
     [ "min", "classFeel_1_1Vector.html#a55e62b337ab4780c73ad9a11cc80df1f", null ],
     [ "operator()", "classFeel_1_1Vector.html#a31d079a0cdfe1d2ae885346ccdbfefb2", null ],
@@ -62,7 +66,7 @@ var classFeel_1_1Vector =
     [ "scale", "classFeel_1_1Vector.html#a185036c930b27392da10f52f3f349b79", null ],
     [ "set", "classFeel_1_1Vector.html#aa98adb864bb90b44c083922cd091cb7d", null ],
     [ "setConstant", "classFeel_1_1Vector.html#a802efdc1a50b73df1263540b0febd23b", null ],
-    [ "setMap", "classFeel_1_1Vector.html#a2ecd0e6965ad23d5cac7aab440b34750", null ],
+    [ "setMap", "classFeel_1_1Vector.html#a7d24e4af5e723073589f4257ab178db8", null ],
     [ "setOnes", "classFeel_1_1Vector.html#ac8ff1990d9058f9d574a6921a52d8f89", null ],
     [ "setZero", "classFeel_1_1Vector.html#a9700d04dc71e1005a6566b0473791285", null ],
     [ "size", "classFeel_1_1Vector.html#aa72e2b2dd8e668a5770d637d6cc5df48", null ],
@@ -72,5 +76,5 @@ var classFeel_1_1Vector =
     [ "operator<<", "classFeel_1_1Vector.html#ab79b8b7e3451f8163c16ba303815ed54", null ],
     [ "M_is_closed", "classFeel_1_1Vector.html#a8bb58529298dbdfa71aed1eaffb84872", null ],
     [ "M_is_initialized", "classFeel_1_1Vector.html#a680e5401f8aa711ecd49fe3b6b7c409d", null ],
-    [ "M_map", "classFeel_1_1Vector.html#a804b8da8d3d7077a1795fdb0f9adfa1f", null ]
+    [ "M_map", "classFeel_1_1Vector.html#a4853175f01b878e3ecc4a7406b0a4390", null ]
 ];
