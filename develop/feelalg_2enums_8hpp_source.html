@@ -311,37 +311,38 @@ $(document).ready(function(){initNavTree('feelalg_2enums_8hpp_source.html','');}
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    DIFF=2,</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    HDIV=3,</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    HCURL=4,</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    LIFT=5</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;};</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="keyword">enum</span> MatSolverPackageType</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;{</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    MATSOLVER_SPOOLES=0,</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    MATSOLVER_SUPERLU,</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    MATSOLVER_SUPERLU_DIST,</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    MATSOLVER_UMFPACK,</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    MATSOLVER_ESSL,</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    MATSOLVER_LUSOL,</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    MATSOLVER_MUMPS,</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    MATSOLVER_PASTIX,</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    MATSOLVER_DSCPACK,</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    MATSOLVER_MATLAB,</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    MATSOLVER_PETSC,</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    MATSOLVER_PLAPACK,</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    MATSOLVER_BAS</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;};</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="preprocessor">#if defined(FEELPP_HAS_MUMPS) &amp;&amp; PETSC_VERSION_GREATER_OR_EQUAL_THAN( 3,2,0 )</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor"></span><span class="keyword">const</span> <span class="keyword">auto</span> MATSOLVER_DEFAULT = MATSOLVER_MUMPS;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="preprocessor"></span><span class="keyword">const</span> <span class="keyword">auto</span> MATSOLVER_DEFAULT = MATSOLVER_PETSC;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;} <span class="comment">// Feel</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __FeelAlgEnums_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    LIFT=5,</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    CIP=6</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;};</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="keyword">enum</span> MatSolverPackageType</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;{</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    MATSOLVER_SPOOLES=0,</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    MATSOLVER_SUPERLU,</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    MATSOLVER_SUPERLU_DIST,</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    MATSOLVER_UMFPACK,</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    MATSOLVER_ESSL,</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    MATSOLVER_LUSOL,</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    MATSOLVER_MUMPS,</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    MATSOLVER_PASTIX,</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    MATSOLVER_DSCPACK,</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    MATSOLVER_MATLAB,</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    MATSOLVER_PETSC,</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    MATSOLVER_PLAPACK,</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    MATSOLVER_BAS</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;};</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">#if defined(FEELPP_HAS_MUMPS) &amp;&amp; PETSC_VERSION_GREATER_OR_EQUAL_THAN( 3,2,0 )</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="preprocessor"></span><span class="keyword">const</span> <span class="keyword">auto</span> MATSOLVER_DEFAULT = MATSOLVER_MUMPS;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="preprocessor"></span><span class="keyword">const</span> <span class="keyword">auto</span> MATSOLVER_DEFAULT = MATSOLVER_PETSC;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;} <span class="comment">// Feel</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __FeelAlgEnums_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Tue Jun 11 2013 00:06:56 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Wed Jun 12 2013 00:06:48 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
