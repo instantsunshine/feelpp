@@ -1,5 +1,7 @@
 var NAVTREEINDEX24 =
 {
+"classFeel_1_1VectorUblas.html#a2b848a8d6932304f9171a0501e0aca81":[11,0,213,71],
+"classFeel_1_1VectorUblas.html#a2bbb138015effbd7e289d47ebf501a10":[11,0,213,19],
 "classFeel_1_1VectorUblas.html#a34b5fec8f1d3f7946a7a674eea875df4":[11,0,213,87],
 "classFeel_1_1VectorUblas.html#a374a548ff6577f309ef2a7b0a909a269":[11,0,213,39],
 "classFeel_1_1VectorUblas.html#a3dc298af18f5475136084f71d27fa4e4":[11,0,213,21],
@@ -247,7 +249,5 @@ var NAVTREEINDEX24 =
 "classFeel_1_1fem_1_1Hermite.html#a6981e847cacb7f0dcb54ad41e54ca090":[11,0,3,1,15],
 "classFeel_1_1fem_1_1Hermite.html#a7672a1eb47fe147aca2d6b22bcb7c33a":[11,0,3,1,13],
 "classFeel_1_1fem_1_1Hermite.html#a768af459652024723b0c26807ec8f30f":[11,0,3,1,22],
-"classFeel_1_1fem_1_1Hermite.html#a771794d5d77904c1682ae4059ad49ce3":[11,0,3,1,0],
-"classFeel_1_1fem_1_1Hermite.html#a7884343a76fe031dbc8fc5ae9434113b":[11,0,3,1,24],
-"classFeel_1_1fem_1_1Hermite.html#a81e51bc353203d75e5c14080bdd4158c":[11,0,3,1,18]
+"classFeel_1_1fem_1_1Hermite.html#a771794d5d77904c1682ae4059ad49ce3":[11,0,3,1,0]
 };

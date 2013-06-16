@@ -1,5 +1,7 @@
 var NAVTREEINDEX14 =
 {
+"classFeel_1_1MatrixEigenDense.html#a529e70d9b1ac2ebb59802b40d525d32a":[11,0,115,22],
+"classFeel_1_1MatrixEigenDense.html#a5da70057fb0a0d0a12693578939c76f4":[11,0,115,28],
 "classFeel_1_1MatrixEigenDense.html#a5f5dd5dfd25937050c8d15aca83453ee":[11,0,115,19],
 "classFeel_1_1MatrixEigenDense.html#a69bee32ba5cef3c098fe32fab01cd9c5":[11,0,115,32],
 "classFeel_1_1MatrixEigenDense.html#a6a5381f78d2e63467c313c0d0d1b31cf":[11,0,115,30],
@@ -247,7 +249,5 @@ var NAVTREEINDEX14 =
 "classFeel_1_1MatrixValue.html#a683787f0d80c634449a46da938274efe":[11,0,122,5],
 "classFeel_1_1MatrixValue.html#a6e090b1e34c9651c2fed0fb0d93fa3b1":[11,0,122,14],
 "classFeel_1_1MatrixValue.html#a7396215aac6a6d20c8d846dfff1fa696":[11,0,122,27],
-"classFeel_1_1MatrixValue.html#a821b6aa5bc3ff02b0795853892339a8a":[11,0,122,25],
-"classFeel_1_1MatrixValue.html#a82b0784e8c2bd806af07edc34692d385":[11,0,122,17],
-"classFeel_1_1MatrixValue.html#a90f56ac608e5fcee0b74502bbebbcc79":[11,0,122,4]
+"classFeel_1_1MatrixValue.html#a821b6aa5bc3ff02b0795853892339a8a":[11,0,122,25]
 };

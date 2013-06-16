@@ -11,6 +11,8 @@ var classFeel_1_1CRB =
     [ "bounds_type", "classFeel_1_1CRB.html#afde72cac24488e022c1ca74c2fe57fda", null ],
     [ "convergence", "classFeel_1_1CRB.html#a118df721a035090b1fdfb7cadf8f779c", null ],
     [ "convergence_type", "classFeel_1_1CRB.html#acceb542e73d6f9d18624a86be9035509", null ],
+    [ "crb_elements_db_ptrtype", "classFeel_1_1CRB.html#aaa9b57dce5ea298381ce06ca5cfd13ee", null ],
+    [ "crb_elements_db_type", "classFeel_1_1CRB.html#a2964effaa2b0cd23cbb5fa8963982fb5", null ],
     [ "element_ptrtype", "classFeel_1_1CRB.html#ac123d0dc1423046b380d964ad8dd3942", null ],
     [ "element_type", "classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a", null ],
     [ "error_estimation_type", "classFeel_1_1CRB.html#a61371bfea698f72cd57395e3ccf113e5", null ],

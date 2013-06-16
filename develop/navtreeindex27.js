@@ -1,5 +1,7 @@
 var NAVTREEINDEX27 =
 {
+"md_COPYING.html":[9],
+"md_Credits.html":[1],
 "namespaceFeel.html":[11,0],
 "namespaceFeel_1_1detail.html":[11,0,0],
 "namespaceFeel_1_1math.html":[11,0,4],
@@ -60,13 +62,13 @@ var NAVTREEINDEX27 =
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a263e8c4c3415b075865bb909aaebf3cf":[11,0,99,10],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a437deec4f7170d6ac568c3e78919d703":[11,0,99,5],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a47a159d96c1faef9f6b57e104411690f":[11,0,99,9],
-"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[11,0,99,2],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[11,0,99,3],
+"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[11,0,99,2],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aae08c8b04ff5d504167b6b0ef8710a90":[11,0,99,8],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#ad18d6a14c0ed1f6ba541a73870a85fb8":[11,0,99,7],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#ae16be5124baf41675f85c9d93a5b1032":[11,0,99,6],
-"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[11,0,99,1],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[11,0,99,0],
+"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[11,0,99,1],
 "structFeel_1_1IntegrationDegree.html":[11,0,102],
 "structFeel_1_1IntegrationDegree.html#a6413e5346de14d876bfdb854a80aa83e":[11,0,102,1],
 "structFeel_1_1IntegrationDegree.html#ae5415217491356213b66587441f78d09":[11,0,102,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX27 =
 "structFeel_1_1Vectorial.html#aee15c032d634ff243da65f5ed88e1059":[11,0,212,8],
 "structFeel_1_1cmpBareItem_3_01BareEdge_01_4.html":[11,0,29],
 "structFeel_1_1cmpBareItem_3_01BareEdge_01_4.html#a6063be955cf43a540f547cf1088f4a70":[11,0,29,0],
-"structFeel_1_1cmpBareItem_3_01BareFace_01_4.html":[11,0,30],
-"structFeel_1_1cmpBareItem_3_01BareFace_01_4.html#a47d2ed4ad10f636b1c32c2271bcf8ebe":[11,0,30,0],
-"structFeel_1_1cmpBareItem_3_01BarePoint_01_4.html":[11,0,31]
+"structFeel_1_1cmpBareItem_3_01BareFace_01_4.html":[11,0,30]
 };
