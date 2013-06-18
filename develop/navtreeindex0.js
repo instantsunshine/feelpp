@@ -1,11 +1,11 @@
 var NAVTREEINDEX0 =
 {
-".html":[11,0,1],
-".html":[11,0,2],
-".html":[11,0,2,0],
-".html":[11,0,3],
-".html":[11,0,5],
-".html":[11,0,5,0],
+".html":[10,0,1],
+".html":[10,0,2],
+".html":[10,0,2,0],
+".html":[10,0,3],
+".html":[10,0,5],
+".html":[10,0,5,0],
 "Advection.html":[6,1,2],
 "Advection.html#Advection_Implementation":[6,1,2,1],
 "Advection.html#Advection_Results":[6,1,2,2],
@@ -191,7 +191,6 @@ var NAVTREEINDEX0 =
 "Mesh.html#MeshTodo":[5,2,4],
 "Mesh.html#Mesh_Introduction":[5,2,0],
 "Miscellaneous.html":[7],
-"Modules.html":[8],
 "MultiPhysics.html":[6,6],
 "NaturalConvection.html":[6,6,0],
 "NaturalConvection.html#Coupling_Algorithm":[6,6,0,3,5,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "Types.html#ints":[7,1,1],
 "Types.html#real":[7,1,0,0],
 "Types.html#types":[7,1,0],
-"annotated.html":[11]
+"annotated.html":[10],
+"citelist.html":[9]
 };
