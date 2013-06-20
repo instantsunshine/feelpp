@@ -73,6 +73,7 @@ var namespaceFeel =
     [ "EIM", "classFeel_1_1EIM.html", "classFeel_1_1EIM" ],
     [ "Elaxi", "classFeel_1_1Elaxi.html", "classFeel_1_1Elaxi" ],
     [ "equalities", "classFeel_1_1equalities.html", null ],
+    [ "ErrorBase", "classFeel_1_1ErrorBase.html", "classFeel_1_1ErrorBase" ],
     [ "Example", "classFeel_1_1Example.html", "classFeel_1_1Example" ],
     [ "Exporter", "classFeel_1_1Exporter.html", "classFeel_1_1Exporter" ],
     [ "ExporterEnsight", "classFeel_1_1ExporterEnsight.html", "classFeel_1_1ExporterEnsight" ],

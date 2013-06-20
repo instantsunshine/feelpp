@@ -9,6 +9,7 @@ var searchData=
   ['environment_2ecpp',['environment.cpp',['../environment_8cpp.html',1,'']]],
   ['environment_2ehpp',['environment.hpp',['../environment_8hpp.html',1,'']]],
   ['equispaced_2ehpp',['equispaced.hpp',['../equispaced_8hpp.html',1,'']]],
+  ['error_2ehpp',['error.hpp',['../error_8hpp.html',1,'']]],
   ['evaluator_2ehpp',['evaluator.hpp',['../evaluator_8hpp.html',1,'']]],
   ['expansions_2ehpp',['expansions.hpp',['../expansions_8hpp.html',1,'']]],
   ['expansiontypes_2ehpp',['expansiontypes.hpp',['../expansiontypes_8hpp.html',1,'']]],

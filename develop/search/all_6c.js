@@ -9,6 +9,8 @@ var searchData=
   ['laplacian',['Laplacian',['../classFeel_1_1Laplacian.html',1,'Feel']]],
   ['laplacian_2ecpp',['laplacian.cpp',['../laplacian_8cpp.html',1,'']]],
   ['laplacian_5fdg_2ecpp',['laplacian_dg.cpp',['../laplacian__dg_8cpp.html',1,'']]],
+  ['laplacian_5fparabolic',['Laplacian_parabolic',['../classLaplacian__parabolic.html',1,'Laplacian_parabolic&lt; Dim, Order &gt;'],['../classLaplacian__parabolic.html#a6a0081207c88c5560b044de2c135bbc6',1,'Laplacian_parabolic::Laplacian_parabolic()']]],
+  ['laplacian_5fparabolic_2ecpp',['laplacian_parabolic.cpp',['../laplacian__parabolic_8cpp.html',1,'']]],
   ['laplacian_5fpolar_2ecpp',['laplacian_polar.cpp',['../laplacian__polar_8cpp.html',1,'']]],
   ['laplacian_5fquad_2ecpp',['laplacian_quad.cpp',['../laplacian__quad_8cpp.html',1,'']]],
   ['laplacian_20in_20polar_20and_20cartesian_20coordinate_20systems',['Laplacian in polar and cartesian coordinate systems',['../LaplacianCoordinateSystem.html',1,'Laplacian']]],
