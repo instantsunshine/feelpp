@@ -1,5 +1,7 @@
 var NAVTREEINDEX27 =
 {
+"classThreeFieldsLaplacian.html#a88074fc188fe6b74f2dd05dc68b777a3":[10,11,9],
+"classThreeFieldsLaplacian.html#a8ce0564159b134d487dd5a99fa308ca9":[10,11,10],
 "classThreeFieldsLaplacian.html#a8f061678919ce0d643b3ea55fe784525":[10,11,1],
 "classThreeFieldsLaplacian.html#a95aede5f131c53d41cf661d36992c3fd":[10,11,7],
 "classThreeFieldsLaplacian.html#a974068e67c7282939a2498430da1e1f8":[10,11,11],
@@ -75,8 +77,8 @@ var NAVTREEINDEX27 =
 "group__GeoXD.html#gaf8b2236775871cba4b723c3bcc4062a0":[10,0,80,4],
 "group__GeoXD.html#gaf929e439be53c18fb5efebbcfcf530a7":[10,0,80,28],
 "group__GeoXD.html#gaffeabdf04cb4703f697ffe69a1e0bdfa":[10,0,80,18],
-"index.html":[],
 "index.html":[0],
+"index.html":[],
 "md_COPYING.html":[8],
 "md_Credits.html":[1],
 "namespaceFeel.html":[10,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX27 =
 "structFeel_1_1SolverConstrained_1_1COptions.html#aa552271cef3a8d291ca7a7e8617397ef":[10,0,184,0,3],
 "structFeel_1_1SolverConstrained_1_1COptions.html#ac08ff0152ba3befa1d5aade9ac92e836":[10,0,184,0,17],
 "structFeel_1_1SolverConstrained_1_1COptions.html#ac463d995d879f5c60756782c208e6458":[10,0,184,0,4],
-"structFeel_1_1SolverConstrained_1_1COptions.html#ac9763826d10824d5ad9603092d7a27ad":[10,0,184,0,9],
-"structFeel_1_1SolverConstrained_1_1COptions.html#ae5f54a78c52900eb9894d983d40e8df5":[10,0,184,0,13],
-"structFeel_1_1SolverConstrained_1_1COptions.html#ae6d08d5ea3d1e4b3c101d6893e9b1447":[10,0,184,0,0]
+"structFeel_1_1SolverConstrained_1_1COptions.html#ac9763826d10824d5ad9603092d7a27ad":[10,0,184,0,9]
 };

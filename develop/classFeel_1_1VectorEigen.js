@@ -56,7 +56,7 @@ var classFeel_1_1VectorEigen =
     [ "operator[]", "classFeel_1_1VectorEigen.html#af3ea2d15aa1c8f090e7835e93c017179", null ],
     [ "operator[]", "classFeel_1_1VectorEigen.html#a873e8d68371c332986117c67a61af019", null ],
     [ "pow", "classFeel_1_1VectorEigen.html#ab874b65359c35620a9c7c609b7306eeb", null ],
-    [ "printMatlab", "classFeel_1_1VectorEigen.html#a69fd589d744343ea3f7b332dbe51f46e", null ],
+    [ "printMatlab", "classFeel_1_1VectorEigen.html#a4af6c07a81fcb83c029958097a93cb53", null ],
     [ "resize", "classFeel_1_1VectorEigen.html#a2ea71eacdf6085e1dc9391c2bcfe136b", null ],
     [ "rowStart", "classFeel_1_1VectorEigen.html#a2f44bbf7c0738b7dceb39621ec6c2d9f", null ],
     [ "rowStop", "classFeel_1_1VectorEigen.html#acbc06a9e628a644d48c555294350ab94", null ],

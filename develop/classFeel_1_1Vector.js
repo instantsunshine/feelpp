@@ -62,7 +62,7 @@ var classFeel_1_1Vector =
     [ "operator=", "classFeel_1_1Vector.html#a9054e7862bfa7a0ac623cf0b2cfac377", null ],
     [ "operator=", "classFeel_1_1Vector.html#a64fa57e0d589dded83d114f703571777", null ],
     [ "print", "classFeel_1_1Vector.html#ac6e0c2d5b7a43518a689ad438d93c637", null ],
-    [ "printMatlab", "classFeel_1_1Vector.html#a66895d368add5a6d4fd6bfa8b215c2d3", null ],
+    [ "printMatlab", "classFeel_1_1Vector.html#aff47d7718302390898b277c28afb94a8", null ],
     [ "scale", "classFeel_1_1Vector.html#a185036c930b27392da10f52f3f349b79", null ],
     [ "set", "classFeel_1_1Vector.html#aa98adb864bb90b44c083922cd091cb7d", null ],
     [ "setConstant", "classFeel_1_1Vector.html#a802efdc1a50b73df1263540b0febd23b", null ],

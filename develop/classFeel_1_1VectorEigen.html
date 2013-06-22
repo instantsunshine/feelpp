@@ -219,7 +219,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a235e9cf7ed5e89123bfb1b2e7292731f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorEigen.html#a235e9cf7ed5e89123bfb1b2e7292731f">insert</a> (const vector_type &amp;, const std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt; &amp;)</td></tr>
 <tr class="memitem:a42abae14dff8938b446800e7cc120d56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorEigen.html#a42abae14dff8938b446800e7cc120d56">insert</a> (const ublas::vector&lt; T &gt; &amp;V, const std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt; &amp;dof_indices)</td></tr>
 <tr class="memitem:a4d6b8ba50a9464555ede09c51fde1f67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorEigen.html#a4d6b8ba50a9464555ede09c51fde1f67">scale</a> (const T factor)</td></tr>
-<tr class="memitem:a69fd589d744343ea3f7b332dbe51f46e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorEigen.html#a69fd589d744343ea3f7b332dbe51f46e">printMatlab</a> (const std::string name=&quot;NULL&quot;) const </td></tr>
+<tr class="memitem:a4af6c07a81fcb83c029958097a93cb53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorEigen.html#a4af6c07a81fcb83c029958097a93cb53">printMatlab</a> (const std::string name=&quot;NULL&quot;, bool renumber=false) const </td></tr>
 <tr class="memitem:a9588e563bd90da829018f6d80cedf17f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorEigen.html#a9588e563bd90da829018f6d80cedf17f">close</a> ()</td></tr>
 <tr class="memitem:a2ea5523958daf9fcc3646ff15b576e54"><td class="memItemLeft" align="right" valign="top">real_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorEigen.html#a2ea5523958daf9fcc3646ff15b576e54">min</a> () const </td></tr>
 <tr class="memitem:a82aca725f305bb7ce7cb093327261d33"><td class="memItemLeft" align="right" valign="top">real_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorEigen.html#a82aca725f305bb7ce7cb093327261d33">max</a> () const </td></tr>
@@ -1584,7 +1584,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a69fd589d744343ea3f7b332dbe51f46e"></a>
+<a class="anchor" id="a4af6c07a81fcb83c029958097a93cb53"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1597,8 +1597,18 @@ template&lt;typename T &gt; </div>
           <td class="memname">void <a class="el" href="classFeel_1_1VectorEigen.html">Feel::VectorEigen</a>&lt; T &gt;::printMatlab </td>
           <td>(</td>
           <td class="paramtype">const std::string&#160;</td>
-          <td class="paramname"><em>name</em> = <code>&quot;NULL&quot;</code></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>name</em> = <code>&quot;NULL&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>renumber</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -1609,7 +1619,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Print the contents of the vector in Matlab's sparse vector forvec. Optionally prints the vector to the file named <code>name</code>. If <code>name</code> is not specified it is dumped to the screen. </p>
 
-<p>Reimplemented from <a class="el" href="classFeel_1_1Vector.html#a66895d368add5a6d4fd6bfa8b215c2d3">Feel::Vector&lt; T &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classFeel_1_1Vector.html#aff47d7718302390898b277c28afb94a8">Feel::Vector&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -1983,7 +1993,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Jun 21 2013 00:08:15 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Sun Jun 23 2013 00:07:38 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

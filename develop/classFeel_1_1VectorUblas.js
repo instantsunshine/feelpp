@@ -76,7 +76,7 @@ var classFeel_1_1VectorUblas =
     [ "operator[]", "classFeel_1_1VectorUblas.html#ad27d342053e6f08b9f510cf4d51c599e", null ],
     [ "outdateGlobalValues", "classFeel_1_1VectorUblas.html#ab9aabfa9febab4b575cd720fc3121246", null ],
     [ "pow", "classFeel_1_1VectorUblas.html#a9ce5c618f5244843282f2d0e768f3d46", null ],
-    [ "printMatlab", "classFeel_1_1VectorUblas.html#ac1f72ed654aaa9b8febb81a061119aa0", null ],
+    [ "printMatlab", "classFeel_1_1VectorUblas.html#acdd821f096768ffa53d6c5a7892aa567", null ],
     [ "resize", "classFeel_1_1VectorUblas.html#a9e9bb222b26cd37835eb715e5c693ade", null ],
     [ "rowStart", "classFeel_1_1VectorUblas.html#aa454d6ab3ab2cf9dbf5e44c07ae868ba", null ],
     [ "rowStop", "classFeel_1_1VectorUblas.html#aa7319aa003d5da4f4304b11665817d55", null ],

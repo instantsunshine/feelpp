@@ -11,7 +11,7 @@ var classFeel_1_1VectorValue =
     [ "closed", "classFeel_1_1VectorValue.html#ab6d8efd6c9141e63746cbea5795656b8", null ],
     [ "isInitialized", "classFeel_1_1VectorValue.html#a8b69c1e3b858e38a65bba69af34a7aaa", null ],
     [ "operator()", "classFeel_1_1VectorValue.html#ae02e26004472f24fd68b81941a7c9cf0", null ],
-    [ "printMatlab", "classFeel_1_1VectorValue.html#a62168276f8515fe3e984d9e1a87e0dfc", null ],
+    [ "printMatlab", "classFeel_1_1VectorValue.html#a30c653c903f64a1e5f5adf0b18397fc7", null ],
     [ "rowStart", "classFeel_1_1VectorValue.html#a369855b021a6c4af42aecaa7cf54f634", null ],
     [ "rowStop", "classFeel_1_1VectorValue.html#a9817e5ef088a2dc5790f067e8284b803", null ],
     [ "set", "classFeel_1_1VectorValue.html#a772e811d28ae58fb1f0707d172919386", null ],

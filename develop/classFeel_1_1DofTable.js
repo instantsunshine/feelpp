@@ -122,6 +122,7 @@ var classFeel_1_1DofTable =
     [ "numLocalEdges", "classFeel_1_1DofTable.html#a3754a13a636e582c3bcd7d94536870d6", null ],
     [ "numLocalFaces", "classFeel_1_1DofTable.html#a2a68e825e70cccdacaa474e0ed0ce45c", null ],
     [ "numLocalVertices", "classFeel_1_1DofTable.html#a4f05637a9888ba13a2cd996838aac0a4", null ],
+    [ "pointIdToDofRelation", "classFeel_1_1DofTable.html#adedd33b88277e4a41a107c04e4783884", null ],
     [ "printDofMarker", "classFeel_1_1DofTable.html#a3f11184554d95daae1b3989b66653974", null ],
     [ "rebuildDofPoints", "classFeel_1_1DofTable.html#a5ee85542b51f1ca4f164451f2c2e6523", null ],
     [ "setDofIndices", "classFeel_1_1DofTable.html#abd7cfb6a69c97448712d321f5d8139df", null ],

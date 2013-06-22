@@ -260,7 +260,7 @@ const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () 
 <tr class="memitem:ad6461b9ddeddc696e4b426ad58325088"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorUblas.html#ad6461b9ddeddc696e4b426ad58325088">insert</a> (const <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; T &gt; &amp;, const std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt; &amp;)</td></tr>
 <tr class="memitem:aad1691e44432e1e146011a52e947d346"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorUblas.html#aad1691e44432e1e146011a52e947d346">insert</a> (const ublas::vector&lt; T &gt; &amp;, const std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt; &amp;)</td></tr>
 <tr class="memitem:a05d4a17feacf9bb1e10b032904e54d3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorUblas.html#a05d4a17feacf9bb1e10b032904e54d3f">scale</a> (const T factor)</td></tr>
-<tr class="memitem:ac1f72ed654aaa9b8febb81a061119aa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorUblas.html#ac1f72ed654aaa9b8febb81a061119aa0">printMatlab</a> (const std::string name=&quot;NULL&quot;) const </td></tr>
+<tr class="memitem:acdd821f096768ffa53d6c5a7892aa567"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorUblas.html#acdd821f096768ffa53d6c5a7892aa567">printMatlab</a> (const std::string name=&quot;NULL&quot;, bool renumber=false) const </td></tr>
 <tr class="memitem:a87f92de2d1f70480fffcdb5a82431552"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorUblas.html#a87f92de2d1f70480fffcdb5a82431552">close</a> ()</td></tr>
 <tr class="memitem:aa9fbfb66c4724f91f2e62d68754c59f4"><td class="memItemLeft" align="right" valign="top">real_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorUblas.html#aa9fbfb66c4724f91f2e62d68754c59f4">min</a> () const </td></tr>
 <tr class="memitem:a7e6ce6b8c945b1f8cac267949640d5bd"><td class="memItemLeft" align="right" valign="top">real_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VectorUblas.html#a7e6ce6b8c945b1f8cac267949640d5bd">max</a> () const </td></tr>
@@ -1786,7 +1786,7 @@ template&lt;typename T , typename Storage &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac1f72ed654aaa9b8febb81a061119aa0"></a>
+<a class="anchor" id="acdd821f096768ffa53d6c5a7892aa567"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1799,8 +1799,18 @@ template&lt;typename T , typename Storage &gt; </div>
           <td class="memname">void <a class="el" href="classFeel_1_1VectorUblas.html">Feel::VectorUblas</a>&lt; T, Storage &gt;::printMatlab </td>
           <td>(</td>
           <td class="paramtype">const std::string&#160;</td>
-          <td class="paramname"><em>name</em> = <code>&quot;NULL&quot;</code></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>name</em> = <code>&quot;NULL&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>renumber</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -1811,7 +1821,7 @@ template&lt;typename T , typename Storage &gt; </div>
 </div><div class="memdoc">
 <p>Print the contents of the vector in Matlab's sparse vector forvec. Optionally prints the vector to the file named <code>name</code>. If <code>name</code> is not specified it is dumped to the screen. </p>
 
-<p>Reimplemented from <a class="el" href="classFeel_1_1Vector.html#a66895d368add5a6d4fd6bfa8b215c2d3">Feel::Vector&lt; T &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classFeel_1_1Vector.html#aff47d7718302390898b277c28afb94a8">Feel::Vector&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -2254,7 +2264,7 @@ template&lt;typename T, typename Storage = ublas::vector&lt;T&gt;&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Jun 21 2013 00:08:15 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Sun Jun 23 2013 00:07:38 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

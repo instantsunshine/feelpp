@@ -1680,20 +1680,96 @@ $(document).ready(function(){initNavTree('mesh_8hpp_source.html','');});
 <div class="line"><a name="l01852"></a><span class="lineno"> 1852</span>&#160;</div>
 <div class="line"><a name="l01853"></a><span class="lineno"> 1853</span>&#160;    <span class="keywordflow">return</span> new_mesh;</div>
 <div class="line"><a name="l01854"></a><span class="lineno"> 1854</span>&#160;}</div>
-<div class="line"><a name="l01855"></a><span class="lineno"> 1855</span>&#160;</div>
-<div class="line"><a name="l01856"></a><span class="lineno"> 1856</span>&#160;</div>
-<div class="line"><a name="l01857"></a><span class="lineno"> 1857</span>&#160;} <span class="comment">// Feel</span></div>
-<div class="line"><a name="l01858"></a><span class="lineno"> 1858</span>&#160;</div>
-<div class="line"><a name="l01859"></a><span class="lineno"> 1859</span>&#160;</div>
-<div class="line"><a name="l01860"></a><span class="lineno"> 1860</span>&#160;<span class="comment">//#if !defined(FEELPP_INSTANTIATION_MODE)</span></div>
-<div class="line"><a name="l01861"></a><span class="lineno"> 1861</span>&#160;<span class="preprocessor"># include &lt;<a class="code" href="meshimpl_8hpp.html">feel/feeldiscr/meshimpl.hpp</a>&gt;</span></div>
-<div class="line"><a name="l01862"></a><span class="lineno"> 1862</span>&#160;<span class="comment">//#endif //</span></div>
-<div class="line"><a name="l01863"></a><span class="lineno"> 1863</span>&#160;</div>
-<div class="line"><a name="l01864"></a><span class="lineno"> 1864</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __mesh_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l01855"></a><span class="lineno"> 1855</span>&#160;<span class="keyword">namespace </span>detail</div>
+<div class="line"><a name="l01856"></a><span class="lineno"> 1856</span>&#160;{</div>
+<div class="line"><a name="l01857"></a><span class="lineno"> 1857</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l01858"></a><span class="lineno"> 1858</span>&#160;<span class="keyword">struct </span>MeshPoints</div>
+<div class="line"><a name="l01859"></a><span class="lineno"> 1859</span>&#160;{</div>
+<div class="line"><a name="l01860"></a><span class="lineno"> 1860</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, <span class="keyword">typename</span> IteratorType&gt;</div>
+<div class="line"><a name="l01861"></a><span class="lineno"> 1861</span>&#160;    MeshPoints( MeshType*, IteratorType it, IteratorType en, <span class="keyword">const</span> <span class="keywordtype">bool</span> outer = <span class="keyword">false</span>, <span class="keyword">const</span> <span class="keywordtype">bool</span> renumber = <span class="keyword">false</span> );</div>
+<div class="line"><a name="l01862"></a><span class="lineno"> 1862</span>&#160;</div>
+<div class="line"><a name="l01863"></a><span class="lineno"> 1863</span>&#160;    std::vector&lt;int&gt; ids;</div>
+<div class="line"><a name="l01864"></a><span class="lineno"> 1864</span>&#160;    std::map&lt;int,int&gt; new2old;</div>
+<div class="line"><a name="l01865"></a><span class="lineno"> 1865</span>&#160;    std::map&lt;int,int&gt; old2new;</div>
+<div class="line"><a name="l01866"></a><span class="lineno"> 1866</span>&#160;    std::map&lt;int,int&gt; nodemap;</div>
+<div class="line"><a name="l01867"></a><span class="lineno"> 1867</span>&#160;    std::vector&lt;T&gt; coords;</div>
+<div class="line"><a name="l01868"></a><span class="lineno"> 1868</span>&#160;};</div>
+<div class="line"><a name="l01869"></a><span class="lineno"> 1869</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l01870"></a><span class="lineno"> 1870</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, <span class="keyword">typename</span> IteratorType&gt;</div>
+<div class="line"><a name="l01871"></a><span class="lineno"> 1871</span>&#160;MeshPoints&lt;T&gt;::MeshPoints( MeshType* mesh, IteratorType it, IteratorType en, <span class="keyword">const</span> <span class="keywordtype">bool</span> outer, <span class="keyword">const</span> <span class="keywordtype">bool</span> renumber )</div>
+<div class="line"><a name="l01872"></a><span class="lineno"> 1872</span>&#160;{</div>
+<div class="line"><a name="l01873"></a><span class="lineno"> 1873</span>&#160;    std::set&lt;int&gt; nodeset;</div>
+<div class="line"><a name="l01874"></a><span class="lineno"> 1874</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a> p = 0;</div>
+<div class="line"><a name="l01875"></a><span class="lineno"> 1875</span>&#160;    <span class="keywordflow">for</span>( ; it != en; ++it )</div>
+<div class="line"><a name="l01876"></a><span class="lineno"> 1876</span>&#160;    {</div>
+<div class="line"><a name="l01877"></a><span class="lineno"> 1877</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a> j = 0; j &lt; it-&gt;numLocalVertices; j++ )</div>
+<div class="line"><a name="l01878"></a><span class="lineno"> 1878</span>&#160;        {</div>
+<div class="line"><a name="l01879"></a><span class="lineno"> 1879</span>&#160;            <span class="keywordtype">int</span> pid = it-&gt;point( j ).id();</div>
+<div class="line"><a name="l01880"></a><span class="lineno"> 1880</span>&#160;            <span class="keyword">auto</span> ins = nodeset.insert( pid );</div>
+<div class="line"><a name="l01881"></a><span class="lineno"> 1881</span>&#160;            <span class="keywordflow">if</span> ( ins.second )</div>
+<div class="line"><a name="l01882"></a><span class="lineno"> 1882</span>&#160;            {</div>
+<div class="line"><a name="l01883"></a><span class="lineno"> 1883</span>&#160;                <span class="keywordflow">if</span> ( renumber )</div>
+<div class="line"><a name="l01884"></a><span class="lineno"> 1884</span>&#160;                    ids.push_back( p+1 );</div>
+<div class="line"><a name="l01885"></a><span class="lineno"> 1885</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01886"></a><span class="lineno"> 1886</span>&#160;                    ids.push_back( pid );</div>
+<div class="line"><a name="l01887"></a><span class="lineno"> 1887</span>&#160;                old2new[pid]=ids[p];</div>
+<div class="line"><a name="l01888"></a><span class="lineno"> 1888</span>&#160;                new2old[ids[p]]=pid;</div>
+<div class="line"><a name="l01889"></a><span class="lineno"> 1889</span>&#160;                nodemap[pid] = p;</div>
+<div class="line"><a name="l01890"></a><span class="lineno"> 1890</span>&#160;                ++p;</div>
+<div class="line"><a name="l01891"></a><span class="lineno"> 1891</span>&#160;            }</div>
+<div class="line"><a name="l01892"></a><span class="lineno"> 1892</span>&#160;        }</div>
+<div class="line"><a name="l01893"></a><span class="lineno"> 1893</span>&#160;    }</div>
+<div class="line"><a name="l01894"></a><span class="lineno"> 1894</span>&#160;    CHECK( p == ids.size() ) &lt;&lt; <span class="stringliteral">&quot;Invalid number of points &quot;</span> &lt;&lt; ids.size() &lt;&lt; <span class="stringliteral">&quot;!=&quot;</span> &lt;&lt; p;</div>
+<div class="line"><a name="l01895"></a><span class="lineno"> 1895</span>&#160;    <span class="keywordtype">int</span> nv = ids.size();</div>
+<div class="line"><a name="l01896"></a><span class="lineno"> 1896</span>&#160;</div>
+<div class="line"><a name="l01897"></a><span class="lineno"> 1897</span>&#160;    coords.resize( 3*nv, 0 );</div>
+<div class="line"><a name="l01898"></a><span class="lineno"> 1898</span>&#160;</div>
+<div class="line"><a name="l01899"></a><span class="lineno"> 1899</span>&#160;    <span class="keyword">auto</span> pit = ids.begin();</div>
+<div class="line"><a name="l01900"></a><span class="lineno"> 1900</span>&#160;    <span class="keyword">auto</span> pen = ids.end();</div>
+<div class="line"><a name="l01901"></a><span class="lineno"> 1901</span>&#160;    <span class="comment">//for( auto i = 0; i &lt; nv; ++i )</span></div>
+<div class="line"><a name="l01902"></a><span class="lineno"> 1902</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; pit != pen; ++pit, ++i )</div>
+<div class="line"><a name="l01903"></a><span class="lineno"> 1903</span>&#160;    {</div>
+<div class="line"><a name="l01904"></a><span class="lineno"> 1904</span>&#160;        CHECK( *pit &gt; 0 ) &lt;&lt; <span class="stringliteral">&quot;invalid id &quot;</span> &lt;&lt; *pit;</div>
+<div class="line"><a name="l01905"></a><span class="lineno"> 1905</span>&#160;        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;p &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; nv &lt;&lt; <span class="stringliteral">&quot; =&quot;</span> &lt;&lt; *pit;</div>
+<div class="line"><a name="l01906"></a><span class="lineno"> 1906</span>&#160;        <span class="comment">//int pid = (renumber)?nodemap[*pit]+1:*pit;</span></div>
+<div class="line"><a name="l01907"></a><span class="lineno"> 1907</span>&#160;        <span class="keywordtype">int</span> pid = *pit;</div>
+<div class="line"><a name="l01908"></a><span class="lineno"> 1908</span>&#160;</div>
+<div class="line"><a name="l01909"></a><span class="lineno"> 1909</span>&#160;        <span class="keyword">auto</span> <span class="keyword">const</span>&amp; p = mesh-&gt;point( new2old[*pit] );</div>
+<div class="line"><a name="l01910"></a><span class="lineno"> 1910</span>&#160;        <span class="keywordflow">if</span> ( outer )</div>
+<div class="line"><a name="l01911"></a><span class="lineno"> 1911</span>&#160;            coords[i] = ( T ) p.node()[0];</div>
+<div class="line"><a name="l01912"></a><span class="lineno"> 1912</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01913"></a><span class="lineno"> 1913</span>&#160;            coords[3*i] = ( T ) p.node()[0];</div>
+<div class="line"><a name="l01914"></a><span class="lineno"> 1914</span>&#160;</div>
+<div class="line"><a name="l01915"></a><span class="lineno"> 1915</span>&#160;        <span class="keywordflow">if</span> ( MeshType::nRealDim &gt;= 2 )</div>
+<div class="line"><a name="l01916"></a><span class="lineno"> 1916</span>&#160;        {</div>
+<div class="line"><a name="l01917"></a><span class="lineno"> 1917</span>&#160;            <span class="keywordflow">if</span> ( outer )</div>
+<div class="line"><a name="l01918"></a><span class="lineno"> 1918</span>&#160;                coords[nv+i] = ( T ) p.node()[1];</div>
+<div class="line"><a name="l01919"></a><span class="lineno"> 1919</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01920"></a><span class="lineno"> 1920</span>&#160;                coords[3*i+1] = ( T ) p.node()[1];</div>
+<div class="line"><a name="l01921"></a><span class="lineno"> 1921</span>&#160;        }</div>
+<div class="line"><a name="l01922"></a><span class="lineno"> 1922</span>&#160;        <span class="keywordflow">if</span> ( MeshType::nRealDim &gt;= 3 )</div>
+<div class="line"><a name="l01923"></a><span class="lineno"> 1923</span>&#160;        {</div>
+<div class="line"><a name="l01924"></a><span class="lineno"> 1924</span>&#160;            <span class="keywordflow">if</span> ( outer )</div>
+<div class="line"><a name="l01925"></a><span class="lineno"> 1925</span>&#160;                coords[2*nv+i] = T( p.node()[2] );</div>
+<div class="line"><a name="l01926"></a><span class="lineno"> 1926</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01927"></a><span class="lineno"> 1927</span>&#160;                coords[3*i+2] = T( p.node()[2] );</div>
+<div class="line"><a name="l01928"></a><span class="lineno"> 1928</span>&#160;        }</div>
+<div class="line"><a name="l01929"></a><span class="lineno"> 1929</span>&#160;    }</div>
+<div class="line"><a name="l01930"></a><span class="lineno"> 1930</span>&#160;}</div>
+<div class="line"><a name="l01931"></a><span class="lineno"> 1931</span>&#160;}</div>
+<div class="line"><a name="l01932"></a><span class="lineno"> 1932</span>&#160;</div>
+<div class="line"><a name="l01933"></a><span class="lineno"> 1933</span>&#160;} <span class="comment">// Feel</span></div>
+<div class="line"><a name="l01934"></a><span class="lineno"> 1934</span>&#160;</div>
+<div class="line"><a name="l01935"></a><span class="lineno"> 1935</span>&#160;</div>
+<div class="line"><a name="l01936"></a><span class="lineno"> 1936</span>&#160;<span class="comment">//#if !defined(FEELPP_INSTANTIATION_MODE)</span></div>
+<div class="line"><a name="l01937"></a><span class="lineno"> 1937</span>&#160;<span class="preprocessor"># include &lt;<a class="code" href="meshimpl_8hpp.html">feel/feeldiscr/meshimpl.hpp</a>&gt;</span></div>
+<div class="line"><a name="l01938"></a><span class="lineno"> 1938</span>&#160;<span class="comment">//#endif //</span></div>
+<div class="line"><a name="l01939"></a><span class="lineno"> 1939</span>&#160;</div>
+<div class="line"><a name="l01940"></a><span class="lineno"> 1940</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __mesh_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Jun 21 2013 00:07:56 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Sun Jun 23 2013 00:07:18 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
