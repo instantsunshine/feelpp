@@ -1,5 +1,8 @@
 var NAVTREEINDEX27 =
 {
+"classThreeFieldsLaplacian.html#a61d585318bcb11bc1b0bf6c2735fdf25":[10,11,15],
+"classThreeFieldsLaplacian.html#a74672d89d1d8bcd4edd8a9d55537461b":[10,11,17],
+"classThreeFieldsLaplacian.html#a78969933a03595b1ffd9454414498e4c":[10,11,8],
 "classThreeFieldsLaplacian.html#a88074fc188fe6b74f2dd05dc68b777a3":[10,11,9],
 "classThreeFieldsLaplacian.html#a8ce0564159b134d487dd5a99fa308ca9":[10,11,10],
 "classThreeFieldsLaplacian.html#a8f061678919ce0d643b3ea55fe784525":[10,11,1],
@@ -77,8 +80,8 @@ var NAVTREEINDEX27 =
 "group__GeoXD.html#gaf8b2236775871cba4b723c3bcc4062a0":[10,0,80,4],
 "group__GeoXD.html#gaf929e439be53c18fb5efebbcfcf530a7":[10,0,80,28],
 "group__GeoXD.html#gaffeabdf04cb4703f697ffe69a1e0bdfa":[10,0,80,18],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "md_COPYING.html":[8],
 "md_Credits.html":[1],
 "namespaceFeel.html":[10,0],
@@ -146,8 +149,8 @@ var NAVTREEINDEX27 =
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aae08c8b04ff5d504167b6b0ef8710a90":[10,0,100,8],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#ad18d6a14c0ed1f6ba541a73870a85fb8":[10,0,100,7],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#ae16be5124baf41675f85c9d93a5b1032":[10,0,100,6],
-"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,100,1],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,100,0],
+"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,100,1],
 "structFeel_1_1IntegrationDegree.html":[10,0,103],
 "structFeel_1_1IntegrationDegree.html#a6413e5346de14d876bfdb854a80aa83e":[10,0,103,1],
 "structFeel_1_1IntegrationDegree.html#ae5415217491356213b66587441f78d09":[10,0,103,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX27 =
 "structFeel_1_1SolverConstrained_1_1COptions.html#a9d9e184b414ba7650e05f98df8db7c0a":[10,0,184,0,18],
 "structFeel_1_1SolverConstrained_1_1COptions.html#aa0bc8b3cad9f00c24f8cbe2eaed5f114":[10,0,184,0,5],
 "structFeel_1_1SolverConstrained_1_1COptions.html#aa1a8776eee5d84cc59f9cd18b04c58c4":[10,0,184,0,10],
-"structFeel_1_1SolverConstrained_1_1COptions.html#aa552271cef3a8d291ca7a7e8617397ef":[10,0,184,0,3],
-"structFeel_1_1SolverConstrained_1_1COptions.html#ac08ff0152ba3befa1d5aade9ac92e836":[10,0,184,0,17],
-"structFeel_1_1SolverConstrained_1_1COptions.html#ac463d995d879f5c60756782c208e6458":[10,0,184,0,4],
-"structFeel_1_1SolverConstrained_1_1COptions.html#ac9763826d10824d5ad9603092d7a27ad":[10,0,184,0,9]
+"structFeel_1_1SolverConstrained_1_1COptions.html#aa552271cef3a8d291ca7a7e8617397ef":[10,0,184,0,3]
 };

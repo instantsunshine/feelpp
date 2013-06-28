@@ -126,12 +126,14 @@ LaplacianCoordinateSystem_Implementation</h1>
 <div class="line">#endif</div>
 <div class="line">                                  _author=<span class="stringliteral">&quot;Feel++ Consortium&quot;</span>,</div>
 <div class="line">                                  _email=<span class="stringliteral">&quot;feelpp-devel@feelpp.org&quot;</span>));</div>
-<div class="line">    <span class="comment">//typedef Mesh&lt;Hypercube&lt;2&gt; &gt; mesh_type;</span></div>
-<div class="line">    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class">Mesh&lt;Simplex&lt;2&gt;</a> &gt; mesh_type;</div>
+<div class="line">    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class">Mesh&lt;Hypercube&lt;2&gt;</a> &gt; mesh_type;</div>
+<div class="line">    <span class="comment">//typedef Mesh&lt;Simplex&lt;2&gt; &gt; mesh_type;</span></div>
 <div class="line"></div>
 <div class="line">    <span class="keyword">auto</span> mesh =  loadMesh( _mesh=<span class="keyword">new</span> mesh_type );</div>
 <div class="line"></div>
-<div class="line">    <span class="keyword">auto</span> Vh = Pch&lt;1&gt;( mesh );</div>
+<div class="line">    <span class="keyword">auto</span> Vh = Pch&lt;10&gt;( mesh );</div>
+<div class="line">    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;dim Vh : &quot;</span> &lt;&lt; Vh-&gt;nDof();</div>
+<div class="line"></div>
 <div class="line">    <span class="keyword">auto</span> u = Vh-&gt;element();</div>
 <div class="line">    <span class="keyword">auto</span> v = Vh-&gt;element();</div>
 <div class="line"></div>
@@ -172,7 +174,7 @@ LaplacianCoordinateSystem_Implementation</h1>
 </div><!-- fragment --></div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Tue Jun 25 2013 00:07:47 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Sat Jun 29 2013 00:07:56 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

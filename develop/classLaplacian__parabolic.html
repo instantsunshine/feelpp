@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('classLaplacian__parabolic.html','');})
 <div class="textblock"><h3>template&lt;int Dim, int Order = 1&gt;<br/>
 class Laplacian_parabolic&lt; Dim, Order &gt;</h3>
 
-<p><a class="el" href="classLaplacian.html">Laplacian</a> equation with instationnary term solver using continuous approximation spaces solve <img class="formulaInl" alt="$ \dfrac{\partial u}{\partial t} - nu*\Delta u = f$" src="form_417.png"/> on <img class="formulaInl" alt="$\Omega$" src="form_210.png"/> and <img class="formulaInl" alt="$u= g$" src="form_211.png"/> on <img class="formulaInl" alt="$\Gamma$" src="form_212.png"/></p>
+<p><a class="el" href="classLaplacian.html">Laplacian</a> equation with instationnary term solver using continuous approximation spaces solve <img class="formulaInl" alt="$ \dfrac{\partial u}{\partial t} - nu*\Delta u = f$" src="form_418.png"/> on <img class="formulaInl" alt="$\Omega$" src="form_210.png"/> and <img class="formulaInl" alt="$u= g$" src="form_211.png"/> on <img class="formulaInl" alt="$\Gamma$" src="form_212.png"/></p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Dim</td><td>the geometric dimension of the problem = 2 </td></tr>
@@ -313,11 +313,17 @@ template&lt;int Dim, int Order&gt; </div>
 <div class="line"><a class="code" href="classLaplacian__parabolic.html#a85f6f3a55302523b7795f1aa1c52955b" title="an element type of the approximation function space">element_type</a> u( Xh, <span class="stringliteral">&quot;u&quot;</span> );</div>
 <div class="line"><a class="code" href="classLaplacian__parabolic.html#a85f6f3a55302523b7795f1aa1c52955b" title="an element type of the approximation function space">element_type</a> v( Xh, <span class="stringliteral">&quot;v&quot;</span> );</div>
 <div class="line"><a class="code" href="classLaplacian__parabolic.html#a85f6f3a55302523b7795f1aa1c52955b" title="an element type of the approximation function space">element_type</a> Rhs( Xh, <span class="stringliteral">&quot;rhs&quot;</span> );</div>
-<div class="line"><a class="code" href="classLaplacian__parabolic.html#a85f6f3a55302523b7795f1aa1c52955b" title="an element type of the approximation function space">element_type</a> gproj(Xh, <span class="stringliteral">&quot;exact_proj&quot;</span>);   </div>
-</div><!-- fragment --><p>Add extra parameters ( t for example )</p>
+<div class="line"><a class="code" href="classLaplacian__parabolic.html#a85f6f3a55302523b7795f1aa1c52955b" title="an element type of the approximation function space">element_type</a> gproj(Xh, <span class="stringliteral">&quot;exact_proj&quot;</span>);</div>
+</div><!-- fragment --><p>[marker11]</p>
+<p>[marker11]</p>
+<p>[marker12]</p>
+<p>[marker12]</p>
+<p>Add extra parameters ( t for example )</p>
 <div class="fragment"><div class="line"> */</div>
 <div class="line"><span class="keyword">auto</span> parameters = cvg-&gt;getParams(); <span class="comment">//symbols&lt;Dim&gt;();</span></div>
-</div><!-- fragment --><p>Initializing u, g and f from initial temperature expression</p>
+</div><!-- fragment --><p>[marker13]</p>
+<p>[marker13]</p>
+<p>Initializing u, g and f from initial temperature expression</p>
 <div class="fragment"><div class="line"> */</div>
 <div class="line">initial_u_expr = parse(initial_u, vars, parameters);</div>
 </div><!-- fragment --><p>BDF implementation</p>
@@ -329,33 +335,33 @@ template&lt;int Dim, int Order&gt; </div>
 <div class="line">M_bdf-&gt;start();</div>
 <div class="line"><span class="comment">// create the finite difference polynome of the unknown</span></div>
 <div class="line">M_bdf-&gt;initialize(u);</div>
+<div class="line"></div>
 </div><!-- fragment --><p>create the matrix that will hold the algebraic representation of the left hand side (only stationnary terms)</p>
+<p>[marker3]</p>
 <div class="fragment"><div class="line"> */</div>
 <div class="line"><span class="keyword">auto</span> D = backend()-&gt;newMatrix( _test=Xh, _trial=Xh  );</div>
 </div><!-- fragment --><p>assemble $   u   v$</p>
 <div class="fragment"><div class="line"> */</div>
 <div class="line"><span class="keyword">auto</span> a = form2( _test=Xh, _trial=Xh, _matrix=D );</div>
 <div class="line">a = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ), _expr=nu*gradt( u )*trans( grad( v ) ) );</div>
-</div><!-- fragment --><p>weak dirichlet conditions treatment for the boundaries marked 1 and 3</p>
+</div><!-- fragment --><p>[marker3]</p>
+<p>weak dirichlet conditions treatment for the boundaries marked 1 and 3</p>
 <ol type="1">
 <li>assemble <img class="formulaInl" alt="$\int_{\partial \Omega} -\nabla u \cdot \mathbf{n} v$" src="form_219.png"/></li>
 <li>assemble <img class="formulaInl" alt="$\int_{\partial \Omega} -\nabla v \cdot \mathbf{n} u$" src="form_220.png"/></li>
 <li><p class="startli">assemble <img class="formulaInl" alt="$\int_{\partial \Omega} \frac{\gamma}{h} u v$" src="form_221.png"/></p>
 <div class="fragment"><div class="line"> */</div>
-<div class="line"><span class="comment">//# marker10 #</span></div>
 <div class="line">a += <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range=<a class="code" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">markedfaces</a>( mesh,<span class="stringliteral">&quot;Dirichlet&quot;</span> ),</div>
 <div class="line">                _expr= nu * ( -( gradt( u )*vf::N() )*<span class="keywordtype">id</span>( v )</div>
 <div class="line">                              -( grad( v )*vf::N() )*idt( u )</div>
 <div class="line">                              +penaldir*<span class="keywordtype">id</span>( v )*idt( u )/hFace() ) );</div>
-<div class="line"><span class="comment">//# endmarker10 #</span></div>
+<div class="line"></div>
 </div><!-- fragment --></li>
 </ol>
 <p>assemble $ u^{n+1} v$</p>
 <div class="fragment"><div class="line"> */</div>
-<div class="line">    <span class="comment">//# marker10 #</span></div>
-<div class="line">    <span class="keywordflow">if</span>( !steady )</div>
-<div class="line">        a += <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ), _expr = cst(M_bdf-&gt;polyDerivCoefficient( 0 ))*idt(u)*id(v) );</div>
-<div class="line"></div>
+<div class="line"><span class="keywordflow">if</span>( !steady )</div>
+<div class="line">    a += <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ), _expr = cst(M_bdf-&gt;polyDerivCoefficient( 0 ))*idt(u)*id(v) );</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// time depending term</span></div>
 <div class="line"></div>
@@ -368,8 +374,8 @@ template&lt;int Dim, int Order&gt; </div>
 <div class="line">            Rhs = cvg-&gt;rhs_project(Xh);</div>
 <div class="line">    <span class="keywordflow">else</span></div>
 <div class="line">        Rhs = <a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">vf::project</a>( Xh, <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>(mesh), cst(0.0) );</div>
-<div class="line">        </div>
-<div class="line">    <span class="keywordflow">if</span> ( !steady &amp;&amp; parameters.size() &amp;&amp; !cvg-&gt;getExactSolution().empty() ) </div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span> ( !steady &amp;&amp; parameters.size() &amp;&amp; !cvg-&gt;getExactSolution().empty() )</div>
 <div class="line">        gproj = cvg-&gt;exact_project(Xh, M_bdf-&gt;time() );</div>
 <div class="line">    <span class="keywordflow">else</span></div>
 <div class="line">        gproj = cvg-&gt;exact_project(Xh);</div>
@@ -384,8 +390,8 @@ template&lt;int Dim, int Order&gt; </div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">//# marker41 #</span></div>
 <div class="line">        l += <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range=<a class="code" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">markedfaces</a>( mesh,<span class="stringliteral">&quot;Dirichlet&quot;</span> ),</div>
-<div class="line">                          _expr=nu*idv(gproj)*( -grad( v )*vf::N()</div>
-<div class="line">                                      + penaldir*<span class="keywordtype">id</span>( v )/hFace() ) );</div>
+<div class="line">                        _expr=nu*idv(gproj)*( -grad( v )*vf::N()</div>
+<div class="line">                                              + penaldir*<span class="keywordtype">id</span>( v )/hFace() ) );</div>
 <div class="line">        <span class="comment">//# endmarker41 #</span></div>
 <div class="line">    }</div>
 <div class="line"></div>
@@ -396,6 +402,7 @@ template&lt;int Dim, int Order&gt; </div>
 <div class="line">    <span class="keyword">auto</span> bdf_poly = M_bdf-&gt;polyDeriv();</div>
 <div class="line">    l += <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( _range = <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>(mesh), _expr = idv( bdf_poly )*<span class="keywordtype">id</span>(v));</div>
 <div class="line">}</div>
+<div class="line"></div>
 </div><!-- fragment --><p>add time depending terms for the left hand side</p>
 <div class="fragment"><div class="line"> */</div>
 <div class="line"><span class="keyword">auto</span> Dt = backend()-&gt;newMatrix( _test=Xh, _trial=Xh );</div>
@@ -422,45 +429,47 @@ template&lt;int Dim, int Order&gt; </div>
 <div class="fragment"><div class="line"> */</div>
 <div class="line"><span class="comment">//# marker7 #</span></div>
 <div class="line"></div>
-<div class="line"><span class="keywordflow">if</span> ( !cvg-&gt;getExactSolution().empty() ) </div>
-<div class="line">    {</div>
-<div class="line">        ex solution;</div>
-<div class="line">        <span class="keywordflow">if</span>( !steady &amp;&amp; parameters.size() )</div>
-<div class="line">            solution  = cvg-&gt;getSolution(M_bdf-&gt;time() );</div>
-<div class="line">        <span class="keywordflow">else</span></div>
-<div class="line">            solution = cvg-&gt;getSolution();</div>
-<div class="line">            </div>
+<div class="line"><span class="keywordflow">if</span> ( !cvg-&gt;getExactSolution().empty() )</div>
+<div class="line">{</div>
+<div class="line">    ex solution;</div>
+<div class="line">    <span class="keywordflow">if</span>( !steady &amp;&amp; parameters.size() )</div>
+<div class="line">        solution  = cvg-&gt;getSolution(M_bdf-&gt;time() );</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">        solution = cvg-&gt;getSolution();</div>
 <div class="line"></div>
-<div class="line">        <span class="comment">// à voir correctement</span></div>
-<div class="line">        <span class="keyword">auto</span> g = expr(solution,vars);</div>
-<div class="line">        <span class="keyword">auto</span> gradg = expr&lt;1,Dim,2&gt;(grad(solution,vars), vars );</div>
+<div class="line">    <span class="keyword">auto</span> g = expr(solution,vars);</div>
+<div class="line">    <span class="keyword">auto</span> gradg = expr&lt;1,Dim,2&gt;(grad(solution,vars), vars );</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordtype">double</span> L2error = normL2( _range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ),_expr=( idv( u )-idv(gproj) ) );</div>
-<div class="line">        <span class="keywordtype">double</span> H1seminorm = math::sqrt( <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>(mesh), (gradv(u) - gradg)*trans(gradv(u) - gradg) ).evaluate()(0,0) );</div>
-<div class="line">        <span class="keywordtype">double</span> H1error = math::sqrt( L2error*L2error + H1seminorm*H1seminorm);</div>
-<div class="line">        </div>
-<div class="line">        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;||error||_L2=&quot;</span> &lt;&lt; L2error &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line">        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;||error||_H1=&quot;</span> &lt;&lt; H1error &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line">        std::cout &lt;&lt;  M_bdf-&gt;time() &lt;&lt;<span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; L2error &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; H1error &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line">        </div>
-<div class="line">        L2Time_error = L2Time_error + L2error*L2error;</div>
-<div class="line">    }</div>
+<div class="line">    <span class="keywordtype">double</span> L2error = normL2( _range=<a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>( mesh ),_expr=( idv( u )-idv(gproj) ) );</div>
+<div class="line">    <span class="keywordtype">double</span> H1seminorm = math::sqrt( <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex">integrate</a>( <a class="code" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">elements</a>(mesh), (gradv(u) - gradg)*trans(gradv(u) - gradg) ).evaluate()(0,0) );</div>
+<div class="line">    <span class="keywordtype">double</span> H1error = math::sqrt( L2error*L2error + H1seminorm*H1seminorm);</div>
+<div class="line"></div>
+<div class="line">    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;||error||_L2=&quot;</span> &lt;&lt; L2error &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;||error||_H1=&quot;</span> &lt;&lt; H1error &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    std::cout &lt;&lt;  M_bdf-&gt;time() &lt;&lt;<span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; L2error &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; H1error &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    L2Time_error = L2Time_error + L2error*L2error;</div>
+<div class="line">}</div>
 <div class="line"></div>
 <div class="line"><span class="comment">//# endmarker7 #</span></div>
 </div><!-- fragment --><p>save the results</p>
 <div class="fragment"><div class="line"> */</div>
-<div class="line"> <span class="keywordflow">if</span> ( exp-&gt;doExport() )</div>
-<div class="line"> {</div>
-<div class="line">     LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;exportResults starts at &quot;</span> &lt;&lt; M_bdf-&gt;time() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="keywordflow">if</span> ( exp-&gt;doExport() )</div>
+<div class="line">{</div>
+<div class="line">    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;exportResults starts at &quot;</span> &lt;&lt; M_bdf-&gt;time() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"></div>
-<div class="line">     exp-&gt;step( M_bdf-&gt;time() )-&gt;add( <span class="stringliteral">&quot;solution&quot;</span>, u );</div>
-<div class="line">     exp-&gt;step( M_bdf-&gt;time() )-&gt;add( <span class="stringliteral">&quot;exact&quot;</span>, gproj );</div>
+<div class="line">    exp-&gt;step( M_bdf-&gt;time() )-&gt;add( <span class="stringliteral">&quot;solution&quot;</span>, u );</div>
+<div class="line">    exp-&gt;step( M_bdf-&gt;time() )-&gt;add( <span class="stringliteral">&quot;exact&quot;</span>, gproj );</div>
 <div class="line">    exp-&gt;step( M_bdf-&gt;time() )-&gt;add( <span class="stringliteral">&quot;rhs&quot;</span>, Rhs );</div>
 <div class="line"></div>
-<div class="line">     exp-&gt;save();</div>
-<div class="line">     LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;exportResults done\n&quot;</span>;</div>
-<div class="line"> }</div>
-</div><!-- fragment --> 
+<div class="line">    exp-&gt;save();</div>
+<div class="line">    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;exportResults done\n&quot;</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>[marker15]</p>
+<p>[marker15]</p>
+<p>[marker16]</p>
+<p>[marker16] </p>
+
 <p>Implements <a class="el" href="classFeel_1_1Simget.html#ae4cebdea070b7aadc9cb5ada1969e5a9">Feel::Simget</a>.</p>
 
 <p>References <a class="el" href="namespaceFeel.html#a39073cc1999197bf9963bd5bdc86454a">Feel::elements()</a>, <a class="el" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049">Feel::integrate()</a>, <a class="el" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">Feel::markedfaces()</a>, and <a class="el" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">Feel::project()</a>.</p>
@@ -468,12 +477,12 @@ template&lt;int Dim, int Order&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="laplacian__parabolic_8cpp.html">laplacian_parabolic.cpp</a></li>
+<li>laplacian_parabolic.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Tue Jun 25 2013 00:07:48 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Sat Jun 29 2013 00:07:56 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -118,41 +118,41 @@ Theory</h1>
 <p>Let solve the stokes equation considering a Poiseuille flow profile. <br/>
  We have the following system of equations, <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \left\{ \begin{aligned} -\mu\Delta \bf u + \nabla p &amp; = \bf f &amp; \text{on}\; \Omega \;, \\ \nabla\cdot\bf u &amp; = 0 &amp; \text{on}\; \Omega \;, \\ \bf u &amp; = g &amp; \text{on}\; \Gamma \;, \\ \end{aligned} \right $" src="form_479.png"/></center><p><br/>
- where <img class="formulaInl" alt="$u\in [H_g^1(\Omega)]^d$" src="form_480.png"/> denotes the flow speed, <img class="formulaInl" alt="$p\in [L_0^2(\Omega)]$" src="form_481.png"/> the fluid pressure, <img class="formulaInl" alt="$\mu$" src="form_67.png"/> the fluid viscosity.<br/>
+<center> <img class="formulaInl" alt="$ \left\{ \begin{aligned} -\mu\Delta \bf u + \nabla p &amp; = \bf f &amp; \text{on}\; \Omega \;, \\ \nabla\cdot\bf u &amp; = 0 &amp; \text{on}\; \Omega \;, \\ \bf u &amp; = g &amp; \text{on}\; \Gamma \;, \\ \end{aligned} \right $" src="form_480.png"/></center><p><br/>
+ where <img class="formulaInl" alt="$u\in [H_g^1(\Omega)]^d$" src="form_481.png"/> denotes the flow speed, <img class="formulaInl" alt="$p\in [L_0^2(\Omega)]$" src="form_482.png"/> the fluid pressure, <img class="formulaInl" alt="$\mu$" src="form_67.png"/> the fluid viscosity.<br/>
  The last boundary condition expresses a null pressure fixed on the outlet.<br/>
  The Poiseuille profile on the boundary is, <br/>
 </p>
-<center> <img class="formulaInl" alt="$ g(x,y)=\left( \begin{aligned} y(1-y) \\ 0 \\ \end{aligned} \right) $" src="form_482.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ g(x,y)=\left( \begin{aligned} y(1-y) \\ 0 \\ \end{aligned} \right) $" src="form_483.png"/></center><p><br/>
  The method used to obtain the strong formulation is closed to the one used for the laplacian (see section <a class="el" href="Laplacian.html">Laplacian Examples</a> ).<br/>
- We multiply the first equation by a test function <img class="formulaInl" alt="$v\in H^1(\Omega)$" src="form_483.png"/> and we integrate on the domain <img class="formulaInl" alt="$\Omega$" src="form_210.png"/>, <br/>
+ We multiply the first equation by a test function <img class="formulaInl" alt="$v\in H^1(\Omega)$" src="form_484.png"/> and we integrate on the domain <img class="formulaInl" alt="$\Omega$" src="form_210.png"/>, <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} \left( \int_\Omega \mu \nabla \mathbf u : \nabla \mathbf v -\int_{\partial\Omega} \frac{\partial \mathbf u}{\partial \mathbf n} \cdot \mathbf v \right) +\int_\Omega ( \nabla\cdot(p \mathbf v) - \mathbf v \nabla\cdot p ) =\int_\Omega \mathbf f \cdot \mathbf v \;. \end{aligned} \right) $" src="form_484.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ \begin{aligned} \left( \int_\Omega \mu \nabla \mathbf u : \nabla \mathbf v -\int_{\partial\Omega} \frac{\partial \mathbf u}{\partial \mathbf n} \cdot \mathbf v \right) +\int_\Omega ( \nabla\cdot(p \mathbf v) - \mathbf v \nabla\cdot p ) =\int_\Omega \mathbf f \cdot \mathbf v \;. \end{aligned} \right) $" src="form_485.png"/></center><p><br/>
  where $n$ denotes a normal vector on the boundary.<br/>
  The divergence theorem (or Gauss's theorem) gives, <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} \int_\Omega \nabla\cdot(p \mathbf v) = \int_{\partial\Omega} p \mathbf v\cdot \mathbf n \;. \end{aligned} \right) $" src="form_485.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ \begin{aligned} \int_\Omega \nabla\cdot(p \mathbf v) = \int_{\partial\Omega} p \mathbf v\cdot \mathbf n \;. \end{aligned} \right) $" src="form_486.png"/></center><p><br/>
  We have to add a consistency terms to the equation to guaranty the symmetry of the bilinear form.<br/>
- This term is provided by the second equation. We multiply this equation by a test function <img class="formulaInl" alt="$q\in L_2(\Omega)$" src="form_486.png"/> and we integrate on the domain <img class="formulaInl" alt="$\Omega$" src="form_210.png"/>, <br/>
+ This term is provided by the second equation. We multiply this equation by a test function <img class="formulaInl" alt="$q\in L_2(\Omega)$" src="form_487.png"/> and we integrate on the domain <img class="formulaInl" alt="$\Omega$" src="form_210.png"/>, <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} \int_{\Omega} \nabla\cdot\mathbf u q = 0 \;, \end{aligned} \right) $" src="form_487.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ \begin{aligned} \int_{\Omega} \nabla\cdot\mathbf u q = 0 \;, \end{aligned} \right) $" src="form_488.png"/></center><p><br/>
  Finally, we deduce from the equations and after rearranging the integrals the variationnal formulation, <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} \int_\Omega \mu \nabla \mathbf u :\nabla \mathbf v +\int_\Omega \left( \nabla\cdot\mathbf u q - p \nabla\cdot\mathbf v \right) + \int_{\partial\Omega} \left( p \mathbf n - \underbrace{\frac{\partial \mathbf u}{\partial \mathbf n}}_{=0} \right) \cdot \mathbf v =\int_\Omega \mathbf f \cdot \mathbf v \end{aligned} \right) $" src="form_488.png"/></center><p><br/>
- We have an equation which can be rewritten as find <img class="formulaInl" alt="$(\mathbf u,p)\in [H_g^1(\Omega)]^d\times L_0^2(\Omega) $" src="form_489.png"/> such that for all <img class="formulaInl" alt="$(\mathbf v,q) \in [H_0^1(\Omega)]^d \times L_0^2(\Omega)$" src="form_490.png"/> <br/>
+<center> <img class="formulaInl" alt="$ \begin{aligned} \int_\Omega \mu \nabla \mathbf u :\nabla \mathbf v +\int_\Omega \left( \nabla\cdot\mathbf u q - p \nabla\cdot\mathbf v \right) + \int_{\partial\Omega} \left( p \mathbf n - \underbrace{\frac{\partial \mathbf u}{\partial \mathbf n}}_{=0} \right) \cdot \mathbf v =\int_\Omega \mathbf f \cdot \mathbf v \end{aligned} \right) $" src="form_489.png"/></center><p><br/>
+ We have an equation which can be rewritten as find <img class="formulaInl" alt="$(\mathbf u,p)\in [H_g^1(\Omega)]^d\times L_0^2(\Omega) $" src="form_490.png"/> such that for all <img class="formulaInl" alt="$(\mathbf v,q) \in [H_0^1(\Omega)]^d \times L_0^2(\Omega)$" src="form_491.png"/> <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} a((\mathbf u,p),(\mathbf v,q)) = l((\mathbf v,q)) \end{aligned} \right) $" src="form_491.png"/></center><p><br/>
- where <img class="formulaInl" alt="$a$" src="form_429.png"/> is a bilinear form, continuous, coercive and where <img class="formulaInl" alt="$l$" src="form_430.png"/> is a linear form.</p>
+<center> <img class="formulaInl" alt="$ \begin{aligned} a((\mathbf u,p),(\mathbf v,q)) = l((\mathbf v,q)) \end{aligned} \right) $" src="form_492.png"/></center><p><br/>
+ where <img class="formulaInl" alt="$a$" src="form_430.png"/> is a bilinear form, continuous, coercive and where <img class="formulaInl" alt="$l$" src="form_431.png"/> is a linear form.</p>
 <h1><a class="anchor" id="Stokes_Implementation"></a>
 Implementation</h1>
 <p>Let's see the <a href="http://www.feelpp.org">Feel++</a> code corresponding to this mathematical statement (source <code>"doc/manual/tutorial/mystokes.cpp"</code>).<br/>
- We suppose for this example the viscosity <img class="formulaInl" alt="$\mu=1$" src="form_492.png"/> and <img class="formulaInl" alt="$\mathbf f = 0$" src="form_493.png"/>.</p>
+ We suppose for this example the viscosity <img class="formulaInl" alt="$\mu=1$" src="form_493.png"/> and <img class="formulaInl" alt="$\mathbf f = 0$" src="form_494.png"/>.</p>
 <p>The procedure to create the mesh is very simple.<br/>
  You have to provide to the command line (or via the cfg file) the gmsh.filename option.<br/>
  You can provide a <code></code>.geo or a <code></code>.msh file (created via gmsh).</p>
 <p>As for the laplacian problem, the code is very closed to the mathematical formulation.<br/>
- We define the product of function spaces for the flow speed and the flow pressur using <code>THch&lt;order&gt;()</code>(TH stands for Taylor-Hoods) function which is <code>Pch&lt;N+1&gt;</code> <img class="formulaInl" alt="$\times$" src="form_494.png"/> <code>Pch&lt;N&gt;</code> for respectively flow speed and pressure spaces.<br/>
- We take an element <img class="formulaInl" alt="$U=\left( \begin{array}{c} u \\ p \\ \end{array} \right) $" src="form_495.png"/> in this space. Then we define the integrals of the variationnal formulation for the left and the right hand side. Finally, we apply the Poiseuille profile on the boundary.<br/>
+ We define the product of function spaces for the flow speed and the flow pressur using <code>THch&lt;order&gt;()</code>(TH stands for Taylor-Hoods) function which is <code>Pch&lt;N+1&gt;</code> <img class="formulaInl" alt="$\times$" src="form_495.png"/> <code>Pch&lt;N&gt;</code> for respectively flow speed and pressure spaces.<br/>
+ We take an element <img class="formulaInl" alt="$U=\left( \begin{array}{c} u \\ p \\ \end{array} \right) $" src="form_496.png"/> in this space. Then we define the integrals of the variationnal formulation for the left and the right hand side. Finally, we apply the Poiseuille profile on the boundary.<br/>
  We call the solver to resolve the problem (<a class="el" href="Forms.html#Solver">Solver</a>). </p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>**argv )</div>
 <div class="line">{</div>
@@ -202,7 +202,7 @@ Implementation</h1>
 </div><!-- fragment --></div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Tue Jun 25 2013 00:07:47 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Sat Jun 29 2013 00:07:56 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

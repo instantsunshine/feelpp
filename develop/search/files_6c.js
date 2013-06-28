@@ -3,7 +3,6 @@ var searchData=
   ['lagrange_2ehpp',['lagrange.hpp',['../lagrange_8hpp.html',1,'']]],
   ['laplacian_2ecpp',['laplacian.cpp',['../laplacian_8cpp.html',1,'']]],
   ['laplacian_5fdg_2ecpp',['laplacian_dg.cpp',['../laplacian__dg_8cpp.html',1,'']]],
-  ['laplacian_5fparabolic_2ecpp',['laplacian_parabolic.cpp',['../laplacian__parabolic_8cpp.html',1,'']]],
   ['laplacian_5fpolar_2ecpp',['laplacian_polar.cpp',['../laplacian__polar_8cpp.html',1,'']]],
   ['laplacian_5fquad_2ecpp',['laplacian_quad.cpp',['../laplacian__quad_8cpp.html',1,'']]],
   ['lebesgue_2ehpp',['lebesgue.hpp',['../lebesgue_8hpp.html',1,'']]],

@@ -117,23 +117,23 @@ $(document).ready(function(){initNavTree('LaplacianTutorial.html','');});
 Theory</h1>
 <p>This part explains how to solve the <a class="el" href="classLaplacian.html">Laplacian</a> equation for homogeneous dirichlet conditions, <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \left\{ \begin{aligned} -\Delta u &amp; = f &amp; \text{on}\;\Omega \;, \\ u &amp; = 0 &amp; \text{on}\;\partial\Omega \;,\\ \end{aligned} \right. $" src="form_475.png"/></center><p><br/>
- where <img class="formulaInl" alt="$u\in\Omega$" src="form_421.png"/> is the unknown "trial" function and <img class="formulaInl" alt="$\Omega$" src="form_210.png"/> the domain.</p>
-<p>We multiply each part of the first equation by a "test" function <img class="formulaInl" alt="$v\in H_0^1(\Omega)$" src="form_427.png"/> and we integrate the resulting equation on the domain <img class="formulaInl" alt="$\Omega$" src="form_210.png"/>, <br/>
+<center> <img class="formulaInl" alt="$ \left\{ \begin{aligned} -\Delta u &amp; = f &amp; \text{on}\;\Omega \;, \\ u &amp; = 0 &amp; \text{on}\;\partial\Omega \;,\\ \end{aligned} \right. $" src="form_476.png"/></center><p><br/>
+ where <img class="formulaInl" alt="$u\in\Omega$" src="form_422.png"/> is the unknown "trial" function and <img class="formulaInl" alt="$\Omega$" src="form_210.png"/> the domain.</p>
+<p>We multiply each part of the first equation by a "test" function <img class="formulaInl" alt="$v\in H_0^1(\Omega)$" src="form_428.png"/> and we integrate the resulting equation on the domain <img class="formulaInl" alt="$\Omega$" src="form_210.png"/>, <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} -\int_\Omega \Delta u v = \int_\Omega f v \;. \end{aligned} $" src="form_476.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ \begin{aligned} -\int_\Omega \Delta u v = \int_\Omega f v \;. \end{aligned} $" src="form_477.png"/></center><p><br/>
  We can integrate by parts this equation (Green Theorem) to obtain the variationnal formulation, </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \begin{aligned} \int_\Omega \nabla u \nabla v -\underbrace{ \int_{\partial\Omega} \frac{\partial u}{\partial n} v }_{= 0} =\int_\Omega f v \; \end{aligned} \]" src="form_477.png"/>
+<img class="formulaDsp" alt="\[ \begin{aligned} \int_\Omega \nabla u \nabla v -\underbrace{ \int_{\partial\Omega} \frac{\partial u}{\partial n} v }_{= 0} =\int_\Omega f v \; \end{aligned} \]" src="form_478.png"/>
 </p>
-<p> where <img class="formulaInl" alt="$n$" src="form_425.png"/> denotes a unit outward normal vector to the boundary. We can rewrite the problem as find <img class="formulaInl" alt="$u\in H_0^1(\Omega)$" src="form_426.png"/> such that for all <img class="formulaInl" alt="$v\in H_0^1(\Omega)$" src="form_427.png"/>, <br/>
+<p> where <img class="formulaInl" alt="$n$" src="form_426.png"/> denotes a unit outward normal vector to the boundary. We can rewrite the problem as find <img class="formulaInl" alt="$u\in H_0^1(\Omega)$" src="form_427.png"/> such that for all <img class="formulaInl" alt="$v\in H_0^1(\Omega)$" src="form_428.png"/>, <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} a(u,v)=l(v) \;, \end{aligned} $" src="form_478.png"/></center><p><br/>
- where <img class="formulaInl" alt="$a$" src="form_429.png"/> is a bilinear form, continuous, coercive and <img class="formulaInl" alt="$l$" src="form_430.png"/> a linear form.</p>
+<center> <img class="formulaInl" alt="$ \begin{aligned} a(u,v)=l(v) \;, \end{aligned} $" src="form_479.png"/></center><p><br/>
+ where <img class="formulaInl" alt="$a$" src="form_430.png"/> is a bilinear form, continuous, coercive and <img class="formulaInl" alt="$l$" src="form_431.png"/> a linear form.</p>
 <h1><a class="anchor" id="Laplacian_Implementation"></a>
 Implementation</h1>
 <p>Let's take a look at the <a href="http://www.feelpp.org">Feel++</a> code (source <code>"doc/manual/tutorial/mylaplacian.cpp"</code>).<br/>
- We consider for this example <img class="formulaInl" alt="$f=1$" src="form_432.png"/> constant. </p>
+ We consider for this example <img class="formulaInl" alt="$f=1$" src="form_433.png"/> constant. </p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>**argv )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// initialize feel++</span></div>
@@ -180,7 +180,7 @@ Implementation</h1>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Tue Jun 25 2013 00:07:47 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Sat Jun 29 2013 00:07:56 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
