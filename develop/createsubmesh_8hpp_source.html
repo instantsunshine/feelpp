@@ -920,7 +920,7 @@ $(document).ready(function(){initNavTree('createsubmesh_8hpp_source.html','');})
 <div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;</div>
 <div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;                            <span class="keywordflow">if</span> ( n &lt; new_element_type::numVertices )</div>
 <div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;                            {</div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;                                CHECK_ASSERT( new_vertex.find(oldPoint.id()) == new_vertex.end() ) &lt;&lt; <span class="stringliteral">&quot;already seen this point?&quot;</span>;</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;                                CHECK( new_vertex.find(oldPoint.id()) == new_vertex.end() ) &lt;&lt; <span class="stringliteral">&quot;already seen this point?&quot;</span>;</div>
 <div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;                                new_vertex[oldPoint.id()]=1;</div>
 <div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;                            }</div>
 <div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;                        }</div>
@@ -1135,7 +1135,7 @@ $(document).ready(function(){initNavTree('createsubmesh_8hpp_source.html','');})
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sat Jun 29 2013 00:07:28 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Mon Jul 1 2013 00:07:21 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
