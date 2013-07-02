@@ -1,5 +1,14 @@
 var NAVTREEINDEX14 =
 {
+"classFeel_1_1Legendre.html#a3073661bfd7443da0a42e59fd04396d9":[10,0,110,1],
+"classFeel_1_1Legendre.html#a30b3bb835118e41836ec61fb4368d13e":[10,0,110,8],
+"classFeel_1_1Legendre.html#a35354677deff8e178327d2ec7f4d5417":[10,0,110,11],
+"classFeel_1_1Legendre.html#a44ce042f7938e7f0f86b42670070c73d":[10,0,110,29],
+"classFeel_1_1Legendre.html#a4542ac9627405c46d1065bb2e8b3b945":[10,0,110,25],
+"classFeel_1_1Legendre.html#a4c3e6e28aa4a8b8087072c9925a3ac11":[10,0,110,20],
+"classFeel_1_1Legendre.html#a5a8a54412edc81514d7a93527c2ec4bf":[10,0,110,13],
+"classFeel_1_1Legendre.html#a64eafd6df4c2b806be7a235baba0208b":[10,0,110,22],
+"classFeel_1_1Legendre.html#a652d25086c6583f06c58e4cdcc7b919c":[10,0,110,4],
 "classFeel_1_1Legendre.html#a69e295326999d8d8ab811c32b91f3770":[10,0,110,33],
 "classFeel_1_1Legendre.html#a7127b4a9d58c64556738236cb0aa707f":[10,0,110,15],
 "classFeel_1_1Legendre.html#a7c8989c235327d0c9827fc4285eeafa8":[10,0,110,23],
@@ -240,14 +249,5 @@ var NAVTREEINDEX14 =
 "classFeel_1_1MatrixSparse.html#ada2af971c7b757c03b88a040e60f1cd0":[10,0,120,55],
 "classFeel_1_1MatrixSparse.html#ada6dc78edf86b4f893e6942c0c9cc5e8":[10,0,120,12],
 "classFeel_1_1MatrixSparse.html#add28dc9976b0a149d2816cc881cc4037":[10,0,120,75],
-"classFeel_1_1MatrixSparse.html#add45e2400411d8e140d74c02f2a9d08d":[10,0,120,46],
-"classFeel_1_1MatrixSparse.html#ae05699de2637646583a3df40e5157609":[10,0,120,19],
-"classFeel_1_1MatrixSparse.html#ae39028d78be39460792b23c7f91aa228":[10,0,120,62],
-"classFeel_1_1MatrixSparse.html#ae5d56e040603726dfb50df50e7537025":[10,0,120,1],
-"classFeel_1_1MatrixSparse.html#ae6f6ea8901e8df74735b6bf16f62ec38":[10,0,120,61],
-"classFeel_1_1MatrixSparse.html#ae8f45b9fd3434df3b1e204217c875327":[10,0,120,84],
-"classFeel_1_1MatrixSparse.html#aeb1718cc16429b8e3e31db31a9c6cdda":[10,0,120,52],
-"classFeel_1_1MatrixSparse.html#aec47bcf734704ed4305b0fd57b9c61bb":[10,0,120,26],
-"classFeel_1_1MatrixSparse.html#af063975c7023be476717bd95d5a2764e":[10,0,120,39],
-"classFeel_1_1MatrixSparse.html#af154a6d470908d4e78f71af90892b566":[10,0,120,79]
+"classFeel_1_1MatrixSparse.html#add45e2400411d8e140d74c02f2a9d08d":[10,0,120,46]
 };

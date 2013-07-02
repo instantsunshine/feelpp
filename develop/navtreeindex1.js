@@ -1,5 +1,14 @@
 var NAVTREEINDEX1 =
 {
+"StokesTutorial.html":[6,1,1],
+"StokesTutorial.html":[6,3,0],
+"StokesTutorial.html#Stokes_Implementation":[6,1,1,1],
+"StokesTutorial.html#Stokes_Implementation":[6,3,0,1],
+"StokesTutorial.html#Stokes_Theory":[6,1,1,0],
+"StokesTutorial.html#Stokes_Theory":[6,3,0,0],
+"Types.html":[7,1],
+"Types.html#ints":[7,1,1],
+"Types.html#real":[7,1,0,0],
 "Types.html#types":[7,1,0],
 "annotated.html":[10],
 "citelist.html":[9],
@@ -240,14 +249,5 @@ var NAVTREEINDEX1 =
 "classFeel_1_1AdvReact.html#a1b664664f95be39d7b75558ff6884caf":[10,0,11,8],
 "classFeel_1_1AdvReact.html#a2273d8e10d7f3bf5e6d6958df240d778":[10,0,11,12],
 "classFeel_1_1AdvReact.html#a2506697a50654020e66644851ca780c8":[10,0,11,1],
-"classFeel_1_1AdvReact.html#a271840226d0a078160173315cab8fe88":[10,0,11,10],
-"classFeel_1_1AdvReact.html#a3677496ec2191b41de3efb6f7484a991":[10,0,11,14],
-"classFeel_1_1AdvReact.html#a433cdc1927355d6ff64aa6eecafd132e":[10,0,11,4],
-"classFeel_1_1AdvReact.html#a5781530f0a1cb2e392734fc6c7137c34":[10,0,11,9],
-"classFeel_1_1AdvReact.html#a5b13f08249635d501df9ae123969a967":[10,0,11,2],
-"classFeel_1_1AdvReact.html#a72ed1c65a6886b17402af5a7859f676d":[10,0,11,7],
-"classFeel_1_1AdvReact.html#aaf4b3c4efe4df20d5285ba3dc6eeb4e7":[10,0,11,3],
-"classFeel_1_1AdvReact.html#ab56e38ad977a7486f2cb2b87deb75bf0":[10,0,11,5],
-"classFeel_1_1AdvReact.html#ab82f955478ca1315b5c599d4c10b677c":[10,0,11,6],
-"classFeel_1_1AdvReact.html#ac6c215a7215fdbe09dd1d58412daf0c4":[10,0,11,15]
+"classFeel_1_1AdvReact.html#a271840226d0a078160173315cab8fe88":[10,0,11,10]
 };

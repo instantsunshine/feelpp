@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.93.0</span>
+   &#160;<span id="projectnumber">0.94.0</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -114,28 +114,28 @@ $(document).ready(function(){initNavTree('Advection.html','');});
  <hr/>
 <p>The diffusion advection reaction equation is a classical partial differential equation which can be found in many processes for example in chemistry or biology. This can be described by an equation containing a diffusion, an advection and a reaction term as follows, <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \left\{ \begin{aligned} -\epsilon\Delta u + \bbeta \cdot \nabla u + \mu u &amp; = f &amp; \text{on}\; \Omega \;, \\ u &amp; = 0 &amp; \text{on}\; \partial\Omega \;, \\ \end{aligned} \right $" src="form_461.png"/></center><p><br/>
+<center> <img class="formulaInl" alt="$ \left\{ \begin{aligned} -\epsilon\Delta u + \bbeta \cdot \nabla u + \mu u &amp; = f &amp; \text{on}\; \Omega \;, \\ u &amp; = 0 &amp; \text{on}\; \partial\Omega \;, \\ \end{aligned} \right $" src="form_465.png"/></center><p><br/>
  We use here homogeneous Dirichlet boundary conditions.</p>
 <h1><a class="anchor" id="Advection_Theory"></a>
 Theory</h1>
 <p>To establish the variationnal formulation, as always we mutiply the first equation by a test function <img class="formulaInl" alt="$v\in H_0^1(\Omega)$" src="form_428.png"/> such that, </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ H_0^1(\Omega) = \{ v\in H^1(\Omega),\; v=0 \; \text{on} \; \partial\Omega \} \;. \]" src="form_462.png"/>
+<img class="formulaDsp" alt="\[ H_0^1(\Omega) = \{ v\in H^1(\Omega),\; v=0 \; \text{on} \; \partial\Omega \} \;. \]" src="form_466.png"/>
 </p>
 <p>Then we integrate on the domain <img class="formulaInl" alt="$\Omega$" src="form_210.png"/>, <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} - \int_\Omega \epsilon \Delta u\ v + \int_\Omega \bbeta \cdot \nabla u\ v + \int_\Omega \mu\ u\ v = \int_\Omega f\ v \;. \end{aligned} $" src="form_463.png"/></center><p><br/>
- We establish the variationnal formulation from the previous equation and using the Green formula, find <img class="formulaInl" alt="$u \in \in H_0^1(\Omega)$" src="form_464.png"/> <br/>
+<center> <img class="formulaInl" alt="$ \begin{aligned} - \int_\Omega \epsilon \Delta u\ v + \int_\Omega \bbeta \cdot \nabla u\ v + \int_\Omega \mu\ u\ v = \int_\Omega f\ v \;. \end{aligned} $" src="form_467.png"/></center><p><br/>
+ We establish the variationnal formulation from the previous equation and using the Green formula, find <img class="formulaInl" alt="$u \in \in H_0^1(\Omega)$" src="form_468.png"/> <br/>
 </p>
-<center> <img class="formulaInl" alt="$ \begin{aligned} \int_\Omega \epsilon \nabla u \cdot \nabla v - \underbrace{\int_{\partial\Omega} \epsilon (\nabla u \cdot \mathbf n)\ v}_{=0} + \int_\Omega (\beta \cdot \nabla u)\ v + \int_\Omega \mu\ u\ v = \int_\Omega f v \; \quad \forall v \in H_0^1(\Omega), \end{aligned} $" src="form_465.png"/></center><p><br/>
- where <img class="formulaInl" alt="$\mathbf n$" src="form_466.png"/> is a unit outward normal vector. We can rewrite the problem, find <img class="formulaInl" alt="$u \in \in H_0^1(\Omega)$" src="form_464.png"/> </p>
+<center> <img class="formulaInl" alt="$ \begin{aligned} \int_\Omega \epsilon \nabla u \cdot \nabla v - \underbrace{\int_{\partial\Omega} \epsilon (\nabla u \cdot \mathbf n)\ v}_{=0} + \int_\Omega (\beta \cdot \nabla u)\ v + \int_\Omega \mu\ u\ v = \int_\Omega f v \; \quad \forall v \in H_0^1(\Omega), \end{aligned} $" src="form_469.png"/></center><p><br/>
+ where <img class="formulaInl" alt="$\mathbf n$" src="form_470.png"/> is a unit outward normal vector. We can rewrite the problem, find <img class="formulaInl" alt="$u \in \in H_0^1(\Omega)$" src="form_468.png"/> </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ a(u,v) = l(v) \quad \forall v \in H_0^1(\Omega), \]" src="form_467.png"/>
+<img class="formulaDsp" alt="\[ a(u,v) = l(v) \quad \forall v \in H_0^1(\Omega), \]" src="form_471.png"/>
 </p>
 <p> where <img class="formulaInl" alt="$a$" src="form_430.png"/> is a bilinear form, continuous, coercive and <img class="formulaInl" alt="$l$" src="form_431.png"/> is a linear form.</p>
 <h1><a class="anchor" id="Advection_Implementation"></a>
 Implementation</h1>
-<p>We choose for our example <img class="formulaInl" alt="$\mu = 1 $" src="form_468.png"/>, <img class="formulaInl" alt="$\epsilon = 1$" src="form_469.png"/>, <img class="formulaInl" alt="$f=1$" src="form_433.png"/>, and <img class="formulaInl" alt="$\bbeta=(1,1)^T$" src="form_470.png"/>. </p>
+<p>We choose for our example <img class="formulaInl" alt="$\mu = 1 $" src="form_472.png"/>, <img class="formulaInl" alt="$\epsilon = 1$" src="form_473.png"/>, <img class="formulaInl" alt="$f=1$" src="form_433.png"/>, and <img class="formulaInl" alt="$\bbeta=(1,1)^T$" src="form_474.png"/>. </p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span></div>
 <div class="line">main( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv )</div>
 <div class="line">{</div>
@@ -197,8 +197,8 @@ Implementation</h1>
  Finally we add the Dirichlet boundary condition and we use the default solver to solve. We export the solution <img class="formulaInl" alt="$u$" src="form_235.png"/> for post processing.</p>
 <h1><a class="anchor" id="Advection_Results"></a>
 Results</h1>
-<p>There are various solutions of this problem displayed with Paraview for <img class="formulaInl" alt="$\epsilon= 1, 0.01, 0.0001$" src="form_471.png"/>.<br/>
- Notice how the solution gets unstable for <img class="formulaInl" alt="$\epsilon = 0.0001$" src="form_472.png"/>, this is classical and requires stabilisation methods to handle this issue.</p>
+<p>There are various solutions of this problem displayed with Paraview for <img class="formulaInl" alt="$\epsilon= 1, 0.01, 0.0001$" src="form_475.png"/>.<br/>
+ Notice how the solution gets unstable for <img class="formulaInl" alt="$\epsilon = 0.0001$" src="form_476.png"/>, this is classical and requires stabilisation methods to handle this issue.</p>
 <center> <table  border="0px">
 <tr>
 <td><div class="image">
@@ -212,12 +212,12 @@ Results</h1>
 </div>
   </td></tr>
 <tr>
-<td><center> <img class="formulaInl" alt="$\epsilon=1$" src="form_473.png"/></center> </td><td><center> <img class="formulaInl" alt="$\epsilon=0.01$" src="form_474.png"/></center> </td><td><center> <img class="formulaInl" alt="$\epsilon=0.0001$" src="form_475.png"/></center>  </td></tr>
+<td><center> <img class="formulaInl" alt="$\epsilon=1$" src="form_477.png"/></center> </td><td><center> <img class="formulaInl" alt="$\epsilon=0.01$" src="form_478.png"/></center> </td><td><center> <img class="formulaInl" alt="$\epsilon=0.0001$" src="form_479.png"/></center>  </td></tr>
 </table>
 </center> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Jul 1 2013 00:07:48 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Wed Jul 3 2013 00:07:15 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

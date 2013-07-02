@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.93.0</span>
+   &#160;<span id="projectnumber">0.94.0</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -1856,31 +1856,33 @@ $(document).ready(function(){initNavTree('geotool_8hpp_source.html','');});
 <div class="line"><a name="l01759"></a><span class="lineno"> 1759</span>&#160;    }</div>
 <div class="line"><a name="l01760"></a><span class="lineno"> 1760</span>&#160;</div>
 <div class="line"><a name="l01761"></a><span class="lineno"> 1761</span>&#160;</div>
-<div class="line"><a name="l01762"></a><span class="lineno"> 1762</span>&#160;    std::string fname = gmsh.generate( name,</div>
-<div class="line"><a name="l01763"></a><span class="lineno"> 1763</span>&#160;                                       ostr.str(),<span class="keyword">false</span>,<span class="keyword">false</span>,true );</div>
-<div class="line"><a name="l01764"></a><span class="lineno"> 1764</span>&#160;</div>
-<div class="line"><a name="l01765"></a><span class="lineno"> 1765</span>&#160;    ImporterGmsh&lt;mesh_type&gt; <span class="keyword">import</span>( fname, FEELPP_GMSH_FORMAT_VERSION, worldcomm );</div>
+<div class="line"><a name="l01762"></a><span class="lineno"> 1762</span>&#160;    std::string fname;</div>
+<div class="line"><a name="l01763"></a><span class="lineno"> 1763</span>&#160;    <span class="keywordtype">bool</span> generated;</div>
+<div class="line"><a name="l01764"></a><span class="lineno"> 1764</span>&#160;    boost::tie( fname, generated ) = gmsh.generate( name,</div>
+<div class="line"><a name="l01765"></a><span class="lineno"> 1765</span>&#160;                                                    ostr.str(),<span class="keyword">false</span>,<span class="keyword">false</span>,true );</div>
 <div class="line"><a name="l01766"></a><span class="lineno"> 1766</span>&#160;</div>
-<div class="line"><a name="l01767"></a><span class="lineno"> 1767</span>&#160;    mesh-&gt;accept( <span class="keyword">import</span> );</div>
-<div class="line"><a name="l01768"></a><span class="lineno"> 1768</span>&#160;    mesh-&gt;components().set ( MESH_RENUMBER|MESH_UPDATE_EDGES|MESH_UPDATE_FACES|MESH_CHECK );</div>
-<div class="line"><a name="l01769"></a><span class="lineno"> 1769</span>&#160;    mesh-&gt;updateForUse();</div>
-<div class="line"><a name="l01770"></a><span class="lineno"> 1770</span>&#160;</div>
-<div class="line"><a name="l01771"></a><span class="lineno"> 1771</span>&#160;    <span class="keywordflow">if</span> ( straighten &amp;&amp; mesh_type::nOrder &gt; 1 )</div>
-<div class="line"><a name="l01772"></a><span class="lineno"> 1772</span>&#160;        <span class="keywordflow">return</span> straightenMesh( _mesh=mesh, _worldcomm=worldcomm.subWorldComm() );</div>
-<div class="line"><a name="l01773"></a><span class="lineno"> 1773</span>&#160;</div>
-<div class="line"><a name="l01774"></a><span class="lineno"> 1774</span>&#160;    <span class="keywordflow">return</span> mesh;</div>
-<div class="line"><a name="l01775"></a><span class="lineno"> 1775</span>&#160;}</div>
-<div class="line"><a name="l01776"></a><span class="lineno"> 1776</span>&#160;</div>
-<div class="line"><a name="l01777"></a><span class="lineno"> 1777</span>&#160;</div>
+<div class="line"><a name="l01767"></a><span class="lineno"> 1767</span>&#160;    ImporterGmsh&lt;mesh_type&gt; <span class="keyword">import</span>( fname, FEELPP_GMSH_FORMAT_VERSION, worldcomm );</div>
+<div class="line"><a name="l01768"></a><span class="lineno"> 1768</span>&#160;</div>
+<div class="line"><a name="l01769"></a><span class="lineno"> 1769</span>&#160;    mesh-&gt;accept( <span class="keyword">import</span> );</div>
+<div class="line"><a name="l01770"></a><span class="lineno"> 1770</span>&#160;    mesh-&gt;components().set ( MESH_RENUMBER|MESH_UPDATE_EDGES|MESH_UPDATE_FACES|MESH_CHECK );</div>
+<div class="line"><a name="l01771"></a><span class="lineno"> 1771</span>&#160;    mesh-&gt;updateForUse();</div>
+<div class="line"><a name="l01772"></a><span class="lineno"> 1772</span>&#160;</div>
+<div class="line"><a name="l01773"></a><span class="lineno"> 1773</span>&#160;    <span class="keywordflow">if</span> ( straighten &amp;&amp; mesh_type::nOrder &gt; 1 )</div>
+<div class="line"><a name="l01774"></a><span class="lineno"> 1774</span>&#160;        <span class="keywordflow">return</span> straightenMesh( _mesh=mesh, _worldcomm=worldcomm.subWorldComm() );</div>
+<div class="line"><a name="l01775"></a><span class="lineno"> 1775</span>&#160;</div>
+<div class="line"><a name="l01776"></a><span class="lineno"> 1776</span>&#160;    <span class="keywordflow">return</span> mesh;</div>
+<div class="line"><a name="l01777"></a><span class="lineno"> 1777</span>&#160;}</div>
 <div class="line"><a name="l01778"></a><span class="lineno"> 1778</span>&#160;</div>
-<div class="line"><a name="l01779"></a><span class="lineno"> 1779</span>&#160;}<span class="comment">//GeoTool</span></div>
+<div class="line"><a name="l01779"></a><span class="lineno"> 1779</span>&#160;</div>
 <div class="line"><a name="l01780"></a><span class="lineno"> 1780</span>&#160;</div>
-<div class="line"><a name="l01781"></a><span class="lineno"> 1781</span>&#160;} <span class="comment">//Feel</span></div>
-<div class="line"><a name="l01782"></a><span class="lineno"> 1782</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __geotool_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l01781"></a><span class="lineno"> 1781</span>&#160;}<span class="comment">//GeoTool</span></div>
+<div class="line"><a name="l01782"></a><span class="lineno"> 1782</span>&#160;</div>
+<div class="line"><a name="l01783"></a><span class="lineno"> 1783</span>&#160;} <span class="comment">//Feel</span></div>
+<div class="line"><a name="l01784"></a><span class="lineno"> 1784</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __geotool_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Jul 1 2013 00:07:31 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Wed Jul 3 2013 00:06:57 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

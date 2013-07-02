@@ -20,5 +20,18 @@ var Laplacian =
     [ "Laplacian in polar and cartesian coordinate systems", "LaplacianCoordinateSystem.html", [
       [ "LaplacianCoordinateSystem_Implementation", "LaplacianCoordinateSystem.html#LaplacianCoordinateSystem_Implementation", null ]
     ] ],
-    [ "Periodic boundary condition", "LaplacianPeriodic.html", null ]
+    [ "Periodic boundary condition", "LaplacianPeriodic.html", null ],
+    [ "Parabolic equation example", "LaplacianParabolic.html", [
+      [ "Description", "LaplacianParabolic.html#Description", [
+        [ "Time Discretization", "LaplacianParabolic.html#Discretization", null ]
+      ] ],
+      [ "Implementation", "LaplacianParabolic.html#Implementation", [
+        [ "BDF set up", "LaplacianParabolic.html#BDF", null ],
+        [ "Error class", "LaplacianParabolic.html#Error", null ]
+      ] ],
+      [ "Results", "LaplacianParabolic.html#Results", [
+        [ "Stationnary study", "LaplacianParabolic.html#Stationnary", null ],
+        [ "Temporal study", "LaplacianParabolic.html#Temporal", null ]
+      ] ]
+    ] ]
 ];

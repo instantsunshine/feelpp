@@ -2,6 +2,7 @@ var searchData=
 [
   ['post_2dprocessing_20and_20visualisation',['Post-Processing and Visualisation',['../Exporter.html',1,'QuickRef']]],
   ['penalty_20method_20to_20simulate_20particle_20flow_20in_20capillaries',['Penalty method to simulate particle flow in capillaries',['../FictitiousDomainPenalisationParticle.html',1,'FluidMechanics']]],
+  ['parabolic_20equation_20example',['Parabolic equation example',['../LaplacianParabolic.html',1,'Laplacian']]],
   ['periodic_20boundary_20condition',['Periodic boundary condition',['../LaplacianPeriodic.html',1,'Laplacian']]],
   ['p',['P',['../classFeel_1_1GeoMap_1_1Context.html#a7743cab494a742752616c790bd180d07',1,'Feel::GeoMap::Context']]],
   ['p0_5fbasis_5ftype',['p0_basis_type',['../classLShape.html#a281ca4a5ef0bec2c0787ef4c0cf8d4d3',1,'LShape']]],
