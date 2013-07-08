@@ -260,7 +260,7 @@ $(document).ready(function(){initNavTree('val_8hpp_source.html','');});
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;fusion::result_of::has_key&lt;Geo_t,vf::detail::gmc&lt;0&gt; &gt;,</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                mpl::identity&lt;vf::detail::gmc&lt;0&gt; &gt;,</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                mpl::identity&lt;vf::detail::gmc&lt;1&gt; &gt; &gt;::type::type key_type;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> fusion::result_of::value_at_key&lt;Geo_t,key_type&gt;::type::pointer gmc_ptrtype;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> fusion::result_of::value_at_key&lt;Geo_t,key_type&gt;::type::element_type* gmc_ptrtype;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> fusion::result_of::value_at_key&lt;Geo_t,key_type&gt;::type::element_type gmc_type;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> tensor2_expr_type::shape shape;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
@@ -404,11 +404,10 @@ $(document).ready(function(){initNavTree('val_8hpp_source.html','');});
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;} <span class="comment">// vf</span></div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;} <span class="comment">// Feel</span></div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* FEELPP_VF_VAL_HPP */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sun Jul 7 2013 00:07:25 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Tue Jul 9 2013 00:07:22 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

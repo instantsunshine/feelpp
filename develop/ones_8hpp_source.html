@@ -207,7 +207,7 @@ $(document).ready(function(){initNavTree('ones_8hpp_source.html','');});
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;fusion::result_of::has_key&lt;Geo_t,vf::detail::gmc&lt;0&gt; &gt;,</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                mpl::identity&lt;vf::detail::gmc&lt;0&gt; &gt;,</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                mpl::identity&lt;vf::detail::gmc&lt;1&gt; &gt; &gt;::type::type key_type;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> fusion::result_of::value_at_key&lt;Geo_t,key_type&gt;::type::pointer gmc_ptrtype;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> fusion::result_of::value_at_key&lt;Geo_t,key_type&gt;::type::element_type* gmc_ptrtype;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> fusion::result_of::value_at_key&lt;Geo_t,key_type&gt;::type::element_type gmc_type;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keyword">struct </span>INVALID_SHAPE {};</div>
@@ -382,7 +382,7 @@ $(document).ready(function(){initNavTree('ones_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sun Jul 7 2013 00:07:16 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Tue Jul 9 2013 00:07:12 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

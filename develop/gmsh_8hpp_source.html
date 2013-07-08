@@ -516,7 +516,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;            &gt;::type</div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;    &gt;::type _type;</div>
 <div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;<span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;is_shared_ptr&lt;_type&gt;,</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;                          mpl::identity&lt;typename _type::value_type&gt;,</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;                          mpl::identity&lt;typename _type::element_type&gt;,</div>
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                          mpl::identity&lt;_type&gt; &gt;::type::type type;</div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;<span class="keyword">typedef</span> boost::shared_ptr&lt;type&gt; ptrtype;</div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;};</div>
@@ -1240,7 +1240,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sun Jul 7 2013 00:07:07 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Tue Jul 9 2013 00:07:05 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
