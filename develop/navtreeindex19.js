@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"classFeel_1_1PointSetQuadrature.html#a762f794fa1cff7c2bd8dc7a2aba90fc6":[10,0,159,4],
 "classFeel_1_1PointSetQuadrature.html#a7683f57536855b25aeae4825c57c1f21":[10,0,159,36],
 "classFeel_1_1PointSetQuadrature.html#a7c73d7004c0e1c70c5551073aa684953":[10,0,159,31],
 "classFeel_1_1PointSetQuadrature.html#a7dc8ab96d1bcc5d45e00124e001275a4":[10,0,159,25],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "classFeel_1_1Projector.html#a44e5c35122ddb0cc1cc5e701a165a82f":[10,0,169,7],
 "classFeel_1_1Projector.html#a6637ff3ee4c5898859f4ea63da2327a0":[10,0,169,21],
 "classFeel_1_1Projector.html#a749821a9df8ed5ff03d32a7692d82c2a":[10,0,169,1],
-"classFeel_1_1Projector.html#a7840d30328cace1160083dc0109d5547":[10,0,169,23],
-"classFeel_1_1Projector.html#a785f2a90b46f3bef034533a5c9ff8899":[10,0,169,6]
+"classFeel_1_1Projector.html#a7840d30328cace1160083dc0109d5547":[10,0,169,23]
 };

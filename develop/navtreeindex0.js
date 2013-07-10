@@ -240,6 +240,7 @@ var NAVTREEINDEX0 =
 "NumericalMethods.html":[6,0],
 "Projection.html":[5,5],
 "Projection.html#NodalProjection":[5,5,0],
+"Projection.html#ProjectionExpression":[5,5,2],
 "Projection.html#ProjectionProjector":[5,5,1],
 "QuickRef.html":[5],
 "SolidMechanics.html":[6,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "Spaces.html#QRFunctionSpaceFn":[5,3,1],
 "StVenantKirchhoff.html":[6,4,2],
 "StokesCurl.html":[6,3,1],
-"StokesCurl.html#StokesCurl_Implementation":[6,3,1,1],
-"StokesCurl.html#StokesCurl_Theory":[6,3,1,0]
+"StokesCurl.html#StokesCurl_Implementation":[6,3,1,1]
 };

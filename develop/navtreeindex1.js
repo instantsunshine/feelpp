@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"StokesCurl.html#StokesCurl_Theory":[6,3,1,0],
 "StokesTutorial.html":[6,1,1],
 "StokesTutorial.html":[6,3,0],
 "StokesTutorial.html#Stokes_Implementation":[6,1,1,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "classFeel_1_1AdvReact.html#a03edcc2d226303b8144a0986980ee3d0":[10,0,11,13],
 "classFeel_1_1AdvReact.html#a1b664664f95be39d7b75558ff6884caf":[10,0,11,8],
 "classFeel_1_1AdvReact.html#a2273d8e10d7f3bf5e6d6958df240d778":[10,0,11,12],
-"classFeel_1_1AdvReact.html#a2506697a50654020e66644851ca780c8":[10,0,11,1],
-"classFeel_1_1AdvReact.html#a271840226d0a078160173315cab8fe88":[10,0,11,10]
+"classFeel_1_1AdvReact.html#a2506697a50654020e66644851ca780c8":[10,0,11,1]
 };

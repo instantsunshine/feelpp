@@ -65,7 +65,8 @@ var QuickRef =
     ] ],
     [ "Projection", "Projection.html", [
       [ "Nodal Projection", "Projection.html#NodalProjection", null ],
-      [ "Projection Operator", "Projection.html#ProjectionProjector", null ]
+      [ "Projection Operator", "Projection.html#ProjectionProjector", null ],
+      [ "Project Specific Expressions", "Projection.html#ProjectionExpression", null ]
     ] ],
     [ "Forms and Solver", "Forms.html", [
       [ "Building Forms", "Forms.html#Forms_Building", [

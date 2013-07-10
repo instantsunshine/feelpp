@@ -232,7 +232,7 @@ $(document).ready(function(){initNavTree('ginac_8hpp_source.html','');});
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                M_fun( fun ),</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                M_syms( syms),</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                M_cfun(),</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                M_filename((fs::current_path()/filename).string())</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                M_filename(filename.empty()?filename:(fs::current_path()/filename).string())</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            {</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;Ginac constructor with expression_type \n&quot;</span>;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                GiNaC::lst exprs(fun);</div>
@@ -505,7 +505,7 @@ $(document).ready(function(){initNavTree('ginac_8hpp_source.html','');});
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;                M_fun( fun.evalm() ),</div>
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;                M_syms( syms),</div>
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;                M_cfun(),</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;                M_filename((fs::current_path()/filename).string())</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;                M_filename(filename.empty()?filename:(fs::current_path()/filename).string())</div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;            {</div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                GiNaC::lst exprs;</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; M_fun.nops(); ++i ) exprs.append( M_fun.op(i) );</div>
@@ -519,7 +519,7 @@ $(document).ready(function(){initNavTree('ginac_8hpp_source.html','');});
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                M_fun(fun.evalm()),</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                M_syms( syms),</div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                M_cfun(),</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                M_filename((fs::current_path()/filename).string())</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                M_filename(filename.empty()?filename:(fs::current_path()/filename).string())</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;            {</div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                GiNaC::lst exprs;</div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; M_fun.nops(); ++i ) exprs.append( M_fun.op(i) );</div>
@@ -742,7 +742,7 @@ $(document).ready(function(){initNavTree('ginac_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Tue Jul 9 2013 00:07:04 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Thu Jul 11 2013 00:06:51 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -1,5 +1,6 @@
 var NAVTREEINDEX27 =
 {
+"classThreeFieldsLaplacian.html#a131131234d28f29a37411b4822afe146":[10,11,12],
 "classThreeFieldsLaplacian.html#a14cd7ac982feef75f9bbae089dbb3d1b":[10,11,16],
 "classThreeFieldsLaplacian.html#a16e0de96d9c06491d0ba9ce9c8ff2236":[10,11,26],
 "classThreeFieldsLaplacian.html#a1a500dc48c6b9988b26369ef307eeb66":[10,11,23],
@@ -153,8 +154,8 @@ var NAVTREEINDEX27 =
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a263e8c4c3415b075865bb909aaebf3cf":[10,0,100,10],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a437deec4f7170d6ac568c3e78919d703":[10,0,100,5],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a47a159d96c1faef9f6b57e104411690f":[10,0,100,9],
-"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,100,2],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,100,3],
+"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,100,2],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aae08c8b04ff5d504167b6b0ef8710a90":[10,0,100,8],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#ad18d6a14c0ed1f6ba541a73870a85fb8":[10,0,100,7],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#ae16be5124baf41675f85c9d93a5b1032":[10,0,100,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX27 =
 "structFeel_1_1SolverConstrained_1_1COptions.html":[10,0,184,0],
 "structFeel_1_1SolverConstrained_1_1COptions.html#a0b4492fdfac956560a1b57173a08bc5c":[10,0,184,0,6],
 "structFeel_1_1SolverConstrained_1_1COptions.html#a4554bfd409cf9eb0dabc38dc131054eb":[10,0,184,0,11],
-"structFeel_1_1SolverConstrained_1_1COptions.html#a4bed81a09e480131fcd422c2c366da01":[10,0,184,0,14],
-"structFeel_1_1SolverConstrained_1_1COptions.html#a4dea05c69ff7cc23409601bb4b6195c4":[10,0,184,0,12]
+"structFeel_1_1SolverConstrained_1_1COptions.html#a4bed81a09e480131fcd422c2c366da01":[10,0,184,0,14]
 };

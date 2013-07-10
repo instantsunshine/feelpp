@@ -212,7 +212,7 @@ Compilers</h2>
 <li>Gcc <br/>
  The first step is to install the latest version of Xcode. If your computer is recent, you can install it with your DVD that came with your machine (not the OS DVD, but the applications one). You don't have to install the complete Xcode (you can uncheck iOS SDK for example, it's not necessary here and requiers a lot of memory). Xcode will provide your computer all basic tools to compile such as gcc 4.2. It's the first step, you'll see later how to easily install gcc 4.5 or later using MacPorts. </li>
 <li>Fortran <br/>
- To build the Makefiles, <code>cmake</code> will need a Fortran compiler. To make it works, please go to <a href="http://hpc.sourceforge.net/">SourceForge.net</a> and download <code>gfortran-snwleo-intel-bin.tar.gz</code> which is the fortran compiler only (from now, don't download the complete install with gcc 4.6 because <a class="el" href="namespaceFeel.html">Feel</a> needs gcc 4.5 or later). To install it, go to the directory where you have downloaded the file and type in a command-line <pre class="fragment">  sudo tar -xvf gfortran-snwleo-intel-bin.tar -C /
+ To build the Makefiles, <code>cmake</code> will need a Fortran compiler. To make it works, please go to <a href="http://hpc.sourceforge.net/">SourceForge.net</a> and download <code>gfortran-snwleo-intel-bin.tar.gz</code> which is the fortran compiler only (from now, don't download the complete install with gcc 4.6 because <a class="el" href="namespaceFeel.html" title="[marker1]">Feel</a> needs gcc 4.5 or later). To install it, go to the directory where you have downloaded the file and type in a command-line <pre class="fragment">  sudo tar -xvf gfortran-snwleo-intel-bin.tar -C /
 </pre></li>
 </ul>
 <h2><a class="anchor" id="MacPorts"></a>
@@ -281,7 +281,7 @@ Missing ports</h2>
 <p><a href="#" class="top">top</a> <hr/>
  <h1><a class="anchor" id="Compiling"></a>
 Compiling</h1>
-<p><a class="el" href="namespaceFeel.html">Feel</a> build system uses <a href="http://www.cmake.org"><code>cmake</code></a> as its build system. Check that  is using gcc4.5 (or a higher version) or clang++ as C++ compiler (you can use the option <code>CMAKE_CXX_COMPILER=&lt;path&gt;/g++-4.5</code> where the <code>path</code> depends on your OS, it's probably <code>/usr/bin</code> or <code>/opt/local/bin</code> but you can also change it with the command <code>ccmake</code> and press <code>t</code> for advanced options). <a href="http://www.feelpp.org">Feel++</a>, using <code>cmake</code>, can be built either in source and out of source and different build type: </p>
+<p><a class="el" href="namespaceFeel.html" title="[marker1]">Feel</a> build system uses <a href="http://www.cmake.org"><code>cmake</code></a> as its build system. Check that  is using gcc4.5 (or a higher version) or clang++ as C++ compiler (you can use the option <code>CMAKE_CXX_COMPILER=&lt;path&gt;/g++-4.5</code> where the <code>path</code> depends on your OS, it's probably <code>/usr/bin</code> or <code>/opt/local/bin</code> but you can also change it with the command <code>ccmake</code> and press <code>t</code> for advanced options). <a href="http://www.feelpp.org">Feel++</a>, using <code>cmake</code>, can be built either in source and out of source and different build type: </p>
 <ul>
 <li>minsizerel : minimal size release </li>
 <li>release release </li>
@@ -309,14 +309,14 @@ Compiling</h1>
 </pre><p> <b>Important</b> : from now, all commands should be type in <code>feel.opt</code> or its subdirectories.</p>
 <h2><a class="anchor" id="Manual"></a>
 Compiling the Feel++ manual</h2>
-<p>The manual is edited with LaTeX so you need to have installed the LaTeX distribution on your computer. LaTeX is a high-quality typesetting system, it includes features designed for the production of technical and scientific documentation. There are several ways to make it work, for example you can go on <a href="http://www.tug.org/mactex/">MacTeX website</a> and follow the instructions to install the distribution. If the command <code>make check</code> in <code>feel.opt/</code> has been run before, the tutorial should be already compiled and ready. The steps are as follows to build the <a class="el" href="namespaceFeel.html">Feel</a> tutorial </p>
+<p>The manual is edited with LaTeX so you need to have installed the LaTeX distribution on your computer. LaTeX is a high-quality typesetting system, it includes features designed for the production of technical and scientific documentation. There are several ways to make it work, for example you can go on <a href="http://www.tug.org/mactex/">MacTeX website</a> and follow the instructions to install the distribution. If the command <code>make check</code> in <code>feel.opt/</code> has been run before, the tutorial should be already compiled and ready. The steps are as follows to build the <a class="el" href="namespaceFeel.html" title="[marker1]">Feel</a> tutorial </p>
 <pre class="fragment">  cd feel.opt/doc/manual
   make feelpp-manual_pdf
 </pre><p> The directory <code>doc/manual</code> contains all examples used in the tutorial. You will see how it works in the following parts. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Tue Jul 9 2013 00:07:23 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Thu Jul 11 2013 00:07:10 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
