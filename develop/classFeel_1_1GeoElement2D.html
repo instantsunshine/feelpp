@@ -154,13 +154,11 @@ super2::element_connectivity_type&#160;</td><td class="memItemRight" valign="bot
 typedef <a class="el" href="classFeel_1_1GeoElement2D.html">self_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
 <tr class="memitem:ad5cd1d9d40e088bdd91823077e16c9ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5cd1d9d40e088bdd91823077e16c9ea"></a>
 typedef super::face_type&#160;</td><td class="memItemRight" valign="bottom"><b>entity_face_type</b></td></tr>
-<tr class="memitem:a09e6bf744a0ac5b5b3d7264ea5fb7416"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09e6bf744a0ac5b5b3d7264ea5fb7416"></a>
-typedef ublas::bounded_array<br class="typebreak"/>
-&lt; edge_type *, <a class="el" href="group__GeoEle.html#ga626a94933fc89b16a56e9c05716540a1">numLocalEdges</a> &gt;<br class="typebreak"/>
+<tr class="memitem:aaf29047f41bc0d14805bd4b9ca15d967"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf29047f41bc0d14805bd4b9ca15d967"></a>
+typedef std::vector&lt; edge_type * &gt;<br class="typebreak"/>
 ::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>face_const_iterator</b></td></tr>
-<tr class="memitem:a317f2c74355a6a8d29d1413a0126c316"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a317f2c74355a6a8d29d1413a0126c316"></a>
-typedef ublas::bounded_array<br class="typebreak"/>
-&lt; edge_type *, <a class="el" href="group__GeoEle.html#ga626a94933fc89b16a56e9c05716540a1">numLocalEdges</a> &gt;<br class="typebreak"/>
+<tr class="memitem:a5d7675d25d94b9e018756e3538dbd7c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d7675d25d94b9e018756e3538dbd7c5"></a>
+typedef std::vector&lt; edge_type * &gt;<br class="typebreak"/>
 ::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>face_iterator</b></td></tr>
 <tr class="memitem:a2fa249d184a9a014501493bc3c585127"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fa249d184a9a014501493bc3c585127"></a>
 typedef <br class="typebreak"/>
@@ -669,7 +667,7 @@ template&lt;uint16_type Dim, typename GEOSHAPE , typename SubFace  = SubFaceOfNo
 </div><div class="memdoc">
 <dl class="section see"><dt>See Also</dt><dd>face() </dd></dl>
 
-<p>References <a class="el" href="group__GeoEle.html#ga626a94933fc89b16a56e9c05716540a1">Feel::GeoElement2D&lt; Dim, GEOSHAPE, SubFace, T &gt;::numLocalEdges</a>.</p>
+<p>References <a class="el" href="classFeel_1_1GeoElement2D.html#af4ec8373422c834fa9a1708ad7b98950">Feel::GeoElement2D&lt; Dim, GEOSHAPE, SubFace, T &gt;::id()</a>, and <a class="el" href="group__GeoEle.html#ga626a94933fc89b16a56e9c05716540a1">Feel::GeoElement2D&lt; Dim, GEOSHAPE, SubFace, T &gt;::numLocalEdges</a>.</p>
 
 </div>
 </div>
@@ -756,7 +754,7 @@ template&lt;uint16_type Dim, typename GEOSHAPE , typename SubFace  = SubFaceOfNo
 </div><div class="memdoc">
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classFeel_1_1GeoElement2D.html#a5ad0ae48278bd7903ae72d241c3c1562">edge()</a> </dd></dl>
 
-<p>References <a class="el" href="group__GeoEle.html#ga626a94933fc89b16a56e9c05716540a1">Feel::GeoElement2D&lt; Dim, GEOSHAPE, SubFace, T &gt;::numLocalEdges</a>.</p>
+<p>References <a class="el" href="classFeel_1_1GeoElement2D.html#af4ec8373422c834fa9a1708ad7b98950">Feel::GeoElement2D&lt; Dim, GEOSHAPE, SubFace, T &gt;::id()</a>, and <a class="el" href="group__GeoEle.html#ga626a94933fc89b16a56e9c05716540a1">Feel::GeoElement2D&lt; Dim, GEOSHAPE, SubFace, T &gt;::numLocalEdges</a>.</p>
 
 </div>
 </div>
@@ -1161,7 +1159,7 @@ template&lt;uint16_type Dim, typename GEOSHAPE , typename SubFace  = SubFaceOfNo
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Jul 15 2013 00:07:55 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Wed Jul 17 2013 00:07:24 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

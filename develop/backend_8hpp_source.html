@@ -867,178 +867,180 @@ $(document).ready(function(){initNavTree('backend_8hpp_source.html','');});
 <div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;</div>
 <div class="line"><a name="l01002"></a><span class="lineno"><a class="code" href="classFeel_1_1Backend.html#aa7ce4ac2e7d7146834d56fb6afc2a318"> 1002</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1Backend.html#aa7ce4ac2e7d7146834d56fb6afc2a318">attachPreconditioner</a>( preconditioner_ptrtype preconditioner )</div>
 <div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;    {</div>
-<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;        M_preconditioner = preconditioner;</div>
-<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;    }</div>
-<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;</div>
-<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Observer&gt;</div>
-<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l01012"></a><span class="lineno"><a class="code" href="classFeel_1_1Backend.html#a639ba8a00e9ae8373f272bc2f6c8a3c8"> 1012</a></span>&#160;    <a class="code" href="classFeel_1_1Backend.html#a639ba8a00e9ae8373f272bc2f6c8a3c8">addDeleteObserver</a>( Observer <span class="keyword">const</span>&amp; obs )</div>
-<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;        {</div>
-<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;            M_deleteObservers.connect( obs );</div>
-<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;        }</div>
-<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Observer&gt;</div>
-<div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l01022"></a><span class="lineno"><a class="code" href="classFeel_1_1Backend.html#a9fca567504a8af1966d492ce2cecd268"> 1022</a></span>&#160;    <a class="code" href="classFeel_1_1Backend.html#a639ba8a00e9ae8373f272bc2f6c8a3c8">addDeleteObserver</a>( boost::shared_ptr&lt;Observer&gt; <span class="keyword">const</span>&amp; obs )</div>
-<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;        {</div>
-<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;            M_deleteObservers.connect(boost::bind(&amp;Observer::operator(), obs));</div>
-<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;        }</div>
-<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l01030"></a><span class="lineno"><a class="code" href="classFeel_1_1Backend.html#ad66bbc3dbf94fd9949183f27e8728239"> 1030</a></span>&#160;    <a class="code" href="classFeel_1_1Backend.html#ad66bbc3dbf94fd9949183f27e8728239">sendDeleteSignal</a>()</div>
-<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;        {</div>
-<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;            M_deleteObservers();</div>
-<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;        }</div>
-<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;</div>
-<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;</div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;        <span class="keywordflow">if</span> ( M_preconditioner &amp;&amp; M_preconditioner != preconditioner )</div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;            M_preconditioner-&gt;clear();</div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;        M_preconditioner = preconditioner;</div>
+<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;    }</div>
+<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;</div>
+<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Observer&gt;</div>
+<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l01014"></a><span class="lineno"><a class="code" href="classFeel_1_1Backend.html#a639ba8a00e9ae8373f272bc2f6c8a3c8"> 1014</a></span>&#160;    <a class="code" href="classFeel_1_1Backend.html#a639ba8a00e9ae8373f272bc2f6c8a3c8">addDeleteObserver</a>( Observer <span class="keyword">const</span>&amp; obs )</div>
+<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;        {</div>
+<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;            M_deleteObservers.connect( obs );</div>
+<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;        }</div>
+<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Observer&gt;</div>
+<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l01024"></a><span class="lineno"><a class="code" href="classFeel_1_1Backend.html#a9fca567504a8af1966d492ce2cecd268"> 1024</a></span>&#160;    <a class="code" href="classFeel_1_1Backend.html#a639ba8a00e9ae8373f272bc2f6c8a3c8">addDeleteObserver</a>( boost::shared_ptr&lt;Observer&gt; <span class="keyword">const</span>&amp; obs )</div>
+<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;        {</div>
+<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;            M_deleteObservers.connect(boost::bind(&amp;Observer::operator(), obs));</div>
+<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;        }</div>
+<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l01032"></a><span class="lineno"><a class="code" href="classFeel_1_1Backend.html#ad66bbc3dbf94fd9949183f27e8728239"> 1032</a></span>&#160;    <a class="code" href="classFeel_1_1Backend.html#ad66bbc3dbf94fd9949183f27e8728239">sendDeleteSignal</a>()</div>
+<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;        {</div>
+<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;            M_deleteObservers();</div>
+<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;        }</div>
 <div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;</div>
-<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;    preconditioner_ptrtype M_preconditioner;</div>
-<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;</div>
-<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;    <span class="keywordtype">void</span> start();</div>
+<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;</div>
+<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;</div>
+<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;    preconditioner_ptrtype M_preconditioner;</div>
+<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;</div>
-<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;    <span class="keywordtype">void</span> stop();</div>
+<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;    <span class="keywordtype">void</span> start();</div>
 <div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;</div>
-<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;    <span class="keywordtype">void</span> reset();</div>
+<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;    <span class="keywordtype">void</span> stop();</div>
 <div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;</div>
-<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;    WorldComm M_worldComm;</div>
-<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;</div>
-<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;    po::variables_map M_vm;</div>
+<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;    <span class="keywordtype">void</span> reset();</div>
+<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;</div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;    WorldComm M_worldComm;</div>
 <div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;</div>
-<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;    <a class="code" href="namespaceFeel.html#a4da28efa430cc4bd3a6a86cde30a9809">BackendType</a> M_backend;</div>
+<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;    po::variables_map M_vm;</div>
 <div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;</div>
-<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;    std::string M_prefix;</div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;    <a class="code" href="namespaceFeel.html#a4da28efa430cc4bd3a6a86cde30a9809">BackendType</a> M_backend;</div>
 <div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;</div>
-<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;    solvernonlinear_ptrtype M_nlsolver;</div>
+<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;    std::string M_prefix;</div>
 <div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;</div>
-<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;    <a class="code" href="namespaceFeel.html#a3d7a6c5948e669b187f2d4620499715a">MatrixStructure</a> M_prec_matrix_structure;</div>
+<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;    solvernonlinear_ptrtype M_nlsolver;</div>
 <div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;</div>
-<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;    <span class="keywordtype">double</span> M_totalSolveIter;</div>
-<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;    <span class="keywordtype">double</span> M_lastSolveIter;</div>
-<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;    <span class="keywordtype">double</span> M_firstSolveTime;</div>
-<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;    <span class="keywordtype">double</span> M_residual;</div>
-<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;    <span class="keywordtype">double</span> M_rtolerance;</div>
-<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;    <span class="keywordtype">double</span> M_dtolerance;</div>
-<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;    <span class="keywordtype">double</span> M_atolerance;</div>
-<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;    <span class="keywordtype">double</span> M_rtoleranceSNES, M_stoleranceSNES, M_atoleranceSNES;</div>
-<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;    <span class="keywordtype">double</span> M_rtoleranceKSPinSNES;</div>
-<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;</div>
-<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;    <span class="keywordtype">bool</span> M_reuse_prec;</div>
-<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;    <span class="keywordtype">bool</span> M_reuse_jac;</div>
-<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;    <span class="keywordtype">bool</span> M_reusePrecIsBuild,M_reusePrecRebuildAtFirstNewtonStep;</div>
-<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;    <span class="keywordtype">bool</span> M_reuseJacIsBuild,M_reuseJacRebuildAtFirstNewtonStep;</div>
-<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;    <span class="keywordtype">size_t</span> M_nUsePC;</div>
-<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;    <span class="keywordtype">bool</span>   M_converged;</div>
-<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;    <span class="keywordtype">bool</span>   M_reusePC;</div>
-<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;    <span class="keywordtype">bool</span>   M_reusedPC;</div>
-<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;    <span class="keywordtype">bool</span>   M_reuseFailed;</div>
-<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;    boost::timer M_timer;</div>
-<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;    <span class="keywordtype">bool</span>   M_transpose;</div>
-<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a>    M_maxit, M_maxitSNES;</div>
-<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a>    M_iteration;</div>
-<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;    std::string M_export;</div>
-<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;    std::string M_ksp;</div>
-<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;    std::string M_pc;</div>
-<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;    std::string M_fieldSplit;</div>
-<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;    std::string M_pcFactorMatSolverPackage;</div>
-<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;    <span class="keywordtype">bool</span> M_constant_null_space;</div>
-<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;    <span class="keywordtype">bool</span> M_showKSPMonitor, M_showSNESMonitor;</div>
-<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;    <span class="keywordtype">bool</span> M_showKSPConvergedReason, M_showSNESConvergedReason;</div>
-<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;    <span class="comment">//std::map&lt;std::string,boost::tuple&lt;std::string,std::string&gt; &gt; M_sub;</span></div>
-<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;</div>
-<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;    boost::signals2::signal&lt;void()&gt; M_deleteObservers;</div>
-<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;};</div>
-<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;</div>
-<div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;</div>
-<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;<span class="keyword">typedef</span> Backend&lt;double&gt; backend_type;</div>
-<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;<span class="keyword">typedef</span> boost::shared_ptr&lt;backend_type&gt; backend_ptrtype;</div>
-<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;</div>
-<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;</div>
-<div class="line"><a name="l01102"></a><span class="lineno"><a class="code" href="namespaceFeel_1_1detail.html"> 1102</a></span>&#160;<span class="keyword">namespace </span>detail</div>
-<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;{</div>
-<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;<span class="keyword">class </span>BackendManagerImpl:</div>
-<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;    <span class="keyword">public</span> std::map&lt;std::pair&lt;BackendType,std::string&gt;, backend_ptrtype &gt;,</div>
-<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;    <span class="keyword">public</span> boost::noncopyable</div>
-<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;{</div>
-<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;    <span class="keyword">typedef</span> backend_ptrtype value_type;</div>
-<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;    <span class="keyword">typedef</span> std::pair&lt;BackendType,std::string&gt; key_type;</div>
-<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;    <span class="keyword">typedef</span> std::map&lt;key_type, value_type&gt; backend_manager_type;</div>
-<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;</div>
-<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;};</div>
-<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern">Feel::Singleton&lt;BackendManagerImpl&gt;</a> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern">BackendManager</a>;</div>
-<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;</div>
-<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;<span class="keyword">struct </span>BackendManagerDeleterImpl</div>
-<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;{</div>
-<div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;    <span class="keywordtype">void</span> operator()()<span class="keyword"> const</span></div>
-<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[BackendManagerDeleter] clear BackendManager Singleton: &quot;</span> &lt;&lt; <a class="code" href="classFeel_1_1Singleton.html#a1d3a68a11d8143582273ca02114a140b">detail::BackendManager::instance</a>().size() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;            <a class="code" href="classFeel_1_1Singleton.html#a1d3a68a11d8143582273ca02114a140b">detail::BackendManager::instance</a>().clear();</div>
-<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[BackendManagerDeleter] clear BackendManager done\n&quot;</span>;</div>
-<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;        }</div>
-<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;};</div>
-<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern">Feel::Singleton&lt;BackendManagerDeleterImpl&gt;</a> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern">BackendManagerDeleter</a>;</div>
-<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;} <span class="comment">// detail</span></div>
-<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;</div>
-<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;</div>
-<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;BOOST_PARAMETER_FUNCTION(</div>
-<div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;    ( backend_ptrtype ), <span class="comment">// return type</span></div>
-<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;    backend,           <span class="comment">// 2. function name</span></div>
-<div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;    tag,               <span class="comment">// 3. namespace of tag types</span></div>
-<div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;    ( optional</div>
-<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;      ( vm,           ( po::variables_map ), Environment::vm() )</div>
-<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;      ( name,           ( std::string ), <span class="stringliteral">&quot;&quot;</span> )</div>
-<div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;      ( kind,           ( <a class="code" href="namespaceFeel.html#a4da28efa430cc4bd3a6a86cde30a9809">BackendType</a> ), BACKEND_PETSC )</div>
-<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;      ( rebuild,        ( <span class="keywordtype">bool</span> ), <span class="keyword">false</span> )</div>
-<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;    ) )</div>
-<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;{</div>
-<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;    <span class="comment">// register the BackendManager into Feel::Environment so that it gets the</span></div>
-<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;    <span class="comment">// BackendManager is cleared up when the Environment is deleted</span></div>
-<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> observed=<span class="keyword">false</span>;</div>
-<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;    <span class="keywordflow">if</span> ( !observed )</div>
-<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;    {</div>
-<div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;        Environment::addDeleteObserver( <a class="code" href="classFeel_1_1Singleton.html#a1d3a68a11d8143582273ca02114a140b">detail::BackendManagerDeleter::instance</a>() );</div>
-<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;        observed = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;    }</div>
-<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;</div>
-<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;</div>
-<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;    Feel::detail::ignore_unused_variable_warning( args );</div>
+<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;    <a class="code" href="namespaceFeel.html#a3d7a6c5948e669b187f2d4620499715a">MatrixStructure</a> M_prec_matrix_structure;</div>
+<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;</div>
+<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;    <span class="keywordtype">double</span> M_totalSolveIter;</div>
+<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;    <span class="keywordtype">double</span> M_lastSolveIter;</div>
+<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;    <span class="keywordtype">double</span> M_firstSolveTime;</div>
+<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;    <span class="keywordtype">double</span> M_residual;</div>
+<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;    <span class="keywordtype">double</span> M_rtolerance;</div>
+<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;    <span class="keywordtype">double</span> M_dtolerance;</div>
+<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;    <span class="keywordtype">double</span> M_atolerance;</div>
+<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;    <span class="keywordtype">double</span> M_rtoleranceSNES, M_stoleranceSNES, M_atoleranceSNES;</div>
+<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;    <span class="keywordtype">double</span> M_rtoleranceKSPinSNES;</div>
+<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;</div>
+<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;    <span class="keywordtype">bool</span> M_reuse_prec;</div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;    <span class="keywordtype">bool</span> M_reuse_jac;</div>
+<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;    <span class="keywordtype">bool</span> M_reusePrecIsBuild,M_reusePrecRebuildAtFirstNewtonStep;</div>
+<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;    <span class="keywordtype">bool</span> M_reuseJacIsBuild,M_reuseJacRebuildAtFirstNewtonStep;</div>
+<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;    <span class="keywordtype">size_t</span> M_nUsePC;</div>
+<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;    <span class="keywordtype">bool</span>   M_converged;</div>
+<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;    <span class="keywordtype">bool</span>   M_reusePC;</div>
+<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;    <span class="keywordtype">bool</span>   M_reusedPC;</div>
+<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;    <span class="keywordtype">bool</span>   M_reuseFailed;</div>
+<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;    boost::timer M_timer;</div>
+<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;    <span class="keywordtype">bool</span>   M_transpose;</div>
+<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a>    M_maxit, M_maxitSNES;</div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a>    M_iteration;</div>
+<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;    std::string M_export;</div>
+<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;    std::string M_ksp;</div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;    std::string M_pc;</div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;    std::string M_fieldSplit;</div>
+<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;    std::string M_pcFactorMatSolverPackage;</div>
+<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;    <span class="keywordtype">bool</span> M_constant_null_space;</div>
+<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;    <span class="keywordtype">bool</span> M_showKSPMonitor, M_showSNESMonitor;</div>
+<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;    <span class="keywordtype">bool</span> M_showKSPConvergedReason, M_showSNESConvergedReason;</div>
+<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;    <span class="comment">//std::map&lt;std::string,boost::tuple&lt;std::string,std::string&gt; &gt; M_sub;</span></div>
+<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;</div>
+<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;    boost::signals2::signal&lt;void()&gt; M_deleteObservers;</div>
+<div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;};</div>
+<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;</div>
+<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;</div>
+<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;<span class="keyword">typedef</span> Backend&lt;double&gt; backend_type;</div>
+<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;<span class="keyword">typedef</span> boost::shared_ptr&lt;backend_type&gt; backend_ptrtype;</div>
+<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;</div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;</div>
+<div class="line"><a name="l01104"></a><span class="lineno"><a class="code" href="namespaceFeel_1_1detail.html"> 1104</a></span>&#160;<span class="keyword">namespace </span>detail</div>
+<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;{</div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;<span class="keyword">class </span>BackendManagerImpl:</div>
+<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;    <span class="keyword">public</span> std::map&lt;std::pair&lt;BackendType,std::string&gt;, backend_ptrtype &gt;,</div>
+<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;    <span class="keyword">public</span> boost::noncopyable</div>
+<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;{</div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;    <span class="keyword">typedef</span> backend_ptrtype value_type;</div>
+<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;    <span class="keyword">typedef</span> std::pair&lt;BackendType,std::string&gt; key_type;</div>
+<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;    <span class="keyword">typedef</span> std::map&lt;key_type, value_type&gt; backend_manager_type;</div>
+<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;</div>
+<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;};</div>
+<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern">Feel::Singleton&lt;BackendManagerImpl&gt;</a> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern">BackendManager</a>;</div>
+<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;</div>
+<div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;<span class="keyword">struct </span>BackendManagerDeleterImpl</div>
+<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;{</div>
+<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;    <span class="keywordtype">void</span> operator()()<span class="keyword"> const</span></div>
+<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[BackendManagerDeleter] clear BackendManager Singleton: &quot;</span> &lt;&lt; <a class="code" href="classFeel_1_1Singleton.html#a1d3a68a11d8143582273ca02114a140b">detail::BackendManager::instance</a>().size() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;            <a class="code" href="classFeel_1_1Singleton.html#a1d3a68a11d8143582273ca02114a140b">detail::BackendManager::instance</a>().clear();</div>
+<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[BackendManagerDeleter] clear BackendManager done\n&quot;</span>;</div>
+<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;        }</div>
+<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;};</div>
+<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern">Feel::Singleton&lt;BackendManagerDeleterImpl&gt;</a> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern">BackendManagerDeleter</a>;</div>
+<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;} <span class="comment">// detail</span></div>
+<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;</div>
+<div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;</div>
+<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;BOOST_PARAMETER_FUNCTION(</div>
+<div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;    ( backend_ptrtype ), <span class="comment">// return type</span></div>
+<div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;    backend,           <span class="comment">// 2. function name</span></div>
+<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;    tag,               <span class="comment">// 3. namespace of tag types</span></div>
+<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;    ( optional</div>
+<div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;      ( vm,           ( po::variables_map ), Environment::vm() )</div>
+<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;      ( name,           ( std::string ), <span class="stringliteral">&quot;&quot;</span> )</div>
+<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;      ( kind,           ( <a class="code" href="namespaceFeel.html#a4da28efa430cc4bd3a6a86cde30a9809">BackendType</a> ), BACKEND_PETSC )</div>
+<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;      ( rebuild,        ( <span class="keywordtype">bool</span> ), <span class="keyword">false</span> )</div>
+<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;    ) )</div>
+<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;{</div>
+<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;    <span class="comment">// register the BackendManager into Feel::Environment so that it gets the</span></div>
+<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;    <span class="comment">// BackendManager is cleared up when the Environment is deleted</span></div>
+<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> observed=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;    <span class="keywordflow">if</span> ( !observed )</div>
+<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;    {</div>
+<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;        Environment::addDeleteObserver( <a class="code" href="classFeel_1_1Singleton.html#a1d3a68a11d8143582273ca02114a140b">detail::BackendManagerDeleter::instance</a>() );</div>
+<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;        observed = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;    }</div>
+<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;</div>
 <div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;</div>
-<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;    <span class="keyword">auto</span> git = <a class="code" href="classFeel_1_1Singleton.html#a1d3a68a11d8143582273ca02114a140b">detail::BackendManager::instance</a>().find( std::make_pair( kind, name ) );</div>
+<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;    Feel::detail::ignore_unused_variable_warning( args );</div>
 <div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;</div>
-<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;    <span class="keywordflow">if</span> (  git != <a class="code" href="classFeel_1_1Singleton.html#a1d3a68a11d8143582273ca02114a140b">detail::BackendManager::instance</a>().end() &amp;&amp; ( rebuild == <span class="keyword">false</span> ) )</div>
-<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;    {</div>
-<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;        VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[backend] found backend name=&quot;</span> &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot; kind=&quot;</span> &lt;&lt; kind &lt;&lt; <span class="stringliteral">&quot; rebuild=&quot;</span> &lt;&lt; rebuild &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;        <span class="keywordflow">return</span> git-&gt;second;</div>
-<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;    }</div>
-<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;</div>
-<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;    {</div>
-<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;        <span class="keywordflow">if</span> (  git != <a class="code" href="classFeel_1_1Singleton.html#a1d3a68a11d8143582273ca02114a140b">detail::BackendManager::instance</a>().end() &amp;&amp; ( rebuild == <span class="keyword">true</span> ) )</div>
-<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;            git-&gt;second-&gt;sendDeleteSignal();</div>
-<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;</div>
-<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;        VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[backend] building backend name=&quot;</span> &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot; kind=&quot;</span> &lt;&lt; kind &lt;&lt; <span class="stringliteral">&quot; rebuild=&quot;</span> &lt;&lt; rebuild &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;    <span class="keyword">auto</span> git = <a class="code" href="classFeel_1_1Singleton.html#a1d3a68a11d8143582273ca02114a140b">detail::BackendManager::instance</a>().find( std::make_pair( kind, name ) );</div>
+<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;</div>
+<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;    <span class="keywordflow">if</span> (  git != <a class="code" href="classFeel_1_1Singleton.html#a1d3a68a11d8143582273ca02114a140b">detail::BackendManager::instance</a>().end() &amp;&amp; ( rebuild == <span class="keyword">false</span> ) )</div>
+<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;    {</div>
+<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;        VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[backend] found backend name=&quot;</span> &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot; kind=&quot;</span> &lt;&lt; kind &lt;&lt; <span class="stringliteral">&quot; rebuild=&quot;</span> &lt;&lt; rebuild &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;        <span class="keywordflow">return</span> git-&gt;second;</div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;    }</div>
+<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;</div>
+<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;    {</div>
+<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;        <span class="keywordflow">if</span> (  git != <a class="code" href="classFeel_1_1Singleton.html#a1d3a68a11d8143582273ca02114a140b">detail::BackendManager::instance</a>().end() &amp;&amp; ( rebuild == <span class="keyword">true</span> ) )</div>
+<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;            git-&gt;second-&gt;sendDeleteSignal();</div>
 <div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;</div>
-<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;        backend_ptrtype b;</div>
-<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;        <span class="keywordflow">if</span> ( vm.empty() )</div>
-<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;        {</div>
-<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;            b = <a class="code" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">Feel::backend_type::build</a>( kind );</div>
-<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;        }</div>
-<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;            b = <a class="code" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">Feel::backend_type::build</a>( vm, name );</div>
-<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;        VLOG(2) &lt;&lt; <span class="stringliteral">&quot;storing backend in singleton&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;        <a class="code" href="classFeel_1_1Singleton.html#a1d3a68a11d8143582273ca02114a140b">detail::BackendManager::instance</a>().operator[]( std::make_pair( kind, name ) ) = b;</div>
-<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;        <span class="keywordflow">return</span> b;</div>
-<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;    }</div>
-<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;</div>
-<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;}</div>
+<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;        VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[backend] building backend name=&quot;</span> &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot; kind=&quot;</span> &lt;&lt; kind &lt;&lt; <span class="stringliteral">&quot; rebuild=&quot;</span> &lt;&lt; rebuild &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;</div>
+<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;        backend_ptrtype b;</div>
+<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;        <span class="keywordflow">if</span> ( vm.empty() )</div>
+<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;        {</div>
+<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;            b = <a class="code" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">Feel::backend_type::build</a>( kind );</div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;        }</div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;            b = <a class="code" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">Feel::backend_type::build</a>( vm, name );</div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;        VLOG(2) &lt;&lt; <span class="stringliteral">&quot;storing backend in singleton&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;        <a class="code" href="classFeel_1_1Singleton.html#a1d3a68a11d8143582273ca02114a140b">detail::BackendManager::instance</a>().operator[]( std::make_pair( kind, name ) ) = b;</div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;        <span class="keywordflow">return</span> b;</div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;    }</div>
 <div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;</div>
 <div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;}</div>
-<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __Backend_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;</div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;}</div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __Backend_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Jul 15 2013 00:07:18 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Wed Jul 17 2013 00:06:45 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

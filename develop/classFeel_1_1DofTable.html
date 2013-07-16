@@ -132,19 +132,17 @@ Goncalo Pena </dd></dl>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:afa907e805674d319565e4737b25fcc2e"><td class="memItemLeft" align="right" valign="top">typedef boost::multi_array<br class="typebreak"/>
-&lt; <a class="el" href="classFeel_1_1DofTable.html#a9796c3b92389d9c6134dd228780912ff">global_dof_type</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DofTable.html#afa907e805674d319565e4737b25fcc2e">Container</a></td></tr>
-<tr class="memitem:a9482a29f20c20d6c2b06313ff691612b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9482a29f20c20d6c2b06313ff691612b"></a>
-typedef boost::multi_array<br class="typebreak"/>
-&lt; <a class="el" href="classFeel_1_1DofTable.html#ac1c991cc1bd9c684bed237cbf24b1c62">global_dof_fromface_type</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Container_fromface</b></td></tr>
+<tr class="memitem:a142a928849b7ee397e36ff6421bbdf88"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; int, <br class="typebreak"/>
+std::map&lt; int, <a class="el" href="classFeel_1_1DofTable.html#a9796c3b92389d9c6134dd228780912ff">global_dof_type</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DofTable.html#a142a928849b7ee397e36ff6421bbdf88">Container</a></td></tr>
+<tr class="memitem:ad9c155343d78d3e2f87a7699239fcaca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9c155343d78d3e2f87a7699239fcaca"></a>
+typedef std::map&lt; int, <br class="typebreak"/>
+std::map&lt; int, <br class="typebreak"/>
+<a class="el" href="classFeel_1_1DofTable.html#ac1c991cc1bd9c684bed237cbf24b1c62">global_dof_fromface_type</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Container_fromface</b></td></tr>
 <tr class="memitem:a1e79cbe1ea134ed2e55c5dfe4aa49f12"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e79cbe1ea134ed2e55c5dfe4aa49f12"></a>
 typedef fe_type::continuity_type&#160;</td><td class="memItemRight" valign="bottom"><b>continuity_type</b></td></tr>
 <tr class="memitem:aff472adc82366b699be84bfe5f8d5905"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff472adc82366b699be84bfe5f8d5905"></a>
 typedef <br class="typebreak"/>
 reference_convex_type::super&#160;</td><td class="memItemRight" valign="bottom"><b>convex_type</b></td></tr>
-<tr class="memitem:ac94804c9bf608184249975bd23af3c57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac94804c9bf608184249975bd23af3c57"></a>
-typedef boost::array<br class="typebreak"/>
-&lt; Container::index, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dims_type</b></td></tr>
 <tr class="memitem:aa6960a919a154b2415f84a040e72c816"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6960a919a154b2415f84a040e72c816"></a>
 typedef <br class="typebreak"/>
 dof_element_type::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>dof_const_iterator</b></td></tr>
@@ -216,9 +214,9 @@ int16_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 typedef mesh_type::gm_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>gm_ptrtype</b></td></tr>
 <tr class="memitem:a93f97bdfe4b95efb7a4238a8c03145ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93f97bdfe4b95efb7a4238a8c03145ed"></a>
 typedef mesh_type::gm_type&#160;</td><td class="memItemRight" valign="bottom"><b>gm_type</b></td></tr>
-<tr class="memitem:a65f273ff4f9c8cb88a5a899a1dbe37e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65f273ff4f9c8cb88a5a899a1dbe37e1"></a>
-typedef Container::array_view<br class="typebreak"/>
-&lt; 1 &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>indices_per_element_type</b></td></tr>
+<tr class="memitem:add0d9fe4b9dadbf8ea99bb4264d37333"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add0d9fe4b9dadbf8ea99bb4264d37333"></a>
+typedef std::map&lt; int, <br class="typebreak"/>
+<a class="el" href="classFeel_1_1DofTable.html#a9796c3b92389d9c6134dd228780912ff">global_dof_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>indices_per_element_type</b></td></tr>
 <tr class="memitem:a2bfe4cf1a18568db86e80c7bbffe79f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bfe4cf1a18568db86e80c7bbffe79f7"></a>
 typedef std::list<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1DofTable.html#a029a6a1cc230775ebab4a26460555d78">local_dof_type</a> &gt;<br class="typebreak"/>
@@ -226,6 +224,9 @@ typedef std::list<br class="typebreak"/>
 <tr class="memitem:a029a6a1cc230775ebab4a26460555d78"><td class="memItemLeft" align="right" valign="top">typedef boost::tuple<br class="typebreak"/>
 &lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>, uint16_type, <br class="typebreak"/>
 uint16_type, uint16_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DofTable.html#a029a6a1cc230775ebab4a26460555d78">local_dof_type</a></td></tr>
+<tr class="memitem:a91954fb02dc87f24b893334ef178f19a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91954fb02dc87f24b893334ef178f19a"></a>
+typedef std::map&lt; int, <br class="typebreak"/>
+<a class="el" href="classFeel_1_1DofTable.html#a9796c3b92389d9c6134dd228780912ff">global_dof_type</a> &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>local_map_iterator</b></td></tr>
 <tr class="memitem:ad69f61b707803ca08b5b3ed72b99ae3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad69f61b707803ca08b5b3ed72b99ae3c"></a>
 typedef Eigen::Matrix&lt; int, <br class="typebreak"/>
 nDofPerElement, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>localglobal_indices_type</b></td></tr>
@@ -260,8 +261,6 @@ typedef <br class="typebreak"/>
 mesh_type::pid_element_const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pid_element_const_iterator</b></td></tr>
 <tr class="memitem:ae084b555bd0f8df08bb241a5e1287bc5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae084b555bd0f8df08bb241a5e1287bc5"></a>
 typedef fe_type::points_type&#160;</td><td class="memItemRight" valign="bottom"><b>points_type</b></td></tr>
-<tr class="memitem:a555c0c176050cd8fa10b5dc278c9a002"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a555c0c176050cd8fa10b5dc278c9a002"></a>
-typedef Container::index_range&#160;</td><td class="memItemRight" valign="bottom"><b>range_type</b></td></tr>
 <tr class="memitem:ae004bd8cefe84497a77d05a72a624ae4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae004bd8cefe84497a77d05a72a624ae4"></a>
 typedef boost::tuple<br class="typebreak"/>
 &lt; uint16_type &amp;, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &amp; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ref_shift_type</b></td></tr>
@@ -335,8 +334,8 @@ periodic_element_list_const_iterator&#160;</td><td class="memItemRight" valign="
 void&#160;</td><td class="memItemRight" valign="bottom"><b>dump</b> () const </td></tr>
 <tr class="memitem:a2dea12dc89f2989e658accb8f57c3afd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2dea12dc89f2989e658accb8f57c3afd"></a>
 periodic_element_list_const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>endPeriodicElements</b> () const </td></tr>
-<tr class="memitem:ab346ff69950bee3543e73d4293652cd3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab346ff69950bee3543e73d4293652cd3"></a>
-<a class="el" href="classFeel_1_1DofTable.html#ac1c991cc1bd9c684bed237cbf24b1c62">global_dof_fromface_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>faceLocalToGlobal</b> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> ElId, const uint16_type localNode, const uint16_type c=0) const </td></tr>
+<tr class="memitem:a71a4cb4796fe841f8fe2b7ed04ab171b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71a4cb4796fe841f8fe2b7ed04ab171b"></a>
+<a class="el" href="classFeel_1_1DofTable.html#ac1c991cc1bd9c684bed237cbf24b1c62">global_dof_fromface_type</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>faceLocalToGlobal</b> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> ElId, const uint16_type localNode, const uint16_type c=0) const </td></tr>
 <tr class="memitem:a5f8fa5bdac2ead003a4390f1abd012bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f8fa5bdac2ead003a4390f1abd012bf"></a>
 std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getIndices</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> id_el) const </td></tr>
 <tr class="memitem:a45807f3cd30f33e7af9975c4065aa440"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45807f3cd30f33e7af9975c4065aa440"></a>
@@ -351,8 +350,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>getIndicesSet</b> (<a
 void&#160;</td><td class="memItemRight" valign="bottom"><b>getIndicesSetOnGlobalCluster</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> id_el, std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt; &amp;ind) const </td></tr>
 <tr class="memitem:a46c8d2611e77644620c25c674b953360"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46c8d2611e77644620c25c674b953360"></a>
 <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getIndicesSize</b> () const </td></tr>
-<tr class="memitem:acc5885f02b0954a03162fcaf64851fe9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc5885f02b0954a03162fcaf64851fe9"></a>
-indices_per_element_type&#160;</td><td class="memItemRight" valign="bottom"><b>indices</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> id_el) const </td></tr>
+<tr class="memitem:a2d0024ccafb5d8d8b859e7fda372300b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d0024ccafb5d8d8b859e7fda372300b"></a>
+indices_per_element_type const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>indices</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> id_el) const </td></tr>
 <tr class="memitem:a62b635f430c6c20f34440d80aaf65657"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DofTable.html#a62b635f430c6c20f34440d80aaf65657">initDofMap</a> (<a class="el" href="classFeel_1_1DofTable.html#aa2eb24a6303c31c4e27c330e26a5c13d">mesh_type</a> &amp;M)</td></tr>
 <tr class="memitem:a2ab4f25e30d3401137e156cc4a1dc34d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DofTable.html#a2ab4f25e30d3401137e156cc4a1dc34d">insertDof</a> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> ie, uint16_type l_dof, uint16_type lc, dof_type gDof, uint16_type processor, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &amp;pDof, int32_type sign=1, bool is_dof_periodic=false, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> shift=0, Marker1 const &amp;marker=Marker1(0))</td></tr>
 <tr class="memitem:a7c0a00edc88984b1432951015e824117"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c0a00edc88984b1432951015e824117"></a>
@@ -362,8 +361,8 @@ uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>localDofId</b>
 <tr class="memitem:a92c2022f023fa89e6ffe19f9364e2c49"><td class="memTemplParams" colspan="2"><a class="anchor" id="a92c2022f023fa89e6ffe19f9364e2c49"></a>
 template&lt;typename Elem &gt; </td></tr>
 <tr class="memitem:a92c2022f023fa89e6ffe19f9364e2c49"><td class="memTemplItemLeft" align="right" valign="top">uint16_type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>localDofInElement</b> (Elem const &amp;El, const uint16_type localNode, const uint16_type c=0) const </td></tr>
-<tr class="memitem:a80c0f1933af9d9ae7b80ff1fcdbea9ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80c0f1933af9d9ae7b80ff1fcdbea9ed"></a>
-<a class="el" href="classFeel_1_1DofTable.html#a9796c3b92389d9c6134dd228780912ff">global_dof_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>localToGlobal</b> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> ElId, const uint16_type localNode, const uint16_type c=0) const </td></tr>
+<tr class="memitem:a3d3ccc7257cf529e70c8995bf712cbdf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d3ccc7257cf529e70c8995bf712cbdf"></a>
+<a class="el" href="classFeel_1_1DofTable.html#a9796c3b92389d9c6134dd228780912ff">global_dof_type</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>localToGlobal</b> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> ElId, const uint16_type localNode, const uint16_type c=0) const </td></tr>
 <tr class="memitem:a8fc58a9560bc0bf175b756560bbe429a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8fc58a9560bc0bf175b756560bbe429a"></a>
 template&lt;typename Elem &gt; </td></tr>
 <tr class="memitem:a8fc58a9560bc0bf175b756560bbe429a"><td class="memTemplItemLeft" align="right" valign="top">mpl::if_&lt; mpl::equal_to<br class="typebreak"/>
@@ -598,14 +597,14 @@ std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695
 <tr class="memitem:aa7c5cb221fa4bb81426cfae5936c2083 inherit pro_attribs_classFeel_1_1DataMap"><td class="memItemLeft" align="right" valign="top">WorldComm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DataMap.html#aa7c5cb221fa4bb81426cfae5936c2083">M_worldComm</a></td></tr>
 </table>
 <h2>Member Typedef Documentation</h2>
-<a class="anchor" id="afa907e805674d319565e4737b25fcc2e"></a>
+<a class="anchor" id="a142a928849b7ee397e36ff6421bbdf88"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename MeshType, typename FEType, typename PeriodicityType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::multi_array&lt;<a class="el" href="classFeel_1_1DofTable.html#a9796c3b92389d9c6134dd228780912ff">global_dof_type</a>,2&gt; <a class="el" href="classFeel_1_1DofTable.html">Feel::DofTable</a>&lt; MeshType, FEType, PeriodicityType &gt;::<a class="el" href="classFeel_1_1DofTable.html#afa907e805674d319565e4737b25fcc2e">Container</a></td>
+          <td class="memname">typedef std::map&lt;int,std::map&lt;int,<a class="el" href="classFeel_1_1DofTable.html#a9796c3b92389d9c6134dd228780912ff">global_dof_type</a>&gt; &gt; <a class="el" href="classFeel_1_1DofTable.html">Feel::DofTable</a>&lt; MeshType, FEType, PeriodicityType &gt;::<a class="el" href="classFeel_1_1DofTable.html#a142a928849b7ee397e36ff6421bbdf88">Container</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1381,8 +1380,6 @@ template&lt;typename MeshType , typename FEType , typename PeriodicityType &gt; 
 </div><div class="memdoc">
 <p>Initialize the dof map table </p>
 
-<p>References <a class="el" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">Feel::invalid_size_type_value</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a2ab4f25e30d3401137e156cc4a1dc34d"></a>
@@ -1999,7 +1996,7 @@ template&lt;typename MeshType , typename FEType , typename PeriodicityType &gt; 
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Jul 15 2013 00:07:53 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Wed Jul 17 2013 00:07:23 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

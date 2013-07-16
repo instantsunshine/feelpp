@@ -940,7 +940,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;    <span class="comment">//_M_n_b_vertices.assign( __n, 0 );</span></div>
 <div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;</div>
 <div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;    <span class="comment">// add the element to the mesh</span></div>
-<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;    <span class="keywordflow">for</span> ( uint __i = 0; __i &lt; numElements; ++__i )</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> __i = 0; __i &lt; numElements; ++__i )</div>
 <div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;    {</div>
 <div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        <span class="comment">// if the element is not associated to the processor (in partition or ghost) or</span></div>
 <div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        <span class="comment">// if the physical entity is ignored</span></div>
@@ -949,7 +949,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;            <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;</div>
 <div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;        <span class="comment">// add the points associates to the element on the processor</span></div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;        <span class="keywordflow">for</span> ( uint16_type p = 0; p &lt; npoints_per_element; ++p )</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;        <span class="keywordflow">for</span> ( uint16_type p = 0; p &lt; __et[__i].numVertices; ++p )</div>
 <div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;        {</div>
 <div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;            <span class="keywordtype">int</span> ptid = __et[__i].indices[p];</div>
 <div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;            <span class="comment">// don&#39;t do anything if the point is already registered</span></div>
@@ -1689,7 +1689,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Jul 15 2013 00:07:34 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Wed Jul 17 2013 00:07:02 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
