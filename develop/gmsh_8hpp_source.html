@@ -1197,7 +1197,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;    LOG_IF( WARNING, mesh_name.extension() != <span class="stringliteral">&quot;.geo&quot;</span> &amp;&amp; mesh_name.extension() != <span class="stringliteral">&quot;.msh&quot;</span> )</div>
 <div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;Invalid filename &quot;</span> &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot; it should have either the .geo or .msh extension\n&quot;</span>;</div>
 <div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;</div>
-<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;    <span class="keywordflow">if</span> ( mesh_name.extension() == <span class="stringliteral">&quot;.geo&quot;</span> )</div>
+<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;    <span class="keywordflow">if</span> ( mesh_name.extension() == <span class="stringliteral">&quot;.geo&quot;</span> &amp;&amp; fs::exists( mesh_name ) )</div>
 <div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;    {</div>
 <div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;        <span class="keywordflow">return</span> createGMSHMesh( _mesh=mesh,</div>
 <div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;                               _desc=geo( _filename=mesh_name.string(),</div>
@@ -1215,7 +1215,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;            );</div>
 <div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;    }</div>
 <div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;</div>
-<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;    <span class="keywordflow">if</span> ( mesh_name.extension() == <span class="stringliteral">&quot;.msh&quot;</span> )</div>
+<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;    <span class="keywordflow">if</span> ( mesh_name.extension() == <span class="stringliteral">&quot;.msh&quot;</span>  &amp;&amp; fs::exists( mesh_name )  )</div>
 <div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;    {</div>
 <div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;        <span class="keywordflow">return</span> loadGMSHMesh( _mesh=mesh,</div>
 <div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;                             _filename=mesh_name.string(),</div>
@@ -1240,7 +1240,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Jul 17 2013 00:07:00 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Fri Jul 19 2013 00:08:06 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
