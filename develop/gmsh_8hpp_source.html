@@ -1181,66 +1181,71 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;      ( update,          *( boost::is_integral&lt;mpl::_&gt; ), MESH_CHECK|MESH_UPDATE_FACES|MESH_UPDATE_EDGES )</div>
 <div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;      ( physical_are_elementary_regions,           (<span class="keywordtype">bool</span>), option(_name=<span class="stringliteral">&quot;gmsh.physical_are_elementary_regions&quot;</span>).<span class="keyword">template</span> as&lt;bool&gt;() )</div>
 <div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;      ( worldcomm,       (WorldComm), Environment::worldComm() )</div>
-<div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;      ( rebuild_partitions, (<span class="keywordtype">bool</span>), option(_name=<span class="stringliteral">&quot;gmsh.partition&quot;</span>).<span class="keyword">template</span> as&lt;bool&gt;() )</div>
-<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;      ( rebuild_partitions_filename, *( boost::is_convertible&lt;mpl::_,std::string&gt; ) , filename )</div>
-<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;      ( partitions,      *( boost::is_integral&lt;mpl::_&gt; ), Environment::worldComm().size() )</div>
-<div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;      ( partitioner,     *( boost::is_integral&lt;mpl::_&gt; ), option(_name=<span class="stringliteral">&quot;gmsh.partitioner&quot;</span>).<span class="keyword">template</span> as&lt;int&gt;() )</div>
-<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;      ( partition_file,   *( boost::is_integral&lt;mpl::_&gt; ), 0 )</div>
-<div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160;      ( depends, *( boost::is_convertible&lt;mpl::_,std::string&gt; ), option(_name=<span class="stringliteral">&quot;gmsh.depends&quot;</span>).<span class="keyword">template</span> as&lt;std::string&gt;() )</div>
-<div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160;        )</div>
-<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;    )</div>
-<div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160;{</div>
-<div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Feel::detail::mesh&lt;Args&gt;::type _mesh_type;</div>
-<div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Feel::detail::mesh&lt;Args&gt;::ptrtype _mesh_ptrtype;</div>
-<div class="line"><a name="l01413"></a><span class="lineno"> 1413</span>&#160;</div>
-<div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160;    fs::path mesh_name=filename;</div>
-<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;    LOG_IF( WARNING, mesh_name.extension() != <span class="stringliteral">&quot;.geo&quot;</span> &amp;&amp; mesh_name.extension() != <span class="stringliteral">&quot;.msh&quot;</span> )</div>
-<div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;Invalid filename &quot;</span> &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot; it should have either the .geo or .msh extension\n&quot;</span>;</div>
-<div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;</div>
-<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;    <span class="keywordflow">if</span> ( mesh_name.extension() == <span class="stringliteral">&quot;.geo&quot;</span> &amp;&amp; fs::exists( mesh_name ) )</div>
-<div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;    {</div>
-<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;        <span class="keywordflow">return</span> createGMSHMesh( _mesh=mesh,</div>
-<div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;                               _desc=geo( _filename=mesh_name.string(),</div>
-<div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;                                          _depends=depends ),</div>
-<div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;                               _straighten=straighten,</div>
-<div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;                               _refine=refine,</div>
-<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;                               _update=update,</div>
-<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;                               _physical_are_elementary_regions=physical_are_elementary_regions<span class="comment">//,</span></div>
-<div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160;                               <span class="comment">//_worldcomm=worldcomm,</span></div>
-<div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;                               <span class="comment">//_rebuild_partitions=rebuild_partitions,</span></div>
-<div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160;                               <span class="comment">//_rebuild_partitions_filename=rebuild_partitions_filename,</span></div>
-<div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160;                               <span class="comment">//_partitions=partitions,</span></div>
-<div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160;                               <span class="comment">//_partitioner=partitioner,</span></div>
-<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;                               <span class="comment">//_partition_file=partition_file</span></div>
-<div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;            );</div>
-<div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;    }</div>
-<div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;</div>
-<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;    <span class="keywordflow">if</span> ( mesh_name.extension() == <span class="stringliteral">&quot;.msh&quot;</span>  &amp;&amp; fs::exists( mesh_name )  )</div>
-<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;    {</div>
-<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;        <span class="keywordflow">return</span> loadGMSHMesh( _mesh=mesh,</div>
-<div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;                             _filename=mesh_name.string(),</div>
-<div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;                             _straighten=straighten,</div>
-<div class="line"><a name="l01441"></a><span class="lineno"> 1441</span>&#160;                             _refine=refine,</div>
-<div class="line"><a name="l01442"></a><span class="lineno"> 1442</span>&#160;                             _update=update,</div>
-<div class="line"><a name="l01443"></a><span class="lineno"> 1443</span>&#160;                             _physical_are_elementary_regions=physical_are_elementary_regions,</div>
-<div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;                             _worldcomm=worldcomm,</div>
-<div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;                             _rebuild_partitions=rebuild_partitions,</div>
-<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;                             _rebuild_partitions_filename=rebuild_partitions_filename,</div>
-<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;                             _partitions=partitions,</div>
-<div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;                             _partitioner=partitioner,</div>
-<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;                             _partition_file=partition_file</div>
-<div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;            );</div>
-<div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;    }</div>
-<div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;    <span class="keywordflow">return</span> unitHypercube&lt;_mesh_type::nDim, typename _mesh_type::shape_type&gt;();</div>
-<div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;}</div>
-<div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160;</div>
-<div class="line"><a name="l01455"></a><span class="lineno"> 1455</span>&#160;} <span class="comment">// Feel</span></div>
-<div class="line"><a name="l01456"></a><span class="lineno"> 1456</span>&#160;</div>
-<div class="line"><a name="l01457"></a><span class="lineno"> 1457</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __Gmsh_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;      ( force_rebuild,   *( boost::is_integral&lt;mpl::_&gt; ), 0 )</div>
+<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;      ( rebuild_partitions, (<span class="keywordtype">bool</span>), option(_name=<span class="stringliteral">&quot;gmsh.partition&quot;</span>).<span class="keyword">template</span> as&lt;bool&gt;() )</div>
+<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;      ( rebuild_partitions_filename, *( boost::is_convertible&lt;mpl::_,std::string&gt; ) , filename )</div>
+<div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;      ( partitions,      *( boost::is_integral&lt;mpl::_&gt; ), Environment::worldComm().size() )</div>
+<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;      ( partitioner,     *( boost::is_integral&lt;mpl::_&gt; ), option(_name=<span class="stringliteral">&quot;gmsh.partitioner&quot;</span>).<span class="keyword">template</span> as&lt;int&gt;() )</div>
+<div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160;      ( partition_file,   *( boost::is_integral&lt;mpl::_&gt; ), 0 )</div>
+<div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160;      ( depends, *( boost::is_convertible&lt;mpl::_,std::string&gt; ), option(_name=<span class="stringliteral">&quot;gmsh.depends&quot;</span>).<span class="keyword">template</span> as&lt;std::string&gt;() )</div>
+<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;        )</div>
+<div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160;    )</div>
+<div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;{</div>
+<div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Feel::detail::mesh&lt;Args&gt;::type _mesh_type;</div>
+<div class="line"><a name="l01413"></a><span class="lineno"> 1413</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Feel::detail::mesh&lt;Args&gt;::ptrtype _mesh_ptrtype;</div>
+<div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160;</div>
+<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;    fs::path mesh_name=filename;</div>
+<div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;    LOG_IF( WARNING, mesh_name.extension() != <span class="stringliteral">&quot;.geo&quot;</span> &amp;&amp; mesh_name.extension() != <span class="stringliteral">&quot;.msh&quot;</span> )</div>
+<div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;Invalid filename &quot;</span> &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot; it should have either the .geo or .msh extension\n&quot;</span>;</div>
+<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;</div>
+<div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;    <span class="keywordflow">if</span> ( mesh_name.extension() == <span class="stringliteral">&quot;.geo&quot;</span> &amp;&amp; fs::exists( mesh_name ) )</div>
+<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;    {</div>
+<div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;        <span class="keywordflow">return</span> createGMSHMesh( _mesh=mesh,</div>
+<div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;                               _desc=geo( _filename=mesh_name.string(),</div>
+<div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;                                          _depends=depends ),</div>
+<div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;                               _straighten=straighten,</div>
+<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;                               _refine=refine,</div>
+<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;                               _update=update,</div>
+<div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160;                               _physical_are_elementary_regions=physical_are_elementary_regions,</div>
+<div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;                               _force_rebuild=force_rebuild</div>
+<div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160;                               <span class="comment">//_worldcomm=worldcomm,</span></div>
+<div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160;                               <span class="comment">//_rebuild_partitions=rebuild_partitions,</span></div>
+<div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160;                               <span class="comment">//_rebuild_partitions_filename=rebuild_partitions_filename,</span></div>
+<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;                               <span class="comment">//_partitions=partitions,</span></div>
+<div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;                               <span class="comment">//_partitioner=partitioner,</span></div>
+<div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;                               <span class="comment">//_partition_file=partition_file</span></div>
+<div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;            );</div>
+<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;    }</div>
+<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;</div>
+<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;    <span class="keywordflow">if</span> ( mesh_name.extension() == <span class="stringliteral">&quot;.msh&quot;</span>  &amp;&amp; fs::exists( mesh_name )  )</div>
+<div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;    {</div>
+<div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;        <span class="keywordflow">return</span> loadGMSHMesh( _mesh=mesh,</div>
+<div class="line"><a name="l01441"></a><span class="lineno"> 1441</span>&#160;                             _filename=mesh_name.string(),</div>
+<div class="line"><a name="l01442"></a><span class="lineno"> 1442</span>&#160;                             _straighten=straighten,</div>
+<div class="line"><a name="l01443"></a><span class="lineno"> 1443</span>&#160;                             _refine=refine,</div>
+<div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;                             _update=update,</div>
+<div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;                             _physical_are_elementary_regions=physical_are_elementary_regions,</div>
+<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;                             _worldcomm=worldcomm,</div>
+<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;                             _rebuild_partitions=rebuild_partitions,</div>
+<div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;                             _rebuild_partitions_filename=rebuild_partitions_filename,</div>
+<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;                             _partitions=partitions,</div>
+<div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;                             _partitioner=partitioner,</div>
+<div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;                             _partition_file=partition_file</div>
+<div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;            );</div>
+<div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;</div>
+<div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160;    }</div>
+<div class="line"><a name="l01455"></a><span class="lineno"> 1455</span>&#160;</div>
+<div class="line"><a name="l01456"></a><span class="lineno"> 1456</span>&#160;    LOG(WARNING) &lt;&lt; <span class="stringliteral">&quot;file &quot;</span> &lt;&lt; mesh_name &lt;&lt; <span class="stringliteral">&quot; not found, generating instead an hypercube in &quot;</span> &lt;&lt; _mesh_type::nDim &lt;&lt; <span class="stringliteral">&quot;D geometry and mesh...&quot;</span>;</div>
+<div class="line"><a name="l01457"></a><span class="lineno"> 1457</span>&#160;    <span class="keywordflow">return</span> unitHypercube&lt;_mesh_type::nDim, typename _mesh_type::shape_type&gt;();</div>
+<div class="line"><a name="l01458"></a><span class="lineno"> 1458</span>&#160;}</div>
+<div class="line"><a name="l01459"></a><span class="lineno"> 1459</span>&#160;</div>
+<div class="line"><a name="l01460"></a><span class="lineno"> 1460</span>&#160;} <span class="comment">// Feel</span></div>
+<div class="line"><a name="l01461"></a><span class="lineno"> 1461</span>&#160;</div>
+<div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __Gmsh_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Jul 19 2013 00:08:06 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Sun Jul 21 2013 00:06:38 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
