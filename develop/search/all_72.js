@@ -51,6 +51,7 @@ var searchData=
   ['regiontree',['RegionTree',['../classFeel_1_1RegionTree.html',1,'Feel']]],
   ['regiontree',['regionTree',['../classFeel_1_1FunctionSpace.html#a3a32124a23094f24cf1672b359bbd340',1,'Feel::FunctionSpace']]],
   ['registerproduct',['registerProduct',['../classFeel_1_1Factory.html#adf3e133a95311d2776f1c1c8a9d1119a',1,'Feel::Factory']]],
+  ['reinit_5ffms_2ehpp',['reinit_fms.hpp',['../reinit__fms_8hpp.html',1,'']]],
   ['reinitsubmatrix',['reinitSubmatrix',['../classFeel_1_1MatrixSparse.html#a25079da341b885752c5d7d49534bb156',1,'Feel::MatrixSparse']]],
   ['relaxationstep',['relaxationStep',['../classFeel_1_1Aitken.html#a7db5c20d56e11446adbfe6778f1a1589',1,'Feel::Aitken::relaxationStep(eltType &amp;new_elem)'],['../classFeel_1_1Aitken.html#a454f24e096a29346a28fdeb653fc9a38',1,'Feel::Aitken::relaxationStep(element_type &amp;new_elem)']]],
   ['renumber',['renumber',['../classFeel_1_1Mesh.html#a47838a2ca6fcfac74944cc0c2398c125',1,'Feel::Mesh::renumber()'],['../classFeel_1_1Mesh0D.html#a35084da94d7c29956b374fd8ee55c7d3',1,'Feel::Mesh0D::renumber()'],['../classFeel_1_1Mesh1D.html#a9c14a403a3692759818f8a79971b6cdc',1,'Feel::Mesh1D::renumber()'],['../classFeel_1_1Mesh2D.html#a3b24571d5e1ddf276a28b035c374cfbe',1,'Feel::Mesh2D::renumber()'],['../classFeel_1_1Mesh3D.html#ab88a13ab3f386b3abf77ee3df63d63a6',1,'Feel::Mesh3D::renumber()'],['../classFeel_1_1MeshBase.html#adbcbbde4f2a3eacc704cdd94ed21c52b',1,'Feel::MeshBase::renumber()']]],

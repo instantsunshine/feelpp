@@ -6027,10 +6027,10 @@ $(document).ready(function(){initNavTree('functionspace_8hpp_source.html','');})
 <div class="line"><a name="l06307"></a><span class="lineno"> 6307</span>&#160;</div>
 <div class="line"><a name="l06314"></a><span class="lineno"> 6314</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">int</span> Order,<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><a name="l06315"></a><span class="lineno"> 6315</span>&#160;<span class="keyword">inline</span></div>
-<div class="line"><a name="l06316"></a><span class="lineno"> 6316</span>&#160;boost::shared_ptr&lt;FunctionSpace&lt;MeshType,bases&lt;Lagrange&lt;Order,Scalar,Continuous&gt;&gt;&gt;&gt;</div>
+<div class="line"><a name="l06316"></a><span class="lineno"> 6316</span>&#160;boost::shared_ptr&lt;FunctionSpace&lt;MeshType,bases&lt;Lagrange&lt;Order,Scalar,Continuous&gt;&gt;,Periodicity &lt;NoPeriodicity&gt;&gt;&gt;</div>
 <div class="line"><a name="l06317"></a><span class="lineno"> 6317</span>&#160;Pch( boost::shared_ptr&lt;MeshType&gt; mesh )</div>
 <div class="line"><a name="l06318"></a><span class="lineno"> 6318</span>&#160;{</div>
-<div class="line"><a name="l06319"></a><span class="lineno"> 6319</span>&#160;    <span class="keywordflow">return</span> FunctionSpace&lt;MeshType,bases&lt;Lagrange&lt;Order,Scalar,Continuous&gt;&gt;&gt;::New( mesh );</div>
+<div class="line"><a name="l06319"></a><span class="lineno"> 6319</span>&#160;    <span class="keywordflow">return</span> FunctionSpace&lt;MeshType,bases&lt;Lagrange&lt;Order,Scalar,Continuous&gt;&gt;, Periodicity &lt;NoPeriodicity&gt;&gt;::New( mesh );</div>
 <div class="line"><a name="l06320"></a><span class="lineno"> 6320</span>&#160;}</div>
 <div class="line"><a name="l06321"></a><span class="lineno"> 6321</span>&#160;</div>
 <div class="line"><a name="l06328"></a><span class="lineno"> 6328</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">int</span> Order,<span class="keyword">typename</span> MeshType&gt;</div>
@@ -6122,7 +6122,7 @@ $(document).ready(function(){initNavTree('functionspace_8hpp_source.html','');})
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sun Jul 21 2013 00:06:36 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Thu Jul 25 2013 00:08:05 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
