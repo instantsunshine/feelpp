@@ -1,5 +1,9 @@
 var NAVTREEINDEX19 =
 {
+"classFeel_1_1PointSetQuadrature.html#a647687f6f9e454f113ce79033a36c206":[10,0,159,2],
+"classFeel_1_1PointSetQuadrature.html#a6549a5e98d6e8770edeecaccce3773e7":[10,0,159,34],
+"classFeel_1_1PointSetQuadrature.html#a6ca38bbe16edec47b01078648701d504":[10,0,159,0],
+"classFeel_1_1PointSetQuadrature.html#a74b633ce86a5efaefa2098c80d4a521a":[10,0,159,41],
 "classFeel_1_1PointSetQuadrature.html#a75a6a713cd581b77bf7a180ae18322a3":[10,0,159,21],
 "classFeel_1_1PointSetQuadrature.html#a762f794fa1cff7c2bd8dc7a2aba90fc6":[10,0,159,4],
 "classFeel_1_1PointSetQuadrature.html#a7683f57536855b25aeae4825c57c1f21":[10,0,159,36],
@@ -245,9 +249,5 @@ var NAVTREEINDEX19 =
 "classFeel_1_1Projector.html#a127349e1cee7690d18d695691e522a5e":[10,0,169,19],
 "classFeel_1_1Projector.html#a1ac5e56ab3fd115799a3c2aff536bd41":[10,0,169,10],
 "classFeel_1_1Projector.html#a1ba7c70fddc2d8a309baaaf6a451b2c8":[10,0,169,4],
-"classFeel_1_1Projector.html#a1e96870830d0d25f3bbb299b2cd0c07b":[10,0,169,20],
-"classFeel_1_1Projector.html#a2da8cbc77515cedb0acaee34c4b07fd5":[10,0,169,17],
-"classFeel_1_1Projector.html#a44e5c35122ddb0cc1cc5e701a165a82f":[10,0,169,7],
-"classFeel_1_1Projector.html#a6637ff3ee4c5898859f4ea63da2327a0":[10,0,169,21],
-"classFeel_1_1Projector.html#a749821a9df8ed5ff03d32a7692d82c2a":[10,0,169,1]
+"classFeel_1_1Projector.html#a1e96870830d0d25f3bbb299b2cd0c07b":[10,0,169,20]
 };

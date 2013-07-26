@@ -27,6 +27,7 @@ var classFeel_1_1GeoElement1D =
     [ "faces", "classFeel_1_1GeoElement1D.html#a2312bafe8db0ee3aef742c183ff56f2f", null ],
     [ "id", "classFeel_1_1GeoElement1D.html#a0918cb11aee7d2c633d2656479c30dd7", null ],
     [ "isGhostCell", "classFeel_1_1GeoElement1D.html#a4eb503cbdb91c1f753f42657e1913a51", null ],
+    [ "isGhostFace", "classFeel_1_1GeoElement1D.html#a022be158d3c5c54ef2623581667552fa", null ],
     [ "isInterProcessDomain", "classFeel_1_1GeoElement1D.html#a43f711835644483d699a6c4f951b3da2", null ],
     [ "isOnBoundary", "classFeel_1_1GeoElement1D.html#a7055ec20cca6b9011faa1818f01607e2", null ],
     [ "map", "classFeel_1_1GeoElement1D.html#a0d7e93d0df17b10f6d0c3303cfea5977", null ],

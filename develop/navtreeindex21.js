@@ -1,5 +1,9 @@
 var NAVTREEINDEX21 =
 {
+"classFeel_1_1SolverEigen.html#af26f97e2dfc3a7ca1fcfbca651c1cf8e":[10,0,185,17],
+"classFeel_1_1SolverEigen.html#af575c3a3350aa029b887117b07a8f9f9":[10,0,185,33],
+"classFeel_1_1SolverEigen.html#af5e07b3f630d217ce03ad39977464681":[10,0,185,22],
+"classFeel_1_1SolverEigen.html#afcd6f8382b7c9076d89d42efc1e0a099":[10,0,185,46],
 "classFeel_1_1SolverLinear.html":[10,0,186],
 "classFeel_1_1SolverLinear.html#a00c678b88735046fc5cf51ca71f3f1ef":[10,0,186,7],
 "classFeel_1_1SolverLinear.html#a0106b7b383e6f56664faa03da1319c6a":[10,0,186,42],
@@ -245,9 +249,5 @@ var NAVTREEINDEX21 =
 "classFeel_1_1Sphere.html#a89f02d9b1aca1b29fe8d281785ba6794":[10,0,191,6],
 "classFeel_1_1Sphere.html#a955e68ce842bee7362060a8bf144ba7d":[10,0,191,2],
 "classFeel_1_1Sphere.html#a9baad8895c12963493311c5475261347":[10,0,191,0],
-"classFeel_1_1Sphere.html#ab1b027d8b163b7c8af9ceb39cc02fd62":[10,0,191,15],
-"classFeel_1_1Sphere.html#ab7d6b2425d4fa4e75da30316edd8fe0c":[10,0,191,7],
-"classFeel_1_1Sphere.html#ad25b9da537f0a7d8990896be5259df92":[10,0,191,10],
-"classFeel_1_1Sphere.html#ad87de8af1aa22665ef15d40a813c13b6":[10,0,191,4],
-"classFeel_1_1Sphere.html#afe25bd44afa4ee40bcc4b85c04db6194":[10,0,191,12]
+"classFeel_1_1Sphere.html#ab1b027d8b163b7c8af9ceb39cc02fd62":[10,0,191,15]
 };
