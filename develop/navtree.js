@@ -15,10 +15,12 @@ var NAVTREE =
       [ "Mesh Notations", "Notations.html#MeshNotations", null ]
     ] ],
     [ "ChangeLog", "ChangeLog.html", [
-      [ "Feel++ Release 0.93.0", "ChangeLog.html#feelpp0940", [
+      [ "Feel++ Release 0.94.0", "ChangeLog.html#feelpp0940", [
         [ "Changes", "ChangeLog.html#changes0940", null ],
         [ "Features", "ChangeLog.html#features0940", null ],
-        [ "Issues", "ChangeLog.html#issues0940", null ],
+        [ "Noteworthy Issues", "ChangeLog.html#issues0940", null ]
+      ] ],
+      [ "Feel++ Release 0.93.0", "ChangeLog.html#feelpp0930", [
         [ "Changes", "ChangeLog.html#changes0930", null ],
         [ "Features", "ChangeLog.html#features0930", null ],
         [ "Issues", "ChangeLog.html#issues0930", null ]
@@ -45,34 +47,34 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"StokesCurl.html#StokesCurl_Theory",
-"classFeel_1_1AdvReact.html#a271840226d0a078160173315cab8fe88",
-"classFeel_1_1Backend.html#ac3117fd5cb06e4d5f65c1b67b0f4cb7a",
-"classFeel_1_1CRB.html#a7e91a6877d6064fba476540ca71c0772",
-"classFeel_1_1CRBModel.html#ada2e2c3e906fff93681e8c297129c011",
+"StokesCurl.html#StokesCurl_Implementation",
+"classFeel_1_1AdvReact.html#a2506697a50654020e66644851ca780c8",
+"classFeel_1_1Backend.html#ac09a918cec2b174b1eec7ac35d92f730",
+"classFeel_1_1CRB.html#a7b4c7d89ae5e544759e88bab9122f16b",
+"classFeel_1_1CRBModel.html#ada0c365d6d269ce7005241092e7dcc2b",
 "classFeel_1_1CastIron.html#a44d0fe821041526c350ed0b3bdbcaa57",
-"classFeel_1_1DofTable.html#a6e06615d6ed5637383f61535ca4c4c05",
-"classFeel_1_1ErrorBase.html#a86473cbe64444c971643f6071feb4278",
-"classFeel_1_1Feel_1_1detail_1_1AdFuncPow.html#a82e3cfa0269c214633fb9a335a2adc6c",
-"classFeel_1_1FunctionalSet.html#a487221b5b867f794131d102f9496cb90",
-"classFeel_1_1GeoEntity.html#a686cce5baf482cc8880bcd924d905b44",
-"classFeel_1_1GeoND.html#a086aa9cded2d764aba9012bb0c2e5d35",
-"classFeel_1_1GraphCSR.html#aea7117105e67f6c2e6c80c823eb1c8b3",
-"classFeel_1_1Legendre.html#a2065ed61c82f7fe9b0b0c69a6985cf39",
-"classFeel_1_1MatrixSparse.html#ada2af971c7b757c03b88a040e60f1cd0",
-"classFeel_1_1Mesh1D.html#a5aef0447ae3b6c713f78bb203fe6b6c1",
-"classFeel_1_1OperatorInterpolation.html#a20a59dad2b06d9df25aa83360ec60976",
-"classFeel_1_1PFemApp.html",
-"classFeel_1_1PointSetQuadrature.html#a647687f6f9e454f113ce79033a36c206",
-"classFeel_1_1Projector.html#a2da8cbc77515cedb0acaee34c4b07fd5",
-"classFeel_1_1SolverEigen.html#af26f97e2dfc3a7ca1fcfbca651c1cf8e",
-"classFeel_1_1Sphere.html#ab7d6b2425d4fa4e75da30316edd8fe0c",
-"classFeel_1_1TimeSet.html#a73e739e81a81c666ab39c96173d60f32",
-"classFeel_1_1VectorEigen.html#a1252ad7e78a9e58013cc3b17ab9734e7",
-"classFeel_1_1detail_1_1Environment.html#ad8a8668f8c6b838df77a731f93571239",
-"classFeel_1_1functional_1_1IntegralMomentsOnFace.html#a2d53e46c605443c20c762acfa2b2de32",
-"classResidualEstimator.html#ad0330272a9fa977e8ea2e7e40db7ea7b",
-"structFeel_1_1Scalar.html#aa666215068f9effc61f4f044e4e9213d"
+"classFeel_1_1DofTable.html#a6b659a0854b412c61e6a2381e46ade58",
+"classFeel_1_1ErrorBase.html#a851293a6b53b12a479fd93eba19c6fe5",
+"classFeel_1_1Feel_1_1detail_1_1AdFuncPow.html#a7774ef5b2ee0184ce69791850d9b5209ad7d5b5ef7d4329e06319267298189b3b",
+"classFeel_1_1FunctionalSet.html#a465aa9d3118dc96ccab93ae7d33d0384",
+"classFeel_1_1GeoEntity.html#a63512ab5f833ab020562d91a0391f186",
+"classFeel_1_1GeoND.html#a06cbf1d61a3993b608254bd11cf4b69f",
+"classFeel_1_1GraphCSR.html#ae47592f5e256c90b83542bf74c880472",
+"classFeel_1_1Legendre.html#a1fd6149fb70226a9f3519302ce0235b1",
+"classFeel_1_1MatrixSparse.html#ad86adae963002e54dbb852408b7286bb",
+"classFeel_1_1Mesh1D.html#a5a7f7646a395621405fdc7bc66022149",
+"classFeel_1_1OperatorInterpolation.html#a1cc82f5357979aecb2ff7802a25a68fe",
+"classFeel_1_1Output.html",
+"classFeel_1_1PointSetQuadrature.html#a6111431f0a3efaae7da1a3196b7da0cc",
+"classFeel_1_1Projector.html#a1e96870830d0d25f3bbb299b2cd0c07b",
+"classFeel_1_1SolverEigen.html#af10d6ffb258294c7f5eed659731af3e6",
+"classFeel_1_1Sphere.html#ab1b027d8b163b7c8af9ceb39cc02fd62",
+"classFeel_1_1TimeSet.html#a738aca68a43c654b9ede67b10d1b4312",
+"classFeel_1_1VectorEigen.html#a1087ecbe111b2a4ad9c15248d3954e32",
+"classFeel_1_1detail_1_1Environment.html#accc0286be09be956304e56a142ce9766",
+"classFeel_1_1functional_1_1IntegralMomentsOnFace.html",
+"classResidualEstimator.html#ac5bbf3f98c0a0102c4576c854ba84a8b",
+"structFeel_1_1Scalar.html#a95debda591251e086875428eb6a181e1"
 ];
 
 var navTreeSubIndices = new Array();

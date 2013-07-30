@@ -1,5 +1,6 @@
 var NAVTREEINDEX28 =
 {
+"structFeel_1_1Scalar.html#a95debda591251e086875428eb6a181e1":[10,0,179,7],
 "structFeel_1_1Scalar.html#aa666215068f9effc61f4f044e4e9213d":[10,0,179,9],
 "structFeel_1_1SolverConstrained_1_1COptions.html":[10,0,184,0],
 "structFeel_1_1SolverConstrained_1_1COptions.html#a0b4492fdfac956560a1b57173a08bc5c":[10,0,184,0,6],

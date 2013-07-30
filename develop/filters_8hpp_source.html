@@ -1275,46 +1275,60 @@ $(document).ready(function(){initNavTree('filters_8hpp_source.html','');});
 <div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceFeel.html#a5c10346e263af6fbc0709fb6084fcf6f">detail::internalpoints</a>( mesh, is_ptr_or_shared_ptr() );</div>
 <div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;}</div>
 <div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;</div>
-<div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MT, <span class="keyword">typename</span> Iterator&gt;</div>
-<div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160;<a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a></div>
-<div class="line"><a name="l01371"></a><span class="lineno"><a class="code" href="namespaceFeel.html#ab1ef5097f689b224b4f31e80dbd80ee0"> 1371</a></span>&#160;<a class="code" href="namespaceFeel.html#ab1ef5097f689b224b4f31e80dbd80ee0">nelements</a>( boost::tuple&lt;MT,Iterator,Iterator&gt; <span class="keyword">const</span>&amp; its )</div>
-<div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;{</div>
-<div class="line"><a name="l01373"></a><span class="lineno"> 1373</span>&#160;    <span class="keywordflow">return</span> std::distance( boost::get&lt;1&gt;( its ), boost::get&lt;2&gt;( its ) );</div>
-<div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;}</div>
-<div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MT, <span class="keyword">typename</span> Iterator&gt;</div>
-<div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;<a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a></div>
-<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;<a class="code" href="namespaceFeel.html#ab1ef5097f689b224b4f31e80dbd80ee0">nelements</a>( std::list&lt;boost::tuple&lt;MT,Iterator,Iterator&gt; &gt; <span class="keyword">const</span>&amp; its )</div>
-<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;{</div>
-<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a> d = 0;</div>
-<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;    std::for_each( its.begin(), its.end(),</div>
-<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;                   [&amp;d]( boost::tuple&lt;MT,Iterator,Iterator&gt; <span class="keyword">const</span>&amp; t )</div>
-<div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;                   {</div>
-<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;                       d+=std::distance( boost::get&lt;1&gt;( t ), boost::get&lt;2&gt;( t ) );</div>
-<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;                   } );</div>
-<div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;    <span class="keywordflow">return</span> d;</div>
-<div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;}</div>
-<div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;</div>
-<div class="line"><a name="l01388"></a><span class="lineno"> 1388</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ElementType&gt;</div>
-<div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;boost::tuple&lt;mpl::size_t&lt;MESH_ELEMENTS&gt;,</div>
-<div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;      <span class="keyword">typename</span> std::list&lt;ElementType&gt;::const_iterator,</div>
-<div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;      <span class="keyword">typename</span> std::list&lt;ElementType&gt;::const_iterator&gt;</div>
-<div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;      element( ElementType <span class="keyword">const</span>&amp; elt  )</div>
-<div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;{</div>
-<div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;    std::list&lt;ElementType&gt; lst;</div>
-<div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;    lst.push_back(  elt );</div>
-<div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;    <span class="keywordflow">return</span> boost::make_tuple( mpl::size_t&lt;MESH_ELEMENTS&gt;(),</div>
-<div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;                              lst.begin(),</div>
-<div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;                              lst.end() );</div>
-<div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;}</div>
-<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;</div>
-<div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;}</div>
-<div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;</div>
-<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;</div>
-<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MT, <span class="keyword">typename</span> Iterator&gt;</div>
+<div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;<a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a></div>
+<div class="line"><a name="l01373"></a><span class="lineno"><a class="code" href="namespaceFeel.html#a3198793dc5cee5c96bd5b8f22bd2865c"> 1373</a></span>&#160;<a class="code" href="namespaceFeel.html#a3198793dc5cee5c96bd5b8f22bd2865c">nelements</a>( boost::tuple&lt;MT,Iterator,Iterator&gt; <span class="keyword">const</span>&amp; its, <span class="keywordtype">bool</span> global = <span class="keyword">false</span> )</div>
+<div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;{</div>
+<div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a> d = std::distance( boost::get&lt;1&gt;( its ), boost::get&lt;2&gt;( its ) );</div>
+<div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a> gd = d;</div>
+<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;    <span class="keywordflow">if</span> ( global )</div>
+<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;        mpi::all_reduce(Environment::worldComm().globalComm(),</div>
+<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;                        d,</div>
+<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;                        gd,</div>
+<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;                        std::plus&lt;size_type&gt;());</div>
+<div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;    <span class="keywordflow">return</span> gd;</div>
+<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;</div>
+<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;}</div>
+<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MT, <span class="keyword">typename</span> Iterator&gt;</div>
+<div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;<a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a></div>
+<div class="line"><a name="l01402"></a><span class="lineno"><a class="code" href="namespaceFeel.html#aab1ebb56ea90f26465bfd722892298e3"> 1402</a></span>&#160;<a class="code" href="namespaceFeel.html#a3198793dc5cee5c96bd5b8f22bd2865c">nelements</a>( std::list&lt;boost::tuple&lt;MT,Iterator,Iterator&gt; &gt; <span class="keyword">const</span>&amp; its, <span class="keywordtype">bool</span> global = <span class="keyword">false</span> )</div>
+<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;{</div>
+<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a> d = 0;</div>
+<div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;    std::for_each( its.begin(), its.end(),</div>
+<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;                   [&amp;d]( boost::tuple&lt;MT,Iterator,Iterator&gt; <span class="keyword">const</span>&amp; t )</div>
+<div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160;                   {</div>
+<div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160;                       d+=std::distance( boost::get&lt;1&gt;( t ), boost::get&lt;2&gt;( t ) );</div>
+<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;                   } );</div>
+<div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0)">size_type</a> gd = d;</div>
+<div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;    <span class="keywordflow">if</span> ( global )</div>
+<div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;        mpi::all_reduce(Environment::worldComm().globalComm(),</div>
+<div class="line"><a name="l01413"></a><span class="lineno"> 1413</span>&#160;                        d,</div>
+<div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160;                        gd,</div>
+<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;                        std::plus&lt;size_type&gt;());</div>
+<div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;    <span class="keywordflow">return</span> gd;</div>
+<div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;}</div>
+<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;</div>
+<div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ElementType&gt;</div>
+<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;boost::tuple&lt;mpl::size_t&lt;MESH_ELEMENTS&gt;,</div>
+<div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;      <span class="keyword">typename</span> std::list&lt;ElementType&gt;::const_iterator,</div>
+<div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;      <span class="keyword">typename</span> std::list&lt;ElementType&gt;::const_iterator&gt;</div>
+<div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;      element( ElementType <span class="keyword">const</span>&amp; elt  )</div>
+<div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;{</div>
+<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;    std::list&lt;ElementType&gt; lst;</div>
+<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;    lst.push_back(  elt );</div>
+<div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160;    <span class="keywordflow">return</span> boost::make_tuple( mpl::size_t&lt;MESH_ELEMENTS&gt;(),</div>
+<div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;                              lst.begin(),</div>
+<div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160;                              lst.end() );</div>
+<div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160;}</div>
+<div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160;</div>
+<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;}</div>
+<div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;</div>
+<div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;</div>
+<div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Jul 29 2013 00:06:43 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
+Generated on Wed Jul 31 2013 00:07:40 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.1.2</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
