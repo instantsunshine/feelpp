@@ -1,5 +1,7 @@
 var NAVTREEINDEX19 =
 {
+"classFeel_1_1PointSetQuadrature.html#a5e95c7c9043affa50fc6b5af96b1088b":[10,0,159,7],
+"classFeel_1_1PointSetQuadrature.html#a5fd7e84ecd076cf106cc6fe47d21ea12":[10,0,159,46],
 "classFeel_1_1PointSetQuadrature.html#a6111431f0a3efaae7da1a3196b7da0cc":[10,0,159,37],
 "classFeel_1_1PointSetQuadrature.html#a647687f6f9e454f113ce79033a36c206":[10,0,159,2],
 "classFeel_1_1PointSetQuadrature.html#a6549a5e98d6e8770edeecaccce3773e7":[10,0,159,34],
@@ -247,7 +249,5 @@ var NAVTREEINDEX19 =
 "classFeel_1_1Principal.html#af5c3a4ee64e7737c8d2ed611dbdba85b":[10,0,167,2],
 "classFeel_1_1Projector.html":[10,0,169],
 "classFeel_1_1Projector.html#a00abfc4b28d0440550fac83a2456a998":[10,0,169,5],
-"classFeel_1_1Projector.html#a127349e1cee7690d18d695691e522a5e":[10,0,169,19],
-"classFeel_1_1Projector.html#a1ac5e56ab3fd115799a3c2aff536bd41":[10,0,169,10],
-"classFeel_1_1Projector.html#a1ba7c70fddc2d8a309baaaf6a451b2c8":[10,0,169,4]
+"classFeel_1_1Projector.html#a127349e1cee7690d18d695691e522a5e":[10,0,169,19]
 };

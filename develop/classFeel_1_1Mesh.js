@@ -37,6 +37,7 @@ var classFeel_1_1Mesh =
     [ "trace_trace_mesh_type", "classFeel_1_1Mesh.html#a88b7739fb92830b5b6a68875b39077b0", null ],
     [ "value_type", "classFeel_1_1Mesh.html#a407fa5164e3409951b0d70638c7c3d90", null ],
     [ "Mesh", "classFeel_1_1Mesh.html#a42907164322ead3b8be2701a3683a9b1", null ],
+    [ "~Mesh", "classFeel_1_1Mesh.html#a0f9769e1cb2e239a341218a2bd575b1a", null ],
     [ "addMarkerName", "classFeel_1_1Mesh.html#a5f2bb80bd7fcef0c7610f074ec39538d", null ],
     [ "addMarkerName", "classFeel_1_1Mesh.html#a062847a18bd0e4408cddedfa926e91e6", null ],
     [ "addObserver", "classFeel_1_1Mesh.html#aeb0dc3e8988746297f81911db9bde60f", null ],

@@ -55,6 +55,7 @@ var classFeel_1_1DofTable =
     [ "DofTable", "classFeel_1_1DofTable.html#a9730819fd3ac9fa307928372e1b3ab48", null ],
     [ "DofTable", "classFeel_1_1DofTable.html#a0cc919f508580f7c20c1e0a5642dbd6a", null ],
     [ "DofTable", "classFeel_1_1DofTable.html#a7e54103a780160fe394c0850ed25cf76", null ],
+    [ "~DofTable", "classFeel_1_1DofTable.html#a0ebd3a2c1d5367f322ffe9a8c1d5ebe8", null ],
     [ "addDofFromElement", "classFeel_1_1DofTable.html#ae54b2799208a2484e9997bea70cd884a", null ],
     [ "addEdgePeriodicDof", "classFeel_1_1DofTable.html#a3f85fc3ad658bdd98f1afbb9a6f90cef", null ],
     [ "addEdgePeriodicDof", "classFeel_1_1DofTable.html#a89936a2a91bba52791b800dc3411b71c", null ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX18 =
 {
+"classFeel_1_1OpusAppEigs.html#aef5060ad386fec563ac9785d469ce537":[10,0,146,1],
+"classFeel_1_1OrthogonalPolynomialSet.html":[10,0,147],
 "classFeel_1_1Output.html":[10,0,149],
 "classFeel_1_1PFemApp.html":[10,0,154],
 "classFeel_1_1PFemApp.html#a0d7eade6940db9208ce6c05caf90978f":[10,0,154,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX18 =
 "classFeel_1_1PointSetQuadrature.html#a51a758de369514453181d16ae1d11a7b":[10,0,159,30],
 "classFeel_1_1PointSetQuadrature.html#a583538d47326b0f352ae5cc9a99bdd41":[10,0,159,18],
 "classFeel_1_1PointSetQuadrature.html#a59d221d81d353062993b5d8369078d5d":[10,0,159,20],
-"classFeel_1_1PointSetQuadrature.html#a5e896aaeb0d141a859b48c7f198b849c":[10,0,159,42],
-"classFeel_1_1PointSetQuadrature.html#a5e95c7c9043affa50fc6b5af96b1088b":[10,0,159,7],
-"classFeel_1_1PointSetQuadrature.html#a5fd7e84ecd076cf106cc6fe47d21ea12":[10,0,159,46]
+"classFeel_1_1PointSetQuadrature.html#a5e896aaeb0d141a859b48c7f198b849c":[10,0,159,42]
 };

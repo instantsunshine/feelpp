@@ -1,5 +1,7 @@
 var NAVTREEINDEX27 =
 {
+"classResidualEstimator.html#ac23ca54dce877aca7c067c9b209bda31":[10,9,1],
+"classResidualEstimator.html#ac481980c2e60a962c09791131a5c337a":[10,9,14],
 "classResidualEstimator.html#ac5bbf3f98c0a0102c4576c854ba84a8b":[10,9,13],
 "classResidualEstimator.html#ad0330272a9fa977e8ea2e7e40db7ea7b":[10,9,15],
 "classResidualEstimator.html#adca4ee6f2ccac1101dc0f184d592f2db":[10,9,8],
@@ -96,8 +98,8 @@ var NAVTREEINDEX27 =
 "group__GeoXD.html#gaf8b2236775871cba4b723c3bcc4062a0":[10,0,80,4],
 "group__GeoXD.html#gaf929e439be53c18fb5efebbcfcf530a7":[10,0,80,28],
 "group__GeoXD.html#gaffeabdf04cb4703f697ffe69a1e0bdfa":[10,0,80,18],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "md_COPYING.html":[8],
 "md_Credits.html":[1],
 "namespaceFeel.html":[10,0],
@@ -160,8 +162,8 @@ var NAVTREEINDEX27 =
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a263e8c4c3415b075865bb909aaebf3cf":[10,0,100,10],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a437deec4f7170d6ac568c3e78919d703":[10,0,100,5],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a47a159d96c1faef9f6b57e104411690f":[10,0,100,9],
-"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,100,2],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,100,3],
+"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,100,2],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aae08c8b04ff5d504167b6b0ef8710a90":[10,0,100,8],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#ad18d6a14c0ed1f6ba541a73870a85fb8":[10,0,100,7],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#ae16be5124baf41675f85c9d93a5b1032":[10,0,100,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX27 =
 "structFeel_1_1Scalar.html#a58037b89b6eb89e59a808c364f53a576":[10,0,179,0],
 "structFeel_1_1Scalar.html#a665d4038a7c3f786aa34d91b1e8d5fca":[10,0,179,4],
 "structFeel_1_1Scalar.html#a7767f732435fd0467c88312f9f0f462f":[10,0,179,5],
-"structFeel_1_1Scalar.html#a794447cb2f83beee0db964505b2c2dbe":[10,0,179,1],
-"structFeel_1_1Scalar.html#a91a0d4e238a9e6c0134310940bfd7d4c":[10,0,179,12],
-"structFeel_1_1Scalar.html#a9521bb95785c33715e2cdc734d24b8df":[10,0,179,3]
+"structFeel_1_1Scalar.html#a794447cb2f83beee0db964505b2c2dbe":[10,0,179,1]
 };
