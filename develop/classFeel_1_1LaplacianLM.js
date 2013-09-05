@@ -20,6 +20,5 @@ var classFeel_1_1LaplacianLM =
     [ "vector_type", "classFeel_1_1LaplacianLM.html#ad8a184ff6cfeb29deaf955137dce441c", null ],
     [ "LaplacianLM", "classFeel_1_1LaplacianLM.html#aff4ccf3da914ca379599bfe6a1b19410", null ],
     [ "createMesh", "classFeel_1_1LaplacianLM.html#ab3a6c4e8176e53b832d35c612d1dc7d0", null ],
-    [ "run", "classFeel_1_1LaplacianLM.html#a851ef8c8001bec21ed743013e89aa33d", null ],
-    [ "imOrder", "classFeel_1_1LaplacianLM.html#a8c59eb1b05b9f31073a05e0e2cae20fd", null ]
+    [ "run", "classFeel_1_1LaplacianLM.html#a851ef8c8001bec21ed743013e89aa33d", null ]
 ];

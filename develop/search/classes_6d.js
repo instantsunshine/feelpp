@@ -5,6 +5,7 @@ var searchData=
   ['matrix_5fnode',['matrix_node',['../structFeel_1_1matrix__node.html',1,'Feel']]],
   ['matrix_5fnode_3c_20value_5ftype_20_3e',['matrix_node&lt; value_type &gt;',['../structFeel_1_1matrix__node.html',1,'Feel']]],
   ['matrixblock',['MatrixBlock',['../classFeel_1_1MatrixBlock.html',1,'Feel']]],
+  ['matrixblockbase',['MatrixBlockBase',['../classFeel_1_1MatrixBlockBase.html',1,'Feel']]],
   ['matrixeigendense',['MatrixEigenDense',['../classFeel_1_1MatrixEigenDense.html',1,'Feel']]],
   ['matrixeigensparse',['MatrixEigenSparse',['../classFeel_1_1MatrixEigenSparse.html',1,'Feel']]],
   ['matrixshell',['MatrixShell',['../classFeel_1_1MatrixShell.html',1,'Feel']]],

@@ -29,7 +29,5 @@ var classIMSimplex =
     [ "permute", "classIMSimplex.html#ab061f41849f4e694680e577c92caed05", null ],
     [ "test", "classIMSimplex.html#ab90aed1d7f04aa37e0cbfd5a71fe8f25", null ],
     [ "test", "classIMSimplex.html#a09affaeb1690fd9eb801f9bbddd46f79", null ],
-    [ "test", "classIMSimplex.html#af89fb191aea5c539744595a728ce0aa9", null ],
-    [ "nDim", "classIMSimplex.html#a32974c103634ae356033f77a76ab684e", null ],
-    [ "nOrder", "classIMSimplex.html#a4daa4ba150be61a773737dab80d0862a", null ]
+    [ "test", "classIMSimplex.html#af89fb191aea5c539744595a728ce0aa9", null ]
 ];

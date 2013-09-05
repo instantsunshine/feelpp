@@ -20,12 +20,9 @@ var classFeel_1_1BackendEigen =
     [ "BackendEigen", "classFeel_1_1BackendEigen.html#a0790bc983b4375d59f9717c76e0b19ed", null ],
     [ "BackendEigen", "classFeel_1_1BackendEigen.html#a6dc1fc1fe3f80836fe52ffb91253514b", null ],
     [ "dot", "classFeel_1_1BackendEigen.html#a5fbb4e60ed7b9b7168ab1e7cb3d79bdd", null ],
-    [ "newMatrix", "classFeel_1_1BackendEigen.html#ab230242577e2fb7d175313ee5713088d", null ],
     [ "newMatrix", "classFeel_1_1BackendEigen.html#a4b8e2f2d224562263584242959ed3a6e", null ],
     [ "newMatrix", "classFeel_1_1BackendEigen.html#a3649437485ca6db29fff8d9078749c18", null ],
     [ "newMatrix", "classFeel_1_1BackendEigen.html#ae412439d8af3e55035d5701252e67a78", null ],
-    [ "newVector", "classFeel_1_1BackendEigen.html#a21e14f3c23ee4bdbe29e61bc0518c654", null ],
-    [ "newVector", "classFeel_1_1BackendEigen.html#a4f6077b0b22e1448b4ba5f1083ec1896", null ],
     [ "newVector", "classFeel_1_1BackendEigen.html#a86d5baf060c585024766b900c6281487", null ],
     [ "newVector", "classFeel_1_1BackendEigen.html#a9584b53cc60101a051ea327c5d01d476", null ],
     [ "newZeroMatrix", "classFeel_1_1BackendEigen.html#af41f39b00658e72f8e628778f6cf2528", null ],
@@ -33,7 +30,5 @@ var classFeel_1_1BackendEigen =
     [ "prod", "classFeel_1_1BackendEigen.html#a69c376087409a581aefd019ddea31410", null ],
     [ "solve", "classFeel_1_1BackendEigen.html#a0428390812a505217891d68e89691397", null ],
     [ "solve", "classFeel_1_1BackendEigen.html#af912e1aba5531297c168af4c79eb5247", null ],
-    [ "solve", "classFeel_1_1BackendEigen.html#ac4cbf635101bdb35b3792ed170474371", null ],
-    [ "IsDense", "classFeel_1_1BackendEigen.html#afb5ac55b702f5fe5d66db8cc79700f71", null ],
-    [ "IsSparse", "classFeel_1_1BackendEigen.html#ab81065c0b8b997b4b22218a1d11e493c", null ]
+    [ "solve", "classFeel_1_1BackendEigen.html#ac4cbf635101bdb35b3792ed170474371", null ]
 ];

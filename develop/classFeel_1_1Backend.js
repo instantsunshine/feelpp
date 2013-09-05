@@ -27,8 +27,6 @@ var classFeel_1_1Backend =
     [ "aTolerance", "classFeel_1_1Backend.html#a202996a34fde4501cd8dce1153720212", null ],
     [ "aToleranceSNES", "classFeel_1_1Backend.html#a1dc6ac9a62e7c9e7fc5c3b37b006c6d6", null ],
     [ "attachPreconditioner", "classFeel_1_1Backend.html#aa7ce4ac2e7d7146834d56fb6afc2a318", null ],
-    [ "build", "classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42", null ],
-    [ "build", "classFeel_1_1Backend.html#a32239a0ae0d141e881606ba4dc29497d", null ],
     [ "comm", "classFeel_1_1Backend.html#a084ba908a4171edac918e7aad7560d27", null ],
     [ "converged", "classFeel_1_1Backend.html#a20a6e9f6e150caae30d2db15d8316850", null ],
     [ "dot", "classFeel_1_1Backend.html#aaab49985927760d5cf50810d8d0c21c9", null ],

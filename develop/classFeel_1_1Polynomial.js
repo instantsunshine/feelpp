@@ -36,13 +36,5 @@ var classFeel_1_1Polynomial =
     [ "operator=", "classFeel_1_1Polynomial.html#abd81a6fff8f5cfb1ce035ae5841c7618", null ],
     [ "operator[]", "classFeel_1_1Polynomial.html#ae0dbf5c9aa2d4181e275ad17f221abcd", null ],
     [ "setCoefficient", "classFeel_1_1Polynomial.html#abe2aafac028eae50b0d7dd8a94fecc91", null ],
-    [ "toSet", "classFeel_1_1Polynomial.html#aa2a48cab6a39f9cc19bd0d93292fd746", null ],
-    [ "is_scalar", "classFeel_1_1Polynomial.html#ac138f167a4d014e0757088e0c14d83ba", null ],
-    [ "is_tensor2", "classFeel_1_1Polynomial.html#ac686e0736ed9a5f7629f7d53e5082df1", null ],
-    [ "is_vectorial", "classFeel_1_1Polynomial.html#a54522f90072262534912f2b865a01ecc", null ],
-    [ "nComponents", "classFeel_1_1Polynomial.html#ab665d7498457558cf0a8fe5ba75ef221", null ],
-    [ "nComponents1", "classFeel_1_1Polynomial.html#afb23e9ca77ef1c0418480e7545f7f238", null ],
-    [ "nComponents2", "classFeel_1_1Polynomial.html#a4d0cff033302d31a2c93cde438a208eb", null ],
-    [ "nDim", "classFeel_1_1Polynomial.html#a11b3a98e7238302541bc9fa88b047b7e", null ],
-    [ "nOrder", "classFeel_1_1Polynomial.html#a6460622525d78726b9f423e352ec6048", null ]
+    [ "toSet", "classFeel_1_1Polynomial.html#aa2a48cab6a39f9cc19bd0d93292fd746", null ]
 ];

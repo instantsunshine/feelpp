@@ -5,6 +5,7 @@ var searchData=
   ['harmonic_2ecpp',['harmonic.cpp',['../harmonic_8cpp.html',1,'']]],
   ['hasconstantnullspace',['hasConstantNullSpace',['../classFeel_1_1Backend.html#a9ad1f4d37cc5d51dda696d87c620f327',1,'Feel::Backend']]],
   ['hasdata',['hasData',['../classFeel_1_1TimeSet_1_1Step.html#a324ec86b7bae50b1c4549d024718ef03',1,'Feel::TimeSet::Step']]],
+  ['haselement',['hasElement',['../namespaceFeel.html#a10420503bae61d1236dbc91c2dff5e9e',1,'Feel']]],
   ['hasgraph',['hasGraph',['../classFeel_1_1MatrixSparse.html#ac84662d75dd20f2f4bcc41ae908f97b8',1,'Feel::MatrixSparse']]],
   ['hasmesh',['hasMesh',['../classFeel_1_1TimeSet_1_1Step.html#afb1f334fc8c74565ff9452f109f2e9a2',1,'Feel::TimeSet::Step']]],
   ['haspoints',['hasPoints',['../classFeel_1_1GeoND.html#a7638af1bcc93ca823affae23203ce3e2',1,'Feel::GeoND']]],

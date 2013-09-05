@@ -22,7 +22,5 @@ var classLShape =
     [ "createLShapeGeo", "classLShape.html#a0011ba7ac41301ac6663d711a6e148d4", null ],
     [ "run", "classLShape.html#a5197bb4be90860e0688e07b63ca7caa5", null ],
     [ "run", "classLShape.html#a90a7e0be8bdc30350d4a9f68f8c98f3e", null ],
-    [ "zz_estimator", "classLShape.html#a59508e3d9646d8d296d849e13b727617", null ],
-    [ "GOrder", "classLShape.html#a37a078799ab8e7a9f5e5c0d60958e98c", null ],
-    [ "Order", "classLShape.html#a01d1447c2801f8ccb62c5564b2be52e7", null ]
+    [ "zz_estimator", "classLShape.html#a59508e3d9646d8d296d849e13b727617", null ]
 ];

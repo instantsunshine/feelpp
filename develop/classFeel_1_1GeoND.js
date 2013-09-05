@@ -37,7 +37,6 @@ var classFeel_1_1GeoND =
     [ "faceMeasures", "classFeel_1_1GeoND.html#af2cad6ed90e0c42c87955d8192b80a64", null ],
     [ "facePoint", "classFeel_1_1GeoND.html#a30e12fd64e347ae12af15d4cf3342a74", null ],
     [ "faceToOppositePoint", "classFeel_1_1GeoND.html#a236039eba42249fdd72bae549f30af41", null ],
-    [ "fToP", "classFeel_1_1GeoND.html#a42b1376c661ec1f5c9a4399e1e2ab715", null ],
     [ "G", "classFeel_1_1GeoND.html#a372dbf72347a44fb08b447566d78e19d", null ],
     [ "G", "classFeel_1_1GeoND.html#a7c2e46bdce353aef46748a96a51d53f9", null ],
     [ "gm", "classFeel_1_1GeoND.html#a9dcb4f9d64d6c27f57f243c5807ee490", null ],
@@ -86,18 +85,5 @@ var classFeel_1_1GeoND =
     [ "update", "classFeel_1_1GeoND.html#a722bd30585fee3470ac93ef7c2b8b178", null ],
     [ "updateWithPc", "classFeel_1_1GeoND.html#a2f1357be219b38ccc45ee68f42841fd0", null ],
     [ "vertices", "classFeel_1_1GeoND.html#a4e5f54f0d740a4049226c630421a957f", null ],
-    [ "boost::serialization::access", "classFeel_1_1GeoND.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ],
-    [ "nDim", "classFeel_1_1GeoND.html#a06cbf1d61a3993b608254bd11cf4b69f", null ],
-    [ "nOrder", "classFeel_1_1GeoND.html#a4225cc36be363bc0373f800603b982ad", null ],
-    [ "nRealDim", "classFeel_1_1GeoND.html#a9930cbf6cdc35f8d55794bde09d1fdfb", null ],
-    [ "numEdges", "classFeel_1_1GeoND.html#a086aa9cded2d764aba9012bb0c2e5d35", null ],
-    [ "numFaces", "classFeel_1_1GeoND.html#af9b6a85a0dd059b7a25e0a81de4ede91", null ],
-    [ "numLocalEdges", "classFeel_1_1GeoND.html#af561ee4284f5f7319cce43f6b6642daa", null ],
-    [ "numLocalPoints", "classFeel_1_1GeoND.html#aa9e0f4e1ce7c129e2fbdc5e025804062", null ],
-    [ "numLocalVertices", "classFeel_1_1GeoND.html#a91b84ce586da5cef3d88c6bc6c1da7c5", null ],
-    [ "numNeighbors", "classFeel_1_1GeoND.html#a81ad4833d92ff317835ab69bf534f936", null ],
-    [ "numPoints", "classFeel_1_1GeoND.html#a2361708acb9b0f6afdb94c3a2c3e9ffd", null ],
-    [ "numTopologicalFaces", "classFeel_1_1GeoND.html#a79eca59f2a85cb5b15a4b4bab40582bd", null ],
-    [ "numVertices", "classFeel_1_1GeoND.html#af18985d71c2ea8101a41f85cc401bad5", null ],
-    [ "Shape", "classFeel_1_1GeoND.html#a729cc4bd6869b5ad192db531675603ed", null ]
+    [ "boost::serialization::access", "classFeel_1_1GeoND.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ]
 ];

@@ -44,6 +44,8 @@ var searchData=
   ['visitor_3c_20pointset_3c_20domain_5freference_5fconvex_5ftype_2c_20value_5ftype_20_3e_20_3e',['Visitor&lt; PointSet&lt; domain_reference_convex_type, value_type &gt; &gt;',['../classFeel_1_1Visitor.html',1,'Feel']]],
   ['visitor_3c_20tlist_2c_20r_20_3e',['Visitor&lt; TList, R &gt;',['../classFeel_1_1Visitor.html',1,'Feel']]],
   ['visitorbase',['VisitorBase',['../classFeel_1_1VisitorBase.html',1,'Feel']]],
+  ['visitorbaseimpl',['VisitorBaseImpl',['../classFeel_1_1VisitorBaseImpl.html',1,'Feel']]],
+  ['visitorbaseimpl_3c_20tail_2c_20r_20_3e',['VisitorBaseImpl&lt; Tail, R &gt;',['../classFeel_1_1VisitorBaseImpl.html',1,'Feel']]],
   ['visitorcyclic',['VisitorCyclic',['../classFeel_1_1VisitorCyclic.html',1,'Feel']]],
   ['vm',['vm',['../classFeel_1_1SolverLinear.html#ad93d33f94e2fee2113dd4b4011c441c2',1,'Feel::SolverLinear::vm()'],['../classFeel_1_1Application.html#a6d636004b73027e9dc226d7ec9e9d89c',1,'Feel::Application::vm()'],['../classFeel_1_1detail_1_1Environment.html#ab2b28bbafcdbad667fd52b22702be57d',1,'Feel::detail::Environment::vm()'],['../classFeel_1_1Simget.html#a2778e828ee4c102e72a33e03b1ede4b1',1,'Feel::Simget::vm()'],['../classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab',1,'Feel::CRBDB::vm()'],['../classFeel_1_1CRBDB.html#ad5bf31c5655f6554784accf7467d5c1c',1,'Feel::CRBDB::vm() const '],['../classFeel_1_1CRBModel.html#a3f10b11c9ba853f8d810f312b62375e3',1,'Feel::CRBModel::vm()'],['../classFeel_1_1CRBModelTrilinear.html#aba37a8c1f0775dcd61aca876682d180c',1,'Feel::CRBModelTrilinear::vm()'],['../classFeel_1_1System.html#af548db7223fe5fd17227a0b9a331b095',1,'Feel::System::vm()'],['../classConvectionCrb.html#a4bc1198ecf66b447b755bcfe5d53ca92',1,'ConvectionCrb::vm()']]]
 ];

@@ -9,7 +9,5 @@ var classFeel_1_1Jacobi =
     [ "derivate", "classFeel_1_1Jacobi.html#aa46a011f224cfce2adfcbf30feed41b7", null ],
     [ "operator()", "classFeel_1_1Jacobi.html#a42dd5a64aa4628963102c2cd6bb72541", null ],
     [ "operator=", "classFeel_1_1Jacobi.html#a6a3d541a14ec6dcf9343172e0ae4fce6", null ],
-    [ "value", "classFeel_1_1Jacobi.html#a003dd668f213749c2dd181bd05321dec", null ],
-    [ "nOrder", "classFeel_1_1Jacobi.html#a5d02ca79531756ad2b5d0ab4b9f454db", null ],
-    [ "order", "classFeel_1_1Jacobi.html#a80525a6039e3fdaeff3a52370430b273", null ]
+    [ "value", "classFeel_1_1Jacobi.html#a003dd668f213749c2dd181bd05321dec", null ]
 ];

@@ -32,6 +32,5 @@ var classLaplacian =
     [ "Laplacian", "classLaplacian.html#a132e129d24df420673d84f1583a4ea5a", null ],
     [ "run", "classLaplacian.html#a03a7f2232b9460ec4ad881d4c50c7aa6", null ],
     [ "run", "classLaplacian.html#a03a7f2232b9460ec4ad881d4c50c7aa6", null ],
-    [ "run", "classLaplacian.html#abd550ef6066215743ab546bce03ead95", null ],
-    [ "Order", "classLaplacian.html#af104cc5b0e0cf909bc9fff490a4ebfcb", null ]
+    [ "run", "classLaplacian.html#abd550ef6066215743ab546bce03ead95", null ]
 ];

@@ -64,10 +64,5 @@ var classFeel_1_1GeoMap =
     [ "M_cached", "classFeel_1_1GeoMap.html#a1c25e2e74c30df1d34935a31079370f2", null ],
     [ "M_is_cached", "classFeel_1_1GeoMap.html#a9e9913539c29dac36134dc75e363d295", null ],
     [ "M_J", "classFeel_1_1GeoMap.html#a538c32d5cfef5e69cc178c0f029d66a2", null ],
-    [ "M_K", "classFeel_1_1GeoMap.html#af6f3d49782155acb93ea7970804dd1e7", null ],
-    [ "nDim", "classFeel_1_1GeoMap.html#af52823aa2aa6cdc82d5b1bcfa6c34263", null ],
-    [ "nDof", "classFeel_1_1GeoMap.html#a32b4158558a44a85ddd3a20c04ae76df", null ],
-    [ "nNodes", "classFeel_1_1GeoMap.html#ac2a02e7b1cfa630e4aec3dff9810809a", null ],
-    [ "nRealDim", "classFeel_1_1GeoMap.html#a2d860bd5eae3da79e0cc03e3c8c0776b", null ],
-    [ "trans", "classFeel_1_1GeoMap.html#a3616b93dceba5948d513618fc5a5dadb", null ]
+    [ "M_K", "classFeel_1_1GeoMap.html#af6f3d49782155acb93ea7970804dd1e7", null ]
 ];

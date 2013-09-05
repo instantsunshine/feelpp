@@ -30,8 +30,6 @@ var classFeel_1_1Exporter =
     [ "exporterGeometry", "classFeel_1_1Exporter.html#ab5b79acc2fb902d98c98d9a6d411cd74", null ],
     [ "fileType", "classFeel_1_1Exporter.html#a388352373374f0c8b6875d3543335919", null ],
     [ "freq", "classFeel_1_1Exporter.html#a1b857c462efb43399f378a2ab8daca31", null ],
-    [ "New", "classFeel_1_1Exporter.html#ab5184fd78b9c90b74127ab2027808996", null ],
-    [ "New", "classFeel_1_1Exporter.html#aefa2b4a6d5fb2e506ce26fde32d538ed", null ],
     [ "path", "classFeel_1_1Exporter.html#a5d95df5f9870598eee0c0e74f56171d5", null ],
     [ "prefix", "classFeel_1_1Exporter.html#a945b57c273068cfe1e592b2b262dde32", null ],
     [ "restart", "classFeel_1_1Exporter.html#a514d3cc3225e12502dc61780b54eecd8", null ],

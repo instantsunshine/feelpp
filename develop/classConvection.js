@@ -32,8 +32,5 @@ var classConvection =
     [ "run", "classConvection.html#ab85307576cd08947310013cf75c7ec3f", null ],
     [ "solve", "classConvection.html#a3214bf197663277a9d1dd859aba551d9", null ],
     [ "updateJacobian", "classConvection.html#a12709ef7734fee7de52be61acc7fc3cc", null ],
-    [ "updateResidual", "classConvection.html#aff8df7b2a0ffc4c7dff527fc58e365f4", null ],
-    [ "Order_p", "classConvection.html#aa51bc35b2c24651162a7e6233e6e6b7e", null ],
-    [ "Order_s", "classConvection.html#ae3d44a9500e7225dfb6d0e40b4b85e59", null ],
-    [ "Order_t", "classConvection.html#a99b21afcf4f4b8be236e61a65235370b", null ]
+    [ "updateResidual", "classConvection.html#aff8df7b2a0ffc4c7dff527fc58e365f4", null ]
 ];

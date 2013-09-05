@@ -30,8 +30,5 @@ var classFeel_1_1GeoElement0D =
     [ "processId", "classFeel_1_1GeoElement0D.html#abaefa603db5713974d54c26f65f9a6ff", null ],
     [ "setPoint", "classFeel_1_1GeoElement0D.html#a620a55ce0d329a44e5abf145646729de", null ],
     [ "boost::serialization::access", "classFeel_1_1GeoElement0D.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ],
-    [ "M_facept", "classFeel_1_1GeoElement0D.html#ac6982f92228a9e616c1dc0db1976176f", null ],
-    [ "nDim", "classFeel_1_1GeoElement0D.html#a6fac206aa935d355abddd6bd0a99dc99", null ],
-    [ "nRealDim", "classFeel_1_1GeoElement0D.html#a5a9e5eb472fe01d5ce780f1ae6bd951b", null ],
-    [ "numLocalVertices", "classFeel_1_1GeoElement0D.html#a73f059b9731d85bb826a63900bd30da2", null ]
+    [ "M_facept", "classFeel_1_1GeoElement0D.html#ac6982f92228a9e616c1dc0db1976176f", null ]
 ];

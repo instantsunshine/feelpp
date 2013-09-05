@@ -7,6 +7,7 @@ var classFeel_1_1ParameterSpace_1_1Sampling =
     [ "sampling_ptrtype", "classFeel_1_1ParameterSpace_1_1Sampling.html#a1889625659f5407e5f6965769b33b6d3", null ],
     [ "sampling_type", "classFeel_1_1ParameterSpace_1_1Sampling.html#a834a2c4380edeb09add62c9f738d615c", null ],
     [ "Sampling", "classFeel_1_1ParameterSpace_1_1Sampling.html#a5342ff6bfe520bc78b5dcbf936e2815b", null ],
+    [ "closestSamplingFromFile", "classFeel_1_1ParameterSpace_1_1Sampling.html#a631a87ffc34d38e46ea77e79b478a11d", null ],
     [ "complement", "classFeel_1_1ParameterSpace_1_1Sampling.html#a571f4055838350e09ab8ebb72bed45be", null ],
     [ "equidistribute", "classFeel_1_1ParameterSpace_1_1Sampling.html#a8040992cd9f3affe2ee607fbda56d2c6", null ],
     [ "equidistributeProduct", "classFeel_1_1ParameterSpace_1_1Sampling.html#afe58216ef3b9346ba0f5490cbdc671b1", null ],

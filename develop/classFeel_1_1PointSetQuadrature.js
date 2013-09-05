@@ -19,7 +19,7 @@ var classFeel_1_1PointSetQuadrature =
     [ "allfweights", "classFeel_1_1PointSetQuadrature.html#adbcec15dc8e2300f4be702ad29aefb03", null ],
     [ "constructQROnFace", "classFeel_1_1PointSetQuadrature.html#aa0fd6cd51a00712aba61ca139d100fdf", null ],
     [ "constructQROnFace", "classFeel_1_1PointSetQuadrature.html#a583538d47326b0f352ae5cc9a99bdd41", null ],
-    [ "constructQROnFace", "classFeel_1_1PointSetQuadrature.html#a067d486b48bed4071511ce1702b39378", null ],
+    [ "constructQROnFace", "classFeel_1_1PointSetQuadrature.html#a211e1323de3a68342c04e24c8a97519f", null ],
     [ "face", "classFeel_1_1PointSetQuadrature.html#a59d221d81d353062993b5d8369078d5d", null ],
     [ "FEELPP_DEFINE_VISITABLE", "classFeel_1_1PointSetQuadrature.html#a75a6a713cd581b77bf7a180ae18322a3", null ],
     [ "fpoint", "classFeel_1_1PointSetQuadrature.html#a3a109e3e47834243cee93941b08ad4a0", null ],
@@ -48,7 +48,5 @@ var classFeel_1_1PointSetQuadrature =
     [ "_M_n_face", "classFeel_1_1PointSetQuadrature.html#a0ea0a05c42238c0d09354852acbba854", null ],
     [ "_M_prod", "classFeel_1_1PointSetQuadrature.html#a5fd7e84ecd076cf106cc6fe47d21ea12", null ],
     [ "_M_w", "classFeel_1_1PointSetQuadrature.html#aa3218cbb9ee0c87ca00c7d7774c925d7", null ],
-    [ "_M_w_face", "classFeel_1_1PointSetQuadrature.html#a961814f36b564224edd556b9fda7b8cc", null ],
-    [ "I_deg", "classFeel_1_1PointSetQuadrature.html#afd229c89c5705589f1b1c03e2732ff2e", null ],
-    [ "is_face_im", "classFeel_1_1PointSetQuadrature.html#a8bbff48fb58ec568dc7ffb1061dba6b5", null ]
+    [ "_M_w_face", "classFeel_1_1PointSetQuadrature.html#a961814f36b564224edd556b9fda7b8cc", null ]
 ];

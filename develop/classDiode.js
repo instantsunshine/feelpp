@@ -29,7 +29,5 @@ var classDiode =
     [ "HeunStep", "classDiode.html#af68f68e044da22fa8deec8942e4368fc", null ],
     [ "RK4Step", "classDiode.html#af548b30ab5ac2f1bd66ee13db56f0e03", null ],
     [ "run", "classDiode.html#a1c1a7be26c2e96e2db682e426456c5d7", null ],
-    [ "run", "classDiode.html#a319e36fc5e55ec18109538c3cd03dd7e", null ],
-    [ "Order", "classDiode.html#a7a88de54dde94a5fd27e0eaffe86fe08", null ],
-    [ "OrderGeo", "classDiode.html#adbc4aee01591e6046b2e47248a643df4", null ]
+    [ "run", "classDiode.html#a319e36fc5e55ec18109538c3cd03dd7e", null ]
 ];

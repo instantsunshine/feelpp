@@ -15,22 +15,6 @@ var classFeel_1_1fem_1_1RaviartThomas =
     [ "~RaviartThomas", "classFeel_1_1fem_1_1RaviartThomas.html#a121cab57976fde8b4b218c5263be5f06", null ],
     [ "BOOST_STATIC_ASSERT", "classFeel_1_1fem_1_1RaviartThomas.html#a7410826e16f3edb835ab0a2d824276a5", null ],
     [ "familyName", "classFeel_1_1fem_1_1RaviartThomas.html#a93a2a25676929073e935821ac0e320b7", null ],
-    [ "isomorphism", "classFeel_1_1fem_1_1RaviartThomas.html#a74aab40b9ee162a0726243de1ec01bb4", null ],
     [ "referenceConvex", "classFeel_1_1fem_1_1RaviartThomas.html#a36f403612facbcd602fec0425da9a435", null ],
-    [ "is_product", "classFeel_1_1fem_1_1RaviartThomas.html#a8b97ed9a7c0a94b4883359b58b1d3b58", null ],
-    [ "is_scalar", "classFeel_1_1fem_1_1RaviartThomas.html#abd92ec9dd23a27ad69768bdc013971a4", null ],
-    [ "is_vectorial", "classFeel_1_1fem_1_1RaviartThomas.html#afaa5d6fc0c83790342bfdfca73ab3d0b", null ],
-    [ "isContinuous", "classFeel_1_1fem_1_1RaviartThomas.html#a63cdaf9a928ec3668648640743e7ffcb", null ],
-    [ "isTransformationEquivalent", "classFeel_1_1fem_1_1RaviartThomas.html#aa4acd0dd1236f258f705e867ca649190", null ],
-    [ "M_refconvex", "classFeel_1_1fem_1_1RaviartThomas.html#aa0370ebff51cbdac2e58d87a576d6fdc", null ],
-    [ "nbPtsPerEdge", "classFeel_1_1fem_1_1RaviartThomas.html#ae77d9ff8f857de18040357b07c8f4ff7", null ],
-    [ "nbPtsPerFace", "classFeel_1_1fem_1_1RaviartThomas.html#aef6f2c5060b6607fde7dc449cb1b4f6f", null ],
-    [ "nbPtsPerVertex", "classFeel_1_1fem_1_1RaviartThomas.html#adf2db2c4c113d53e6d11319a1b55b0f8", null ],
-    [ "nbPtsPerVolume", "classFeel_1_1fem_1_1RaviartThomas.html#ae645df917633028c167efba60724c999", null ],
-    [ "nComponents", "classFeel_1_1fem_1_1RaviartThomas.html#abe81e48a6c4e3b40818cc6e2d234aec0", null ],
-    [ "nDim", "classFeel_1_1fem_1_1RaviartThomas.html#a0d70b3b80baa1f1d02e4a59afb4fa76c", null ],
-    [ "nLocalDof", "classFeel_1_1fem_1_1RaviartThomas.html#a6c7dc0d93c435550ce350059a8d82bac", null ],
-    [ "nOrder", "classFeel_1_1fem_1_1RaviartThomas.html#af14917ed020fe6cda02e54d6e86deed8", null ],
-    [ "numPoints", "classFeel_1_1fem_1_1RaviartThomas.html#a76524c2f2434be041ba7e4896d7dae05", null ],
-    [ "TAG", "classFeel_1_1fem_1_1RaviartThomas.html#af83913ae4aaca4851a9a63e6a6385e72", null ]
+    [ "M_refconvex", "classFeel_1_1fem_1_1RaviartThomas.html#aa0370ebff51cbdac2e58d87a576d6fdc", null ]
 ];

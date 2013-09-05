@@ -16,22 +16,13 @@ var classFeel_1_1ParameterSpace =
     [ "dimension", "classFeel_1_1ParameterSpace.html#a3b85cc5b32041e0abf587e3a774425dd", null ],
     [ "element", "classFeel_1_1ParameterSpace.html#a419281080ff2ff40865049b0d825c228", null ],
     [ "elementPtr", "classFeel_1_1ParameterSpace.html#a15178d217722edbef3a15a5664407a2c", null ],
-    [ "equidistributed", "classFeel_1_1ParameterSpace.html#aae820d25797c3f521ff6d1bdc36eed32", null ],
-    [ "equidistributeInDirection", "classFeel_1_1ParameterSpace.html#ab80e361603fe8564808dc3ebe59eec71", null ],
-    [ "logEquidistributed", "classFeel_1_1ParameterSpace.html#a3f1aad049517877600bf7f1774477495", null ],
-    [ "logEquidistributeInDirection", "classFeel_1_1ParameterSpace.html#a4e08d02551a2aa66a48c949fa2d587f3", null ],
     [ "logMiddle", "classFeel_1_1ParameterSpace.html#adc264707fd47a365269248b4b1d5b291", null ],
-    [ "logRandom", "classFeel_1_1ParameterSpace.html#a4e30b9730c09f8f2fc7fe4a3371f86f2", null ],
-    [ "logRandom1", "classFeel_1_1ParameterSpace.html#aad0be98bdf9e330d8437e076f721172d", null ],
     [ "max", "classFeel_1_1ParameterSpace.html#a69d4ffe631affd0c2d407a2818286043", null ],
     [ "middle", "classFeel_1_1ParameterSpace.html#ae9b978857644213cfa3777ad9920ec80", null ],
     [ "min", "classFeel_1_1ParameterSpace.html#ab241841df8a480c56ebbcd9a6dae43e5", null ],
-    [ "New", "classFeel_1_1ParameterSpace.html#abb3b9af4ddb222b8eb24b5128ffd1212", null ],
     [ "operator=", "classFeel_1_1ParameterSpace.html#a1554a3ad601e520b16a5d0236027cb3f", null ],
-    [ "random", "classFeel_1_1ParameterSpace.html#a191867175f999a4cfd4318dc9c9533e9", null ],
     [ "sampling", "classFeel_1_1ParameterSpace.html#a9b446a78d0a57e0dd5b889e487ebd0f6", null ],
     [ "setMax", "classFeel_1_1ParameterSpace.html#a09e77baf039b5638912ec76489c8ca13", null ],
     [ "setMin", "classFeel_1_1ParameterSpace.html#a2ed2fdd18d629e8f6a8ac8ad37ad37de", null ],
-    [ "boost::serialization::access", "classFeel_1_1ParameterSpace.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ],
-    [ "Dimension", "classFeel_1_1ParameterSpace.html#a46ca938c141dc09a30081c725e9b0b2f", null ]
+    [ "boost::serialization::access", "classFeel_1_1ParameterSpace.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ]
 ];
