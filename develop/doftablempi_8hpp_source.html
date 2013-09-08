@@ -661,28 +661,28 @@ $(document).ready(function(){initNavTree('doftablempi_8hpp_source.html','');});
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;                {</div>
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;                    <span class="keyword">auto</span> itdofpt = this-&gt;dofPointBegin();</div>
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;                    <span class="keyword">auto</span> <span class="keyword">const</span> endofpt = this-&gt;dofPointEnd();</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;                    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> indexpt=0;</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                    <span class="keywordflow">for</span> ( ; itdofpt!=endofpt &amp;&amp; !find ; ++itdofpt,++indexpt )</div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                    {</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                        <span class="keyword">const</span> <span class="keyword">auto</span> thedofPtInFace = itdofpt-&gt;template get&lt;0&gt;();</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;                        DVLOG(3) &lt;&lt; <span class="stringliteral">&quot;[buildGhostInterProcessDofMap] (myRank:&quot;</span> &lt;&lt;  myRank &lt;&lt; <span class="stringliteral">&quot;) &quot;</span></div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;                                 &lt;&lt; <span class="stringliteral">&quot;thedofPtInFace: &quot;</span> &lt;&lt; thedofPtInFace &lt;&lt; <span class="stringliteral">&quot;nodeDofRecv: &quot;</span> &lt;&lt; nodeDofRecv &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;                        <span class="comment">// test equatlity of dofs point</span></div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;                        <span class="keywordtype">bool</span> find2=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;                        <span class="keywordflow">for</span> (uint16_type d=0;d&lt;nRealDim;++d)</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;                        {</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;                            find2 = find2 &amp;&amp; (std::abs( thedofPtInFace[d]-nodeDofRecv[d] )&lt;1e-9);</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;                        }</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;                        <span class="comment">// if find else save local dof</span></div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;                        <span class="keywordflow">if</span> (find2) { locDof = indexpt;find=<span class="keyword">true</span>; }</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;                    }</div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;                    <span class="comment">// check</span></div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;                    CHECK( find ) &lt;&lt; <span class="stringliteral">&quot;\nPROBLEM with parallel dof table construction : Dof point not find on interprocess face &quot;</span> &lt;&lt; nodeDofRecv &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;                    <span class="comment">//------------------------------------------------------------------------------//</span></div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;                    <span class="comment">// get global dof</span></div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;                    <span class="comment">//const auto thedof = localToGlobal( idFaceInMyPartition, locDof, comp );</span></div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;                    <span class="keyword">const</span> <span class="keyword">auto</span> dofGlobAsked = locDof;<span class="comment">//thedof.template get&lt;0&gt;();</span></div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;                    <span class="keywordflow">for</span> ( ; itdofpt!=endofpt &amp;&amp; !find ; ++itdofpt )</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                    {</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                        <span class="keyword">const</span> <span class="keyword">auto</span> thedofPt = itdofpt-&gt;template get&lt;0&gt;();</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                        <span class="keywordflow">if</span> ( itdofpt-&gt;template get&lt;2&gt;() != comp ) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;                        DVLOG(3) &lt;&lt; <span class="stringliteral">&quot;[buildGhostInterProcessDofMap] (myRank:&quot;</span> &lt;&lt;  myRank &lt;&lt; <span class="stringliteral">&quot;) &quot;</span></div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;                                 &lt;&lt; <span class="stringliteral">&quot;thedofPt: &quot;</span> &lt;&lt; thedofPt &lt;&lt; <span class="stringliteral">&quot;nodeDofRecv: &quot;</span> &lt;&lt; nodeDofRecv &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;                        <span class="comment">// test equatlity of dofs point</span></div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;                        <span class="keywordtype">bool</span> find2=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;                        <span class="keywordflow">for</span> (uint16_type d=0;d&lt;nRealDim;++d)</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;                        {</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;                            find2 = find2 &amp;&amp; (std::abs( thedofPt[d]-nodeDofRecv[d] )&lt;1e-9);</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;                        }</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;                        <span class="comment">// if find else save local dof</span></div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;                        <span class="keywordflow">if</span> (find2) { locDof = itdofpt-&gt;template get&lt;1&gt;();find=<span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;                    }</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;                    <span class="comment">// check</span></div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;                    CHECK( find ) &lt;&lt; <span class="stringliteral">&quot;\nPROBLEM with parallel dof table construction : Dof point not find on interprocess face &quot;</span> &lt;&lt; nodeDofRecv &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;                    <span class="comment">//------------------------------------------------------------------------------//</span></div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;                    <span class="comment">// get global dof</span></div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;                    <span class="keyword">const</span> <span class="keyword">auto</span> dofGlobAsked = locDof;</div>
 <div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;                    <span class="comment">// save response</span></div>
 <div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;                    resAskedWithMultiProcess[cptDofInFace] = this-&gt;M_mapGlobalProcessToGlobalCluster[dofGlobAsked];</div>
 <div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                }</div>
@@ -1537,7 +1537,7 @@ $(document).ready(function(){initNavTree('doftablempi_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sat Sep 7 2013 00:01:44 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Mon Sep 9 2013 00:01:55 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

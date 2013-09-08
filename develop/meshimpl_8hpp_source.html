@@ -2745,344 +2745,282 @@ $(document).ready(function(){initNavTree('meshimpl_8hpp_source.html','');});
 <div class="line"><a name="l02646"></a><span class="lineno"> 2646</span>&#160;                                         <span class="keyword">const</span> matrix_node_type &amp; setPoints,</div>
 <div class="line"><a name="l02647"></a><span class="lineno"> 2647</span>&#160;                                         mpl::int_&lt;1&gt;  )<span class="keyword"> const</span></div>
 <div class="line"><a name="l02648"></a><span class="lineno"> 2648</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l02649"></a><span class="lineno"> 2649</span>&#160;    <span class="keywordtype">bool</span> isin=<span class="keyword">false</span>,isin2=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l02649"></a><span class="lineno"> 2649</span>&#160;    <span class="keywordtype">bool</span> isin=<span class="keyword">true</span>; <span class="comment">// warning : start with true</span></div>
 <div class="line"><a name="l02650"></a><span class="lineno"> 2650</span>&#160;    <span class="keywordtype">double</span> dmin=0.;</div>
 <div class="line"><a name="l02651"></a><span class="lineno"> 2651</span>&#160;    node_type x_ref;</div>
 <div class="line"><a name="l02652"></a><span class="lineno"> 2652</span>&#160;</div>
 <div class="line"><a name="l02653"></a><span class="lineno"> 2653</span>&#160;    <span class="comment">//get element with the id</span></div>
-<div class="line"><a name="l02654"></a><span class="lineno"> 2654</span>&#160;    <span class="keyword">auto</span> <span class="keyword">const</span> elt= M_mesh-&gt;element( _id );</div>
-<div class="line"><a name="l02655"></a><span class="lineno"> 2655</span>&#160;    <span class="keyword">auto</span> <span class="keyword">const</span> eltG = elt.G();</div>
+<div class="line"><a name="l02654"></a><span class="lineno"> 2654</span>&#160;    <span class="keyword">auto</span> <span class="keyword">const</span>&amp; elt= M_mesh-&gt;element( _id );</div>
+<div class="line"><a name="l02655"></a><span class="lineno"> 2655</span>&#160;    <span class="keyword">auto</span> <span class="keyword">const</span>&amp; eltG = elt.G();</div>
 <div class="line"><a name="l02656"></a><span class="lineno"> 2656</span>&#160;</div>
-<div class="line"><a name="l02657"></a><span class="lineno"> 2657</span>&#160;    std::vector&lt;bool&gt; find( setPoints.size2() );</div>
-<div class="line"><a name="l02658"></a><span class="lineno"> 2658</span>&#160;    std::fill( find.begin(),find.end(),false );</div>
-<div class="line"><a name="l02659"></a><span class="lineno"> 2659</span>&#160;</div>
-<div class="line"><a name="l02660"></a><span class="lineno"> 2660</span>&#160;    <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i=0; i&lt; setPoints.size2(); ++i )</div>
-<div class="line"><a name="l02661"></a><span class="lineno"> 2661</span>&#160;    {</div>
-<div class="line"><a name="l02662"></a><span class="lineno"> 2662</span>&#160;        <span class="keyword">auto</span> thePt = ublas::column( setPoints,i );</div>
-<div class="line"><a name="l02663"></a><span class="lineno"> 2663</span>&#160;        find[i]=<span class="keyword">false</span>;</div>
-<div class="line"><a name="l02664"></a><span class="lineno"> 2664</span>&#160;</div>
-<div class="line"><a name="l02665"></a><span class="lineno"> 2665</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> j=0; j&lt;eltG.size2(); ++j )</div>
-<div class="line"><a name="l02666"></a><span class="lineno"> 2666</span>&#160;        {</div>
-<div class="line"><a name="l02667"></a><span class="lineno"> 2667</span>&#160;            <span class="keyword">auto</span> ptjeltG = ublas::column( eltG,j );</div>
-<div class="line"><a name="l02668"></a><span class="lineno"> 2668</span>&#160;</div>
-<div class="line"><a name="l02669"></a><span class="lineno"> 2669</span>&#160;            <span class="keywordflow">if</span> ( ptjeltG.size()==1 )</div>
-<div class="line"><a name="l02670"></a><span class="lineno"> 2670</span>&#160;            {</div>
-<div class="line"><a name="l02671"></a><span class="lineno"> 2671</span>&#160;                <span class="keywordflow">if</span> ( std::abs( thePt( 0 )-ptjeltG( 0 ) )&lt;1e-5 )</div>
-<div class="line"><a name="l02672"></a><span class="lineno"> 2672</span>&#160;                    find[i]=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l02673"></a><span class="lineno"> 2673</span>&#160;            }</div>
-<div class="line"><a name="l02674"></a><span class="lineno"> 2674</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( ptjeltG.size()==2 )</div>
-<div class="line"><a name="l02675"></a><span class="lineno"> 2675</span>&#160;            {</div>
-<div class="line"><a name="l02676"></a><span class="lineno"> 2676</span>&#160;                <span class="keywordflow">if</span> ( std::abs( thePt( 0 )-ptjeltG( 0 ) )&lt;1e-5 &amp;&amp;</div>
-<div class="line"><a name="l02677"></a><span class="lineno"> 2677</span>&#160;                     std::abs( thePt( 1 )-ptjeltG( 1 ) )&lt;1e-5 )</div>
-<div class="line"><a name="l02678"></a><span class="lineno"> 2678</span>&#160;                    find[i]=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l02679"></a><span class="lineno"> 2679</span>&#160;            }</div>
-<div class="line"><a name="l02680"></a><span class="lineno"> 2680</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( ptjeltG.size()==3 )</div>
-<div class="line"><a name="l02681"></a><span class="lineno"> 2681</span>&#160;            {</div>
-<div class="line"><a name="l02682"></a><span class="lineno"> 2682</span>&#160;                <span class="keywordflow">if</span> ( std::abs( thePt( 0 )-ptjeltG( 0 ) )&lt;1e-5 &amp;&amp;</div>
-<div class="line"><a name="l02683"></a><span class="lineno"> 2683</span>&#160;                     std::abs( thePt( 1 )-ptjeltG( 1 ) )&lt;1e-5 &amp;&amp;</div>
-<div class="line"><a name="l02684"></a><span class="lineno"> 2684</span>&#160;                     std::abs( thePt( 2 )-ptjeltG( 2 ) )&lt;1e-5 )</div>
-<div class="line"><a name="l02685"></a><span class="lineno"> 2685</span>&#160;                    find[i]=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l02686"></a><span class="lineno"> 2686</span>&#160;            }</div>
-<div class="line"><a name="l02687"></a><span class="lineno"> 2687</span>&#160;        }</div>
+<div class="line"><a name="l02657"></a><span class="lineno"> 2657</span>&#160;    <span class="comment">// check conformity between setPoints (given) and eltG (localize)</span></div>
+<div class="line"><a name="l02658"></a><span class="lineno"> 2658</span>&#160;    std::vector&lt;bool&gt; find( setPoints.size2(),false );</div>
+<div class="line"><a name="l02659"></a><span class="lineno"> 2659</span>&#160;    <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i=0; i&lt; setPoints.size2() &amp;&amp; isin; ++i )</div>
+<div class="line"><a name="l02660"></a><span class="lineno"> 2660</span>&#160;    {</div>
+<div class="line"><a name="l02661"></a><span class="lineno"> 2661</span>&#160;        <span class="keyword">auto</span> <span class="keyword">const</span>&amp; thePt = ublas::column( setPoints,i );</div>
+<div class="line"><a name="l02662"></a><span class="lineno"> 2662</span>&#160;</div>
+<div class="line"><a name="l02663"></a><span class="lineno"> 2663</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> j=0; j&lt;eltG.size2(); ++j )</div>
+<div class="line"><a name="l02664"></a><span class="lineno"> 2664</span>&#160;        {</div>
+<div class="line"><a name="l02665"></a><span class="lineno"> 2665</span>&#160;            <span class="keyword">auto</span> ptjeltG = ublas::column( eltG,j );</div>
+<div class="line"><a name="l02666"></a><span class="lineno"> 2666</span>&#160;</div>
+<div class="line"><a name="l02667"></a><span class="lineno"> 2667</span>&#160;            <span class="keywordflow">if</span> ( ptjeltG.size()==1 )</div>
+<div class="line"><a name="l02668"></a><span class="lineno"> 2668</span>&#160;            {</div>
+<div class="line"><a name="l02669"></a><span class="lineno"> 2669</span>&#160;                <span class="keywordflow">if</span> ( std::abs( thePt( 0 )-ptjeltG( 0 ) )&lt;1e-8 )</div>
+<div class="line"><a name="l02670"></a><span class="lineno"> 2670</span>&#160;                    find[i]=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l02671"></a><span class="lineno"> 2671</span>&#160;            }</div>
+<div class="line"><a name="l02672"></a><span class="lineno"> 2672</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( ptjeltG.size()==2 )</div>
+<div class="line"><a name="l02673"></a><span class="lineno"> 2673</span>&#160;            {</div>
+<div class="line"><a name="l02674"></a><span class="lineno"> 2674</span>&#160;                <span class="keywordflow">if</span> ( std::abs( thePt( 0 )-ptjeltG( 0 ) )&lt;1e-8 &amp;&amp;</div>
+<div class="line"><a name="l02675"></a><span class="lineno"> 2675</span>&#160;                     std::abs( thePt( 1 )-ptjeltG( 1 ) )&lt;1e-8 )</div>
+<div class="line"><a name="l02676"></a><span class="lineno"> 2676</span>&#160;                    find[i]=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l02677"></a><span class="lineno"> 2677</span>&#160;            }</div>
+<div class="line"><a name="l02678"></a><span class="lineno"> 2678</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( ptjeltG.size()==3 )</div>
+<div class="line"><a name="l02679"></a><span class="lineno"> 2679</span>&#160;            {</div>
+<div class="line"><a name="l02680"></a><span class="lineno"> 2680</span>&#160;                <span class="keywordflow">if</span> ( std::abs( thePt( 0 )-ptjeltG( 0 ) )&lt;1e-8 &amp;&amp;</div>
+<div class="line"><a name="l02681"></a><span class="lineno"> 2681</span>&#160;                     std::abs( thePt( 1 )-ptjeltG( 1 ) )&lt;1e-8 &amp;&amp;</div>
+<div class="line"><a name="l02682"></a><span class="lineno"> 2682</span>&#160;                     std::abs( thePt( 2 )-ptjeltG( 2 ) )&lt;1e-8 )</div>
+<div class="line"><a name="l02683"></a><span class="lineno"> 2683</span>&#160;                    find[i]=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l02684"></a><span class="lineno"> 2684</span>&#160;            }</div>
+<div class="line"><a name="l02685"></a><span class="lineno"> 2685</span>&#160;        }</div>
+<div class="line"><a name="l02686"></a><span class="lineno"> 2686</span>&#160;        <span class="comment">// up checking</span></div>
+<div class="line"><a name="l02687"></a><span class="lineno"> 2687</span>&#160;        isin &amp;= find[i];</div>
 <div class="line"><a name="l02688"></a><span class="lineno"> 2688</span>&#160;    }</div>
-<div class="line"><a name="l02689"></a><span class="lineno"> 2689</span>&#160;    <span class="comment">// check if all points are found or not</span></div>
-<div class="line"><a name="l02690"></a><span class="lineno"> 2690</span>&#160;    <span class="keywordtype">bool</span> isOK=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l02691"></a><span class="lineno"> 2691</span>&#160;    <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i=0; i&lt; setPoints.size2(); ++i ) { isOK &amp;= find[i]; }</div>
-<div class="line"><a name="l02692"></a><span class="lineno"> 2692</span>&#160;    <span class="keywordflow">if</span> ( !isOK ) isin=<span class="keyword">false</span>;</div>
-<div class="line"><a name="l02693"></a><span class="lineno"> 2693</span>&#160;    <span class="keywordflow">else</span> isin=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l02694"></a><span class="lineno"> 2694</span>&#160;</div>
-<div class="line"><a name="l02695"></a><span class="lineno"> 2695</span>&#160;    <span class="comment">// get ref pt and check</span></div>
-<div class="line"><a name="l02696"></a><span class="lineno"> 2696</span>&#160;    <span class="keywordflow">if</span> ( isin )</div>
-<div class="line"><a name="l02697"></a><span class="lineno"> 2697</span>&#160;    {</div>
-<div class="line"><a name="l02698"></a><span class="lineno"> 2698</span>&#160;        boost::tie(isin2,x_ref,dmin) = this-&gt;isIn(_id,_pt);</div>
-<div class="line"><a name="l02699"></a><span class="lineno"> 2699</span>&#160;        <span class="keywordflow">if</span> ( isin!=isin2) std::cout &lt;&lt; <span class="stringliteral">&quot;Bug Mesh::Localization::searchElement&lt;true&gt;&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l02700"></a><span class="lineno"> 2700</span>&#160;    }</div>
+<div class="line"><a name="l02689"></a><span class="lineno"> 2689</span>&#160;</div>
+<div class="line"><a name="l02690"></a><span class="lineno"> 2690</span>&#160;    <span class="comment">// if find -&gt; get ref point and check</span></div>
+<div class="line"><a name="l02691"></a><span class="lineno"> 2691</span>&#160;    <span class="keywordflow">if</span> ( isin )</div>
+<div class="line"><a name="l02692"></a><span class="lineno"> 2692</span>&#160;    {</div>
+<div class="line"><a name="l02693"></a><span class="lineno"> 2693</span>&#160;        <span class="keywordtype">bool</span> isin2=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l02694"></a><span class="lineno"> 2694</span>&#160;        boost::tie(isin2,x_ref,dmin) = this-&gt;isIn(_id,_pt);</div>
+<div class="line"><a name="l02695"></a><span class="lineno"> 2695</span>&#160;        LOG_IF(WARNING, !isin2) &lt;&lt; <span class="stringliteral">&quot;Mesh::Localization::isIn&lt;Conformal&gt; : check fail -&gt; maybe x_ref is not correct&quot;</span>;</div>
+<div class="line"><a name="l02696"></a><span class="lineno"> 2696</span>&#160;    }</div>
+<div class="line"><a name="l02697"></a><span class="lineno"> 2697</span>&#160;</div>
+<div class="line"><a name="l02698"></a><span class="lineno"> 2698</span>&#160;    <span class="keywordflow">return</span> boost::make_tuple(isin,x_ref,dmin);</div>
+<div class="line"><a name="l02699"></a><span class="lineno"> 2699</span>&#160;}</div>
+<div class="line"><a name="l02700"></a><span class="lineno"> 2700</span>&#160;</div>
 <div class="line"><a name="l02701"></a><span class="lineno"> 2701</span>&#160;</div>
-<div class="line"><a name="l02702"></a><span class="lineno"> 2702</span>&#160;    <span class="keywordflow">return</span> boost::make_tuple(isin,x_ref,dmin);</div>
-<div class="line"><a name="l02703"></a><span class="lineno"> 2703</span>&#160;}</div>
-<div class="line"><a name="l02704"></a><span class="lineno"> 2704</span>&#160;</div>
-<div class="line"><a name="l02705"></a><span class="lineno"> 2705</span>&#160;</div>
-<div class="line"><a name="l02706"></a><span class="lineno"> 2706</span>&#160;</div>
-<div class="line"><a name="l02707"></a><span class="lineno"> 2707</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Shape, <span class="keyword">typename</span> T, <span class="keywordtype">int</span> Tag&gt;</div>
-<div class="line"><a name="l02708"></a><span class="lineno"> 2708</span>&#160;boost::tuple&lt;bool, size_type, typename Mesh&lt;Shape, T, Tag&gt;::node_type&gt;</div>
-<div class="line"><a name="l02709"></a><span class="lineno"> 2709</span>&#160;Mesh&lt;Shape, T, Tag&gt;::Localization::searchElement( <span class="keyword">const</span> node_type &amp; p,</div>
-<div class="line"><a name="l02710"></a><span class="lineno"> 2710</span>&#160;        <span class="keyword">const</span> matrix_node_type &amp; setPoints,</div>
-<div class="line"><a name="l02711"></a><span class="lineno"> 2711</span>&#160;        mpl::int_&lt;1&gt;  )</div>
-<div class="line"><a name="l02712"></a><span class="lineno"> 2712</span>&#160;{</div>
-<div class="line"><a name="l02713"></a><span class="lineno"> 2713</span>&#160;    <span class="keyword">typename</span> self_type::element_type elt;</div>
-<div class="line"><a name="l02714"></a><span class="lineno"> 2714</span>&#160;    <span class="keyword">typename</span> self_type::gm_type::reference_convex_type refelem;</div>
-<div class="line"><a name="l02715"></a><span class="lineno"> 2715</span>&#160;    <span class="keyword">typename</span> self_type::gm1_type::reference_convex_type refelem1;</div>
-<div class="line"><a name="l02716"></a><span class="lineno"> 2716</span>&#160;</div>
-<div class="line"><a name="l02717"></a><span class="lineno"> 2717</span>&#160;    <span class="keywordtype">bool</span> isin=<span class="keyword">false</span>,isin2=<span class="keyword">false</span>;</div>
-<div class="line"><a name="l02718"></a><span class="lineno"> 2718</span>&#160;    <span class="keywordtype">double</span> dmin=0.;</div>
-<div class="line"><a name="l02719"></a><span class="lineno"> 2719</span>&#160;    node_type x_ref;</div>
-<div class="line"><a name="l02720"></a><span class="lineno"> 2720</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> idEltFound = this-&gt;mesh()-&gt;beginElementWithId(this-&gt;mesh()-&gt;worldComm().localRank())-&gt;id();</div>
-<div class="line"><a name="l02721"></a><span class="lineno"> 2721</span>&#160;</div>
-<div class="line"><a name="l02722"></a><span class="lineno"> 2722</span>&#160;    std::list&lt; std::pair&lt;size_type, uint&gt; &gt; ListTri;</div>
-<div class="line"><a name="l02723"></a><span class="lineno"> 2723</span>&#160;    searchInKdTree( p,ListTri );</div>
-<div class="line"><a name="l02724"></a><span class="lineno"> 2724</span>&#160;</div>
-<div class="line"><a name="l02725"></a><span class="lineno"> 2725</span>&#160;    <span class="keyword">auto</span> itLT=ListTri.begin();</div>
-<div class="line"><a name="l02726"></a><span class="lineno"> 2726</span>&#160;    <span class="keyword">auto</span> itLT_end=ListTri.end();</div>
-<div class="line"><a name="l02727"></a><span class="lineno"> 2727</span>&#160;</div>
-<div class="line"><a name="l02728"></a><span class="lineno"> 2728</span>&#160;<span class="preprocessor">#if !defined( NDEBUG )</span></div>
-<div class="line"><a name="l02729"></a><span class="lineno"> 2729</span>&#160;<span class="preprocessor"></span>    <span class="comment">//if(std::distance(itLT,itLT_end)==0) std::cout&lt;&lt;&quot;\nListTri vide\n&quot;;</span></div>
-<div class="line"><a name="l02730"></a><span class="lineno"> 2730</span>&#160;    FEELPP_ASSERT( std::distance( itLT,itLT_end )&gt;0 ).error( <span class="stringliteral">&quot; problem in list localization : is empty&quot;</span> );</div>
-<div class="line"><a name="l02731"></a><span class="lineno"> 2731</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l02732"></a><span class="lineno"> 2732</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l02733"></a><span class="lineno"> 2733</span>&#160;</div>
-<div class="line"><a name="l02734"></a><span class="lineno"> 2734</span>&#160;    <span class="comment">//research the element which contains the point p</span></div>
-<div class="line"><a name="l02735"></a><span class="lineno"> 2735</span>&#160;    <span class="keywordflow">while</span> ( itLT != itLT_end &amp;&amp; !isin  )</div>
-<div class="line"><a name="l02736"></a><span class="lineno"> 2736</span>&#160;    {</div>
-<div class="line"><a name="l02737"></a><span class="lineno"> 2737</span>&#160;</div>
-<div class="line"><a name="l02738"></a><span class="lineno"> 2738</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l02739"></a><span class="lineno"> 2739</span>&#160;<span class="preprocessor"></span>        <span class="comment">//get element with the id</span></div>
-<div class="line"><a name="l02740"></a><span class="lineno"> 2740</span>&#160;        elt= M_mesh-&gt;element( itLT-&gt;first );</div>
-<div class="line"><a name="l02741"></a><span class="lineno"> 2741</span>&#160;</div>
-<div class="line"><a name="l02742"></a><span class="lineno"> 2742</span>&#160;        <span class="keyword">auto</span> eltG = elt.G();</div>
-<div class="line"><a name="l02743"></a><span class="lineno"> 2743</span>&#160;        std::vector&lt;bool&gt; find( setPoints.size2() );</div>
-<div class="line"><a name="l02744"></a><span class="lineno"> 2744</span>&#160;        std::fill( find.begin(),find.end(),false );</div>
-<div class="line"><a name="l02745"></a><span class="lineno"> 2745</span>&#160;</div>
-<div class="line"><a name="l02746"></a><span class="lineno"> 2746</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i=0; i&lt; setPoints.size2(); ++i )</div>
-<div class="line"><a name="l02747"></a><span class="lineno"> 2747</span>&#160;            {</div>
-<div class="line"><a name="l02748"></a><span class="lineno"> 2748</span>&#160;                <span class="keyword">auto</span> thePt = ublas::column( setPoints,i );</div>
-<div class="line"><a name="l02749"></a><span class="lineno"> 2749</span>&#160;                find[i]=<span class="keyword">false</span>;</div>
-<div class="line"><a name="l02750"></a><span class="lineno"> 2750</span>&#160;</div>
-<div class="line"><a name="l02751"></a><span class="lineno"> 2751</span>&#160;                <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> j=0; j&lt;eltG.size2(); ++j )</div>
-<div class="line"><a name="l02752"></a><span class="lineno"> 2752</span>&#160;                    {</div>
-<div class="line"><a name="l02753"></a><span class="lineno"> 2753</span>&#160;                        <span class="keyword">auto</span> ptjeltG = ublas::column( eltG,j );</div>
-<div class="line"><a name="l02754"></a><span class="lineno"> 2754</span>&#160;</div>
-<div class="line"><a name="l02755"></a><span class="lineno"> 2755</span>&#160;                        <span class="keywordflow">if</span> ( ptjeltG.size()==1 )</div>
-<div class="line"><a name="l02756"></a><span class="lineno"> 2756</span>&#160;                            {</div>
-<div class="line"><a name="l02757"></a><span class="lineno"> 2757</span>&#160;                                <span class="keywordflow">if</span> ( std::abs( thePt( 0 )-ptjeltG( 0 ) )&lt;1e-5 )</div>
-<div class="line"><a name="l02758"></a><span class="lineno"> 2758</span>&#160;                                    find[i]=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l02759"></a><span class="lineno"> 2759</span>&#160;                            }</div>
-<div class="line"><a name="l02760"></a><span class="lineno"> 2760</span>&#160;</div>
-<div class="line"><a name="l02761"></a><span class="lineno"> 2761</span>&#160;                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( ptjeltG.size()==2 )</div>
-<div class="line"><a name="l02762"></a><span class="lineno"> 2762</span>&#160;                            {</div>
-<div class="line"><a name="l02763"></a><span class="lineno"> 2763</span>&#160;                                <span class="keywordflow">if</span> ( std::abs( thePt( 0 )-ptjeltG( 0 ) )&lt;1e-5 &amp;&amp;</div>
-<div class="line"><a name="l02764"></a><span class="lineno"> 2764</span>&#160;                                     std::abs( thePt( 1 )-ptjeltG( 1 ) )&lt;1e-5 )</div>
-<div class="line"><a name="l02765"></a><span class="lineno"> 2765</span>&#160;                                    find[i]=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l02766"></a><span class="lineno"> 2766</span>&#160;                            }</div>
-<div class="line"><a name="l02767"></a><span class="lineno"> 2767</span>&#160;</div>
-<div class="line"><a name="l02768"></a><span class="lineno"> 2768</span>&#160;                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( ptjeltG.size()==3 )</div>
-<div class="line"><a name="l02769"></a><span class="lineno"> 2769</span>&#160;                            {</div>
-<div class="line"><a name="l02770"></a><span class="lineno"> 2770</span>&#160;                                <span class="keywordflow">if</span> ( std::abs( thePt( 0 )-ptjeltG( 0 ) )&lt;1e-5 &amp;&amp;</div>
-<div class="line"><a name="l02771"></a><span class="lineno"> 2771</span>&#160;                                     std::abs( thePt( 1 )-ptjeltG( 1 ) )&lt;1e-5 &amp;&amp;</div>
-<div class="line"><a name="l02772"></a><span class="lineno"> 2772</span>&#160;                                     std::abs( thePt( 2 )-ptjeltG( 2 ) )&lt;1e-5 )</div>
-<div class="line"><a name="l02773"></a><span class="lineno"> 2773</span>&#160;                                    find[i]=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l02774"></a><span class="lineno"> 2774</span>&#160;                            }</div>
-<div class="line"><a name="l02775"></a><span class="lineno"> 2775</span>&#160;                    }</div>
-<div class="line"><a name="l02776"></a><span class="lineno"> 2776</span>&#160;            }</div>
-<div class="line"><a name="l02777"></a><span class="lineno"> 2777</span>&#160;        <span class="comment">// check if all points are found or not</span></div>
-<div class="line"><a name="l02778"></a><span class="lineno"> 2778</span>&#160;        <span class="keywordtype">bool</span> isOK=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l02779"></a><span class="lineno"> 2779</span>&#160;</div>
-<div class="line"><a name="l02780"></a><span class="lineno"> 2780</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i=0; i&lt; setPoints.size2(); ++i )</div>
-<div class="line"><a name="l02781"></a><span class="lineno"> 2781</span>&#160;            {</div>
-<div class="line"><a name="l02782"></a><span class="lineno"> 2782</span>&#160;                isOK &amp;= find[i];</div>
-<div class="line"><a name="l02783"></a><span class="lineno"> 2783</span>&#160;            }</div>
-<div class="line"><a name="l02784"></a><span class="lineno"> 2784</span>&#160;</div>
-<div class="line"><a name="l02785"></a><span class="lineno"> 2785</span>&#160;        <span class="keywordflow">if</span> ( !isOK ) isin=<span class="keyword">false</span>;</div>
-<div class="line"><a name="l02786"></a><span class="lineno"> 2786</span>&#160;        <span class="keywordflow">else</span> isin=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l02702"></a><span class="lineno"> 2702</span>&#160;</div>
+<div class="line"><a name="l02703"></a><span class="lineno"> 2703</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Shape, <span class="keyword">typename</span> T, <span class="keywordtype">int</span> Tag&gt;</div>
+<div class="line"><a name="l02704"></a><span class="lineno"> 2704</span>&#160;boost::tuple&lt;bool, size_type, typename Mesh&lt;Shape, T, Tag&gt;::node_type&gt;</div>
+<div class="line"><a name="l02705"></a><span class="lineno"> 2705</span>&#160;Mesh&lt;Shape, T, Tag&gt;::Localization::searchElement( <span class="keyword">const</span> node_type &amp; p,</div>
+<div class="line"><a name="l02706"></a><span class="lineno"> 2706</span>&#160;        <span class="keyword">const</span> matrix_node_type &amp; setPoints,</div>
+<div class="line"><a name="l02707"></a><span class="lineno"> 2707</span>&#160;        mpl::int_&lt;1&gt;  )</div>
+<div class="line"><a name="l02708"></a><span class="lineno"> 2708</span>&#160;{</div>
+<div class="line"><a name="l02709"></a><span class="lineno"> 2709</span>&#160;    <span class="keyword">typename</span> self_type::element_type elt;</div>
+<div class="line"><a name="l02710"></a><span class="lineno"> 2710</span>&#160;    <span class="keyword">typename</span> self_type::gm_type::reference_convex_type refelem;</div>
+<div class="line"><a name="l02711"></a><span class="lineno"> 2711</span>&#160;    <span class="keyword">typename</span> self_type::gm1_type::reference_convex_type refelem1;</div>
+<div class="line"><a name="l02712"></a><span class="lineno"> 2712</span>&#160;</div>
+<div class="line"><a name="l02713"></a><span class="lineno"> 2713</span>&#160;    <span class="keywordtype">bool</span> isin=<span class="keyword">false</span>,isin2=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l02714"></a><span class="lineno"> 2714</span>&#160;    <span class="keywordtype">double</span> dmin=0.;</div>
+<div class="line"><a name="l02715"></a><span class="lineno"> 2715</span>&#160;    node_type x_ref;</div>
+<div class="line"><a name="l02716"></a><span class="lineno"> 2716</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> idEltFound = this-&gt;mesh()-&gt;beginElementWithId(this-&gt;mesh()-&gt;worldComm().localRank())-&gt;id();</div>
+<div class="line"><a name="l02717"></a><span class="lineno"> 2717</span>&#160;</div>
+<div class="line"><a name="l02718"></a><span class="lineno"> 2718</span>&#160;    std::list&lt; std::pair&lt;size_type, uint&gt; &gt; ListTri;</div>
+<div class="line"><a name="l02719"></a><span class="lineno"> 2719</span>&#160;    searchInKdTree( p,ListTri );</div>
+<div class="line"><a name="l02720"></a><span class="lineno"> 2720</span>&#160;</div>
+<div class="line"><a name="l02721"></a><span class="lineno"> 2721</span>&#160;    <span class="keyword">auto</span> itLT=ListTri.begin();</div>
+<div class="line"><a name="l02722"></a><span class="lineno"> 2722</span>&#160;    <span class="keyword">auto</span> itLT_end=ListTri.end();</div>
+<div class="line"><a name="l02723"></a><span class="lineno"> 2723</span>&#160;</div>
+<div class="line"><a name="l02724"></a><span class="lineno"> 2724</span>&#160;<span class="preprocessor">#if !defined( NDEBUG )</span></div>
+<div class="line"><a name="l02725"></a><span class="lineno"> 2725</span>&#160;<span class="preprocessor"></span>    <span class="comment">//if(std::distance(itLT,itLT_end)==0) std::cout&lt;&lt;&quot;\nListTri vide\n&quot;;</span></div>
+<div class="line"><a name="l02726"></a><span class="lineno"> 2726</span>&#160;    FEELPP_ASSERT( std::distance( itLT,itLT_end )&gt;0 ).error( <span class="stringliteral">&quot; problem in list localization : is empty&quot;</span> );</div>
+<div class="line"><a name="l02727"></a><span class="lineno"> 2727</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l02728"></a><span class="lineno"> 2728</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l02729"></a><span class="lineno"> 2729</span>&#160;</div>
+<div class="line"><a name="l02730"></a><span class="lineno"> 2730</span>&#160;    <span class="comment">//research the element which contains the point p</span></div>
+<div class="line"><a name="l02731"></a><span class="lineno"> 2731</span>&#160;    <span class="keywordflow">while</span> ( itLT != itLT_end &amp;&amp; !isin  )</div>
+<div class="line"><a name="l02732"></a><span class="lineno"> 2732</span>&#160;    {</div>
+<div class="line"><a name="l02733"></a><span class="lineno"> 2733</span>&#160;        boost::tie(isin,x_ref,dmin) = this-&gt;isIn(itLT-&gt;first,p,setPoints,mpl::int_&lt;1&gt;());</div>
+<div class="line"><a name="l02734"></a><span class="lineno"> 2734</span>&#160;</div>
+<div class="line"><a name="l02735"></a><span class="lineno"> 2735</span>&#160;        <span class="comment">//if not inside, continue the research with an other element</span></div>
+<div class="line"><a name="l02736"></a><span class="lineno"> 2736</span>&#160;        <span class="keywordflow">if</span> ( !isin ) ++itLT;</div>
+<div class="line"><a name="l02737"></a><span class="lineno"> 2737</span>&#160;        <span class="keywordflow">else</span> idEltFound=itLT-&gt;first;</div>
+<div class="line"><a name="l02738"></a><span class="lineno"> 2738</span>&#160;    } <span class="comment">//while ( itLT != itLT_end &amp;&amp; !isin  )</span></div>
+<div class="line"><a name="l02739"></a><span class="lineno"> 2739</span>&#160;</div>
+<div class="line"><a name="l02740"></a><span class="lineno"> 2740</span>&#160;    <span class="keywordflow">if</span> (!isin)</div>
+<div class="line"><a name="l02741"></a><span class="lineno"> 2741</span>&#160;        {</div>
+<div class="line"><a name="l02742"></a><span class="lineno"> 2742</span>&#160;            <span class="keywordflow">if</span>( this-&gt;doExtrapolation() )</div>
+<div class="line"><a name="l02743"></a><span class="lineno"> 2743</span>&#160;                {</div>
+<div class="line"><a name="l02744"></a><span class="lineno"> 2744</span>&#160;                    std::cout &lt;&lt; <span class="stringliteral">&quot;WARNING EXTRAPOLATION for the point&quot;</span> &lt;&lt; p &lt;&lt; std::endl;</div>
+<div class="line"><a name="l02745"></a><span class="lineno"> 2745</span>&#160;                    <span class="comment">//std::cout &lt;&lt; &quot;W&quot;;</span></div>
+<div class="line"><a name="l02746"></a><span class="lineno"> 2746</span>&#160;                    <span class="keyword">auto</span> <span class="keyword">const</span>&amp; eltUsedForExtrapolation = this-&gt;mesh()-&gt;element(ListTri.begin()-&gt;first);</div>
+<div class="line"><a name="l02747"></a><span class="lineno"> 2747</span>&#160;                    gmc_inverse_type gic( this-&gt;mesh()-&gt;gm(), eltUsedForExtrapolation, this-&gt;mesh()-&gt;worldComm().subWorldCommSeq() );</div>
+<div class="line"><a name="l02748"></a><span class="lineno"> 2748</span>&#160;                    <span class="comment">//apply the inverse geometric transformation for the point p</span></div>
+<div class="line"><a name="l02749"></a><span class="lineno"> 2749</span>&#160;                    gic.setXReal( p);</div>
+<div class="line"><a name="l02750"></a><span class="lineno"> 2750</span>&#160;                    boost::tie(isin,idEltFound,x_ref) = boost::make_tuple(<span class="keyword">true</span>,eltUsedForExtrapolation.id(),gic.xRef());</div>
+<div class="line"><a name="l02751"></a><span class="lineno"> 2751</span>&#160;                }</div>
+<div class="line"><a name="l02752"></a><span class="lineno"> 2752</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l02753"></a><span class="lineno"> 2753</span>&#160;                {</div>
+<div class="line"><a name="l02754"></a><span class="lineno"> 2754</span>&#160;                    idEltFound = this-&gt;mesh()-&gt;beginElementWithId(this-&gt;mesh()-&gt;worldComm().localRank())-&gt;id();</div>
+<div class="line"><a name="l02755"></a><span class="lineno"> 2755</span>&#160;                    isin = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l02756"></a><span class="lineno"> 2756</span>&#160;                    <span class="comment">//x_ref=?</span></div>
+<div class="line"><a name="l02757"></a><span class="lineno"> 2757</span>&#160;                }</div>
+<div class="line"><a name="l02758"></a><span class="lineno"> 2758</span>&#160;        }</div>
+<div class="line"><a name="l02759"></a><span class="lineno"> 2759</span>&#160;</div>
+<div class="line"><a name="l02760"></a><span class="lineno"> 2760</span>&#160;    <span class="keywordflow">return</span> boost::make_tuple( isin, idEltFound, x_ref);</div>
+<div class="line"><a name="l02761"></a><span class="lineno"> 2761</span>&#160;</div>
+<div class="line"><a name="l02762"></a><span class="lineno"> 2762</span>&#160;} <span class="comment">//searchElement</span></div>
+<div class="line"><a name="l02763"></a><span class="lineno"> 2763</span>&#160;</div>
+<div class="line"><a name="l02764"></a><span class="lineno"> 2764</span>&#160;</div>
+<div class="line"><a name="l02765"></a><span class="lineno"> 2765</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Shape, <span class="keyword">typename</span> T, <span class="keywordtype">int</span> Tag&gt;</div>
+<div class="line"><a name="l02766"></a><span class="lineno"> 2766</span>&#160;boost::tuple&lt;std::vector&lt;bool&gt;, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a>&gt;</div>
+<div class="line"><a name="l02767"></a><span class="lineno"> 2767</span>&#160;Mesh&lt;Shape, T, Tag&gt;::Localization::run_analysis( <span class="keyword">const</span> matrix_node_type &amp; m,</div>
+<div class="line"><a name="l02768"></a><span class="lineno"> 2768</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> &amp; eltHypothetical,</div>
+<div class="line"><a name="l02769"></a><span class="lineno"> 2769</span>&#160;        <span class="keyword">const</span> matrix_node_type &amp; setPoints,</div>
+<div class="line"><a name="l02770"></a><span class="lineno"> 2770</span>&#160;        mpl::int_&lt;1&gt;  )</div>
+<div class="line"><a name="l02771"></a><span class="lineno"> 2771</span>&#160;{</div>
+<div class="line"><a name="l02772"></a><span class="lineno"> 2772</span>&#160;<span class="preprocessor">#if !defined( NDEBUG )</span></div>
+<div class="line"><a name="l02773"></a><span class="lineno"> 2773</span>&#160;<span class="preprocessor"></span>    FEELPP_ASSERT( IsInit == <span class="keyword">true</span> )</div>
+<div class="line"><a name="l02774"></a><span class="lineno"> 2774</span>&#160;    ( IsInit ).warn( <span class="stringliteral">&quot;You don&#39;t have initialized the tool of localization&quot;</span> );</div>
+<div class="line"><a name="l02775"></a><span class="lineno"> 2775</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l02776"></a><span class="lineno"> 2776</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l02777"></a><span class="lineno"> 2777</span>&#160;    <span class="keywordtype">bool</span> find_x=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l02778"></a><span class="lineno"> 2778</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> cv_id=eltHypothetical;</div>
+<div class="line"><a name="l02779"></a><span class="lineno"> 2779</span>&#160;    node_type x_ref;</div>
+<div class="line"><a name="l02780"></a><span class="lineno"> 2780</span>&#160;    <span class="keywordtype">double</span> dmin;</div>
+<div class="line"><a name="l02781"></a><span class="lineno"> 2781</span>&#160;    std::vector&lt;bool&gt; hasFindPts(setPoints.size2(),<span class="keyword">false</span>);</div>
+<div class="line"><a name="l02782"></a><span class="lineno"> 2782</span>&#160;</div>
+<div class="line"><a name="l02783"></a><span class="lineno"> 2783</span>&#160;    M_resultAnalysis.clear();</div>
+<div class="line"><a name="l02784"></a><span class="lineno"> 2784</span>&#160;    <span class="keyword">auto</span> currentEltHypothetical = eltHypothetical;</div>
+<div class="line"><a name="l02785"></a><span class="lineno"> 2785</span>&#160;    <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i=0; i&lt; m.size2(); ++i )</div>
+<div class="line"><a name="l02786"></a><span class="lineno"> 2786</span>&#160;    {</div>
 <div class="line"><a name="l02787"></a><span class="lineno"> 2787</span>&#160;</div>
-<div class="line"><a name="l02788"></a><span class="lineno"> 2788</span>&#160;        <span class="keywordflow">if</span> ( isin ) <span class="comment">// just a check</span></div>
-<div class="line"><a name="l02789"></a><span class="lineno"> 2789</span>&#160;            {</div>
-<div class="line"><a name="l02790"></a><span class="lineno"> 2790</span>&#160;                boost::tie(isin2,x_ref,dmin) = this-&gt;isIn(itLT-&gt;first,p);</div>
-<div class="line"><a name="l02791"></a><span class="lineno"> 2791</span>&#160;                <span class="keywordflow">if</span> ( isin!=isin2) std::cout &lt;&lt; <span class="stringliteral">&quot;Bug Mesh::Localization::searchElement&lt;true&gt;&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l02792"></a><span class="lineno"> 2792</span>&#160;            }</div>
-<div class="line"><a name="l02793"></a><span class="lineno"> 2793</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l02794"></a><span class="lineno"> 2794</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l02795"></a><span class="lineno"> 2795</span>&#160;        boost::tie(isin,x_ref,dmin) = this-&gt;isIn(itLT-&gt;first,p,setPoints,mpl::int_&lt;1&gt;());</div>
-<div class="line"><a name="l02796"></a><span class="lineno"> 2796</span>&#160;</div>
-<div class="line"><a name="l02797"></a><span class="lineno"> 2797</span>&#160;        <span class="comment">//if not inside, continue the research with an other element</span></div>
-<div class="line"><a name="l02798"></a><span class="lineno"> 2798</span>&#160;        <span class="keywordflow">if</span> ( !isin ) ++itLT;</div>
-<div class="line"><a name="l02799"></a><span class="lineno"> 2799</span>&#160;        <span class="keywordflow">else</span> idEltFound=itLT-&gt;first;</div>
-<div class="line"><a name="l02800"></a><span class="lineno"> 2800</span>&#160;    } <span class="comment">//while ( itLT != itLT_end &amp;&amp; !isin  )</span></div>
-<div class="line"><a name="l02801"></a><span class="lineno"> 2801</span>&#160;</div>
-<div class="line"><a name="l02802"></a><span class="lineno"> 2802</span>&#160;    <span class="keywordflow">if</span> (!isin)</div>
-<div class="line"><a name="l02803"></a><span class="lineno"> 2803</span>&#160;        {</div>
-<div class="line"><a name="l02804"></a><span class="lineno"> 2804</span>&#160;            <span class="keywordflow">if</span>( this-&gt;doExtrapolation() )</div>
-<div class="line"><a name="l02805"></a><span class="lineno"> 2805</span>&#160;                {</div>
-<div class="line"><a name="l02806"></a><span class="lineno"> 2806</span>&#160;                    std::cout &lt;&lt; <span class="stringliteral">&quot;WARNING EXTRAPOLATION for the point&quot;</span> &lt;&lt; p &lt;&lt; std::endl;</div>
-<div class="line"><a name="l02807"></a><span class="lineno"> 2807</span>&#160;                    <span class="comment">//std::cout &lt;&lt; &quot;W&quot;;</span></div>
-<div class="line"><a name="l02808"></a><span class="lineno"> 2808</span>&#160;                    <span class="keyword">auto</span> <span class="keyword">const</span>&amp; eltUsedForExtrapolation = this-&gt;mesh()-&gt;element(ListTri.begin()-&gt;first);</div>
-<div class="line"><a name="l02809"></a><span class="lineno"> 2809</span>&#160;                    gmc_inverse_type gic( this-&gt;mesh()-&gt;gm(), eltUsedForExtrapolation, this-&gt;mesh()-&gt;worldComm().subWorldCommSeq() );</div>
-<div class="line"><a name="l02810"></a><span class="lineno"> 2810</span>&#160;                    <span class="comment">//apply the inverse geometric transformation for the point p</span></div>
-<div class="line"><a name="l02811"></a><span class="lineno"> 2811</span>&#160;                    gic.setXReal( p);</div>
-<div class="line"><a name="l02812"></a><span class="lineno"> 2812</span>&#160;                    boost::tie(isin,idEltFound,x_ref) = boost::make_tuple(<span class="keyword">true</span>,eltUsedForExtrapolation.id(),gic.xRef());</div>
-<div class="line"><a name="l02813"></a><span class="lineno"> 2813</span>&#160;                }</div>
-<div class="line"><a name="l02814"></a><span class="lineno"> 2814</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l02815"></a><span class="lineno"> 2815</span>&#160;                {</div>
-<div class="line"><a name="l02816"></a><span class="lineno"> 2816</span>&#160;                    idEltFound = this-&gt;mesh()-&gt;beginElementWithId(this-&gt;mesh()-&gt;worldComm().localRank())-&gt;id();</div>
-<div class="line"><a name="l02817"></a><span class="lineno"> 2817</span>&#160;                    isin = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02818"></a><span class="lineno"> 2818</span>&#160;                    <span class="comment">//x_ref=?</span></div>
-<div class="line"><a name="l02819"></a><span class="lineno"> 2819</span>&#160;                }</div>
-<div class="line"><a name="l02820"></a><span class="lineno"> 2820</span>&#160;        }</div>
-<div class="line"><a name="l02821"></a><span class="lineno"> 2821</span>&#160;</div>
-<div class="line"><a name="l02822"></a><span class="lineno"> 2822</span>&#160;    <span class="keywordflow">return</span> boost::make_tuple( isin, idEltFound, x_ref);</div>
-<div class="line"><a name="l02823"></a><span class="lineno"> 2823</span>&#160;</div>
-<div class="line"><a name="l02824"></a><span class="lineno"> 2824</span>&#160;} <span class="comment">//searchElement</span></div>
-<div class="line"><a name="l02825"></a><span class="lineno"> 2825</span>&#160;</div>
-<div class="line"><a name="l02826"></a><span class="lineno"> 2826</span>&#160;</div>
-<div class="line"><a name="l02827"></a><span class="lineno"> 2827</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Shape, <span class="keyword">typename</span> T, <span class="keywordtype">int</span> Tag&gt;</div>
-<div class="line"><a name="l02828"></a><span class="lineno"> 2828</span>&#160;boost::tuple&lt;std::vector&lt;bool&gt;, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a>&gt;</div>
-<div class="line"><a name="l02829"></a><span class="lineno"> 2829</span>&#160;Mesh&lt;Shape, T, Tag&gt;::Localization::run_analysis( <span class="keyword">const</span> matrix_node_type &amp; m,</div>
-<div class="line"><a name="l02830"></a><span class="lineno"> 2830</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> &amp; eltHypothetical,</div>
-<div class="line"><a name="l02831"></a><span class="lineno"> 2831</span>&#160;        <span class="keyword">const</span> matrix_node_type &amp; setPoints,</div>
-<div class="line"><a name="l02832"></a><span class="lineno"> 2832</span>&#160;        mpl::int_&lt;1&gt;  )</div>
-<div class="line"><a name="l02833"></a><span class="lineno"> 2833</span>&#160;{</div>
-<div class="line"><a name="l02834"></a><span class="lineno"> 2834</span>&#160;<span class="preprocessor">#if !defined( NDEBUG )</span></div>
-<div class="line"><a name="l02835"></a><span class="lineno"> 2835</span>&#160;<span class="preprocessor"></span>    FEELPP_ASSERT( IsInit == <span class="keyword">true</span> )</div>
-<div class="line"><a name="l02836"></a><span class="lineno"> 2836</span>&#160;    ( IsInit ).warn( <span class="stringliteral">&quot;You don&#39;t have initialized the tool of localization&quot;</span> );</div>
-<div class="line"><a name="l02837"></a><span class="lineno"> 2837</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l02838"></a><span class="lineno"> 2838</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l02839"></a><span class="lineno"> 2839</span>&#160;    <span class="keywordtype">bool</span> find_x=<span class="keyword">false</span>;</div>
-<div class="line"><a name="l02840"></a><span class="lineno"> 2840</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> cv_id=eltHypothetical;</div>
-<div class="line"><a name="l02841"></a><span class="lineno"> 2841</span>&#160;    node_type x_ref;</div>
-<div class="line"><a name="l02842"></a><span class="lineno"> 2842</span>&#160;    <span class="keywordtype">double</span> dmin;</div>
-<div class="line"><a name="l02843"></a><span class="lineno"> 2843</span>&#160;    std::vector&lt;bool&gt; hasFindPts(setPoints.size2(),<span class="keyword">false</span>);</div>
-<div class="line"><a name="l02844"></a><span class="lineno"> 2844</span>&#160;</div>
-<div class="line"><a name="l02845"></a><span class="lineno"> 2845</span>&#160;    M_resultAnalysis.clear();</div>
-<div class="line"><a name="l02846"></a><span class="lineno"> 2846</span>&#160;    <span class="keyword">auto</span> currentEltHypothetical = eltHypothetical;</div>
-<div class="line"><a name="l02847"></a><span class="lineno"> 2847</span>&#160;    <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i=0; i&lt; m.size2(); ++i )</div>
-<div class="line"><a name="l02848"></a><span class="lineno"> 2848</span>&#160;    {</div>
-<div class="line"><a name="l02849"></a><span class="lineno"> 2849</span>&#160;</div>
-<div class="line"><a name="l02850"></a><span class="lineno"> 2850</span>&#160;        <span class="keywordtype">bool</span> testHypothetical_find = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02851"></a><span class="lineno"> 2851</span>&#160;        <span class="keywordflow">if</span> ( eltHypothetical!=<a class="code" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">invalid_size_type_value</a> )</div>
-<div class="line"><a name="l02852"></a><span class="lineno"> 2852</span>&#160;        {</div>
-<div class="line"><a name="l02853"></a><span class="lineno"> 2853</span>&#160;            boost::tie( testHypothetical_find,x_ref,dmin ) = this-&gt;isIn( currentEltHypothetical,ublas::column( m, i ),setPoints,mpl::int_&lt;1&gt;() );</div>
-<div class="line"><a name="l02854"></a><span class="lineno"> 2854</span>&#160;        }</div>
-<div class="line"><a name="l02855"></a><span class="lineno"> 2855</span>&#160;        <span class="keywordflow">if</span> ( testHypothetical_find )</div>
-<div class="line"><a name="l02856"></a><span class="lineno"> 2856</span>&#160;        {</div>
-<div class="line"><a name="l02857"></a><span class="lineno"> 2857</span>&#160;            cv_id = currentEltHypothetical;</div>
-<div class="line"><a name="l02858"></a><span class="lineno"> 2858</span>&#160;            M_resultAnalysis[cv_id].push_back( boost::make_tuple(i,x_ref) );</div>
-<div class="line"><a name="l02859"></a><span class="lineno"> 2859</span>&#160;            hasFindPts[i]=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l02860"></a><span class="lineno"> 2860</span>&#160;        }</div>
-<div class="line"><a name="l02861"></a><span class="lineno"> 2861</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l02862"></a><span class="lineno"> 2862</span>&#160;        {</div>
-<div class="line"><a name="l02863"></a><span class="lineno"> 2863</span>&#160;            boost::tie( find_x, cv_id, x_ref ) = this-&gt;searchElement( ublas::column( m, i ),setPoints,mpl::int_&lt;1&gt;() );</div>
-<div class="line"><a name="l02864"></a><span class="lineno"> 2864</span>&#160;</div>
-<div class="line"><a name="l02865"></a><span class="lineno"> 2865</span>&#160;            <span class="keywordflow">if</span> ( find_x )</div>
-<div class="line"><a name="l02866"></a><span class="lineno"> 2866</span>&#160;            {</div>
-<div class="line"><a name="l02867"></a><span class="lineno"> 2867</span>&#160;                M_resultAnalysis[cv_id].push_back( boost::make_tuple( i,x_ref ) );</div>
-<div class="line"><a name="l02868"></a><span class="lineno"> 2868</span>&#160;                hasFindPts[i]=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l02869"></a><span class="lineno"> 2869</span>&#160;                currentEltHypothetical = cv_id;</div>
-<div class="line"><a name="l02870"></a><span class="lineno"> 2870</span>&#160;            }</div>
-<div class="line"><a name="l02871"></a><span class="lineno"> 2871</span>&#160;        }</div>
-<div class="line"><a name="l02872"></a><span class="lineno"> 2872</span>&#160;        <span class="comment">//else std::cout&lt;&lt;&quot;\nNew Probleme Localization\n&quot; &lt;&lt; std::endl;</span></div>
-<div class="line"><a name="l02873"></a><span class="lineno"> 2873</span>&#160;    }</div>
-<div class="line"><a name="l02874"></a><span class="lineno"> 2874</span>&#160;</div>
-<div class="line"><a name="l02875"></a><span class="lineno"> 2875</span>&#160;    <span class="keywordflow">return</span> boost::make_tuple(hasFindPts,cv_id);</div>
-<div class="line"><a name="l02876"></a><span class="lineno"> 2876</span>&#160;</div>
-<div class="line"><a name="l02877"></a><span class="lineno"> 2877</span>&#160;} <span class="comment">// run_analysis</span></div>
-<div class="line"><a name="l02878"></a><span class="lineno"> 2878</span>&#160;</div>
-<div class="line"><a name="l02879"></a><span class="lineno"> 2879</span>&#160;</div>
-<div class="line"><a name="l02880"></a><span class="lineno"> 2880</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Shape, <span class="keyword">typename</span> T, <span class="keywordtype">int</span> Tag&gt;</div>
-<div class="line"><a name="l02881"></a><span class="lineno"> 2881</span>&#160;<span class="keyword">typename</span> Mesh&lt;Shape, T, Tag&gt;::node_type</div>
-<div class="line"><a name="l02882"></a><span class="lineno"> 2882</span>&#160;Mesh&lt;Shape, T, Tag&gt;::Localization::barycenter()<span class="keyword"> const</span></div>
-<div class="line"><a name="l02883"></a><span class="lineno"> 2883</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l02884"></a><span class="lineno"> 2884</span>&#160;    <span class="keywordflow">return</span> this-&gt;barycenter(mpl::int_&lt;nRealDim&gt;());</div>
-<div class="line"><a name="l02885"></a><span class="lineno"> 2885</span>&#160;}</div>
-<div class="line"><a name="l02886"></a><span class="lineno"> 2886</span>&#160;</div>
-<div class="line"><a name="l02887"></a><span class="lineno"> 2887</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Shape, <span class="keyword">typename</span> T, <span class="keywordtype">int</span> Tag&gt;</div>
-<div class="line"><a name="l02888"></a><span class="lineno"> 2888</span>&#160;<span class="keyword">typename</span> Mesh&lt;Shape, T, Tag&gt;::node_type</div>
-<div class="line"><a name="l02889"></a><span class="lineno"> 2889</span>&#160;Mesh&lt;Shape, T, Tag&gt;::Localization::barycenter(mpl::int_&lt;1&gt; )<span class="keyword"> const</span></div>
-<div class="line"><a name="l02890"></a><span class="lineno"> 2890</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l02891"></a><span class="lineno"> 2891</span>&#160;    node_type res(1);</div>
-<div class="line"><a name="l02892"></a><span class="lineno"> 2892</span>&#160;    res(0)=0;</div>
-<div class="line"><a name="l02893"></a><span class="lineno"> 2893</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i = 0 ; i&lt;this-&gt;kdtree()-&gt;nPoints() ; ++i)</div>
-<div class="line"><a name="l02894"></a><span class="lineno"> 2894</span>&#160;        {</div>
-<div class="line"><a name="l02895"></a><span class="lineno"> 2895</span>&#160;            <span class="keyword">auto</span> <span class="keyword">const</span>&amp; pt = this-&gt;kdtree()-&gt;points()[i].template get&lt;0&gt;();</div>
-<div class="line"><a name="l02896"></a><span class="lineno"> 2896</span>&#160;            res(0)+=pt(0);</div>
-<div class="line"><a name="l02897"></a><span class="lineno"> 2897</span>&#160;        }</div>
-<div class="line"><a name="l02898"></a><span class="lineno"> 2898</span>&#160;    res(0)/=this-&gt;kdtree()-&gt;nPoints();</div>
-<div class="line"><a name="l02899"></a><span class="lineno"> 2899</span>&#160;    <span class="keywordflow">return</span> res;</div>
-<div class="line"><a name="l02900"></a><span class="lineno"> 2900</span>&#160;}</div>
-<div class="line"><a name="l02901"></a><span class="lineno"> 2901</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Shape, <span class="keyword">typename</span> T, <span class="keywordtype">int</span> Tag&gt;</div>
-<div class="line"><a name="l02902"></a><span class="lineno"> 2902</span>&#160;<span class="keyword">typename</span> Mesh&lt;Shape, T, Tag&gt;::node_type</div>
-<div class="line"><a name="l02903"></a><span class="lineno"> 2903</span>&#160;Mesh&lt;Shape, T, Tag&gt;::Localization::barycenter(mpl::int_&lt;2&gt; )<span class="keyword"> const</span></div>
-<div class="line"><a name="l02904"></a><span class="lineno"> 2904</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l02905"></a><span class="lineno"> 2905</span>&#160;    node_type res(2);</div>
-<div class="line"><a name="l02906"></a><span class="lineno"> 2906</span>&#160;    res(0)=0;res(1)=0;</div>
-<div class="line"><a name="l02907"></a><span class="lineno"> 2907</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i = 0 ; i&lt;this-&gt;kdtree()-&gt;nPoints() ; ++i)</div>
-<div class="line"><a name="l02908"></a><span class="lineno"> 2908</span>&#160;        {</div>
-<div class="line"><a name="l02909"></a><span class="lineno"> 2909</span>&#160;            <span class="keyword">auto</span> <span class="keyword">const</span>&amp; pt = this-&gt;kdtree()-&gt;points()[i].template get&lt;0&gt;();</div>
-<div class="line"><a name="l02910"></a><span class="lineno"> 2910</span>&#160;            res(0)+=pt(0);res(1)+=pt(1);</div>
-<div class="line"><a name="l02911"></a><span class="lineno"> 2911</span>&#160;        }</div>
-<div class="line"><a name="l02912"></a><span class="lineno"> 2912</span>&#160;    res(0)/=this-&gt;kdtree()-&gt;nPoints();res(1)/=this-&gt;kdtree()-&gt;nPoints();</div>
-<div class="line"><a name="l02913"></a><span class="lineno"> 2913</span>&#160;    <span class="keywordflow">return</span> res;</div>
-<div class="line"><a name="l02914"></a><span class="lineno"> 2914</span>&#160;}</div>
-<div class="line"><a name="l02915"></a><span class="lineno"> 2915</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Shape, <span class="keyword">typename</span> T, <span class="keywordtype">int</span> Tag&gt;</div>
-<div class="line"><a name="l02916"></a><span class="lineno"> 2916</span>&#160;<span class="keyword">typename</span> Mesh&lt;Shape, T, Tag&gt;::node_type</div>
-<div class="line"><a name="l02917"></a><span class="lineno"> 2917</span>&#160;Mesh&lt;Shape, T, Tag&gt;::Localization::barycenter(mpl::int_&lt;3&gt; )<span class="keyword"> const</span></div>
-<div class="line"><a name="l02918"></a><span class="lineno"> 2918</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l02919"></a><span class="lineno"> 2919</span>&#160;    node_type res(3);</div>
-<div class="line"><a name="l02920"></a><span class="lineno"> 2920</span>&#160;    res(0)=0;res(1)=0;res(2)=0;</div>
-<div class="line"><a name="l02921"></a><span class="lineno"> 2921</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i = 0 ; i&lt;this-&gt;kdtree()-&gt;nPoints() ; ++i)</div>
-<div class="line"><a name="l02922"></a><span class="lineno"> 2922</span>&#160;        {</div>
-<div class="line"><a name="l02923"></a><span class="lineno"> 2923</span>&#160;            <span class="keyword">auto</span> <span class="keyword">const</span>&amp; pt = this-&gt;kdtree()-&gt;points()[i].template get&lt;0&gt;();</div>
-<div class="line"><a name="l02924"></a><span class="lineno"> 2924</span>&#160;            res(0)+=pt(0);res(1)+=pt(1);res(2)+=pt(2);</div>
-<div class="line"><a name="l02925"></a><span class="lineno"> 2925</span>&#160;        }</div>
-<div class="line"><a name="l02926"></a><span class="lineno"> 2926</span>&#160;    res(0)/=this-&gt;kdtree()-&gt;nPoints();res(1)/=this-&gt;kdtree()-&gt;nPoints();res(2)/=this-&gt;kdtree()-&gt;nPoints();</div>
-<div class="line"><a name="l02927"></a><span class="lineno"> 2927</span>&#160;    <span class="keywordflow">return</span> res;</div>
-<div class="line"><a name="l02928"></a><span class="lineno"> 2928</span>&#160;}</div>
-<div class="line"><a name="l02929"></a><span class="lineno"> 2929</span>&#160;</div>
-<div class="line"><a name="l02930"></a><span class="lineno"> 2930</span>&#160;</div>
-<div class="line"><a name="l02931"></a><span class="lineno"> 2931</span>&#160;</div>
-<div class="line"><a name="l02932"></a><span class="lineno"> 2932</span>&#160;</div>
-<div class="line"><a name="l02933"></a><span class="lineno"> 2933</span>&#160;</div>
-<div class="line"><a name="l02934"></a><span class="lineno"> 2934</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l02935"></a><span class="lineno"> 2935</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#if defined( FEELPP_INSTANTIATION_MODE )</span></div>
-<div class="line"><a name="l02936"></a><span class="lineno"> 2936</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l02937"></a><span class="lineno"> 2937</span>&#160;<span class="preprocessor"># define DIMS1 BOOST_PP_TUPLE_TO_LIST(1,(1))</span></div>
-<div class="line"><a name="l02938"></a><span class="lineno"> 2938</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define RDIMS1 BOOST_PP_TUPLE_TO_LIST(3,(1,2,3))</span></div>
-<div class="line"><a name="l02939"></a><span class="lineno"> 2939</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define ORDERS1 BOOST_PP_TUPLE_TO_LIST(5,(1,2,3,4,5))</span></div>
-<div class="line"><a name="l02940"></a><span class="lineno"> 2940</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l02941"></a><span class="lineno"> 2941</span>&#160;<span class="preprocessor"># define DIMS2 BOOST_PP_TUPLE_TO_LIST(1,(2))</span></div>
-<div class="line"><a name="l02942"></a><span class="lineno"> 2942</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define RDIMS2 BOOST_PP_TUPLE_TO_LIST(2,(2,3))</span></div>
-<div class="line"><a name="l02943"></a><span class="lineno"> 2943</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define ORDERS2 BOOST_PP_TUPLE_TO_LIST(5,(1,2,3,4,5))</span></div>
-<div class="line"><a name="l02944"></a><span class="lineno"> 2944</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l02945"></a><span class="lineno"> 2945</span>&#160;<span class="preprocessor"># define DIMS3 BOOST_PP_TUPLE_TO_LIST(1,(3))</span></div>
-<div class="line"><a name="l02946"></a><span class="lineno"> 2946</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define RDIMS3 BOOST_PP_TUPLE_TO_LIST(1,(3))</span></div>
-<div class="line"><a name="l02947"></a><span class="lineno"> 2947</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define ORDERS3 BOOST_PP_TUPLE_TO_LIST(4,(1,2,3,4))</span></div>
-<div class="line"><a name="l02948"></a><span class="lineno"> 2948</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l02949"></a><span class="lineno"> 2949</span>&#160;<span class="preprocessor"># define FACTORY_SIMPLEX(LDIM,LORDER,RDIM) template class Mesh&lt;Simplex&lt;LDIM, LORDER, RDIM&gt; &gt;;</span></div>
-<div class="line"><a name="l02950"></a><span class="lineno"> 2950</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define FACTORY_HYPERCUBE(LDIM,LORDER,RDIM) template class Mesh&lt;Hypercube&lt;LDIM, LORDER, RDIM&gt; &gt;;</span></div>
-<div class="line"><a name="l02951"></a><span class="lineno"> 2951</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l02952"></a><span class="lineno"> 2952</span>&#160;<span class="preprocessor"># define FACTORY_SIMPLEX_OP(_, GDO) FACTORY_SIMPLEX GDO</span></div>
-<div class="line"><a name="l02953"></a><span class="lineno"> 2953</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define FACTORY_HYPERCUBE_OP(_, GDO) FACTORY_HYPERCUBE GDO</span></div>
-<div class="line"><a name="l02954"></a><span class="lineno"> 2954</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l02955"></a><span class="lineno"> 2955</span>&#160;</div>
-<div class="line"><a name="l02956"></a><span class="lineno"> 2956</span>&#160;<span class="preprocessor"># define FACTORY_SIMPLEX_E(LDIM,LORDER,RDIM) extern template class Mesh&lt;Simplex&lt;LDIM, LORDER, RDIM&gt; &gt;;</span></div>
-<div class="line"><a name="l02957"></a><span class="lineno"> 2957</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define FACTORY_HYPERCUBE_E(LDIM,LORDER,RDIM) extern template class Mesh&lt;Hypercube&lt;LDIM, LORDER, RDIM&gt; &gt;;</span></div>
-<div class="line"><a name="l02958"></a><span class="lineno"> 2958</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l02959"></a><span class="lineno"> 2959</span>&#160;<span class="preprocessor"># define FACTORY_SIMPLEX_OP_E(_, GDO) FACTORY_HYPERCUBE GDO</span></div>
-<div class="line"><a name="l02960"></a><span class="lineno"> 2960</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define FACTORY_HYPERCUBE_OP_E(_, GDO) FACTORY_HYPERCUBE_E GDO</span></div>
-<div class="line"><a name="l02961"></a><span class="lineno"> 2961</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l02962"></a><span class="lineno"> 2962</span>&#160;<span class="preprocessor">#if !defined( FEELPP_MESH_IMPL_NOEXTERN )</span></div>
-<div class="line"><a name="l02963"></a><span class="lineno"> 2963</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l02964"></a><span class="lineno"> 2964</span>&#160;BOOST_PP_LIST_FOR_EACH_PRODUCT( FACTORY_SIMPLEX_OP_E, 3, ( DIMS1, BOOST_PP_LIST_FIRST_N( FEELPP_MESH_MAX_ORDER, ORDERS1 ), RDIMS1 ) )</div>
-<div class="line"><a name="l02965"></a><span class="lineno"> 2965</span>&#160;BOOST_PP_LIST_FOR_EACH_PRODUCT( FACTORY_HYPERCUBE_OP_E, 3, ( DIMS1, BOOST_PP_LIST_FIRST_N( FEELPP_MESH_MAX_ORDER, ORDERS1 ), RDIMS1 ) )</div>
-<div class="line"><a name="l02966"></a><span class="lineno"> 2966</span>&#160;</div>
-<div class="line"><a name="l02967"></a><span class="lineno"> 2967</span>&#160;BOOST_PP_LIST_FOR_EACH_PRODUCT( FACTORY_SIMPLEX_OP_E, 3, ( DIMS2, BOOST_PP_LIST_FIRST_N( FEELPP_MESH_MAX_ORDER, ORDERS2 ), RDIMS2 ) )</div>
-<div class="line"><a name="l02968"></a><span class="lineno"> 2968</span>&#160;BOOST_PP_LIST_FOR_EACH_PRODUCT( FACTORY_HYPERCUBE_OP_E, 3, ( DIMS2, BOOST_PP_LIST_FIRST_N( FEELPP_MESH_MAX_ORDER, ORDERS2 ), RDIMS2 ) )</div>
-<div class="line"><a name="l02969"></a><span class="lineno"> 2969</span>&#160;</div>
-<div class="line"><a name="l02970"></a><span class="lineno"> 2970</span>&#160;BOOST_PP_LIST_FOR_EACH_PRODUCT( FACTORY_SIMPLEX_OP_E, 3, ( DIMS3, BOOST_PP_LIST_FIRST_N( FEELPP_MESH_MAX_ORDER, ORDERS3 ), RDIMS3 ) )</div>
-<div class="line"><a name="l02971"></a><span class="lineno"> 2971</span>&#160;BOOST_PP_LIST_FOR_EACH_PRODUCT( FACTORY_HYPERCUBE_OP_E, 3, ( DIMS3, BOOST_PP_LIST_FIRST_N( FEELPP_MESH_MAX_ORDER, ORDERS3 ), RDIMS3 ) )</div>
-<div class="line"><a name="l02972"></a><span class="lineno"> 2972</span>&#160;</div>
-<div class="line"><a name="l02973"></a><span class="lineno"> 2973</span>&#160;<span class="preprocessor">#endif // FEELPP_MESH_IMPL_NOEXTERN</span></div>
-<div class="line"><a name="l02974"></a><span class="lineno"> 2974</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif // FEELPP_INSTANTIATION_MODE</span></div>
-<div class="line"><a name="l02975"></a><span class="lineno"> 2975</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l02976"></a><span class="lineno"> 2976</span>&#160;<span class="preprocessor"></span>} <span class="comment">// namespace Feel</span></div>
-<div class="line"><a name="l02977"></a><span class="lineno"> 2977</span>&#160;</div>
-<div class="line"><a name="l02978"></a><span class="lineno"> 2978</span>&#160;</div>
-<div class="line"><a name="l02979"></a><span class="lineno"> 2979</span>&#160;</div>
-<div class="line"><a name="l02980"></a><span class="lineno"> 2980</span>&#160;</div>
-<div class="line"><a name="l02981"></a><span class="lineno"> 2981</span>&#160;</div>
-<div class="line"><a name="l02982"></a><span class="lineno"> 2982</span>&#160;<span class="preprocessor">#endif // __MESHIMPL_HPP</span></div>
+<div class="line"><a name="l02788"></a><span class="lineno"> 2788</span>&#160;        <span class="keywordtype">bool</span> testHypothetical_find = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l02789"></a><span class="lineno"> 2789</span>&#160;        <span class="keywordflow">if</span> ( eltHypothetical!=<a class="code" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">invalid_size_type_value</a> )</div>
+<div class="line"><a name="l02790"></a><span class="lineno"> 2790</span>&#160;        {</div>
+<div class="line"><a name="l02791"></a><span class="lineno"> 2791</span>&#160;            boost::tie( testHypothetical_find,x_ref,dmin ) = this-&gt;isIn( currentEltHypothetical,ublas::column( m, i ),setPoints,mpl::int_&lt;1&gt;() );</div>
+<div class="line"><a name="l02792"></a><span class="lineno"> 2792</span>&#160;        }</div>
+<div class="line"><a name="l02793"></a><span class="lineno"> 2793</span>&#160;        <span class="keywordflow">if</span> ( testHypothetical_find )</div>
+<div class="line"><a name="l02794"></a><span class="lineno"> 2794</span>&#160;        {</div>
+<div class="line"><a name="l02795"></a><span class="lineno"> 2795</span>&#160;            cv_id = currentEltHypothetical;</div>
+<div class="line"><a name="l02796"></a><span class="lineno"> 2796</span>&#160;            M_resultAnalysis[cv_id].push_back( boost::make_tuple(i,x_ref) );</div>
+<div class="line"><a name="l02797"></a><span class="lineno"> 2797</span>&#160;            hasFindPts[i]=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l02798"></a><span class="lineno"> 2798</span>&#160;        }</div>
+<div class="line"><a name="l02799"></a><span class="lineno"> 2799</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l02800"></a><span class="lineno"> 2800</span>&#160;        {</div>
+<div class="line"><a name="l02801"></a><span class="lineno"> 2801</span>&#160;            boost::tie( find_x, cv_id, x_ref ) = this-&gt;searchElement( ublas::column( m, i ),setPoints,mpl::int_&lt;1&gt;() );</div>
+<div class="line"><a name="l02802"></a><span class="lineno"> 2802</span>&#160;</div>
+<div class="line"><a name="l02803"></a><span class="lineno"> 2803</span>&#160;            <span class="keywordflow">if</span> ( find_x )</div>
+<div class="line"><a name="l02804"></a><span class="lineno"> 2804</span>&#160;            {</div>
+<div class="line"><a name="l02805"></a><span class="lineno"> 2805</span>&#160;                M_resultAnalysis[cv_id].push_back( boost::make_tuple( i,x_ref ) );</div>
+<div class="line"><a name="l02806"></a><span class="lineno"> 2806</span>&#160;                hasFindPts[i]=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l02807"></a><span class="lineno"> 2807</span>&#160;                currentEltHypothetical = cv_id;</div>
+<div class="line"><a name="l02808"></a><span class="lineno"> 2808</span>&#160;            }</div>
+<div class="line"><a name="l02809"></a><span class="lineno"> 2809</span>&#160;        }</div>
+<div class="line"><a name="l02810"></a><span class="lineno"> 2810</span>&#160;        <span class="comment">//else std::cout&lt;&lt;&quot;\nNew Probleme Localization\n&quot; &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l02811"></a><span class="lineno"> 2811</span>&#160;    }</div>
+<div class="line"><a name="l02812"></a><span class="lineno"> 2812</span>&#160;</div>
+<div class="line"><a name="l02813"></a><span class="lineno"> 2813</span>&#160;    <span class="keywordflow">return</span> boost::make_tuple(hasFindPts,cv_id);</div>
+<div class="line"><a name="l02814"></a><span class="lineno"> 2814</span>&#160;</div>
+<div class="line"><a name="l02815"></a><span class="lineno"> 2815</span>&#160;} <span class="comment">// run_analysis</span></div>
+<div class="line"><a name="l02816"></a><span class="lineno"> 2816</span>&#160;</div>
+<div class="line"><a name="l02817"></a><span class="lineno"> 2817</span>&#160;</div>
+<div class="line"><a name="l02818"></a><span class="lineno"> 2818</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Shape, <span class="keyword">typename</span> T, <span class="keywordtype">int</span> Tag&gt;</div>
+<div class="line"><a name="l02819"></a><span class="lineno"> 2819</span>&#160;<span class="keyword">typename</span> Mesh&lt;Shape, T, Tag&gt;::node_type</div>
+<div class="line"><a name="l02820"></a><span class="lineno"> 2820</span>&#160;Mesh&lt;Shape, T, Tag&gt;::Localization::barycenter()<span class="keyword"> const</span></div>
+<div class="line"><a name="l02821"></a><span class="lineno"> 2821</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l02822"></a><span class="lineno"> 2822</span>&#160;    <span class="keywordflow">return</span> this-&gt;barycenter(mpl::int_&lt;nRealDim&gt;());</div>
+<div class="line"><a name="l02823"></a><span class="lineno"> 2823</span>&#160;}</div>
+<div class="line"><a name="l02824"></a><span class="lineno"> 2824</span>&#160;</div>
+<div class="line"><a name="l02825"></a><span class="lineno"> 2825</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Shape, <span class="keyword">typename</span> T, <span class="keywordtype">int</span> Tag&gt;</div>
+<div class="line"><a name="l02826"></a><span class="lineno"> 2826</span>&#160;<span class="keyword">typename</span> Mesh&lt;Shape, T, Tag&gt;::node_type</div>
+<div class="line"><a name="l02827"></a><span class="lineno"> 2827</span>&#160;Mesh&lt;Shape, T, Tag&gt;::Localization::barycenter(mpl::int_&lt;1&gt; )<span class="keyword"> const</span></div>
+<div class="line"><a name="l02828"></a><span class="lineno"> 2828</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l02829"></a><span class="lineno"> 2829</span>&#160;    node_type res(1);</div>
+<div class="line"><a name="l02830"></a><span class="lineno"> 2830</span>&#160;    res(0)=0;</div>
+<div class="line"><a name="l02831"></a><span class="lineno"> 2831</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i = 0 ; i&lt;this-&gt;kdtree()-&gt;nPoints() ; ++i)</div>
+<div class="line"><a name="l02832"></a><span class="lineno"> 2832</span>&#160;        {</div>
+<div class="line"><a name="l02833"></a><span class="lineno"> 2833</span>&#160;            <span class="keyword">auto</span> <span class="keyword">const</span>&amp; pt = this-&gt;kdtree()-&gt;points()[i].template get&lt;0&gt;();</div>
+<div class="line"><a name="l02834"></a><span class="lineno"> 2834</span>&#160;            res(0)+=pt(0);</div>
+<div class="line"><a name="l02835"></a><span class="lineno"> 2835</span>&#160;        }</div>
+<div class="line"><a name="l02836"></a><span class="lineno"> 2836</span>&#160;    res(0)/=this-&gt;kdtree()-&gt;nPoints();</div>
+<div class="line"><a name="l02837"></a><span class="lineno"> 2837</span>&#160;    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l02838"></a><span class="lineno"> 2838</span>&#160;}</div>
+<div class="line"><a name="l02839"></a><span class="lineno"> 2839</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Shape, <span class="keyword">typename</span> T, <span class="keywordtype">int</span> Tag&gt;</div>
+<div class="line"><a name="l02840"></a><span class="lineno"> 2840</span>&#160;<span class="keyword">typename</span> Mesh&lt;Shape, T, Tag&gt;::node_type</div>
+<div class="line"><a name="l02841"></a><span class="lineno"> 2841</span>&#160;Mesh&lt;Shape, T, Tag&gt;::Localization::barycenter(mpl::int_&lt;2&gt; )<span class="keyword"> const</span></div>
+<div class="line"><a name="l02842"></a><span class="lineno"> 2842</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l02843"></a><span class="lineno"> 2843</span>&#160;    node_type res(2);</div>
+<div class="line"><a name="l02844"></a><span class="lineno"> 2844</span>&#160;    res(0)=0;res(1)=0;</div>
+<div class="line"><a name="l02845"></a><span class="lineno"> 2845</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i = 0 ; i&lt;this-&gt;kdtree()-&gt;nPoints() ; ++i)</div>
+<div class="line"><a name="l02846"></a><span class="lineno"> 2846</span>&#160;        {</div>
+<div class="line"><a name="l02847"></a><span class="lineno"> 2847</span>&#160;            <span class="keyword">auto</span> <span class="keyword">const</span>&amp; pt = this-&gt;kdtree()-&gt;points()[i].template get&lt;0&gt;();</div>
+<div class="line"><a name="l02848"></a><span class="lineno"> 2848</span>&#160;            res(0)+=pt(0);res(1)+=pt(1);</div>
+<div class="line"><a name="l02849"></a><span class="lineno"> 2849</span>&#160;        }</div>
+<div class="line"><a name="l02850"></a><span class="lineno"> 2850</span>&#160;    res(0)/=this-&gt;kdtree()-&gt;nPoints();res(1)/=this-&gt;kdtree()-&gt;nPoints();</div>
+<div class="line"><a name="l02851"></a><span class="lineno"> 2851</span>&#160;    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l02852"></a><span class="lineno"> 2852</span>&#160;}</div>
+<div class="line"><a name="l02853"></a><span class="lineno"> 2853</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Shape, <span class="keyword">typename</span> T, <span class="keywordtype">int</span> Tag&gt;</div>
+<div class="line"><a name="l02854"></a><span class="lineno"> 2854</span>&#160;<span class="keyword">typename</span> Mesh&lt;Shape, T, Tag&gt;::node_type</div>
+<div class="line"><a name="l02855"></a><span class="lineno"> 2855</span>&#160;Mesh&lt;Shape, T, Tag&gt;::Localization::barycenter(mpl::int_&lt;3&gt; )<span class="keyword"> const</span></div>
+<div class="line"><a name="l02856"></a><span class="lineno"> 2856</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l02857"></a><span class="lineno"> 2857</span>&#160;    node_type res(3);</div>
+<div class="line"><a name="l02858"></a><span class="lineno"> 2858</span>&#160;    res(0)=0;res(1)=0;res(2)=0;</div>
+<div class="line"><a name="l02859"></a><span class="lineno"> 2859</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i = 0 ; i&lt;this-&gt;kdtree()-&gt;nPoints() ; ++i)</div>
+<div class="line"><a name="l02860"></a><span class="lineno"> 2860</span>&#160;        {</div>
+<div class="line"><a name="l02861"></a><span class="lineno"> 2861</span>&#160;            <span class="keyword">auto</span> <span class="keyword">const</span>&amp; pt = this-&gt;kdtree()-&gt;points()[i].template get&lt;0&gt;();</div>
+<div class="line"><a name="l02862"></a><span class="lineno"> 2862</span>&#160;            res(0)+=pt(0);res(1)+=pt(1);res(2)+=pt(2);</div>
+<div class="line"><a name="l02863"></a><span class="lineno"> 2863</span>&#160;        }</div>
+<div class="line"><a name="l02864"></a><span class="lineno"> 2864</span>&#160;    res(0)/=this-&gt;kdtree()-&gt;nPoints();res(1)/=this-&gt;kdtree()-&gt;nPoints();res(2)/=this-&gt;kdtree()-&gt;nPoints();</div>
+<div class="line"><a name="l02865"></a><span class="lineno"> 2865</span>&#160;    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l02866"></a><span class="lineno"> 2866</span>&#160;}</div>
+<div class="line"><a name="l02867"></a><span class="lineno"> 2867</span>&#160;</div>
+<div class="line"><a name="l02868"></a><span class="lineno"> 2868</span>&#160;</div>
+<div class="line"><a name="l02869"></a><span class="lineno"> 2869</span>&#160;</div>
+<div class="line"><a name="l02870"></a><span class="lineno"> 2870</span>&#160;</div>
+<div class="line"><a name="l02871"></a><span class="lineno"> 2871</span>&#160;</div>
+<div class="line"><a name="l02872"></a><span class="lineno"> 2872</span>&#160;<span class="preprocessor">#if 0</span></div>
+<div class="line"><a name="l02873"></a><span class="lineno"> 2873</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#if defined( FEELPP_INSTANTIATION_MODE )</span></div>
+<div class="line"><a name="l02874"></a><span class="lineno"> 2874</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l02875"></a><span class="lineno"> 2875</span>&#160;<span class="preprocessor"># define DIMS1 BOOST_PP_TUPLE_TO_LIST(1,(1))</span></div>
+<div class="line"><a name="l02876"></a><span class="lineno"> 2876</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define RDIMS1 BOOST_PP_TUPLE_TO_LIST(3,(1,2,3))</span></div>
+<div class="line"><a name="l02877"></a><span class="lineno"> 2877</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define ORDERS1 BOOST_PP_TUPLE_TO_LIST(5,(1,2,3,4,5))</span></div>
+<div class="line"><a name="l02878"></a><span class="lineno"> 2878</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l02879"></a><span class="lineno"> 2879</span>&#160;<span class="preprocessor"># define DIMS2 BOOST_PP_TUPLE_TO_LIST(1,(2))</span></div>
+<div class="line"><a name="l02880"></a><span class="lineno"> 2880</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define RDIMS2 BOOST_PP_TUPLE_TO_LIST(2,(2,3))</span></div>
+<div class="line"><a name="l02881"></a><span class="lineno"> 2881</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define ORDERS2 BOOST_PP_TUPLE_TO_LIST(5,(1,2,3,4,5))</span></div>
+<div class="line"><a name="l02882"></a><span class="lineno"> 2882</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l02883"></a><span class="lineno"> 2883</span>&#160;<span class="preprocessor"># define DIMS3 BOOST_PP_TUPLE_TO_LIST(1,(3))</span></div>
+<div class="line"><a name="l02884"></a><span class="lineno"> 2884</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define RDIMS3 BOOST_PP_TUPLE_TO_LIST(1,(3))</span></div>
+<div class="line"><a name="l02885"></a><span class="lineno"> 2885</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define ORDERS3 BOOST_PP_TUPLE_TO_LIST(4,(1,2,3,4))</span></div>
+<div class="line"><a name="l02886"></a><span class="lineno"> 2886</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l02887"></a><span class="lineno"> 2887</span>&#160;<span class="preprocessor"># define FACTORY_SIMPLEX(LDIM,LORDER,RDIM) template class Mesh&lt;Simplex&lt;LDIM, LORDER, RDIM&gt; &gt;;</span></div>
+<div class="line"><a name="l02888"></a><span class="lineno"> 2888</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define FACTORY_HYPERCUBE(LDIM,LORDER,RDIM) template class Mesh&lt;Hypercube&lt;LDIM, LORDER, RDIM&gt; &gt;;</span></div>
+<div class="line"><a name="l02889"></a><span class="lineno"> 2889</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l02890"></a><span class="lineno"> 2890</span>&#160;<span class="preprocessor"># define FACTORY_SIMPLEX_OP(_, GDO) FACTORY_SIMPLEX GDO</span></div>
+<div class="line"><a name="l02891"></a><span class="lineno"> 2891</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define FACTORY_HYPERCUBE_OP(_, GDO) FACTORY_HYPERCUBE GDO</span></div>
+<div class="line"><a name="l02892"></a><span class="lineno"> 2892</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l02893"></a><span class="lineno"> 2893</span>&#160;</div>
+<div class="line"><a name="l02894"></a><span class="lineno"> 2894</span>&#160;<span class="preprocessor"># define FACTORY_SIMPLEX_E(LDIM,LORDER,RDIM) extern template class Mesh&lt;Simplex&lt;LDIM, LORDER, RDIM&gt; &gt;;</span></div>
+<div class="line"><a name="l02895"></a><span class="lineno"> 2895</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define FACTORY_HYPERCUBE_E(LDIM,LORDER,RDIM) extern template class Mesh&lt;Hypercube&lt;LDIM, LORDER, RDIM&gt; &gt;;</span></div>
+<div class="line"><a name="l02896"></a><span class="lineno"> 2896</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l02897"></a><span class="lineno"> 2897</span>&#160;<span class="preprocessor"># define FACTORY_SIMPLEX_OP_E(_, GDO) FACTORY_HYPERCUBE GDO</span></div>
+<div class="line"><a name="l02898"></a><span class="lineno"> 2898</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define FACTORY_HYPERCUBE_OP_E(_, GDO) FACTORY_HYPERCUBE_E GDO</span></div>
+<div class="line"><a name="l02899"></a><span class="lineno"> 2899</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l02900"></a><span class="lineno"> 2900</span>&#160;<span class="preprocessor">#if !defined( FEELPP_MESH_IMPL_NOEXTERN )</span></div>
+<div class="line"><a name="l02901"></a><span class="lineno"> 2901</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l02902"></a><span class="lineno"> 2902</span>&#160;BOOST_PP_LIST_FOR_EACH_PRODUCT( FACTORY_SIMPLEX_OP_E, 3, ( DIMS1, BOOST_PP_LIST_FIRST_N( FEELPP_MESH_MAX_ORDER, ORDERS1 ), RDIMS1 ) )</div>
+<div class="line"><a name="l02903"></a><span class="lineno"> 2903</span>&#160;BOOST_PP_LIST_FOR_EACH_PRODUCT( FACTORY_HYPERCUBE_OP_E, 3, ( DIMS1, BOOST_PP_LIST_FIRST_N( FEELPP_MESH_MAX_ORDER, ORDERS1 ), RDIMS1 ) )</div>
+<div class="line"><a name="l02904"></a><span class="lineno"> 2904</span>&#160;</div>
+<div class="line"><a name="l02905"></a><span class="lineno"> 2905</span>&#160;BOOST_PP_LIST_FOR_EACH_PRODUCT( FACTORY_SIMPLEX_OP_E, 3, ( DIMS2, BOOST_PP_LIST_FIRST_N( FEELPP_MESH_MAX_ORDER, ORDERS2 ), RDIMS2 ) )</div>
+<div class="line"><a name="l02906"></a><span class="lineno"> 2906</span>&#160;BOOST_PP_LIST_FOR_EACH_PRODUCT( FACTORY_HYPERCUBE_OP_E, 3, ( DIMS2, BOOST_PP_LIST_FIRST_N( FEELPP_MESH_MAX_ORDER, ORDERS2 ), RDIMS2 ) )</div>
+<div class="line"><a name="l02907"></a><span class="lineno"> 2907</span>&#160;</div>
+<div class="line"><a name="l02908"></a><span class="lineno"> 2908</span>&#160;BOOST_PP_LIST_FOR_EACH_PRODUCT( FACTORY_SIMPLEX_OP_E, 3, ( DIMS3, BOOST_PP_LIST_FIRST_N( FEELPP_MESH_MAX_ORDER, ORDERS3 ), RDIMS3 ) )</div>
+<div class="line"><a name="l02909"></a><span class="lineno"> 2909</span>&#160;BOOST_PP_LIST_FOR_EACH_PRODUCT( FACTORY_HYPERCUBE_OP_E, 3, ( DIMS3, BOOST_PP_LIST_FIRST_N( FEELPP_MESH_MAX_ORDER, ORDERS3 ), RDIMS3 ) )</div>
+<div class="line"><a name="l02910"></a><span class="lineno"> 2910</span>&#160;</div>
+<div class="line"><a name="l02911"></a><span class="lineno"> 2911</span>&#160;<span class="preprocessor">#endif // FEELPP_MESH_IMPL_NOEXTERN</span></div>
+<div class="line"><a name="l02912"></a><span class="lineno"> 2912</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif // FEELPP_INSTANTIATION_MODE</span></div>
+<div class="line"><a name="l02913"></a><span class="lineno"> 2913</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l02914"></a><span class="lineno"> 2914</span>&#160;<span class="preprocessor"></span>} <span class="comment">// namespace Feel</span></div>
+<div class="line"><a name="l02915"></a><span class="lineno"> 2915</span>&#160;</div>
+<div class="line"><a name="l02916"></a><span class="lineno"> 2916</span>&#160;</div>
+<div class="line"><a name="l02917"></a><span class="lineno"> 2917</span>&#160;</div>
+<div class="line"><a name="l02918"></a><span class="lineno"> 2918</span>&#160;</div>
+<div class="line"><a name="l02919"></a><span class="lineno"> 2919</span>&#160;</div>
+<div class="line"><a name="l02920"></a><span class="lineno"> 2920</span>&#160;<span class="preprocessor">#endif // __MESHIMPL_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sat Sep 7 2013 00:01:57 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Mon Sep 9 2013 00:02:08 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
