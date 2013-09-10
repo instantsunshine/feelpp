@@ -1847,344 +1847,341 @@ $(document).ready(function(){initNavTree('crbmodel_8hpp_source.html','');});
 <div class="line"><a name="l02047"></a><span class="lineno"> 2047</span>&#160;    compositeA-&gt;setScalars( beta_A );</div>
 <div class="line"><a name="l02048"></a><span class="lineno"> 2048</span>&#160;    compositeM-&gt;setScalars( beta_M );</div>
 <div class="line"><a name="l02049"></a><span class="lineno"> 2049</span>&#160;</div>
-<div class="line"><a name="l02050"></a><span class="lineno"> 2050</span>&#160;    PsLogger ps(<span class="stringliteral">&quot;CRBModel_pslog&quot;</span>);</div>
-<div class="line"><a name="l02051"></a><span class="lineno"> 2051</span>&#160;</div>
-<div class="line"><a name="l02052"></a><span class="lineno"> 2052</span>&#160;    ps.log(<span class="stringliteral">&quot;start&quot;</span>);</div>
-<div class="line"><a name="l02053"></a><span class="lineno"> 2053</span>&#160;</div>
-<div class="line"><a name="l02054"></a><span class="lineno"> 2054</span>&#160;    <span class="comment">//merge</span></div>
-<div class="line"><a name="l02055"></a><span class="lineno"> 2055</span>&#160;    <span class="keyword">auto</span> A = compositeA-&gt;sumAllMatrices();</div>
-<div class="line"><a name="l02056"></a><span class="lineno"> 2056</span>&#160;    ps.log(<span class="stringliteral">&quot;after sumAllMatrices de A&quot;</span>);</div>
-<div class="line"><a name="l02057"></a><span class="lineno"> 2057</span>&#160;    <span class="keyword">auto</span> M = compositeM-&gt;sumAllMatrices();</div>
-<div class="line"><a name="l02058"></a><span class="lineno"> 2058</span>&#160;    ps.log(<span class="stringliteral">&quot;after sumAllMatrices de M&quot;</span>);</div>
+<div class="line"><a name="l02050"></a><span class="lineno"> 2050</span>&#160;    <span class="comment">//merge</span></div>
+<div class="line"><a name="l02051"></a><span class="lineno"> 2051</span>&#160;    <span class="keyword">auto</span> A = M_model-&gt;newMatrix();</div>
+<div class="line"><a name="l02052"></a><span class="lineno"> 2052</span>&#160;    <span class="keyword">auto</span> M = M_model-&gt;newMatrix();</div>
+<div class="line"><a name="l02053"></a><span class="lineno"> 2053</span>&#160;    compositeA-&gt;sumAllMatrices( A );</div>
+<div class="line"><a name="l02054"></a><span class="lineno"> 2054</span>&#160;    <span class="comment">//auto A = compositeA-&gt;sumAllMatrices();</span></div>
+<div class="line"><a name="l02055"></a><span class="lineno"> 2055</span>&#160;    <span class="comment">//auto M = compositeM-&gt;sumAllMatrices();</span></div>
+<div class="line"><a name="l02056"></a><span class="lineno"> 2056</span>&#160;    compositeM-&gt;sumAllMatrices( M );</div>
+<div class="line"><a name="l02057"></a><span class="lineno"> 2057</span>&#160;</div>
+<div class="line"><a name="l02058"></a><span class="lineno"> 2058</span>&#160;    std::vector&lt;vector_ptrtype&gt; F( Nl() );</div>
 <div class="line"><a name="l02059"></a><span class="lineno"> 2059</span>&#160;</div>
-<div class="line"><a name="l02060"></a><span class="lineno"> 2060</span>&#160;    std::vector&lt;vector_ptrtype&gt; F( Nl() );</div>
-<div class="line"><a name="l02061"></a><span class="lineno"> 2061</span>&#160;</div>
-<div class="line"><a name="l02062"></a><span class="lineno"> 2062</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> output=0; output&lt;Nl(); output++)</div>
-<div class="line"><a name="l02063"></a><span class="lineno"> 2063</span>&#160;    {</div>
-<div class="line"><a name="l02064"></a><span class="lineno"> 2064</span>&#160;        <span class="keyword">auto</span> compositeF = vector_compositeF[output];</div>
-<div class="line"><a name="l02065"></a><span class="lineno"> 2065</span>&#160;        compositeF-&gt;setScalars( beta_F[output] );</div>
-<div class="line"><a name="l02066"></a><span class="lineno"> 2066</span>&#160;        F[output] = compositeF-&gt;sumAllVectors();</div>
-<div class="line"><a name="l02067"></a><span class="lineno"> 2067</span>&#160;    }</div>
-<div class="line"><a name="l02068"></a><span class="lineno"> 2068</span>&#160;</div>
-<div class="line"><a name="l02069"></a><span class="lineno"> 2069</span>&#160;    ps.log(<span class="stringliteral">&quot;END&quot;</span>);</div>
+<div class="line"><a name="l02060"></a><span class="lineno"> 2060</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> output=0; output&lt;Nl(); output++)</div>
+<div class="line"><a name="l02061"></a><span class="lineno"> 2061</span>&#160;    {</div>
+<div class="line"><a name="l02062"></a><span class="lineno"> 2062</span>&#160;        <span class="keyword">auto</span> compositeF = vector_compositeF[output];</div>
+<div class="line"><a name="l02063"></a><span class="lineno"> 2063</span>&#160;        compositeF-&gt;setScalars( beta_F[output] );</div>
+<div class="line"><a name="l02064"></a><span class="lineno"> 2064</span>&#160;        F[output] = M_model-&gt;newVector();</div>
+<div class="line"><a name="l02065"></a><span class="lineno"> 2065</span>&#160;        compositeF-&gt;sumAllVectors( F[output] );</div>
+<div class="line"><a name="l02066"></a><span class="lineno"> 2066</span>&#160;    }</div>
+<div class="line"><a name="l02067"></a><span class="lineno"> 2067</span>&#160;</div>
+<div class="line"><a name="l02068"></a><span class="lineno"> 2068</span>&#160;    <span class="keywordflow">return</span> boost::make_tuple( M, A, F );</div>
+<div class="line"><a name="l02069"></a><span class="lineno"> 2069</span>&#160;}</div>
 <div class="line"><a name="l02070"></a><span class="lineno"> 2070</span>&#160;</div>
-<div class="line"><a name="l02071"></a><span class="lineno"> 2071</span>&#160;    <span class="keywordflow">return</span> boost::make_tuple( M, A, F );</div>
-<div class="line"><a name="l02072"></a><span class="lineno"> 2072</span>&#160;}</div>
-<div class="line"><a name="l02073"></a><span class="lineno"> 2073</span>&#160;</div>
-<div class="line"><a name="l02074"></a><span class="lineno"> 2074</span>&#160;</div>
-<div class="line"><a name="l02075"></a><span class="lineno"> 2075</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TruthModelType&gt;</div>
-<div class="line"><a name="l02076"></a><span class="lineno"> 2076</span>&#160;<span class="keyword">typename</span> CRBModel&lt;TruthModelType&gt;::offline_merge_type</div>
-<div class="line"><a name="l02077"></a><span class="lineno"> 2077</span>&#160;CRBModel&lt;TruthModelType&gt;::offlineMerge( betaqm_type <span class="keyword">const</span>&amp; all_beta , parameter_type <span class="keyword">const</span>&amp; mu )</div>
-<div class="line"><a name="l02078"></a><span class="lineno"> 2078</span>&#160;{</div>
-<div class="line"><a name="l02079"></a><span class="lineno"> 2079</span>&#160;</div>
-<div class="line"><a name="l02080"></a><span class="lineno"> 2080</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l02081"></a><span class="lineno"> 2081</span>&#160;<span class="preprocessor"></span>    sparse_matrix_ptrtype A( M_backend-&gt;newMatrix(</div>
-<div class="line"><a name="l02082"></a><span class="lineno"> 2082</span>&#160;                                                  _test=M_model-&gt;functionSpace(),</div>
-<div class="line"><a name="l02083"></a><span class="lineno"> 2083</span>&#160;                                                  _trial=M_model-&gt;functionSpace()</div>
-<div class="line"><a name="l02084"></a><span class="lineno"> 2084</span>&#160;                                                  ) );</div>
-<div class="line"><a name="l02085"></a><span class="lineno"> 2085</span>&#160;</div>
-<div class="line"><a name="l02086"></a><span class="lineno"> 2086</span>&#160;    sparse_matrix_ptrtype M( M_backend-&gt;newMatrix(</div>
-<div class="line"><a name="l02087"></a><span class="lineno"> 2087</span>&#160;                                                  _test=M_model-&gt;functionSpace(),</div>
-<div class="line"><a name="l02088"></a><span class="lineno"> 2088</span>&#160;                                                  _trial=M_model-&gt;functionSpace()</div>
-<div class="line"><a name="l02089"></a><span class="lineno"> 2089</span>&#160;                                                  ) );</div>
-<div class="line"><a name="l02090"></a><span class="lineno"> 2090</span>&#160;</div>
-<div class="line"><a name="l02091"></a><span class="lineno"> 2091</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l02092"></a><span class="lineno"> 2092</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l02093"></a><span class="lineno"> 2093</span>&#160;    <span class="keyword">auto</span> A = this-&gt;newMatrix();</div>
-<div class="line"><a name="l02094"></a><span class="lineno"> 2094</span>&#160;    <span class="keyword">auto</span> M = this-&gt;newMatrix();</div>
-<div class="line"><a name="l02095"></a><span class="lineno"> 2095</span>&#160;    <span class="comment">//size_type pattern = operatorCompositeA()-&gt;operatorlinear(0,0)-&gt;pattern();</span></div>
+<div class="line"><a name="l02071"></a><span class="lineno"> 2071</span>&#160;</div>
+<div class="line"><a name="l02072"></a><span class="lineno"> 2072</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TruthModelType&gt;</div>
+<div class="line"><a name="l02073"></a><span class="lineno"> 2073</span>&#160;<span class="keyword">typename</span> CRBModel&lt;TruthModelType&gt;::offline_merge_type</div>
+<div class="line"><a name="l02074"></a><span class="lineno"> 2074</span>&#160;CRBModel&lt;TruthModelType&gt;::offlineMerge( betaqm_type <span class="keyword">const</span>&amp; all_beta , parameter_type <span class="keyword">const</span>&amp; mu )</div>
+<div class="line"><a name="l02075"></a><span class="lineno"> 2075</span>&#160;{</div>
+<div class="line"><a name="l02076"></a><span class="lineno"> 2076</span>&#160;</div>
+<div class="line"><a name="l02077"></a><span class="lineno"> 2077</span>&#160;<span class="preprocessor">#if 0</span></div>
+<div class="line"><a name="l02078"></a><span class="lineno"> 2078</span>&#160;<span class="preprocessor"></span>    sparse_matrix_ptrtype A( M_backend-&gt;newMatrix(</div>
+<div class="line"><a name="l02079"></a><span class="lineno"> 2079</span>&#160;                                                  _test=M_model-&gt;functionSpace(),</div>
+<div class="line"><a name="l02080"></a><span class="lineno"> 2080</span>&#160;                                                  _trial=M_model-&gt;functionSpace()</div>
+<div class="line"><a name="l02081"></a><span class="lineno"> 2081</span>&#160;                                                  ) );</div>
+<div class="line"><a name="l02082"></a><span class="lineno"> 2082</span>&#160;</div>
+<div class="line"><a name="l02083"></a><span class="lineno"> 2083</span>&#160;    sparse_matrix_ptrtype M( M_backend-&gt;newMatrix(</div>
+<div class="line"><a name="l02084"></a><span class="lineno"> 2084</span>&#160;                                                  _test=M_model-&gt;functionSpace(),</div>
+<div class="line"><a name="l02085"></a><span class="lineno"> 2085</span>&#160;                                                  _trial=M_model-&gt;functionSpace()</div>
+<div class="line"><a name="l02086"></a><span class="lineno"> 2086</span>&#160;                                                  ) );</div>
+<div class="line"><a name="l02087"></a><span class="lineno"> 2087</span>&#160;</div>
+<div class="line"><a name="l02088"></a><span class="lineno"> 2088</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l02089"></a><span class="lineno"> 2089</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l02090"></a><span class="lineno"> 2090</span>&#160;    <span class="keyword">auto</span> A = this-&gt;newMatrix();</div>
+<div class="line"><a name="l02091"></a><span class="lineno"> 2091</span>&#160;    <span class="keyword">auto</span> M = this-&gt;newMatrix();</div>
+<div class="line"><a name="l02092"></a><span class="lineno"> 2092</span>&#160;    <span class="comment">//size_type pattern = operatorCompositeA()-&gt;operatorlinear(0,0)-&gt;pattern();</span></div>
+<div class="line"><a name="l02093"></a><span class="lineno"> 2093</span>&#160;</div>
+<div class="line"><a name="l02094"></a><span class="lineno"> 2094</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l02095"></a><span class="lineno"> 2095</span>&#160;<span class="preprocessor"></span>    std::vector&lt;vector_ptrtype&gt; F( Nl() );</div>
 <div class="line"><a name="l02096"></a><span class="lineno"> 2096</span>&#160;</div>
-<div class="line"><a name="l02097"></a><span class="lineno"> 2097</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l02098"></a><span class="lineno"> 2098</span>&#160;<span class="preprocessor"></span>    std::vector&lt;vector_ptrtype&gt; F( Nl() );</div>
-<div class="line"><a name="l02099"></a><span class="lineno"> 2099</span>&#160;</div>
-<div class="line"><a name="l02100"></a><span class="lineno"> 2100</span>&#160;    <span class="comment">//acces to beta coefficients</span></div>
-<div class="line"><a name="l02101"></a><span class="lineno"> 2101</span>&#160;    <span class="keyword">auto</span> beta_M = all_beta.template get&lt;0&gt;();</div>
-<div class="line"><a name="l02102"></a><span class="lineno"> 2102</span>&#160;    <span class="keyword">auto</span> beta_A = all_beta.template get&lt;1&gt;();</div>
-<div class="line"><a name="l02103"></a><span class="lineno"> 2103</span>&#160;    <span class="comment">//warning : beta_F is a vector of beta_coefficients</span></div>
-<div class="line"><a name="l02104"></a><span class="lineno"> 2104</span>&#160;    <span class="keyword">auto</span> beta_F = all_beta.template get&lt;2&gt;();</div>
-<div class="line"><a name="l02105"></a><span class="lineno"> 2105</span>&#160;</div>
-<div class="line"><a name="l02106"></a><span class="lineno"> 2106</span>&#160;    A-&gt;zero();</div>
-<div class="line"><a name="l02107"></a><span class="lineno"> 2107</span>&#160;    <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> q = 0; q &lt; Qa(); ++q )</div>
-<div class="line"><a name="l02108"></a><span class="lineno"> 2108</span>&#160;    {</div>
-<div class="line"><a name="l02109"></a><span class="lineno"> 2109</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> m = 0; m &lt; mMaxA(q); ++m )</div>
-<div class="line"><a name="l02110"></a><span class="lineno"> 2110</span>&#160;            A-&gt;addMatrix( beta_A[q][m], M_Aqm[q][m] );</div>
-<div class="line"><a name="l02111"></a><span class="lineno"> 2111</span>&#160;    }</div>
-<div class="line"><a name="l02112"></a><span class="lineno"> 2112</span>&#160;</div>
-<div class="line"><a name="l02113"></a><span class="lineno"> 2113</span>&#160;    <span class="keywordflow">if</span>( Qm() &gt; 0 )</div>
-<div class="line"><a name="l02114"></a><span class="lineno"> 2114</span>&#160;    {</div>
-<div class="line"><a name="l02115"></a><span class="lineno"> 2115</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> q = 0; q &lt; Qm(); ++q )</div>
-<div class="line"><a name="l02116"></a><span class="lineno"> 2116</span>&#160;        {</div>
-<div class="line"><a name="l02117"></a><span class="lineno"> 2117</span>&#160;            <span class="keywordflow">for</span>(<a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> m = 0; m &lt; mMaxM(q) ; ++m )</div>
-<div class="line"><a name="l02118"></a><span class="lineno"> 2118</span>&#160;                M-&gt;addMatrix( beta_M[q][m] , M_Mqm[q][m] );</div>
-<div class="line"><a name="l02119"></a><span class="lineno"> 2119</span>&#160;        }</div>
-<div class="line"><a name="l02120"></a><span class="lineno"> 2120</span>&#160;    }</div>
-<div class="line"><a name="l02121"></a><span class="lineno"> 2121</span>&#160;</div>
-<div class="line"><a name="l02122"></a><span class="lineno"> 2122</span>&#160;    <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> l = 0; l &lt; Nl(); ++l )</div>
-<div class="line"><a name="l02123"></a><span class="lineno"> 2123</span>&#160;    {</div>
-<div class="line"><a name="l02124"></a><span class="lineno"> 2124</span>&#160;        F[l] = M_backend-&gt;newVector( M_model-&gt;functionSpace() );</div>
-<div class="line"><a name="l02125"></a><span class="lineno"> 2125</span>&#160;        F[l]-&gt;zero();</div>
-<div class="line"><a name="l02126"></a><span class="lineno"> 2126</span>&#160;</div>
-<div class="line"><a name="l02127"></a><span class="lineno"> 2127</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> q = 0; q &lt; Ql( l ); ++q )</div>
-<div class="line"><a name="l02128"></a><span class="lineno"> 2128</span>&#160;        {</div>
-<div class="line"><a name="l02129"></a><span class="lineno"> 2129</span>&#160;            <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> m = 0; m &lt; mMaxF(l,q); ++m )</div>
-<div class="line"><a name="l02130"></a><span class="lineno"> 2130</span>&#160;                F[l]-&gt;add( beta_F[l][q][m] , M_Fqm[l][q][m] );</div>
-<div class="line"><a name="l02131"></a><span class="lineno"> 2131</span>&#160;        }</div>
-<div class="line"><a name="l02132"></a><span class="lineno"> 2132</span>&#160;        F[l]-&gt;close();</div>
-<div class="line"><a name="l02133"></a><span class="lineno"> 2133</span>&#160;    }</div>
+<div class="line"><a name="l02097"></a><span class="lineno"> 2097</span>&#160;    <span class="comment">//acces to beta coefficients</span></div>
+<div class="line"><a name="l02098"></a><span class="lineno"> 2098</span>&#160;    <span class="keyword">auto</span> beta_M = all_beta.template get&lt;0&gt;();</div>
+<div class="line"><a name="l02099"></a><span class="lineno"> 2099</span>&#160;    <span class="keyword">auto</span> beta_A = all_beta.template get&lt;1&gt;();</div>
+<div class="line"><a name="l02100"></a><span class="lineno"> 2100</span>&#160;    <span class="comment">//warning : beta_F is a vector of beta_coefficients</span></div>
+<div class="line"><a name="l02101"></a><span class="lineno"> 2101</span>&#160;    <span class="keyword">auto</span> beta_F = all_beta.template get&lt;2&gt;();</div>
+<div class="line"><a name="l02102"></a><span class="lineno"> 2102</span>&#160;</div>
+<div class="line"><a name="l02103"></a><span class="lineno"> 2103</span>&#160;    A-&gt;zero();</div>
+<div class="line"><a name="l02104"></a><span class="lineno"> 2104</span>&#160;    <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> q = 0; q &lt; Qa(); ++q )</div>
+<div class="line"><a name="l02105"></a><span class="lineno"> 2105</span>&#160;    {</div>
+<div class="line"><a name="l02106"></a><span class="lineno"> 2106</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> m = 0; m &lt; mMaxA(q); ++m )</div>
+<div class="line"><a name="l02107"></a><span class="lineno"> 2107</span>&#160;            A-&gt;addMatrix( beta_A[q][m], M_Aqm[q][m] );</div>
+<div class="line"><a name="l02108"></a><span class="lineno"> 2108</span>&#160;    }</div>
+<div class="line"><a name="l02109"></a><span class="lineno"> 2109</span>&#160;</div>
+<div class="line"><a name="l02110"></a><span class="lineno"> 2110</span>&#160;    <span class="keywordflow">if</span>( Qm() &gt; 0 )</div>
+<div class="line"><a name="l02111"></a><span class="lineno"> 2111</span>&#160;    {</div>
+<div class="line"><a name="l02112"></a><span class="lineno"> 2112</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> q = 0; q &lt; Qm(); ++q )</div>
+<div class="line"><a name="l02113"></a><span class="lineno"> 2113</span>&#160;        {</div>
+<div class="line"><a name="l02114"></a><span class="lineno"> 2114</span>&#160;            <span class="keywordflow">for</span>(<a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> m = 0; m &lt; mMaxM(q) ; ++m )</div>
+<div class="line"><a name="l02115"></a><span class="lineno"> 2115</span>&#160;                M-&gt;addMatrix( beta_M[q][m] , M_Mqm[q][m] );</div>
+<div class="line"><a name="l02116"></a><span class="lineno"> 2116</span>&#160;        }</div>
+<div class="line"><a name="l02117"></a><span class="lineno"> 2117</span>&#160;    }</div>
+<div class="line"><a name="l02118"></a><span class="lineno"> 2118</span>&#160;</div>
+<div class="line"><a name="l02119"></a><span class="lineno"> 2119</span>&#160;    <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> l = 0; l &lt; Nl(); ++l )</div>
+<div class="line"><a name="l02120"></a><span class="lineno"> 2120</span>&#160;    {</div>
+<div class="line"><a name="l02121"></a><span class="lineno"> 2121</span>&#160;        F[l] = M_backend-&gt;newVector( M_model-&gt;functionSpace() );</div>
+<div class="line"><a name="l02122"></a><span class="lineno"> 2122</span>&#160;        F[l]-&gt;zero();</div>
+<div class="line"><a name="l02123"></a><span class="lineno"> 2123</span>&#160;</div>
+<div class="line"><a name="l02124"></a><span class="lineno"> 2124</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> q = 0; q &lt; Ql( l ); ++q )</div>
+<div class="line"><a name="l02125"></a><span class="lineno"> 2125</span>&#160;        {</div>
+<div class="line"><a name="l02126"></a><span class="lineno"> 2126</span>&#160;            <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> m = 0; m &lt; mMaxF(l,q); ++m )</div>
+<div class="line"><a name="l02127"></a><span class="lineno"> 2127</span>&#160;                F[l]-&gt;add( beta_F[l][q][m] , M_Fqm[l][q][m] );</div>
+<div class="line"><a name="l02128"></a><span class="lineno"> 2128</span>&#160;        }</div>
+<div class="line"><a name="l02129"></a><span class="lineno"> 2129</span>&#160;        F[l]-&gt;close();</div>
+<div class="line"><a name="l02130"></a><span class="lineno"> 2130</span>&#160;    }</div>
+<div class="line"><a name="l02131"></a><span class="lineno"> 2131</span>&#160;</div>
+<div class="line"><a name="l02132"></a><span class="lineno"> 2132</span>&#160;    <span class="keywordflow">return</span> boost::make_tuple( M, A, F );</div>
+<div class="line"><a name="l02133"></a><span class="lineno"> 2133</span>&#160;}</div>
 <div class="line"><a name="l02134"></a><span class="lineno"> 2134</span>&#160;</div>
-<div class="line"><a name="l02135"></a><span class="lineno"> 2135</span>&#160;    <span class="keywordflow">return</span> boost::make_tuple( M, A, F );</div>
-<div class="line"><a name="l02136"></a><span class="lineno"> 2136</span>&#160;}</div>
-<div class="line"><a name="l02137"></a><span class="lineno"> 2137</span>&#160;</div>
-<div class="line"><a name="l02138"></a><span class="lineno"> 2138</span>&#160;</div>
-<div class="line"><a name="l02139"></a><span class="lineno"> 2139</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TruthModelType&gt;</div>
-<div class="line"><a name="l02140"></a><span class="lineno"> 2140</span>&#160;<span class="keyword">typename</span> CRBModel&lt;TruthModelType&gt;::element_type</div>
-<div class="line"><a name="l02141"></a><span class="lineno"> 2141</span>&#160;CRBModel&lt;TruthModelType&gt;::solveFemUsingOfflineEim( parameter_type <span class="keyword">const</span>&amp; mu )</div>
-<div class="line"><a name="l02142"></a><span class="lineno"> 2142</span>&#160;{</div>
-<div class="line"><a name="l02143"></a><span class="lineno"> 2143</span>&#160;    <span class="keyword">auto</span> Xh= this-&gt;functionSpace();</div>
-<div class="line"><a name="l02144"></a><span class="lineno"> 2144</span>&#160;</div>
-<div class="line"><a name="l02145"></a><span class="lineno"> 2145</span>&#160;    bdf_ptrtype mybdf;</div>
-<div class="line"><a name="l02146"></a><span class="lineno"> 2146</span>&#160;    mybdf = bdf( _space=Xh, _vm=this-&gt;vm() , _name=<span class="stringliteral">&quot;mybdf&quot;</span> );</div>
-<div class="line"><a name="l02147"></a><span class="lineno"> 2147</span>&#160;    sparse_matrix_ptrtype A;</div>
-<div class="line"><a name="l02148"></a><span class="lineno"> 2148</span>&#160;    sparse_matrix_ptrtype M;</div>
-<div class="line"><a name="l02149"></a><span class="lineno"> 2149</span>&#160;    std::vector&lt;vector_ptrtype&gt; F;</div>
-<div class="line"><a name="l02150"></a><span class="lineno"> 2150</span>&#160;    element_ptrtype InitialGuess = Xh-&gt;elementPtr();</div>
-<div class="line"><a name="l02151"></a><span class="lineno"> 2151</span>&#160;    vector_ptrtype Rhs( M_backend-&gt;newVector( Xh ) );</div>
-<div class="line"><a name="l02152"></a><span class="lineno"> 2152</span>&#160;    <span class="keyword">auto</span> u = Xh-&gt;element();</div>
-<div class="line"><a name="l02153"></a><span class="lineno"> 2153</span>&#160;</div>
-<div class="line"><a name="l02154"></a><span class="lineno"> 2154</span>&#160;    <span class="keywordtype">double</span> time_initial;</div>
-<div class="line"><a name="l02155"></a><span class="lineno"> 2155</span>&#160;    <span class="keywordtype">double</span> time_step;</div>
-<div class="line"><a name="l02156"></a><span class="lineno"> 2156</span>&#160;    <span class="keywordtype">double</span> time_final;</div>
-<div class="line"><a name="l02157"></a><span class="lineno"> 2157</span>&#160;</div>
-<div class="line"><a name="l02158"></a><span class="lineno"> 2158</span>&#160;    <span class="keywordflow">if</span> ( this-&gt;isSteady() )</div>
-<div class="line"><a name="l02159"></a><span class="lineno"> 2159</span>&#160;    {</div>
-<div class="line"><a name="l02160"></a><span class="lineno"> 2160</span>&#160;        time_initial=0;</div>
-<div class="line"><a name="l02161"></a><span class="lineno"> 2161</span>&#160;        time_step = 1e30;</div>
-<div class="line"><a name="l02162"></a><span class="lineno"> 2162</span>&#160;        time_final = 1e30;</div>
-<div class="line"><a name="l02163"></a><span class="lineno"> 2163</span>&#160;    }</div>
-<div class="line"><a name="l02164"></a><span class="lineno"> 2164</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l02165"></a><span class="lineno"> 2165</span>&#160;    {</div>
-<div class="line"><a name="l02166"></a><span class="lineno"> 2166</span>&#160;        time_initial=this-&gt;timeInitial();</div>
-<div class="line"><a name="l02167"></a><span class="lineno"> 2167</span>&#160;        time_step=this-&gt;timeStep();</div>
-<div class="line"><a name="l02168"></a><span class="lineno"> 2168</span>&#160;        time_final=this-&gt;timeFinal();</div>
-<div class="line"><a name="l02169"></a><span class="lineno"> 2169</span>&#160;        this-&gt;initializationField( InitialGuess, mu );</div>
-<div class="line"><a name="l02170"></a><span class="lineno"> 2170</span>&#160;    }</div>
-<div class="line"><a name="l02171"></a><span class="lineno"> 2171</span>&#160;</div>
-<div class="line"><a name="l02172"></a><span class="lineno"> 2172</span>&#160;    mybdf-&gt;setTimeInitial( time_initial );</div>
-<div class="line"><a name="l02173"></a><span class="lineno"> 2173</span>&#160;    mybdf-&gt;setTimeStep( time_step );</div>
-<div class="line"><a name="l02174"></a><span class="lineno"> 2174</span>&#160;    mybdf-&gt;setTimeFinal( time_final );</div>
+<div class="line"><a name="l02135"></a><span class="lineno"> 2135</span>&#160;</div>
+<div class="line"><a name="l02136"></a><span class="lineno"> 2136</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TruthModelType&gt;</div>
+<div class="line"><a name="l02137"></a><span class="lineno"> 2137</span>&#160;<span class="keyword">typename</span> CRBModel&lt;TruthModelType&gt;::element_type</div>
+<div class="line"><a name="l02138"></a><span class="lineno"> 2138</span>&#160;CRBModel&lt;TruthModelType&gt;::solveFemUsingOfflineEim( parameter_type <span class="keyword">const</span>&amp; mu )</div>
+<div class="line"><a name="l02139"></a><span class="lineno"> 2139</span>&#160;{</div>
+<div class="line"><a name="l02140"></a><span class="lineno"> 2140</span>&#160;    <span class="keyword">auto</span> Xh= this-&gt;functionSpace();</div>
+<div class="line"><a name="l02141"></a><span class="lineno"> 2141</span>&#160;</div>
+<div class="line"><a name="l02142"></a><span class="lineno"> 2142</span>&#160;    bdf_ptrtype mybdf;</div>
+<div class="line"><a name="l02143"></a><span class="lineno"> 2143</span>&#160;    mybdf = bdf( _space=Xh, _vm=this-&gt;vm() , _name=<span class="stringliteral">&quot;mybdf&quot;</span> );</div>
+<div class="line"><a name="l02144"></a><span class="lineno"> 2144</span>&#160;    sparse_matrix_ptrtype A;</div>
+<div class="line"><a name="l02145"></a><span class="lineno"> 2145</span>&#160;    sparse_matrix_ptrtype M;</div>
+<div class="line"><a name="l02146"></a><span class="lineno"> 2146</span>&#160;    std::vector&lt;vector_ptrtype&gt; F;</div>
+<div class="line"><a name="l02147"></a><span class="lineno"> 2147</span>&#160;    element_ptrtype InitialGuess = Xh-&gt;elementPtr();</div>
+<div class="line"><a name="l02148"></a><span class="lineno"> 2148</span>&#160;    vector_ptrtype Rhs( M_backend-&gt;newVector( Xh ) );</div>
+<div class="line"><a name="l02149"></a><span class="lineno"> 2149</span>&#160;    <span class="keyword">auto</span> u = Xh-&gt;element();</div>
+<div class="line"><a name="l02150"></a><span class="lineno"> 2150</span>&#160;</div>
+<div class="line"><a name="l02151"></a><span class="lineno"> 2151</span>&#160;    <span class="keywordtype">double</span> time_initial;</div>
+<div class="line"><a name="l02152"></a><span class="lineno"> 2152</span>&#160;    <span class="keywordtype">double</span> time_step;</div>
+<div class="line"><a name="l02153"></a><span class="lineno"> 2153</span>&#160;    <span class="keywordtype">double</span> time_final;</div>
+<div class="line"><a name="l02154"></a><span class="lineno"> 2154</span>&#160;</div>
+<div class="line"><a name="l02155"></a><span class="lineno"> 2155</span>&#160;    <span class="keywordflow">if</span> ( this-&gt;isSteady() )</div>
+<div class="line"><a name="l02156"></a><span class="lineno"> 2156</span>&#160;    {</div>
+<div class="line"><a name="l02157"></a><span class="lineno"> 2157</span>&#160;        time_initial=0;</div>
+<div class="line"><a name="l02158"></a><span class="lineno"> 2158</span>&#160;        time_step = 1e30;</div>
+<div class="line"><a name="l02159"></a><span class="lineno"> 2159</span>&#160;        time_final = 1e30;</div>
+<div class="line"><a name="l02160"></a><span class="lineno"> 2160</span>&#160;    }</div>
+<div class="line"><a name="l02161"></a><span class="lineno"> 2161</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l02162"></a><span class="lineno"> 2162</span>&#160;    {</div>
+<div class="line"><a name="l02163"></a><span class="lineno"> 2163</span>&#160;        time_initial=this-&gt;timeInitial();</div>
+<div class="line"><a name="l02164"></a><span class="lineno"> 2164</span>&#160;        time_step=this-&gt;timeStep();</div>
+<div class="line"><a name="l02165"></a><span class="lineno"> 2165</span>&#160;        time_final=this-&gt;timeFinal();</div>
+<div class="line"><a name="l02166"></a><span class="lineno"> 2166</span>&#160;        this-&gt;initializationField( InitialGuess, mu );</div>
+<div class="line"><a name="l02167"></a><span class="lineno"> 2167</span>&#160;    }</div>
+<div class="line"><a name="l02168"></a><span class="lineno"> 2168</span>&#160;</div>
+<div class="line"><a name="l02169"></a><span class="lineno"> 2169</span>&#160;    mybdf-&gt;setTimeInitial( time_initial );</div>
+<div class="line"><a name="l02170"></a><span class="lineno"> 2170</span>&#160;    mybdf-&gt;setTimeStep( time_step );</div>
+<div class="line"><a name="l02171"></a><span class="lineno"> 2171</span>&#160;    mybdf-&gt;setTimeFinal( time_final );</div>
+<div class="line"><a name="l02172"></a><span class="lineno"> 2172</span>&#160;</div>
+<div class="line"><a name="l02173"></a><span class="lineno"> 2173</span>&#160;    <span class="keywordtype">double</span> bdf_coeff ;</div>
+<div class="line"><a name="l02174"></a><span class="lineno"> 2174</span>&#160;    <span class="keyword">auto</span> vec_bdf_poly = M_backend-&gt;newVector( Xh );</div>
 <div class="line"><a name="l02175"></a><span class="lineno"> 2175</span>&#160;</div>
-<div class="line"><a name="l02176"></a><span class="lineno"> 2176</span>&#160;    <span class="keywordtype">double</span> bdf_coeff ;</div>
-<div class="line"><a name="l02177"></a><span class="lineno"> 2177</span>&#160;    <span class="keyword">auto</span> vec_bdf_poly = M_backend-&gt;newVector( Xh );</div>
-<div class="line"><a name="l02178"></a><span class="lineno"> 2178</span>&#160;</div>
-<div class="line"><a name="l02179"></a><span class="lineno"> 2179</span>&#160;    <span class="keywordflow">for</span>( mybdf-&gt;start(*InitialGuess); !mybdf-&gt;isFinished(); mybdf-&gt;next() )</div>
-<div class="line"><a name="l02180"></a><span class="lineno"> 2180</span>&#160;    {</div>
-<div class="line"><a name="l02181"></a><span class="lineno"> 2181</span>&#160;        bdf_coeff = mybdf-&gt;polyDerivCoefficient( 0 );</div>
-<div class="line"><a name="l02182"></a><span class="lineno"> 2182</span>&#160;        <span class="keyword">auto</span> bdf_poly = mybdf-&gt;polyDeriv();</div>
-<div class="line"><a name="l02183"></a><span class="lineno"> 2183</span>&#160;        *vec_bdf_poly = bdf_poly;</div>
-<div class="line"><a name="l02184"></a><span class="lineno"> 2184</span>&#160;        boost::tie(M, A, F) = this-&gt;update( mu , mybdf-&gt;time() );</div>
-<div class="line"><a name="l02185"></a><span class="lineno"> 2185</span>&#160;        *Rhs = *F[0];</div>
-<div class="line"><a name="l02186"></a><span class="lineno"> 2186</span>&#160;        <span class="keywordflow">if</span>( !isSteady() )</div>
-<div class="line"><a name="l02187"></a><span class="lineno"> 2187</span>&#160;        {</div>
-<div class="line"><a name="l02188"></a><span class="lineno"> 2188</span>&#160;            A-&gt;addMatrix( bdf_coeff, M );</div>
-<div class="line"><a name="l02189"></a><span class="lineno"> 2189</span>&#160;            Rhs-&gt;addVector( *vec_bdf_poly, *M );</div>
-<div class="line"><a name="l02190"></a><span class="lineno"> 2190</span>&#160;        }</div>
-<div class="line"><a name="l02191"></a><span class="lineno"> 2191</span>&#160;        M_backend-&gt;solve( _matrix=A , _solution=u, _rhs=Rhs );</div>
-<div class="line"><a name="l02192"></a><span class="lineno"> 2192</span>&#160;        mybdf-&gt;shiftRight(u);</div>
-<div class="line"><a name="l02193"></a><span class="lineno"> 2193</span>&#160;    }</div>
-<div class="line"><a name="l02194"></a><span class="lineno"> 2194</span>&#160;</div>
-<div class="line"><a name="l02195"></a><span class="lineno"> 2195</span>&#160;    <span class="keywordflow">return</span> u;</div>
-<div class="line"><a name="l02196"></a><span class="lineno"> 2196</span>&#160;</div>
-<div class="line"><a name="l02197"></a><span class="lineno"> 2197</span>&#160;}</div>
-<div class="line"><a name="l02198"></a><span class="lineno"> 2198</span>&#160;</div>
-<div class="line"><a name="l02199"></a><span class="lineno"> 2199</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TruthModelType&gt;</div>
-<div class="line"><a name="l02200"></a><span class="lineno"> 2200</span>&#160;<span class="keyword">typename</span> CRBModel&lt;TruthModelType&gt;::element_type</div>
-<div class="line"><a name="l02201"></a><span class="lineno"> 2201</span>&#160;CRBModel&lt;TruthModelType&gt;::solveFemUsingAffineDecompositionFixedPoint( parameter_type <span class="keyword">const</span>&amp; mu )</div>
-<div class="line"><a name="l02202"></a><span class="lineno"> 2202</span>&#160;{</div>
-<div class="line"><a name="l02203"></a><span class="lineno"> 2203</span>&#160;    <span class="keyword">auto</span> Xh= this-&gt;functionSpace();</div>
-<div class="line"><a name="l02204"></a><span class="lineno"> 2204</span>&#160;</div>
-<div class="line"><a name="l02205"></a><span class="lineno"> 2205</span>&#160;    bdf_ptrtype mybdf;</div>
-<div class="line"><a name="l02206"></a><span class="lineno"> 2206</span>&#160;    mybdf = bdf( _space=Xh, _vm=this-&gt;vm() , _name=<span class="stringliteral">&quot;mybdf&quot;</span> );</div>
-<div class="line"><a name="l02207"></a><span class="lineno"> 2207</span>&#160;    sparse_matrix_ptrtype A;</div>
-<div class="line"><a name="l02208"></a><span class="lineno"> 2208</span>&#160;    sparse_matrix_ptrtype M;</div>
-<div class="line"><a name="l02209"></a><span class="lineno"> 2209</span>&#160;    std::vector&lt;vector_ptrtype&gt; F;</div>
-<div class="line"><a name="l02210"></a><span class="lineno"> 2210</span>&#160;    element_ptrtype InitialGuess = Xh-&gt;elementPtr();</div>
-<div class="line"><a name="l02211"></a><span class="lineno"> 2211</span>&#160;    <span class="keyword">auto</span> u = Xh-&gt;element();</div>
-<div class="line"><a name="l02212"></a><span class="lineno"> 2212</span>&#160;    <span class="keyword">auto</span> uold = Xh-&gt;element();</div>
-<div class="line"><a name="l02213"></a><span class="lineno"> 2213</span>&#160;    vector_ptrtype Rhs( M_backend-&gt;newVector( Xh ) );</div>
-<div class="line"><a name="l02214"></a><span class="lineno"> 2214</span>&#160;</div>
-<div class="line"><a name="l02215"></a><span class="lineno"> 2215</span>&#160;    <span class="keywordtype">double</span> time_initial;</div>
-<div class="line"><a name="l02216"></a><span class="lineno"> 2216</span>&#160;    <span class="keywordtype">double</span> time_step;</div>
-<div class="line"><a name="l02217"></a><span class="lineno"> 2217</span>&#160;    <span class="keywordtype">double</span> time_final;</div>
-<div class="line"><a name="l02218"></a><span class="lineno"> 2218</span>&#160;</div>
-<div class="line"><a name="l02219"></a><span class="lineno"> 2219</span>&#160;    <span class="keywordflow">if</span> ( this-&gt;isSteady() )</div>
-<div class="line"><a name="l02220"></a><span class="lineno"> 2220</span>&#160;    {</div>
-<div class="line"><a name="l02221"></a><span class="lineno"> 2221</span>&#160;        time_initial=0;</div>
-<div class="line"><a name="l02222"></a><span class="lineno"> 2222</span>&#160;        time_step = 1e30;</div>
-<div class="line"><a name="l02223"></a><span class="lineno"> 2223</span>&#160;        time_final = 1e30;</div>
-<div class="line"><a name="l02224"></a><span class="lineno"> 2224</span>&#160;        <span class="comment">//we want to have the initial guess given by function update</span></div>
-<div class="line"><a name="l02225"></a><span class="lineno"> 2225</span>&#160;        InitialGuess = this-&gt;assembleInitialGuess( mu ) ;</div>
-<div class="line"><a name="l02226"></a><span class="lineno"> 2226</span>&#160;    }</div>
-<div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;    {</div>
-<div class="line"><a name="l02229"></a><span class="lineno"> 2229</span>&#160;        time_initial=this-&gt;timeInitial();</div>
-<div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;        time_step=this-&gt;timeStep();</div>
-<div class="line"><a name="l02231"></a><span class="lineno"> 2231</span>&#160;        time_final=this-&gt;timeFinal();</div>
-<div class="line"><a name="l02232"></a><span class="lineno"> 2232</span>&#160;        this-&gt;initializationField( InitialGuess, mu );</div>
-<div class="line"><a name="l02233"></a><span class="lineno"> 2233</span>&#160;    }</div>
-<div class="line"><a name="l02234"></a><span class="lineno"> 2234</span>&#160;</div>
-<div class="line"><a name="l02235"></a><span class="lineno"> 2235</span>&#160;    mybdf-&gt;setTimeInitial( time_initial );</div>
-<div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;    mybdf-&gt;setTimeStep( time_step );</div>
-<div class="line"><a name="l02237"></a><span class="lineno"> 2237</span>&#160;    mybdf-&gt;setTimeFinal( time_final );</div>
-<div class="line"><a name="l02238"></a><span class="lineno"> 2238</span>&#160;</div>
-<div class="line"><a name="l02239"></a><span class="lineno"> 2239</span>&#160;    u=*InitialGuess;</div>
-<div class="line"><a name="l02240"></a><span class="lineno"> 2240</span>&#160;    <span class="keywordtype">double</span> norm=0;</div>
-<div class="line"><a name="l02241"></a><span class="lineno"> 2241</span>&#160;    <span class="keywordtype">int</span> iter=0;</div>
+<div class="line"><a name="l02176"></a><span class="lineno"> 2176</span>&#160;    <span class="keywordflow">for</span>( mybdf-&gt;start(*InitialGuess); !mybdf-&gt;isFinished(); mybdf-&gt;next() )</div>
+<div class="line"><a name="l02177"></a><span class="lineno"> 2177</span>&#160;    {</div>
+<div class="line"><a name="l02178"></a><span class="lineno"> 2178</span>&#160;        bdf_coeff = mybdf-&gt;polyDerivCoefficient( 0 );</div>
+<div class="line"><a name="l02179"></a><span class="lineno"> 2179</span>&#160;        <span class="keyword">auto</span> bdf_poly = mybdf-&gt;polyDeriv();</div>
+<div class="line"><a name="l02180"></a><span class="lineno"> 2180</span>&#160;        *vec_bdf_poly = bdf_poly;</div>
+<div class="line"><a name="l02181"></a><span class="lineno"> 2181</span>&#160;        boost::tie(M, A, F) = this-&gt;update( mu , mybdf-&gt;time() );</div>
+<div class="line"><a name="l02182"></a><span class="lineno"> 2182</span>&#160;        *Rhs = *F[0];</div>
+<div class="line"><a name="l02183"></a><span class="lineno"> 2183</span>&#160;        <span class="keywordflow">if</span>( !isSteady() )</div>
+<div class="line"><a name="l02184"></a><span class="lineno"> 2184</span>&#160;        {</div>
+<div class="line"><a name="l02185"></a><span class="lineno"> 2185</span>&#160;            A-&gt;addMatrix( bdf_coeff, M );</div>
+<div class="line"><a name="l02186"></a><span class="lineno"> 2186</span>&#160;            Rhs-&gt;addVector( *vec_bdf_poly, *M );</div>
+<div class="line"><a name="l02187"></a><span class="lineno"> 2187</span>&#160;        }</div>
+<div class="line"><a name="l02188"></a><span class="lineno"> 2188</span>&#160;        M_backend-&gt;solve( _matrix=A , _solution=u, _rhs=Rhs );</div>
+<div class="line"><a name="l02189"></a><span class="lineno"> 2189</span>&#160;        mybdf-&gt;shiftRight(u);</div>
+<div class="line"><a name="l02190"></a><span class="lineno"> 2190</span>&#160;    }</div>
+<div class="line"><a name="l02191"></a><span class="lineno"> 2191</span>&#160;</div>
+<div class="line"><a name="l02192"></a><span class="lineno"> 2192</span>&#160;    <span class="keywordflow">return</span> u;</div>
+<div class="line"><a name="l02193"></a><span class="lineno"> 2193</span>&#160;</div>
+<div class="line"><a name="l02194"></a><span class="lineno"> 2194</span>&#160;}</div>
+<div class="line"><a name="l02195"></a><span class="lineno"> 2195</span>&#160;</div>
+<div class="line"><a name="l02196"></a><span class="lineno"> 2196</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TruthModelType&gt;</div>
+<div class="line"><a name="l02197"></a><span class="lineno"> 2197</span>&#160;<span class="keyword">typename</span> CRBModel&lt;TruthModelType&gt;::element_type</div>
+<div class="line"><a name="l02198"></a><span class="lineno"> 2198</span>&#160;CRBModel&lt;TruthModelType&gt;::solveFemUsingAffineDecompositionFixedPoint( parameter_type <span class="keyword">const</span>&amp; mu )</div>
+<div class="line"><a name="l02199"></a><span class="lineno"> 2199</span>&#160;{</div>
+<div class="line"><a name="l02200"></a><span class="lineno"> 2200</span>&#160;    <span class="keyword">auto</span> Xh= this-&gt;functionSpace();</div>
+<div class="line"><a name="l02201"></a><span class="lineno"> 2201</span>&#160;</div>
+<div class="line"><a name="l02202"></a><span class="lineno"> 2202</span>&#160;    bdf_ptrtype mybdf;</div>
+<div class="line"><a name="l02203"></a><span class="lineno"> 2203</span>&#160;    mybdf = bdf( _space=Xh, _vm=this-&gt;vm() , _name=<span class="stringliteral">&quot;mybdf&quot;</span> );</div>
+<div class="line"><a name="l02204"></a><span class="lineno"> 2204</span>&#160;    sparse_matrix_ptrtype A;</div>
+<div class="line"><a name="l02205"></a><span class="lineno"> 2205</span>&#160;    sparse_matrix_ptrtype M;</div>
+<div class="line"><a name="l02206"></a><span class="lineno"> 2206</span>&#160;    std::vector&lt;vector_ptrtype&gt; F;</div>
+<div class="line"><a name="l02207"></a><span class="lineno"> 2207</span>&#160;    element_ptrtype InitialGuess = Xh-&gt;elementPtr();</div>
+<div class="line"><a name="l02208"></a><span class="lineno"> 2208</span>&#160;    <span class="keyword">auto</span> u = Xh-&gt;element();</div>
+<div class="line"><a name="l02209"></a><span class="lineno"> 2209</span>&#160;    <span class="keyword">auto</span> uold = Xh-&gt;element();</div>
+<div class="line"><a name="l02210"></a><span class="lineno"> 2210</span>&#160;    vector_ptrtype Rhs( M_backend-&gt;newVector( Xh ) );</div>
+<div class="line"><a name="l02211"></a><span class="lineno"> 2211</span>&#160;</div>
+<div class="line"><a name="l02212"></a><span class="lineno"> 2212</span>&#160;    <span class="keywordtype">double</span> time_initial;</div>
+<div class="line"><a name="l02213"></a><span class="lineno"> 2213</span>&#160;    <span class="keywordtype">double</span> time_step;</div>
+<div class="line"><a name="l02214"></a><span class="lineno"> 2214</span>&#160;    <span class="keywordtype">double</span> time_final;</div>
+<div class="line"><a name="l02215"></a><span class="lineno"> 2215</span>&#160;</div>
+<div class="line"><a name="l02216"></a><span class="lineno"> 2216</span>&#160;    <span class="keywordflow">if</span> ( this-&gt;isSteady() )</div>
+<div class="line"><a name="l02217"></a><span class="lineno"> 2217</span>&#160;    {</div>
+<div class="line"><a name="l02218"></a><span class="lineno"> 2218</span>&#160;        time_initial=0;</div>
+<div class="line"><a name="l02219"></a><span class="lineno"> 2219</span>&#160;        time_step = 1e30;</div>
+<div class="line"><a name="l02220"></a><span class="lineno"> 2220</span>&#160;        time_final = 1e30;</div>
+<div class="line"><a name="l02221"></a><span class="lineno"> 2221</span>&#160;        <span class="comment">//we want to have the initial guess given by function update</span></div>
+<div class="line"><a name="l02222"></a><span class="lineno"> 2222</span>&#160;        InitialGuess = this-&gt;assembleInitialGuess( mu ) ;</div>
+<div class="line"><a name="l02223"></a><span class="lineno"> 2223</span>&#160;    }</div>
+<div class="line"><a name="l02224"></a><span class="lineno"> 2224</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l02225"></a><span class="lineno"> 2225</span>&#160;    {</div>
+<div class="line"><a name="l02226"></a><span class="lineno"> 2226</span>&#160;        time_initial=this-&gt;timeInitial();</div>
+<div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;        time_step=this-&gt;timeStep();</div>
+<div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;        time_final=this-&gt;timeFinal();</div>
+<div class="line"><a name="l02229"></a><span class="lineno"> 2229</span>&#160;        this-&gt;initializationField( InitialGuess, mu );</div>
+<div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;    }</div>
+<div class="line"><a name="l02231"></a><span class="lineno"> 2231</span>&#160;</div>
+<div class="line"><a name="l02232"></a><span class="lineno"> 2232</span>&#160;    mybdf-&gt;setTimeInitial( time_initial );</div>
+<div class="line"><a name="l02233"></a><span class="lineno"> 2233</span>&#160;    mybdf-&gt;setTimeStep( time_step );</div>
+<div class="line"><a name="l02234"></a><span class="lineno"> 2234</span>&#160;    mybdf-&gt;setTimeFinal( time_final );</div>
+<div class="line"><a name="l02235"></a><span class="lineno"> 2235</span>&#160;</div>
+<div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;    u=*InitialGuess;</div>
+<div class="line"><a name="l02237"></a><span class="lineno"> 2237</span>&#160;    <span class="keywordtype">double</span> norm=0;</div>
+<div class="line"><a name="l02238"></a><span class="lineno"> 2238</span>&#160;    <span class="keywordtype">int</span> iter=0;</div>
+<div class="line"><a name="l02239"></a><span class="lineno"> 2239</span>&#160;</div>
+<div class="line"><a name="l02240"></a><span class="lineno"> 2240</span>&#160;    <span class="keywordtype">double</span> bdf_coeff ;</div>
+<div class="line"><a name="l02241"></a><span class="lineno"> 2241</span>&#160;    <span class="keyword">auto</span> vec_bdf_poly = M_backend-&gt;newVector( Xh );</div>
 <div class="line"><a name="l02242"></a><span class="lineno"> 2242</span>&#160;</div>
-<div class="line"><a name="l02243"></a><span class="lineno"> 2243</span>&#160;    <span class="keywordtype">double</span> bdf_coeff ;</div>
-<div class="line"><a name="l02244"></a><span class="lineno"> 2244</span>&#160;    <span class="keyword">auto</span> vec_bdf_poly = M_backend-&gt;newVector( Xh );</div>
-<div class="line"><a name="l02245"></a><span class="lineno"> 2245</span>&#160;</div>
-<div class="line"><a name="l02246"></a><span class="lineno"> 2246</span>&#160;    <span class="keywordtype">int</span> max_fixedpoint_iterations  = this-&gt;vm()[<span class="stringliteral">&quot;crb.max-fixedpoint-iterations&quot;</span>].template as&lt;int&gt;();</div>
-<div class="line"><a name="l02247"></a><span class="lineno"> 2247</span>&#160;    <span class="keywordtype">double</span> increment_fixedpoint_tol  = this-&gt;vm()[<span class="stringliteral">&quot;crb.increment-fixedpoint-tol&quot;</span>].template as&lt;double&gt;();</div>
-<div class="line"><a name="l02248"></a><span class="lineno"> 2248</span>&#160;    <span class="keywordflow">for</span>( mybdf-&gt;start(*InitialGuess); !mybdf-&gt;isFinished(); mybdf-&gt;next() )</div>
-<div class="line"><a name="l02249"></a><span class="lineno"> 2249</span>&#160;    {</div>
-<div class="line"><a name="l02250"></a><span class="lineno"> 2250</span>&#160;        iter=0;</div>
-<div class="line"><a name="l02251"></a><span class="lineno"> 2251</span>&#160;        bdf_coeff = mybdf-&gt;polyDerivCoefficient( 0 );</div>
-<div class="line"><a name="l02252"></a><span class="lineno"> 2252</span>&#160;        <span class="keyword">auto</span> bdf_poly = mybdf-&gt;polyDeriv();</div>
-<div class="line"><a name="l02253"></a><span class="lineno"> 2253</span>&#160;        *vec_bdf_poly = bdf_poly;</div>
-<div class="line"><a name="l02254"></a><span class="lineno"> 2254</span>&#160;        <span class="keywordflow">do</span> {</div>
-<div class="line"><a name="l02255"></a><span class="lineno"> 2255</span>&#160;            boost::tie(M, A, F) = this-&gt;update( mu , u , mybdf-&gt;time() );</div>
-<div class="line"><a name="l02256"></a><span class="lineno"> 2256</span>&#160;            *Rhs = *F[0];</div>
-<div class="line"><a name="l02257"></a><span class="lineno"> 2257</span>&#160;</div>
-<div class="line"><a name="l02258"></a><span class="lineno"> 2258</span>&#160;            <span class="keywordflow">if</span>( !isSteady() )</div>
-<div class="line"><a name="l02259"></a><span class="lineno"> 2259</span>&#160;            {</div>
-<div class="line"><a name="l02260"></a><span class="lineno"> 2260</span>&#160;                A-&gt;addMatrix( bdf_coeff, M );</div>
-<div class="line"><a name="l02261"></a><span class="lineno"> 2261</span>&#160;                Rhs-&gt;addVector( *vec_bdf_poly, *M );</div>
-<div class="line"><a name="l02262"></a><span class="lineno"> 2262</span>&#160;            }</div>
-<div class="line"><a name="l02263"></a><span class="lineno"> 2263</span>&#160;            uold = u;</div>
-<div class="line"><a name="l02264"></a><span class="lineno"> 2264</span>&#160;            M_preconditioner-&gt;setMatrix( A );</div>
-<div class="line"><a name="l02265"></a><span class="lineno"> 2265</span>&#160;            M_backend-&gt;solve( _matrix=A , _solution=u, _rhs=Rhs , _prec=M_preconditioner);</div>
-<div class="line"><a name="l02266"></a><span class="lineno"> 2266</span>&#160;            norm = this-&gt;computeNormL2( uold , u );</div>
-<div class="line"><a name="l02267"></a><span class="lineno"> 2267</span>&#160;            iter++;</div>
-<div class="line"><a name="l02268"></a><span class="lineno"> 2268</span>&#160;        } <span class="keywordflow">while</span>( norm &gt; increment_fixedpoint_tol &amp;&amp; iter&lt;max_fixedpoint_iterations );</div>
-<div class="line"><a name="l02269"></a><span class="lineno"> 2269</span>&#160;        mybdf-&gt;shiftRight(u);</div>
-<div class="line"><a name="l02270"></a><span class="lineno"> 2270</span>&#160;    }</div>
-<div class="line"><a name="l02271"></a><span class="lineno"> 2271</span>&#160;    <span class="keywordflow">return</span> u;</div>
-<div class="line"><a name="l02272"></a><span class="lineno"> 2272</span>&#160;}</div>
-<div class="line"><a name="l02273"></a><span class="lineno"> 2273</span>&#160;</div>
-<div class="line"><a name="l02274"></a><span class="lineno"> 2274</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TruthModelType&gt;</div>
-<div class="line"><a name="l02275"></a><span class="lineno"> 2275</span>&#160;<span class="keyword">typename</span> CRBModel&lt;TruthModelType&gt;::element_type</div>
-<div class="line"><a name="l02276"></a><span class="lineno"> 2276</span>&#160;CRBModel&lt;TruthModelType&gt;::solveFemDualUsingAffineDecompositionFixedPoint( parameter_type <span class="keyword">const</span>&amp; mu )</div>
-<div class="line"><a name="l02277"></a><span class="lineno"> 2277</span>&#160;{</div>
-<div class="line"><a name="l02278"></a><span class="lineno"> 2278</span>&#160;    <span class="keywordtype">int</span> output_index = option(_name=<span class="stringliteral">&quot;crb.output-index&quot;</span>).template as&lt;int&gt;();</div>
-<div class="line"><a name="l02279"></a><span class="lineno"> 2279</span>&#160;</div>
-<div class="line"><a name="l02280"></a><span class="lineno"> 2280</span>&#160;    <span class="keyword">auto</span> Xh= this-&gt;functionSpace();</div>
-<div class="line"><a name="l02281"></a><span class="lineno"> 2281</span>&#160;</div>
-<div class="line"><a name="l02282"></a><span class="lineno"> 2282</span>&#160;    bdf_ptrtype mybdf;</div>
-<div class="line"><a name="l02283"></a><span class="lineno"> 2283</span>&#160;    mybdf = bdf( _space=Xh, _vm=this-&gt;vm() , _name=<span class="stringliteral">&quot;mybdf&quot;</span> );</div>
-<div class="line"><a name="l02284"></a><span class="lineno"> 2284</span>&#160;    sparse_matrix_ptrtype A,Adu;</div>
-<div class="line"><a name="l02285"></a><span class="lineno"> 2285</span>&#160;    sparse_matrix_ptrtype M;</div>
-<div class="line"><a name="l02286"></a><span class="lineno"> 2286</span>&#160;    std::vector&lt;vector_ptrtype&gt; F;</div>
-<div class="line"><a name="l02287"></a><span class="lineno"> 2287</span>&#160;    <span class="keyword">auto</span> udu = Xh-&gt;element();</div>
-<div class="line"><a name="l02288"></a><span class="lineno"> 2288</span>&#160;    <span class="keyword">auto</span> uold = Xh-&gt;element();</div>
-<div class="line"><a name="l02289"></a><span class="lineno"> 2289</span>&#160;    vector_ptrtype Rhs( M_backend-&gt;newVector( Xh ) );</div>
-<div class="line"><a name="l02290"></a><span class="lineno"> 2290</span>&#160;    <span class="keyword">auto</span> dual_initial_field = Xh-&gt;elementPtr();</div>
-<div class="line"><a name="l02291"></a><span class="lineno"> 2291</span>&#160;</div>
-<div class="line"><a name="l02292"></a><span class="lineno"> 2292</span>&#160;    <span class="keywordtype">double</span> time_initial;</div>
-<div class="line"><a name="l02293"></a><span class="lineno"> 2293</span>&#160;    <span class="keywordtype">double</span> time_step;</div>
-<div class="line"><a name="l02294"></a><span class="lineno"> 2294</span>&#160;    <span class="keywordtype">double</span> time_final;</div>
-<div class="line"><a name="l02295"></a><span class="lineno"> 2295</span>&#160;</div>
-<div class="line"><a name="l02296"></a><span class="lineno"> 2296</span>&#160;    <span class="keywordflow">if</span> ( this-&gt;isSteady() )</div>
-<div class="line"><a name="l02297"></a><span class="lineno"> 2297</span>&#160;    {</div>
-<div class="line"><a name="l02298"></a><span class="lineno"> 2298</span>&#160;        time_initial=0;</div>
-<div class="line"><a name="l02299"></a><span class="lineno"> 2299</span>&#160;        time_step = 1e30;</div>
-<div class="line"><a name="l02300"></a><span class="lineno"> 2300</span>&#160;        time_final = 1e30;</div>
-<div class="line"><a name="l02301"></a><span class="lineno"> 2301</span>&#160;        <span class="comment">//InitialGuess = this-&gt;assembleInitialGuess( mu ) ;</span></div>
-<div class="line"><a name="l02302"></a><span class="lineno"> 2302</span>&#160;    }</div>
-<div class="line"><a name="l02303"></a><span class="lineno"> 2303</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l02304"></a><span class="lineno"> 2304</span>&#160;    {</div>
-<div class="line"><a name="l02305"></a><span class="lineno"> 2305</span>&#160;        time_initial=this-&gt;timeFinal()+this-&gt;timeStep();</div>
-<div class="line"><a name="l02306"></a><span class="lineno"> 2306</span>&#160;        time_step=-this-&gt;timeStep();</div>
-<div class="line"><a name="l02307"></a><span class="lineno"> 2307</span>&#160;        time_final=this-&gt;timeInitial()+this-&gt;timeStep();</div>
-<div class="line"><a name="l02308"></a><span class="lineno"> 2308</span>&#160;    }</div>
-<div class="line"><a name="l02309"></a><span class="lineno"> 2309</span>&#160;</div>
-<div class="line"><a name="l02310"></a><span class="lineno"> 2310</span>&#160;    mybdf-&gt;setTimeInitial( time_initial );</div>
-<div class="line"><a name="l02311"></a><span class="lineno"> 2311</span>&#160;    mybdf-&gt;setTimeStep( time_step );</div>
-<div class="line"><a name="l02312"></a><span class="lineno"> 2312</span>&#160;    mybdf-&gt;setTimeFinal( time_final );</div>
+<div class="line"><a name="l02243"></a><span class="lineno"> 2243</span>&#160;    <span class="keywordtype">int</span> max_fixedpoint_iterations  = this-&gt;vm()[<span class="stringliteral">&quot;crb.max-fixedpoint-iterations&quot;</span>].template as&lt;int&gt;();</div>
+<div class="line"><a name="l02244"></a><span class="lineno"> 2244</span>&#160;    <span class="keywordtype">double</span> increment_fixedpoint_tol  = this-&gt;vm()[<span class="stringliteral">&quot;crb.increment-fixedpoint-tol&quot;</span>].template as&lt;double&gt;();</div>
+<div class="line"><a name="l02245"></a><span class="lineno"> 2245</span>&#160;    <span class="keywordflow">for</span>( mybdf-&gt;start(*InitialGuess); !mybdf-&gt;isFinished(); mybdf-&gt;next() )</div>
+<div class="line"><a name="l02246"></a><span class="lineno"> 2246</span>&#160;    {</div>
+<div class="line"><a name="l02247"></a><span class="lineno"> 2247</span>&#160;        iter=0;</div>
+<div class="line"><a name="l02248"></a><span class="lineno"> 2248</span>&#160;        bdf_coeff = mybdf-&gt;polyDerivCoefficient( 0 );</div>
+<div class="line"><a name="l02249"></a><span class="lineno"> 2249</span>&#160;        <span class="keyword">auto</span> bdf_poly = mybdf-&gt;polyDeriv();</div>
+<div class="line"><a name="l02250"></a><span class="lineno"> 2250</span>&#160;        *vec_bdf_poly = bdf_poly;</div>
+<div class="line"><a name="l02251"></a><span class="lineno"> 2251</span>&#160;        <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l02252"></a><span class="lineno"> 2252</span>&#160;            boost::tie(M, A, F) = this-&gt;update( mu , u , mybdf-&gt;time() );</div>
+<div class="line"><a name="l02253"></a><span class="lineno"> 2253</span>&#160;            *Rhs = *F[0];</div>
+<div class="line"><a name="l02254"></a><span class="lineno"> 2254</span>&#160;</div>
+<div class="line"><a name="l02255"></a><span class="lineno"> 2255</span>&#160;            <span class="keywordflow">if</span>( !isSteady() )</div>
+<div class="line"><a name="l02256"></a><span class="lineno"> 2256</span>&#160;            {</div>
+<div class="line"><a name="l02257"></a><span class="lineno"> 2257</span>&#160;                A-&gt;addMatrix( bdf_coeff, M );</div>
+<div class="line"><a name="l02258"></a><span class="lineno"> 2258</span>&#160;                Rhs-&gt;addVector( *vec_bdf_poly, *M );</div>
+<div class="line"><a name="l02259"></a><span class="lineno"> 2259</span>&#160;            }</div>
+<div class="line"><a name="l02260"></a><span class="lineno"> 2260</span>&#160;            uold = u;</div>
+<div class="line"><a name="l02261"></a><span class="lineno"> 2261</span>&#160;            M_preconditioner-&gt;setMatrix( A );</div>
+<div class="line"><a name="l02262"></a><span class="lineno"> 2262</span>&#160;            M_backend-&gt;solve( _matrix=A , _solution=u, _rhs=Rhs , _prec=M_preconditioner);</div>
+<div class="line"><a name="l02263"></a><span class="lineno"> 2263</span>&#160;            norm = this-&gt;computeNormL2( uold , u );</div>
+<div class="line"><a name="l02264"></a><span class="lineno"> 2264</span>&#160;            iter++;</div>
+<div class="line"><a name="l02265"></a><span class="lineno"> 2265</span>&#160;        } <span class="keywordflow">while</span>( norm &gt; increment_fixedpoint_tol &amp;&amp; iter&lt;max_fixedpoint_iterations );</div>
+<div class="line"><a name="l02266"></a><span class="lineno"> 2266</span>&#160;        mybdf-&gt;shiftRight(u);</div>
+<div class="line"><a name="l02267"></a><span class="lineno"> 2267</span>&#160;    }</div>
+<div class="line"><a name="l02268"></a><span class="lineno"> 2268</span>&#160;    <span class="keywordflow">return</span> u;</div>
+<div class="line"><a name="l02269"></a><span class="lineno"> 2269</span>&#160;}</div>
+<div class="line"><a name="l02270"></a><span class="lineno"> 2270</span>&#160;</div>
+<div class="line"><a name="l02271"></a><span class="lineno"> 2271</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TruthModelType&gt;</div>
+<div class="line"><a name="l02272"></a><span class="lineno"> 2272</span>&#160;<span class="keyword">typename</span> CRBModel&lt;TruthModelType&gt;::element_type</div>
+<div class="line"><a name="l02273"></a><span class="lineno"> 2273</span>&#160;CRBModel&lt;TruthModelType&gt;::solveFemDualUsingAffineDecompositionFixedPoint( parameter_type <span class="keyword">const</span>&amp; mu )</div>
+<div class="line"><a name="l02274"></a><span class="lineno"> 2274</span>&#160;{</div>
+<div class="line"><a name="l02275"></a><span class="lineno"> 2275</span>&#160;    <span class="keywordtype">int</span> output_index = option(_name=<span class="stringliteral">&quot;crb.output-index&quot;</span>).template as&lt;int&gt;();</div>
+<div class="line"><a name="l02276"></a><span class="lineno"> 2276</span>&#160;</div>
+<div class="line"><a name="l02277"></a><span class="lineno"> 2277</span>&#160;    <span class="keyword">auto</span> Xh= this-&gt;functionSpace();</div>
+<div class="line"><a name="l02278"></a><span class="lineno"> 2278</span>&#160;</div>
+<div class="line"><a name="l02279"></a><span class="lineno"> 2279</span>&#160;    bdf_ptrtype mybdf;</div>
+<div class="line"><a name="l02280"></a><span class="lineno"> 2280</span>&#160;    mybdf = bdf( _space=Xh, _vm=this-&gt;vm() , _name=<span class="stringliteral">&quot;mybdf&quot;</span> );</div>
+<div class="line"><a name="l02281"></a><span class="lineno"> 2281</span>&#160;    sparse_matrix_ptrtype A,Adu;</div>
+<div class="line"><a name="l02282"></a><span class="lineno"> 2282</span>&#160;    sparse_matrix_ptrtype M;</div>
+<div class="line"><a name="l02283"></a><span class="lineno"> 2283</span>&#160;    std::vector&lt;vector_ptrtype&gt; F;</div>
+<div class="line"><a name="l02284"></a><span class="lineno"> 2284</span>&#160;    <span class="keyword">auto</span> udu = Xh-&gt;element();</div>
+<div class="line"><a name="l02285"></a><span class="lineno"> 2285</span>&#160;    <span class="keyword">auto</span> uold = Xh-&gt;element();</div>
+<div class="line"><a name="l02286"></a><span class="lineno"> 2286</span>&#160;    vector_ptrtype Rhs( M_backend-&gt;newVector( Xh ) );</div>
+<div class="line"><a name="l02287"></a><span class="lineno"> 2287</span>&#160;    <span class="keyword">auto</span> dual_initial_field = Xh-&gt;elementPtr();</div>
+<div class="line"><a name="l02288"></a><span class="lineno"> 2288</span>&#160;</div>
+<div class="line"><a name="l02289"></a><span class="lineno"> 2289</span>&#160;    <span class="keywordtype">double</span> time_initial;</div>
+<div class="line"><a name="l02290"></a><span class="lineno"> 2290</span>&#160;    <span class="keywordtype">double</span> time_step;</div>
+<div class="line"><a name="l02291"></a><span class="lineno"> 2291</span>&#160;    <span class="keywordtype">double</span> time_final;</div>
+<div class="line"><a name="l02292"></a><span class="lineno"> 2292</span>&#160;</div>
+<div class="line"><a name="l02293"></a><span class="lineno"> 2293</span>&#160;    <span class="keywordflow">if</span> ( this-&gt;isSteady() )</div>
+<div class="line"><a name="l02294"></a><span class="lineno"> 2294</span>&#160;    {</div>
+<div class="line"><a name="l02295"></a><span class="lineno"> 2295</span>&#160;        time_initial=0;</div>
+<div class="line"><a name="l02296"></a><span class="lineno"> 2296</span>&#160;        time_step = 1e30;</div>
+<div class="line"><a name="l02297"></a><span class="lineno"> 2297</span>&#160;        time_final = 1e30;</div>
+<div class="line"><a name="l02298"></a><span class="lineno"> 2298</span>&#160;        <span class="comment">//InitialGuess = this-&gt;assembleInitialGuess( mu ) ;</span></div>
+<div class="line"><a name="l02299"></a><span class="lineno"> 2299</span>&#160;    }</div>
+<div class="line"><a name="l02300"></a><span class="lineno"> 2300</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l02301"></a><span class="lineno"> 2301</span>&#160;    {</div>
+<div class="line"><a name="l02302"></a><span class="lineno"> 2302</span>&#160;        time_initial=this-&gt;timeFinal()+this-&gt;timeStep();</div>
+<div class="line"><a name="l02303"></a><span class="lineno"> 2303</span>&#160;        time_step=-this-&gt;timeStep();</div>
+<div class="line"><a name="l02304"></a><span class="lineno"> 2304</span>&#160;        time_final=this-&gt;timeInitial()+this-&gt;timeStep();</div>
+<div class="line"><a name="l02305"></a><span class="lineno"> 2305</span>&#160;    }</div>
+<div class="line"><a name="l02306"></a><span class="lineno"> 2306</span>&#160;</div>
+<div class="line"><a name="l02307"></a><span class="lineno"> 2307</span>&#160;    mybdf-&gt;setTimeInitial( time_initial );</div>
+<div class="line"><a name="l02308"></a><span class="lineno"> 2308</span>&#160;    mybdf-&gt;setTimeStep( time_step );</div>
+<div class="line"><a name="l02309"></a><span class="lineno"> 2309</span>&#160;    mybdf-&gt;setTimeFinal( time_final );</div>
+<div class="line"><a name="l02310"></a><span class="lineno"> 2310</span>&#160;</div>
+<div class="line"><a name="l02311"></a><span class="lineno"> 2311</span>&#160;    <span class="keywordtype">double</span> norm=0;</div>
+<div class="line"><a name="l02312"></a><span class="lineno"> 2312</span>&#160;    <span class="keywordtype">int</span> iter=0;</div>
 <div class="line"><a name="l02313"></a><span class="lineno"> 2313</span>&#160;</div>
-<div class="line"><a name="l02314"></a><span class="lineno"> 2314</span>&#160;    <span class="keywordtype">double</span> norm=0;</div>
-<div class="line"><a name="l02315"></a><span class="lineno"> 2315</span>&#160;    <span class="keywordtype">int</span> iter=0;</div>
+<div class="line"><a name="l02314"></a><span class="lineno"> 2314</span>&#160;    <span class="keywordtype">double</span> bdf_coeff ;</div>
+<div class="line"><a name="l02315"></a><span class="lineno"> 2315</span>&#160;    <span class="keyword">auto</span> vec_bdf_poly = M_backend-&gt;newVector( Xh );</div>
 <div class="line"><a name="l02316"></a><span class="lineno"> 2316</span>&#160;</div>
-<div class="line"><a name="l02317"></a><span class="lineno"> 2317</span>&#160;    <span class="keywordtype">double</span> bdf_coeff ;</div>
-<div class="line"><a name="l02318"></a><span class="lineno"> 2318</span>&#160;    <span class="keyword">auto</span> vec_bdf_poly = M_backend-&gt;newVector( Xh );</div>
-<div class="line"><a name="l02319"></a><span class="lineno"> 2319</span>&#160;</div>
-<div class="line"><a name="l02320"></a><span class="lineno"> 2320</span>&#160;    <span class="keywordflow">if</span> ( this-&gt;isSteady() )</div>
-<div class="line"><a name="l02321"></a><span class="lineno"> 2321</span>&#160;        udu.zero() ;</div>
-<div class="line"><a name="l02322"></a><span class="lineno"> 2322</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l02323"></a><span class="lineno"> 2323</span>&#160;    {</div>
-<div class="line"><a name="l02324"></a><span class="lineno"> 2324</span>&#160;        boost::tie( M, A, F) = this-&gt;update( mu , mybdf-&gt;timeInitial() );</div>
-<div class="line"><a name="l02325"></a><span class="lineno"> 2325</span>&#160;        *Rhs=*F[output_index];</div>
-<div class="line"><a name="l02326"></a><span class="lineno"> 2326</span>&#160;        M_preconditioner-&gt;setMatrix( M );</div>
-<div class="line"><a name="l02327"></a><span class="lineno"> 2327</span>&#160;        M_backend-&gt;solve( _matrix=M, _solution=dual_initial_field, _rhs=Rhs, _prec=M_preconditioner );</div>
-<div class="line"><a name="l02328"></a><span class="lineno"> 2328</span>&#160;        udu=*dual_initial_field;</div>
-<div class="line"><a name="l02329"></a><span class="lineno"> 2329</span>&#160;    }</div>
-<div class="line"><a name="l02330"></a><span class="lineno"> 2330</span>&#160;</div>
-<div class="line"><a name="l02331"></a><span class="lineno"> 2331</span>&#160;</div>
-<div class="line"><a name="l02332"></a><span class="lineno"> 2332</span>&#160;    <span class="keywordtype">int</span> max_fixedpoint_iterations  = this-&gt;vm()[<span class="stringliteral">&quot;crb.max-fixedpoint-iterations&quot;</span>].template as&lt;int&gt;();</div>
-<div class="line"><a name="l02333"></a><span class="lineno"> 2333</span>&#160;    <span class="keywordtype">double</span> increment_fixedpoint_tol  = this-&gt;vm()[<span class="stringliteral">&quot;crb.increment-fixedpoint-tol&quot;</span>].template as&lt;double&gt;();</div>
-<div class="line"><a name="l02334"></a><span class="lineno"> 2334</span>&#160;    <span class="keywordflow">for</span>( mybdf-&gt;start(udu); !mybdf-&gt;isFinished(); mybdf-&gt;next() )</div>
-<div class="line"><a name="l02335"></a><span class="lineno"> 2335</span>&#160;    {</div>
-<div class="line"><a name="l02336"></a><span class="lineno"> 2336</span>&#160;        iter=0;</div>
-<div class="line"><a name="l02337"></a><span class="lineno"> 2337</span>&#160;        bdf_coeff = mybdf-&gt;polyDerivCoefficient( 0 );</div>
-<div class="line"><a name="l02338"></a><span class="lineno"> 2338</span>&#160;        <span class="keyword">auto</span> bdf_poly = mybdf-&gt;polyDeriv();</div>
-<div class="line"><a name="l02339"></a><span class="lineno"> 2339</span>&#160;        *vec_bdf_poly = bdf_poly;</div>
-<div class="line"><a name="l02340"></a><span class="lineno"> 2340</span>&#160;        <span class="keywordflow">do</span> {</div>
-<div class="line"><a name="l02341"></a><span class="lineno"> 2341</span>&#160;            boost::tie(M, A, F) = this-&gt;update( mu , udu , mybdf-&gt;time() );</div>
-<div class="line"><a name="l02342"></a><span class="lineno"> 2342</span>&#160;</div>
-<div class="line"><a name="l02343"></a><span class="lineno"> 2343</span>&#160;            <span class="keywordflow">if</span>( ! isSteady() )</div>
-<div class="line"><a name="l02344"></a><span class="lineno"> 2344</span>&#160;            {</div>
-<div class="line"><a name="l02345"></a><span class="lineno"> 2345</span>&#160;                A-&gt;addMatrix( bdf_coeff, M );</div>
-<div class="line"><a name="l02346"></a><span class="lineno"> 2346</span>&#160;                Rhs-&gt;zero();</div>
-<div class="line"><a name="l02347"></a><span class="lineno"> 2347</span>&#160;                *vec_bdf_poly = bdf_poly;</div>
-<div class="line"><a name="l02348"></a><span class="lineno"> 2348</span>&#160;                Rhs-&gt;addVector( *vec_bdf_poly, *M );</div>
-<div class="line"><a name="l02349"></a><span class="lineno"> 2349</span>&#160;            }</div>
-<div class="line"><a name="l02350"></a><span class="lineno"> 2350</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l02351"></a><span class="lineno"> 2351</span>&#160;            {</div>
-<div class="line"><a name="l02352"></a><span class="lineno"> 2352</span>&#160;                *Rhs = *F[output_index];</div>
-<div class="line"><a name="l02353"></a><span class="lineno"> 2353</span>&#160;                Rhs-&gt;scale( -1 );</div>
-<div class="line"><a name="l02354"></a><span class="lineno"> 2354</span>&#160;            }</div>
-<div class="line"><a name="l02355"></a><span class="lineno"> 2355</span>&#160;</div>
-<div class="line"><a name="l02356"></a><span class="lineno"> 2356</span>&#160;            <span class="keywordflow">if</span>( option(<span class="stringliteral">&quot;crb.use-symmetric-matrix&quot;</span>).<span class="keyword">template</span> as&lt;bool&gt;() )</div>
-<div class="line"><a name="l02357"></a><span class="lineno"> 2357</span>&#160;                Adu = A;</div>
-<div class="line"><a name="l02358"></a><span class="lineno"> 2358</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l02359"></a><span class="lineno"> 2359</span>&#160;                A-&gt;transpose( Adu );</div>
-<div class="line"><a name="l02360"></a><span class="lineno"> 2360</span>&#160;</div>
-<div class="line"><a name="l02361"></a><span class="lineno"> 2361</span>&#160;            uold = udu;</div>
-<div class="line"><a name="l02362"></a><span class="lineno"> 2362</span>&#160;            M_preconditioner-&gt;setMatrix( Adu );</div>
-<div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160;            M_backend-&gt;solve( _matrix=Adu , _solution=udu, _rhs=Rhs , _prec=M_preconditioner);</div>
-<div class="line"><a name="l02364"></a><span class="lineno"> 2364</span>&#160;            norm = this-&gt;computeNormL2( uold , udu );</div>
-<div class="line"><a name="l02365"></a><span class="lineno"> 2365</span>&#160;            iter++;</div>
-<div class="line"><a name="l02366"></a><span class="lineno"> 2366</span>&#160;        } <span class="keywordflow">while</span>( norm &gt; increment_fixedpoint_tol &amp;&amp; iter&lt;max_fixedpoint_iterations );</div>
-<div class="line"><a name="l02367"></a><span class="lineno"> 2367</span>&#160;        mybdf-&gt;shiftRight(udu);</div>
-<div class="line"><a name="l02368"></a><span class="lineno"> 2368</span>&#160;    }</div>
-<div class="line"><a name="l02369"></a><span class="lineno"> 2369</span>&#160;    <span class="keywordflow">return</span> udu;</div>
-<div class="line"><a name="l02370"></a><span class="lineno"> 2370</span>&#160;}</div>
-<div class="line"><a name="l02371"></a><span class="lineno"> 2371</span>&#160;</div>
-<div class="line"><a name="l02372"></a><span class="lineno"> 2372</span>&#160;</div>
-<div class="line"><a name="l02373"></a><span class="lineno"> 2373</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TruthModelType&gt;</div>
-<div class="line"><a name="l02374"></a><span class="lineno"> 2374</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l02375"></a><span class="lineno"><a class="code" href="classFeel_1_1CRBModel.html#adacd9a4045e9fe853f10fd035267bc17"> 2375</a></span>&#160;<a class="code" href="classFeel_1_1CRBModel.html#adacd9a4045e9fe853f10fd035267bc17" title="export a vector of elements ">CRBModel&lt;TruthModelType&gt;::run</a>( <span class="keyword">const</span> <span class="keywordtype">double</span> * X, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> N, <span class="keywordtype">double</span> * Y, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> P )</div>
-<div class="line"><a name="l02376"></a><span class="lineno"> 2376</span>&#160;{</div>
-<div class="line"><a name="l02377"></a><span class="lineno"> 2377</span>&#160;    M_model-&gt;run( X, N, Y, P );</div>
-<div class="line"><a name="l02378"></a><span class="lineno"> 2378</span>&#160;}</div>
-<div class="line"><a name="l02379"></a><span class="lineno"> 2379</span>&#160;</div>
-<div class="line"><a name="l02380"></a><span class="lineno"> 2380</span>&#160;</div>
-<div class="line"><a name="l02381"></a><span class="lineno"> 2381</span>&#160;</div>
-<div class="line"><a name="l02382"></a><span class="lineno"> 2382</span>&#160;}</div>
-<div class="line"><a name="l02383"></a><span class="lineno"> 2383</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __CRBModel_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l02317"></a><span class="lineno"> 2317</span>&#160;    <span class="keywordflow">if</span> ( this-&gt;isSteady() )</div>
+<div class="line"><a name="l02318"></a><span class="lineno"> 2318</span>&#160;        udu.zero() ;</div>
+<div class="line"><a name="l02319"></a><span class="lineno"> 2319</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l02320"></a><span class="lineno"> 2320</span>&#160;    {</div>
+<div class="line"><a name="l02321"></a><span class="lineno"> 2321</span>&#160;        boost::tie( M, A, F) = this-&gt;update( mu , mybdf-&gt;timeInitial() );</div>
+<div class="line"><a name="l02322"></a><span class="lineno"> 2322</span>&#160;        *Rhs=*F[output_index];</div>
+<div class="line"><a name="l02323"></a><span class="lineno"> 2323</span>&#160;        M_preconditioner-&gt;setMatrix( M );</div>
+<div class="line"><a name="l02324"></a><span class="lineno"> 2324</span>&#160;        M_backend-&gt;solve( _matrix=M, _solution=dual_initial_field, _rhs=Rhs, _prec=M_preconditioner );</div>
+<div class="line"><a name="l02325"></a><span class="lineno"> 2325</span>&#160;        udu=*dual_initial_field;</div>
+<div class="line"><a name="l02326"></a><span class="lineno"> 2326</span>&#160;    }</div>
+<div class="line"><a name="l02327"></a><span class="lineno"> 2327</span>&#160;</div>
+<div class="line"><a name="l02328"></a><span class="lineno"> 2328</span>&#160;</div>
+<div class="line"><a name="l02329"></a><span class="lineno"> 2329</span>&#160;    <span class="keywordtype">int</span> max_fixedpoint_iterations  = this-&gt;vm()[<span class="stringliteral">&quot;crb.max-fixedpoint-iterations&quot;</span>].template as&lt;int&gt;();</div>
+<div class="line"><a name="l02330"></a><span class="lineno"> 2330</span>&#160;    <span class="keywordtype">double</span> increment_fixedpoint_tol  = this-&gt;vm()[<span class="stringliteral">&quot;crb.increment-fixedpoint-tol&quot;</span>].template as&lt;double&gt;();</div>
+<div class="line"><a name="l02331"></a><span class="lineno"> 2331</span>&#160;    <span class="keywordflow">for</span>( mybdf-&gt;start(udu); !mybdf-&gt;isFinished(); mybdf-&gt;next() )</div>
+<div class="line"><a name="l02332"></a><span class="lineno"> 2332</span>&#160;    {</div>
+<div class="line"><a name="l02333"></a><span class="lineno"> 2333</span>&#160;        iter=0;</div>
+<div class="line"><a name="l02334"></a><span class="lineno"> 2334</span>&#160;        bdf_coeff = mybdf-&gt;polyDerivCoefficient( 0 );</div>
+<div class="line"><a name="l02335"></a><span class="lineno"> 2335</span>&#160;        <span class="keyword">auto</span> bdf_poly = mybdf-&gt;polyDeriv();</div>
+<div class="line"><a name="l02336"></a><span class="lineno"> 2336</span>&#160;        *vec_bdf_poly = bdf_poly;</div>
+<div class="line"><a name="l02337"></a><span class="lineno"> 2337</span>&#160;        <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l02338"></a><span class="lineno"> 2338</span>&#160;            boost::tie(M, A, F) = this-&gt;update( mu , udu , mybdf-&gt;time() );</div>
+<div class="line"><a name="l02339"></a><span class="lineno"> 2339</span>&#160;</div>
+<div class="line"><a name="l02340"></a><span class="lineno"> 2340</span>&#160;            <span class="keywordflow">if</span>( ! isSteady() )</div>
+<div class="line"><a name="l02341"></a><span class="lineno"> 2341</span>&#160;            {</div>
+<div class="line"><a name="l02342"></a><span class="lineno"> 2342</span>&#160;                A-&gt;addMatrix( bdf_coeff, M );</div>
+<div class="line"><a name="l02343"></a><span class="lineno"> 2343</span>&#160;                Rhs-&gt;zero();</div>
+<div class="line"><a name="l02344"></a><span class="lineno"> 2344</span>&#160;                *vec_bdf_poly = bdf_poly;</div>
+<div class="line"><a name="l02345"></a><span class="lineno"> 2345</span>&#160;                Rhs-&gt;addVector( *vec_bdf_poly, *M );</div>
+<div class="line"><a name="l02346"></a><span class="lineno"> 2346</span>&#160;            }</div>
+<div class="line"><a name="l02347"></a><span class="lineno"> 2347</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l02348"></a><span class="lineno"> 2348</span>&#160;            {</div>
+<div class="line"><a name="l02349"></a><span class="lineno"> 2349</span>&#160;                *Rhs = *F[output_index];</div>
+<div class="line"><a name="l02350"></a><span class="lineno"> 2350</span>&#160;                Rhs-&gt;scale( -1 );</div>
+<div class="line"><a name="l02351"></a><span class="lineno"> 2351</span>&#160;            }</div>
+<div class="line"><a name="l02352"></a><span class="lineno"> 2352</span>&#160;</div>
+<div class="line"><a name="l02353"></a><span class="lineno"> 2353</span>&#160;            <span class="keywordflow">if</span>( option(<span class="stringliteral">&quot;crb.use-symmetric-matrix&quot;</span>).<span class="keyword">template</span> as&lt;bool&gt;() )</div>
+<div class="line"><a name="l02354"></a><span class="lineno"> 2354</span>&#160;                Adu = A;</div>
+<div class="line"><a name="l02355"></a><span class="lineno"> 2355</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l02356"></a><span class="lineno"> 2356</span>&#160;                A-&gt;transpose( Adu );</div>
+<div class="line"><a name="l02357"></a><span class="lineno"> 2357</span>&#160;</div>
+<div class="line"><a name="l02358"></a><span class="lineno"> 2358</span>&#160;            uold = udu;</div>
+<div class="line"><a name="l02359"></a><span class="lineno"> 2359</span>&#160;            M_preconditioner-&gt;setMatrix( Adu );</div>
+<div class="line"><a name="l02360"></a><span class="lineno"> 2360</span>&#160;            M_backend-&gt;solve( _matrix=Adu , _solution=udu, _rhs=Rhs , _prec=M_preconditioner);</div>
+<div class="line"><a name="l02361"></a><span class="lineno"> 2361</span>&#160;            norm = this-&gt;computeNormL2( uold , udu );</div>
+<div class="line"><a name="l02362"></a><span class="lineno"> 2362</span>&#160;            iter++;</div>
+<div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160;        } <span class="keywordflow">while</span>( norm &gt; increment_fixedpoint_tol &amp;&amp; iter&lt;max_fixedpoint_iterations );</div>
+<div class="line"><a name="l02364"></a><span class="lineno"> 2364</span>&#160;        mybdf-&gt;shiftRight(udu);</div>
+<div class="line"><a name="l02365"></a><span class="lineno"> 2365</span>&#160;    }</div>
+<div class="line"><a name="l02366"></a><span class="lineno"> 2366</span>&#160;    <span class="keywordflow">return</span> udu;</div>
+<div class="line"><a name="l02367"></a><span class="lineno"> 2367</span>&#160;}</div>
+<div class="line"><a name="l02368"></a><span class="lineno"> 2368</span>&#160;</div>
+<div class="line"><a name="l02369"></a><span class="lineno"> 2369</span>&#160;</div>
+<div class="line"><a name="l02370"></a><span class="lineno"> 2370</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TruthModelType&gt;</div>
+<div class="line"><a name="l02371"></a><span class="lineno"> 2371</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l02372"></a><span class="lineno"><a class="code" href="classFeel_1_1CRBModel.html#adacd9a4045e9fe853f10fd035267bc17"> 2372</a></span>&#160;<a class="code" href="classFeel_1_1CRBModel.html#adacd9a4045e9fe853f10fd035267bc17" title="export a vector of elements ">CRBModel&lt;TruthModelType&gt;::run</a>( <span class="keyword">const</span> <span class="keywordtype">double</span> * X, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> N, <span class="keywordtype">double</span> * Y, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> P )</div>
+<div class="line"><a name="l02373"></a><span class="lineno"> 2373</span>&#160;{</div>
+<div class="line"><a name="l02374"></a><span class="lineno"> 2374</span>&#160;    M_model-&gt;run( X, N, Y, P );</div>
+<div class="line"><a name="l02375"></a><span class="lineno"> 2375</span>&#160;}</div>
+<div class="line"><a name="l02376"></a><span class="lineno"> 2376</span>&#160;</div>
+<div class="line"><a name="l02377"></a><span class="lineno"> 2377</span>&#160;</div>
+<div class="line"><a name="l02378"></a><span class="lineno"> 2378</span>&#160;</div>
+<div class="line"><a name="l02379"></a><span class="lineno"> 2379</span>&#160;}</div>
+<div class="line"><a name="l02380"></a><span class="lineno"> 2380</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __CRBModel_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Sep 9 2013 00:01:53 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Wed Sep 11 2013 00:01:52 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
