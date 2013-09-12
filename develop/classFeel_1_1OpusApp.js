@@ -11,6 +11,7 @@ var classFeel_1_1OpusApp =
     [ "model_ptrtype", "classFeel_1_1OpusApp.html#ab8fe208bd30b6fa916507c2f5da6367b", null ],
     [ "model_type", "classFeel_1_1OpusApp.html#a29a002804f75033d54ae77090d24d929", null ],
     [ "parameter_type", "classFeel_1_1OpusApp.html#a9c7daa59bc839df366266852c27cba40", null ],
+    [ "sampling_ptrtype", "classFeel_1_1OpusApp.html#ac1c7024475812324c3d474c2de9848d8", null ],
     [ "value_type", "classFeel_1_1OpusApp.html#a7f2907507ae2fe5e1fea771aca2699f1", null ],
     [ "vector_parameter_type", "classFeel_1_1OpusApp.html#a3061b975aac0430d968dad36ac758fd0", null ],
     [ "vectorN_type", "classFeel_1_1OpusApp.html#a4f07cd2cdfcc69501a53088b97311e7b", null ],

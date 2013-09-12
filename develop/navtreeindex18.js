@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"classFeel_1_1Polynomial.html#af5e93d8958f33dc18bff4d846966ca01":[10,0,166,29],
 "classFeel_1_1Polynomial.html#af8371a50b538e23957cacf8f68410aef":[10,0,166,31],
 "classFeel_1_1Polynomial.html#af8d53fa9dd4da09dd672a324c932b35f":[10,0,166,20],
 "classFeel_1_1Polynomial.html#afda5de6af3378459a32107fa23458aad":[10,0,166,27],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "classFeel_1_1Simplex.html":[10,0,184],
 "classFeel_1_1Simplex.html#a0a5eb542f579272991f1e3137b9c1775":[10,0,184,0],
 "classFeel_1_1Simplex.html#a0cc6cb671b12a18851f13b1d34fa6951":[10,0,184,11],
-"classFeel_1_1Simplex.html#a1cd00eef58ac517601705d198c830e3b":[10,0,184,10],
-"classFeel_1_1Simplex.html#a2af1cfe43851815bafd5e6e94e750fb1":[10,0,184,1]
+"classFeel_1_1Simplex.html#a1cd00eef58ac517601705d198c830e3b":[10,0,184,10]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX25 =
 {
+"classThreeFieldsLaplacian.html#a9f76b3874b7635f59fad6ba8fffa8aae":[10,11,20],
 "classThreeFieldsLaplacian.html#aa382bb456e82e506d79de4b80dfe5ba2":[10,11,30],
 "classThreeFieldsLaplacian.html#abfa63c2a754c2187788ba06156ea386e":[10,11,18],
 "classThreeFieldsLaplacian.html#ac846304f383097266935bcf6b8ece7e1":[10,11,0],
@@ -9,8 +10,8 @@ var NAVTREEINDEX25 =
 "classThreeFieldsLaplacian.html#ad1aada0099d45c1c61e7fb1149f36dc2":[10,11,14],
 "classThreeFieldsLaplacian.html#ad2ba185089e485cdd2d3a50326476b72":[10,11,3],
 "classThreeFieldsLaplacian.html#aef0b85cec754ffad5684a4c3c244c644":[10,11,22],
-"index.html":[],
 "index.html":[0],
+"index.html":[],
 "md_Credits.html":[1],
 "md__home_vhuber_feelpp_COPYING.html":[8],
 "namespaceFeel.html":[10,0],
@@ -70,11 +71,11 @@ var NAVTREEINDEX25 =
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a24f2edf51794093c9006affe4889ea1c":[10,0,101,4],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a263e8c4c3415b075865bb909aaebf3cf":[10,0,101,7],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a47a159d96c1faef9f6b57e104411690f":[10,0,101,6],
-"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,101,3],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,101,2],
+"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,101,3],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aae08c8b04ff5d504167b6b0ef8710a90":[10,0,101,5],
-"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,101,0],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,101,1],
+"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,101,0],
 "structFeel_1_1IntegrationDegree.html":[10,0,104],
 "structFeel_1_1JacobiDegree.html":[10,0,107],
 "structFeel_1_1MeshTraits.html":[10,0,134],
@@ -248,6 +249,5 @@ var NAVTREEINDEX25 =
 "structFeel_1_1math_1_1Constant.html#a1733ac3f1be3fc43530ef151077c7578":[10,0,4,0,1],
 "structFeel_1_1math_1_1Constant.html#a5fc976a0ea37da2ed3ac486b29ce9ed2":[10,0,4,0,0],
 "structFeel_1_1math_1_1Constant.html#addc15598bd97c5823b2c49b4f42d137c":[10,0,4,0,2],
-"structFeel_1_1matrix__node.html":[10,0,115],
-"structFeel_1_1matrix__node.html#a8ad5b95a9f791ecb6001a765f934e345":[10,0,115,0]
+"structFeel_1_1matrix__node.html":[10,0,115]
 };

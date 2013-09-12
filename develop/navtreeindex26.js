@@ -1,5 +1,6 @@
 var NAVTREEINDEX26 =
 {
+"structFeel_1_1matrix__node.html#a8ad5b95a9f791ecb6001a765f934e345":[10,0,115,0],
 "structFeel_1_1node.html":[10,0,136],
 "structFeel_1_1node.html#a9d8b838eb2cb99fa87b8ae0869259975":[10,0,136,0],
 "structFeel_1_1problem_1_1value.html":[10,0,171,0],

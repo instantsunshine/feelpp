@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"classFeel_1_1SolverNonLinear.html#ae54d24111faad1218b093c55df85cbfc":[10,0,190,65],
 "classFeel_1_1SolverNonLinear.html#ae55734d4bbf988ceda175f75aa67fde7":[10,0,190,21],
 "classFeel_1_1SolverNonLinear.html#ae8402c5a51b0dec4b59e8b240f6cce0a":[10,0,190,99],
 "classFeel_1_1SolverNonLinear.html#aea0a01f2494933b861d3249954c629d8":[10,0,190,50],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "classFeel_1_1TensorisedBoundaryAdapted.html#a55e04d204ba26f94345295a468d9ac55":[10,0,208,11],
 "classFeel_1_1TensorisedBoundaryAdapted.html#a591ee1a8291e5e9ae4ba47c998874550":[10,0,208,10],
 "classFeel_1_1TensorisedBoundaryAdapted.html#a5c23ed754b213b590b8ebba7e9b7649e":[10,0,208,18],
-"classFeel_1_1TensorisedBoundaryAdapted.html#a5f18121cf910c7a9675d99ac9e0866a3":[10,0,208,26],
-"classFeel_1_1TensorisedBoundaryAdapted.html#a6a2fb2abd1486689b02ac267ca3ebd84":[10,0,208,1]
+"classFeel_1_1TensorisedBoundaryAdapted.html#a5f18121cf910c7a9675d99ac9e0866a3":[10,0,208,26]
 };
