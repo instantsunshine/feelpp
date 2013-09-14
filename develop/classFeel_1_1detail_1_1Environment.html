@@ -198,6 +198,8 @@ const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:accc0286be09be956304e56a142ce9766"><td class="memItemLeft" align="right" valign="top">static boost::tuple<br class="typebreak"/>
 &lt; std::string, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#accc0286be09be956304e56a142ce9766">systemConfigRepository</a> ()</td></tr>
 <tr class="separator:accc0286be09be956304e56a142ce9766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae72a5f2f5a5310f367f0fa395e0b17d8"><td class="memItemLeft" align="right" valign="top">static MemoryUsage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#ae72a5f2f5a5310f367f0fa395e0b17d8">logMemoryUsage</a> (std::string const &amp;message)</td></tr>
+<tr class="separator:ae72a5f2f5a5310f367f0fa395e0b17d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d5768d6df047f5d26e92933e7ceeca0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#a8d5768d6df047f5d26e92933e7ceeca0">setLogs</a> (std::string const &amp;prefix)</td></tr>
 <tr class="memdesc:a8d5768d6df047f5d26e92933e7ceeca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">get <code>variables_map</code> from <code>options_description</code> <code>desc</code>  <a href="#a8d5768d6df047f5d26e92933e7ceeca0">More...</a><br/></td></tr>
 <tr class="separator:a8d5768d6df047f5d26e92933e7ceeca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,6 +211,9 @@ template&lt;typename Observer &gt; </td></tr>
 template&lt;typename Observer &gt; </td></tr>
 <tr class="memitem:ad8a8668f8c6b838df77a731f93571239"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addDeleteObserver</b> (boost::shared_ptr&lt; Observer &gt; const &amp;obs)</td></tr>
 <tr class="separator:ad8a8668f8c6b838df77a731f93571239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f1047994cb908c95bbec7c409c621e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15f1047994cb908c95bbec7c409c621e"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>clearSomeMemory</b> ()</td></tr>
+<tr class="separator:a15f1047994cb908c95bbec7c409c621e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affa75c138fef9477510cbadc15a8b6e3"><td class="memItemLeft" align="right" valign="top">static const fs::path &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#affa75c138fef9477510cbadc15a8b6e3">scratchDirectory</a> ()</td></tr>
 <tr class="separator:affa75c138fef9477510cbadc15a8b6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -444,6 +449,37 @@ template&lt;typename Observer &gt; </td></tr>
 <dl class="section return"><dt>Returns</dt><dd>the local geo files repository (default: <code>$HOME/feel/geo</code>) </dd></dl>
 
 <p>References <a class="el" href="classFeel_1_1detail_1_1Environment.html#ac14a1f5d50dca4cbc198b1996adb4864">rootRepository()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae72a5f2f5a5310f367f0fa395e0b17d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MemoryUsage Feel::detail::Environment::logMemoryUsage </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>message</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>print resident memory usage as well as PETSc malloc usage in log file </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>message to print to identity the associated memory operation </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -778,7 +814,7 @@ template&lt;typename Observer &gt; </td></tr>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 13 2013 00:02:24 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 15 2013 00:02:59 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

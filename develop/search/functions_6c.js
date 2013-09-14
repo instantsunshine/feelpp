@@ -37,6 +37,7 @@ var searchData=
   ['logequidistributed',['logEquidistributed',['../classFeel_1_1ParameterSpace.html#a3f1aad049517877600bf7f1774477495',1,'Feel::ParameterSpace']]],
   ['logequidistributeindirection',['logEquidistributeInDirection',['../classFeel_1_1ParameterSpace.html#a4e08d02551a2aa66a48c949fa2d587f3',1,'Feel::ParameterSpace']]],
   ['logequidistributeproduct',['logEquidistributeProduct',['../classFeel_1_1ParameterSpace_1_1Sampling.html#a36838115fec5a4be5080777a0dd47aee',1,'Feel::ParameterSpace::Sampling']]],
+  ['logmemoryusage',['logMemoryUsage',['../classFeel_1_1detail_1_1Environment.html#ae72a5f2f5a5310f367f0fa395e0b17d8',1,'Feel::detail::Environment']]],
   ['logmiddle',['logMiddle',['../classFeel_1_1ParameterSpace.html#adc264707fd47a365269248b4b1d5b291',1,'Feel::ParameterSpace']]],
   ['lograndom',['logRandom',['../classFeel_1_1ParameterSpace.html#a4e30b9730c09f8f2fc7fe4a3371f86f2',1,'Feel::ParameterSpace']]],
   ['lookfordb',['lookForDB',['../classFeel_1_1CRBDB.html#ac80c6f91b8fffec72cbc69a13bef3ab0',1,'Feel::CRBDB']]],

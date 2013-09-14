@@ -2146,11 +2146,11 @@ $(document).ready(function(){initNavTree('meshimpl_8hpp_source.html','');});
 <div class="line"><a name="l02047"></a><span class="lineno"> 2047</span>&#160;    <span class="keyword">typename</span> gm_type::reference_convex_type refelem;</div>
 <div class="line"><a name="l02048"></a><span class="lineno"> 2048</span>&#160;    <span class="keyword">typename</span> gm_type::precompute_ptrtype __geopc( <span class="keyword">new</span> <span class="keyword">typename</span> gm_type::precompute_type( M_mesh-&gt;gm(),</div>
 <div class="line"><a name="l02049"></a><span class="lineno"> 2049</span>&#160;            refelem.points() ) );</div>
-<div class="line"><a name="l02050"></a><span class="lineno"> 2050</span>&#160;    std::vector&lt;bool&gt; npt( this-&gt;nPoints() );</div>
+<div class="line"><a name="l02050"></a><span class="lineno"> 2050</span>&#160;    boost::unordered_map&lt;size_type,bool&gt; npt;</div>
 <div class="line"><a name="l02051"></a><span class="lineno"> 2051</span>&#160;</div>
-<div class="line"><a name="l02052"></a><span class="lineno"> 2052</span>&#160;    M_dist.resize( this-&gt;nPoints() );</div>
-<div class="line"><a name="l02053"></a><span class="lineno"> 2053</span>&#160;    M_ref_coords.resize( this-&gt;nPoints() );</div>
-<div class="line"><a name="l02054"></a><span class="lineno"> 2054</span>&#160;    M_cvx_pts.resize( this-&gt;nPoints() );</div>
+<div class="line"><a name="l02052"></a><span class="lineno"> 2052</span>&#160;    M_dist.clear();</div>
+<div class="line"><a name="l02053"></a><span class="lineno"> 2053</span>&#160;    M_ref_coords.clear();</div>
+<div class="line"><a name="l02054"></a><span class="lineno"> 2054</span>&#160;    M_cvx_pts.clear();</div>
 <div class="line"><a name="l02055"></a><span class="lineno"> 2055</span>&#160;    M_pts_cvx.clear();</div>
 <div class="line"><a name="l02056"></a><span class="lineno"> 2056</span>&#160;    M_pts_cvx.resize( M_mesh-&gt;numElements() );</div>
 <div class="line"><a name="l02057"></a><span class="lineno"> 2057</span>&#160;</div>
@@ -3020,7 +3020,7 @@ $(document).ready(function(){initNavTree('meshimpl_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 13 2013 00:02:05 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 15 2013 00:02:40 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

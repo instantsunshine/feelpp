@@ -8,7 +8,7 @@ var classFeel_1_1FunctionSpace =
     [ "BasisType", "classFeel_1_1FunctionSpace.html#a78e7fbdcc1f961deabfb7702fb35042f", null ],
     [ "component_basis_ptrtype", "classFeel_1_1FunctionSpace.html#ac509f25695ea188b9295523a34f020e9", null ],
     [ "component_basis_type", "classFeel_1_1FunctionSpace.html#a7720e339e7031f463fdd8fc6cb6eeb5c", null ],
-    [ "component_basis_vector_type", "classFeel_1_1FunctionSpace.html#afa7901285a19870d5da7f766d447e0b5", null ],
+    [ "component_basis_vector_type", "classFeel_1_1FunctionSpace.html#a4097b73c699e72449e3533279349e532", null ],
     [ "component_functionspace_ptrtype", "classFeel_1_1FunctionSpace.html#a8d9ca48dba197057c1ac5c6d2325f57e", null ],
     [ "component_functionspace_type", "classFeel_1_1FunctionSpace.html#acc307b9f0a01c8fd2ef081564ae685f1", null ],
     [ "component_functionspace_vector_type", "classFeel_1_1FunctionSpace.html#a82de882685ec0c60309a381543b416ad", null ],
