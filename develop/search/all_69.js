@@ -54,7 +54,7 @@ var searchData=
   ['integratordirac_2ehpp',['integratordirac.hpp',['../integratordirac_8hpp.html',1,'']]],
   ['integratoron_2ehpp',['integratoron.hpp',['../integratoron_8hpp.html',1,'']]],
   ['internaledges',['internaledges',['../namespaceFeel.html#a9decd4d08511d44ea9e33cdb35758ec1',1,'Feel']]],
-  ['internalelements',['internalElements',['../namespaceFeel.html#ab5134ebb5f3dfdffc15c8fb3b18209ec',1,'Feel::internalElements(size_type p) const '],['../namespaceFeel.html#a9a80650ba21cfe9d2f4ababe410a0ed5',1,'Feel::internalelements(MeshType const &amp;mesh)']]],
+  ['internalelements',['internalelements',['../namespaceFeel.html#a9a80650ba21cfe9d2f4ababe410a0ed5',1,'Feel::internalelements(MeshType const &amp;mesh)'],['../namespaceFeel.html#ab5134ebb5f3dfdffc15c8fb3b18209ec',1,'Feel::internalElements(size_type p) const ']]],
   ['internalfaces',['internalfaces',['../namespaceFeel.html#a6c53147b25bf664bdf6bec2b30b56af7',1,'Feel']]],
   ['internalpoints',['internalpoints',['../namespaceFeel.html#a5c10346e263af6fbc0709fb6084fcf6f',1,'Feel']]],
   ['interpolate',['interpolate',['../namespaceFeel.html#a0f1f8745f4c451cecb0ea5ab5560d212',1,'Feel']]],
