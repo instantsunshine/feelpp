@@ -207,12 +207,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td colspan="2"><div class="groupHeader">Methods</div></td></tr>
 <tr class="memitem:a14733b964441a10d01794887164f50cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#a14733b964441a10d01794887164f50cf">orthonormalize</a> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, wn_type &amp;wn, int Nm=1)</td></tr>
 <tr class="separator:a14733b964441a10d01794887164f50cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9154c120913353f7a44240c35cef7045"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9154c120913353f7a44240c35cef7045"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>checkResidual</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, std::vector&lt; std::vector&lt; double &gt; &gt; const &amp;primal_residual_coeffs, std::vector&lt; std::vector&lt; double &gt; &gt; const &amp;dual_residual_coeffs) const </td></tr>
-<tr class="separator:a9154c120913353f7a44240c35cef7045"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a8f6ffa4707ce69416a40f569f40b2e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a8f6ffa4707ce69416a40f569f40b2e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>compareResidualsForTransientProblems</b> (int N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, std::vector&lt; element_ptrtype &gt; const &amp;Un, std::vector&lt; element_ptrtype &gt; const &amp;Unold, std::vector&lt; element_ptrtype &gt; const &amp;Undu, std::vector&lt; element_ptrtype &gt; const &amp;Unduold, std::vector&lt; std::vector&lt; double &gt; &gt; const &amp;primal_residual_coeffs, std::vector&lt; std::vector&lt; double &gt; &gt; const &amp;dual_residual_coeffs) const </td></tr>
-<tr class="separator:a8a8f6ffa4707ce69416a40f569f40b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a987bea21af3d5e76672e7bc68349f768"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a987bea21af3d5e76672e7bc68349f768"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>checkResidual</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, std::vector&lt; std::vector&lt; double &gt; &gt; const &amp;primal_residual_coeffs, std::vector&lt; std::vector&lt; double &gt; &gt; const &amp;dual_residual_coeffs, <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a> &amp;u, <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a> &amp;udu) const </td></tr>
+<tr class="separator:a987bea21af3d5e76672e7bc68349f768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55ee673f41052dc9b463b489a160d93e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55ee673f41052dc9b463b489a160d93e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>compareResidualsForTransientProblems</b> (int N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, std::vector&lt; <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a> &gt; const &amp;Un, std::vector&lt; <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a> &gt; const &amp;Unold, std::vector&lt; <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a> &gt; const &amp;Undu, std::vector&lt; <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a> &gt; const &amp;Unduold, std::vector&lt; std::vector&lt; double &gt; &gt; const &amp;primal_residual_coeffs, std::vector&lt; std::vector&lt; double &gt; &gt; const &amp;dual_residual_coeffs) const </td></tr>
+<tr class="separator:a55ee673f41052dc9b463b489a160d93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98de2e9c699fdbfa1136c3ded1fc2488"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98de2e9c699fdbfa1136c3ded1fc2488"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>buildFunctionFromRbCoefficients</b> (int N, std::vector&lt; vectorN_type &gt; const &amp;RBcoeff, wn_type const &amp;WN, std::vector&lt; element_ptrtype &gt; &amp;FEMsolutions)</td></tr>
 <tr class="separator:a98de2e9c699fdbfa1136c3ded1fc2488"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -308,11 +308,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>checkInitialGuess</b>
 <tr class="memitem:abf13fc58016b50fd1ab53d8797214d58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf13fc58016b50fd1ab53d8797214d58"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>checkInitialGuess</b> (const <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a> expansion_uN, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, vectorN_type &amp;error, mpl::bool_&lt; false &gt;) const </td></tr>
 <tr class="separator:abf13fc58016b50fd1ab53d8797214d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a059435f8e6695e96a1e7800a38d0a329"><td class="memItemLeft" align="right" valign="top">boost::tuple&lt; double, double, <br class="typebreak"/>
+<tr class="memitem:a4db7c099b00da3fd83fcbc7e1a164075"><td class="memItemLeft" align="right" valign="top">boost::tuple&lt; double, double, <br class="typebreak"/>
 solutions_tuple, double, <br class="typebreak"/>
-double, double, boost::tuple<br class="typebreak"/>
-&lt; double, double, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#a059435f8e6695e96a1e7800a38d0a329">run</a> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, double eps=1e-6, int N=-1)</td></tr>
-<tr class="separator:a059435f8e6695e96a1e7800a38d0a329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+double, double, <br class="typebreak"/>
+upper_bounds_tuple &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#a4db7c099b00da3fd83fcbc7e1a164075">run</a> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, double eps=1e-6, int N=-1)</td></tr>
+<tr class="separator:a4db7c099b00da3fd83fcbc7e1a164075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac629aaac157dea1a52e853c9cc4a6e1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#ac629aaac157dea1a52e853c9cc4a6e1d">run</a> (const double *X, unsigned long N, double *Y, unsigned long P)</td></tr>
 <tr class="separator:ac629aaac157dea1a52e853c9cc4a6e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61d6d947c61d612a9d27fbde56c36411"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61d6d947c61d612a9d27fbde56c36411"></a>
@@ -594,10 +594,20 @@ typedef Eigen::Map<br class="typebreak"/>
 &lt; Eigen::Matrix&lt; double, <br class="typebreak"/>
 Eigen::Dynamic, 1 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>map_dense_vector_type</b></td></tr>
 <tr class="separator:ac106313d44312bf0d7b4c262deb4e7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12a12a5029ef0762602ab9f74d04f584"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12a12a5029ef0762602ab9f74d04f584"></a>
+<tr class="memitem:a10619bd520c8561ad0148b1e736482b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10619bd520c8561ad0148b1e736482b9"></a>
 typedef boost::tuple<br class="typebreak"/>
-&lt; vectorN_type, vectorN_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>solutions_tuple</b></td></tr>
-<tr class="separator:a12a12a5029ef0762602ab9f74d04f584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+&lt; std::vector&lt; vectorN_type &gt;<br class="typebreak"/>
+, std::vector&lt; vectorN_type &gt;<br class="typebreak"/>
+, std::vector&lt; vectorN_type &gt;<br class="typebreak"/>
+, std::vector&lt; vectorN_type &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>solutions_tuple</b></td></tr>
+<tr class="separator:a10619bd520c8561ad0148b1e736482b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a018983788d30a7d811697bf28f98e2fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a018983788d30a7d811697bf28f98e2fa"></a>
+typedef boost::tuple&lt; double, <br class="typebreak"/>
+double, double, std::vector<br class="typebreak"/>
+&lt; std::vector&lt; double &gt;<br class="typebreak"/>
+ &gt;, std::vector&lt; std::vector<br class="typebreak"/>
+&lt; double &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>upper_bounds_tuple</b></td></tr>
+<tr class="separator:a018983788d30a7d811697bf28f98e2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56c99d94643531c1aa02f3b295387c53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56c99d94643531c1aa02f3b295387c53"></a>
 typedef std::vector&lt; <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mode_set_type</b></td></tr>
 <tr class="separator:a56c99d94643531c1aa02f3b295387c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -746,7 +756,7 @@ template&lt;typename TruthModelType &gt; </div>
 </div><div class="memdoc">
 <p>evaluate online time via the option crb.computational-time-neval </p>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#aeea5774ce0d944f1bdd7acf74e0cbd80">Feel::CRB&lt; TruthModelType &gt;::dimension()</a>, and <a class="el" href="classFeel_1_1CRB.html#a059435f8e6695e96a1e7800a38d0a329">Feel::CRB&lt; TruthModelType &gt;::run()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#aeea5774ce0d944f1bdd7acf74e0cbd80">Feel::CRB&lt; TruthModelType &gt;::dimension()</a>, and <a class="el" href="classFeel_1_1CRB.html#a4db7c099b00da3fd83fcbc7e1a164075">Feel::CRB&lt; TruthModelType &gt;::run()</a>.</p>
 
 </div>
 </div>
@@ -1743,14 +1753,14 @@ template&lt;typename TruthModelType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a059435f8e6695e96a1e7800a38d0a329"></a>
+<a class="anchor" id="a4db7c099b00da3fd83fcbc7e1a164075"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename TruthModelType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">boost::tuple&lt; double, double, typename <a class="el" href="classFeel_1_1CRB.html">CRB</a>&lt; TruthModelType &gt;::solutions_tuple, double, double, double, boost::tuple&lt; double, double, double &gt; &gt; <a class="el" href="classFeel_1_1CRB.html">Feel::CRB</a>&lt; TruthModelType &gt;::run </td>
+          <td class="memname">boost::tuple&lt; double, double, typename <a class="el" href="classFeel_1_1CRB.html">CRB</a>&lt; TruthModelType &gt;::solutions_tuple, double, double, double, typename <a class="el" href="classFeel_1_1CRB.html">CRB</a>&lt; TruthModelType &gt;::upper_bounds_tuple &gt; <a class="el" href="classFeel_1_1CRB.html">Feel::CRB</a>&lt; TruthModelType &gt;::run </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;&#160;</td>
           <td class="paramname"><em>mu</em>, </td>
@@ -1819,7 +1829,7 @@ template&lt;typename TruthModelType &gt; </div>
 </div><div class="memdoc">
 <p>run the certified reduced basis with P parameters and returns 1 output </p>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#a059435f8e6695e96a1e7800a38d0a329">Feel::CRB&lt; TruthModelType &gt;::run()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#a4db7c099b00da3fd83fcbc7e1a164075">Feel::CRB&lt; TruthModelType &gt;::run()</a>.</p>
 
 </div>
 </div>
@@ -2104,7 +2114,7 @@ template&lt;typename TruthModelType&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sat Sep 21 2013 00:01:58 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Wed Sep 25 2013 00:02:07 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -1,5 +1,6 @@
 var NAVTREEINDEX25 =
 {
+"classThreeFieldsLaplacian.html#a97f3d5217198a97dfc8e51fdeacd4e68":[10,11,25],
 "classThreeFieldsLaplacian.html#a9e2a5fa621fd7e2508d7165201c51a23":[10,11,27],
 "classThreeFieldsLaplacian.html#a9f76b3874b7635f59fad6ba8fffa8aae":[10,11,20],
 "classThreeFieldsLaplacian.html#aa382bb456e82e506d79de4b80dfe5ba2":[10,11,30],
@@ -75,8 +76,8 @@ var NAVTREEINDEX25 =
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,101,3],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,101,2],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aae08c8b04ff5d504167b6b0ef8710a90":[10,0,101,5],
-"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,101,1],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,101,0],
+"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,101,1],
 "structFeel_1_1IntegrationDegree.html":[10,0,104],
 "structFeel_1_1JacobiDegree.html":[10,0,107],
 "structFeel_1_1MeshTraits.html":[10,0,134],
@@ -248,6 +249,5 @@ var NAVTREEINDEX25 =
 "structFeel_1_1functional_1_1PointsGradient.html#aebae387291ca61dad0bd86a3eb8007dc":[10,0,75,13,3],
 "structFeel_1_1math_1_1Constant.html":[10,0,4,0],
 "structFeel_1_1math_1_1Constant.html#a1733ac3f1be3fc43530ef151077c7578":[10,0,4,0,1],
-"structFeel_1_1math_1_1Constant.html#a5fc976a0ea37da2ed3ac486b29ce9ed2":[10,0,4,0,0],
-"structFeel_1_1math_1_1Constant.html#addc15598bd97c5823b2c49b4f42d137c":[10,0,4,0,2]
+"structFeel_1_1math_1_1Constant.html#a5fc976a0ea37da2ed3ac486b29ce9ed2":[10,0,4,0,0]
 };
