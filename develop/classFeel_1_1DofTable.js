@@ -99,6 +99,7 @@ var classFeel_1_1DofTable =
     [ "getIndicesSet", "classFeel_1_1DofTable.html#a9b507bc0c84f1654b6ccbf24438f1d28", null ],
     [ "getIndicesSetOnGlobalCluster", "classFeel_1_1DofTable.html#a689dc0599d9881a5b6f114974f0b3cac", null ],
     [ "getIndicesSize", "classFeel_1_1DofTable.html#a2dba3d8b7d7511d120a06ff909c2f19a", null ],
+    [ "globalToLocal", "classFeel_1_1DofTable.html#a2ef74b41d9359aaa99f7beb7443e4479", null ],
     [ "indices", "classFeel_1_1DofTable.html#acc5885f02b0954a03162fcaf64851fe9", null ],
     [ "initDofMap", "classFeel_1_1DofTable.html#a62b635f430c6c20f34440d80aaf65657", null ],
     [ "insertDof", "classFeel_1_1DofTable.html#a2ab4f25e30d3401137e156cc4a1dc34d", null ],

@@ -1,5 +1,11 @@
 var NAVTREEINDEX18 =
 {
+"classFeel_1_1Polynomial.html#ad07178136a6e1f035cef8801ceae5fb7":[10,0,166,0],
+"classFeel_1_1Polynomial.html#ad2079bc356776fc152c8ec95d31d9092":[10,0,166,4],
+"classFeel_1_1Polynomial.html#ae0dbf5c9aa2d4181e275ad17f221abcd":[10,0,166,34],
+"classFeel_1_1Polynomial.html#ae745ab578d9aa389dc004c66097f056c":[10,0,166,7],
+"classFeel_1_1Polynomial.html#ae7fa919e8e81cacbf15c6c55a42a738f":[10,0,166,17],
+"classFeel_1_1Polynomial.html#aec55d0763ba9cd136983f77ed00fe314":[10,0,166,5],
 "classFeel_1_1Polynomial.html#af35ed0fc69f53f92fe6c4b079108d96f":[10,0,166,16],
 "classFeel_1_1Polynomial.html#af479a966f66a55947a8ef181a53a8fe3":[10,0,166,10],
 "classFeel_1_1Polynomial.html#af5e93d8958f33dc18bff4d846966ca01":[10,0,166,29],
@@ -243,11 +249,5 @@ var NAVTREEINDEX18 =
 "classFeel_1_1Simget.html#ab63416b27522622af151c829eb462232":[10,0,183,7],
 "classFeel_1_1Simget.html#ad4fb02078725447e79db657f91f9fc51":[10,0,183,16],
 "classFeel_1_1Simget.html#adcb85964291c29433444db591143aded":[10,0,183,13],
-"classFeel_1_1Simget.html#ae4cebdea070b7aadc9cb5ada1969e5a9":[10,0,183,11],
-"classFeel_1_1Simget.html#af0e7aa3d182d01b4330fa9fe439979af":[10,0,183,4],
-"classFeel_1_1Simget.html#af253c82f9e803fd38ee16d18a6ca6337":[10,0,183,8],
-"classFeel_1_1Simget.html#afb1305c58e7833292c6b3eb042afd1e9":[10,0,183,14],
-"classFeel_1_1Simget.html#afcd4ac23a947d7238110967ee57f00dd":[10,0,183,3],
-"classFeel_1_1Simplex.html":[10,0,184],
-"classFeel_1_1Simplex.html#a0a5eb542f579272991f1e3137b9c1775":[10,0,184,0]
+"classFeel_1_1Simget.html#ae4cebdea070b7aadc9cb5ada1969e5a9":[10,0,183,11]
 };

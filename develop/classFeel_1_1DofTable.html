@@ -455,6 +455,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>getIndicesSetOnGlobal
 <tr class="memitem:a2dba3d8b7d7511d120a06ff909c2f19a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2dba3d8b7d7511d120a06ff909c2f19a"></a>
 constexpr <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getIndicesSize</b> () const </td></tr>
 <tr class="separator:a2dba3d8b7d7511d120a06ff909c2f19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ef74b41d9359aaa99f7beb7443e4479"><td class="memItemLeft" align="right" valign="top">LocalDof const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1DofTable.html#a2ef74b41d9359aaa99f7beb7443e4479">globalToLocal</a> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> dof) const </td></tr>
+<tr class="separator:a2ef74b41d9359aaa99f7beb7443e4479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc5885f02b0954a03162fcaf64851fe9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc5885f02b0954a03162fcaf64851fe9"></a>
 indices_per_element_type&#160;</td><td class="memItemRight" valign="bottom"><b>indices</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> id_el) const </td></tr>
 <tr class="separator:acc5885f02b0954a03162fcaf64851fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1589,6 +1591,40 @@ template&lt;typename MeshType, typename FEType, typename PeriodicityType&gt; </d
 
 </div>
 </div>
+<a class="anchor" id="a2ef74b41d9359aaa99f7beb7443e4479"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MeshType, typename FEType, typename PeriodicityType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LocalDof const&amp; <a class="el" href="classFeel_1_1DofTable.html">Feel::DofTable</a>&lt; MeshType, FEType, PeriodicityType &gt;::globalToLocal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td>
+          <td class="paramname"><em>dof</em>)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the specified entries of the globalToLocal table</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DofId</td><td>the <a class="el" href="classFeel_1_1Dof.html" title="class that represents a degree of freedom ">Dof</a> ID</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the element id and local dof id </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a62b635f430c6c20f34440d80aaf65657"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2224,7 +2260,7 @@ template&lt;typename MeshType , typename FEType , typename PeriodicityType &gt; 
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Sep 25 2013 00:02:07 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Sep 27 2013 00:02:08 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

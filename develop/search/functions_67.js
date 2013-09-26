@@ -28,6 +28,7 @@ var searchData=
   ['getu',['getU',['../classFeel_1_1LU.html#a5b28da2907dd05e3168d8b2fc68a16f3',1,'Feel::LU']]],
   ['getvars',['getVars',['../classFeel_1_1ErrorBase.html#af3e1734873131f3d7a2f683fd4cc212e',1,'Feel::ErrorBase']]],
   ['gid',['gid',['../classFeel_1_1DataMap.html#aad8cf00cf50fae0f77b491f3ea74d6e6',1,'Feel::DataMap']]],
+  ['globaltolocal',['globalToLocal',['../classFeel_1_1DofTable.html#a2ef74b41d9359aaa99f7beb7443e4479',1,'Feel::DofTable']]],
   ['globalvalue',['globalValue',['../classFeel_1_1VectorUblas.html#a2886e83bc8e842f8fc9d31710a6e375a',1,'Feel::VectorUblas']]],
   ['gm',['gm',['../classFeel_1_1FunctionSpace.html#a8c42a33695b911c11c94f069cfb2721c',1,'Feel::FunctionSpace::gm()'],['../classFeel_1_1Mesh.html#a7971c57a45052fa3828f042d4900344c',1,'Feel::Mesh::gm() const '],['../classFeel_1_1Mesh.html#a946870191ffac78c6560229d921a91de',1,'Feel::Mesh::gm()'],['../classFeel_1_1GeoND.html#a9dcb4f9d64d6c27f57f243c5807ee490',1,'Feel::GeoND::gm()']]],
   ['gm1',['gm1',['../classFeel_1_1FunctionSpace.html#a18d46a29c1f5f2b4e1801edeededad36',1,'Feel::FunctionSpace::gm1()'],['../classFeel_1_1Mesh.html#af493633b6eaf6c9de3b41fb444fdb84f',1,'Feel::Mesh::gm1() const '],['../classFeel_1_1Mesh.html#aa70850d0c12ff9000028b981fe8ff41c',1,'Feel::Mesh::gm1()'],['../classFeel_1_1GeoND.html#a2b8843b510ac1eb77546fc916249e1a2',1,'Feel::GeoND::gm1()']]],
