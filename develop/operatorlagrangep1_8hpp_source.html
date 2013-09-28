@@ -237,11 +237,11 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    {</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">if</span> ( <span class="keyword">this</span> != &amp;lp1 )</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            _M_el2el = lp1._M_el2el;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            _M_el2pt = lp1._M_el2pt;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            _M_pset = lp1._M_pset;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            _M_gmpc = lp1._M_gmpc;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            _M_p2m = lp1._M_p2m;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            M_el2el = lp1.M_el2el;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            M_el2pt = lp1.M_el2pt;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            M_pset = lp1.M_pset;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            M_gmpc = lp1.M_gmpc;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            M_p2m = lp1.M_p2m;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        }</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
@@ -275,7 +275,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    image_mesh_ptrtype</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    mesh()</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">return</span> _M_mesh;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">return</span> M_mesh;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    }</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
@@ -292,14 +292,14 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <a class="code" href="classFeel_1_1OperatorLagrangeP1.html#ae409191111a8f596e8531bbc05c4966f">OperatorLagrangeP1</a>( OperatorLagrangeP1 <span class="keyword">const</span> &amp; );</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    image_mesh_ptrtype _M_mesh;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <a class="code" href="classFeel_1_1OperatorLagrangeP1.html#a4732a0f9fa8462dbec7d4292b6f24a25">el2el_type</a> _M_el2el;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    std::vector&lt;std::vector&lt;size_type&gt; &gt; _M_el2pt;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    image_mesh_ptrtype M_mesh;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <a class="code" href="classFeel_1_1OperatorLagrangeP1.html#a4732a0f9fa8462dbec7d4292b6f24a25">el2el_type</a> M_el2el;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    std::vector&lt;std::vector&lt;size_type&gt; &gt; M_el2pt;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    pset_type _M_pset;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    gmpc_ptrtype _M_gmpc;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    pset_type M_pset;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    gmpc_ptrtype M_gmpc;</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keyword">mutable</span> p2m_type _M_p2m;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keyword">mutable</span> p2m_type M_p2m;</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;};</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
@@ -320,56 +320,56 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;           dual_image_space_ptrtype( new <a class="code" href="classFeel_1_1OperatorLagrangeP1.html#a667c951be4adda3dbd6daa016325411b">dual_image_space_type</a>( image_mesh_ptrtype( new image_mesh_type ) ) ),</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;           backend,</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;           false ),</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    _M_mesh( new image_mesh_type(worldsComm[0]) ),</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    _M_el2el(),</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    _M_el2pt(),</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    _M_pset( 0 ),</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    _M_gmpc( new typename gm_type::precompute_type( this-&gt;domainSpace()-&gt;mesh()-&gt;gm(),</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;             _M_pset.<a class="code" href="namespaceFeel.html#a07ec0494dee4ca9a16b866e8c1f4d495">points</a>() ) ),</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    _M_p2m()</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    M_mesh( new image_mesh_type(worldsComm[0]) ),</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    M_el2el(),</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    M_el2pt(),</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    M_pset( 0 ),</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    M_gmpc( new typename gm_type::precompute_type( this-&gt;domainSpace()-&gt;mesh()-&gt;gm(),</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;             M_pset.<a class="code" href="namespaceFeel.html#a07ec0494dee4ca9a16b866e8c1f4d495">points</a>() ) ),</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    M_p2m()</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;{</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    std::string nameMeshLagP1base = <span class="stringliteral">&quot;meshLagP1-&quot;</span>+space-&gt;basisName()+(boost::format(<span class="stringliteral">&quot;-order%1%&quot;</span>)%domain_space_type::basis_type::nOrder).str();</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    std::string nameMeshLagP1 = prefixvm(prefix,nameMeshLagP1base);</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordflow">if</span> ( rebuild )</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">if</span> (_M_mesh-&gt;worldComm().globalRank() == _M_mesh-&gt;worldComm().masterRank() )</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">if</span> (M_mesh-&gt;worldComm().globalRank() == M_mesh-&gt;worldComm().masterRank() )</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        {</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <span class="comment">// create a triangulation of the current convex</span></div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="comment">// using equispaced points defined on the reference</span></div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <span class="comment">// element</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="comment">//_M_p2m.addBoundaryPoints( _M_pset.points() );</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            _M_p2m.<a class="code" href="classFeel_1_1PointSetToMesh.html#ac540fae4a23b988ace4700749271197e">visit</a>( &amp;_M_pset );</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="comment">//M_p2m.addBoundaryPoints( M_pset.points() );</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            M_p2m.<a class="code" href="classFeel_1_1PointSetToMesh.html#ac540fae4a23b988ace4700749271197e">visit</a>( &amp;M_pset );</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <span class="comment">// #if !defined( NDEBUG )</span></div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="comment">//     ExporterQuick&lt;image_mesh_type&gt; exp( &quot;vtk&quot;, &quot;ensight&quot; );</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="comment">//     exp.save( _M_p2m.mesh() );</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="comment">//     exp.save( M_p2m.mesh() );</span></div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="comment">// #endif</span></div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="comment">// do not renumber the mesh entities</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            _M_p2m.mesh()-&gt;components().clear ( MESH_RENUMBER );</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            _M_p2m.mesh()-&gt;components().clear ( MESH_CHECK );</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            _M_p2m.mesh()-&gt;updateForUse();</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            M_p2m.mesh()-&gt;components().clear ( MESH_RENUMBER );</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            M_p2m.mesh()-&gt;components().clear ( MESH_CHECK );</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            M_p2m.mesh()-&gt;updateForUse();</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            _M_p2m.mesh()-&gt;save( _name=nameMeshLagP1,_path=pathMeshLagP1 );</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            M_p2m.mesh()-&gt;save( _name=nameMeshLagP1,_path=pathMeshLagP1 );</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        }</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        _M_mesh-&gt;worldComm().barrier();</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        M_mesh-&gt;worldComm().barrier();</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keywordflow">if</span> (_M_mesh-&gt;worldComm().globalRank() != _M_mesh-&gt;worldComm().masterRank() )</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keywordflow">if</span> (M_mesh-&gt;worldComm().globalRank() != M_mesh-&gt;worldComm().masterRank() )</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            _M_p2m.mesh()-&gt;load( _name=nameMeshLagP1,_path=pathMeshLagP1,</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            M_p2m.mesh()-&gt;load( _name=nameMeshLagP1,_path=pathMeshLagP1,</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                                 _update=MESH_UPDATE_EDGES|MESH_UPDATE_FACES );</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        }</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    }</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        _M_p2m.mesh()-&gt;load( _name=nameMeshLagP1,_path=pathMeshLagP1,</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        M_p2m.mesh()-&gt;load( _name=nameMeshLagP1,_path=pathMeshLagP1,</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                             _update=MESH_UPDATE_EDGES|MESH_UPDATE_FACES );</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    }</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[P1 Lagrange] Pointset &quot;</span> &lt;&lt; _M_pset.points() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[P1 Lagrange] Pointset &quot;</span> &lt;&lt; M_pset.points() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> image_mesh_type::point_type point_type;</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> image_mesh_type::element_type element_type;</div>
@@ -380,14 +380,14 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="comment">// inherit the table of markersName</span></div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    BOOST_FOREACH( <span class="keyword">auto</span> itMark, this-&gt;domainSpace()-&gt;mesh()-&gt;markerNames() )</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    {</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        _M_mesh-&gt;addMarkerName( itMark.first,itMark.second[0],itMark.second[1] );</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        M_mesh-&gt;addMarkerName( itMark.first,itMark.second[0],itMark.second[1] );</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    }</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">bool</span> doParallelBuild = (_M_mesh-&gt;worldComm().size()==1)?<span class="keyword">false</span>:parallelBuild;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">bool</span> doParallelBuild = (M_mesh-&gt;worldComm().size()==1)?<span class="keyword">false</span>:parallelBuild;</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="comment">//std::vector&lt;bool&gt; pts_done(  this-&gt;domainSpace()-&gt;nLocalDof()/domain_space_type::nComponents, false );</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="comment">//size_type ne = this-&gt;domainSpace()-&gt;mesh()-&gt;numElements() * _M_p2m.mesh()-&gt;numElements();</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="comment">//size_type ne = this-&gt;domainSpace()-&gt;mesh()-&gt;numElements() * M_p2m.mesh()-&gt;numElements();</span></div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="comment">//std::vector&lt;boost::tuple&lt;size_type, uint16_type, size_type&gt; &gt; dofindices( image_mesh_type::element_type::numVertices*ne, boost::make_tuple( 0,0,0 ) );</span></div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="comment">//std::vector&lt;bool&gt; eltid_done(  this-&gt;domainSpace()-&gt;nLocalDof(), false );</span></div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
@@ -407,7 +407,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="comment">// use the geometric transformation to transform</span></div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="comment">// the local equispace mesh to a submesh of the</span></div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="comment">// current element</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    gmc_ptrtype gmc( <span class="keyword">new</span> gmc_type( this-&gt;domainSpace()-&gt;mesh()-&gt;gm(), *it, _M_gmpc ) );</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    gmc_ptrtype gmc( <span class="keyword">new</span> gmc_type( this-&gt;domainSpace()-&gt;mesh()-&gt;gm(), *it, M_gmpc ) );</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> elid = 0, pt_image_id = 0; it != en; ++it )</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    {</div>
@@ -418,8 +418,8 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        gmc-&gt;update( *it );</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="comment">// accumulate the local mesh in element *it in the new mesh</span></div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keyword">auto</span> itl = _M_p2m.mesh()-&gt;beginElement();</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keyword">auto</span> enl = _M_p2m.mesh()-&gt;endElement();</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keyword">auto</span> itl = M_p2m.mesh()-&gt;beginElement();</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keyword">auto</span> enl = M_p2m.mesh()-&gt;endElement();</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordflow">if</span> (doParallelBuild &amp;&amp; it-&gt;numberOfPartitions() &gt;1)</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            mapActiveEltWhichAreGhostInOtherPartition[it-&gt;id()] = std::vector&lt;size_type&gt;(std::distance(itl,enl),<a class="code" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">invalid_size_type_value</a>);</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;</div>
@@ -491,13 +491,13 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;                            &lt;&lt; <span class="stringliteral">&quot; local pt id : &quot;</span> &lt;&lt; localptid</div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;                            &lt;&lt; <span class="stringliteral">&quot; local pt id dof : &quot;</span> &lt;&lt; localptid_dof &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                        _M_mesh-&gt;addPoint( __pt );</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                        M_mesh-&gt;addPoint( __pt );</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;                        n_new_nodes++;</div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                    }</div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                <span class="comment">//--------------------------------------------------------------------//</span></div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;                elt.setPoint( p, _M_mesh-&gt;point( new_node_numbers[ptid] ) );</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;                elt.setPoint( p, M_mesh-&gt;point( new_node_numbers[ptid] ) );</div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;</div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;<span class="preprocessor">#if 1</span></div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="preprocessor"></span>                FEELPP_ASSERT( ublas::norm_2( boost::get&lt;0&gt;( this-&gt;domainSpace()-&gt;dof()-&gt;dofPoint( ptid ) )-elt.point( p ).node() ) &lt; 1e-10 )</div>
@@ -545,7 +545,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;            <span class="comment">// increment the new element counter</span></div>
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;            n_new_elem++;</div>
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;            <span class="comment">// add element in mesh</span></div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;            <span class="keyword">auto</span> <span class="keyword">const</span>&amp; theNewElt = _M_mesh-&gt;addElement ( elt );</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;            <span class="keyword">auto</span> <span class="keyword">const</span>&amp; theNewElt = M_mesh-&gt;addElement ( elt );</div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;            <span class="keywordflow">if</span> (doParallelBuild &amp;&amp; it-&gt;numberOfPartitions() &gt;1)  mapActiveEltWhichAreGhostInOtherPartition[it-&gt;id()][cptEltp2m] = theNewElt.id();</div>
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;            <span class="comment">// Maybe add faces for this element</span></div>
@@ -570,10 +570,10 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                        uint16_type localptidFace = theFaceBase.point( p ).id();</div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;                        uint16_type localptidFace_dof = localDof( it, localptidFace );</div>
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                        <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> theglobdof = this-&gt;domainSpace()-&gt;dof()-&gt;localToGlobal( it-&gt;id(),localptidFace_dof,0 ).<span class="keyword">template</span> get&lt;0&gt;();</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                        new_face.setPoint( p, _M_mesh-&gt;point( new_node_numbers[theglobdof] ) );</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                        new_face.setPoint( p, M_mesh-&gt;point( new_node_numbers[theglobdof] ) );</div>
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;                    }</div>
 <div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                <span class="comment">// add it to the list of faces</span></div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;                <span class="keyword">auto</span> addFaceRes = _M_mesh-&gt;addFace( new_face );</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;                <span class="keyword">auto</span> addFaceRes = M_mesh-&gt;addFace( new_face );</div>
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;            }</div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        } <span class="comment">//  for ( int cptEltp2m=0 ; itl != enl; ++itl, ++elid,++cptEltp2m )</span></div>
@@ -586,7 +586,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    {</div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[P1 Lagrange] start parallel build \n&quot;</span>;</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;        <span class="keyword">auto</span> <span class="keyword">const</span> theWorldCommSize = _M_mesh-&gt;worldComm().size();</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;        <span class="keyword">auto</span> <span class="keyword">const</span> theWorldCommSize = M_mesh-&gt;worldComm().size();</div>
 <div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        std::vector&lt;int&gt; nbMsgToSend( theWorldCommSize , 0 );</div>
 <div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;        std::vector&lt; std::map&lt;int,size_type&gt; &gt; mapMsg( theWorldCommSize );</div>
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;</div>
@@ -596,14 +596,14 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;        {</div>
 <div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;            <span class="keyword">auto</span> <span class="keyword">const</span> procGhost = iv-&gt;processId();</div>
 <div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;            <span class="keyword">auto</span> <span class="keyword">const</span> idEltOnGhost = iv-&gt;idInOthersPartitions(procGhost);</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;            _M_mesh-&gt;worldComm().localComm().send(procGhost, nbMsgToSend[procGhost], idEltOnGhost);</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;            M_mesh-&gt;worldComm().localComm().send(procGhost, nbMsgToSend[procGhost], idEltOnGhost);</div>
 <div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;            mapMsg[procGhost].insert( std::make_pair( nbMsgToSend[procGhost],iv-&gt;id() ) );</div>
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;            ++nbMsgToSend[procGhost];</div>
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        }</div>
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;</div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        <span class="comment">// counter of msg received for each process</span></div>
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        std::vector&lt;int&gt; nbMsgToRecv;</div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;        mpi::all_to_all( _M_mesh-&gt;worldComm().localComm(),</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;        mpi::all_to_all( M_mesh-&gt;worldComm().localComm(),</div>
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                         nbMsgToSend,</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;                         nbMsgToRecv );</div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;</div>
@@ -616,19 +616,19 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;            {</div>
 <div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;                <span class="comment">//recv</span></div>
 <div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;                <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> idEltRecv;</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;                _M_mesh-&gt;worldComm().localComm().recv( proc, cpt, idEltRecv );</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;                M_mesh-&gt;worldComm().localComm().recv( proc, cpt, idEltRecv );</div>
 <div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;                <span class="keyword">auto</span> <span class="keyword">const</span>&amp; theeltIt = this-&gt;domainSpace()-&gt;mesh()-&gt;elementIterator(idEltRecv);</div>
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;</div>
 <div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;                <span class="comment">//if (mapActiveEltWhichAreGhostInOtherPartition.find(idEltRecv) == mapActiveEltWhichAreGhostInOtherPartition.end() ) std::cout &lt;&lt; &quot;BUG&quot; &lt;&lt; std::endl;</span></div>
 <div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;                <span class="keyword">auto</span> <span class="keyword">const</span>&amp; idOfNewElt = mapActiveEltWhichAreGhostInOtherPartition[idEltRecv];</div>
 <div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;                std::vector&lt;boost::tuple&lt;size_type,ublas::vector&lt;double&gt; &gt; &gt; resultClusterDofsAndNodesToSend(_M_p2m.mesh()-&gt;numPoints());</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;                std::vector&lt;boost::tuple&lt;size_type,ublas::vector&lt;double&gt; &gt; &gt; resultClusterDofsAndNodesToSend(M_p2m.mesh()-&gt;numPoints());</div>
 <div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;                <span class="keyword">auto</span> itp = _M_p2m.mesh()-&gt;beginPoint();</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                <span class="keyword">auto</span> <span class="keyword">const</span> enp = _M_p2m.mesh()-&gt;endPoint();</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;                <span class="keyword">auto</span> itp = M_p2m.mesh()-&gt;beginPoint();</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                <span class="keyword">auto</span> <span class="keyword">const</span> enp = M_p2m.mesh()-&gt;endPoint();</div>
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;                <span class="keywordflow">for</span> ( ; itp!=enp ; ++itp )</div>
 <div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;                {</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;                    uint16_type localptid = itp-&gt;id();<span class="comment">// if (itp-&gt;id() &gt;=_M_p2m.mesh()-&gt;numElements()) std::cout &lt;&lt; &quot;aie &quot; &lt;&lt; itp-&gt;id() &lt;&lt; &quot;\n&quot; &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;                    uint16_type localptid = itp-&gt;id();<span class="comment">// if (itp-&gt;id() &gt;=M_p2m.mesh()-&gt;numElements()) std::cout &lt;&lt; &quot;aie &quot; &lt;&lt; itp-&gt;id() &lt;&lt; &quot;\n&quot; &lt;&lt; std::endl;</span></div>
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;                    uint16_type localptid_dof = localDof( theeltIt, localptid );</div>
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;                    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> ptid = boost::get&lt;0&gt;( this-&gt;domainSpace()-&gt;dof()-&gt;localToGlobal( theeltIt-&gt;id(),localptid_dof, 0 ) );</div>
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;                    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> idInProcAsked = this-&gt;domainSpace()-&gt;dof()-&gt;mapGlobalProcessToGlobalCluster(ptid);</div>
@@ -636,8 +636,8 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;                    resultClusterDofsAndNodesToSend[localptid<span class="comment">/*itp-&gt;id()*/</span>] = boost::make_tuple( idInProcAsked, thedofnode);</div>
 <div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;                }</div>
 <div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;                <span class="keyword">auto</span> itl = _M_p2m.mesh()-&gt;beginElement();</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;                <span class="keyword">auto</span> <span class="keyword">const</span> enl = _M_p2m.mesh()-&gt;endElement();</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;                <span class="keyword">auto</span> itl = M_p2m.mesh()-&gt;beginElement();</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;                <span class="keyword">auto</span> <span class="keyword">const</span> enl = M_p2m.mesh()-&gt;endElement();</div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;                <span class="comment">// localIdNewElt -&gt; ( localIdPt, globalIdNewElt )</span></div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;                std::vector&lt; boost::tuple&lt; std::vector&lt;uint16_type&gt;, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> &gt; &gt; resultToSendBis(std::distance(itl,enl));</div>
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;                <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> elidp2m = 0 ; itl != enl; ++itl, ++elidp2m )</div>
@@ -653,7 +653,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;                    resultToSendBis[elidp2m] = boost::make_tuple(vecLocalIdPtToSend,idOfNewElt[elidp2m] );</div>
 <div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;                }</div>
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;                <span class="keyword">auto</span> resultToSend = boost::make_tuple(resultToSendBis,resultClusterDofsAndNodesToSend);</div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;                _M_mesh-&gt;worldComm().localComm().send( proc, cpt, resultToSend);</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;                M_mesh-&gt;worldComm().localComm().send( proc, cpt, resultToSend);</div>
 <div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;            } <span class="comment">// for ( int cpt=0; cpt&lt;nbMsgToRecv[proc]; ++cpt )</span></div>
 <div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;        } <span class="comment">// for ( int proc=0; proc&lt;theWorldCommSize; ++proc )</span></div>
 <div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;</div>
@@ -668,7 +668,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;            {</div>
 <div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;                boost::tuple&lt;  std::vector&lt; boost::tuple&lt; std::vector&lt;uint16_type&gt;, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> &gt; &gt;,</div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;                               std::vector&lt;boost::tuple&lt;size_type,ublas::vector&lt;double&gt; &gt; &gt;  &gt; resultRecvData;</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                _M_mesh-&gt;worldComm().localComm().recv( proc, cpt, resultRecvData );</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                M_mesh-&gt;worldComm().localComm().recv( proc, cpt, resultRecvData );</div>
 <div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;</div>
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                <span class="keyword">auto</span> <span class="keyword">const</span>&amp; myGhostEltBase = this-&gt;domainSpace()-&gt;mesh()-&gt;element(mapMsg[proc][cpt],proc);</div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;</div>
@@ -708,7 +708,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;                        }</div>
 <div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;</div>
 <div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;                        <span class="keywordflow">if</span> ( theptid != <a class="code" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">invalid_size_type_value</a> )</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;                            elt.setPoint( p, _M_mesh-&gt;point( new_node_numbers[theptid] ) );</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;                            elt.setPoint( p, M_mesh-&gt;point( new_node_numbers[theptid] ) );</div>
 <div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;                        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;                        {</div>
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;                            <span class="keywordflow">if</span> (new_ghost_node_numbers.find(globclusterdofRecv) == new_ghost_node_numbers.end() )</div>
@@ -718,11 +718,11 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;                                point_type __pt( n_new_nodes, mapLocalToGlobalPointId[(<span class="keywordtype">int</span>)*itpt].<span class="keyword">template</span> get&lt;1&gt;()<span class="comment">/*itpt-&gt;template get&lt;1&gt;()*/</span> );</div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;                                __pt.setProcessId( <a class="code" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a> );</div>
 <div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;</div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;                                <span class="keyword">auto</span> <span class="keyword">const</span>&amp; theNewPt = _M_mesh-&gt;addPoint( __pt );</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;                                <span class="keyword">auto</span> <span class="keyword">const</span>&amp; theNewPt = M_mesh-&gt;addPoint( __pt );</div>
 <div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;                                n_new_nodes++;</div>
 <div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;                            }</div>
 <div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;                            elt.setPoint( p, _M_mesh-&gt;point( new_ghost_node_numbers[globclusterdofRecv] ) );</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;                            elt.setPoint( p, M_mesh-&gt;point( new_ghost_node_numbers[globclusterdofRecv] ) );</div>
 <div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;                        }</div>
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;</div>
 <div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;                    } <span class="comment">// for ( int p = 0 ; itpt!=enpt ; ++itpt,++p )</span></div>
@@ -735,8 +735,8 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;                    <span class="comment">// increment the new element counter</span></div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;                    n_new_elem++;</div>
 <div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;                    <span class="keyword">auto</span> <span class="keyword">const</span>&amp; theNewElt = _M_mesh-&gt;addElement ( elt );</div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;                    _M_mesh-&gt;elements().modify( _M_mesh-&gt;elementIterator( theNewElt.id(),  proc ),</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;                    <span class="keyword">auto</span> <span class="keyword">const</span>&amp; theNewElt = M_mesh-&gt;addElement ( elt );</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;                    M_mesh-&gt;elements().modify( M_mesh-&gt;elementIterator( theNewElt.id(),  proc ),</div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;                                                Feel::detail::updateIdInOthersPartitions( proc, itelt-&gt;template get&lt;1&gt;() ) );</div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;</div>
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;                } <span class="comment">// for ( ;itelt!=enelt;++itelt )</span></div>
@@ -745,20 +745,20 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;</div>
 <div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;    } <span class="comment">// if ( parallelBuild )</span></div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[P1 Lagrange] Number of points in mesh: &quot;</span> &lt;&lt; _M_mesh-&gt;numPoints() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[P1 Lagrange] Number of points in mesh: &quot;</span> &lt;&lt; M_mesh-&gt;numPoints() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    _M_mesh-&gt;setNumVertices( _M_mesh-&gt;numPoints() );</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    _M_mesh-&gt;components().reset();</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    _M_mesh-&gt;components().set ( MESH_RENUMBER|MESH_UPDATE_EDGES|MESH_UPDATE_FACES|MESH_CHECK );</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    _M_mesh-&gt;updateForUse();</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    M_mesh-&gt;setNumVertices( M_mesh-&gt;numPoints() );</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    M_mesh-&gt;components().reset();</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    M_mesh-&gt;components().set ( MESH_RENUMBER|MESH_UPDATE_EDGES|MESH_UPDATE_FACES|MESH_CHECK );</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    M_mesh-&gt;updateForUse();</div>
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;</div>
 <div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    this-&gt;<a class="code" href="classFeel_1_1OperatorLagrangeP1.html#a971d5c17a7caac20b5095a0d14bbb28b">check</a>();</div>
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;</div>
 <div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    <span class="comment">// construct the p1 space and set the operator</span></div>
 <div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;<span class="preprocessor">#if defined(FEELPP_ENABLE_MPI_MODE)</span></div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;<span class="preprocessor"></span>    <span class="keyword">auto</span> Xh_image = dual_image_space_type::New(_mesh=_M_mesh,_worldscomm=worldsComm);</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;<span class="preprocessor"></span>    <span class="keyword">auto</span> Xh_image = dual_image_space_type::New(_mesh=M_mesh,_worldscomm=worldsComm);</div>
 <div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="preprocessor"></span>    <span class="keyword">auto</span> Xh_image = dual_image_space_type::New(_mesh=_M_mesh);</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="preprocessor"></span>    <span class="keyword">auto</span> Xh_image = dual_image_space_type::New(_mesh=M_mesh);</div>
 <div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="preprocessor"></span>    this-&gt;init( this-&gt;domainSpace(),</div>
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;                Xh_image,</div>
@@ -804,10 +804,10 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;    {</div>
 <div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;        <span class="comment">// this test is not good: need to investigate</span></div>
 <div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;<span class="preprocessor"></span>        DLOG_IF( WARNING, (ublas::norm_2( boost::get&lt;0&gt;( this-&gt;domainSpace()-&gt;dof()-&gt;dofPoint( i ) )- _M_mesh-&gt;point( i ).node() ) &gt; 1e-10 ) )</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;<span class="preprocessor"></span>        DLOG_IF( WARNING, (ublas::norm_2( boost::get&lt;0&gt;( this-&gt;domainSpace()-&gt;dof()-&gt;dofPoint( i ) )- M_mesh-&gt;point( i ).node() ) &gt; 1e-10 ) )</div>
 <div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;inconsistent point coordinates at index &quot;</span>   &lt;&lt; i</div>
 <div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;dofpt : &quot;</span> &lt;&lt; boost::get&lt;0&gt;( this-&gt;domainSpace()-&gt;dof()-&gt;dofPoint( i ) )</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;mesh pt : &quot;</span> &lt;&lt; _M_mesh-&gt;point( i ).node() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;mesh pt : &quot;</span> &lt;&lt; M_mesh-&gt;point( i ).node() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;<span class="preprocessor"></span>    }</div>
 <div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;<span class="preprocessor">#endif</span></div>
@@ -820,7 +820,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;<a class="code" href="classFeel_1_1OperatorLagrangeP1.html">OperatorLagrangeP1&lt;space_type&gt;::operator()</a>( element_type <span class="keyword">const</span>&amp; u )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    <span class="keyword">typename</span> image_space_type::element_type res( this-&gt;dualImageSpace(), u.name() );</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    <span class="comment">//res.resize( _M_mesh-&gt;numPoints() );</span></div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    <span class="comment">//res.resize( M_mesh-&gt;numPoints() );</span></div>
 <div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;    res = ublas::scalar_vector&lt;value_type&gt;( res.size(), value_type( 0 ) );</div>
 <div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;    <span class="comment">// construct the mesh</span></div>
 <div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;    <span class="keyword">typename</span> domain_mesh_type::element_const_iterator it = this-&gt;domainSpace()-&gt;mesh()-&gt;beginElement();</div>
@@ -828,21 +828,21 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;</div>
 <div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    <span class="keywordflow">for</span> ( ; it != en; ++it )</div>
 <div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    {</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        gmc_ptrtype gmc( <span class="keyword">new</span> gmc_type( this-&gt;domainSpace()-&gt;mesh()-&gt;gm(), *it, _M_gmpc ) );</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        gmc_ptrtype gmc( <span class="keyword">new</span> gmc_type( this-&gt;domainSpace()-&gt;mesh()-&gt;gm(), *it, M_gmpc ) );</div>
 <div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;        <span class="keyword">typename</span> <a class="code" href="structFeel_1_1matrix__node.html">matrix_node&lt;value_type&gt;::type</a> u_at_pts = u.id( *gmc );</div>
 <div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;        <span class="keyword">typename</span> std::list&lt;size_type&gt;::const_iterator ite = _M_el2el[it-&gt;id()].begin();</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;        <span class="keyword">typename</span> std::list&lt;size_type&gt;::const_iterator ene = _M_el2el[it-&gt;id()].end();</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;        <span class="keyword">typename</span> std::list&lt;size_type&gt;::const_iterator ite = M_el2el[it-&gt;id()].begin();</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;        <span class="keyword">typename</span> std::list&lt;size_type&gt;::const_iterator ene = M_el2el[it-&gt;id()].end();</div>
 <div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;</div>
 <div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        <span class="keywordflow">for</span> ( ; ite != ene; ++ite )</div>
 <div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;        {</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;            <span class="keyword">typename</span> domain_mesh_type::element_type <span class="keyword">const</span>&amp; elt = _M_mesh-&gt;element( *ite );</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;            <span class="keyword">typename</span> domain_mesh_type::element_type <span class="keyword">const</span>&amp; elt = M_mesh-&gt;element( *ite );</div>
 <div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;</div>
 <div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> c = 0; c &lt; nComponents; ++c )</div>
 <div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;                <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> p = 0; p &lt; domain_mesh_type::element_type::numVertices; ++p )</div>
 <div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;                {</div>
 <div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;                    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> ptid = boost::get&lt;0&gt;( this-&gt;dualImageSpace()-&gt;dof()-&gt;localToGlobal( elt.id(), p, c ) );</div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;                    res( ptid ) = ublas::column( u_at_pts, _M_el2pt[*ite][p] )( nComponents*c+c );</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;                    res( ptid ) = ublas::column( u_at_pts, M_el2pt[*ite][p] )( nComponents*c+c );</div>
 <div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;                }</div>
 <div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;        }</div>
 <div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;    }</div>
@@ -861,11 +861,11 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;    uint16_type localptid_dof = localptid;</div>
 <div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;</div>
 <div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;    <span class="keywordflow">if</span> ( domain_mesh_type::nDim == 2 &amp;&amp;</div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;            _M_pset.pointToEntity( localptid ).first == 1 &amp;&amp;</div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;            it-&gt;edgePermutation( _M_pset.pointToEntity( localptid ).second ) == edge_permutation_type::REVERSE_PERMUTATION )</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;            M_pset.pointToEntity( localptid ).first == 1 &amp;&amp;</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;            it-&gt;edgePermutation( M_pset.pointToEntity( localptid ).second ) == edge_permutation_type::REVERSE_PERMUTATION )</div>
 <div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;    {</div>
-<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;        <span class="comment">//size_type edge_id = it-&gt;edge( _M_pset.pointToEntity( localptid ).second ).id();</span></div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;        uint16_type edge_id = _M_pset.pointToEntity( localptid ).second;</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;        <span class="comment">//size_type edge_id = it-&gt;edge( M_pset.pointToEntity( localptid ).second ).id();</span></div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;        uint16_type edge_id = M_pset.pointToEntity( localptid ).second;</div>
 <div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;</div>
 <div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;        uint16_type l = localptid - ( domain_mesh_type::element_type::numVertices * domain_fe_type::nDofPerVertex +</div>
 <div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;                                      edge_id * domain_fe_type::nDofPerEdge );</div>
@@ -874,7 +874,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;        ( l )</div>
 <div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;        ( domain_fe_type::nDofPerEdge )</div>
 <div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;        ( localptid )</div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;        ( _M_pset.pointToEntity( localptid ).second )</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;        ( M_pset.pointToEntity( localptid ).second )</div>
 <div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;        ( domain_mesh_type::element_type::numVertices * domain_fe_type::nDofPerVertex +</div>
 <div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;          edge_id * domain_fe_type::nDofPerEdge ).error( <span class="stringliteral">&quot;invalid value&quot;</span> );</div>
 <div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;</div>
@@ -888,7 +888,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;        ( localptid )</div>
 <div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;        ( localptid_dof )</div>
 <div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;        ( domain_fe_type::nLocalDof )</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;        ( _M_pset.pointToEntity( localptid ).second )</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;        ( M_pset.pointToEntity( localptid ).second )</div>
 <div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;        ( domain_mesh_type::element_type::numVertices * domain_fe_type::nDofPerVertex +</div>
 <div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;          edge_id * domain_fe_type::nDofPerEdge ).error( <span class="stringliteral">&quot;invalid value&quot;</span> );</div>
 <div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;    }</div>
@@ -957,7 +957,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:01:56 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:36 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

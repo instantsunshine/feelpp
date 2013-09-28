@@ -21,6 +21,7 @@ var classFeel_1_1GeoElement3D =
     [ "~GeoElement3D", "classFeel_1_1GeoElement3D.html#a93ace134ec297e7c3f9dc80d2e889df5", null ],
     [ "ad_first", "classFeel_1_1GeoElement3D.html#abcedc280745a2720ab1902f9f4188663", null ],
     [ "ad_second", "classFeel_1_1GeoElement3D.html#a3dfc275b5a77809ec3f640375c118783", null ],
+    [ "boundaryEntityDimension", "classFeel_1_1GeoElement3D.html#a5c5d414a2f7c80bdfc8afc3b58f7d280", null ],
     [ "edge", "classFeel_1_1GeoElement3D.html#adf681f825d4843b08a7ee22f135ad621", null ],
     [ "edge", "classFeel_1_1GeoElement3D.html#a03067308c0196c484259b166dc75217b", null ],
     [ "edgePermutation", "classFeel_1_1GeoElement3D.html#a2d34a96e0e2542c641c5a0b82699abe7", null ],

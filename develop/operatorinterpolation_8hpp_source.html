@@ -308,9 +308,9 @@ $(document).ready(function(){initNavTree('operatorinterpolation_8hpp_source.html
 <div class="line"><a name="l00235"></a><span class="lineno"><a class="code" href="classFeel_1_1OperatorInterpolation.html#afbbd4be029c7bcb699079cc715fce328">  235</a></span>&#160;    <a class="code" href="classFeel_1_1OperatorInterpolation.html#afbbd4be029c7bcb699079cc715fce328">OperatorInterpolation</a>( <a class="code" href="classFeel_1_1OperatorInterpolation.html" title="Global interpolation operator. ">OperatorInterpolation</a> <span class="keyword">const</span> &amp; oi )</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        :</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <a class="code" href="classFeel_1_1OperatorLinear.html">super</a>( oi ),</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        _M_listRange( oi._M_listRange ),</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        _M_WorldCommFusion( oi._M_WorldCommFusion ),</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        _M_interptype( oi._M_interptype )</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        M_listRange( oi.M_listRange ),</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        M_WorldCommFusion( oi.M_WorldCommFusion ),</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        M_interptype( oi.M_interptype )</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    {}</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    ~<a class="code" href="classFeel_1_1OperatorInterpolation.html" title="Global interpolation operator. ">OperatorInterpolation</a>() {}</div>
@@ -320,9 +320,9 @@ $(document).ready(function(){initNavTree('operatorinterpolation_8hpp_source.html
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    WorldComm <span class="keyword">const</span>&amp; worldCommFusion()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _M_WorldCommFusion; }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    WorldComm <span class="keyword">const</span>&amp; worldCommFusion()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> M_WorldCommFusion; }</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    InterpType <span class="keyword">const</span>&amp; interpolationType()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _M_interptype; }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    InterpType <span class="keyword">const</span>&amp; interpolationType()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> M_interptype; }</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">bool</span> isDomainMeshRelatedToImageMesh()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;domainSpace()-&gt;mesh()-&gt;isSubMeshFrom( this-&gt;dualImageSpace()-&gt;mesh() ); }</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
@@ -391,9 +391,9 @@ $(document).ready(function(){initNavTree('operatorinterpolation_8hpp_source.html
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                                             extrapolation_memory_type &amp; dof_extrapolationData);</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="preprocessor">#endif // MPI_MODE</span></div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    std::list&lt;range_iterator&gt; _M_listRange;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    WorldComm _M_WorldCommFusion;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    InterpType _M_interptype;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    std::list&lt;range_iterator&gt; M_listRange;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    WorldComm M_WorldCommFusion;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    InterpType M_interptype;</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;};</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> DomainSpaceType, <span class="keyword">typename</span> ImageSpaceType,<span class="keyword">typename</span> IteratorRange,<span class="keyword">typename</span> InterpType&gt;</div>
@@ -404,11 +404,11 @@ $(document).ready(function(){initNavTree('operatorinterpolation_8hpp_source.html
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                                                                                                        <span class="keywordtype">bool</span> ddmethod )</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    :</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <a class="code" href="classFeel_1_1OperatorLinear.html">super</a>( domainspace, imagespace, backend, false ),</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    _M_listRange(),</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    _M_WorldCommFusion( (ddmethod) ? this-&gt;domainSpace()-&gt;worldComm() : this-&gt;domainSpace()-&gt;worldComm()+this-&gt;dualImageSpace()-&gt;worldComm() ),</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    _M_interptype(interptype)</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    M_listRange(),</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    M_WorldCommFusion( (ddmethod) ? this-&gt;domainSpace()-&gt;worldComm() : this-&gt;domainSpace()-&gt;worldComm()+this-&gt;dualImageSpace()-&gt;worldComm() ),</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    M_interptype(interptype)</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;{</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    _M_listRange.push_back( <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( imagespace-&gt;mesh() ) );</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    M_listRange.push_back( <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( imagespace-&gt;mesh() ) );</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    update();</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;}</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
@@ -422,11 +422,11 @@ $(document).ready(function(){initNavTree('operatorinterpolation_8hpp_source.html
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                                                                                                        <span class="keywordtype">bool</span> ddmethod )</div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    :</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    super( domainspace, imagespace, backend, false ),</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    _M_listRange(),</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    _M_WorldCommFusion( (ddmethod) ? this-&gt;domainSpace()-&gt;worldComm() : this-&gt;domainSpace()-&gt;worldComm()+this-&gt;dualImageSpace()-&gt;worldComm() ),</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    _M_interptype(interptype)</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    M_listRange(),</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    M_WorldCommFusion( (ddmethod) ? this-&gt;domainSpace()-&gt;worldComm() : this-&gt;domainSpace()-&gt;worldComm()+this-&gt;dualImageSpace()-&gt;worldComm() ),</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    M_interptype(interptype)</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;{</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    _M_listRange.push_back( r );</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    M_listRange.push_back( r );</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    update();</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;}</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
@@ -439,9 +439,9 @@ $(document).ready(function(){initNavTree('operatorinterpolation_8hpp_source.html
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                                                                                                        <span class="keywordtype">bool</span> ddmethod )</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    :</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    super( domainspace, imagespace, backend, false ),</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    _M_listRange( r ),</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    _M_WorldCommFusion( (ddmethod) ? this-&gt;domainSpace()-&gt;worldComm() : this-&gt;domainSpace()-&gt;worldComm()+this-&gt;dualImageSpace()-&gt;worldComm() ),</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    _M_interptype(interptype)</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    M_listRange( r ),</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    M_WorldCommFusion( (ddmethod) ? this-&gt;domainSpace()-&gt;worldComm() : this-&gt;domainSpace()-&gt;worldComm()+this-&gt;dualImageSpace()-&gt;worldComm() ),</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    M_interptype(interptype)</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;{</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    update();</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;}</div>
@@ -546,8 +546,8 @@ $(document).ready(function(){initNavTree('operatorinterpolation_8hpp_source.html
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> image_related_to_domain = this-&gt;dualImageSpace()-&gt;mesh()-&gt;isSubMeshFrom( this-&gt;domainSpace()-&gt;mesh() );</div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> domain_related_to_image = this-&gt;domainSpace()-&gt;mesh()-&gt;isSubMeshFrom( this-&gt;dualImageSpace()-&gt;mesh() );</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    <span class="keyword">auto</span> itListRange = _M_listRange.begin();</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    <span class="keyword">auto</span> <span class="keyword">const</span> enListRange = _M_listRange.end();</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    <span class="keyword">auto</span> itListRange = M_listRange.begin();</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    <span class="keyword">auto</span> <span class="keyword">const</span> enListRange = M_listRange.end();</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="keywordflow">for</span> ( ; itListRange!=enListRange ; ++itListRange)</div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    {</div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    iterator_type it, en;</div>
@@ -699,8 +699,8 @@ $(document).ready(function(){initNavTree('operatorinterpolation_8hpp_source.html
 <div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> eltIdLocalised = 0;</div>
 <div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;</div>
 <div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;    <span class="comment">// for each element in range</span></div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    <span class="keyword">auto</span> itListRange = _M_listRange.begin();</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    <span class="keyword">auto</span> <span class="keyword">const</span> enListRange = _M_listRange.end();</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    <span class="keyword">auto</span> itListRange = M_listRange.begin();</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    <span class="keyword">auto</span> <span class="keyword">const</span> enListRange = M_listRange.end();</div>
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    <span class="keywordflow">for</span> ( ; itListRange!=enListRange ; ++itListRange)</div>
 <div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    {</div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    iterator_type it, en;</div>
@@ -1984,8 +1984,8 @@ $(document).ready(function(){initNavTree('operatorinterpolation_8hpp_source.html
 <div class="line"><a name="l01928"></a><span class="lineno"> 1928</span>&#160;    <span class="keywordflow">if</span> ( this-&gt;dualImageSpace()-&gt;worldComm().isActive() )</div>
 <div class="line"><a name="l01929"></a><span class="lineno"> 1929</span>&#160;        {</div>
 <div class="line"><a name="l01930"></a><span class="lineno"> 1930</span>&#160;</div>
-<div class="line"><a name="l01931"></a><span class="lineno"> 1931</span>&#160;            <span class="keyword">auto</span> itListRange = _M_listRange.begin();</div>
-<div class="line"><a name="l01932"></a><span class="lineno"> 1932</span>&#160;            <span class="keyword">auto</span> <span class="keyword">const</span> enListRange = _M_listRange.end();</div>
+<div class="line"><a name="l01931"></a><span class="lineno"> 1931</span>&#160;            <span class="keyword">auto</span> itListRange = M_listRange.begin();</div>
+<div class="line"><a name="l01932"></a><span class="lineno"> 1932</span>&#160;            <span class="keyword">auto</span> <span class="keyword">const</span> enListRange = M_listRange.end();</div>
 <div class="line"><a name="l01933"></a><span class="lineno"> 1933</span>&#160;            <span class="keywordflow">for</span> ( ; itListRange!=enListRange ; ++itListRange)</div>
 <div class="line"><a name="l01934"></a><span class="lineno"> 1934</span>&#160;            {</div>
 <div class="line"><a name="l01935"></a><span class="lineno"> 1935</span>&#160;            boost::tie( boost::tuples::ignore, it, en ) = *itListRange;</div>
@@ -2169,7 +2169,7 @@ $(document).ready(function(){initNavTree('operatorinterpolation_8hpp_source.html
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:01:56 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:36 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

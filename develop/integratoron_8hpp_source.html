@@ -270,22 +270,22 @@ $(document).ready(function(){initNavTree('integratoron_8hpp_source.html','');});
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                      expression_type <span class="keyword">const</span>&amp; __expr,</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                      <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __on )</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        :</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        _M_eltbegin( __elts.template get&lt;1&gt;() ),</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        _M_eltend( __elts.template get&lt;2&gt;() ),</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        _M_u( __u ),</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        _M_rhs( __rhs ),</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        _M_expr( __expr ),</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        _M_on_strategy( __on )</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        M_eltbegin( __elts.template get&lt;1&gt;() ),</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        M_eltend( __elts.template get&lt;2&gt;() ),</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        M_u( __u ),</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        M_rhs( __rhs ),</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        M_expr( __expr ),</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        M_on_strategy( __on )</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    {</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    IntegratorOnExpr( IntegratorOnExpr <span class="keyword">const</span>&amp; ioe )</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        :</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        _M_eltbegin( ioe._M_eltbegin ),</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        _M_eltend( ioe._M_eltend ),</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        _M_u( ioe._M_u ),</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        _M_rhs( ioe._M_rhs ),</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        _M_expr( ioe._M_expr ),</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        _M_on_strategy( ioe._M_on_strategy )</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        M_eltbegin( ioe.M_eltbegin ),</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        M_eltend( ioe.M_eltend ),</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        M_u( ioe.M_u ),</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        M_rhs( ioe.M_rhs ),</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        M_expr( ioe.M_expr ),</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        M_on_strategy( ioe.M_on_strategy )</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
@@ -296,12 +296,12 @@ $(document).ready(function(){initNavTree('integratoron_8hpp_source.html','');});
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    element_iterator beginElement()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">return</span> _M_eltbegin;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">return</span> M_eltbegin;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    element_iterator endElement()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">return</span> _M_eltend;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">return</span> M_eltend;</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
@@ -331,13 +331,13 @@ $(document).ready(function(){initNavTree('integratoron_8hpp_source.html','');});
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    element_iterator _M_eltbegin;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    element_iterator _M_eltend;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    element_iterator M_eltbegin;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    element_iterator M_eltend;</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    element_type <span class="keyword">const</span>&amp; _M_u;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keyword">mutable</span> rhs_element_type _M_rhs;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    expression_type _M_expr;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    Context _M_on_strategy;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    element_type <span class="keyword">const</span>&amp; M_u;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keyword">mutable</span> rhs_element_type M_rhs;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    expression_type M_expr;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    Context M_on_strategy;</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;};</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ElementRange, <span class="keyword">typename</span> Elem, <span class="keyword">typename</span> RhsElem, <span class="keyword">typename</span> OnExpr&gt;</div>
@@ -389,7 +389,7 @@ $(document).ready(function(){initNavTree('integratoron_8hpp_source.html','');});
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="comment">// make sure that the form is close, ie the associated matrix is assembled</span></div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    __form.matrix().close();</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="comment">// make sure that the right hand side is closed, ie the associated vector is assembled</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    _M_rhs-&gt;close();</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    M_rhs-&gt;close();</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="comment">//</span></div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="comment">// start</span></div>
@@ -399,179 +399,179 @@ $(document).ready(function(){initNavTree('integratoron_8hpp_source.html','');});
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    std::vector&lt;int&gt; dofs;</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    std::vector&lt;value_type&gt; values;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    element_iterator __face_it = this-&gt;beginElement();</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    element_iterator __face_en = this-&gt;endElement();</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordflow">if</span> ( __face_it != __face_en )</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    {</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="comment">// get the first face properly connected</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="keywordflow">for</span>( ; __face_it != __face_en; ++__face_it )</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            <span class="keywordflow">if</span> ( __face_it-&gt;isConnectedTo0() )</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    element_iterator __face_it = this-&gt;beginElement();</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    element_iterator __face_en = this-&gt;endElement();</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordflow">if</span> ( __face_it != __face_en )</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    {</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="comment">// get the first face properly connected</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="keywordflow">for</span>( ; __face_it != __face_en; ++__face_it )</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            <span class="keywordflow">if</span> ( __face_it-&gt;isConnectedTo0() )</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        dof_type <span class="keyword">const</span>* __dof = _M_u.functionSpace()-&gt;dof().get();</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        fe_type <span class="keyword">const</span>* __fe = _M_u.functionSpace()-&gt;fe().get();</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        gm_ptrtype __gm( <span class="keyword">new</span> gm_type );</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        dof_type <span class="keyword">const</span>* __dof = M_u.functionSpace()-&gt;dof().get();</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        fe_type <span class="keyword">const</span>* __fe = M_u.functionSpace()-&gt;fe().get();</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        gm_ptrtype __gm( <span class="keyword">new</span> gm_type );</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="comment">//</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="comment">// Precompute some data in the reference element for</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="comment">// geometric mapping and reference finite element</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="comment">//</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> geoelement_type::permutation_type permutation_type;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> gm_type::precompute_ptrtype geopc_ptrtype;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> gm_type::precompute_type geopc_type;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        DVLOG(2)  &lt;&lt; <span class="stringliteral">&quot;[integratoron] numTopologicalFaces = &quot;</span> &lt;&lt; geoelement_type::numTopologicalFaces &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        std::vector&lt;std::map&lt;permutation_type, geopc_ptrtype&gt; &gt; __geopc( geoelement_type::numTopologicalFaces );</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <span class="keywordflow">for</span> ( uint16_type __f = 0; __f &lt; geoelement_type::numTopologicalFaces; ++__f )</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        {</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;            <span class="keywordflow">for</span> ( permutation_type __p( permutation_type::IDENTITY );</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                  __p &lt; permutation_type( permutation_type::N_PERMUTATIONS ); ++__p )</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            {</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                __geopc[__f][__p] = geopc_ptrtype(  <span class="keyword">new</span> geopc_type( __gm, __fe-&gt;points( __f ) ) );</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                <span class="comment">//DVLOG(2) &lt;&lt; &quot;[geopc] FACE_ID = &quot; &lt;&lt; __f &lt;&lt; &quot; ref pts=&quot; &lt;&lt; __fe-&gt;dual().points( __f ) &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                FEELPP_ASSERT( __geopc[__f][__p]-&gt;nPoints() ).error( <span class="stringliteral">&quot;invalid number of points&quot;</span> );</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            }</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        }</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        uint16_type __face_id = __face_it-&gt;pos_first();</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        gmc_ptrtype __c( <span class="keyword">new</span> gmc_type( __gm, __face_it-&gt;element( 0 ), __geopc, __face_id ) );</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        map_gmc_type mapgmc( fusion::make_pair&lt;vf::detail::gmc&lt;0&gt; &gt;( __c ) );</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="comment">//t_expr_type expr( _M_expr, mapgmc );</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="comment">// Precompute some data in the reference element for</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="comment">// geometric mapping and reference finite element</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> geoelement_type::permutation_type permutation_type;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> gm_type::precompute_ptrtype geopc_ptrtype;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> gm_type::precompute_type geopc_type;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        DVLOG(2)  &lt;&lt; <span class="stringliteral">&quot;[integratoron] numTopologicalFaces = &quot;</span> &lt;&lt; geoelement_type::numTopologicalFaces &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        std::vector&lt;std::map&lt;permutation_type, geopc_ptrtype&gt; &gt; __geopc( geoelement_type::numTopologicalFaces );</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keywordflow">for</span> ( uint16_type __f = 0; __f &lt; geoelement_type::numTopologicalFaces; ++__f )</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            <span class="keywordflow">for</span> ( permutation_type __p( permutation_type::IDENTITY );</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                  __p &lt; permutation_type( permutation_type::N_PERMUTATIONS ); ++__p )</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            {</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                __geopc[__f][__p] = geopc_ptrtype(  <span class="keyword">new</span> geopc_type( __gm, __fe-&gt;points( __f ) ) );</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                <span class="comment">//DVLOG(2) &lt;&lt; &quot;[geopc] FACE_ID = &quot; &lt;&lt; __f &lt;&lt; &quot; ref pts=&quot; &lt;&lt; __fe-&gt;dual().points( __f ) &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                FEELPP_ASSERT( __geopc[__f][__p]-&gt;nPoints() ).error( <span class="stringliteral">&quot;invalid number of points&quot;</span> );</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            }</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        uint16_type __face_id = __face_it-&gt;pos_first();</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        gmc_ptrtype __c( <span class="keyword">new</span> gmc_type( __gm, __face_it-&gt;element( 0 ), __geopc, __face_id ) );</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        map_gmc_type mapgmc( fusion::make_pair&lt;vf::detail::gmc&lt;0&gt; &gt;( __c ) );</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="comment">//t_expr_type expr( M_expr, mapgmc );</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        DVLOG(2)  &lt;&lt; <span class="stringliteral">&quot;face_type::numVertices = &quot;</span> &lt;&lt; face_type::numVertices &lt;&lt; <span class="stringliteral">&quot;, fe_type::nDofPerVertex = &quot;</span> &lt;&lt; fe_type::nDofPerVertex &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;face_type::numEdges = &quot;</span> &lt;&lt; face_type::numEdges &lt;&lt; <span class="stringliteral">&quot;, fe_type::nDofPerEdge = &quot;</span> &lt;&lt; fe_type::nDofPerEdge &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;face_type::numFaces = &quot;</span> &lt;&lt; face_type::numFaces &lt;&lt; <span class="stringliteral">&quot;, fe_type::nDofPerFace = &quot;</span> &lt;&lt; fe_type::nDofPerFace &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> nbFaceDof = <a class="code" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">invalid_size_type_value</a>;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordflow">if</span> ( !fe_type::is_modal )</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            nbFaceDof = ( face_type::numVertices * fe_type::nDofPerVertex +</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                          face_type::numEdges * fe_type::nDofPerEdge +</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                          face_type::numFaces * fe_type::nDofPerFace );</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            nbFaceDof = face_type::numVertices * fe_type::nDofPerVertex;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        DVLOG(2)  &lt;&lt; <span class="stringliteral">&quot;nbFaceDof = &quot;</span> &lt;&lt; nbFaceDof &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <span class="comment">//const size_type nbFaceDof = __fe-&gt;boundaryFE()-&gt;points().size2();</span></div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keywordflow">for</span> ( ;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;              __face_it != this-&gt;endElement();</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;              ++__face_it )</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        {</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            <span class="keywordflow">if</span> ( !__face_it-&gt;isConnectedTo0() )</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            {</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                LOG( WARNING ) &lt;&lt; <span class="stringliteral">&quot;face not connected&quot;</span> &lt;&lt; *__face_it;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;            }</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;            <span class="comment">// do not process the face if it is a ghost face: beloging to two</span></div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            <span class="comment">// processes and being in a process id greater than the one</span></div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            <span class="comment">// corresponding face</span></div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            <span class="keywordflow">if</span> ( __face_it-&gt;isGhostFace() )</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            {</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                LOG(WARNING) &lt;&lt; <span class="stringliteral">&quot;face id : &quot;</span> &lt;&lt; __face_it-&gt;id() &lt;&lt; <span class="stringliteral">&quot; is a ghost face&quot;</span>;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            }</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;FACE_ID = &quot;</span> &lt;&lt; __face_it-&gt;id()</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                     &lt;&lt; <span class="stringliteral">&quot; element id= &quot;</span> &lt;&lt; __face_it-&gt;ad_first()</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                     &lt;&lt; <span class="stringliteral">&quot; pos in elt= &quot;</span> &lt;&lt; __face_it-&gt;pos_first()</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                     &lt;&lt; <span class="stringliteral">&quot; marker: &quot;</span> &lt;&lt; __face_it-&gt;marker() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;            DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;FACE_ID = &quot;</span> &lt;&lt; __face_it-&gt;id() &lt;&lt; <span class="stringliteral">&quot; face pts=&quot;</span> &lt;&lt; __face_it-&gt;G() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            uint16_type __face_id = __face_it-&gt;pos_first();</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;            __c-&gt;update( __face_it-&gt;element( 0 ), __face_id );</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;FACE_ID = &quot;</span> &lt;&lt; __face_it-&gt;id() &lt;&lt; <span class="stringliteral">&quot;  ref pts=&quot;</span> &lt;&lt; __c-&gt;xRefs() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;            DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;FACE_ID = &quot;</span> &lt;&lt; __face_it-&gt;id() &lt;&lt; <span class="stringliteral">&quot; real pts=&quot;</span> &lt;&lt; __c-&gt;xReal() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;            map_gmc_type mapgmc( fusion::make_pair&lt;vf::detail::gmc&lt;0&gt; &gt;( __c ) );</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;            t_expr_type expr( _M_expr, mapgmc );</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            expr.update( mapgmc );</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;            std::pair&lt;size_type,size_type&gt; range_dof( std::make_pair( _M_u.start(),</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                                                                      _M_u.functionSpace()-&gt;nDof() ) );</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;            DVLOG(2)  &lt;&lt; <span class="stringliteral">&quot;[integratoron] dof start = &quot;</span> &lt;&lt; range_dof.first &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;            DVLOG(2)  &lt;&lt; <span class="stringliteral">&quot;[integratoron] dof range = &quot;</span> &lt;&lt; range_dof.second &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;            <span class="keywordflow">for</span> ( uint16_type c1 = 0; c1 &lt; shape::M; ++c1 )</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;                <span class="keywordflow">for</span> ( uint16_type c2 = 0; c2 &lt; shape::N; ++c2 )</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;                {</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;                    <span class="keywordflow">for</span> ( uint16_type l = 0; l &lt; nbFaceDof; ++l )</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;                    {</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;                        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[integratoronexpr] local dof=&quot;</span> &lt;&lt; l</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;                                 &lt;&lt; <span class="stringliteral">&quot; |comp1=&quot;</span> &lt;&lt; c1 &lt;&lt; <span class="stringliteral">&quot; comp 2= &quot;</span> &lt;&lt; c2 &lt;&lt; <span class="stringliteral">&quot; | pt = &quot;</span> &lt;&lt;  __c-&gt;xReal( l ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;                        <span class="keyword">typename</span> expression_type::value_type __value = expr.evalq( c1, c2, l );</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;                        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[integratoronexpr] value=&quot;</span> &lt;&lt; __value &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                        <span class="comment">// global Dof</span></div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                        <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> thedof =  _M_u.start() +</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;                            boost::get&lt;0&gt;( __dof-&gt;faceLocalToGlobal( __face_it-&gt;id(), l, c1 ) );</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                        <span class="comment">//size_type thedof_nproc = __dof-&gt;dofNProc( thedof );</span></div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;                        <span class="keywordflow">if</span> ( std::find( dofs.begin(),</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;                                        dofs.end(),</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                                        thedof ) != dofs.end() )</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                        <span class="keywordflow">if</span> ( _M_on_strategy.test( <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aaf2c420d247276b43791a9554713f838c">ON_ELIMINATION</a> ) )</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                        {</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                            DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;Eliminating row &quot;</span> &lt;&lt; thedof &lt;&lt; <span class="stringliteral">&quot; using value : &quot;</span> &lt;&lt; __value &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                            <span class="comment">// this can be quite expensive depending on the</span></div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                            <span class="comment">// matrix storage format.</span></div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;                            <span class="comment">//__form.diagonalize( thedof, range_dof, _M_rhs, __value, thedof_nproc );</span></div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="preprocessor">#if !defined(FEELPP_ENABLE_MPI_MODE)</span></div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;<span class="preprocessor"></span>                            dofs.push_back( thedof );</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                            values.push_back( __value );</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                            <span class="comment">// only the real dof ( not the ghosts )</span></div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                            <span class="comment">//if ( __form.testSpace()-&gt;mapOn().dofGlobalClusterIsOnProc( __form.testSpace()-&gt;mapOn().mapGlobalProcessToGlobalCluster( thedof ) ) )</span></div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                            {</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                                dofs.push_back( thedof );</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                                values.push_back( __value );</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                            }</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                            <span class="comment">//_M_rhs.set( thedof, __value );</span></div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                        }</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        DVLOG(2)  &lt;&lt; <span class="stringliteral">&quot;face_type::numVertices = &quot;</span> &lt;&lt; face_type::numVertices &lt;&lt; <span class="stringliteral">&quot;, fe_type::nDofPerVertex = &quot;</span> &lt;&lt; fe_type::nDofPerVertex &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;face_type::numEdges = &quot;</span> &lt;&lt; face_type::numEdges &lt;&lt; <span class="stringliteral">&quot;, fe_type::nDofPerEdge = &quot;</span> &lt;&lt; fe_type::nDofPerEdge &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;face_type::numFaces = &quot;</span> &lt;&lt; face_type::numFaces &lt;&lt; <span class="stringliteral">&quot;, fe_type::nDofPerFace = &quot;</span> &lt;&lt; fe_type::nDofPerFace &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> nbFaceDof = <a class="code" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">invalid_size_type_value</a>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordflow">if</span> ( !fe_type::is_modal )</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;            nbFaceDof = ( face_type::numVertices * fe_type::nDofPerVertex +</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                          face_type::numEdges * fe_type::nDofPerEdge +</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                          face_type::numFaces * fe_type::nDofPerFace );</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            nbFaceDof = face_type::numVertices * fe_type::nDofPerVertex;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        DVLOG(2)  &lt;&lt; <span class="stringliteral">&quot;nbFaceDof = &quot;</span> &lt;&lt; nbFaceDof &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="comment">//const size_type nbFaceDof = __fe-&gt;boundaryFE()-&gt;points().size2();</span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <span class="keywordflow">for</span> ( ;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;              __face_it != this-&gt;endElement();</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;              ++__face_it )</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        {</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            <span class="keywordflow">if</span> ( !__face_it-&gt;isConnectedTo0() )</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                LOG( WARNING ) &lt;&lt; <span class="stringliteral">&quot;face not connected&quot;</span> &lt;&lt; *__face_it;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            }</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;            <span class="comment">// do not process the face if it is a ghost face: belonging to two</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;            <span class="comment">// processes and being in a process id greater than the one</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            <span class="comment">// corresponding face</span></div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            <span class="keywordflow">if</span> ( __face_it-&gt;isGhostFace() )</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            {</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;                LOG(WARNING) &lt;&lt; <span class="stringliteral">&quot;face id : &quot;</span> &lt;&lt; __face_it-&gt;id() &lt;&lt; <span class="stringliteral">&quot; is a ghost face&quot;</span>;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;FACE_ID = &quot;</span> &lt;&lt; __face_it-&gt;id()</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                     &lt;&lt; <span class="stringliteral">&quot; element id= &quot;</span> &lt;&lt; __face_it-&gt;ad_first()</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                     &lt;&lt; <span class="stringliteral">&quot; pos in elt= &quot;</span> &lt;&lt; __face_it-&gt;pos_first()</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                     &lt;&lt; <span class="stringliteral">&quot; marker: &quot;</span> &lt;&lt; __face_it-&gt;marker() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;            DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;FACE_ID = &quot;</span> &lt;&lt; __face_it-&gt;id() &lt;&lt; <span class="stringliteral">&quot; face pts=&quot;</span> &lt;&lt; __face_it-&gt;G() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;            uint16_type __face_id = __face_it-&gt;pos_first();</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            __c-&gt;update( __face_it-&gt;element( 0 ), __face_id );</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;            DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;FACE_ID = &quot;</span> &lt;&lt; __face_it-&gt;id() &lt;&lt; <span class="stringliteral">&quot;  ref pts=&quot;</span> &lt;&lt; __c-&gt;xRefs() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;FACE_ID = &quot;</span> &lt;&lt; __face_it-&gt;id() &lt;&lt; <span class="stringliteral">&quot; real pts=&quot;</span> &lt;&lt; __c-&gt;xReal() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;            map_gmc_type mapgmc( fusion::make_pair&lt;vf::detail::gmc&lt;0&gt; &gt;( __c ) );</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;            t_expr_type expr( M_expr, mapgmc );</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;            expr.update( mapgmc );</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;            std::pair&lt;size_type,size_type&gt; range_dof( std::make_pair( M_u.start(),</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                                                                      M_u.functionSpace()-&gt;nDof() ) );</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;            DVLOG(2)  &lt;&lt; <span class="stringliteral">&quot;[integratoron] dof start = &quot;</span> &lt;&lt; range_dof.first &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;            DVLOG(2)  &lt;&lt; <span class="stringliteral">&quot;[integratoron] dof range = &quot;</span> &lt;&lt; range_dof.second &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;            <span class="keywordflow">for</span> ( uint16_type c1 = 0; c1 &lt; shape::M; ++c1 )</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;                <span class="keywordflow">for</span> ( uint16_type c2 = 0; c2 &lt; shape::N; ++c2 )</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;                {</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;                    <span class="keywordflow">for</span> ( uint16_type l = 0; l &lt; nbFaceDof; ++l )</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;                    {</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;                        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[integratoronexpr] local dof=&quot;</span> &lt;&lt; l</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;                                 &lt;&lt; <span class="stringliteral">&quot; |comp1=&quot;</span> &lt;&lt; c1 &lt;&lt; <span class="stringliteral">&quot; comp 2= &quot;</span> &lt;&lt; c2 &lt;&lt; <span class="stringliteral">&quot; | pt = &quot;</span> &lt;&lt;  __c-&gt;xReal( l ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;                        <span class="keyword">typename</span> expression_type::value_type __value = expr.evalq( c1, c2, l );</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;                        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[integratoronexpr] value=&quot;</span> &lt;&lt; __value &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;                        <span class="comment">// global Dof</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                        <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> thedof =  M_u.start() +</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                            boost::get&lt;0&gt;( __dof-&gt;faceLocalToGlobal( __face_it-&gt;id(), l, c1 ) );</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                        <span class="comment">//size_type thedof_nproc = __dof-&gt;dofNProc( thedof );</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                        <span class="keywordflow">if</span> ( std::find( dofs.begin(),</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;                                        dofs.end(),</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;                                        thedof ) != dofs.end() )</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                        <span class="keywordflow">if</span> ( M_on_strategy.test( <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aaf2c420d247276b43791a9554713f838c">ON_ELIMINATION</a>|<a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aae2a39c0d36d2e91cf3a53072f83dc6b8">ON_ELIMINATION_SYMMETRIC</a> ) )</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                        {</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                            DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;Eliminating row &quot;</span> &lt;&lt; thedof &lt;&lt; <span class="stringliteral">&quot; using value : &quot;</span> &lt;&lt; __value &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                            <span class="comment">// this can be quite expensive depending on the</span></div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                            <span class="comment">// matrix storage format.</span></div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                            <span class="comment">//__form.diagonalize( thedof, range_dof, M_rhs, __value, thedof_nproc );</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;                            <span class="comment">// only the real dof ( not the ghosts )</span></div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                            <span class="comment">//if ( __form.testSpace()-&gt;mapOn().dofGlobalClusterIsOnProc( __form.testSpace()-&gt;mapOn().mapGlobalProcessToGlobalCluster( thedof ) ) )</span></div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                            {</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;                                dofs.push_back( thedof );</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                                values.push_back(  __value );</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                            }</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                            <span class="comment">//M_rhs.set( thedof, __value );</span></div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                        }</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (  M_on_strategy.test( <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aa9fedbe2a76c0b49db59f5c26de372915">ON_PENALISATION</a> ) &amp;&amp;</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                                   !M_on_strategy.test( <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aaf2c420d247276b43791a9554713f838c">ON_ELIMINATION</a> | <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aae2a39c0d36d2e91cf3a53072f83dc6b8">ON_ELIMINATION_SYMMETRIC</a> ) )</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                        {</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                            __form.set( thedof, thedof, 1.0*1e30 );</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                            M_rhs-&gt;set( thedof, __value*1e30 );</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                        }</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                    } <span class="comment">// loop on space components</span></div>
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (  _M_on_strategy.test( <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aa9fedbe2a76c0b49db59f5c26de372915">ON_PENALISATION</a> ) &amp;&amp;</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;                                   !_M_on_strategy.test( <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aaf2c420d247276b43791a9554713f838c">ON_ELIMINATION</a> ) )</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;                        {</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;                            __form.set( thedof, thedof, 1.0*1e30 );</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;                            _M_rhs-&gt;set( thedof, __value*1e30 );</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;                        }</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;                    } <span class="comment">// loop on space components</span></div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;                } <span class="comment">// loop on face dof</span></div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        }</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    } <span class="comment">// __face_it != __face_en</span></div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    <span class="keywordflow">if</span> ( __form.rowStartInMatrix()!=0)</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    {</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        <span class="keyword">auto</span> <span class="keyword">const</span> thedofshift = __form.rowStartInMatrix();</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> itd=dofs.begin(),end=dofs.end() ; itd!=end ; ++itd)</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;            *itd+=thedofshift;</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    }</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    __form.zeroRows( dofs, values, *_M_rhs, _M_on_strategy );</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;}</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;<span class="preprocessor">#if 1</span></div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;                } <span class="comment">// loop on face dof</span></div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        }</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    } <span class="comment">// __face_it != __face_en</span></div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    <span class="keywordflow">if</span> ( __form.rowStartInMatrix()!=0)</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    {</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        <span class="keyword">auto</span> <span class="keyword">const</span> thedofshift = __form.rowStartInMatrix();</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> itd=dofs.begin(),end=dofs.end() ; itd!=end ; ++itd)</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;            *itd+=thedofshift;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    }</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    <span class="keyword">auto</span> x = M_rhs-&gt;clone();</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    CHECK( dofs.size() &gt; 0 ) &lt;&lt; <span class="stringliteral">&quot;Invalid number of Dirichlet dof, should be &gt; 0 &quot;</span>;</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    CHECK( values.size() == dofs.size() ) &lt;&lt; <span class="stringliteral">&quot;Invalid dofs/values size: &quot;</span> &lt;&lt; dofs.size() &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; values.size();</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    <span class="comment">//x-&gt;zero();</span></div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    x-&gt;addVector( dofs.data(), dofs.size(), values.data() );</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    <span class="comment">//values-&gt;zero();</span></div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    __form.zeroRows( dofs, *x, *M_rhs, M_on_strategy );</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    x.reset();</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;}</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;<span class="keyword">namespace </span>detail</div>
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;{</div>
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T &gt;</div>
@@ -642,104 +642,56 @@ $(document).ready(function(){initNavTree('integratoron_8hpp_source.html','');});
 <div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;      ( element, *  )</div>
 <div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;      ( rhs, *  )</div>
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;      ( expr,   * )</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    ) <span class="comment">// 4. one required parameter, and</span></div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;        ) <span class="comment">// 4. one required parameter, and</span></div>
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;</div>
 <div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    ( optional</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;      ( type,   ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> ), <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aaf2c420d247276b43791a9554713f838c">ON_ELIMINATION</a>|<a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aac885f100d1a310c35efd57a5fe100c8e">ON_ELIMINATION_KEEP_DIAGONAL</a> )</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;      ( verbose,   ( <span class="keywordtype">bool</span> ), <span class="keyword">false</span> )</div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;    )</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;)</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;{</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    <span class="keyword">typename</span> vf::detail::integratoron_type&lt;Args&gt;::type ion( range, element, Feel::vf::detail::getRhsVector(rhs), expr, type );</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    <span class="comment">//typename vf::detail::integratoron_type&lt;Args&gt;::type ion( range, element, rhs, expr, type );</span></div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">typename</span> vf::detail::integratoron_type&lt;Args&gt;::expr_type( ion );</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;}</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;<span class="preprocessor"></span><span class="keyword">namespace </span>detail</div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;{</div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ElementRange, <span class="keyword">typename</span> Elem, <span class="keyword">typename</span> RhsElem, <span class="keyword">typename</span> OnExpr&gt;</div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;Expr&lt;IntegratorOnExpr&lt;ElementRange, Elem,RhsElem,</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;     <span class="keyword">typename</span> mpl::if_&lt;boost::is_arithmetic&lt;OnExpr&gt;,</div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;     mpl::identity&lt;Expr&lt;Cst&lt;OnExpr&gt; &gt; &gt;,</div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;     mpl::identity&lt;OnExpr&gt; &gt;::type::type&gt; &gt;</div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;     on( ElementRange <span class="keyword">const</span>&amp; __r,</div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;         Elem <span class="keyword">const</span>&amp; __u,</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;         RhsElem&amp;  __rhs,</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;         OnExpr <span class="keyword">const</span>&amp; __e,</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;         <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __on,</div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;         mpl::bool_&lt;false&gt; )</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;{</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;boost::is_arithmetic&lt;OnExpr&gt;,</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;            mpl::identity&lt;Expr&lt;Cst&lt;OnExpr&gt; &gt; &gt;,</div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;            mpl::identity&lt;OnExpr&gt; &gt;::type::type expr_type;</div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    expr_type expr( __e );</div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    <span class="keyword">typedef</span> IntegratorOnExpr&lt;ElementRange, Elem,RhsElem, expr_type&gt; expr_t;</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;    <span class="keywordflow">return</span> Expr&lt;expr_t&gt;( expr_t( __r, __u, __rhs, expr, __on ) );</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;    <span class="comment">//return on( __r, __u, __rhs, expr, __on, mpl::bool_&lt;boost::is_arithmetic&lt;OnExpr&gt;::value&gt;() );</span></div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;}</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ElementRange, <span class="keyword">typename</span> Elem, <span class="keyword">typename</span> RhsElem, <span class="keyword">typename</span> OnExpr&gt;</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;Expr&lt;IntegratorOnExpr&lt;ElementRange, Elem, <span class="keyword">typename</span> RhsElem::value_type,</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;     <span class="keyword">typename</span> mpl::if_&lt;boost::is_arithmetic&lt;OnExpr&gt;,</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;     mpl::identity&lt;Expr&lt;Cst&lt;OnExpr&gt; &gt; &gt;,</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;     mpl::identity&lt;OnExpr&gt; &gt;::type::type&gt; &gt;</div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;     on( ElementRange <span class="keyword">const</span>&amp; __r,</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;         Elem <span class="keyword">const</span>&amp; __u,</div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;         RhsElem&amp;  __rhs,</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;         OnExpr <span class="keyword">const</span>&amp; __e,</div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;         <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __on,</div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;         mpl::bool_&lt;true&gt; )</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;{</div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;    <span class="keywordflow">return</span> on( __r, __u, __rhs, __e, __on, mpl::bool_&lt;false&gt;() );</div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;}</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;} <span class="comment">// detail namespace</span></div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ElementRange, <span class="keyword">typename</span> Elem, <span class="keyword">typename</span> RhsElem, <span class="keyword">typename</span> OnExpr&gt;</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;Expr&lt;IntegratorOnExpr&lt;ElementRange, Elem,</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;     <span class="keyword">typename</span> mpl::if_&lt;mpl::or_&lt;is_shared_ptr&lt;RhsElem&gt;, boost::is_pointer&lt;RhsElem&gt; &gt;,</div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;     mpl::identity&lt;typename RhsElem::value_type&gt;,</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;     mpl::identity&lt;RhsElem&gt; &gt;::type::type,</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;     <span class="keyword">typename</span> mpl::if_&lt;boost::is_arithmetic&lt;OnExpr&gt;,</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;     mpl::identity&lt;Expr&lt;Cst&lt;OnExpr&gt; &gt; &gt;,</div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;     mpl::identity&lt;OnExpr&gt; &gt;::type::type&gt; &gt;</div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;     on( ElementRange <span class="keyword">const</span>&amp; __r,</div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;         Elem <span class="keyword">const</span>&amp; __u,</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;         RhsElem&amp;  __rhs,</div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;         OnExpr <span class="keyword">const</span>&amp; __e,</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;         <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __on = <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aaf2c420d247276b43791a9554713f838c">ON_ELIMINATION</a>|<a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aac885f100d1a310c35efd57a5fe100c8e">ON_ELIMINATION_KEEP_DIAGONAL</a> )</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;{</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    returnvf::detail::on( __r, __u, __rhs, __e, __on,  mpl::or_&lt;is_shared_ptr&lt;RhsElem&gt;, boost::is_pointer&lt;RhsElem&gt; &gt;() );</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;</div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;}</div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ElementRange, <span class="keyword">typename</span> Elem, <span class="keyword">typename</span> RhsElem, <span class="keyword">typename</span> OnExpr&gt;</div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;Expr&lt;IntegratorOnExpr&lt;ElementRange, Elem,</div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;     <span class="keyword">typename</span> mpl::if_&lt;mpl::or_&lt;is_shared_ptr&lt;RhsElem&gt;, boost::is_pointer&lt;RhsElem&gt; &gt;,</div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;     mpl::identity&lt;typename RhsElem::value_type&gt;,</div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;     mpl::identity&lt;RhsElem&gt; &gt;::type::type,</div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;     <span class="keyword">typename</span> mpl::if_&lt;boost::is_arithmetic&lt;OnExpr&gt;,</div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;     mpl::identity&lt;Expr&lt;Cst&lt;OnExpr&gt; &gt; &gt;,</div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;     mpl::identity&lt;OnExpr&gt; &gt;::type::type&gt; &gt;</div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;     on( ElementRange <span class="keyword">const</span>&amp; __r,</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;         boost::shared_ptr&lt;Elem&gt;  __u,</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;         boost::shared_ptr&lt;RhsElem&gt;  __rhs,</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;         OnExpr <span class="keyword">const</span>&amp; __e,</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;         <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __on = <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aaf2c420d247276b43791a9554713f838c">ON_ELIMINATION</a>|<a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aac885f100d1a310c35efd57a5fe100c8e">ON_ELIMINATION_KEEP_DIAGONAL</a> )</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;{</div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    returnvf::detail::on( __r, __u, __rhs, __e, __on,  mpl::or_&lt;is_shared_ptr&lt;RhsElem&gt;, boost::is_pointer&lt;RhsElem&gt; &gt;() );</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;}</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;<span class="preprocessor">#endif // 0</span></div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;} <span class="comment">// vf</span></div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;} <span class="comment">// feel</span></div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;      ( prefix,   ( std::string ), <span class="stringliteral">&quot;&quot;</span> )</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;      ( type,   ( <span class="keywordtype">int</span> ), option(_prefix=prefix,_name=<span class="stringliteral">&quot;on.type&quot;</span>).<span class="keyword">template</span> as&lt;int&gt;() )</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;      ( verbose,   ( <span class="keywordtype">bool</span> ), option(_prefix=prefix,_name=<span class="stringliteral">&quot;on.verbose&quot;</span>).<span class="keyword">template</span> as&lt;bool&gt;() )</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        )</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    )</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;{</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    <span class="keyword">typename</span> vf::detail::integratoron_type&lt;Args&gt;::type ion( range,</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;                                                            element,</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;                                                            Feel::vf::detail::getRhsVector(rhs),</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;                                                            expr,</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;                                                            <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10a">on_context_type</a>(type) );</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    <span class="keywordflow">if</span> ( verbose )</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    {</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;Dirichlet condition over : &quot;</span>&lt;&lt; <a class="code" href="namespaceFeel.html#a3198793dc5cee5c96bd5b8f22bd2865c">nelements</a>(range) &lt;&lt; <span class="stringliteral">&quot; faces&quot;</span>;</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        <span class="keywordflow">switch</span>( type )</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;        {</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aaf2c420d247276b43791a9554713f838c">ON_ELIMINATION</a>:</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;treatment of Dirichlet condition: &quot;</span> &lt;&lt; type &lt;&lt; <span class="stringliteral">&quot; (elimination, unsymmetric)&quot;</span>;</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aaf2c420d247276b43791a9554713f838c">ON_ELIMINATION</a>|<a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aac885f100d1a310c35efd57a5fe100c8e">ON_ELIMINATION_KEEP_DIAGONAL</a>:</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;treatment of Dirichlet condition: &quot;</span> &lt;&lt; type &lt;&lt; <span class="stringliteral">&quot; (elimination and keep diagonal, unsymmetric)&quot;</span>;</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aae2a39c0d36d2e91cf3a53072f83dc6b8">ON_ELIMINATION_SYMMETRIC</a>:</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;treatment of Dirichlet condition: &quot;</span> &lt;&lt; type &lt;&lt; <span class="stringliteral">&quot; (elimination, symmetric, more expensive than unsymmetric treatment)&quot;</span>;</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aae2a39c0d36d2e91cf3a53072f83dc6b8">ON_ELIMINATION_SYMMETRIC</a>|<a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aac885f100d1a310c35efd57a5fe100c8e">ON_ELIMINATION_KEEP_DIAGONAL</a>:</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;treatment of Dirichlet condition: &quot;</span> &lt;&lt; type &lt;&lt; <span class="stringliteral">&quot; (elimination and keep diagonal, symmetric, more expensive than unsymmetric treatment)&quot;</span>;</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aa9fedbe2a76c0b49db59f5c26de372915">ON_PENALISATION</a>:</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;treatment of Dirichlet condition: &quot;</span> &lt;&lt; type &lt;&lt; <span class="stringliteral">&quot; (penalisation, symmetric, very big value on diagonal)&quot;</span>;</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;        }</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;    }</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    <span class="comment">//typename vf::detail::integratoron_type&lt;Args&gt;::type ion( range, element, rhs, expr, type );</span></div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">typename</span> vf::detail::integratoron_type&lt;Args&gt;::expr_type( ion );</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;}</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;} <span class="comment">// vf</span></div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;} <span class="comment">// feel</span></div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:01:50 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:30 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

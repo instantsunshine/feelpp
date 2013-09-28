@@ -222,7 +222,7 @@ $(document).ready(function(){initNavTree('val_8hpp_source.html','');});
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    explicit Val( expression_1_type const&amp; __expr1  )</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        :</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        super( &quot;value&quot;, functordomain_ptrtype( new UnboundedDomain&lt;value_type&gt;() ) ),</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        _M_expr_1( __expr1 )</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        M_expr_1( __expr1 )</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    {</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;Val::Val default constructorn&quot;</span>;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
@@ -230,7 +230,7 @@ $(document).ready(function(){initNavTree('val_8hpp_source.html','');});
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    Val( Val <span class="keyword">const</span>&amp; __vfp  )</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        :</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        super( <span class="stringliteral">&quot;value&quot;</span>, functordomain_ptrtype( new UnboundedDomain&lt;value_type&gt;() ) ),</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        _M_expr_1( __vfp._M_expr_1 )</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        M_expr_1( __vfp.M_expr_1 )</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;Val::Val copy constructorn&quot;</span>;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
@@ -248,7 +248,7 @@ $(document).ready(function(){initNavTree('val_8hpp_source.html','');});
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    expression_1_type <span class="keyword">const</span>&amp; expression()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">return</span> _M_expr_1;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">return</span> M_expr_1;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Geo_t, <span class="keyword">typename</span> Basis_i_t, <span class="keyword">typename</span> Basis_j_t = Basis_i_t&gt;</div>
@@ -273,34 +273,34 @@ $(document).ready(function(){initNavTree('val_8hpp_source.html','');});
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ExprT&gt;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        tensor( ExprT <span class="keyword">const</span>&amp; expr, Geo_t <span class="keyword">const</span>&amp; geom, Basis_i_t <span class="keyword">const</span>&amp; <span class="comment">/*fev*/</span>, Basis_j_t <span class="keyword">const</span>&amp; <span class="comment">/*feu*/</span> )</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            :</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            _M_expr( expr.expression(), geom ),</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            _M_gmc( fusion::at_key&lt;key_type&gt;( geom ).get() ),</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            _M_loc( boost::extents[_M_gmc-&gt;nPoints()][shape::M][shape::N] )</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            M_expr( expr.expression(), geom ),</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            M_gmc( fusion::at_key&lt;key_type&gt;( geom ).get() ),</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            M_loc( boost::extents[M_gmc-&gt;nPoints()][shape::M][shape::N] )</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        {</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            update( geom );</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ExprT&gt;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        tensor( ExprT <span class="keyword">const</span>&amp; expr,Geo_t <span class="keyword">const</span>&amp; geom, Basis_i_t <span class="keyword">const</span>&amp; <span class="comment">/*fev*/</span> )</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            :</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            _M_expr( expr.expression(), geom ),</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            _M_gmc( fusion::at_key&lt;key_type&gt;( geom ).get() ),</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            _M_loc( boost::extents[_M_gmc-&gt;nPoints()][shape::M][shape::N] )</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            M_expr( expr.expression(), geom ),</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            M_gmc( fusion::at_key&lt;key_type&gt;( geom ).get() ),</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            M_loc( boost::extents[M_gmc-&gt;nPoints()][shape::M][shape::N] )</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        {</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            update( geom );</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        }</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ExprT&gt;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        tensor( ExprT <span class="keyword">const</span>&amp; expr, Geo_t <span class="keyword">const</span>&amp; geom )</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            :</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            _M_expr( expr.expression(), geom ),</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            _M_gmc( fusion::at_key&lt;key_type&gt;( geom ).get() ),</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            _M_loc( boost::extents[_M_gmc-&gt;nPoints()][shape::M][shape::N] )</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            M_expr( expr.expression(), geom ),</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            M_gmc( fusion::at_key&lt;key_type&gt;( geom ).get() ),</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            M_loc( boost::extents[M_gmc-&gt;nPoints()][shape::M][shape::N] )</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        {</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            update( geom );</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        }</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> IM&gt;</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordtype">void</span> init( IM <span class="keyword">const</span>&amp; im )</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            _M_expr.init( im );</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            M_expr.init( im );</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        }</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordtype">void</span> update( Geo_t <span class="keyword">const</span>&amp; geom, Basis_i_t <span class="keyword">const</span>&amp; <span class="comment">/*fev*/</span>, Basis_j_t <span class="keyword">const</span>&amp; <span class="comment">/*feu*/</span> )</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        {</div>
@@ -312,24 +312,24 @@ $(document).ready(function(){initNavTree('val_8hpp_source.html','');});
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        }</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordtype">void</span> update( Geo_t <span class="keyword">const</span>&amp; geom )</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        {</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            _M_expr.update( geom );</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            M_expr.update( geom );</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> q = 0; q &lt; _M_gmc-&gt;nPoints(); ++q )</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> q = 0; q &lt; M_gmc-&gt;nPoints(); ++q )</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> c1 = 0; c1 &lt; shape::M; ++c1 )</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> c2 = 0; c2 &lt; shape::N; ++c2 )</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                    {</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                        _M_loc[q][c1][c2] = _M_expr.evalq( c1, c2, q );</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                        M_loc[q][c1][c2] = M_expr.evalq( c1, c2, q );</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                    }</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        }</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordtype">void</span> update( Geo_t <span class="keyword">const</span>&amp; geom, uint16_type face )</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            _M_expr.update( geom, face );</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            M_expr.update( geom, face );</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> q = 0; q &lt; _M_gmc-&gt;nPoints(); ++q )</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> q = 0; q &lt; M_gmc-&gt;nPoints(); ++q )</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> c1 = 0; c1 &lt; shape::M; ++c1 )</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> c2 = 0; c2 &lt; shape::N; ++c2 )</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                    {</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                        _M_loc[q][c1][c2] = _M_expr.evalq( c1, c2, q );</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                        M_loc[q][c1][c2] = M_expr.evalq( c1, c2, q );</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    }</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        }</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
@@ -362,31 +362,31 @@ $(document).ready(function(){initNavTree('val_8hpp_source.html','');});
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            Feel::detail::ignore_unused_variable_warning( c1 );</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            Feel::detail::ignore_unused_variable_warning( c2 );</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="keywordflow">return</span> _M_loc[q][0][0];</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="keywordflow">return</span> M_loc[q][0][0];</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        }</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        value_type</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        evalq( uint16_type c1, uint16_type c2, uint16_type q, mpl::int_&lt;1&gt; )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <span class="keywordflow">if</span> ( shape::M &gt; shape::N )</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                <span class="keywordflow">return</span> _M_loc[q][c1][0];</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                <span class="keywordflow">return</span> M_loc[q][c1][0];</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keywordflow">return</span> _M_loc[q][0][c2];</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keywordflow">return</span> M_loc[q][0][c2];</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        }</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        value_type</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        evalq( uint16_type c1, uint16_type c2, uint16_type q, mpl::int_&lt;2&gt; )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            <span class="keywordflow">return</span> _M_loc[q][c1][c2];</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            <span class="keywordflow">return</span> M_loc[q][c1][c2];</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        }</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        tensor2_expr_type _M_expr;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        gmc_ptrtype _M_gmc;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        boost::multi_array&lt;value_type,3&gt; _M_loc;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        tensor2_expr_type M_expr;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        gmc_ptrtype M_gmc;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        boost::multi_array&lt;value_type,3&gt; M_loc;</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    };</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    Val() {}</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    expression_1_type _M_expr_1;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    expression_1_type M_expr_1;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;};</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ExprT1&gt;</div>
@@ -408,7 +408,7 @@ $(document).ready(function(){initNavTree('val_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:02:04 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:44 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

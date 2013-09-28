@@ -99,9 +99,6 @@ $(document).ready(function(){initNavTree('integratoron_8hpp.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">integratoron.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -111,56 +108,13 @@ $(document).ready(function(){initNavTree('integratoron_8hpp.html','');});
 <code>#include &lt;feel/feelalg/enums.hpp&gt;</code><br/>
 </div>
 <p><a href="integratoron_8hpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespaceFeel"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html">Feel</a></td></tr>
-<tr class="memdesc:namespaceFeel"><td class="mdescLeft">&#160;</td><td class="mdescRight">[marker1] <br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:acb68be40548d49fbdc438fab8fd25a9d"><td class="memTemplParams" colspan="2">template&lt;typename ElementRange , typename Elem , typename RhsElem , typename OnExpr &gt; </td></tr>
-<tr class="memitem:acb68be40548d49fbdc438fab8fd25a9d"><td class="memTemplItemLeft" align="right" valign="top">Expr&lt; IntegratorOnExpr<br class="typebreak"/>
-&lt; ElementRange, Elem, typename <br class="typebreak"/>
-mpl::if_&lt; mpl::or_<br class="typebreak"/>
-&lt; is_shared_ptr&lt; RhsElem &gt;<br class="typebreak"/>
-, boost::is_pointer&lt; RhsElem &gt;<br class="typebreak"/>
- &gt;, mpl::identity&lt; typename <br class="typebreak"/>
-RhsElem::value_type &gt;<br class="typebreak"/>
-, mpl::identity&lt; RhsElem &gt;<br class="typebreak"/>
- &gt;::type::type, typename <br class="typebreak"/>
-mpl::if_&lt; boost::is_arithmetic<br class="typebreak"/>
-&lt; OnExpr &gt;, mpl::identity<br class="typebreak"/>
-&lt; Expr&lt; Cst&lt; OnExpr &gt;<br class="typebreak"/>
- &gt; &gt;, mpl::identity&lt; OnExpr &gt;<br class="typebreak"/>
- &gt;::type::type &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Feel::vf::on</b> (ElementRange const &amp;__r, Elem const &amp;__u, RhsElem &amp;__rhs, OnExpr const &amp;__e, size_type __on=ON_ELIMINATION|ON_ELIMINATION_KEEP_DIAGONAL)</td></tr>
-<tr class="separator:acb68be40548d49fbdc438fab8fd25a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6e7896f003dfe249cb873c50d6d799c"><td class="memTemplParams" colspan="2"><a class="anchor" id="af6e7896f003dfe249cb873c50d6d799c"></a>
-template&lt;typename ElementRange , typename Elem , typename RhsElem , typename OnExpr &gt; </td></tr>
-<tr class="memitem:af6e7896f003dfe249cb873c50d6d799c"><td class="memTemplItemLeft" align="right" valign="top">Expr&lt; IntegratorOnExpr<br class="typebreak"/>
-&lt; ElementRange, Elem, typename <br class="typebreak"/>
-mpl::if_&lt; mpl::or_<br class="typebreak"/>
-&lt; is_shared_ptr&lt; RhsElem &gt;<br class="typebreak"/>
-, boost::is_pointer&lt; RhsElem &gt;<br class="typebreak"/>
- &gt;, mpl::identity&lt; typename <br class="typebreak"/>
-RhsElem::value_type &gt;<br class="typebreak"/>
-, mpl::identity&lt; RhsElem &gt;<br class="typebreak"/>
- &gt;::type::type, typename <br class="typebreak"/>
-mpl::if_&lt; boost::is_arithmetic<br class="typebreak"/>
-&lt; OnExpr &gt;, mpl::identity<br class="typebreak"/>
-&lt; Expr&lt; Cst&lt; OnExpr &gt;<br class="typebreak"/>
- &gt; &gt;, mpl::identity&lt; OnExpr &gt;<br class="typebreak"/>
- &gt;::type::type &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Feel::vf::on</b> (ElementRange const &amp;__r, boost::shared_ptr&lt; Elem &gt; __u, boost::shared_ptr&lt; RhsElem &gt; __rhs, OnExpr const &amp;__e, size_type __on=ON_ELIMINATION|ON_ELIMINATION_KEEP_DIAGONAL)</td></tr>
-<tr class="separator:af6e7896f003dfe249cb873c50d6d799c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme <a href="#" onclick="location.href='mai'+'lto:'+'chr'+'is'+'top'+'he'+'.pr'+'ud'+'hom'+'me'+'@fe'+'el'+'pp.'+'or'+'g'; return false;">chris<span style="display: none;">.nosp@m.</span>toph<span style="display: none;">.nosp@m.</span>e.pru<span style="display: none;">.nosp@m.</span>dhom<span style="display: none;">.nosp@m.</span>me@fe<span style="display: none;">.nosp@m.</span>elpp<span style="display: none;">.nosp@m.</span>.org</a> </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2005-03-15 </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:02:05 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:45 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

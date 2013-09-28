@@ -287,7 +287,7 @@ $(document).ready(function(){initNavTree('stdmathfunctors_8hpp_source.html','');
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor">            explicit VF_FUNC_NAME(O)( expression_1_type const&amp; __expr1  ) \</span></div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor">            :                                                           \</span></div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">            super( VF_FUNC_NAME_STRING(O), functordomain_ptrtype(new VF_FUNC_DOMAIN(O) )), \</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">            _M_expr_1( __expr1 )                                        \</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">            M_expr_1( __expr1 )                                        \</span></div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">            {                                                           \</span></div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor">                DVLOG(2) &lt;&lt; &quot;VF_FUNC_NAME(O)::VF_FUNC_NAME(O) default constructor\n&quot;; \</span></div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">            }                                                           \</span></div>
@@ -295,7 +295,7 @@ $(document).ready(function(){initNavTree('stdmathfunctors_8hpp_source.html','');
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">        VF_FUNC_NAME(O)( VF_FUNC_NAME(O) const&amp; __vfp  )                \</span></div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">            :                                                           \</span></div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">            super( VF_FUNC_NAME_STRING(O), functordomain_ptrtype(new VF_FUNC_DOMAIN(O) )), \</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">            _M_expr_1( __vfp._M_expr_1 )                                \</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">            M_expr_1( __vfp.M_expr_1 )                                \</span></div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">                {                                                       \</span></div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">                    DVLOG(2) &lt;&lt; &quot;VF_FUNC_NAME(O)::VF_FUNC_NAME(O) copy constructor\n&quot;; \</span></div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="preprocessor">                }                                                       \</span></div>
@@ -318,7 +318,7 @@ $(document).ready(function(){initNavTree('stdmathfunctors_8hpp_source.html','');
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="preprocessor">        operator()( TheExpr const&amp; e ) { return VF_FUNC_NAME(O)&lt;TheExpr&gt;( e ); } \</span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="preprocessor">                                                                        \</span></div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">                                                                        \</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor">        expression_1_type const&amp; expression() const { return _M_expr_1; } \</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor">        expression_1_type const&amp; expression() const { return M_expr_1; } \</span></div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">                                                                        \</span></div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="preprocessor">        template&lt;typename Geo_t, typename Basis_i_t, typename Basis_j_t = Basis_i_t&gt; \</span></div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="preprocessor">            struct tensor                                               \</span></div>
@@ -334,29 +334,29 @@ $(document).ready(function(){initNavTree('stdmathfunctors_8hpp_source.html','');
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="preprocessor">                                                                        \</span></div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">            tensor( this_type const&amp; expr, Geo_t const&amp; geom, Basis_i_t const&amp; </span><span class="comment">/*fev*/</span><span class="preprocessor">, Basis_j_t const&amp; </span><span class="comment">/*feu*/</span><span class="preprocessor"> ) \</span></div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="preprocessor">                :                                                       \</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">                _M_expr( expr.expression(), geom ),                     \</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="preprocessor">                _M_gmc(vf::detail::ExtractGm&lt;Geo_t&gt;::get( geom ) )         \</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">                M_expr( expr.expression(), geom ),                     \</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="preprocessor">                M_gmc(vf::detail::ExtractGm&lt;Geo_t&gt;::get( geom ) )         \</span></div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="preprocessor">                    {                                                   \</span></div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="preprocessor">                        update( geom );                                 \</span></div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor">                    }                                                   \</span></div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="preprocessor">            tensor( this_type const&amp; expr,Geo_t const&amp; geom, Basis_i_t const&amp; </span><span class="comment">/*fev*/</span><span class="preprocessor"> ) \</span></div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="preprocessor">                :                                                       \</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="preprocessor">                _M_expr( expr.expression(), geom ),                     \</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor">                _M_gmc(vf::detail::ExtractGm&lt;Geo_t&gt;::get( geom ) )         \</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="preprocessor">                M_expr( expr.expression(), geom ),                     \</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor">                M_gmc(vf::detail::ExtractGm&lt;Geo_t&gt;::get( geom ) )         \</span></div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="preprocessor">                    {                                                   \</span></div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="preprocessor">                        update( geom );                                 \</span></div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="preprocessor">                    }                                                   \</span></div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="preprocessor">            tensor( this_type const&amp; expr, Geo_t const&amp; geom )             \</span></div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor">                :                                                       \</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">                _M_expr( expr.expression(), geom ),                     \</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="preprocessor">                _M_gmc(vf::detail::ExtractGm&lt;Geo_t&gt;::get( geom ) )         \</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">                M_expr( expr.expression(), geom ),                     \</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="preprocessor">                M_gmc(vf::detail::ExtractGm&lt;Geo_t&gt;::get( geom ) )         \</span></div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="preprocessor">                    {                                                   \</span></div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="preprocessor">                        update( geom );                                 \</span></div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor">                    }                                                   \</span></div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="preprocessor">            template&lt;typename IM&gt;                                       \</span></div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="preprocessor">                void init( IM const&amp; im )                               \</span></div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">            {                                                           \</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="preprocessor">                _M_expr.init( im );                                     \</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="preprocessor">                M_expr.init( im );                                     \</span></div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor">            }                                                           \</span></div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="preprocessor">            void update( Geo_t const&amp; geom, Basis_i_t const&amp; </span><span class="comment">/*fev*/</span><span class="preprocessor">, Basis_j_t const&amp; </span><span class="comment">/*feu*/</span><span class="preprocessor"> ) \</span></div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">            {                                                           \</span></div>
@@ -368,11 +368,11 @@ $(document).ready(function(){initNavTree('stdmathfunctors_8hpp_source.html','');
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">            }                                                           \</span></div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">            void update( Geo_t const&amp; geom )                            \</span></div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor">            {                                                           \</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">                _M_expr.update( geom );                                 \</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">                M_expr.update( geom );                                 \</span></div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">            }                                                           \</span></div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor">            void update( Geo_t const&amp; geom, uint16_type face )          \</span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">            {                                                           \</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor">                _M_expr.update( geom, face );                           \</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor">                M_expr.update( geom, face );                           \</span></div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">            }                                                           \</span></div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor">                              \</span></div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="preprocessor">                value_type                                              \</span></div>
@@ -396,17 +396,17 @@ $(document).ready(function(){initNavTree('stdmathfunctors_8hpp_source.html','');
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="preprocessor">            value_type                                                  \</span></div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor">                evalq( uint16_type c1, uint16_type c2, uint16_type q ) const \</span></div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">            {                                                           \</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor">                return VF_FUNC_IMPL(O)( _M_expr.evalq( c1, c2, q ) );   \</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor">                return VF_FUNC_IMPL(O)( M_expr.evalq( c1, c2, q ) );   \</span></div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="preprocessor">            }                                                           \</span></div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="preprocessor">        private:                                                        \</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="preprocessor">            tensor2_expr_type _M_expr;                                  \</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="preprocessor">            gmc_ptrtype _M_gmc;                                         \</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="preprocessor">            tensor2_expr_type M_expr;                                  \</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="preprocessor">            gmc_ptrtype M_gmc;                                         \</span></div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="preprocessor">        };                                                              \</span></div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor">                                                                        \</span></div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="preprocessor">    protected:                                                          \</span></div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor">        VF_FUNC_NAME(O)() {}                                            \</span></div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor">                                                                        \</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor">        expression_1_type _M_expr_1;                                    \</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor">        expression_1_type M_expr_1;                                    \</span></div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor">    };                                                                  \</span></div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="preprocessor">                                                                        \</span></div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="preprocessor">    template&lt;typename ExprT1&gt;                                           \</span></div>
@@ -446,7 +446,7 @@ $(document).ready(function(){initNavTree('stdmathfunctors_8hpp_source.html','');
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:02:01 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:41 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

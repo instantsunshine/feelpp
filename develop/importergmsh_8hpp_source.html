@@ -343,7 +343,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="classFeel_1_1ImporterGmsh.html" title="gmsh importer class ">ImporterGmsh</a>( WorldComm <span class="keyword">const</span>&amp; _worldcomm = Environment::worldComm() )</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        :</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        super( GMSH, _worldcomm ),</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        _M_version( FEELPP_GMSH_FORMAT_VERSION ),</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        M_version( FEELPP_GMSH_FORMAT_VERSION ),</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        M_use_elementary_region_as_physical_region( false )</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    {</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        this-&gt;setIgnorePhysicalName( <span class="stringliteral">&quot;FEELPP_GMSH_PHYSICALNAME_IGNORED&quot;</span> );</div>
@@ -354,7 +354,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                           WorldComm <span class="keyword">const</span>&amp; _worldcomm = Environment::worldComm() )</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        :</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        super( _fname, GMSH, _worldcomm ),</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        _M_version( _version ),</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        M_version( _version ),</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        M_use_elementary_region_as_physical_region( false )</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    {</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        this-&gt;setIgnorePhysicalName( <span class="stringliteral">&quot;FEELPP_GMSH_PHYSICALNAME_IGNORED&quot;</span> );</div>
@@ -363,10 +363,10 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    ImporterGmsh( ImporterGmsh <span class="keyword">const</span> &amp; i )</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        :</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        super( i ),</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        _M_version( i._M_version ),</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        M_version( i.M_version ),</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        M_use_elementary_region_as_physical_region( false ),</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        _M_ignorePhysicalGroup( i._M_ignorePhysicalGroup ),</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        _M_ignorePhysicalName( i._M_ignorePhysicalName )</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        M_ignorePhysicalGroup( i.M_ignorePhysicalGroup ),</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        M_ignorePhysicalName( i.M_ignorePhysicalName )</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    {</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        this-&gt;setIgnorePhysicalName( <span class="stringliteral">&quot;FEELPP_GMSH_PHYSICALNAME_IGNORED&quot;</span> );</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="comment">//showMe();</span></div>
@@ -381,7 +381,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
 <div class="line"><a name="l00329"></a><span class="lineno"><a class="code" href="classFeel_1_1ImporterGmsh.html#a2f605f0fb7d5a1d767bcb49c394b33fa">  329</a></span>&#160;    std::string <a class="code" href="classFeel_1_1ImporterGmsh.html#a2f605f0fb7d5a1d767bcb49c394b33fa">version</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">return</span> _M_version;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">return</span> M_version;</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    }</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    boost::tuple&lt;bool,boost::tuple&lt;bool,int&gt; &gt; <a class="code" href="classFeel_1_1ImporterGmsh.html#a0d3d5af2f0c6099deadcf8ad0685100a">isElementOnProcessor</a>( std::vector&lt;int&gt; <span class="keyword">const</span>&amp; tags ) <span class="keyword">const</span>;</div>
@@ -390,16 +390,16 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">void</span> setVersion( std::string <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1ImporterGmsh.html#a2f605f0fb7d5a1d767bcb49c394b33fa">version</a> )</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    {</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        _M_version = <a class="code" href="classFeel_1_1ImporterGmsh.html#a2f605f0fb7d5a1d767bcb49c394b33fa">version</a>;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        M_version = <a class="code" href="classFeel_1_1ImporterGmsh.html#a2f605f0fb7d5a1d767bcb49c394b33fa">version</a>;</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    }</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordtype">void</span> setIgnorePhysicalGroup( <span class="keywordtype">int</span> i )</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    {</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        _M_ignorePhysicalGroup.insert( i );</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        M_ignorePhysicalGroup.insert( i );</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    }</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">void</span> setIgnorePhysicalName( std::string s )</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    {</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        _M_ignorePhysicalName.insert( s );</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        M_ignorePhysicalName.insert( s );</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    }</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
@@ -440,12 +440,12 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    std::string _M_version;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    std::map&lt;int,int&gt; _M_n_vertices;</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="comment">//std::vector&lt;int&gt; _M_n_b_vertices;</span></div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    std::string M_version;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    std::map&lt;int,int&gt; M_n_vertices;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="comment">//std::vector&lt;int&gt; M_n_b_vertices;</span></div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    std::set&lt;int&gt; _M_ignorePhysicalGroup;</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    std::set&lt;std::string&gt; _M_ignorePhysicalName;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    std::set&lt;int&gt; M_ignorePhysicalGroup;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    std::set&lt;std::string&gt; M_ignorePhysicalName;</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordtype">bool</span> M_use_elementary_region_as_physical_region;</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="comment">//std::map&lt;int,int&gt; itoii;</span></div>
@@ -599,7 +599,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;                    std::vector&lt;int&gt; data = {id, topodim};</div>
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;                    mesh-&gt;addMarkerName( name, <span class="keywordtype">id</span>, topodim );</div>
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;                }</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;                <span class="keywordflow">if</span> ( _M_ignorePhysicalName.find( name )!=_M_ignorePhysicalName.end() ) this-&gt;setIgnorePhysicalGroup( <span class="keywordtype">id</span> );</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;                <span class="keywordflow">if</span> ( M_ignorePhysicalName.find( name )!=M_ignorePhysicalName.end() ) this-&gt;setIgnorePhysicalGroup( <span class="keywordtype">id</span> );</div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;            }</div>
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;            <span class="keywordflow">if</span> ( meshMarkerNameMap.empty() )</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;            {</div>
@@ -784,7 +784,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;                                             this-&gt;worldComm().localRank(),this-&gt;worldComm().localSize() );</div>
 <div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;</div>
 <div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;          <span class="keywordflow">if</span> ( gmshElt.isOnProcessor() == <span class="keyword">false</span> ||</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;               gmshElt.isIgnored(_M_ignorePhysicalGroup.begin(), _M_ignorePhysicalGroup.end()) )</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;               gmshElt.isIgnored(M_ignorePhysicalGroup.begin(), M_ignorePhysicalGroup.end()) )</div>
 <div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;              <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;</div>
 <div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;          __et.push_back( gmshElt );</div>
@@ -863,7 +863,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;                                                   this-&gt;worldComm().localRank(),this-&gt;worldComm().localSize() );</div>
 <div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;</div>
 <div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;                <span class="keywordflow">if</span> ( gmshElt.isOnProcessor() == <span class="keyword">false</span> ||</div>
-<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;                     gmshElt.isIgnored(_M_ignorePhysicalGroup.begin(), _M_ignorePhysicalGroup.end()) )</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;                     gmshElt.isIgnored(M_ignorePhysicalGroup.begin(), M_ignorePhysicalGroup.end()) )</div>
 <div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;                    <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;</div>
 <div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;                __et.push_back( gmshElt );</div>
@@ -908,7 +908,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;        <span class="comment">// if the element is not associated to the processor (in partition or ghost) or</span></div>
 <div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;        <span class="comment">// if the physical entity is ignored</span></div>
 <div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;        <span class="keywordflow">if</span> ( __et[__i].isOnProcessor() == <span class="keyword">false</span> ||</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;             __et[__i].isIgnored(_M_ignorePhysicalGroup.begin(), _M_ignorePhysicalGroup.end()) )</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;             __et[__i].isIgnored(M_ignorePhysicalGroup.begin(), M_ignorePhysicalGroup.end()) )</div>
 <div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;            <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;</div>
 <div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        <span class="keywordflow">switch</span> ( __et[__i].type )</div>
@@ -962,8 +962,8 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;</div>
 <div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;    node_type coords( mesh_type::nRealDim );</div>
 <div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;</div>
-<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;    <span class="comment">//_M_n_b_vertices.resize( __n );</span></div>
-<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;    <span class="comment">//_M_n_b_vertices.assign( __n, 0 );</span></div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;    <span class="comment">//M_n_b_vertices.resize( __n );</span></div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;    <span class="comment">//M_n_b_vertices.assign( __n, 0 );</span></div>
 <div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    <span class="keyword">auto</span> it_gmshElt = __et.begin();</div>
 <div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    <span class="keyword">auto</span> <span class="keyword">const</span> en_gmshElt = __et.end();</div>
 <div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;    <span class="keywordflow">for</span> ( ; it_gmshElt!=en_gmshElt ; ++it_gmshElt )</div>
@@ -972,7 +972,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;        <span class="comment">// if the element is not associated to the processor (in partition or ghost) or</span></div>
 <div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;        <span class="comment">// if the physical entity is ignored</span></div>
 <div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;        <span class="keywordflow">if</span> ( it_gmshElt-&gt;isOnProcessor() == <span class="keyword">false</span> ||</div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;             it_gmshElt-&gt;isIgnored(_M_ignorePhysicalGroup.begin(), _M_ignorePhysicalGroup.end()) )</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;             it_gmshElt-&gt;isIgnored(M_ignorePhysicalGroup.begin(), M_ignorePhysicalGroup.end()) )</div>
 <div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;            <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;        <span class="comment">// add the points associates to the element on the processor</span></div>
 <div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;        <span class="keywordflow">for</span> ( uint16_type p = 0; p &lt; it_gmshElt-&gt;numVertices; ++p )</div>
@@ -1078,7 +1078,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;    <span class="keywordflow">if</span> ( this-&gt;worldComm().localSize()&gt;1 )</div>
 <div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;        updateGhostCellInfo( mesh, __idGmshToFeel,  mapGhostElt );</div>
 <div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;</div>
-<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;    mesh-&gt;setNumVertices( std::accumulate( _M_n_vertices.begin(), _M_n_vertices.end(), 0,</div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;    mesh-&gt;setNumVertices( std::accumulate( M_n_vertices.begin(), M_n_vertices.end(), 0,</div>
 <div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;                                           []( <span class="keywordtype">int</span> lhs, std::pair&lt;int,int&gt; <span class="keyword">const</span>&amp; rhs )</div>
 <div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;                                           {</div>
 <div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;                                               <span class="keywordflow">return</span> lhs+rhs.second;</div>
@@ -1092,7 +1092,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;        <span class="comment">//LOG(INFO) &lt;&lt; &quot;[substructuring] n cp: &quot; &lt;&lt; std::distance( mesh-&gt;beginPointWithMarker( mesh-&gt;markerName(&quot;CrossPoints&quot;) ), mesh-&gt;endPointWithMarker( mesh-&gt;markerName(&quot;CrossPoints&quot;) ) ) &lt;&lt; &quot;\n&quot;;</span></div>
 <div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;    }</div>
 <div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;done with reading and creating mesh from gmsh file\n&quot;</span>;</div>
-<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;    _M_n_vertices.clear();</div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;    M_n_vertices.clear();</div>
 <div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;}</div>
 <div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;</div>
 <div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
@@ -1120,9 +1120,9 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;    {</div>
 <div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;        pf.setOnBoundary( <span class="keyword">true</span> );</div>
 <div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;    }</div>
-<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;    _M_n_vertices[ __e.indices[0] ] = 1;</div>
+<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
 <div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;</div>
-<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;    <span class="comment">//_M_n_b_vertices[ __e.indices[0] ] = 1;</span></div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;    <span class="comment">//M_n_b_vertices[ __e.indices[0] ] = 1;</span></div>
 <div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;</div>
 <div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;    face_iterator fit;</div>
 <div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;    <span class="keywordtype">bool</span> inserted;</div>
@@ -1211,8 +1211,8 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;    mesh-&gt;addElement( e );</div>
 <div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;    __idGmshToFeel=e.id();</div>
 <div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;</div>
-<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;    _M_n_vertices[ __e.indices[0] ] = 1;</div>
-<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;    _M_n_vertices[ __e.indices[1] ] = 1;</div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
 <div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;added edge with id :&quot;</span> &lt;&lt; e.id()</div>
 <div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; n1: &quot;</span> &lt;&lt; mesh-&gt;point( __e.indices[0] ).node()</div>
 <div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; n2: &quot;</span> &lt;&lt; mesh-&gt;point( __e.indices[1] ).node() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -1252,11 +1252,11 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;</div>
 <div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;    }</div>
 <div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;</div>
-<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;    _M_n_vertices[ __e.indices[0] ] = 1;</div>
-<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;    _M_n_vertices[ __e.indices[1] ] = 1;</div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
 <div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;</div>
-<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;    <span class="comment">//_M_n_b_vertices[ __e.indices[0] ] = 1;</span></div>
-<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;    <span class="comment">//_M_n_b_vertices[ __e.indices[1] ] = 1;</span></div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;    <span class="comment">//M_n_b_vertices[ __e.indices[0] ] = 1;</span></div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;    <span class="comment">//M_n_b_vertices[ __e.indices[1] ] = 1;</span></div>
 <div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;</div>
 <div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;    <span class="keywordtype">bool</span> inserted;</div>
 <div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;    face_iterator fit;</div>
@@ -1300,11 +1300,11 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;        }</div>
 <div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;    }</div>
 <div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;</div>
-<div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;    _M_n_vertices[ __e.indices[0] ] = 1;</div>
-<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;    _M_n_vertices[ __e.indices[1] ] = 1;</div>
+<div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
+<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
 <div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;</div>
-<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;    <span class="comment">//_M_n_b_vertices[ __e.indices[0] ] = 1;</span></div>
-<div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;    <span class="comment">//_M_n_b_vertices[ __e.indices[1] ] = 1;</span></div>
+<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;    <span class="comment">//M_n_b_vertices[ __e.indices[0] ] = 1;</span></div>
+<div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;    <span class="comment">//M_n_b_vertices[ __e.indices[1] ] = 1;</span></div>
 <div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;</div>
 <div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;    <span class="keyword">auto</span> eit = mesh-&gt;addEdge( e );</div>
 <div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;    __idGmshToFeel=eit.id();</div>
@@ -1379,13 +1379,13 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;    mesh-&gt;addElement( e );</div>
 <div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;    __idGmshToFeel=e.id();</div>
 <div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;</div>
-<div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;    _M_n_vertices[ __e.indices[0] ] = 1;</div>
-<div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;    _M_n_vertices[ __e.indices[1] ] = 1;</div>
-<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;    _M_n_vertices[ __e.indices[2] ] = 1;</div>
+<div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
+<div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
+<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;    M_n_vertices[ __e.indices[2] ] = 1;</div>
 <div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;</div>
 <div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3ce5e16332068d450d959e1839ebde2d" title="Quadrangle (4 nodes). ">GMSH_QUADRANGLE</a> ||</div>
 <div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1af01f3dae9d29212f81d374233e9f013d" title="Second order quadrangle (9 nodes: 4. ">GMSH_QUADRANGLE_2</a> )</div>
-<div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;        _M_n_vertices[ __e.indices[3] ] = 1;</div>
+<div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;        M_n_vertices[ __e.indices[3] ] = 1;</div>
 <div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;}</div>
 <div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;<span class="keywordtype">void</span></div>
@@ -1430,13 +1430,13 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;</div>
 <div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;    __idGmshToFeel=e.id();</div>
 <div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;</div>
-<div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;    _M_n_vertices[ __e.indices[0] ] = 1;</div>
-<div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;    _M_n_vertices[ __e.indices[1] ] = 1;</div>
-<div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;    _M_n_vertices[ __e.indices[2] ] = 1;</div>
+<div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
+<div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
+<div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;    M_n_vertices[ __e.indices[2] ] = 1;</div>
 <div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;</div>
 <div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3ce5e16332068d450d959e1839ebde2d" title="Quadrangle (4 nodes). ">GMSH_QUADRANGLE</a> ||</div>
 <div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1af01f3dae9d29212f81d374233e9f013d" title="Second order quadrangle (9 nodes: 4. ">GMSH_QUADRANGLE_2</a> )</div>
-<div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;        _M_n_vertices[ __e.indices[3] ] = 1;</div>
+<div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;        M_n_vertices[ __e.indices[3] ] = 1;</div>
 <div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;</div>
 <div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;}</div>
 <div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;</div>
@@ -1508,17 +1508,17 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160;    mesh-&gt;addElement( e );</div>
 <div class="line"><a name="l01469"></a><span class="lineno"> 1469</span>&#160;    __idGmshToFeel=e.id();</div>
 <div class="line"><a name="l01470"></a><span class="lineno"> 1470</span>&#160;</div>
-<div class="line"><a name="l01471"></a><span class="lineno"> 1471</span>&#160;    _M_n_vertices[ __e.indices[0] ] = 1;</div>
-<div class="line"><a name="l01472"></a><span class="lineno"> 1472</span>&#160;    _M_n_vertices[ __e.indices[1] ] = 1;</div>
-<div class="line"><a name="l01473"></a><span class="lineno"> 1473</span>&#160;    _M_n_vertices[ __e.indices[2] ] = 1;</div>
-<div class="line"><a name="l01474"></a><span class="lineno"> 1474</span>&#160;    _M_n_vertices[ __e.indices[3] ] = 1;</div>
+<div class="line"><a name="l01471"></a><span class="lineno"> 1471</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
+<div class="line"><a name="l01472"></a><span class="lineno"> 1472</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
+<div class="line"><a name="l01473"></a><span class="lineno"> 1473</span>&#160;    M_n_vertices[ __e.indices[2] ] = 1;</div>
+<div class="line"><a name="l01474"></a><span class="lineno"> 1474</span>&#160;    M_n_vertices[ __e.indices[3] ] = 1;</div>
 <div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;</div>
 <div class="line"><a name="l01476"></a><span class="lineno"> 1476</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a9d87b081654b66dd7ff5f0305ed9991e" title="Hexahedron (8 nodes). ">GMSH_HEXAHEDRON</a> )</div>
 <div class="line"><a name="l01477"></a><span class="lineno"> 1477</span>&#160;    {</div>
-<div class="line"><a name="l01478"></a><span class="lineno"> 1478</span>&#160;        _M_n_vertices[ __e.indices[4] ] = 1;</div>
-<div class="line"><a name="l01479"></a><span class="lineno"> 1479</span>&#160;        _M_n_vertices[ __e.indices[5] ] = 1;</div>
-<div class="line"><a name="l01480"></a><span class="lineno"> 1480</span>&#160;        _M_n_vertices[ __e.indices[6] ] = 1;</div>
-<div class="line"><a name="l01481"></a><span class="lineno"> 1481</span>&#160;        _M_n_vertices[ __e.indices[7] ] = 1;</div>
+<div class="line"><a name="l01478"></a><span class="lineno"> 1478</span>&#160;        M_n_vertices[ __e.indices[4] ] = 1;</div>
+<div class="line"><a name="l01479"></a><span class="lineno"> 1479</span>&#160;        M_n_vertices[ __e.indices[5] ] = 1;</div>
+<div class="line"><a name="l01480"></a><span class="lineno"> 1480</span>&#160;        M_n_vertices[ __e.indices[6] ] = 1;</div>
+<div class="line"><a name="l01481"></a><span class="lineno"> 1481</span>&#160;        M_n_vertices[ __e.indices[7] ] = 1;</div>
 <div class="line"><a name="l01482"></a><span class="lineno"> 1482</span>&#160;    }</div>
 <div class="line"><a name="l01483"></a><span class="lineno"> 1483</span>&#160;}</div>
 <div class="line"><a name="l01484"></a><span class="lineno"> 1484</span>&#160;</div>
@@ -1620,7 +1620,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:01:50 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:30 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

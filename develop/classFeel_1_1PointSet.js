@@ -27,9 +27,9 @@ var classFeel_1_1PointSet =
     [ "setPoints", "classFeel_1_1PointSet.html#a494a65b1dabd0d54070f64a06f483806", null ],
     [ "setPoints", "classFeel_1_1PointSet.html#a6556c156141f845ab66783506f709663", null ],
     [ "toPython", "classFeel_1_1PointSet.html#a6c950a11dc92bc8bb1fe5d78fca03b33", null ],
-    [ "_M_npoints", "classFeel_1_1PointSet.html#a07fdf9a7506c317d742119a0b33674e0", null ],
-    [ "_M_points", "classFeel_1_1PointSet.html#a43c8d5579736a95850333ae05f1e5c57", null ],
-    [ "_M_points_face", "classFeel_1_1PointSet.html#a6bf4c1c06fc4cbc5859f25c607d9017e", null ],
+    [ "M_npoints", "classFeel_1_1PointSet.html#ace3273d3fa7f6e93a7b5ff1c7607edff", null ],
+    [ "M_points", "classFeel_1_1PointSet.html#a41ff1f1903a1155cebd25eee451af93b", null ],
+    [ "M_points_face", "classFeel_1_1PointSet.html#ae82d30f33bf7e48046ca71010c6f75b1", null ],
     [ "pointsInfo", "classFeel_1_1PointSet.html#aedf360d6cf25a2dacca96b85432a1265", null ],
     [ "pointsName", "classFeel_1_1PointSet.html#aaf6e3178aea1521299dd7d4e412c632d", null ]
 ];

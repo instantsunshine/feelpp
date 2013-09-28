@@ -171,8 +171,8 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> P::points_type points_type;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    times_x ( P <span class="keyword">const</span>&amp; p, <span class="keywordtype">int</span> c  )</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        :</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        _M_p ( p ),</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        _M_c( c )</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        M_p ( p ),</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        M_c( c )</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;component : &quot; &lt;&lt; c &lt;&lt; std::endl;</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
@@ -180,16 +180,16 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor"></span>        std::cout &lt;&lt; <span class="stringliteral">&quot;times_x(pts) : &quot;</span> &lt;&lt; __pts &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;times_x(pts) : &quot;</span> &lt;&lt; _M_p.evaluate( __pts ) &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;times_x(coeff) : &quot;</span> &lt;&lt; _M_p.coefficients() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;times_x(pts) : &quot;</span> &lt;&lt; M_p.evaluate( __pts ) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;times_x(coeff) : &quot;</span> &lt;&lt; M_p.coefficients() &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor"></span>        <span class="comment">// __pts[c] * p( __pts )</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> ublas::element_prod( ublas::row( __pts, _M_c ),</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                    ublas::row( _M_p.evaluate( __pts ), 0 ) );</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> ublas::element_prod( ublas::row( __pts, M_c ),</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                    ublas::row( M_p.evaluate( __pts ), 0 ) );</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">//P const&amp; _M_p;</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    P _M_p;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">int</span> _M_c;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">//P const&amp; M_p;</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    P M_p;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">int</span> M_c;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> T &gt;</div>
@@ -352,11 +352,11 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    RaviartThomasDual( primal_space_type <span class="keyword">const</span>&amp; primal )</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        :</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        super( primal ),</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        _M_convex_ref(),</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        _M_eid( _M_convex_ref.topologicalDimension()+1 ),</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        _M_pts( nDim, numPoints ),</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        _M_pts_per_face( convex_type::numTopologicalFaces ),</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        _M_fset( primal )</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        M_convex_ref(),</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        M_eid( M_convex_ref.topologicalDimension()+1 ),</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        M_pts( nDim, numPoints ),</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        M_pts_per_face( convex_type::numTopologicalFaces ),</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        M_fset( primal )</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    {</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">#if 1</span></div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="preprocessor"></span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Raviart-Thomas finite element(dual): \n&quot;</span>;</div>
@@ -372,20 +372,20 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="comment">// loop on each entity forming the convex of topological</span></div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="comment">// dimension nDim-1 ( the faces)</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> p = 0, e = _M_convex_ref.entityRange( nDim-1 ).begin();</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                e &lt; _M_convex_ref.entityRange( nDim-1 ).end();</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> p = 0, e = M_convex_ref.entityRange( nDim-1 ).begin();</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                e &lt; M_convex_ref.entityRange( nDim-1 ).end();</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                ++e )</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        {</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            points_type Gt ( _M_convex_ref.makePoints( nDim-1, e ) );</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            _M_pts_per_face[e] =  Gt ;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            points_type Gt ( M_convex_ref.makePoints( nDim-1, e ) );</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            M_pts_per_face[e] =  Gt ;</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            <span class="keywordflow">if</span> ( Gt.size2() )</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            {</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                <span class="comment">//VLOG(1) &lt;&lt; &quot;Gt = &quot; &lt;&lt; Gt &lt;&lt; &quot;\n&quot;;</span></div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                <span class="comment">//VLOG(1) &lt;&lt; &quot;p = &quot; &lt;&lt; p &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                ublas::subrange( _M_pts, 0, nDim, p, p+Gt.size2() ) = Gt;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                ublas::subrange( M_pts, 0, nDim, p, p+Gt.size2() ) = Gt;</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                <span class="comment">//for ( size_type j = 0; j &lt; Gt.size2(); ++j )</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                <span class="comment">//_M_eid[d].push_back( p+j );</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                <span class="comment">//M_eid[d].push_back( p+j );</span></div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                p+=Gt.size2();</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            }</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        }</div>
@@ -412,14 +412,14 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="comment">//for( int k = 0; k &lt; nDim; ++k )</span></div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        {</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            <span class="comment">// loopover the each edge entities and add the correponding functionals</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> e = _M_convex_ref.entityRange( nDim-1 ).begin();</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                    e &lt; _M_convex_ref.entityRange( nDim-1 ).end();</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> e = M_convex_ref.entityRange( nDim-1 ).begin();</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                    e &lt; M_convex_ref.entityRange( nDim-1 ).end();</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                    ++e )</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            {</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                <span class="keyword">typedef</span> Feel::functional::DirectionalComponentPointsEvaluation&lt;primal_space_type&gt; dcpe_type;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                node_type dir = _M_convex_ref.normal( e )*j[e];</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                node_type dir = M_convex_ref.normal( e )*j[e];</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                <span class="comment">//dcpe_type __dcpe( primal, 1, dir, pts_per_face[e] );</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                dcpe_type __dcpe( primal, dir, _M_pts_per_face[e] );</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                dcpe_type __dcpe( primal, dir, M_pts_per_face[e] );</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                std::copy( __dcpe.begin(), __dcpe.end(), std::back_inserter( fset ) );</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            }</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        }</div>
@@ -449,8 +449,8 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        }</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;[RT Dual] done 3, n fset = &quot; &lt;&lt; fset.size() &lt;&lt; std::endl;</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        _M_fset.setFunctionalSet( fset );</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="comment">//        std::cout &lt;&lt; &quot;[RT DUAL matrix] mat = &quot; &lt;&lt; _M_fset.rep() &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        M_fset.setFunctionalSet( fset );</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="comment">//        std::cout &lt;&lt; &quot;[RT DUAL matrix] mat = &quot; &lt;&lt; M_fset.rep() &lt;&lt; &quot;\n&quot;;</span></div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;[RT Dual] done 4\n&quot;;</span></div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    }</div>
@@ -459,42 +459,42 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    points_type <span class="keyword">const</span>&amp; <a class="code" href="namespaceFeel.html#a07ec0494dee4ca9a16b866e8c1f4d495">points</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="keywordflow">return</span> _M_pts;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="keywordflow">return</span> M_pts;</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    }</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    matrix_type operator()( primal_space_type <span class="keyword">const</span>&amp; pset )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;RT matrix = &quot; &lt;&lt; _M_fset( pset ) &lt;&lt; std::endl;</span></div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keywordflow">return</span> _M_fset( pset );</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;RT matrix = &quot; &lt;&lt; M_fset( pset ) &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keywordflow">return</span> M_fset( pset );</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    }</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    points_type <span class="keyword">const</span>&amp; <a class="code" href="namespaceFeel.html#a07ec0494dee4ca9a16b866e8c1f4d495">points</a>( uint16_type f )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordflow">return</span> _M_pts_per_face[f];</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordflow">return</span> M_pts_per_face[f];</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    }</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    ublas::matrix_column&lt;points_type const&gt; point( uint16_type f, uint32_type __i )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="keywordflow">return</span> ublas::column( _M_pts_per_face[f], __i );</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="keywordflow">return</span> ublas::column( M_pts_per_face[f], __i );</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    }</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    ublas::matrix_column&lt;points_type&gt; point( uint16_type f, uint32_type __i )</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    {</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordflow">return</span> ublas::column( _M_pts_per_face[f], __i );</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordflow">return</span> ublas::column( M_pts_per_face[f], __i );</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    }</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordtype">void</span> setPoints( uint16_type f, points_type <span class="keyword">const</span>&amp; n )</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    {</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        _M_pts_per_face[f].resize( n.size1(), n.size2(), false );</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        _M_pts_per_face[f] = n;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        M_pts_per_face[f].resize( n.size1(), n.size2(), false );</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        M_pts_per_face[f] = n;</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    }</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    reference_convex_type _M_convex_ref;</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    std::vector&lt;std::vector&lt;uint16_type&gt; &gt; _M_eid;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    points_type _M_pts;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    std::vector&lt;points_type&gt; _M_pts_per_face;</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    FunctionalSet&lt;primal_space_type&gt; _M_fset;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    reference_convex_type M_convex_ref;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    std::vector&lt;std::vector&lt;uint16_type&gt; &gt; M_eid;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    points_type M_pts;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    std::vector&lt;points_type&gt; M_pts_per_face;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    FunctionalSet&lt;primal_space_type&gt; M_fset;</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;};</div>
@@ -692,7 +692,7 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;        <span class="keywordflow">if</span> ( do_hessian )</div>
 <div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;            std::fill( h_phi_t.data(), h_phi_t.data()+h_phi_t.num_elements(), value_type( 0 ) );</div>
 <div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;        <span class="keyword">const</span> uint16_type Q = gmc.nPoints();<span class="comment">//_M_grad.size2();</span></div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;        <span class="keyword">const</span> uint16_type Q = gmc.nPoints();<span class="comment">//M_grad.size2();</span></div>
 <div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;</div>
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;        <span class="comment">// transform</span></div>
 <div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;        <span class="keywordflow">for</span> ( uint16_type i = 0; i &lt; nLocalDof; ++i )</div>
@@ -808,11 +808,10 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;</div>
 <div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;} <span class="comment">// Feel</span></div>
 <div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __RaviartThomas_H */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;<span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:02:00 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:40 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

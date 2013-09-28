@@ -8974,17 +8974,17 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l08908"></a><span class="lineno"> 8908</span>&#160;    <a class="code" href="classIMSimplex.html" title="brief description ">IMSimplex</a>(  )</div>
 <div class="line"><a name="l08909"></a><span class="lineno"> 8909</span>&#160;        :</div>
 <div class="line"><a name="l08910"></a><span class="lineno"> 8910</span>&#160;        super( quad_type::nPoints ),</div>
-<div class="line"><a name="l08911"></a><span class="lineno"> 8911</span>&#160;        _M_quad()</div>
+<div class="line"><a name="l08911"></a><span class="lineno"> 8911</span>&#160;        M_quad()</div>
 <div class="line"><a name="l08912"></a><span class="lineno"> 8912</span>&#160;    {</div>
 <div class="line"><a name="l08913"></a><span class="lineno"> 8913</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i=0; i&lt; quad_type::nPoints; i++ )</div>
 <div class="line"><a name="l08914"></a><span class="lineno"> 8914</span>&#160;        {</div>
 <div class="line"><a name="l08915"></a><span class="lineno"> 8915</span>&#160;</div>
 <div class="line"><a name="l08916"></a><span class="lineno"> 8916</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> j = 0; j &lt; Dim; ++j )</div>
 <div class="line"><a name="l08917"></a><span class="lineno"> 8917</span>&#160;            {</div>
-<div class="line"><a name="l08918"></a><span class="lineno"> 8918</span>&#160;                this-&gt;_M_points( j, i ) = _M_quad.q[( Dim+1 )*i+j];</div>
+<div class="line"><a name="l08918"></a><span class="lineno"> 8918</span>&#160;                this-&gt;M_points( j, i ) = M_quad.q[( Dim+1 )*i+j];</div>
 <div class="line"><a name="l08919"></a><span class="lineno"> 8919</span>&#160;            }</div>
 <div class="line"><a name="l08920"></a><span class="lineno"> 8920</span>&#160;</div>
-<div class="line"><a name="l08921"></a><span class="lineno"> 8921</span>&#160;            this-&gt;_M_w( i ) = _M_quad.q[( Dim+1 )*i+Dim];</div>
+<div class="line"><a name="l08921"></a><span class="lineno"> 8921</span>&#160;            this-&gt;M_w( i ) = M_quad.q[( Dim+1 )*i+Dim];</div>
 <div class="line"><a name="l08922"></a><span class="lineno"> 8922</span>&#160;        }</div>
 <div class="line"><a name="l08923"></a><span class="lineno"> 8923</span>&#160;</div>
 <div class="line"><a name="l08924"></a><span class="lineno"> 8924</span>&#160;        boost::shared_ptr&lt;GT_Lagrange&lt;Dim,1,Dim,Simplex,T&gt; &gt; gm( <span class="keyword">new</span> GT_Lagrange&lt;Dim, 1, Dim, Simplex, T&gt; );</div>
@@ -9007,7 +9007,7 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l08948"></a><span class="lineno"> 8948</span>&#160;    {</div>
 <div class="line"><a name="l08949"></a><span class="lineno"> 8949</span>&#160;        <span class="keywordflow">if</span> ( <span class="keyword">this</span> != &amp;i )</div>
 <div class="line"><a name="l08950"></a><span class="lineno"> 8950</span>&#160;        {</div>
-<div class="line"><a name="l08951"></a><span class="lineno"> 8951</span>&#160;            _M_quad = i._M_quad;</div>
+<div class="line"><a name="l08951"></a><span class="lineno"> 8951</span>&#160;            M_quad = i.M_quad;</div>
 <div class="line"><a name="l08952"></a><span class="lineno"> 8952</span>&#160;        }</div>
 <div class="line"><a name="l08953"></a><span class="lineno"> 8953</span>&#160;</div>
 <div class="line"><a name="l08954"></a><span class="lineno"> 8954</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
@@ -9015,7 +9015,7 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l08957"></a><span class="lineno"> 8957</span>&#160;</div>
 <div class="line"><a name="l08958"></a><span class="lineno"> 8958</span>&#160;</div>
 <div class="line"><a name="l08959"></a><span class="lineno"> 8959</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l08960"></a><span class="lineno"> 8960</span>&#160;    quad_type _M_quad;</div>
+<div class="line"><a name="l08960"></a><span class="lineno"> 8960</span>&#160;    quad_type M_quad;</div>
 <div class="line"><a name="l08961"></a><span class="lineno"> 8961</span>&#160;};</div>
 <div class="line"><a name="l08962"></a><span class="lineno"> 8962</span>&#160;</div>
 <div class="line"><a name="l08963"></a><span class="lineno"> 8963</span>&#160;}</div>
@@ -9024,7 +9024,7 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:01:50 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:30 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -234,6 +234,10 @@ nth_index&lt; 0 &gt;::type &amp;&#160;</td><td class="memItemRight" valign="bott
 <tr class="separator:aac32b0f3de53ed7b2b28909204d0d2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9674479ec46ec1892e5268d70a9f72a"><td class="memItemLeft" align="right" valign="top">pid_elements &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#ac9674479ec46ec1892e5268d70a9f72a">Feel::elementsByProcessId</a> ()</td></tr>
 <tr class="separator:ac9674479ec46ec1892e5268d70a9f72a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fce4c64fa0b6b18a881b20adf1cb14b"><td class="memItemLeft" align="right" valign="top">std::pair<br class="typebreak"/>
+&lt; location_element_const_iterator, <br class="typebreak"/>
+location_element_const_iterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a1fce4c64fa0b6b18a881b20adf1cb14b">Feel::boundaryElements</a> (uint16_type entity_min_dim, uint16_type entity_max_dim, size_type p) const </td></tr>
+<tr class="separator:a1fce4c64fa0b6b18a881b20adf1cb14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac10b26a6ac99bd91958046482c956ec6"><td class="memItemLeft" align="right" valign="top">std::pair<br class="typebreak"/>
 &lt; location_element_const_iterator, <br class="typebreak"/>
 location_element_const_iterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#ac10b26a6ac99bd91958046482c956ec6">Feel::boundaryElements</a> (size_type p) const </td></tr>
@@ -283,15 +287,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::setWorldCommEle
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a2f254c830827b82efc527b75eabcf6a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f254c830827b82efc527b75eabcf6a9"></a>
-elements_type&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::_M_elements</b></td></tr>
-<tr class="separator:a2f254c830827b82efc527b75eabcf6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4413d5cd266f43eccc9139e4917f5d41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4413d5cd266f43eccc9139e4917f5d41"></a>
-parts_map_type&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::_M_parts</b></td></tr>
-<tr class="separator:a4413d5cd266f43eccc9139e4917f5d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32f6ea0088496ec80f8edbd6858d5c7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32f6ea0088496ec80f8edbd6858d5c7c"></a>
-WorldComm&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::_M_worldCommElements</b></td></tr>
-<tr class="separator:a32f6ea0088496ec80f8edbd6858d5c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10de5363c7f668c4e9e8aeaf46da148f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10de5363c7f668c4e9e8aeaf46da148f"></a>
+elements_type&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::M_elements</b></td></tr>
+<tr class="separator:a10de5363c7f668c4e9e8aeaf46da148f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d67c8b2dd01d67c18b779eb8308c7e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d67c8b2dd01d67c18b779eb8308c7e5"></a>
+parts_map_type&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::M_parts</b></td></tr>
+<tr class="separator:a8d67c8b2dd01d67c18b779eb8308c7e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa95fd6d2ef9099e8f384081217a815f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa95fd6d2ef9099e8f384081217a815f0"></a>
+WorldComm&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::M_worldCommElements</b></td></tr>
+<tr class="separator:aa95fd6d2ef9099e8f384081217a815f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme <a href="#" onclick="location.href='mai'+'lto:'+'chr'+'is'+'top'+'he'+'.pr'+'ud'+'hom'+'me'+'@fe'+'el'+'pp.'+'or'+'g'; return false;">chris<span style="display: none;">.nosp@m.</span>toph<span style="display: none;">.nosp@m.</span>e.pru<span style="display: none;">.nosp@m.</span>dhom<span style="display: none;">.nosp@m.</span>me@fe<span style="display: none;">.nosp@m.</span>elpp<span style="display: none;">.nosp@m.</span>.org</a> </dd></dl>
@@ -299,7 +303,7 @@ WorldComm&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::_M_worldCo
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:02:05 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:44 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

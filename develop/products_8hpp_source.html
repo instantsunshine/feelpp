@@ -177,13 +177,13 @@ $(document).ready(function(){initNavTree('products_8hpp_source.html','');});
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">explicit</span> Product( left_expression_type <span class="keyword">const</span> &amp; left_expr,</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                      right_expression_type <span class="keyword">const</span> &amp; right_expr )</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        :</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        _M_left_expr( left_expr ),</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        _M_right_expr( right_expr )</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        M_left_expr( left_expr ),</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        M_right_expr( right_expr )</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {}</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    Product( Product <span class="keyword">const</span> &amp; te )</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        :</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        _M_left_expr( te._M_left_expr ),</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        _M_right_expr( te._M_right_expr )</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        M_left_expr( te.M_left_expr ),</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        M_right_expr( te.M_right_expr )</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {}</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    ~Product()</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {}</div>
@@ -201,11 +201,11 @@ $(document).ready(function(){initNavTree('products_8hpp_source.html','');});
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    left_expression_type <span class="keyword">const</span>&amp; left()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> _M_left_expr;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> M_left_expr;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    right_expression_type <span class="keyword">const</span>&amp; right()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">return</span> _M_right_expr;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">return</span> M_right_expr;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
@@ -356,8 +356,8 @@ $(document).ready(function(){initNavTree('products_8hpp_source.html','');});
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    };</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keyword">mutable</span> left_expression_type  _M_left_expr;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keyword">mutable</span> right_expression_type  _M_right_expr;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keyword">mutable</span> left_expression_type  M_left_expr;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keyword">mutable</span> right_expression_type  M_right_expr;</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;};</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ExprL, <span class="keyword">typename</span> ExprR&gt;</div>
@@ -410,13 +410,13 @@ $(document).ready(function(){initNavTree('products_8hpp_source.html','');});
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keyword">explicit</span> CrossProduct( left_expression_type <span class="keyword">const</span> &amp; left_expr,</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                      right_expression_type <span class="keyword">const</span> &amp; right_expr )</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        :</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        _M_left_expr( left_expr ),</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        _M_right_expr( right_expr )</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        M_left_expr( left_expr ),</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        M_right_expr( right_expr )</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    {}</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    CrossProduct( CrossProduct <span class="keyword">const</span> &amp; te )</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        :</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        _M_left_expr( te._M_left_expr ),</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        _M_right_expr( te._M_right_expr )</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        M_left_expr( te.M_left_expr ),</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        M_right_expr( te.M_right_expr )</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    {}</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    ~CrossProduct()</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    {}</div>
@@ -434,11 +434,11 @@ $(document).ready(function(){initNavTree('products_8hpp_source.html','');});
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    left_expression_type <span class="keyword">const</span>&amp; left()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keywordflow">return</span> _M_left_expr;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keywordflow">return</span> M_left_expr;</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    }</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    right_expression_type <span class="keyword">const</span>&amp; right()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keywordflow">return</span> _M_right_expr;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keywordflow">return</span> M_right_expr;</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    }</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div>
@@ -594,8 +594,8 @@ $(document).ready(function(){initNavTree('products_8hpp_source.html','');});
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    };</div>
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;</div>
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    <span class="keyword">mutable</span> left_expression_type  _M_left_expr;</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    <span class="keyword">mutable</span> right_expression_type  _M_right_expr;</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    <span class="keyword">mutable</span> left_expression_type  M_left_expr;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    <span class="keyword">mutable</span> right_expression_type  M_right_expr;</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;};</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;</div>
 <div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ExprL, <span class="keyword">typename</span> ExprR&gt;</div>
@@ -612,11 +612,10 @@ $(document).ready(function(){initNavTree('products_8hpp_source.html','');});
 <div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;</div>
 <div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;} <span class="comment">// Feel</span></div>
 <div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __Products_H */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;<span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:01:59 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:39 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

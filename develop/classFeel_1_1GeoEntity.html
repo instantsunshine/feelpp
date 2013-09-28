@@ -166,6 +166,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (<a 
 <tr class="separator:a82a1c4a44542436984a0215c0b5666b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab97b06c52c6ddeb2aa55aa59396aadea"><td class="memItemLeft" align="right" valign="top">uint16_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoEntity.html#ab97b06c52c6ddeb2aa55aa59396aadea">nFaces</a> () const </td></tr>
 <tr class="separator:ab97b06c52c6ddeb2aa55aa59396aadea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f4eb3033ca9a2df6051d5bd09f63223"><td class="memItemLeft" align="right" valign="top">constexpr uint16_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoEntity.html#a8f4eb3033ca9a2df6051d5bd09f63223">nTopologicalFaces</a> () const </td></tr>
+<tr class="separator:a8f4eb3033ca9a2df6051d5bd09f63223"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad36fa948ef8b0d64a0a7d44daaf59bd3"><td class="memItemLeft" align="right" valign="top">uint16_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoEntity.html#ad36fa948ef8b0d64a0a7d44daaf59bd3">nGeometricFaces</a> () const </td></tr>
 <tr class="separator:ad36fa948ef8b0d64a0a7d44daaf59bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa01f203a8f2fdccb4e53b84832525af4"><td class="memItemLeft" align="right" valign="top">uint16_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoEntity.html#aa01f203a8f2fdccb4e53b84832525af4">nNormals</a> () const </td></tr>
@@ -202,6 +204,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (<a 
 <tr class="separator:a1c7e78505727666878a125d5c4ea5e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7202d46ceb4dbf27c7eb86dc3d42f493"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoEntity.html#a7202d46ceb4dbf27c7eb86dc3d42f493">isOnBoundary</a> () const </td></tr>
 <tr class="separator:a7202d46ceb4dbf27c7eb86dc3d42f493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87e6dc80146aaa498a692868e8066dcd"><td class="memItemLeft" align="right" valign="top">uint16_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoEntity.html#a87e6dc80146aaa498a692868e8066dcd">boundaryEntityDimension</a> () const </td></tr>
+<tr class="separator:a87e6dc80146aaa498a692868e8066dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd9d81dd318f5d539d6aaba9573938ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoEntity.html#abd9d81dd318f5d539d6aaba9573938ff">isGhostCell</a> () const </td></tr>
 <tr class="separator:abd9d81dd318f5d539d6aaba9573938ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafe89740851eb127575aa9db3713bf8d"><td class="memItemLeft" align="right" valign="top">uint16_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoEntity.html#aafe89740851eb127575aa9db3713bf8d">processId</a> () const </td></tr>
@@ -242,8 +246,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (<a 
 <tr class="memitem:a76c781e0500e12882bea7b9773c38eb3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76c781e0500e12882bea7b9773c38eb3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setId</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> id)</td></tr>
 <tr class="separator:a76c781e0500e12882bea7b9773c38eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa587666befdb4f33118367c870b3e0c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoEntity.html#aa587666befdb4f33118367c870b3e0c2">setOnBoundary</a> (bool b)</td></tr>
-<tr class="separator:aa587666befdb4f33118367c870b3e0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded49d50abfacd5efd950a5b84b118d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoEntity.html#aded49d50abfacd5efd950a5b84b118d7">setOnBoundary</a> (bool b, uint16_type ent_d=<a class="el" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a>)</td></tr>
+<tr class="separator:aded49d50abfacd5efd950a5b84b118d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a547af2eeb290d58a4ce3d01d1f5e9987"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoEntity.html#a547af2eeb290d58a4ce3d01d1f5e9987">setNumberOfPartitions</a> (uint16_type np)</td></tr>
 <tr class="separator:a547af2eeb290d58a4ce3d01d1f5e9987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa195176ae43fac9da11c4c45f2417fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1GeoEntity.html#afa195176ae43fac9da11c4c45f2417fc">setNumberOfNeighborPartitions</a> (uint16_type nep)</td></tr>
@@ -459,6 +463,32 @@ template&lt;typename Entity&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>add a new ghost element to which the point belongs </p>
+
+</div>
+</div>
+<a class="anchor" id="a87e6dc80146aaa498a692868e8066dcd"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Entity&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_type <a class="el" href="classFeel_1_1GeoEntity.html">Feel::GeoEntity</a>&lt; Entity &gt;::boundaryEntityDimension </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>maximum dimension of the entity of the element touching the boundary </p>
 
 </div>
 </div>
@@ -1389,6 +1419,33 @@ template&lt;typename Entity&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a8f4eb3033ca9a2df6051d5bd09f63223"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Entity&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint16_type <a class="el" href="classFeel_1_1GeoEntity.html">Feel::GeoEntity</a>&lt; Entity &gt;::nTopologicalFaces </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>number of topological faces on the reference shape</p>
+<dl class="section return"><dt>Returns</dt><dd>the number of topological faces on the reference shape </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a99f7fc01c5627410bbd96a5fcfab04b2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1743,7 +1800,7 @@ template&lt;typename Entity&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aa587666befdb4f33118367c870b3e0c2"></a>
+<a class="anchor" id="aded49d50abfacd5efd950a5b84b118d7"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1756,8 +1813,18 @@ template&lt;typename Entity&gt; </div>
           <td class="memname">void <a class="el" href="classFeel_1_1GeoEntity.html">Feel::GeoEntity</a>&lt; Entity &gt;::setOnBoundary </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>b</em>)</td><td></td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint16_type&#160;</td>
+          <td class="paramname"><em>ent_d</em> = <code><a class="el" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1848,7 +1915,7 @@ template&lt;typename Entity&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:02:10 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:49 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

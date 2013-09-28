@@ -130,12 +130,12 @@ var classFeel_1_1FunctionSpace =
     [ "worldComm", "classFeel_1_1FunctionSpace.html#a5f066c6f70dc42f1ce70bf863f10089d", null ],
     [ "worldsComm", "classFeel_1_1FunctionSpace.html#a2aa31597c325f5ae1841df3cbbd3899b", null ],
     [ "ComponentSpace", "classFeel_1_1FunctionSpace.html#ae1703ca87bbf329122838ca69fb47ec4", null ],
-    [ "_M_comp_space", "classFeel_1_1FunctionSpace.html#abec82113886d99221ad14f48d3d93513", null ],
-    [ "_M_dof", "classFeel_1_1FunctionSpace.html#a116713e618c76909aad5934e6aff7f73", null ],
-    [ "_M_dofOnOff", "classFeel_1_1FunctionSpace.html#a2f6d22fa54583584cca999ee2344a8ac", null ],
-    [ "_M_mesh", "classFeel_1_1FunctionSpace.html#ab6caed1e9379db335f90530c968f31d2", null ],
-    [ "_M_ref_fe", "classFeel_1_1FunctionSpace.html#a97c71abde5f90466a9cb715f1467c73d", null ],
-    [ "_M_rt", "classFeel_1_1FunctionSpace.html#a72652614c5307fcade41ca6c802981a1", null ],
-    [ "_M_worldComm", "classFeel_1_1FunctionSpace.html#a4218bdd22f1f4a1efa5e690654bfa3e0", null ],
-    [ "_M_worldsComm", "classFeel_1_1FunctionSpace.html#af635a20aaf1785908841e0bcfa4d4038", null ]
+    [ "M_comp_space", "classFeel_1_1FunctionSpace.html#a8c350674887f96f0b804dfefe312fd4b", null ],
+    [ "M_dof", "classFeel_1_1FunctionSpace.html#a424a0d322fb0bb9147986c53faf0ca98", null ],
+    [ "M_dofOnOff", "classFeel_1_1FunctionSpace.html#a28227bb46ef1eed43d448d2a89b20645", null ],
+    [ "M_mesh", "classFeel_1_1FunctionSpace.html#aca77cbfc73e484797f84a20f21b17979", null ],
+    [ "M_ref_fe", "classFeel_1_1FunctionSpace.html#aa798114f85bc067201efae1b28ed250e", null ],
+    [ "M_rt", "classFeel_1_1FunctionSpace.html#ad90149d16e3a95a470da0dfa8297633c", null ],
+    [ "M_worldComm", "classFeel_1_1FunctionSpace.html#aa14c3f28f5d763711b1c7018264ea32f", null ],
+    [ "M_worldsComm", "classFeel_1_1FunctionSpace.html#a554f978b564d8c8826c3489d403f9ffd", null ]
 ];

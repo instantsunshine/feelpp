@@ -183,24 +183,24 @@ $(document).ready(function(){initNavTree('matrixeigendense_8hpp_source.html','')
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
 <div class="line"><a name="l00113"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#a5da70057fb0a0d0a12693578939c76f4">  113</a></span>&#160;    value_type  <a class="code" href="classFeel_1_1MatrixEigenDense.html#a5da70057fb0a0d0a12693578939c76f4">operator()</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> j )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">return</span> _M_mat( i, j );</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">return</span> M_mat( i, j );</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
 <div class="line"><a name="l00128"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#ad6a1adc0c299942186a44253ef436436">  128</a></span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> <a class="code" href="classFeel_1_1MatrixEigenDense.html#ad6a1adc0c299942186a44253ef436436">size1</a> ()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">return</span> _M_mat.rows();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">return</span> M_mat.rows();</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
 <div class="line"><a name="l00137"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#aaa3ab8d1a592eb3f62ab3109c12829ea">  137</a></span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> <a class="code" href="classFeel_1_1MatrixEigenDense.html#aaa3ab8d1a592eb3f62ab3109c12829ea">size2</a> ()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">return</span> _M_mat.cols();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">return</span> M_mat.cols();</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
 <div class="line"><a name="l00145"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#a235f186577ae2446eca20c773e8ea81b">  145</a></span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> <a class="code" href="classFeel_1_1MatrixEigenDense.html#a235f186577ae2446eca20c773e8ea81b">nnz</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">return</span> _M_mat.rows()*_M_mat.cols();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">return</span> M_mat.rows()*M_mat.cols();</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    }</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
 <div class="line"><a name="l00154"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#a69bee32ba5cef3c098fe32fab01cd9c5">  154</a></span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> <a class="code" href="classFeel_1_1MatrixEigenDense.html#a69bee32ba5cef3c098fe32fab01cd9c5">rowStart</a> ()<span class="keyword"> const</span></div>
@@ -215,7 +215,7 @@ $(document).ready(function(){initNavTree('matrixeigendense_8hpp_source.html','')
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
 <div class="line"><a name="l00171"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#a529e70d9b1ac2ebb59802b40d525d32a">  171</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classFeel_1_1MatrixEigenDense.html#a529e70d9b1ac2ebb59802b40d525d32a">isInitialized</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> _M_is_initialized;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> M_is_initialized;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1MatrixEigenDense.html#a1e7d91a93a43a66b29d099b9f481b1d3">close</a> () <span class="keyword">const</span>;</div>
@@ -223,18 +223,18 @@ $(document).ready(function(){initNavTree('matrixeigendense_8hpp_source.html','')
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
 <div class="line"><a name="l00187"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#a2ac653558e43f0886078dc5d1e45c106">  187</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classFeel_1_1MatrixEigenDense.html#a2ac653558e43f0886078dc5d1e45c106">closed</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">return</span> _M_is_closed;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">return</span> M_is_closed;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
 <div class="line"><a name="l00196"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#a72f10669df8d0e6ff6f85f1dccb81f6c">  196</a></span>&#160;    matrix_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1MatrixEigenDense.html#a72f10669df8d0e6ff6f85f1dccb81f6c">mat</a> ()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">return</span> _M_mat;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">return</span> M_mat;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
 <div class="line"><a name="l00204"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#ab9bd86a7786ddedffb9c825028e94676">  204</a></span>&#160;    matrix_type &amp; <a class="code" href="classFeel_1_1MatrixEigenDense.html#ab9bd86a7786ddedffb9c825028e94676">mat</a> ()</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">return</span> _M_mat;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">return</span> M_mat;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
@@ -257,13 +257,13 @@ $(document).ready(function(){initNavTree('matrixeigendense_8hpp_source.html','')
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
 <div class="line"><a name="l00252"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#a87f0ab4d199eb508d2e9ef200066e847">  252</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1MatrixEigenDense.html#a87f0ab4d199eb508d2e9ef200066e847">clear</a> ()</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="comment">//eigen::resize( _M_mat, 0, 0 );</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        _M_mat.setZero( _M_mat.rows(), _M_mat.cols() );</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="comment">//eigen::resize( M_mat, 0, 0 );</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        M_mat.setZero( M_mat.rows(), M_mat.cols() );</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
 <div class="line"><a name="l00262"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#a8ac4c0515c81d5cfe75c780399d6757e">  262</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1MatrixEigenDense.html#a8ac4c0515c81d5cfe75c780399d6757e">zero</a> ()</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    {</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        _M_mat.setZero( _M_mat.rows(), _M_mat.cols() );</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        M_mat.setZero( M_mat.rows(), M_mat.cols() );</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    }</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
 <div class="line"><a name="l00267"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#a866b92198b4d294e714166b90b050050">  267</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1MatrixEigenDense.html#a866b92198b4d294e714166b90b050050">zero</a> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> start1, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> stop1, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> start2, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> stop2 )</div>
@@ -274,14 +274,14 @@ $(document).ready(function(){initNavTree('matrixeigendense_8hpp_source.html','')
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;               <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> j,</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;               <span class="keyword">const</span> value_type&amp; value )</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    {</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        _M_mat( i, j ) += value;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        M_mat( i, j ) += value;</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    }</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
 <div class="line"><a name="l00294"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#a34a70929f16dab61ec48fd8cb5facc25">  294</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1MatrixEigenDense.html#a34a70929f16dab61ec48fd8cb5facc25">set</a> ( <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i,</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;               <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> j,</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;               <span class="keyword">const</span> value_type&amp; value )</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        _M_mat( i, j ) = value;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        M_mat( i, j ) = value;</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    }</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
@@ -297,7 +297,7 @@ $(document).ready(function(){initNavTree('matrixeigendense_8hpp_source.html','')
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <a class="code" href="classFeel_1_1MatrixEigenDense.html#a34da5ba0904312149813b715f1c389a1">energy</a>( <a class="code" href="classFeel_1_1Vector.html">Vector&lt;value_type&gt;</a> <span class="keyword">const</span>&amp; __v,</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            <a class="code" href="classFeel_1_1Vector.html">Vector&lt;value_type&gt;</a> <span class="keyword">const</span>&amp; __u, <span class="keywordtype">bool</span> <a class="code" href="classFeel_1_1MatrixSparse.html#a6f9427fc081c1099b3e8d3b4e7729bad">transpose</a> = <span class="keyword">false</span> ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1MatrixEigenDense.html#a20e017f104ab693738ac62933cabc485">zeroRows</a>( std::vector&lt;int&gt; <span class="keyword">const</span>&amp; rows, std::vector&lt;value_type&gt; <span class="keyword">const</span>&amp; values, <a class="code" href="classFeel_1_1Vector.html">Vector&lt;value_type&gt;</a>&amp; rhs, <a class="code" href="classFeel_1_1Context.html" title="Context class. ">Context</a> <span class="keyword">const</span>&amp; on_context );</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1MatrixEigenDense.html#a99c0e680ac271ea717f74dc70a6485d1">zeroRows</a>( std::vector&lt;int&gt; <span class="keyword">const</span>&amp; rows, <a class="code" href="classFeel_1_1Vector.html">Vector&lt;value_type&gt;</a> <span class="keyword">const</span>&amp; values, <a class="code" href="classFeel_1_1Vector.html">Vector&lt;value_type&gt;</a>&amp; rhs, <a class="code" href="classFeel_1_1Context.html" title="Context class. ">Context</a> <span class="keyword">const</span>&amp; on_context );</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordtype">void</span> init() {}</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
@@ -337,17 +337,17 @@ $(document).ready(function(){initNavTree('matrixeigendense_8hpp_source.html','')
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="keywordtype">bool</span> _M_is_initialized;</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keyword">mutable</span> <span class="keywordtype">bool</span> _M_is_closed;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="keywordtype">bool</span> M_is_initialized;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keyword">mutable</span> <span class="keywordtype">bool</span> M_is_closed;</div>
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keyword">mutable</span> matrix_type _M_mat;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keyword">mutable</span> matrix_type M_mat;</div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;};</div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00433"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#a20e017f104ab693738ac62933cabc485">  433</a></span>&#160;<a class="code" href="classFeel_1_1MatrixEigenDense.html#a20e017f104ab693738ac62933cabc485">MatrixEigenDense&lt;T&gt;::zeroRows</a>( std::vector&lt;int&gt; <span class="keyword">const</span>&amp; rows,</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                               std::vector&lt;value_type&gt; <span class="keyword">const</span>&amp; vals,</div>
+<div class="line"><a name="l00433"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#a99c0e680ac271ea717f74dc70a6485d1">  433</a></span>&#160;<a class="code" href="classFeel_1_1MatrixEigenDense.html#a99c0e680ac271ea717f74dc70a6485d1">MatrixEigenDense&lt;T&gt;::zeroRows</a>( std::vector&lt;int&gt; <span class="keyword">const</span>&amp; rows,</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                               <a class="code" href="classFeel_1_1Vector.html">Vector&lt;value_type&gt;</a> <span class="keyword">const</span>&amp; vals,</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;                               <a class="code" href="classFeel_1_1Vector.html">Vector&lt;value_type&gt;</a>&amp; rhs,</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;                               <a class="code" href="classFeel_1_1Context.html" title="Context class. ">Context</a> <span class="keyword">const</span>&amp; on_context )</div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;{</div>
@@ -359,14 +359,14 @@ $(document).ready(function(){initNavTree('matrixeigendense_8hpp_source.html','')
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        value_type value = 1.0;</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div>
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        <span class="keywordflow">if</span> ( on_context.test( <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aac885f100d1a310c35efd57a5fe100c8e">ON_ELIMINATION_KEEP_DIAGONAL</a> ) )</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;            value = _M_mat( rows[i], rows[i] );</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        _M_mat.row( rows[i] ).setZero();</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        <span class="comment">//_M_mat.col( rows[i] ).setZero();</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;            value = M_mat( rows[i], rows[i] );</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        M_mat.row( rows[i] ).setZero();</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        <span class="comment">//M_mat.col( rows[i] ).setZero();</span></div>
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        <span class="comment">// set diagonal</span></div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        _M_mat( rows[i], rows[i] ) = value;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        M_mat( rows[i], rows[i] ) = value;</div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;</div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        <span class="comment">// multiply rhs by value of the diagonal entry value</span></div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        rhs.<a class="code" href="classFeel_1_1Vector.html#aa98adb864bb90b44c083922cd091cb7d">set</a>( rows[i], value * vals[i] );</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        rhs.<a class="code" href="classFeel_1_1Vector.html#aa98adb864bb90b44c083922cd091cb7d">set</a>( rows[i], value * vals(rows[i]) );</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    }</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;}</div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;</div>
@@ -375,7 +375,7 @@ $(document).ready(function(){initNavTree('matrixeigendense_8hpp_source.html','')
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:01:52 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:32 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  Author(s): Christophe Prud&#39;homme &lt;christophe.prudhomme@feelpp.org&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">       Date: 2006-12-30</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">  Copyright (C) 2006 Université Joseph Fourier (Grenoble)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">  Copyright (C) 2006 Universite Joseph Fourier (Grenoble)</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">  This library is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">  modify it under the terms of the GNU Lesser General Public</span></div>
@@ -186,8 +186,8 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        ublas::vector&lt;T&gt; px( Npoints );</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        details::gaussjacobi&lt;Npoints, T, ublas::vector&lt;T&gt;, ublas::vector&lt;T&gt; &gt;( this-&gt;_M_w, px );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        ublas::row( this-&gt;_M_points, 0 ) = px;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        details::gaussjacobi&lt;Npoints, T, ublas::vector&lt;T&gt;, ublas::vector&lt;T&gt; &gt;( this-&gt;M_w, px );</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        ublas::row( this-&gt;M_points, 0 ) = px;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        boost::shared_ptr&lt;GT_Lagrange&lt;1,1,1,Simplex,T&gt; &gt; gm( <span class="keyword">new</span> GT_Lagrange&lt;1, 1, 1, Simplex, T&gt; );</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        boost::shared_ptr&lt;face_quad_type&gt; face_qr( <span class="keyword">new</span> face_quad_type );</div>
@@ -238,7 +238,7 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor"></span>        std::cout&lt;&lt;<span class="stringliteral">&quot;[Debug quadpoint] Npoints = &quot;</span> &lt;&lt; Npoints &lt;&lt; std::endl ;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        std::cout&lt;&lt;<span class="stringliteral">&quot;[Debug quadpoint] _pts.size2() = &quot;</span> &lt;&lt; this-&gt;_M_points.size2() &lt;&lt; std::endl ;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        std::cout&lt;&lt;<span class="stringliteral">&quot;[Debug quadpoint] _pts.size2() = &quot;</span> &lt;&lt; this-&gt;M_points.size2() &lt;&lt; std::endl ;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        std::cout&lt;&lt;<span class="stringliteral">&quot;[Debug quadpoint] Degree = &quot;</span> &lt;&lt; Degree &lt;&lt; std::endl ;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor"></span></div>
@@ -257,13 +257,13 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                <span class="comment">// computes the weight of the k-th node</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                this-&gt;_M_w( k ) = 0.5 * wx( i ) * wy( j );</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                this-&gt;M_w( k ) = 0.5 * wx( i ) * wy( j );</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="comment">// use expansion for the collapsed triangle to compute the points</span></div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                <span class="comment">// coordinates (from cartesian to collapsed coordinates)</span></div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                eta( 0 ) = px( i );</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                eta( 1 ) = py( j );</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                ublas::column( this-&gt;_M_points, k ) = to_xi( eta );</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                ublas::column( this-&gt;M_points, k ) = to_xi( eta );</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            }</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        }</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
@@ -327,13 +327,13 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> l = 0; l &lt; Degree; ++l, ++k )</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                {</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                    <span class="comment">// computes the weight of the k-th node</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                    this-&gt;_M_w( k ) = 0.125 * wx( i ) * wy( j ) * wz( l );</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                    this-&gt;M_w( k ) = 0.125 * wx( i ) * wy( j ) * wz( l );</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                    <span class="comment">// use expansion for the collapsed triangle to compute the points</span></div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                    <span class="comment">// coordinates (from cartesian to collapsed coordinates)</span></div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                    eta( 0 ) = px( i );</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                    eta( 1 ) = py( j );</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                    eta( 2 ) = pz( l );</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                    ublas::column( this-&gt;_M_points, k ) = to_xi( eta );</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                    ublas::column( this-&gt;M_points, k ) = to_xi( eta );</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                }</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            }</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        }</div>
@@ -384,14 +384,14 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 0; i &lt; Degree; ++i )</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        {</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="comment">// computes the weight of the k-th node</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            this-&gt;_M_w( i ) = wx( i );</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            this-&gt;_M_points( 0, i ) = px( i );</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            this-&gt;M_w( i ) = wx( i );</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            this-&gt;M_points( 0, i ) = px( i );</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        }</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor"></span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;[gauss&lt;SP&lt;2,1&gt;] p = &quot;</span> &lt;&lt; this-&gt;_M_points &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;[gauss&lt;SP&lt;2,1&gt;] w = &quot;</span> &lt;&lt; this-&gt;_M_w &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor"></span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;[gauss&lt;SP&lt;2,1&gt;] p = &quot;</span> &lt;&lt; this-&gt;M_points &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;[gauss&lt;SP&lt;2,1&gt;] w = &quot;</span> &lt;&lt; this-&gt;M_w &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
@@ -443,15 +443,15 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> j = 0; j &lt; Degree; ++j, ++k )</div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            {</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                <span class="comment">// computes the weight of the k-th node</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                this-&gt;_M_w( k ) = wx( i ) * wx( j );</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                this-&gt;_M_points( 0, k ) = px( i );</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                this-&gt;_M_points( 1, k ) = px( j );</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                this-&gt;M_w( k ) = wx( i ) * wx( j );</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                this-&gt;M_points( 0, k ) = px( i );</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                this-&gt;M_points( 1, k ) = px( j );</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            }</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        }</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="preprocessor"></span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;[gauss&lt;SP&lt;2,1&gt;] p = &quot;</span> &lt;&lt; this-&gt;_M_points &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;[gauss&lt;SP&lt;2,1&gt;] w = &quot;</span> &lt;&lt; this-&gt;_M_w &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="preprocessor"></span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;[gauss&lt;SP&lt;2,1&gt;] p = &quot;</span> &lt;&lt; this-&gt;M_points &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;[gauss&lt;SP&lt;2,1&gt;] w = &quot;</span> &lt;&lt; this-&gt;M_w &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="preprocessor"></span>        boost::shared_ptr&lt;GT_Lagrange&lt;2, 1, 2, Hypercube, T&gt; &gt; gm( <span class="keyword">new</span> GT_Lagrange&lt;2, 1, 2, Hypercube, T&gt; );</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        boost::shared_ptr&lt;face_quad_type&gt; face_qr( <span class="keyword">new</span> face_quad_type );</div>
@@ -498,10 +498,10 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> l = 0; l &lt; Degree ; ++l, ++k )</div>
 <div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                {</div>
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                    <span class="comment">// computes the weight of the k-th node</span></div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;                    this-&gt;_M_w( k ) = wx( i ) * wx( j ) * wx( l );</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;                    this-&gt;_M_points( 0, k ) = px( i );</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                    this-&gt;_M_points( 1, k ) = px( j );</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                    this-&gt;_M_points( 2, k ) = px( l );</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;                    this-&gt;M_w( k ) = wx( i ) * wx( j ) * wx( l );</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;                    this-&gt;M_points( 0, k ) = px( i );</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                    this-&gt;M_points( 1, k ) = px( j );</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                    this-&gt;M_points( 2, k ) = px( l );</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                }</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;            }</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        }</div>
@@ -554,11 +554,11 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 <div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> r = 0; r &lt; Degree ; ++r, ++k )</div>
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                    {</div>
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                        <span class="comment">// computes the weight of the k-th node</span></div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                        this-&gt;_M_w( k ) = wx( i ) * wx( j ) * wx( l ) * wx( r );</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                        this-&gt;_M_points( 0, k ) = px( i );</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                        this-&gt;_M_points( 1, k ) = px( j );</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                        this-&gt;_M_points( 2, k ) = px( l );</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                        this-&gt;_M_points( 3, k ) = px( r );</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                        this-&gt;M_w( k ) = wx( i ) * wx( j ) * wx( l ) * wx( r );</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                        this-&gt;M_points( 0, k ) = px( i );</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                        this-&gt;M_points( 1, k ) = px( j );</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                        this-&gt;M_points( 2, k ) = px( l );</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                        this-&gt;M_points( 3, k ) = px( r );</div>
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;                    }</div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;                }</div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;            }</div>
@@ -608,12 +608,12 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;                        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> s = 0; s &lt; Degree ; ++s, ++k )</div>
 <div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                        {</div>
 <div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;                            <span class="comment">// computes the weight of the k-th node</span></div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                            this-&gt;_M_w( k ) = wx( i ) * wx( j ) * wx( l ) * wx( r ) * wx ( s );</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;                            this-&gt;_M_points( 0, k ) = px( i );</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;                            this-&gt;_M_points( 1, k ) = px( j );</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                            this-&gt;_M_points( 2, k ) = px( l );</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;                            this-&gt;_M_points( 3, k ) = px( r );</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;                            this-&gt;_M_points( 4, k ) = px( s );</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                            this-&gt;M_w( k ) = wx( i ) * wx( j ) * wx( l ) * wx( r ) * wx ( s );</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;                            this-&gt;M_points( 0, k ) = px( i );</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;                            this-&gt;M_points( 1, k ) = px( j );</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                            this-&gt;M_points( 2, k ) = px( l );</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;                            this-&gt;M_points( 3, k ) = px( r );</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;                            this-&gt;M_points( 4, k ) = px( s );</div>
 <div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;                        }</div>
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;                    }</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;                }</div>
@@ -631,7 +631,7 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:01:46 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:27 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

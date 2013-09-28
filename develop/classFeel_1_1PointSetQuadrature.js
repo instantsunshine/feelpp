@@ -44,9 +44,9 @@ var classFeel_1_1PointSetQuadrature =
     [ "weight", "classFeel_1_1PointSetQuadrature.html#a74b633ce86a5efaefa2098c80d4a521a", null ],
     [ "weights", "classFeel_1_1PointSetQuadrature.html#a5e896aaeb0d141a859b48c7f198b849c", null ],
     [ "weights", "classFeel_1_1PointSetQuadrature.html#addadf5ed0d7a22f1536367614550b23a", null ],
-    [ "_M_exprq", "classFeel_1_1PointSetQuadrature.html#a12459eb55c71e6b0e9c1182cdb4ad76d", null ],
-    [ "_M_n_face", "classFeel_1_1PointSetQuadrature.html#a0ea0a05c42238c0d09354852acbba854", null ],
-    [ "_M_prod", "classFeel_1_1PointSetQuadrature.html#a5fd7e84ecd076cf106cc6fe47d21ea12", null ],
-    [ "_M_w", "classFeel_1_1PointSetQuadrature.html#aa3218cbb9ee0c87ca00c7d7774c925d7", null ],
-    [ "_M_w_face", "classFeel_1_1PointSetQuadrature.html#a961814f36b564224edd556b9fda7b8cc", null ]
+    [ "M_exprq", "classFeel_1_1PointSetQuadrature.html#af2940b690154bdd1bc05738b3a2ba7fa", null ],
+    [ "M_n_face", "classFeel_1_1PointSetQuadrature.html#a50048a770e2c4412fefc9b9ae463fff0", null ],
+    [ "M_prod", "classFeel_1_1PointSetQuadrature.html#adca1a49ea0d66901997700b5a0aead6e", null ],
+    [ "M_w", "classFeel_1_1PointSetQuadrature.html#ad76e7721aadcf7029c1649f48ce23fdc", null ],
+    [ "M_w_face", "classFeel_1_1PointSetQuadrature.html#a5260ba9e535d4e4d70e3cd5d0254737c", null ]
 ];

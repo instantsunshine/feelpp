@@ -47,6 +47,6 @@ var classFeel_1_1MatrixBlockBase =
     [ "updateBlockMat", "classFeel_1_1MatrixBlockBase.html#a64818e783cfe272b164598cf9970bb33", null ],
     [ "zero", "classFeel_1_1MatrixBlockBase.html#a91d6ac02dc4c07dee90d3e0a62a6df9f", null ],
     [ "zero", "classFeel_1_1MatrixBlockBase.html#a1fe43f8b51bee4fb581684dfe1d0bba0", null ],
-    [ "zeroRows", "classFeel_1_1MatrixBlockBase.html#aca49dc68bc19cc98846ab84aef03bf6c", null ],
+    [ "zeroRows", "classFeel_1_1MatrixBlockBase.html#a560e0e1cc4137fe49aa77370d37c3b9c", null ],
     [ "operator<<", "classFeel_1_1MatrixBlockBase.html#af154a6d470908d4e78f71af90892b566", null ]
 ];

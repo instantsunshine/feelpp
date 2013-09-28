@@ -11,6 +11,8 @@ var classFeel_1_1Mesh2D =
     [ "face_processor_type", "classFeel_1_1Mesh2D.html#a9b779e9bc61dbf86bb75ba27efeccc7a", null ],
     [ "face_type", "classFeel_1_1Mesh2D.html#aadd637e44b5565ccb1e7ec3b0625b7d8", null ],
     [ "faces_type", "classFeel_1_1Mesh2D.html#a2573757a246a03bc6ef1dcec570ab38e", null ],
+    [ "location_edge_const_iterator", "classFeel_1_1Mesh2D.html#a128291dd561ae485c1b75969ef629864", null ],
+    [ "location_edge_iterator", "classFeel_1_1Mesh2D.html#a32cfcc680593271b66f04c156b1434d2", null ],
     [ "marker_edge_const_iterator", "classFeel_1_1Mesh2D.html#acc07457bbf7c87eb1c7f06f177f1d51f", null ],
     [ "marker_edge_iterator", "classFeel_1_1Mesh2D.html#a9078381b4fffc1c2ee1ef36d258b37b1", null ],
     [ "point_type", "classFeel_1_1Mesh2D.html#a10597f41f1242607017c82da4b088b47", null ],

@@ -172,7 +172,7 @@ $(document).ready(function(){initNavTree('bdf_8hpp_source.html','');});
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="classFeel_1_1Bdf.html#af24ec78d035f886461dc26db63f6182b">  121</a></span>&#160;    BDFTimeScheme <a class="code" href="classFeel_1_1Bdf.html#af24ec78d035f886461dc26db63f6182b">order</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> _M_order;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> M_order;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1Bdf.html#a196b29d4ad57ea077dbb95aed4b4e9e4">initialize</a>( element_type <span class="keyword">const</span>&amp; u0 );</div>
@@ -199,89 +199,89 @@ $(document).ready(function(){initNavTree('bdf_8hpp_source.html','');});
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> container_type&gt;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">void</span> setUnknown( <span class="keywordtype">int</span> i,  <span class="keyword">typename</span> space_type::template Element&lt;value_type, container_type&gt; <span class="keyword">const</span>&amp; e )</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        _M_unknowns[i]-&gt;assign( e );</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        M_unknowns[i]-&gt;assign( e );</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">void</span> showMe( std::ostream&amp; __out = std::cout ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    space_ptrtype _M_space;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    space_ptrtype M_space;</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    BDFTimeScheme _M_order;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    BDFTimeScheme M_order;</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> _M_size;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> M_size;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    std::vector&lt;ublas::vector&lt;double&gt; &gt; _M_alpha;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    std::vector&lt;ublas::vector&lt;double&gt; &gt; M_alpha;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    std::vector&lt;ublas::vector&lt;double&gt; &gt; _M_beta;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    std::vector&lt;ublas::vector&lt;double&gt; &gt; M_beta;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    unknowns_type _M_unknowns;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    unknowns_type M_unknowns;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;};</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SpaceType&gt;</div>
 <div class="line"><a name="l00201"></a><span class="lineno"><a class="code" href="classFeel_1_1Bdf.html#a65c891d2c1201fcdd78aea2c72564be1">  201</a></span>&#160;<a class="code" href="classFeel_1_1Bdf.html#a65c891d2c1201fcdd78aea2c72564be1">Bdf&lt;SpaceType&gt;::Bdf</a>( space_ptrtype <span class="keyword">const</span>&amp; __space )</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    :</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    _M_space( __space ),</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    _M_size( 0 ),</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    _M_alpha( BDF_MAX_ORDER ),</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    _M_beta( BDF_MAX_ORDER )</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    M_space( __space ),</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    M_size( 0 ),</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    M_alpha( BDF_MAX_ORDER ),</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    M_beta( BDF_MAX_ORDER )</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;{</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 0; i &lt; BDF_MAX_ORDER; ++i )</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    {</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        _M_alpha[ i ].resize( i+2 );</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        _M_beta[ i ].resize( i+1 );</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        M_alpha[ i ].resize( i+2 );</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        M_beta[ i ].resize( i+1 );</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    }</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 0; i &lt; BDF_MAX_ORDER; ++i )</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    {</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">if</span> (  i == 0 ) <span class="comment">// BDF_ORDER_ONE:</span></div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        {</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            _M_alpha[i][ 0 ] = 1.; <span class="comment">// Backward Euler</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            _M_alpha[i][ 1 ] = 1.;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            _M_beta[i][ 0 ] = 1.; <span class="comment">// u^{n+1} \approx u^n</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            M_alpha[i][ 0 ] = 1.; <span class="comment">// Backward Euler</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            M_alpha[i][ 1 ] = 1.;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            M_beta[i][ 0 ] = 1.; <span class="comment">// u^{n+1} \approx u^n</span></div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        }</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( i == 1 ) <span class="comment">// BDF_ORDER_TWO:</span></div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            _M_alpha[i][ 0 ] = 3. / 2.;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            _M_alpha[i][ 1 ] = 2.;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            _M_alpha[i][ 2 ] = -1. / 2.;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            _M_beta[i][ 0 ] = 2.;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            _M_beta[i][ 1 ] = -1.;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            M_alpha[i][ 0 ] = 3. / 2.;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            M_alpha[i][ 1 ] = 2.;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            M_alpha[i][ 2 ] = -1. / 2.;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            M_beta[i][ 0 ] = 2.;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            M_beta[i][ 1 ] = -1.;</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        }</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( i == 2 ) <span class="comment">// BDF_ORDER_THREE:</span></div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            _M_alpha[i][ 0 ] = 11. / 6.;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            _M_alpha[i][ 1 ] = 3.;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            _M_alpha[i][ 2 ] = -3. / 2.;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            _M_alpha[i][ 3 ] = 1. / 3.;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            _M_beta[i][ 0 ] = 3.;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            _M_beta[i][ 1 ] = -3.;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            _M_beta[i][ 2 ] = 1.;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            M_alpha[i][ 0 ] = 11. / 6.;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            M_alpha[i][ 1 ] = 3.;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            M_alpha[i][ 2 ] = -3. / 2.;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            M_alpha[i][ 3 ] = 1. / 3.;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            M_beta[i][ 0 ] = 3.;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            M_beta[i][ 1 ] = -3.;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            M_beta[i][ 2 ] = 1.;</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        }</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( i == 3 ) </div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        {</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            _M_alpha[i][ 0 ] = 25. / 12.;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            _M_alpha[i][ 1 ] = 4.;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            _M_alpha[i][ 2 ] = -3.;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            _M_alpha[i][ 3 ] = 4. / 3.;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            _M_alpha[i][ 4 ] = -1. / 4.;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            _M_beta[i][ 0 ] = 4.;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            _M_beta[i][ 1 ] = -6.;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            _M_beta[i][ 2 ] = 4.;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            _M_beta[i][ 3 ] = -1.;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            M_alpha[i][ 0 ] = 25. / 12.;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            M_alpha[i][ 1 ] = 4.;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            M_alpha[i][ 2 ] = -3.;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            M_alpha[i][ 3 ] = 4. / 3.;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            M_alpha[i][ 4 ] = -1. / 4.;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            M_beta[i][ 0 ] = 4.;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            M_beta[i][ 1 ] = -6.;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            M_beta[i][ 2 ] = 4.;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            M_beta[i][ 3 ] = -1.;</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        }</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    _M_unknowns.resize( BDF_MAX_ORDER );</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    M_unknowns.resize( BDF_MAX_ORDER );</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">for</span> ( uint8_type __i = 0; __i &lt; ( uint8_type )BDF_MAX_ORDER; ++__i )</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    {</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        _M_unknowns[__i] = unknown_type( <span class="keyword">new</span> element_type( _M_space ) );</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        _M_unknowns[__i]-&gt;zero();</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        M_unknowns[__i] = unknown_type( <span class="keyword">new</span> element_type( M_space ) );</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        M_unknowns[__i]-&gt;zero();</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
@@ -295,7 +295,7 @@ $(document).ready(function(){initNavTree('bdf_8hpp_source.html','');});
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="keywordtype">void</span></div>
 <div class="line"><a name="l00274"></a><span class="lineno"><a class="code" href="classFeel_1_1Bdf.html#a196b29d4ad57ea077dbb95aed4b4e9e4">  274</a></span>&#160;<a class="code" href="classFeel_1_1Bdf.html#a196b29d4ad57ea077dbb95aed4b4e9e4">Bdf&lt;SpaceType&gt;::initialize</a>( element_type <span class="keyword">const</span>&amp; u0 )</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;{</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    std::for_each( _M_unknowns.begin(), _M_unknowns.end(), *boost::lambda::_1 = u0 );</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    std::for_each( M_unknowns.begin(), M_unknowns.end(), *boost::lambda::_1 = u0 );</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;}</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SpaceType&gt;</div>
@@ -303,9 +303,9 @@ $(document).ready(function(){initNavTree('bdf_8hpp_source.html','');});
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<a class="code" href="classFeel_1_1Bdf.html#a196b29d4ad57ea077dbb95aed4b4e9e4">Bdf&lt;SpaceType&gt;::initialize</a>( unknowns_type <span class="keyword">const</span>&amp; uv0 )</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;{</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="comment">// Check if uv0 has the right dimensions</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="comment">//FEELPP_ASSERT( uv0.size() == uint16_type(_M_order) ).error( &quot;Initial data set are not enough for the selected BDF&quot; );</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="comment">//FEELPP_ASSERT( uv0.size() == uint16_type(M_order) ).error( &quot;Initial data set are not enough for the selected BDF&quot; );</span></div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    std::copy( uv0.begin(), uv0.end(), _M_unknowns.begin() );</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    std::copy( uv0.begin(), uv0.end(), M_unknowns.begin() );</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;}</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SpaceType&gt;</div>
@@ -313,15 +313,15 @@ $(document).ready(function(){initNavTree('bdf_8hpp_source.html','');});
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="keyword">typename</span> Bdf&lt;SpaceType&gt;::unknowns_type&amp;</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<a class="code" href="classFeel_1_1Bdf.html#aebf7b26c94b6115d714ec42c60debb11" title="Return a vector with the last n state vectors. ">Bdf&lt;SpaceType&gt;::unknowns</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordflow">return</span> _M_unknowns;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordflow">return</span> M_unknowns;</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;}</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SpaceType&gt;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="keyword">typename</span> Bdf&lt;SpaceType&gt;::element_type&amp;</div>
 <div class="line"><a name="l00299"></a><span class="lineno"><a class="code" href="classFeel_1_1Bdf.html#a98d2fd5f1560bc33f8d97ee02aa0aa74">  299</a></span>&#160;<a class="code" href="classFeel_1_1Bdf.html#a98d2fd5f1560bc33f8d97ee02aa0aa74" title="Return a vector with the last n state vectors. ">Bdf&lt;SpaceType&gt;::unknown</a>( <span class="keywordtype">int</span> i )</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;{</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="comment">//VLOG(1) &lt;&lt; &quot;[Bdf::unknown] id: &quot; &lt;&lt; i &lt;&lt; &quot; l2norm = &quot; &lt;&lt; _M_unknowns[i]-&gt;l2Norm() &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">return</span> *_M_unknowns[i];</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="comment">//VLOG(1) &lt;&lt; &quot;[Bdf::unknown] id: &quot; &lt;&lt; i &lt;&lt; &quot; l2norm = &quot; &lt;&lt; M_unknowns[i]-&gt;l2Norm() &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">return</span> *M_unknowns[i];</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
@@ -332,7 +332,7 @@ $(document).ready(function(){initNavTree('bdf_8hpp_source.html','');});
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<a class="code" href="classFeel_1_1Bdf.html#a6cec4989e45f2eac937b90b24c992158" title="Return the i-th coefficient of the time derivative alpha_i. ">Bdf&lt;SpaceType&gt;::derivateCoefficient</a>( <span class="keywordtype">int</span> n, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i, <span class="keywordtype">double</span> dt )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    FEELPP_ASSERT( i &lt; <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a>( n + 1 ) ).error( <span class="stringliteral">&quot;Error in specification of the time derivative coefficient for the BDF formula (out of range error)&quot;</span> );</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordflow">return</span> _M_alpha[n-1][ i ]/dt;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordflow">return</span> M_alpha[n-1][ i ]/dt;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;}</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SpaceType&gt;</div>
@@ -340,7 +340,7 @@ $(document).ready(function(){initNavTree('bdf_8hpp_source.html','');});
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<a class="code" href="classFeel_1_1Bdf.html#a1bef56c8f81d9c70e5f2bb8271190d54" title="Return the i-th coefficient of the time extrapolation beta_i. ">Bdf&lt;SpaceType&gt;::extrapolateCoefficient</a>( <span class="keywordtype">int</span> n, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i, <span class="keywordtype">double</span> dt )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    FEELPP_ASSERT( i &lt; n ).error( <span class="stringliteral">&quot;Error in specification of the time derivative coefficient for the BDF formula (out of range error)&quot;</span> );</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">return</span> _M_beta[n-1][ i ];</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">return</span> M_beta[n-1][ i ];</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;}</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SpaceType&gt;</div>
@@ -348,10 +348,10 @@ $(document).ready(function(){initNavTree('bdf_8hpp_source.html','');});
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;Bdf&lt;SpaceType&gt;::showMe( std::ostream&amp; __out )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor"></span>    __out &lt;&lt; <span class="stringliteral">&quot;*** BDF Time discretization of order &quot;</span> &lt;&lt; _M_order &lt;&lt; <span class="stringliteral">&quot; ***&quot;</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;          &lt;&lt; <span class="stringliteral">&quot;  size : &quot;</span> &lt;&lt; _M_unknowns[0]-&gt;size() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;          &lt;&lt; <span class="stringliteral">&quot; alpha : &quot;</span> &lt;&lt; _M_alpha &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;          &lt;&lt; <span class="stringliteral">&quot;  beta : &quot;</span> &lt;&lt; _M_beta &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor"></span>    __out &lt;&lt; <span class="stringliteral">&quot;*** BDF Time discretization of order &quot;</span> &lt;&lt; M_order &lt;&lt; <span class="stringliteral">&quot; ***&quot;</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;          &lt;&lt; <span class="stringliteral">&quot;  size : &quot;</span> &lt;&lt; M_unknowns[0]-&gt;size() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;          &lt;&lt; <span class="stringliteral">&quot; alpha : &quot;</span> &lt;&lt; M_alpha &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;          &lt;&lt; <span class="stringliteral">&quot;  beta : &quot;</span> &lt;&lt; M_beta &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="preprocessor"></span>}</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
@@ -361,14 +361,14 @@ $(document).ready(function(){initNavTree('bdf_8hpp_source.html','');});
 <div class="line"><a name="l00339"></a><span class="lineno"><a class="code" href="classFeel_1_1Bdf.html#a5e465bd326153926ca37a424853a6c0f">  339</a></span>&#160;<a class="code" href="classFeel_1_1Bdf.html#a5e465bd326153926ca37a424853a6c0f">Bdf&lt;SpaceType&gt;::shiftRight</a>( <span class="keyword">typename</span> space_type::template Element&lt;value_type, container_type&gt; <span class="keyword">const</span>&amp; __new_unk )</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;{</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keyword">using namespace </span>boost::lambda;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keyword">typename</span> unknowns_type::reverse_iterator __it = boost::next( _M_unknowns.rbegin() );</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    std::for_each( _M_unknowns.rbegin(), boost::prior( _M_unknowns.rend() ),</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keyword">typename</span> unknowns_type::reverse_iterator __it = boost::next( M_unknowns.rbegin() );</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    std::for_each( M_unknowns.rbegin(), boost::prior( M_unknowns.rend() ),</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                   ( *lambda::_1 = *( *lambda::var( __it ) ), ++lambda::var( __it ) ) );</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="comment">// u(t^{n}) coefficient is in _M_unknowns[0]</span></div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    *_M_unknowns[0] = __new_unk;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="comment">// u(t^{n}) coefficient is in M_unknowns[0]</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    *M_unknowns[0] = __new_unk;</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="comment">/*    int i = 0;</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="comment">    BOOST_FOREACH( boost::shared_ptr&lt;element_type&gt;&amp; t, _M_unknowns  )</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="comment">    BOOST_FOREACH( boost::shared_ptr&lt;element_type&gt;&amp; t, M_unknowns  )</span></div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="comment">            //VLOG(1) &lt;&lt; &quot;[Bdf::shiftright] id: &quot; &lt;&lt; i &lt;&lt; &quot; l2norm = &quot; &lt;&lt; t-&gt;l2Norm() &lt;&lt; &quot;\n&quot;;</span></div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="comment">            ++i;</span></div>
@@ -380,7 +380,7 @@ $(document).ready(function(){initNavTree('bdf_8hpp_source.html','');});
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="keyword">typename</span> Bdf&lt;SpaceType&gt;::element_type</div>
 <div class="line"><a name="l00359"></a><span class="lineno"><a class="code" href="classFeel_1_1Bdf.html#a2b07a20306379acc25de11e9ad0b743b">  359</a></span>&#160;<a class="code" href="classFeel_1_1Bdf.html#a2b07a20306379acc25de11e9ad0b743b">Bdf&lt;SpaceType&gt;::derivate</a>( <span class="keywordtype">int</span> n, scalar_type dt )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    element_type __t( _M_space );</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    element_type __t( M_space );</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    __t.zero();</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    __t.add( ( 1./dt ), derivate( n ) );</div>
@@ -392,14 +392,14 @@ $(document).ready(function(){initNavTree('bdf_8hpp_source.html','');});
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="keyword">typename</span> Bdf&lt;SpaceType&gt;::element_type</div>
 <div class="line"><a name="l00371"></a><span class="lineno"><a class="code" href="classFeel_1_1Bdf.html#a2f94815e118dff631b393fd68b385ab1">  371</a></span>&#160;<a class="code" href="classFeel_1_1Bdf.html#a2b07a20306379acc25de11e9ad0b743b">Bdf&lt;SpaceType&gt;::derivate</a>( <span class="keywordtype">int</span> n )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    element_type __t( _M_space );</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    element_type __t( M_space );</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    __t.zero();</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    FEELPP_ASSERT( __t.size() == _M_space-&gt;nDof() )( __t.size() )( _M_space-&gt;nDof() ).error( <span class="stringliteral">&quot;invalid space element size&quot;</span> );</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    FEELPP_ASSERT( __t.size() == _M_unknowns[0]-&gt;size() )( __t.size() )( _M_unknowns[0]-&gt;size() ).error( <span class="stringliteral">&quot;invalid space element size&quot;</span> );</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    FEELPP_ASSERT( __t.size() == M_space-&gt;nDof() )( __t.size() )( M_space-&gt;nDof() ).error( <span class="stringliteral">&quot;invalid space element size&quot;</span> );</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    FEELPP_ASSERT( __t.size() == M_unknowns[0]-&gt;size() )( __t.size() )( M_unknowns[0]-&gt;size() ).error( <span class="stringliteral">&quot;invalid space element size&quot;</span> );</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordflow">for</span> ( uint8_type i = 0; i &lt; n; ++i )</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        __t.add( _M_alpha[n-1][ i+1 ], *_M_unknowns[i] );</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        __t.add( M_alpha[n-1][ i+1 ], *M_unknowns[i] );</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordflow">return</span> __t;</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;}</div>
@@ -408,14 +408,14 @@ $(document).ready(function(){initNavTree('bdf_8hpp_source.html','');});
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="keyword">typename</span> Bdf&lt;SpaceType&gt;::element_type</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<a class="code" href="classFeel_1_1Bdf.html#ab27129c9ec56f53502df9f4df4f15760">Bdf&lt;SpaceType&gt;::extrapolate</a>( <span class="keywordtype">int</span> n )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    element_type __t( _M_space );</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    element_type __t( M_space );</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    __t.zero();</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    FEELPP_ASSERT( __t.size() == _M_space-&gt;nDof() )( __t.size() )( _M_space-&gt;nDof() ).error( <span class="stringliteral">&quot;invalid space element size&quot;</span> );</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    FEELPP_ASSERT( __t.size() == _M_unknowns[0]-&gt;size() )( __t.size() )( _M_unknowns[0]-&gt;size() ).error( <span class="stringliteral">&quot;invalid space element size&quot;</span> );</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    FEELPP_ASSERT( __t.size() == M_space-&gt;nDof() )( __t.size() )( M_space-&gt;nDof() ).error( <span class="stringliteral">&quot;invalid space element size&quot;</span> );</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    FEELPP_ASSERT( __t.size() == M_unknowns[0]-&gt;size() )( __t.size() )( M_unknowns[0]-&gt;size() ).error( <span class="stringliteral">&quot;invalid space element size&quot;</span> );</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <span class="keywordflow">for</span> ( uint8_type i = 0; i &lt; n; ++i )</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        __t.add(  _M_beta[n-1][ i ],  *_M_unknowns[ i ] );</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        __t.add(  M_beta[n-1][ i ],  *M_unknowns[ i ] );</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordflow">return</span> __t;</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;}</div>
@@ -425,7 +425,7 @@ $(document).ready(function(){initNavTree('bdf_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:01:35 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:15 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

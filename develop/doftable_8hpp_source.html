@@ -289,8 +289,8 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    ~<a class="code" href="classFeel_1_1DofTable.html" title="Local-to-global Degree of Freedom table. ">DofTable</a>()</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    {</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            _M_el_l2g.clear();</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            _M_face_l2g.clear();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            M_el_l2g.clear();</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            M_face_l2g.clear();</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            M_dof_points.clear();</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    constexpr <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> <a class="code" href="classFeel_1_1DataMap.html#ab3eebfa5817a6fbcb79e31f0caa4237f">nLocalDof</a>( <span class="keywordtype">bool</span> per_component = <span class="keyword">false</span> )<span class="keyword"> const</span></div>
@@ -323,7 +323,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
 <div class="line"><a name="l00288"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a3ae55bc4021c0c996e6f55e6a1fc14b8">  288</a></span>&#160;    uint16_type <a class="code" href="classFeel_1_1DofTable.html#a3ae55bc4021c0c996e6f55e6a1fc14b8">nDofPerFaceOnBoundary</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">return</span> _M_n_dof_per_face_on_bdy;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">return</span> M_n_dof_per_face_on_bdy;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    indices_per_element_type  indices( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> id_el )<span class="keyword"> const</span></div>
@@ -331,8 +331,8 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        indices_per_element_type ind;</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        BOOST_FOREACH( LocalDof <span class="keyword">const</span>&amp; ldof, localDofSet( id_el ) )</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keyword">auto</span> it = _M_el_l2g.left.find( ldof );</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            DCHECK( it != _M_el_l2g.left.end() ) &lt;&lt; <span class="stringliteral">&quot;Invalid element id &quot;</span> &lt;&lt; id_el;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keyword">auto</span> it = M_el_l2g.left.find( ldof );</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            DCHECK( it != M_el_l2g.left.end() ) &lt;&lt; <span class="stringliteral">&quot;Invalid element id &quot;</span> &lt;&lt; id_el;</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            ind[ldof.localDof()] = *it;</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        }</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordflow">return</span> ind;</div>
@@ -359,8 +359,8 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        BOOST_FOREACH( LocalDof <span class="keyword">const</span>&amp; ldof, this-&gt;localDofSet( id_el ) )</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="keyword">auto</span> it = _M_el_l2g.left.find( ldof );</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            DCHECK(it != _M_el_l2g.left.end() ) &lt;&lt; <span class="stringliteral">&quot;Invalid element id &quot;</span> &lt;&lt; id_el;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="keyword">auto</span> it = M_el_l2g.left.find( ldof );</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            DCHECK(it != M_el_l2g.left.end() ) &lt;&lt; <span class="stringliteral">&quot;Invalid element id &quot;</span> &lt;&lt; id_el;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            ind[ldof.localDof()] = it-&gt;second.index();</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        }</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    }</div>
@@ -369,8 +369,8 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        std::vector&lt;size_type&gt; ind( nLocalDofOnFace() );</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keyword">auto</span> eit = _M_face_l2g.find( id_el );</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        DCHECK( eit != _M_face_l2g.end() ) &lt;&lt; <span class="stringliteral">&quot;Invalid face id &quot;</span> &lt;&lt; id_el;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keyword">auto</span> eit = M_face_l2g.find( id_el );</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        DCHECK( eit != M_face_l2g.end() ) &lt;&lt; <span class="stringliteral">&quot;Invalid face id &quot;</span> &lt;&lt; id_el;</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keyword">auto</span> it = eit-&gt;second.begin();</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keyword">auto</span> en = eit-&gt;second.end();</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">for</span>( ; it != en; ++ it )</div>
@@ -384,8 +384,8 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        BOOST_FOREACH( LocalDof <span class="keyword">const</span>&amp; ldof, this-&gt;localDofSet( id_el ) )</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        {</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            <span class="keyword">auto</span> it = _M_el_l2g.left.find( ldof );</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            DCHECK( it != _M_el_l2g.left.end() ) &lt;&lt; <span class="stringliteral">&quot;Invalid element id &quot;</span> &lt;&lt; id_el;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            <span class="keyword">auto</span> it = M_el_l2g.left.find( ldof );</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            DCHECK( it != M_el_l2g.left.end() ) &lt;&lt; <span class="stringliteral">&quot;Invalid element id &quot;</span> &lt;&lt; id_el;</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            ind[ldof.localDof()] =this-&gt;mapGlobalProcessToGlobalCluster()[ it-&gt;second.index() ];</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        }</div>
@@ -402,12 +402,12 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
 <div class="line"><a name="l00370"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a3ad84c0e7b38647ad9df1ea61b244a1b">  370</a></span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> <a class="code" href="classFeel_1_1DofTable.html#a3ad84c0e7b38647ad9df1ea61b244a1b">dofNProc</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> dof )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="keywordflow">return</span> _M_dof_procset.find( dof )-&gt;second.size();</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="keywordflow">return</span> M_dof_procset.find( dof )-&gt;second.size();</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    }</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
 <div class="line"><a name="l00378"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a358331a303c531f1141b7702184aeadd">  378</a></span>&#160;    std::set&lt;size_type&gt; <a class="code" href="classFeel_1_1DofTable.html#a358331a303c531f1141b7702184aeadd">dofProcSet</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> dof )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordflow">return</span> _M_dof_procset.find( dof )-&gt;second;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordflow">return</span> M_dof_procset.find( dof )-&gt;second;</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    }</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
 <div class="line"><a name="l00387"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a7a8626e52d690e16eb98e9ef93452224">  387</a></span>&#160;    <span class="keyword">const</span> dof_point_type&amp; <a class="code" href="classFeel_1_1DofTable.html#a7a8626e52d690e16eb98e9ef93452224">dofPoint</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i )<span class="keyword"> const</span></div>
@@ -459,20 +459,20 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        BOOST_FOREACH( <a class="code" href="classFeel_1_1Dof.html" title="class that represents a degree of freedom ">Dof</a> thedof,  dof )</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        {</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;            _M_el_l2g.insert( dof_relation( LocalDof( boost::get&lt;0&gt;( thedof ), boost::get&lt;1&gt;( thedof ) ),</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;            M_el_l2g.insert( dof_relation( LocalDof( boost::get&lt;0&gt;( thedof ), boost::get&lt;1&gt;( thedof ) ),</div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                                            <a class="code" href="classFeel_1_1Dof.html" title="class that represents a degree of freedom ">Dof</a>( boost::get&lt;2&gt;( thedof ), 0, <span class="keyword">false</span> ) ) );</div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        }</div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        <span class="keywordtype">int</span> processor = this-&gt;<a class="code" href="classFeel_1_1DataMap.html#aa07d4e34f54b37326adb0389c30687b1">worldComm</a>().localRank();</div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1DataMap.html#abd1d034c904a5391b9eceb7fab6b41a1">_M_first_df</a>[processor] = 0;</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a7f7b69ea53256e1c2042104be211b4ff">_M_last_df</a>[processor] = dofs.size()-1;</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a28332572f1180b641b06fcf85bba6fbe">_M_n_dofs</a> = dofs.size();</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ae6ce4b4937a7be6c9aecc216438fac85">M_first_df</a>[processor] = 0;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a54c9ae25677a46b98ee3c5e51eb9e562">M_last_df</a>[processor] = dofs.size()-1;</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1DataMap.html#aac50232803a1ff3adb5f84af1fb4b4e1">M_n_dofs</a> = dofs.size();</div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ac41b4c1bb2c71bd4771421fa83947f7c">_M_n_localWithGhost_df</a>[processor] = this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a7f7b69ea53256e1c2042104be211b4ff">_M_last_df</a>[processor] - this-&gt;<a class="code" href="classFeel_1_1DataMap.html#abd1d034c904a5391b9eceb7fab6b41a1">_M_first_df</a>[processor] + 1;</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1DataMap.html#abf72cd2fd8a2d6302b816f5ff15d6f84">_M_n_localWithoutGhost_df</a>[processor]=this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ac41b4c1bb2c71bd4771421fa83947f7c">_M_n_localWithGhost_df</a>[processor];</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a243e2fd1627bf4a871446b591aa2d7e1">_M_first_df_globalcluster</a>[processor]=this-&gt;_M_first_df[processor];</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1DataMap.html#aefdbcb0fd2c9a5e56746cdb76b83c7d9">_M_last_df_globalcluster</a>[processor]=this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a7f7b69ea53256e1c2042104be211b4ff">_M_last_df</a>[processor];</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ad103123e5ca2f75b918b4743713f99ef">M_n_localWithGhost_df</a>[processor] = this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a54c9ae25677a46b98ee3c5e51eb9e562">M_last_df</a>[processor] - this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ae6ce4b4937a7be6c9aecc216438fac85">M_first_df</a>[processor] + 1;</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a221d5e39c9ea6e1cdcb0a374b0479ee7">M_n_localWithoutGhost_df</a>[processor]=this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ad103123e5ca2f75b918b4743713f99ef">M_n_localWithGhost_df</a>[processor];</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ab1c604b285bf96e1098a4b33cdb0185f">M_first_df_globalcluster</a>[processor]=this-&gt;M_first_df[processor];</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a93d34c22ce02d8daa14f5261e234d7f9">M_last_df_globalcluster</a>[processor]=this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a54c9ae25677a46b98ee3c5e51eb9e562">M_last_df</a>[processor];</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    }</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;</div>
 <div class="line"><a name="l00474"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#ab5c40a027d1de789104031a825ab5e01">  474</a></span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> <a class="code" href="classFeel_1_1DofTable.html#ab5c40a027d1de789104031a825ab5e01">dofIndex</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> dof )<span class="keyword"> const</span></div>
@@ -506,16 +506,16 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00520"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a84e7a1a1a3f8d4700494891530653d79">  520</a></span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> <a class="code" href="classFeel_1_1DofTable.html#a84e7a1a1a3f8d4700494891530653d79">localToGlobalId</a>( <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> ElId,</div>
 <div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;                               <span class="keyword">const</span> uint16_type <span class="keywordtype">id</span> )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        <span class="keyword">auto</span> it = _M_el_l2g.left.find( LocalDof(ElId, <span class="keywordtype">id</span> ) );</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;        DCHECK( it != _M_el_l2g.left.end() ) &lt;&lt; <span class="stringliteral">&quot;Invalid dof entry ( &quot;</span> &lt;&lt; ElId &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        <span class="keyword">auto</span> it = M_el_l2g.left.find( LocalDof(ElId, <span class="keywordtype">id</span> ) );</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;        DCHECK( it != M_el_l2g.left.end() ) &lt;&lt; <span class="stringliteral">&quot;Invalid dof entry ( &quot;</span> &lt;&lt; ElId &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;        DCHECK( it-&gt;second.index() &lt; <a class="code" href="classFeel_1_1DataMap.html#ae824d566b31908f88345c35f121fe382">nDof</a>() ) &lt;&lt; <span class="stringliteral">&quot;Invalid Dof Entry: &quot;</span> &lt;&lt; it-&gt;second.index() &lt;&lt; <span class="stringliteral">&quot; &gt; &quot;</span> &lt;&lt; this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ae824d566b31908f88345c35f121fe382">nDof</a>();</div>
 <div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;        <span class="keywordflow">return</span> it-&gt;second.index();</div>
 <div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    }</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;</div>
 <div class="line"><a name="l00536"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a2ef74b41d9359aaa99f7beb7443e4479">  536</a></span>&#160;    LocalDof <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1DofTable.html#a2ef74b41d9359aaa99f7beb7443e4479">globalToLocal</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> dof )<span class="keyword">  const</span></div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        <span class="keyword">auto</span> it = _M_el_l2g.right.find( <a class="code" href="classFeel_1_1Dof.html" title="class that represents a degree of freedom ">Dof</a>( dof ) );</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        DCHECK( it != _M_el_l2g.right.end() ) &lt;&lt; <span class="stringliteral">&quot;Invalid global dof entry ( &quot;</span> &lt;&lt; dof &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        <span class="keyword">auto</span> it = M_el_l2g.right.find( <a class="code" href="classFeel_1_1Dof.html" title="class that represents a degree of freedom ">Dof</a>( dof ) );</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        DCHECK( it != M_el_l2g.right.end() ) &lt;&lt; <span class="stringliteral">&quot;Invalid global dof entry ( &quot;</span> &lt;&lt; dof &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        <span class="keywordflow">return</span> it-&gt;second;</div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    }</div>
 <div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;</div>
@@ -527,8 +527,8 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;                                   <span class="keyword">const</span> uint16_type localNode,</div>
 <div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;                                   <span class="keyword">const</span> uint16_type c = 0 )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;        <span class="keyword">auto</span> it = _M_el_l2g.left.find( LocalDof(ElId,fe_type::nLocalDof * c  + localNode ) );</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;        DCHECK( it != _M_el_l2g.left.end() ) &lt;&lt; <span class="stringliteral">&quot;Invalid dof entry ( &quot;</span> &lt;&lt; ElId &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; fe_type::nLocalDof * c  + localNode &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;        <span class="keyword">auto</span> it = M_el_l2g.left.find( LocalDof(ElId,fe_type::nLocalDof * c  + localNode ) );</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;        DCHECK( it != M_el_l2g.left.end() ) &lt;&lt; <span class="stringliteral">&quot;Invalid dof entry ( &quot;</span> &lt;&lt; ElId &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; fe_type::nLocalDof * c  + localNode &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
 <div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;        DCHECK( it-&gt;second.index() &lt; <a class="code" href="classFeel_1_1DataMap.html#ae824d566b31908f88345c35f121fe382">nDof</a>() ) &lt;&lt; <span class="stringliteral">&quot;Invalid Dof Entry: &quot;</span> &lt;&lt; it-&gt;second.index() &lt;&lt; <span class="stringliteral">&quot; &gt; &quot;</span> &lt;&lt; this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ae824d566b31908f88345c35f121fe382">nDof</a>();</div>
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;        <span class="keywordflow">return</span> it-&gt;second;</div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    }</div>
@@ -537,7 +537,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;                                            <span class="keyword">const</span> uint16_type localNode,</div>
 <div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;                                            <span class="keyword">const</span> uint16_type c = 0 )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        Dof resloc = _M_el_l2g.left.find( LocalDof( ElId, fe_type::nLocalDof * c  + localNode ) )-&gt;second;</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        Dof resloc = M_el_l2g.left.find( LocalDof( ElId, fe_type::nLocalDof * c  + localNode ) )-&gt;second;</div>
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        resloc.setIndex( this-&gt;mapGlobalProcessToGlobalCluster()[resloc.index()] );</div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        <span class="keywordflow">return</span> resloc;</div>
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    }</div>
@@ -547,24 +547,24 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;            <span class="keyword">const</span> uint16_type c = 0 )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> nDofF = nLocalDofOnFace( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;        <span class="keywordflow">return</span> _M_face_l2g.find( ElId )-&gt;second.find( nDofF*c+localNode )-&gt;second;</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;        <span class="keywordflow">return</span> M_face_l2g.find( ElId )-&gt;second.find( nDofF*c+localNode )-&gt;second;</div>
 <div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    }</div>
 <div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;</div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    <span class="keyword">struct </span>element_access</div>
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    {</div>
 <div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;        element_access( DofTable <span class="keyword">const</span>&amp; __d )</div>
 <div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;            :</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;            _M_d( __d )</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;            M_d( __d )</div>
 <div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        {}</div>
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;        <a class="code" href="classFeel_1_1DofTable.html#a46b4f21c111af79090dd3317538a82e7">global_dof_type</a> <span class="keyword">const</span>&amp; operator()( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __id, uint16_type __loc, uint16_type c = 0 )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;            <span class="keywordflow">return</span> _M_d._M_el_l2g.left.find( LocalDof(__id, _M_d.nLocalDof(<span class="keyword">true</span>) * c+ __loc ) )-&gt;second;</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;            <span class="keywordflow">return</span> M_d.M_el_l2g.left.find( LocalDof(__id, M_d.nLocalDof(<span class="keyword">true</span>) * c+ __loc ) )-&gt;second;</div>
 <div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;        }</div>
 <div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;        uint16_type localDofInElement( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __id, uint16_type __loc, uint16_type c = 0 )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;            <span class="keywordflow">return</span> __loc;</div>
 <div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;        }</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;        DofTable <span class="keyword">const</span>&amp; _M_d;</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;        DofTable <span class="keyword">const</span>&amp; M_d;</div>
 <div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    };</div>
 <div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    <span class="keyword">friend</span> <span class="keyword">struct </span>element_access;</div>
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;</div>
@@ -573,19 +573,19 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;</div>
 <div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;        face_access( DofTable <span class="keyword">const</span>&amp; __d )</div>
 <div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;            :</div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;            _M_d( __d )</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;            M_d( __d )</div>
 <div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        {}</div>
 <div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        <a class="code" href="classFeel_1_1DofTable.html#ac1c991cc1bd9c684bed237cbf24b1c62">global_dof_fromface_type</a> operator()( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __id, uint16_type __loc, uint16_type c = 0 )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;            <span class="keywordflow">return</span> _M_d._M_face_l2g.find( __id)-&gt;second.find(_M_d.nLocalDofOnFace( <span class="keyword">true</span> )*c+__loc)-&gt;second;</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;            <span class="keywordflow">return</span> M_d.M_face_l2g.find( __id)-&gt;second.find(M_d.nLocalDofOnFace( <span class="keyword">true</span> )*c+__loc)-&gt;second;</div>
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;        }</div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;</div>
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;        uint16_type localDofInElement( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __id, uint16_type __loc, uint16_type c = 0 )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;            <span class="keywordflow">return</span> boost::get&lt;3&gt;( _M_d._M_face_l2g.find( __id )-&gt;second.find( _M_d.nLocalDofOnFace( <span class="keyword">true</span> )*c+__loc)-&gt;second );</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;            <span class="keywordflow">return</span> boost::get&lt;3&gt;( M_d.M_face_l2g.find( __id )-&gt;second.find( M_d.nLocalDofOnFace( <span class="keyword">true</span> )*c+__loc)-&gt;second );</div>
 <div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        }</div>
 <div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        DofTable <span class="keyword">const</span>&amp; _M_d;</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        DofTable <span class="keyword">const</span>&amp; M_d;</div>
 <div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    };</div>
 <div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    <span class="keyword">friend</span> <span class="keyword">struct </span>face_access;</div>
 <div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;</div>
@@ -612,7 +612,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;</div>
 <div class="line"><a name="l00640"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a00a95963a54bf07d061cd7eb9f010e59">  640</a></span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> <a class="code" href="classFeel_1_1DofTable.html#a00a95963a54bf07d061cd7eb9f010e59">numElements</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;        <span class="keywordflow">return</span> _M_n_el;</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;        <span class="keywordflow">return</span> M_n_el;</div>
 <div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;    }</div>
 <div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;</div>
 <div class="line"><a name="l00648"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a4f05637a9888ba13a2cd996838aac0a4">  648</a></span>&#160;    uint16_type <a class="code" href="classFeel_1_1DofTable.html#a4f05637a9888ba13a2cd996838aac0a4">numLocalVertices</a>()<span class="keyword"> const</span></div>
@@ -636,12 +636,12 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;<span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __i = 0; __i &lt; _M_face_l2g.nrows(); ++__i )</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __i = 0; __i &lt; M_face_l2g.nrows(); ++__i )</div>
 <div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;        {</div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;            <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __l = 0; __l &lt; _M_face_l2g.ncols(); ++__l )</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;            <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __l = 0; __l &lt; M_face_l2g.ncols(); ++__l )</div>
 <div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;            {</div>
 <div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;face &quot;</span> &lt;&lt; __i &lt;&lt; <span class="stringliteral">&quot; local &quot;</span> &lt;&lt; __l</div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;                          &lt;&lt; <span class="stringliteral">&quot; to global &quot;</span> &lt;&lt; _M_face_l2g[ __i][ __l ] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;                          &lt;&lt; <span class="stringliteral">&quot; to global &quot;</span> &lt;&lt; M_face_l2g[ __i][ __l ] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;            }</div>
 <div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        }</div>
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;</div>
@@ -650,15 +650,15 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;</div>
 <div class="line"><a name="l00693"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a3b9d062b92137eae6737d9eeb81f70b4">  693</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1DofTable.html#a3b9d062b92137eae6737d9eeb81f70b4">setElementDone</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> elt )</div>
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    {</div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;        _M_elt_done[elt] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;        M_elt_done[elt] = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    }</div>
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    <span class="keywordtype">bool</span> isElementDone( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> elt, <span class="keywordtype">int</span> c = 0 )</div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    {</div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;        <span class="keywordtype">bool</span> done = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;        BOOST_FOREACH( LocalDof <span class="keyword">const</span>&amp; local_dof, this-&gt;localDofSet( elt ) )</div>
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        {</div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;            <span class="keyword">auto</span> it = _M_el_l2g.left.find( local_dof );</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;            <span class="keywordflow">if</span> ( it == _M_el_l2g.left.end() )</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;            <span class="keyword">auto</span> it = M_el_l2g.left.find( local_dof );</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;            <span class="keywordflow">if</span> ( it == M_el_l2g.left.end() )</div>
 <div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;        }</div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;        <span class="keywordflow">return</span> done;</div>
@@ -717,7 +717,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;                {</div>
 <div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;                    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> c = 0; c &lt; ncdof; ++c, ++next_free_dof )</div>
 <div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;                    {</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                        _M_el_l2g.insert( dof_relation( LocalDof( ie, fe_type::nLocalDof*c + l ),</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                        M_el_l2g.insert( dof_relation( LocalDof( ie, fe_type::nLocalDof*c + l ),</div>
 <div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;                                                        Dof( ( <a class="code" href="classFeel_1_1DofTable.html#ab5c40a027d1de789104031a825ab5e01">dofIndex</a>( next_free_dof ) ) , 1, <span class="keyword">false</span> ) ) );</div>
 <div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;                    }</div>
 <div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;                }</div>
@@ -732,12 +732,12 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;    std::map&lt;size_type, std::pair&lt;size_type, size_type&gt; &gt;</div>
 <div class="line"><a name="l00778"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a3b92f037c89de4b808e1d3c16ea5cdab">  778</a></span>&#160;    <a class="code" href="classFeel_1_1DofTable.html#a3b92f037c89de4b808e1d3c16ea5cdab">localToGlobalMap</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;        <span class="keywordflow">return</span> _M_local2global;</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;        <span class="keywordflow">return</span> M_local2global;</div>
 <div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    }</div>
 <div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;</div>
 <div class="line"><a name="l00786"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a074b5d252c51aecd95fab731449edb30">  786</a></span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> <a class="code" href="classFeel_1_1DofTable.html#a074b5d252c51aecd95fab731449edb30">localToGlobal</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> l )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        <span class="keywordflow">return</span> _M_local2global.find( l )-&gt;second.first;</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        <span class="keywordflow">return</span> M_local2global.find( l )-&gt;second.first;</div>
 <div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    }</div>
 <div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;</div>
 <div class="line"><a name="l00801"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a9697dcc41549c4f9b0717692236360c0">  801</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1DofTable.html#a9697dcc41549c4f9b0717692236360c0">addVertexPeriodicDof</a>( element_type <span class="keyword">const</span>&amp; __elt,</div>
@@ -792,8 +792,8 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;    {</div>
 <div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;        M_mesh = boost::addressof( M );</div>
 <div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;</div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;        _M_elt_done.resize( M.numElements() );</div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;        std::fill( _M_elt_done.begin(), _M_elt_done.end(), false );</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;        M_elt_done.resize( M.numElements() );</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;        std::fill( M_elt_done.begin(), M_elt_done.end(), false );</div>
 <div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;</div>
 <div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;        VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[Dof::build] initDofMap\n&quot;</span>;</div>
 <div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1DofTable.html#a62b635f430c6c20f34440d80aaf65657">initDofMap</a>( M );</div>
@@ -863,13 +863,13 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;        <span class="comment">// multi process</span></div>
 <div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;        <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classFeel_1_1DataMap.html#aa07d4e34f54b37326adb0389c30687b1">worldComm</a>().localSize()&gt;1 )</div>
 <div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;            {</div>
-<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;                <span class="keyword">auto</span> it_nlocDof = this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ac41b4c1bb2c71bd4771421fa83947f7c">_M_n_localWithGhost_df</a>.begin();</div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;                <span class="keyword">auto</span> <span class="keyword">const</span> en_nlocDof = this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ac41b4c1bb2c71bd4771421fa83947f7c">_M_n_localWithGhost_df</a>.end();</div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;                <span class="keyword">auto</span> it_nlocDof = this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ad103123e5ca2f75b918b4743713f99ef">M_n_localWithGhost_df</a>.begin();</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;                <span class="keyword">auto</span> <span class="keyword">const</span> en_nlocDof = this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ad103123e5ca2f75b918b4743713f99ef">M_n_localWithGhost_df</a>.end();</div>
 <div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;                <span class="keywordtype">bool</span> isP0continuous = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;                <span class="keywordflow">for</span> ( ; it_nlocDof!=en_nlocDof &amp;&amp; isP0continuous ; ++it_nlocDof )</div>
 <div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;                    isP0continuous = isP0continuous &amp;&amp; (*it_nlocDof==1);</div>
 <div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;</div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;                <span class="keywordflow">if</span> ( !isP0continuous )<span class="comment">//this-&gt;_M_n_dofs&gt;1 )</span></div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;                <span class="keywordflow">if</span> ( !isP0continuous )<span class="comment">//this-&gt;M_n_dofs&gt;1 )</span></div>
 <div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;                    {</div>
 <div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;<span class="preprocessor">#if defined(FEELPP_ENABLE_MPI_MODE)</span></div>
 <div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;<span class="preprocessor"></span>                        VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[build] call buildGhostDofMap () with god rank &quot;</span> &lt;&lt; this-&gt;<a class="code" href="classFeel_1_1DataMap.html#aa07d4e34f54b37326adb0389c30687b1">worldComm</a>().godRank()  &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -886,17 +886,17 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;                        {</div>
 <div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;                            <span class="keywordflow">if</span> (proc==0)</div>
 <div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;                            {</div>
-<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;                                this-&gt;<a class="code" href="classFeel_1_1DataMap.html#abf72cd2fd8a2d6302b816f5ff15d6f84">_M_n_localWithoutGhost_df</a>[proc] = 1;</div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;                                this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a243e2fd1627bf4a871446b591aa2d7e1">_M_first_df_globalcluster</a>[proc] = 0;</div>
-<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;                                this-&gt;<a class="code" href="classFeel_1_1DataMap.html#aefdbcb0fd2c9a5e56746cdb76b83c7d9">_M_last_df_globalcluster</a>[proc] = 0;</div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;                                this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a221d5e39c9ea6e1cdcb0a374b0479ee7">M_n_localWithoutGhost_df</a>[proc] = 1;</div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;                                this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ab1c604b285bf96e1098a4b33cdb0185f">M_first_df_globalcluster</a>[proc] = 0;</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;                                this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a93d34c22ce02d8daa14f5261e234d7f9">M_last_df_globalcluster</a>[proc] = 0;</div>
 <div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;                            }</div>
 <div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;                            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;                            {</div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;                                this-&gt;<a class="code" href="classFeel_1_1DataMap.html#abf72cd2fd8a2d6302b816f5ff15d6f84">_M_n_localWithoutGhost_df</a>[proc] = 0;</div>
-<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;                                this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a243e2fd1627bf4a871446b591aa2d7e1">_M_first_df_globalcluster</a>[proc] = 25;<span class="comment">// 0;</span></div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;                                this-&gt;<a class="code" href="classFeel_1_1DataMap.html#aefdbcb0fd2c9a5e56746cdb76b83c7d9">_M_last_df_globalcluster</a>[proc] = 25; <span class="comment">//0;</span></div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;                                this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a221d5e39c9ea6e1cdcb0a374b0479ee7">M_n_localWithoutGhost_df</a>[proc] = 0;</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;                                this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ab1c604b285bf96e1098a4b33cdb0185f">M_first_df_globalcluster</a>[proc] = 25;<span class="comment">// 0;</span></div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;                                this-&gt;<a class="code" href="classFeel_1_1DataMap.html#a93d34c22ce02d8daa14f5261e234d7f9">M_last_df_globalcluster</a>[proc] = 25; <span class="comment">//0;</span></div>
 <div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;                            }</div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;                            this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ac41b4c1bb2c71bd4771421fa83947f7c">_M_n_localWithGhost_df</a>[proc] = 1;</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;                            this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ad103123e5ca2f75b918b4743713f99ef">M_n_localWithGhost_df</a>[proc] = 1;</div>
 <div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;                        }</div>
 <div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;</div>
 <div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;                        <span class="keywordflow">if</span> (this-&gt;<a class="code" href="classFeel_1_1DataMap.html#aa07d4e34f54b37326adb0389c30687b1">worldComm</a>().globalRank()==0)</div>
@@ -918,7 +918,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;        {</div>
 <div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;<span class="preprocessor">#if defined(FEELPP_ENABLE_MPI_MODE)</span></div>
 <div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;<span class="preprocessor"></span>            <span class="comment">// in sequential : identity map</span></div>
-<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;            <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> s = this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ac41b4c1bb2c71bd4771421fa83947f7c">_M_n_localWithGhost_df</a>[this-&gt;comm().rank()];</div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;            <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> s = this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ad103123e5ca2f75b918b4743713f99ef">M_n_localWithGhost_df</a>[this-&gt;comm().rank()];</div>
 <div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;            this-&gt;<a class="code" href="classFeel_1_1DataMap.html#adefa1c803646c359e1c8b946a4843f17">M_mapGlobalProcessToGlobalCluster</a>.resize( s );</div>
 <div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;            this-&gt;<a class="code" href="classFeel_1_1DataMap.html#ae47f135be738b55b56111cbd4b6fbf1e">M_mapGlobalClusterToGlobalProcess</a>.resize( s );</div>
 <div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;</div>
@@ -995,7 +995,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;        {</div>
 <div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;            <span class="keyword">using namespace </span>boost::bimaps;</div>
 <div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;            <span class="keywordtype">int</span> <span class="keywordtype">id</span> = M_mesh-&gt;markerId( marker );</div>
-<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;            <span class="keywordflow">return</span> _M_dof_marker.right.range( <span class="keywordtype">id</span> &lt;= _key, _key&lt;<span class="keywordtype">id</span>+1 );</div>
+<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;            <span class="keywordflow">return</span> M_dof_marker.right.range( <span class="keywordtype">id</span> &lt;= _key, _key&lt;<span class="keywordtype">id</span>+1 );</div>
 <div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;        }</div>
 <div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;</div>
 <div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;    <span class="keyword">typename</span> dof_marker_type::right_range_type</div>
@@ -1003,20 +1003,20 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;        {</div>
 <div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;            <span class="keyword">using namespace </span>boost::bimaps;</div>
 <div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;            <span class="keywordtype">int</span> <span class="keywordtype">id</span> = M_mesh-&gt;markerId( marker );</div>
-<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;            <span class="keywordflow">return</span> _M_dof_marker.right.range( unbounded, _key&lt;<span class="keywordtype">id</span> );</div>
+<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;            <span class="keywordflow">return</span> M_dof_marker.right.range( unbounded, _key&lt;<span class="keywordtype">id</span> );</div>
 <div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;        }</div>
 <div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;    <span class="keyword">typename</span> dof_marker_type::right_range_type</div>
 <div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;    markerToDofGreaterThan( boost::any <span class="keyword">const</span>&amp; marker )</div>
 <div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;        {</div>
 <div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;            <span class="keyword">using namespace </span>boost::bimaps;</div>
 <div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;            <span class="keywordtype">int</span> <span class="keywordtype">id</span> = M_mesh-&gt;markerId( marker );</div>
-<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;            <span class="keywordflow">return</span> _M_dof_marker.right.range( <span class="keywordtype">id</span>&lt;_key, unbounded );</div>
+<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;            <span class="keywordflow">return</span> M_dof_marker.right.range( <span class="keywordtype">id</span>&lt;_key, unbounded );</div>
 <div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;        }</div>
 <div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;</div>
 <div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;    <span class="keywordtype">void</span> printDofMarker(std::string <span class="keyword">const</span>&amp; filename )</div>
 <div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;        {</div>
 <div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;            std::ofstream ofs( filename.c_str() );</div>
-<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;            BOOST_FOREACH( <span class="keyword">auto</span> dof, _M_dof_marker.left )</div>
+<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;            BOOST_FOREACH( <span class="keyword">auto</span> dof, M_dof_marker.left )</div>
 <div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;            {</div>
 <div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;                ofs &lt;&lt; dof.first &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; dof.second &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;            }</div>
@@ -1072,9 +1072,9 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;                         &lt;&lt; <span class="stringliteral">&quot; component = &quot;</span> &lt;&lt; itdof-&gt;first.template get&lt;1&gt;()</div>
 <div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;                         &lt;&lt; <span class="stringliteral">&quot; index = &quot;</span> &lt;&lt; itdof-&gt;first.template get&lt;2&gt;() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;<span class="preprocessor"></span>                <span class="keyword">auto</span> eit = _M_el_l2g.left.find(  LocalDof(ie,lc_dof) );</div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;<span class="preprocessor"></span>                <span class="keyword">auto</span> eit = M_el_l2g.left.find(  LocalDof(ie,lc_dof) );</div>
 <div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;                <span class="comment">// make sure that no already created dof is overwritten here (may be done alsewhere)</span></div>
-<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;                <span class="keywordflow">if</span> ( eit == _M_el_l2g.left.end() )</div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;                <span class="keywordflow">if</span> ( eit == M_el_l2g.left.end() )</div>
 <div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;                {</div>
 <div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;                    DCHECK( itdof-&gt;first == gDof ) &lt;&lt; <span class="stringliteral">&quot;very bad logical error in insertDof&quot;</span>;</div>
 <div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;</div>
@@ -1085,17 +1085,17 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;</div>
 <div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;</div>
 <div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;                    <span class="comment">// add processor to the set of processors this dof belongs to</span></div>
-<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;                    _M_dof_procset[ itdof-&gt;second+shift ].insert( processor );</div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;                    M_dof_procset[ itdof-&gt;second+shift ].insert( processor );</div>
 <div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;</div>
-<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;                    <span class="keyword">auto</span> res = _M_el_l2g.insert( dof_relation( LocalDof( ie, lc_dof ),</div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;                    <span class="keyword">auto</span> res = M_el_l2g.insert( dof_relation( LocalDof( ie, lc_dof ),</div>
 <div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;                                                               <a class="code" href="classFeel_1_1Dof.html" title="class that represents a degree of freedom ">Dof</a>( itdof-&gt;second+shift, sign, is_dof_periodic, 0, 0, marker.value() ) ) );</div>
 <div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;                    DCHECK( res.second ) &lt;&lt; <span class="stringliteral">&quot;global dof &quot;</span> &lt;&lt; itdof-&gt;second+shift &lt;&lt; <span class="stringliteral">&quot; not inserted in local dof (&quot;</span> &lt;&lt;</div>
 <div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;                        ie &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; lc_dof &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;                    _M_dof_marker.insert( dof2marker( itdof-&gt;second+shift,  marker.value() ) );</div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;                    M_dof_marker.insert( dof2marker( itdof-&gt;second+shift,  marker.value() ) );</div>
 <div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;</div>
 <div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;</div>
 <div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;<span class="preprocessor">#if !defined(NDEBUG)</span></div>
-<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;<span class="preprocessor"></span>                    _M_dof2elt[itdof-&gt;second+shift].push_back( boost::make_tuple( ie, lc_dof, lc, itdof-&gt;first.template get&lt;0&gt;() ) );</div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;<span class="preprocessor"></span>                    M_dof2elt[itdof-&gt;second+shift].push_back( boost::make_tuple( ie, lc_dof, lc, itdof-&gt;first.template get&lt;0&gt;() ) );</div>
 <div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;<span class="preprocessor"></span>                    M_dof_view.insert( <a class="code" href="classFeel_1_1Dof.html" title="class that represents a degree of freedom ">Dof</a>( itdof-&gt;second+shift,      <span class="comment">// global index</span></div>
@@ -1107,23 +1107,23 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;<span class="preprocessor"></span>                    <span class="keywordflow">for</span> ( index i2 = 0; i2 &lt; <a class="code" href="classFeel_1_1DataMap.html#ab3eebfa5817a6fbcb79e31f0caa4237f">nLocalDof</a>(); ++i2 )</div>
-<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;dof table( &quot;</span> &lt;&lt; ie &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; lc  &lt;&lt; <span class="stringliteral">&quot;)=&quot;</span> &lt;&lt; _M_el_l2g.left.find(LocalDof(ie,i2))-&gt;second.index() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;dof table( &quot;</span> &lt;&lt; ie &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; lc  &lt;&lt; <span class="stringliteral">&quot;)=&quot;</span> &lt;&lt; M_el_l2g.left.find(LocalDof(ie,i2))-&gt;second.index() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;</div>
 <div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;<span class="preprocessor"></span>                }</div>
 <div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;                <span class="keywordflow">else</span></div>
 <div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;                {</div>
-<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;                    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> _dof = _M_el_l2g.left.find(LocalDof(ie,lc_dof))-&gt;second.index();</div>
+<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;                    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> _dof = M_el_l2g.left.find(LocalDof(ie,lc_dof))-&gt;second.index();</div>
 <div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;<span class="preprocessor"></span>                    CHECK(  _M_dof_marker[_dof] == marker.value() ) &lt;&lt; <span class="stringliteral">&quot;Invalid dof marker, element id: &quot;</span> &lt;&lt;  ie</div>
+<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;<span class="preprocessor"></span>                    CHECK(  M_dof_marker[_dof] == marker.value() ) &lt;&lt; <span class="stringliteral">&quot;Invalid dof marker, element id: &quot;</span> &lt;&lt;  ie</div>
 <div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;                                                                    &lt;&lt; <span class="stringliteral">&quot;, local dof id: &quot;</span> &lt;&lt; lc_dof</div>
 <div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;                                                                    &lt;&lt; <span class="stringliteral">&quot;, global dof id: &quot;</span>&lt;&lt; _dof</div>
-<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;                                                                    &lt;&lt; <span class="stringliteral">&quot;, dof marker: &quot;</span> &lt;&lt;  _M_dof_marker[_dof]</div>
+<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;                                                                    &lt;&lt; <span class="stringliteral">&quot;, dof marker: &quot;</span> &lt;&lt;  M_dof_marker[_dof]</div>
 <div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;                                                                    &lt;&lt; <span class="stringliteral">&quot;, marker: &quot;</span> &lt;&lt; marker.value() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;<span class="preprocessor"></span>                }</div>
 <div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;</div>
-<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;                res = res &amp;&amp; ( __inserted || ( ( _M_el_l2g.left.find(LocalDof(ie,lc_dof)) != _M_el_l2g.left.end() ) &amp;&amp; shift ) );</div>
+<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;                res = res &amp;&amp; ( __inserted || ( ( M_el_l2g.left.find(LocalDof(ie,lc_dof)) != M_el_l2g.left.end() ) &amp;&amp; shift ) );</div>
 <div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;            }</div>
 <div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;</div>
 <div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;            <span class="keywordflow">return</span> res;</div>
@@ -1527,7 +1527,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l01653"></a><span class="lineno"> 1653</span>&#160;                <span class="keyword">auto</span> temp= this-&gt;localToGlobal( iElAd,</div>
 <div class="line"><a name="l01654"></a><span class="lineno"> 1654</span>&#160;                                                iFaEl * fe_type::nDofPerVertex + l,</div>
 <div class="line"><a name="l01655"></a><span class="lineno"> 1655</span>&#160;                                                c );</div>
-<div class="line"><a name="l01656"></a><span class="lineno"> 1656</span>&#160;                _M_face_l2g[ __face_it-&gt;id()][ lc++ ] = boost::make_tuple( boost::get&lt;0&gt;( temp ),boost::get&lt;1&gt;( temp ),boost::get&lt;2&gt;( temp ),</div>
+<div class="line"><a name="l01656"></a><span class="lineno"> 1656</span>&#160;                M_face_l2g[ __face_it-&gt;id()][ lc++ ] = boost::make_tuple( boost::get&lt;0&gt;( temp ),boost::get&lt;1&gt;( temp ),boost::get&lt;2&gt;( temp ),</div>
 <div class="line"><a name="l01657"></a><span class="lineno"> 1657</span>&#160;                                                        iFaEl * fe_type::nDofPerVertex + l );</div>
 <div class="line"><a name="l01658"></a><span class="lineno"> 1658</span>&#160;            }</div>
 <div class="line"><a name="l01659"></a><span class="lineno"> 1659</span>&#160;        }</div>
@@ -1576,7 +1576,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l01702"></a><span class="lineno"> 1702</span>&#160;                            face_type::numFaces * fe_type::nDofPerFace );</div>
 <div class="line"><a name="l01703"></a><span class="lineno"> 1703</span>&#160;</div>
 <div class="line"><a name="l01704"></a><span class="lineno"> 1704</span>&#160;</div>
-<div class="line"><a name="l01705"></a><span class="lineno"> 1705</span>&#160;        <span class="comment">//_M_dof2elt[gDof].push_back( boost::make_tuple( iElAd, lc-1, 48, 0 ) );</span></div>
+<div class="line"><a name="l01705"></a><span class="lineno"> 1705</span>&#160;        <span class="comment">//M_dof2elt[gDof].push_back( boost::make_tuple( iElAd, lc-1, 48, 0 ) );</span></div>
 <div class="line"><a name="l01706"></a><span class="lineno"> 1706</span>&#160;        <span class="comment">// loop on face vertices</span></div>
 <div class="line"><a name="l01707"></a><span class="lineno"> 1707</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> ncdof = is_product?nComponents:1;</div>
 <div class="line"><a name="l01708"></a><span class="lineno"> 1708</span>&#160;</div>
@@ -1597,7 +1597,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l01723"></a><span class="lineno"> 1723</span>&#160;                    <span class="keyword">auto</span> temp = this-&gt;localToGlobal( iElAd,</div>
 <div class="line"><a name="l01724"></a><span class="lineno"> 1724</span>&#160;                                                     iVeEl * fe_type::nDofPerVertex + l,</div>
 <div class="line"><a name="l01725"></a><span class="lineno"> 1725</span>&#160;                                                     c );</div>
-<div class="line"><a name="l01726"></a><span class="lineno"> 1726</span>&#160;                    _M_face_l2g[ __face_it-&gt;id()][ lcc++ ] = boost::make_tuple( boost::get&lt;0&gt;( temp ),boost::get&lt;1&gt;( temp ),boost::get&lt;2&gt;( temp ),</div>
+<div class="line"><a name="l01726"></a><span class="lineno"> 1726</span>&#160;                    M_face_l2g[ __face_it-&gt;id()][ lcc++ ] = boost::make_tuple( boost::get&lt;0&gt;( temp ),boost::get&lt;1&gt;( temp ),boost::get&lt;2&gt;( temp ),</div>
 <div class="line"><a name="l01727"></a><span class="lineno"> 1727</span>&#160;                            iVeEl * fe_type::nDofPerVertex + l );</div>
 <div class="line"><a name="l01728"></a><span class="lineno"> 1728</span>&#160;                }</div>
 <div class="line"><a name="l01729"></a><span class="lineno"> 1729</span>&#160;            }</div>
@@ -1682,7 +1682,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l01808"></a><span class="lineno"> 1808</span>&#160;                                                 element_type::numVertices*fe_type::nDofPerVertex +</div>
 <div class="line"><a name="l01809"></a><span class="lineno"> 1809</span>&#160;                                                 iFaEl * fe_type::nDofPerEdge + l,</div>
 <div class="line"><a name="l01810"></a><span class="lineno"> 1810</span>&#160;                                                 c );</div>
-<div class="line"><a name="l01811"></a><span class="lineno"> 1811</span>&#160;                _M_face_l2g[ __face_it-&gt;id()][ lcc++ ] = boost::make_tuple( boost::get&lt;0&gt;( temp ),boost::get&lt;1&gt;( temp ),boost::get&lt;2&gt;( temp ),</div>
+<div class="line"><a name="l01811"></a><span class="lineno"> 1811</span>&#160;                M_face_l2g[ __face_it-&gt;id()][ lcc++ ] = boost::make_tuple( boost::get&lt;0&gt;( temp ),boost::get&lt;1&gt;( temp ),boost::get&lt;2&gt;( temp ),</div>
 <div class="line"><a name="l01812"></a><span class="lineno"> 1812</span>&#160;                        element_type::numVertices*fe_type::nDofPerVertex +</div>
 <div class="line"><a name="l01813"></a><span class="lineno"> 1813</span>&#160;                        iFaEl * fe_type::nDofPerEdge + l );</div>
 <div class="line"><a name="l01814"></a><span class="lineno"> 1814</span>&#160;            }</div>
@@ -1756,7 +1756,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l01882"></a><span class="lineno"> 1882</span>&#160;                                                     element_type::numVertices*fe_type::nDofPerVertex +</div>
 <div class="line"><a name="l01883"></a><span class="lineno"> 1883</span>&#160;                                                     iEdEl * fe_type::nDofPerEdge + l,</div>
 <div class="line"><a name="l01884"></a><span class="lineno"> 1884</span>&#160;                                                     c );</div>
-<div class="line"><a name="l01885"></a><span class="lineno"> 1885</span>&#160;                    _M_face_l2g[ __face_it-&gt;id()][ lcc++ ] = boost::make_tuple( boost::get&lt;0&gt;( temp ),boost::get&lt;1&gt;( temp ),boost::get&lt;2&gt;( temp ),</div>
+<div class="line"><a name="l01885"></a><span class="lineno"> 1885</span>&#160;                    M_face_l2g[ __face_it-&gt;id()][ lcc++ ] = boost::make_tuple( boost::get&lt;0&gt;( temp ),boost::get&lt;1&gt;( temp ),boost::get&lt;2&gt;( temp ),</div>
 <div class="line"><a name="l01886"></a><span class="lineno"> 1886</span>&#160;                            element_type::numVertices*fe_type::nDofPerVertex +</div>
 <div class="line"><a name="l01887"></a><span class="lineno"> 1887</span>&#160;                            iEdEl * fe_type::nDofPerEdge + l );</div>
 <div class="line"><a name="l01888"></a><span class="lineno"> 1888</span>&#160;                }</div>
@@ -1835,7 +1835,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l01961"></a><span class="lineno"> 1961</span>&#160;                                                 element_type::numEdges*fe_type::nDofPerEdge +</div>
 <div class="line"><a name="l01962"></a><span class="lineno"> 1962</span>&#160;                                                 iFaEl * fe_type::nDofPerFace + l,</div>
 <div class="line"><a name="l01963"></a><span class="lineno"> 1963</span>&#160;                                                 c );</div>
-<div class="line"><a name="l01964"></a><span class="lineno"> 1964</span>&#160;                _M_face_l2g[ __face_it-&gt;id()][ lcc++ ] = boost::make_tuple( boost::get&lt;0&gt;( temp ),boost::get&lt;1&gt;( temp ),boost::get&lt;2&gt;( temp ),</div>
+<div class="line"><a name="l01964"></a><span class="lineno"> 1964</span>&#160;                M_face_l2g[ __face_it-&gt;id()][ lcc++ ] = boost::make_tuple( boost::get&lt;0&gt;( temp ),boost::get&lt;1&gt;( temp ),boost::get&lt;2&gt;( temp ),</div>
 <div class="line"><a name="l01965"></a><span class="lineno"> 1965</span>&#160;                        element_type::numVertices*fe_type::nDofPerVertex +</div>
 <div class="line"><a name="l01966"></a><span class="lineno"> 1966</span>&#160;                        element_type::numEdges*fe_type::nDofPerEdge +</div>
 <div class="line"><a name="l01967"></a><span class="lineno"> 1967</span>&#160;                        iFaEl * fe_type::nDofPerFace + l );</div>
@@ -1864,9 +1864,9 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l01995"></a><span class="lineno"> 1995</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l01996"></a><span class="lineno"> 1996</span>&#160;        <span class="keyword">using namespace </span>Feel;</div>
 <div class="line"><a name="l01997"></a><span class="lineno"> 1997</span>&#160;</div>
-<div class="line"><a name="l01998"></a><span class="lineno"> 1998</span>&#160;        gm_ptrtype _M_gm_ptr = M.gm();</div>
+<div class="line"><a name="l01998"></a><span class="lineno"> 1998</span>&#160;        gm_ptrtype M_gm_ptr = M.gm();</div>
 <div class="line"><a name="l01999"></a><span class="lineno"> 1999</span>&#160;</div>
-<div class="line"><a name="l02000"></a><span class="lineno"> 2000</span>&#160;        fe_type _M_basis;</div>
+<div class="line"><a name="l02000"></a><span class="lineno"> 2000</span>&#160;        fe_type M_basis;</div>
 <div class="line"><a name="l02001"></a><span class="lineno"> 2001</span>&#160;</div>
 <div class="line"><a name="l02002"></a><span class="lineno"> 2002</span>&#160;        <span class="comment">//value_type tol = value_type(100.0)*type_traits&lt;value_type&gt;::epsilon();</span></div>
 <div class="line"><a name="l02003"></a><span class="lineno"> 2003</span>&#160;        value_type tol = value_type( 10.0 )*type_traits&lt;double&gt;::epsilon();</div>
@@ -1877,8 +1877,8 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02008"></a><span class="lineno"> 2008</span>&#160;</div>
 <div class="line"><a name="l02009"></a><span class="lineno"> 2009</span>&#160;        <span class="keywordflow">for</span> ( uint16_type gDof = 0; gDof &lt; <a class="code" href="classFeel_1_1DataMap.html#ae824d566b31908f88345c35f121fe382">nDof</a>(); ++gDof )</div>
 <div class="line"><a name="l02010"></a><span class="lineno"> 2010</span>&#160;        {</div>
-<div class="line"><a name="l02011"></a><span class="lineno"> 2011</span>&#160;            uint16_type _numEntities = _M_dof2elt[gDof].size();</div>
-<div class="line"><a name="l02012"></a><span class="lineno"> 2012</span>&#160;            uint16_type _ent = _M_dof2elt[gDof].begin()-&gt;template get&lt;3&gt;();</div>
+<div class="line"><a name="l02011"></a><span class="lineno"> 2011</span>&#160;            uint16_type _numEntities = M_dof2elt[gDof].size();</div>
+<div class="line"><a name="l02012"></a><span class="lineno"> 2012</span>&#160;            uint16_type _ent = M_dof2elt[gDof].begin()-&gt;template get&lt;3&gt;();</div>
 <div class="line"><a name="l02013"></a><span class="lineno"> 2013</span>&#160;</div>
 <div class="line"><a name="l02014"></a><span class="lineno"> 2014</span>&#160;            <span class="keywordflow">if</span> ( _numEntities &gt; 1 &amp;&amp; _ent == mpl::int_&lt;N&gt;() )</div>
 <div class="line"><a name="l02015"></a><span class="lineno"> 2015</span>&#160;            {</div>
@@ -1888,8 +1888,8 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02019"></a><span class="lineno"> 2019</span>&#160;</div>
 <div class="line"><a name="l02020"></a><span class="lineno"> 2020</span>&#160;                std::vector&lt; points_type &gt; real_coordinates;</div>
 <div class="line"><a name="l02021"></a><span class="lineno"> 2021</span>&#160;</div>
-<div class="line"><a name="l02022"></a><span class="lineno"> 2022</span>&#160;                ldof_const_iterator __ldofit = _M_dof2elt[gDof].begin();</div>
-<div class="line"><a name="l02023"></a><span class="lineno"> 2023</span>&#160;                ldof_const_iterator __ldofen = _M_dof2elt[gDof].end();</div>
+<div class="line"><a name="l02022"></a><span class="lineno"> 2022</span>&#160;                ldof_const_iterator __ldofit = M_dof2elt[gDof].begin();</div>
+<div class="line"><a name="l02023"></a><span class="lineno"> 2023</span>&#160;                ldof_const_iterator __ldofen = M_dof2elt[gDof].end();</div>
 <div class="line"><a name="l02024"></a><span class="lineno"> 2024</span>&#160;</div>
 <div class="line"><a name="l02025"></a><span class="lineno"> 2025</span>&#160;                <span class="keywordflow">while</span> ( __ldofit != __ldofen )</div>
 <div class="line"><a name="l02026"></a><span class="lineno"> 2026</span>&#160;                {</div>
@@ -1905,7 +1905,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02036"></a><span class="lineno"> 2036</span>&#160;</div>
 <div class="line"><a name="l02037"></a><span class="lineno"> 2037</span>&#160;                    <span class="keywordtype">int</span> sign = boost::get&lt;1&gt;( localToGlobal( entity_element_id, entity_local_dof_id ) );</div>
 <div class="line"><a name="l02038"></a><span class="lineno"> 2038</span>&#160;</div>
-<div class="line"><a name="l02039"></a><span class="lineno"> 2039</span>&#160;                    basis_eval.push_back( value_type( sign )*ublas::row( _M_basis.evaluate( Gt ), entity_local_dof_id ) );</div>
+<div class="line"><a name="l02039"></a><span class="lineno"> 2039</span>&#160;                    basis_eval.push_back( value_type( sign )*ublas::row( M_basis.evaluate( Gt ), entity_local_dof_id ) );</div>
 <div class="line"><a name="l02040"></a><span class="lineno"> 2040</span>&#160;</div>
 <div class="line"><a name="l02041"></a><span class="lineno"> 2041</span>&#160;                    ++__ldofit;</div>
 <div class="line"><a name="l02042"></a><span class="lineno"> 2042</span>&#160;                }</div>
@@ -1981,33 +1981,33 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02112"></a><span class="lineno"> 2112</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l02113"></a><span class="lineno"> 2113</span>&#160;</div>
 <div class="line"><a name="l02114"></a><span class="lineno"> 2114</span>&#160;    <a class="code" href="classFeel_1_1DofTable.html#aa2eb24a6303c31c4e27c330e26a5c13d">mesh_type</a>* M_mesh;</div>
-<div class="line"><a name="l02115"></a><span class="lineno"> 2115</span>&#160;    fe_ptrtype _M_fe;</div>
+<div class="line"><a name="l02115"></a><span class="lineno"> 2115</span>&#160;    fe_ptrtype M_fe;</div>
 <div class="line"><a name="l02116"></a><span class="lineno"> 2116</span>&#160;</div>
-<div class="line"><a name="l02117"></a><span class="lineno"> 2117</span>&#160;    reference_convex_type _M_convex_ref;</div>
+<div class="line"><a name="l02117"></a><span class="lineno"> 2117</span>&#160;    reference_convex_type M_convex_ref;</div>
 <div class="line"><a name="l02118"></a><span class="lineno"> 2118</span>&#160;</div>
-<div class="line"><a name="l02119"></a><span class="lineno"> 2119</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> _M_n_el;</div>
-<div class="line"><a name="l02120"></a><span class="lineno"> 2120</span>&#160;    std::vector&lt;bool&gt; _M_elt_done;</div>
+<div class="line"><a name="l02119"></a><span class="lineno"> 2119</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> M_n_el;</div>
+<div class="line"><a name="l02120"></a><span class="lineno"> 2120</span>&#160;    std::vector&lt;bool&gt; M_elt_done;</div>
 <div class="line"><a name="l02121"></a><span class="lineno"> 2121</span>&#160;</div>
-<div class="line"><a name="l02122"></a><span class="lineno"> 2122</span>&#160;    uint16_type _M_n_dof_per_face_on_bdy;</div>
-<div class="line"><a name="l02123"></a><span class="lineno"> 2123</span>&#160;    uint16_type _M_n_dof_per_face;</div>
+<div class="line"><a name="l02122"></a><span class="lineno"> 2122</span>&#160;    uint16_type M_n_dof_per_face_on_bdy;</div>
+<div class="line"><a name="l02123"></a><span class="lineno"> 2123</span>&#160;    uint16_type M_n_dof_per_face;</div>
 <div class="line"><a name="l02124"></a><span class="lineno"> 2124</span>&#160;</div>
-<div class="line"><a name="l02125"></a><span class="lineno"> 2125</span>&#160;    <a class="code" href="classFeel_1_1DofTable.html#a0541a56238d984ebb4cc4e75b570a725">dof_table</a> _M_el_l2g;</div>
-<div class="line"><a name="l02126"></a><span class="lineno"> 2126</span>&#160;    Container_fromface _M_face_l2g;</div>
+<div class="line"><a name="l02125"></a><span class="lineno"> 2125</span>&#160;    <a class="code" href="classFeel_1_1DofTable.html#a0541a56238d984ebb4cc4e75b570a725">dof_table</a> M_el_l2g;</div>
+<div class="line"><a name="l02126"></a><span class="lineno"> 2126</span>&#160;    Container_fromface M_face_l2g;</div>
 <div class="line"><a name="l02127"></a><span class="lineno"> 2127</span>&#160;</div>
 <div class="line"><a name="l02128"></a><span class="lineno"> 2128</span>&#160;    <span class="keyword">mutable</span> local_dof_set_type M_local_dof_set;</div>
-<div class="line"><a name="l02129"></a><span class="lineno"> 2129</span>&#160;    <a class="code" href="classFeel_1_1DofTable.html#a86a7ad5c0001a900aa482987dbefb6f4">dof_element_type</a> _M_dof2elt;</div>
-<div class="line"><a name="l02130"></a><span class="lineno"> 2130</span>&#160;    dof_marker_type _M_dof_marker;</div>
+<div class="line"><a name="l02129"></a><span class="lineno"> 2129</span>&#160;    <a class="code" href="classFeel_1_1DofTable.html#a86a7ad5c0001a900aa482987dbefb6f4">dof_element_type</a> M_dof2elt;</div>
+<div class="line"><a name="l02130"></a><span class="lineno"> 2130</span>&#160;    dof_marker_type M_dof_marker;</div>
 <div class="line"><a name="l02131"></a><span class="lineno"> 2131</span>&#160;</div>
 <div class="line"><a name="l02132"></a><span class="lineno"> 2132</span>&#160;    dof_map_type map_gdof;</div>
 <div class="line"><a name="l02133"></a><span class="lineno"> 2133</span>&#160;</div>
 <div class="line"><a name="l02134"></a><span class="lineno"> 2134</span>&#160;    std::map&lt;face_permutation_type, permutation_vector_type&gt; vector_permutation;</div>
 <div class="line"><a name="l02135"></a><span class="lineno"> 2135</span>&#160;</div>
-<div class="line"><a name="l02139"></a><span class="lineno"> 2139</span>&#160;    std::map&lt;size_type, std::pair&lt;size_type, size_type&gt; &gt; _M_local2global;</div>
+<div class="line"><a name="l02139"></a><span class="lineno"> 2139</span>&#160;    std::map&lt;size_type, std::pair&lt;size_type, size_type&gt; &gt; M_local2global;</div>
 <div class="line"><a name="l02140"></a><span class="lineno"> 2140</span>&#160;</div>
 <div class="line"><a name="l02141"></a><span class="lineno"> 2141</span>&#160;</div>
-<div class="line"><a name="l02142"></a><span class="lineno"> 2142</span>&#160;    <a class="code" href="classFeel_1_1DofTable.html#a156715fa8ddedea22f73ff4629f93633">face_sign_info_type</a> _M_face_sign;</div>
+<div class="line"><a name="l02142"></a><span class="lineno"> 2142</span>&#160;    <a class="code" href="classFeel_1_1DofTable.html#a156715fa8ddedea22f73ff4629f93633">face_sign_info_type</a> M_face_sign;</div>
 <div class="line"><a name="l02143"></a><span class="lineno"> 2143</span>&#160;</div>
-<div class="line"><a name="l02147"></a><span class="lineno"> 2147</span>&#160;    dof_procset_type _M_dof_procset;</div>
+<div class="line"><a name="l02147"></a><span class="lineno"> 2147</span>&#160;    dof_procset_type M_dof_procset;</div>
 <div class="line"><a name="l02148"></a><span class="lineno"> 2148</span>&#160;</div>
 <div class="line"><a name="l02152"></a><span class="lineno"> 2152</span>&#160;    dof_points_type M_dof_points;</div>
 <div class="line"><a name="l02153"></a><span class="lineno"> 2153</span>&#160;</div>
@@ -2039,15 +2039,15 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02181"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a7e54103a780160fe394c0850ed25cf76"> 2181</a></span>&#160;<a class="code" href="classFeel_1_1DofTable.html" title="Local-to-global Degree of Freedom table. ">DofTable&lt;MeshType, FEType, PeriodicityType&gt;::DofTable</a>( <a class="code" href="classFeel_1_1DofTable.html#aa2eb24a6303c31c4e27c330e26a5c13d">mesh_type</a>&amp; mesh, fe_ptrtype <span class="keyword">const</span>&amp; _fe, periodicity_type <span class="keyword">const</span>&amp; periodicity, WorldComm <span class="keyword">const</span>&amp; _worldComm )</div>
 <div class="line"><a name="l02182"></a><span class="lineno"> 2182</span>&#160;    :</div>
 <div class="line"><a name="l02183"></a><span class="lineno"> 2183</span>&#160;    <a class="code" href="classFeel_1_1DataMap.html" title="data layout in a multi-processor environnement ">super</a>( _worldComm ),</div>
-<div class="line"><a name="l02184"></a><span class="lineno"> 2184</span>&#160;    _M_fe( _fe ),</div>
-<div class="line"><a name="l02185"></a><span class="lineno"> 2185</span>&#160;    _M_n_el( <a class="code" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">invalid_size_type_value</a> ),</div>
-<div class="line"><a name="l02186"></a><span class="lineno"> 2186</span>&#160;    _M_n_dof_per_face_on_bdy( <a class="code" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a> ),</div>
-<div class="line"><a name="l02187"></a><span class="lineno"> 2187</span>&#160;    _M_n_dof_per_face( <a class="code" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a> ),</div>
-<div class="line"><a name="l02188"></a><span class="lineno"> 2188</span>&#160;    _M_el_l2g(),</div>
-<div class="line"><a name="l02189"></a><span class="lineno"> 2189</span>&#160;    _M_face_l2g(),</div>
+<div class="line"><a name="l02184"></a><span class="lineno"> 2184</span>&#160;    M_fe( _fe ),</div>
+<div class="line"><a name="l02185"></a><span class="lineno"> 2185</span>&#160;    M_n_el( <a class="code" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">invalid_size_type_value</a> ),</div>
+<div class="line"><a name="l02186"></a><span class="lineno"> 2186</span>&#160;    M_n_dof_per_face_on_bdy( <a class="code" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a> ),</div>
+<div class="line"><a name="l02187"></a><span class="lineno"> 2187</span>&#160;    M_n_dof_per_face( <a class="code" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a> ),</div>
+<div class="line"><a name="l02188"></a><span class="lineno"> 2188</span>&#160;    M_el_l2g(),</div>
+<div class="line"><a name="l02189"></a><span class="lineno"> 2189</span>&#160;    M_face_l2g(),</div>
 <div class="line"><a name="l02190"></a><span class="lineno"> 2190</span>&#160;    M_local_dof_set( 0, <a class="code" href="classFeel_1_1DataMap.html#ab3eebfa5817a6fbcb79e31f0caa4237f">nLocalDof</a>() ),</div>
 <div class="line"><a name="l02191"></a><span class="lineno"> 2191</span>&#160;    map_gdof(),</div>
-<div class="line"><a name="l02192"></a><span class="lineno"> 2192</span>&#160;    _M_face_sign(),</div>
+<div class="line"><a name="l02192"></a><span class="lineno"> 2192</span>&#160;    M_face_sign(),</div>
 <div class="line"><a name="l02193"></a><span class="lineno"> 2193</span>&#160;    M_dof_indices(),</div>
 <div class="line"><a name="l02194"></a><span class="lineno"> 2194</span>&#160;    M_periodicity( periodicity )</div>
 <div class="line"><a name="l02195"></a><span class="lineno"> 2195</span>&#160;{</div>
@@ -2065,15 +2065,15 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02207"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a9730819fd3ac9fa307928372e1b3ab48"> 2207</a></span>&#160;<a class="code" href="classFeel_1_1DofTable.html" title="Local-to-global Degree of Freedom table. ">DofTable&lt;MeshType, FEType, PeriodicityType&gt;::DofTable</a>( fe_ptrtype <span class="keyword">const</span>&amp; _fe, periodicity_type <span class="keyword">const</span>&amp; periodicity, WorldComm <span class="keyword">const</span>&amp; _worldComm )</div>
 <div class="line"><a name="l02208"></a><span class="lineno"> 2208</span>&#160;    :</div>
 <div class="line"><a name="l02209"></a><span class="lineno"> 2209</span>&#160;    <a class="code" href="classFeel_1_1DataMap.html" title="data layout in a multi-processor environnement ">super</a>( _worldComm ),</div>
-<div class="line"><a name="l02210"></a><span class="lineno"> 2210</span>&#160;    _M_fe( _fe ),</div>
-<div class="line"><a name="l02211"></a><span class="lineno"> 2211</span>&#160;    _M_n_el( 0 ),</div>
-<div class="line"><a name="l02212"></a><span class="lineno"> 2212</span>&#160;    _M_n_dof_per_face_on_bdy( <a class="code" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a> ),</div>
-<div class="line"><a name="l02213"></a><span class="lineno"> 2213</span>&#160;    _M_n_dof_per_face( <a class="code" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a> ),</div>
-<div class="line"><a name="l02214"></a><span class="lineno"> 2214</span>&#160;    _M_el_l2g(),</div>
-<div class="line"><a name="l02215"></a><span class="lineno"> 2215</span>&#160;    _M_face_l2g(),</div>
+<div class="line"><a name="l02210"></a><span class="lineno"> 2210</span>&#160;    M_fe( _fe ),</div>
+<div class="line"><a name="l02211"></a><span class="lineno"> 2211</span>&#160;    M_n_el( 0 ),</div>
+<div class="line"><a name="l02212"></a><span class="lineno"> 2212</span>&#160;    M_n_dof_per_face_on_bdy( <a class="code" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a> ),</div>
+<div class="line"><a name="l02213"></a><span class="lineno"> 2213</span>&#160;    M_n_dof_per_face( <a class="code" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a> ),</div>
+<div class="line"><a name="l02214"></a><span class="lineno"> 2214</span>&#160;    M_el_l2g(),</div>
+<div class="line"><a name="l02215"></a><span class="lineno"> 2215</span>&#160;    M_face_l2g(),</div>
 <div class="line"><a name="l02216"></a><span class="lineno"> 2216</span>&#160;    M_local_dof_set( 0, nLocalDof() ),</div>
 <div class="line"><a name="l02217"></a><span class="lineno"> 2217</span>&#160;    map_gdof(),</div>
-<div class="line"><a name="l02218"></a><span class="lineno"> 2218</span>&#160;    _M_face_sign(),</div>
+<div class="line"><a name="l02218"></a><span class="lineno"> 2218</span>&#160;    M_face_sign(),</div>
 <div class="line"><a name="l02219"></a><span class="lineno"> 2219</span>&#160;    M_dof_indices(),</div>
 <div class="line"><a name="l02220"></a><span class="lineno"> 2220</span>&#160;    M_periodicity( periodicity )</div>
 <div class="line"><a name="l02221"></a><span class="lineno"> 2221</span>&#160;{</div>
@@ -2083,15 +2083,15 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02225"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a0cc919f508580f7c20c1e0a5642dbd6a"> 2225</a></span>&#160;<a class="code" href="classFeel_1_1DofTable.html" title="Local-to-global Degree of Freedom table. ">DofTable&lt;MeshType, FEType, PeriodicityType&gt;::DofTable</a>( <span class="keyword">const</span> <a class="code" href="classFeel_1_1DofTable.html" title="Local-to-global Degree of Freedom table. ">DofTable&lt;MeshType, FEType, PeriodicityType&gt;</a> &amp; dof2 )</div>
 <div class="line"><a name="l02226"></a><span class="lineno"> 2226</span>&#160;    :</div>
 <div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;    <a class="code" href="classFeel_1_1DataMap.html" title="data layout in a multi-processor environnement ">super</a>( dof2 ),</div>
-<div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;    _M_fe( dof2._M_fe ),</div>
-<div class="line"><a name="l02229"></a><span class="lineno"> 2229</span>&#160;    _M_n_el( dof2._M_n_el ),</div>
-<div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;    _M_n_dof_per_face_on_bdy( dof2._M_n_dof_per_face_on_bdy ),</div>
-<div class="line"><a name="l02231"></a><span class="lineno"> 2231</span>&#160;    _M_n_dof_per_face( dof2._M_n_dof_per_face ),</div>
-<div class="line"><a name="l02232"></a><span class="lineno"> 2232</span>&#160;    _M_el_l2g( dof2._M_el_l2g ),</div>
-<div class="line"><a name="l02233"></a><span class="lineno"> 2233</span>&#160;    _M_face_l2g( dof2._M_face_l2g ),</div>
+<div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;    M_fe( dof2.M_fe ),</div>
+<div class="line"><a name="l02229"></a><span class="lineno"> 2229</span>&#160;    M_n_el( dof2.M_n_el ),</div>
+<div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;    M_n_dof_per_face_on_bdy( dof2.M_n_dof_per_face_on_bdy ),</div>
+<div class="line"><a name="l02231"></a><span class="lineno"> 2231</span>&#160;    M_n_dof_per_face( dof2.M_n_dof_per_face ),</div>
+<div class="line"><a name="l02232"></a><span class="lineno"> 2232</span>&#160;    M_el_l2g( dof2.M_el_l2g ),</div>
+<div class="line"><a name="l02233"></a><span class="lineno"> 2233</span>&#160;    M_face_l2g( dof2.M_face_l2g ),</div>
 <div class="line"><a name="l02234"></a><span class="lineno"> 2234</span>&#160;    M_local_dof_set( dof2.M_local_dof_set),</div>
 <div class="line"><a name="l02235"></a><span class="lineno"> 2235</span>&#160;    map_gdof( dof2.map_gdof ),</div>
-<div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;    _M_face_sign( dof2._M_face_sign ),</div>
+<div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;    M_face_sign( dof2.M_face_sign ),</div>
 <div class="line"><a name="l02237"></a><span class="lineno"> 2237</span>&#160;    M_dof_indices( dof2.M_dof_indices ),</div>
 <div class="line"><a name="l02238"></a><span class="lineno"> 2238</span>&#160;    M_periodicity( dof2.M_periodicity )</div>
 <div class="line"><a name="l02239"></a><span class="lineno"> 2239</span>&#160;{</div>
@@ -2110,7 +2110,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02252"></a><span class="lineno"> 2252</span>&#160;        LOG(INFO)  &lt;&lt; <span class="stringliteral">&quot;************************************************************&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l02253"></a><span class="lineno"> 2253</span>&#160;        LOG(INFO)  &lt;&lt; <span class="stringliteral">&quot;Element Id    Loc. N.    Global N.   Sign#    Element Id   Loc. N.  Global N.  Sign&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l02254"></a><span class="lineno"> 2254</span>&#160;</div>
-<div class="line"><a name="l02255"></a><span class="lineno"> 2255</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i = 0; i &lt; _M_n_el; ++i )</div>
+<div class="line"><a name="l02255"></a><span class="lineno"> 2255</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i = 0; i &lt; M_n_el; ++i )</div>
 <div class="line"><a name="l02256"></a><span class="lineno"> 2256</span>&#160;        {</div>
 <div class="line"><a name="l02257"></a><span class="lineno"> 2257</span>&#160;</div>
 <div class="line"><a name="l02258"></a><span class="lineno"> 2258</span>&#160;            <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> j = 0; j &lt; nDofPerElement; ++j )</div>
@@ -2130,8 +2130,8 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02272"></a><span class="lineno"> 2272</span>&#160;        LOG(INFO)  &lt;&lt; <span class="stringliteral">&quot; Boundary  Local to Global DOF table&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l02273"></a><span class="lineno"> 2273</span>&#160;        LOG(INFO)  &lt;&lt; <span class="stringliteral">&quot;************************************************************&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l02274"></a><span class="lineno"> 2274</span>&#160;</div>
-<div class="line"><a name="l02275"></a><span class="lineno"> 2275</span>&#160;        <span class="keyword">auto</span> it = _M_face_l2g.begin();</div>
-<div class="line"><a name="l02276"></a><span class="lineno"> 2276</span>&#160;        <span class="keyword">auto</span> en = _M_face_l2g.end();</div>
+<div class="line"><a name="l02275"></a><span class="lineno"> 2275</span>&#160;        <span class="keyword">auto</span> it = M_face_l2g.begin();</div>
+<div class="line"><a name="l02276"></a><span class="lineno"> 2276</span>&#160;        <span class="keyword">auto</span> en = M_face_l2g.end();</div>
 <div class="line"><a name="l02277"></a><span class="lineno"> 2277</span>&#160;</div>
 <div class="line"><a name="l02278"></a><span class="lineno"> 2278</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> f = 0; it!=en; ++it,++f )</div>
 <div class="line"><a name="l02279"></a><span class="lineno"> 2279</span>&#160;        {</div>
@@ -2368,7 +2368,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02510"></a><span class="lineno"> 2510</span>&#160;                                         element_type::numEdges*fe_type::nDofPerEdge +</div>
 <div class="line"><a name="l02511"></a><span class="lineno"> 2511</span>&#160;                                         iFaEl * fe_type::nDofPerFace + l,</div>
 <div class="line"><a name="l02512"></a><span class="lineno"> 2512</span>&#160;                                         c );</div>
-<div class="line"><a name="l02513"></a><span class="lineno"> 2513</span>&#160;        _M_face_l2g[ __face_it-&gt;id()][ lc++ ] = boost::make_tuple( boost::get&lt;0&gt;( temp ),boost::get&lt;1&gt;( temp ),boost::get&lt;2&gt;( temp ),</div>
+<div class="line"><a name="l02513"></a><span class="lineno"> 2513</span>&#160;        M_face_l2g[ __face_it-&gt;id()][ lc++ ] = boost::make_tuple( boost::get&lt;0&gt;( temp ),boost::get&lt;1&gt;( temp ),boost::get&lt;2&gt;( temp ),</div>
 <div class="line"><a name="l02514"></a><span class="lineno"> 2514</span>&#160;                                                element_type::numVertices*fe_type::nDofPerVertex +</div>
 <div class="line"><a name="l02515"></a><span class="lineno"> 2515</span>&#160;                                                element_type::numEdges*fe_type::nDofPerEdge +</div>
 <div class="line"><a name="l02516"></a><span class="lineno"> 2516</span>&#160;                                                iFaEl * fe_type::nDofPerFace + l );</div>
@@ -2380,7 +2380,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02522"></a><span class="lineno"> 2522</span>&#160;<span class="keywordtype">void</span></div>
 <div class="line"><a name="l02523"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#a62b635f430c6c20f34440d80aaf65657"> 2523</a></span>&#160;<a class="code" href="classFeel_1_1DofTable.html#a62b635f430c6c20f34440d80aaf65657">DofTable&lt;MeshType, FEType, PeriodicityType&gt;::initDofMap</a>( <a class="code" href="classFeel_1_1DofTable.html#aa2eb24a6303c31c4e27c330e26a5c13d">mesh_type</a>&amp; M )</div>
 <div class="line"><a name="l02524"></a><span class="lineno"> 2524</span>&#160;{</div>
-<div class="line"><a name="l02525"></a><span class="lineno"> 2525</span>&#160;    _M_n_el = M.numElements();</div>
+<div class="line"><a name="l02525"></a><span class="lineno"> 2525</span>&#160;    M_n_el = M.numElements();</div>
 <div class="line"><a name="l02526"></a><span class="lineno"> 2526</span>&#160;</div>
 <div class="line"><a name="l02527"></a><span class="lineno"> 2527</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> nldof =</div>
 <div class="line"><a name="l02528"></a><span class="lineno"> 2528</span>&#160;        fe_type::nDofPerVolume * element_type::numVolumes +</div>
@@ -2418,7 +2418,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02560"></a><span class="lineno"> 2560</span>&#160;    M_locglobOnCluster_signs.resize( nV );</div>
 <div class="line"><a name="l02561"></a><span class="lineno"> 2561</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l02562"></a><span class="lineno"> 2562</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l02563"></a><span class="lineno"> 2563</span>&#160;    _M_face_sign = ublas::scalar_vector&lt;bool&gt;( M.numFaces(), false );</div>
+<div class="line"><a name="l02563"></a><span class="lineno"> 2563</span>&#160;    M_face_sign = ublas::scalar_vector&lt;bool&gt;( M.numFaces(), false );</div>
 <div class="line"><a name="l02564"></a><span class="lineno"> 2564</span>&#160;</div>
 <div class="line"><a name="l02565"></a><span class="lineno"> 2565</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> doperm = ( ( ( Shape == SHAPE_TETRA ) &amp;&amp; ( nOrder &gt; 2 ) ) || ( ( Shape == SHAPE_HEXA ) &amp;&amp; ( nOrder &gt; 1 ) ) );</div>
 <div class="line"><a name="l02566"></a><span class="lineno"> 2566</span>&#160;    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;generateFacePermutations: &quot;</span> &lt;&lt; doperm &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -2448,7 +2448,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02590"></a><span class="lineno"> 2590</span>&#160;        element_const_iterator en_elt = M.endElementWithProcessId( processor );</div>
 <div class="line"><a name="l02591"></a><span class="lineno"> 2591</span>&#160;        <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> n_elts = std::distance( it_elt, en_elt );</div>
 <div class="line"><a name="l02592"></a><span class="lineno"> 2592</span>&#160;        VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[buildDofMap] n_elts =  &quot;</span> &lt;&lt; n_elts &lt;&lt; <span class="stringliteral">&quot; on processor &quot;</span> &lt;&lt; processor &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l02593"></a><span class="lineno"> 2593</span>&#160;        <span class="comment">//this-&gt;_M_first_df[processor] = next_free_dof;</span></div>
+<div class="line"><a name="l02593"></a><span class="lineno"> 2593</span>&#160;        <span class="comment">//this-&gt;M_first_df[processor] = next_free_dof;</span></div>
 <div class="line"><a name="l02594"></a><span class="lineno"> 2594</span>&#160;</div>
 <div class="line"><a name="l02595"></a><span class="lineno"> 2595</span>&#160;        it_elt = M.beginElementWithProcessId( processor );</div>
 <div class="line"><a name="l02596"></a><span class="lineno"> 2596</span>&#160;</div>
@@ -2638,12 +2638,12 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02780"></a><span class="lineno"> 2780</span>&#160;                    ( gid )( it_dof2-&gt;first )( gDof )( lid )( c2) ( ie )</div>
 <div class="line"><a name="l02781"></a><span class="lineno"> 2781</span>&#160;                ( dof1_type )( dof2_type ).error ( <span class="stringliteral">&quot;invalid dof&quot;</span> );</div>
 <div class="line"><a name="l02782"></a><span class="lineno"> 2782</span>&#160;</div>
-<div class="line"><a name="l02783"></a><span class="lineno"> 2783</span>&#160;                VLOG(2) &lt;&lt; <span class="stringliteral">&quot;link &quot;</span> &lt;&lt;  _M_el_l2g.left.find( LocalDof( ie, localDofId(lid,c2) ) )-&gt;second.index()  &lt;&lt; <span class="stringliteral">&quot; -&gt; &quot;</span> &lt;&lt; gid &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l02783"></a><span class="lineno"> 2783</span>&#160;                VLOG(2) &lt;&lt; <span class="stringliteral">&quot;link &quot;</span> &lt;&lt;  M_el_l2g.left.find( LocalDof( ie, localDofId(lid,c2) ) )-&gt;second.index()  &lt;&lt; <span class="stringliteral">&quot; -&gt; &quot;</span> &lt;&lt; gid &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
 <div class="line"><a name="l02784"></a><span class="lineno"> 2784</span>&#160;                        &lt;&lt; <span class="stringliteral">&quot;element id1: &quot;</span> &lt;&lt; ie1 &lt;&lt; <span class="stringliteral">&quot;, lid1: &quot;</span> &lt;&lt; lid1 &lt;&lt; <span class="stringliteral">&quot;, c1: &quot;</span> &lt;&lt; c1 &lt;&lt; <span class="stringliteral">&quot;,  gDof1: &quot;</span> &lt;&lt; gDof1 &lt;&lt; <span class="stringliteral">&quot;, type1: &quot;</span> &lt;&lt; dof1_type &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
 <div class="line"><a name="l02785"></a><span class="lineno"> 2785</span>&#160;                        &lt;&lt; <span class="stringliteral">&quot;element id2: &quot;</span> &lt;&lt; ie &lt;&lt; <span class="stringliteral">&quot;, lid2: &quot;</span> &lt;&lt; lid &lt;&lt; <span class="stringliteral">&quot;, c2: &quot;</span> &lt;&lt; c2 &lt;&lt; <span class="stringliteral">&quot;,  gDof2: &quot;</span> &lt;&lt; gDof &lt;&lt; <span class="stringliteral">&quot;, type: &quot;</span> &lt;&lt; dof2_type &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l02786"></a><span class="lineno"> 2786</span>&#160;</div>
 <div class="line"><a name="l02787"></a><span class="lineno"> 2787</span>&#160;                <span class="comment">// gid is given by dof1</span></div>
-<div class="line"><a name="l02788"></a><span class="lineno"> 2788</span>&#160;                _M_el_l2g.insert( dof_relation( LocalDof( ie, localDofId(lid,c2) ),</div>
+<div class="line"><a name="l02788"></a><span class="lineno"> 2788</span>&#160;                M_el_l2g.insert( dof_relation( LocalDof( ie, localDofId(lid,c2) ),</div>
 <div class="line"><a name="l02789"></a><span class="lineno"> 2789</span>&#160;                                                <a class="code" href="classFeel_1_1Dof.html" title="class that represents a degree of freedom ">Dof</a>( boost::make_tuple( gid, 1, <span class="keyword">true</span> ) ) ) );</div>
 <div class="line"><a name="l02790"></a><span class="lineno"> 2790</span>&#160;</div>
 <div class="line"><a name="l02791"></a><span class="lineno"> 2791</span>&#160;</div>
@@ -2757,10 +2757,10 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02900"></a><span class="lineno"> 2900</span>&#160;        element_const_iterator en_elt = M.endElementWithProcessId( processor );</div>
 <div class="line"><a name="l02901"></a><span class="lineno"> 2901</span>&#160;        <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> n_elts = std::distance( it_elt, en_elt );</div>
 <div class="line"><a name="l02902"></a><span class="lineno"> 2902</span>&#160;        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[buildDofMap] n_elts =  &quot;</span> &lt;&lt; n_elts &lt;&lt; <span class="stringliteral">&quot; on processor &quot;</span> &lt;&lt; processor &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l02903"></a><span class="lineno"> 2903</span>&#160;        this-&gt;_M_first_df[processor] = next_free_dof;</div>
+<div class="line"><a name="l02903"></a><span class="lineno"> 2903</span>&#160;        this-&gt;M_first_df[processor] = next_free_dof;</div>
 <div class="line"><a name="l02904"></a><span class="lineno"> 2904</span>&#160;</div>
 <div class="line"><a name="l02905"></a><span class="lineno"> 2905</span>&#160;        <span class="keywordflow">if</span> ( is_periodic || is_discontinuous_locally )</div>
-<div class="line"><a name="l02906"></a><span class="lineno"> 2906</span>&#160;            this-&gt;_M_first_df[processor] =  0;</div>
+<div class="line"><a name="l02906"></a><span class="lineno"> 2906</span>&#160;            this-&gt;M_first_df[processor] =  0;</div>
 <div class="line"><a name="l02907"></a><span class="lineno"> 2907</span>&#160;</div>
 <div class="line"><a name="l02908"></a><span class="lineno"> 2908</span>&#160;        it_elt = M.beginElementWithProcessId( processor );</div>
 <div class="line"><a name="l02909"></a><span class="lineno"> 2909</span>&#160;</div>
@@ -2786,7 +2786,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02929"></a><span class="lineno"> 2929</span>&#160;</div>
 <div class="line"><a name="l02930"></a><span class="lineno"> 2930</span>&#160;                <span class="keywordflow">for</span> ( uint16_type l = 0; l &lt; nldof; ++l )</div>
 <div class="line"><a name="l02931"></a><span class="lineno"> 2931</span>&#160;                {</div>
-<div class="line"><a name="l02932"></a><span class="lineno"> 2932</span>&#160;                    ostr &lt;&lt; _M_el_l2g.left.find( LocalDof( __elt.id(), fe_type::nLocalDof*c + l ) )-&gt;second.index() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l02932"></a><span class="lineno"> 2932</span>&#160;                    ostr &lt;&lt; M_el_l2g.left.find( LocalDof( __elt.id(), fe_type::nLocalDof*c + l ) )-&gt;second.index() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
 <div class="line"><a name="l02933"></a><span class="lineno"> 2933</span>&#160;                }</div>
 <div class="line"><a name="l02934"></a><span class="lineno"> 2934</span>&#160;</div>
 <div class="line"><a name="l02935"></a><span class="lineno"> 2935</span>&#160;                DVLOG(2) &lt;&lt; ostr.str() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -2794,16 +2794,16 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l02937"></a><span class="lineno"> 2937</span>&#160;        }</div>
 <div class="line"><a name="l02938"></a><span class="lineno"> 2938</span>&#160;</div>
 <div class="line"><a name="l02939"></a><span class="lineno"> 2939</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l02940"></a><span class="lineno"> 2940</span>&#160;<span class="preprocessor"></span>        this-&gt;_M_last_df[processor] = next_free_dof-1;</div>
+<div class="line"><a name="l02940"></a><span class="lineno"> 2940</span>&#160;<span class="preprocessor"></span>        this-&gt;M_last_df[processor] = next_free_dof-1;</div>
 <div class="line"><a name="l02941"></a><span class="lineno"> 2941</span>&#160;</div>
 <div class="line"><a name="l02942"></a><span class="lineno"> 2942</span>&#160;        <span class="comment">// update info</span></div>
-<div class="line"><a name="l02943"></a><span class="lineno"> 2943</span>&#160;        this-&gt;_M_n_localWithGhost_df[processor] = this-&gt;_M_last_df[processor] - this-&gt;_M_first_df[processor] + 1;</div>
-<div class="line"><a name="l02944"></a><span class="lineno"> 2944</span>&#160;        this-&gt;_M_n_localWithoutGhost_df[processor]=this-&gt;_M_n_localWithGhost_df[processor];</div>
-<div class="line"><a name="l02945"></a><span class="lineno"> 2945</span>&#160;        this-&gt;_M_first_df_globalcluster[processor]=this-&gt;_M_first_df[processor];</div>
-<div class="line"><a name="l02946"></a><span class="lineno"> 2946</span>&#160;        this-&gt;_M_last_df_globalcluster[processor]=this-&gt;_M_last_df[processor];</div>
+<div class="line"><a name="l02943"></a><span class="lineno"> 2943</span>&#160;        this-&gt;M_n_localWithGhost_df[processor] = this-&gt;M_last_df[processor] - this-&gt;M_first_df[processor] + 1;</div>
+<div class="line"><a name="l02944"></a><span class="lineno"> 2944</span>&#160;        this-&gt;M_n_localWithoutGhost_df[processor]=this-&gt;M_n_localWithGhost_df[processor];</div>
+<div class="line"><a name="l02945"></a><span class="lineno"> 2945</span>&#160;        this-&gt;M_first_df_globalcluster[processor]=this-&gt;M_first_df[processor];</div>
+<div class="line"><a name="l02946"></a><span class="lineno"> 2946</span>&#160;        this-&gt;M_last_df_globalcluster[processor]=this-&gt;M_last_df[processor];</div>
 <div class="line"><a name="l02947"></a><span class="lineno"> 2947</span>&#160;    }</div>
 <div class="line"><a name="l02948"></a><span class="lineno"> 2948</span>&#160;</div>
-<div class="line"><a name="l02949"></a><span class="lineno"> 2949</span>&#160;    this-&gt;_M_n_dofs = next_free_dof;</div>
+<div class="line"><a name="l02949"></a><span class="lineno"> 2949</span>&#160;    this-&gt;M_n_dofs = next_free_dof;</div>
 <div class="line"><a name="l02950"></a><span class="lineno"> 2950</span>&#160;</div>
 <div class="line"><a name="l02951"></a><span class="lineno"> 2951</span>&#160;<span class="preprocessor">#if !defined(NDEBUG)</span></div>
 <div class="line"><a name="l02952"></a><span class="lineno"> 2952</span>&#160;<span class="preprocessor"></span>    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot; n global dof &quot;</span> &lt;&lt; nDof() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -2861,10 +2861,10 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l03004"></a><span class="lineno"> 3004</span>&#160;</div>
 <div class="line"><a name="l03005"></a><span class="lineno"> 3005</span>&#160;    mpi::all_gather( M.worldComm().localComm(),</div>
 <div class="line"><a name="l03006"></a><span class="lineno"> 3006</span>&#160;                     theFirstDf,<span class="comment">//start_next_free_dof,</span></div>
-<div class="line"><a name="l03007"></a><span class="lineno"> 3007</span>&#160;                     this-&gt;_M_first_df );</div>
+<div class="line"><a name="l03007"></a><span class="lineno"> 3007</span>&#160;                     this-&gt;M_first_df );</div>
 <div class="line"><a name="l03008"></a><span class="lineno"> 3008</span>&#160;</div>
 <div class="line"><a name="l03009"></a><span class="lineno"> 3009</span>&#160;    <span class="comment">//if ( is_periodic || is_discontinuous_locally )</span></div>
-<div class="line"><a name="l03010"></a><span class="lineno"> 3010</span>&#160;    <span class="comment">//    this-&gt;_M_first_df[processor] =  0;</span></div>
+<div class="line"><a name="l03010"></a><span class="lineno"> 3010</span>&#160;    <span class="comment">//    this-&gt;M_first_df[processor] =  0;</span></div>
 <div class="line"><a name="l03011"></a><span class="lineno"> 3011</span>&#160;</div>
 <div class="line"><a name="l03012"></a><span class="lineno"> 3012</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> next_free_dof = start_next_free_dof;</div>
 <div class="line"><a name="l03013"></a><span class="lineno"> 3013</span>&#160;</div>
@@ -2874,7 +2874,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l03017"></a><span class="lineno"> 3017</span>&#160;    } <span class="comment">// elements loop</span></div>
 <div class="line"><a name="l03018"></a><span class="lineno"> 3018</span>&#160;</div>
 <div class="line"><a name="l03019"></a><span class="lineno"> 3019</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l03020"></a><span class="lineno"> 3020</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">for</span> ( <span class="keyword">auto</span> mit = _M_dof_marker.right.begin(), men = _M_dof_marker.right.end() ; mit != men ; ++mit )</div>
+<div class="line"><a name="l03020"></a><span class="lineno"> 3020</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">for</span> ( <span class="keyword">auto</span> mit = M_dof_marker.right.begin(), men = M_dof_marker.right.end() ; mit != men ; ++mit )</div>
 <div class="line"><a name="l03021"></a><span class="lineno"> 3021</span>&#160;        {</div>
 <div class="line"><a name="l03022"></a><span class="lineno"> 3022</span>&#160;            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;marker &quot;</span> &lt;&lt; mit-&gt;first &lt;&lt; <span class="stringliteral">&quot; dof id &quot;</span> &lt;&lt; mit-&gt;second;</div>
 <div class="line"><a name="l03023"></a><span class="lineno"> 3023</span>&#160;        }</div>
@@ -2882,13 +2882,13 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l03025"></a><span class="lineno"> 3025</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l03026"></a><span class="lineno"> 3026</span>&#160;<span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l03027"></a><span class="lineno"> 3027</span>&#160;<span class="preprocessor"></span>    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;local to global view&quot;</span>;</div>
-<div class="line"><a name="l03028"></a><span class="lineno"> 3028</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">auto</span> it = _M_el_l2g.left.begin(), en = _M_el_l2g.left.end();</div>
+<div class="line"><a name="l03028"></a><span class="lineno"> 3028</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">auto</span> it = M_el_l2g.left.begin(), en = M_el_l2g.left.end();</div>
 <div class="line"><a name="l03029"></a><span class="lineno"> 3029</span>&#160;         it != en; ++it )</div>
 <div class="line"><a name="l03030"></a><span class="lineno"> 3030</span>&#160;    {</div>
 <div class="line"><a name="l03031"></a><span class="lineno"> 3031</span>&#160;        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;local dof (&quot;</span> &lt;&lt; it-&gt;first.elementId()&lt;&lt; <span class="stringliteral">&quot;,&quot;</span>&lt;&lt; it-&gt;first.localDof() &lt;&lt; <span class="stringliteral">&quot;) --&gt; global dof &quot;</span> &lt;&lt; it-&gt;second.index();</div>
 <div class="line"><a name="l03032"></a><span class="lineno"> 3032</span>&#160;    }</div>
 <div class="line"><a name="l03033"></a><span class="lineno"> 3033</span>&#160;    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;global to local  view&quot;</span>;</div>
-<div class="line"><a name="l03034"></a><span class="lineno"> 3034</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">auto</span> it = _M_el_l2g.right.begin(), en = _M_el_l2g.right.end();</div>
+<div class="line"><a name="l03034"></a><span class="lineno"> 3034</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">auto</span> it = M_el_l2g.right.begin(), en = M_el_l2g.right.end();</div>
 <div class="line"><a name="l03035"></a><span class="lineno"> 3035</span>&#160;         it != en; ++it )</div>
 <div class="line"><a name="l03036"></a><span class="lineno"> 3036</span>&#160;    {</div>
 <div class="line"><a name="l03037"></a><span class="lineno"> 3037</span>&#160;        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;global dof &quot;</span> &lt;&lt; it-&gt;first.index() &lt;&lt; <span class="stringliteral">&quot; --&gt; local dof (&quot;</span> &lt;&lt; it-&gt;second.elementId()&lt;&lt; <span class="stringliteral">&quot;,&quot;</span>&lt;&lt; it-&gt;second.localDof() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
@@ -2898,17 +2898,17 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l03041"></a><span class="lineno"> 3041</span>&#160;</div>
 <div class="line"><a name="l03042"></a><span class="lineno"> 3042</span>&#160;    mpi::all_gather( M.worldComm().localComm(),</div>
 <div class="line"><a name="l03043"></a><span class="lineno"> 3043</span>&#160;                     thelastDof,<span class="comment">//next_free_dof-1,</span></div>
-<div class="line"><a name="l03044"></a><span class="lineno"> 3044</span>&#160;                     this-&gt;_M_last_df );</div>
+<div class="line"><a name="l03044"></a><span class="lineno"> 3044</span>&#160;                     this-&gt;M_last_df );</div>
 <div class="line"><a name="l03045"></a><span class="lineno"> 3045</span>&#160;</div>
-<div class="line"><a name="l03046"></a><span class="lineno"> 3046</span>&#160;    <span class="comment">// access to _M_n_localWithGhost_df for each process</span></div>
+<div class="line"><a name="l03046"></a><span class="lineno"> 3046</span>&#160;    <span class="comment">// access to M_n_localWithGhost_df for each process</span></div>
 <div class="line"><a name="l03047"></a><span class="lineno"> 3047</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> mynDofWithGhost = ( !hasNoElt )?</div>
-<div class="line"><a name="l03048"></a><span class="lineno"> 3048</span>&#160;        this-&gt;_M_last_df[M.worldComm().localRank()] - this-&gt;_M_first_df[M.worldComm().localRank()] + 1 :</div>
-<div class="line"><a name="l03049"></a><span class="lineno"> 3049</span>&#160;        this-&gt;_M_first_df[M.worldComm().localRank()];</div>
+<div class="line"><a name="l03048"></a><span class="lineno"> 3048</span>&#160;        this-&gt;M_last_df[M.worldComm().localRank()] - this-&gt;M_first_df[M.worldComm().localRank()] + 1 :</div>
+<div class="line"><a name="l03049"></a><span class="lineno"> 3049</span>&#160;        this-&gt;M_first_df[M.worldComm().localRank()];</div>
 <div class="line"><a name="l03050"></a><span class="lineno"> 3050</span>&#160;</div>
 <div class="line"><a name="l03051"></a><span class="lineno"> 3051</span>&#160;    <span class="comment">// update info with all_gather</span></div>
 <div class="line"><a name="l03052"></a><span class="lineno"> 3052</span>&#160;    mpi::all_gather( M.worldComm().localComm(),</div>
 <div class="line"><a name="l03053"></a><span class="lineno"> 3053</span>&#160;                     mynDofWithGhost,</div>
-<div class="line"><a name="l03054"></a><span class="lineno"> 3054</span>&#160;                     this-&gt;_M_n_localWithGhost_df );</div>
+<div class="line"><a name="l03054"></a><span class="lineno"> 3054</span>&#160;                     this-&gt;M_n_localWithGhost_df );</div>
 <div class="line"><a name="l03055"></a><span class="lineno"> 3055</span>&#160;<span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l03056"></a><span class="lineno"> 3056</span>&#160;<span class="preprocessor"></span>    std::cout &lt;&lt; <span class="stringliteral">&quot;\n build Dof Map --2---with god rank &quot;</span> &lt;&lt; this-&gt;worldComm().godRank()</div>
 <div class="line"><a name="l03057"></a><span class="lineno"> 3057</span>&#160;              &lt;&lt; <span class="stringliteral">&quot; local rank DofT &quot;</span> &lt;&lt; this-&gt;worldComm().localRank()</div>
@@ -2917,10 +2917,10 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l03060"></a><span class="lineno"> 3060</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l03061"></a><span class="lineno"> 3061</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l03062"></a><span class="lineno"> 3062</span>&#160;    <span class="comment">// only true in sequential, redefine in buildDofGhostMap</span></div>
-<div class="line"><a name="l03063"></a><span class="lineno"> 3063</span>&#160;    this-&gt;_M_n_localWithoutGhost_df[this-&gt;worldComm().localRank()]=this-&gt;_M_n_localWithGhost_df[this-&gt;worldComm().localRank()];</div>
-<div class="line"><a name="l03064"></a><span class="lineno"> 3064</span>&#160;    this-&gt;_M_first_df_globalcluster[this-&gt;worldComm().localRank()]=this-&gt;_M_first_df[this-&gt;worldComm().localRank()];</div>
-<div class="line"><a name="l03065"></a><span class="lineno"> 3065</span>&#160;    this-&gt;_M_last_df_globalcluster[this-&gt;worldComm().localRank()]=this-&gt;_M_last_df[this-&gt;worldComm().localRank()];</div>
-<div class="line"><a name="l03066"></a><span class="lineno"> 3066</span>&#160;    this-&gt;_M_n_dofs = next_free_dof;</div>
+<div class="line"><a name="l03063"></a><span class="lineno"> 3063</span>&#160;    this-&gt;M_n_localWithoutGhost_df[this-&gt;worldComm().localRank()]=this-&gt;M_n_localWithGhost_df[this-&gt;worldComm().localRank()];</div>
+<div class="line"><a name="l03064"></a><span class="lineno"> 3064</span>&#160;    this-&gt;M_first_df_globalcluster[this-&gt;worldComm().localRank()]=this-&gt;M_first_df[this-&gt;worldComm().localRank()];</div>
+<div class="line"><a name="l03065"></a><span class="lineno"> 3065</span>&#160;    this-&gt;M_last_df_globalcluster[this-&gt;worldComm().localRank()]=this-&gt;M_last_df[this-&gt;worldComm().localRank()];</div>
+<div class="line"><a name="l03066"></a><span class="lineno"> 3066</span>&#160;    this-&gt;M_n_dofs = next_free_dof;</div>
 <div class="line"><a name="l03067"></a><span class="lineno"> 3067</span>&#160;</div>
 <div class="line"><a name="l03068"></a><span class="lineno"> 3068</span>&#160;    it_elt = M.beginElementWithProcessId( M.worldComm().localRank() );</div>
 <div class="line"><a name="l03069"></a><span class="lineno"> 3069</span>&#160;</div>
@@ -2952,7 +2952,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l03095"></a><span class="lineno"><a class="code" href="classFeel_1_1DofTable.html#ac47c2df2b22bdb5d24435c648da3ce8e"> 3095</a></span>&#160;<a class="code" href="classFeel_1_1DofTable.html#ac47c2df2b22bdb5d24435c648da3ce8e" title="Build the localToGlobal table for the boundary. ">DofTable&lt;MeshType, FEType, PeriodicityType&gt;::buildBoundaryDofMap</a>( <a class="code" href="classFeel_1_1DofTable.html#aa2eb24a6303c31c4e27c330e26a5c13d">mesh_type</a>&amp; M )</div>
 <div class="line"><a name="l03096"></a><span class="lineno"> 3096</span>&#160;{</div>
 <div class="line"><a name="l03097"></a><span class="lineno"> 3097</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> nDofF = nLocalDofOnFace(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l03098"></a><span class="lineno"> 3098</span>&#160;    _M_n_dof_per_face_on_bdy = nDofF;</div>
+<div class="line"><a name="l03098"></a><span class="lineno"> 3098</span>&#160;    M_n_dof_per_face_on_bdy = nDofF;</div>
 <div class="line"><a name="l03099"></a><span class="lineno"> 3099</span>&#160;    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;vertex dof : &quot;</span> &lt;&lt;  face_type::numVertices * fe_type::nDofPerVertex &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l03100"></a><span class="lineno"> 3100</span>&#160;    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;edge dof : &quot;</span> &lt;&lt;  face_type::numEdges * fe_type::nDofPerEdge &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l03101"></a><span class="lineno"> 3101</span>&#160;    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;face dof : &quot;</span> &lt;&lt; face_type::numFaces * fe_type::nDofPerFace  &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -3013,7 +3013,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 <div class="line"><a name="l03156"></a><span class="lineno"> 3156</span>&#160;    __face_en = M.facesWithProcessId( M.worldComm().localRank() ).second;</div>
 <div class="line"><a name="l03157"></a><span class="lineno"> 3157</span>&#160;    <span class="keywordflow">for</span> ( ; __face_it != __face_en; ++__face_it )</div>
 <div class="line"><a name="l03158"></a><span class="lineno"> 3158</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> face_dof_id = 0; face_dof_id &lt; int( ntldof ); ++face_dof_id )</div>
-<div class="line"><a name="l03159"></a><span class="lineno"> 3159</span>&#160;            FEELPP_ASSERT( boost::get&lt;0&gt;( _M_face_l2g[__face_it-&gt;id()][face_dof_id] ) != <a class="code" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">invalid_size_type_value</a> )( __face_it-&gt;id() )( face_dof_id ).warn( <span class="stringliteral">&quot;invalid dof table: initialized dof entries&quot;</span> );</div>
+<div class="line"><a name="l03159"></a><span class="lineno"> 3159</span>&#160;            FEELPP_ASSERT( boost::get&lt;0&gt;( M_face_l2g[__face_it-&gt;id()][face_dof_id] ) != <a class="code" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">invalid_size_type_value</a> )( __face_it-&gt;id() )( face_dof_id ).warn( <span class="stringliteral">&quot;invalid dof table: initialized dof entries&quot;</span> );</div>
 <div class="line"><a name="l03160"></a><span class="lineno"> 3160</span>&#160;</div>
 <div class="line"><a name="l03161"></a><span class="lineno"> 3161</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l03162"></a><span class="lineno"> 3162</span>&#160;<span class="preprocessor"></span>}    <span class="comment">// updateBoundaryDof</span></div>
@@ -3524,7 +3524,7 @@ $(document).ready(function(){initNavTree('doftable_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:01:40 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:20 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

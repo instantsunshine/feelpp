@@ -201,7 +201,7 @@ $(document).ready(function(){initNavTree('mapped_8hpp_source.html','');});
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    PointSetMapped( element_type <span class="keyword">const</span>&amp; _elt )</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        :</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        _M_elt( _elt )</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        M_elt( _elt )</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        pointset_type pts;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
@@ -269,7 +269,7 @@ $(document).ready(function(){initNavTree('mapped_8hpp_source.html','');});
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    element_type _M_elt;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    element_type M_elt;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    std::map&lt;face_permutation_type, permutation_vector_type&gt; vector_permutation;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    std::map&lt;face_permutation_type, permutation_matrix_type&gt; matrix_permutation;</div>
@@ -312,7 +312,7 @@ $(document).ready(function(){initNavTree('mapped_8hpp_source.html','');});
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    points_type permutatePoints ( nodes_type <span class="keyword">const</span>&amp; theGt, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> entity_local_id, mpl::int_&lt;1&gt; )</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    {</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        nodes_type Gt( theGt );</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        edge_permutation_type permutation = _M_elt.edgePermutation( entity_local_id );</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        edge_permutation_type permutation = M_elt.edgePermutation( entity_local_id );</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">if</span> ( permutation != edge_permutation_type( edge_permutation_type::IDENTITY ) )</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        {</div>
@@ -327,7 +327,7 @@ $(document).ready(function(){initNavTree('mapped_8hpp_source.html','');});
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="comment">// real one, match others generated in the same real face</span></div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    points_type permutatePoints ( nodes_type <span class="keyword">const</span>&amp; Gt, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> entity_local_id, mpl::int_&lt;2&gt; )</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        face_permutation_type permutation = _M_elt.facePermutation( entity_local_id );</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        face_permutation_type permutation = M_elt.facePermutation( entity_local_id );</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        nodes_type res( Gt );</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">if</span> ( permutation != face_permutation_type( face_permutation_type::IDENTITY ) )</div>
@@ -485,7 +485,7 @@ $(document).ready(function(){initNavTree('mapped_8hpp_source.html','');});
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="keyword">typename</span> gm_type::precompute_ptrtype __geopc( <span class="keyword">new</span> <span class="keyword">typename</span> gm_type::precompute_type( _gm_ptr, Gt ) );</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="keyword">typename</span> gm_type::template Context&lt;vm::POINT, element_type&gt; gmc( _gm_ptr, _M_elt, __geopc );</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="keyword">typename</span> gm_type::template Context&lt;vm::POINT, element_type&gt; gmc( _gm_ptr, M_elt, __geopc );</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordflow">return</span> gmc.xReal();</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    }</div>
@@ -496,7 +496,7 @@ $(document).ready(function(){initNavTree('mapped_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:01:52 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:32 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

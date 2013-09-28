@@ -186,21 +186,21 @@ $(document).ready(function(){initNavTree('pointsetinterpolation_8hpp_source.html
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        :</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="classFeel_1_1PointSet.html">super</a>()</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        _M_eid.resize( topological_dimension + 1 );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        _M_pt_to_entity.resize( numPoints );</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        M_eid.resize( topological_dimension + 1 );</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        M_pt_to_entity.resize( numPoints );</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="classFeel_1_1PointSetInterpolation.html" title="Good interpolation point sets on a convex. ">PointSetInterpolation</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> np )</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        :</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="classFeel_1_1PointSet.html">super</a>( np )</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        _M_eid.resize( topological_dimension + 1 );</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        _M_pt_to_entity.resize( numPoints );</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        M_eid.resize( topological_dimension + 1 );</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        M_pt_to_entity.resize( numPoints );</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="classFeel_1_1PointSetInterpolation.html" title="Good interpolation point sets on a convex. ">PointSetInterpolation</a>( <a class="code" href="classFeel_1_1PointSetInterpolation.html" title="Good interpolation point sets on a convex. ">PointSetInterpolation</a> &amp; psi )</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        :</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="classFeel_1_1PointSet.html">super</a>( psi ),</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        _M_eid( psi.getEid() ),</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        _M_pt_to_entity( psi.getPtE() )</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        M_eid( psi.getEid() ),</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        M_pt_to_entity( psi.getPtE() )</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {}</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
@@ -208,11 +208,11 @@ $(document).ready(function(){initNavTree('pointsetinterpolation_8hpp_source.html
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    ublas::matrix_range&lt;nodes_type const&gt; pointsByEntity( uint16_type e )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        FEELPP_ASSERT( _M_eid[e].size() )( e ).error( <span class="stringliteral">&quot;no points defined on this entity&quot;</span> );</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        FEELPP_ASSERT( M_eid[e].size() )( e ).error( <span class="stringliteral">&quot;no points defined on this entity&quot;</span> );</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">ublas::project</a>( this-&gt;points(),</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                               ublas::range( 0,Dim ),</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                               ublas::range( *_M_eid[e].begin(), *_M_eid[e].rbegin() + 1 ) );</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                               ublas::range( *M_eid[e].begin(), *M_eid[e].rbegin() + 1 ) );</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    range_type interiorRangeById( uint16_type e, uint16_type <span class="keywordtype">id</span> )<span class="keyword"> const</span></div>
@@ -228,9 +228,9 @@ $(document).ready(function(){initNavTree('pointsetinterpolation_8hpp_source.html
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( e == 2 )</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            numEntities = convex_type::numFaces;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        uint16_type N = _M_eid[e].size()/numEntities;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        uint16_type N = M_eid[e].size()/numEntities;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">return</span> std::make_pair( *_M_eid[e].begin() + <span class="keywordtype">id</span>*N, *_M_eid[e].begin() + ( <span class="keywordtype">id</span>+1 )*N );</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">return</span> std::make_pair( *M_eid[e].begin() + <span class="keywordtype">id</span>*N, *M_eid[e].begin() + ( <span class="keywordtype">id</span>+1 )*N );</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    ublas::matrix_range&lt;nodes_type const&gt; interiorPointsById( uint16_type e, uint16_type <span class="keywordtype">id</span> )<span class="keyword"> const</span></div>
@@ -246,17 +246,17 @@ $(document).ready(function(){initNavTree('pointsetinterpolation_8hpp_source.html
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    uint32_type entityIds( <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">return</span> _M_eid[i][j];</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">return</span> M_eid[i][j];</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    uint32_type numEntities( <span class="keywordtype">int</span> i )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">return</span> _M_eid[i].size();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">return</span> M_eid[i].size();</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    range_type <span class="keyword">const</span>&amp; pointToEntity( <span class="keywordtype">int</span> p )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">return</span> _M_pt_to_entity[p];</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">return</span> M_pt_to_entity[p];</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="comment">//Returns the local indices of all the subentities that compose the entity</span></div>
@@ -303,7 +303,7 @@ $(document).ready(function(){initNavTree('pointsetinterpolation_8hpp_source.html
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                            indices[0].push_back( RefConv.f2p( local_id, i ) );</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    }</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                    <span class="keywordflow">if</span> ( ( top_dim == 2 ) &amp;&amp; ( _M_eid[1].size() != 0 ) )</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                    <span class="keywordflow">if</span> ( ( top_dim == 2 ) &amp;&amp; ( M_eid[1].size() != 0 ) )</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                    {</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                        <span class="keywordflow">for</span> ( uint16_type i=0; i &lt; numPointsInEntity[1] ; i++ )</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                            indices[1].push_back( RefConv.f2e( local_id, i ) );</div>
@@ -320,7 +320,7 @@ $(document).ready(function(){initNavTree('pointsetinterpolation_8hpp_source.html
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                        }</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                    }</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                    <span class="keywordflow">if</span> ( _M_eid[top_dim].size() )</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                    <span class="keywordflow">if</span> ( M_eid[top_dim].size() )</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                    {</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                        indices[top_dim].push_back( local_id );</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                    }</div>
@@ -372,40 +372,40 @@ $(document).ready(function(){initNavTree('pointsetinterpolation_8hpp_source.html
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    index_map_type getEid ()</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    {</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">return</span> _M_eid;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">return</span> M_eid;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    std::vector&lt;range_type&gt; getPtE()</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">return</span> _M_pt_to_entity;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">return</span> M_pt_to_entity;</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">void</span> setEid ( index_map_type eid )</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    {</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        _M_eid = eid;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        M_eid = eid;</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    }</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">void</span> setPtE ( std::vector&lt;range_type&gt; pt_ent )</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        _M_pt_to_entity = pt_ent;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        M_pt_to_entity = pt_ent;</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    }</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordtype">void</span> addToEid ( uint16_type p, uint16_type q )</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        _M_eid[p].push_back( q );</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        M_eid[p].push_back( q );</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordtype">void</span> addToPtE ( uint16_type p, range_type q )</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    {</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        _M_pt_to_entity[p] = q;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        M_pt_to_entity[p] = q;</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    }</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    FEELPP_DEFINE_VISITABLE();</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    index_map_type _M_eid;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    std::vector&lt;range_type&gt; _M_pt_to_entity;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    index_map_type M_eid;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    std::vector&lt;range_type&gt; M_pt_to_entity;</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;};</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}</div>
@@ -413,7 +413,7 @@ $(document).ready(function(){initNavTree('pointsetinterpolation_8hpp_source.html
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:01:58 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:38 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

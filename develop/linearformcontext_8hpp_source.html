@@ -149,25 +149,25 @@ $(document).ready(function(){initNavTree('linearformcontext_8hpp_source.html',''
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        IM <span class="keyword">const</span>&amp; im )</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    :</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">//super(),</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    _M_form( __form ),</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    _M_test_dof( __form.functionSpace()-&gt;dof().get() ),</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    _M_lb( __form.blockList() ),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    M_form( __form ),</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    M_test_dof( __form.functionSpace()-&gt;dof().get() ),</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    M_lb( __form.blockList() ),</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    _M_test_pc( new test_precompute_type( _M_form.testSpace()-&gt;fe(), fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest )-&gt;pc()-&gt;nodes() ) ),</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    _M_test_pc_face( precomputeTestBasisAtPoints( im ) ),</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    M_test_pc( new test_precompute_type( M_form.testSpace()-&gt;fe(), fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest )-&gt;pc()-&gt;nodes() ) ),</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    M_test_pc_face( precomputeTestBasisAtPoints( im ) ),</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    _M_gmc( _gmcTest ),</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    _M_gmc_left( fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest ) ),</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    _M_left_map( fusion::make_map&lt;gmc&lt;0&gt; &gt;( _M_gmc_left ) ),</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    _M_test_fec( fusion::transform( _M_gmc,vf::detail::FEContextInit&lt;0,form_context_type&gt;( __form.functionSpace()-&gt;fe(), *this ) ) ),</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    _M_test_fec0( fusion::make_map&lt;gmc&lt;0&gt; &gt;( fusion::at_key&lt;gmc&lt;0&gt; &gt;( _M_test_fec ) ) ),</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    _M_rep(),</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    _M_rep_2(),</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    _M_eval0_expr( new eval0_expr_type( expr, _gmcExpr, _M_test_fec0 ) ),</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    _M_eval1_expr(),</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    M_gmc( _gmcTest ),</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    M_gmc_left( fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest ) ),</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    M_left_map( fusion::make_map&lt;gmc&lt;0&gt; &gt;( M_gmc_left ) ),</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    M_test_fec( fusion::transform( M_gmc,vf::detail::FEContextInit&lt;0,form_context_type&gt;( __form.functionSpace()-&gt;fe(), *this ) ) ),</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    M_test_fec0( fusion::make_map&lt;gmc&lt;0&gt; &gt;( fusion::at_key&lt;gmc&lt;0&gt; &gt;( M_test_fec ) ) ),</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    M_rep(),</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    M_rep_2(),</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    M_eval0_expr( new eval0_expr_type( expr, _gmcExpr, M_test_fec0 ) ),</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    M_eval1_expr(),</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    M_integrator( im )</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    _M_eval0_expr-&gt;init( im );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    M_eval0_expr-&gt;init( im );</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> SpaceType, <span class="keyword">typename</span> VectorType,  <span class="keyword">typename</span> ElemContType&gt;</div>
@@ -182,25 +182,25 @@ $(document).ready(function(){initNavTree('linearformcontext_8hpp_source.html',''
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        IM2 <span class="keyword">const</span>&amp; im2 )</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    :</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">//super(),</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    _M_form( __form ),</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    _M_test_dof( __form.functionSpace()-&gt;dof().get() ),</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    _M_lb( __form.blockList() ),</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    M_form( __form ),</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    M_test_dof( __form.functionSpace()-&gt;dof().get() ),</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    M_lb( __form.blockList() ),</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    _M_test_pc( new test_precompute_type( _M_form.testSpace()-&gt;fe(), im2.<a class="code" href="namespaceFeel.html#a07ec0494dee4ca9a16b866e8c1f4d495">points</a>() ) ),</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    _M_test_pc_face( precomputeTestBasisAtPoints( im2 ) ),</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    M_test_pc( new test_precompute_type( M_form.testSpace()-&gt;fe(), im2.<a class="code" href="namespaceFeel.html#a07ec0494dee4ca9a16b866e8c1f4d495">points</a>() ) ),</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    M_test_pc_face( precomputeTestBasisAtPoints( im2 ) ),</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    _M_gmc( _gmcTest ),</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    _M_gmc_left( fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest ) ),</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    _M_left_map( fusion::make_map&lt;gmc&lt;0&gt; &gt;( _M_gmc_left ) ),</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    _M_test_fec( fusion::transform( _M_gmc,vf::detail::FEContextInit&lt;0,form_context_type&gt;( __form.functionSpace()-&gt;fe(), *this ) ) ),</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    _M_test_fec0( fusion::make_map&lt;gmc&lt;0&gt; &gt;( fusion::at_key&lt;gmc&lt;0&gt; &gt;( _M_test_fec ) ) ),</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    _M_rep(),</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    _M_rep_2(),</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    _M_eval0_expr( new eval0_expr_type( expr, _gmcExpr, _M_test_fec0 ) ),</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    _M_eval1_expr(),</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    M_gmc( _gmcTest ),</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    M_gmc_left( fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest ) ),</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    M_left_map( fusion::make_map&lt;gmc&lt;0&gt; &gt;( M_gmc_left ) ),</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    M_test_fec( fusion::transform( M_gmc,vf::detail::FEContextInit&lt;0,form_context_type&gt;( __form.functionSpace()-&gt;fe(), *this ) ) ),</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    M_test_fec0( fusion::make_map&lt;gmc&lt;0&gt; &gt;( fusion::at_key&lt;gmc&lt;0&gt; &gt;( M_test_fec ) ) ),</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    M_rep(),</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    M_rep_2(),</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    M_eval0_expr( new eval0_expr_type( expr, _gmcExpr, M_test_fec0 ) ),</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    M_eval1_expr(),</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    M_integrator( im )</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    _M_eval0_expr-&gt;init( im2 );</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    M_eval0_expr-&gt;init( im2 );</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> SpaceType, <span class="keyword">typename</span> VectorType,  <span class="keyword">typename</span> ElemContType&gt;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> GeomapContext,<span class="keyword">typename</span> ExprT, <span class="keyword">typename</span> IM,<span class="keyword">typename</span> GeomapExprContext&gt;</div>
@@ -215,30 +215,30 @@ $(document).ready(function(){initNavTree('linearformcontext_8hpp_source.html',''
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        mpl::int_&lt;2&gt; )</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    :</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">//super(),</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    _M_form( __form ),</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    _M_test_dof( __form.functionSpace()-&gt;dof().get() ),</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    _M_lb( __form.blockList() ),</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    M_form( __form ),</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    M_test_dof( __form.functionSpace()-&gt;dof().get() ),</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    M_lb( __form.blockList() ),</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    _M_test_pc( new test_precompute_type( _M_form.testSpace()-&gt;fe(), im2.<a class="code" href="namespaceFeel.html#a07ec0494dee4ca9a16b866e8c1f4d495">points</a>() ) ),</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    _M_test_pc_face( precomputeTestBasisAtPoints( im2 ) ),</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    M_test_pc( new test_precompute_type( M_form.testSpace()-&gt;fe(), im2.<a class="code" href="namespaceFeel.html#a07ec0494dee4ca9a16b866e8c1f4d495">points</a>() ) ),</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    M_test_pc_face( precomputeTestBasisAtPoints( im2 ) ),</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    _M_gmc( _gmcTest ),</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    _M_gmc_left( fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest ) ),</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    _M_gmc_right( fusion::at_key&lt;gmc1 &gt;( _gmcTest ) ),</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    _M_left_map( fusion::make_map&lt;gmc&lt;0&gt; &gt;( _M_gmc_left ) ),</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    _M_right_map( fusion::make_map&lt;gmc&lt;0&gt; &gt;( _M_gmc_right ) ),</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    _M_test_fec( fusion::transform( _M_gmc,vf::detail::FEContextInit&lt;0,form_context_type&gt;( __form.functionSpace()-&gt;fe(), *this ) ) ),</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    _M_test_fec0( fusion::make_map&lt;gmc&lt;0&gt; &gt;( fusion::at_key&lt;gmc&lt;0&gt; &gt;( _M_test_fec ) ) ),</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    _M_test_fec1( fusion::make_pair&lt;gmc1 &gt;( fusion::at_key&lt;gmc1 &gt;( _M_test_fec ) ) ),</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    _M_rep(),</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    _M_rep_2(),</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    _M_eval0_expr( new eval0_expr_type( expr, _gmcExpr, _M_test_fec0 ) ),</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    _M_eval1_expr( new eval1_expr_type( expr, _gmcExpr, _M_test_fec1 ) ),</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    M_gmc( _gmcTest ),</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    M_gmc_left( fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest ) ),</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    M_gmc_right( fusion::at_key&lt;gmc1 &gt;( _gmcTest ) ),</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    M_left_map( fusion::make_map&lt;gmc&lt;0&gt; &gt;( M_gmc_left ) ),</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    M_right_map( fusion::make_map&lt;gmc&lt;0&gt; &gt;( M_gmc_right ) ),</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    M_test_fec( fusion::transform( M_gmc,vf::detail::FEContextInit&lt;0,form_context_type&gt;( __form.functionSpace()-&gt;fe(), *this ) ) ),</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    M_test_fec0( fusion::make_map&lt;gmc&lt;0&gt; &gt;( fusion::at_key&lt;gmc&lt;0&gt; &gt;( M_test_fec ) ) ),</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    M_test_fec1( fusion::make_pair&lt;gmc1 &gt;( fusion::at_key&lt;gmc1 &gt;( M_test_fec ) ) ),</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    M_rep(),</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    M_rep_2(),</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    M_eval0_expr( new eval0_expr_type( expr, _gmcExpr, M_test_fec0 ) ),</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    M_eval1_expr( new eval1_expr_type( expr, _gmcExpr, M_test_fec1 ) ),</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    M_integrator( im )</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;{</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    _M_eval0_expr-&gt;init( im2 );</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    _M_eval1_expr-&gt;init( im2 );</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    M_eval0_expr-&gt;init( im2 );</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    M_eval1_expr-&gt;init( im2 );</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> SpaceType, <span class="keyword">typename</span> VectorType,  <span class="keyword">typename</span> ElemContType&gt;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> GeomapContext,<span class="keyword">typename</span> ExprT,<span class="keyword">typename</span> IM,<span class="keyword">typename</span> GeomapExprContext&gt;</div>
@@ -247,12 +247,12 @@ $(document).ready(function(){initNavTree('linearformcontext_8hpp_source.html',''
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        map_trial_geometric_mapping_context_type <span class="keyword">const</span> &amp; _gmcTrial,</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        map_geometric_mapping_expr_context_type <span class="keyword">const</span>&amp; _gmcExpr )</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;{</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    _M_gmc = _gmcTest;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    _M_gmc_left = fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest );</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    _M_left_map = fusion::make_map&lt;gmc&lt;0&gt; &gt;( _M_gmc_left );</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    fusion::for_each( _M_test_fec,vf::detail::FEContextUpdate&lt;0,form_context_type&gt;( _gmcTest, *<span class="keyword">this</span> ) );</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    _M_test_fec0 = fusion::make_map&lt;gmc&lt;0&gt; &gt;( fusion::at_key&lt;gmc&lt;0&gt; &gt;( _M_test_fec ) );</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    _M_eval0_expr-&gt;update( _gmcExpr, _M_test_fec0 );</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    M_gmc = _gmcTest;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    M_gmc_left = fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest );</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    M_left_map = fusion::make_map&lt;gmc&lt;0&gt; &gt;( M_gmc_left );</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    fusion::for_each( M_test_fec,vf::detail::FEContextUpdate&lt;0,form_context_type&gt;( _gmcTest, *<span class="keyword">this</span> ) );</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    M_test_fec0 = fusion::make_map&lt;gmc&lt;0&gt; &gt;( fusion::at_key&lt;gmc&lt;0&gt; &gt;( M_test_fec ) );</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    M_eval0_expr-&gt;update( _gmcExpr, M_test_fec0 );</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    M_integrator.update( *fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest ) );</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
@@ -264,13 +264,13 @@ $(document).ready(function(){initNavTree('linearformcontext_8hpp_source.html',''
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        map_geometric_mapping_expr_context_type <span class="keyword">const</span>&amp; _gmcExpr,</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        std::vector&lt;boost::tuple&lt;size_type,size_type&gt; &gt; <span class="keyword">const</span>&amp; indexLocalToQuad )</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;{</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    _M_gmc = _gmcTest;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    _M_gmc_left = fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest );</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    _M_left_map = fusion::make_map&lt;gmc&lt;0&gt; &gt;( _M_gmc_left );</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    M_gmc = _gmcTest;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    M_gmc_left = fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest );</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    M_left_map = fusion::make_map&lt;gmc&lt;0&gt; &gt;( M_gmc_left );</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    precomputeBasisAtPoints( fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest )-&gt;xRefs() );</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    fusion::for_each( _M_test_fec,vf::detail::FEContextUpdate&lt;0,form_context_type&gt;( _gmcTest, *<span class="keyword">this</span> ) );</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    _M_test_fec0 = fusion::make_map&lt;gmc&lt;0&gt; &gt;( fusion::at_key&lt;gmc&lt;0&gt; &gt;( _M_test_fec ) );</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    _M_eval0_expr-&gt;update( _gmcExpr, _M_test_fec0 );</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    fusion::for_each( M_test_fec,vf::detail::FEContextUpdate&lt;0,form_context_type&gt;( _gmcTest, *<span class="keyword">this</span> ) );</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    M_test_fec0 = fusion::make_map&lt;gmc&lt;0&gt; &gt;( fusion::at_key&lt;gmc&lt;0&gt; &gt;( M_test_fec ) );</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    M_eval0_expr-&gt;update( _gmcExpr, M_test_fec0 );</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    M_integrator.update( *fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcExpr ),indexLocalToQuad );</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
@@ -287,18 +287,18 @@ $(document).ready(function(){initNavTree('linearformcontext_8hpp_source.html',''
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="comment">/*BOOST_MPL_ASSERT_MSG( (mpl::equal_to&lt;mpl::int_&lt;map_size::value&gt;,mpl::int_&lt;2&gt; &gt;::value),</span></div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment">                          INVALID_GEOMAP,</span></div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment">                          (map_size,map_geometric_mapping_context_type ));*/</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="comment">//_M_gmc = _gmc;</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="comment">//M_gmc = _gmc;</span></div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor"></span>    _M_gmc_left = fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest );</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    _M_gmc_right =  fusion::at_key&lt;gmc1 &gt;( _gmcTest );</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    _M_left_map = fusion::make_map&lt;gmc&lt;0&gt; &gt;( _M_gmc_left );</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    _M_right_map = fusion::make_map&lt;gmc&lt;0&gt; &gt;( _M_gmc_right );</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor"></span>    M_gmc_left = fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest );</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    M_gmc_right =  fusion::at_key&lt;gmc1 &gt;( _gmcTest );</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    M_left_map = fusion::make_map&lt;gmc&lt;0&gt; &gt;( M_gmc_left );</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    M_right_map = fusion::make_map&lt;gmc&lt;0&gt; &gt;( M_gmc_right );</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor"></span>    fusion::for_each( _M_test_fec,vf::detail::FEContextUpdate&lt;0,form_context_type&gt;( _gmcTest, *<span class="keyword">this</span> ) );</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    _M_test_fec0 = fusion::make_map&lt;gmc&lt;0&gt; &gt;( fusion::at_key&lt;gmc&lt;0&gt; &gt;( _M_test_fec ) );</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    _M_test_fec1 = fusion::make_map&lt;gmc1 &gt;( fusion::at_key&lt;gmc1 &gt;( _M_test_fec ) );</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    _M_eval0_expr-&gt;update( _gmcExpr, _M_test_fec0 );</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    _M_eval1_expr-&gt;update( _gmcExpr, _M_test_fec1 );</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor"></span>    fusion::for_each( M_test_fec,vf::detail::FEContextUpdate&lt;0,form_context_type&gt;( _gmcTest, *<span class="keyword">this</span> ) );</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    M_test_fec0 = fusion::make_map&lt;gmc&lt;0&gt; &gt;( fusion::at_key&lt;gmc&lt;0&gt; &gt;( M_test_fec ) );</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    M_test_fec1 = fusion::make_map&lt;gmc1 &gt;( fusion::at_key&lt;gmc1 &gt;( M_test_fec ) );</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    M_eval0_expr-&gt;update( _gmcExpr, M_test_fec0 );</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    M_eval1_expr-&gt;update( _gmcExpr, M_test_fec1 );</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    M_integrator.update( *fusion::at_key&lt;gmc&lt;0&gt; &gt;( _gmcTest ) );</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
@@ -338,7 +338,7 @@ $(document).ready(function(){initNavTree('linearformcontext_8hpp_source.html',''
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordflow">for</span> ( uint16_type i = 0; i &lt; test_dof_type::nDofPerElement; ++i )</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        _M_rep( i ) = M_integrator( *_M_eval0_expr, i, 0, 0 );</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        M_rep( i ) = M_integrator( *M_eval0_expr, i, 0, 0 );</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    }</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> SpaceType, <span class="keyword">typename</span> VectorType,  <span class="keyword">typename</span> ElemContType&gt;</div>
@@ -358,11 +358,11 @@ $(document).ready(function(){initNavTree('linearformcontext_8hpp_source.html',''
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    {</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        uint16_type ii = i;</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="comment">// test dof element 0</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        _M_rep_2( ii ) = M_integrator( *_M_eval0_expr, i, 0, 0 );</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        M_rep_2( ii ) = M_integrator( *M_eval0_expr, i, 0, 0 );</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        ii = i + test_dof_type::nDofPerElement;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="comment">// test dof element 1</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        _M_rep_2( ii ) = M_integrator( *_M_eval1_expr, i, 0, 0 );</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        M_rep_2( ii ) = M_integrator( *M_eval1_expr, i, 0, 0 );</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    }</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> SpaceType, <span class="keyword">typename</span> VectorType,  <span class="keyword">typename</span> ElemContType&gt;</div>
@@ -380,13 +380,13 @@ $(document).ready(function(){initNavTree('linearformcontext_8hpp_source.html',''
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">if</span> ( isFirstExperience )</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keywordflow">for</span> ( uint16_type i = 0; i &lt; test_dof_type::nDofPerElement; ++i )</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        {</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            _M_rep( i ) = M_integrator( *_M_eval0_expr, i, 0, 0, indexLocalToQuad );</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            M_rep( i ) = M_integrator( *M_eval0_expr, i, 0, 0, indexLocalToQuad );</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        }</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">for</span> ( uint16_type i = 0; i &lt; test_dof_type::nDofPerElement; ++i )</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            _M_rep( i ) += M_integrator( *_M_eval0_expr, i, 0, 0, indexLocalToQuad );</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            M_rep( i ) += M_integrator( *M_eval0_expr, i, 0, 0, indexLocalToQuad );</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        }</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
@@ -396,41 +396,41 @@ $(document).ready(function(){initNavTree('linearformcontext_8hpp_source.html',''
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="keywordtype">void</span></div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;LinearForm&lt;SpaceType, VectorType, ElemContType&gt;::Context&lt;GeomapContext,ExprT,IM,GeomapExprContext&gt;::assemble( size_type elt_0 )</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;{</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> row_start = _M_lb.front().globalRowStart();</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    M_local_rows = _M_test_dof-&gt;localToGlobalIndices( elt_0 ).array() + row_start;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> row_start = M_lb.front().globalRowStart();</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    M_local_rows = M_test_dof-&gt;localToGlobalIndices( elt_0 ).array() + row_start;</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">if</span> ( test_dof_type::is_modal )</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    {</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        M_local_rowsigns = _M_test_dof-&gt;localToGlobalSigns( elt_0 );</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        _M_rep.array() *= M_local_rowsigns.array().template cast&lt;value_type&gt;();</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        M_local_rowsigns = M_test_dof-&gt;localToGlobalSigns( elt_0 );</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        M_rep.array() *= M_local_rowsigns.array().template cast&lt;value_type&gt;();</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    }</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    _M_form.addVector( M_local_rows.data(), M_local_rows.size(),</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                       _M_rep.data() );</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    M_form.addVector( M_local_rows.data(), M_local_rows.size(),</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                       M_rep.data() );</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> SpaceType, <span class="keyword">typename</span> VectorType,  <span class="keyword">typename</span> ElemContType&gt;</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> GeomapContext,<span class="keyword">typename</span> ExprT,<span class="keyword">typename</span> IM,<span class="keyword">typename</span> GeomapExprContext&gt;</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="keywordtype">void</span></div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;LinearForm&lt;SpaceType, VectorType, ElemContType&gt;::Context&lt;GeomapContext,ExprT,IM,GeomapExprContext&gt;::assemble( size_type elt_0, size_type elt_1 )</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;{</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> row_start = _M_lb.front().globalRowStart();</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keyword">auto</span> local_rows_0 = _M_test_dof-&gt;localToGlobalIndices( elt_0 ).array() + row_start;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keyword">auto</span> local_rows_1 = _M_test_dof-&gt;localToGlobalIndices( elt_1 ).array() + row_start;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> row_start = M_lb.front().globalRowStart();</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keyword">auto</span> local_rows_0 = M_test_dof-&gt;localToGlobalIndices( elt_0 ).array() + row_start;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keyword">auto</span> local_rows_1 = M_test_dof-&gt;localToGlobalIndices( elt_1 ).array() + row_start;</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    M_local_rows_2.template head&lt;test_dof_type::nDofPerElement&gt;() = local_rows_0;</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    M_local_rows_2.template tail&lt;test_dof_type::nDofPerElement&gt;() = local_rows_1;</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordflow">if</span> ( test_dof_type::is_modal )</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    {</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keyword">auto</span> local_rowsigns_0 = _M_test_dof-&gt;localToGlobalSigns( elt_0 );</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keyword">auto</span> local_rowsigns_1 = _M_test_dof-&gt;localToGlobalSigns( elt_1 );</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keyword">auto</span> local_rowsigns_0 = M_test_dof-&gt;localToGlobalSigns( elt_0 );</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keyword">auto</span> local_rowsigns_1 = M_test_dof-&gt;localToGlobalSigns( elt_1 );</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        M_local_rowsigns_2.template head&lt;test_dof_type::nDofPerElement&gt;() = local_rowsigns_0;</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        M_local_rowsigns_2.template tail&lt;test_dof_type::nDofPerElement&gt;() = local_rowsigns_1;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        _M_rep_2.array() *= M_local_rowsigns_2.array().template cast&lt;value_type&gt;();</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        M_rep_2.array() *= M_local_rowsigns_2.array().template cast&lt;value_type&gt;();</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    }</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    _M_form.addVector( M_local_rows_2.data(), M_local_rows_2.size(),</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                       _M_rep_2.data() );</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    M_form.addVector( M_local_rows_2.data(), M_local_rows_2.size(),</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                       M_rep_2.data() );</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;}</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
@@ -440,7 +440,7 @@ $(document).ready(function(){initNavTree('linearformcontext_8hpp_source.html',''
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:01:51 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:32 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

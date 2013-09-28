@@ -47,7 +47,6 @@ var classFeel_1_1EIM =
     [ "M_is_read", "classFeel_1_1EIM.html#a9a5a220c575db9fe4eeb150333b43e3a", null ],
     [ "M_is_written", "classFeel_1_1EIM.html#adc64b4020f3ca22cb521cacdb37edd90", null ],
     [ "M_M", "classFeel_1_1EIM.html#ae6455abe9f179608ab609ec0e6adea76", null ],
-    [ "M_M_max", "classFeel_1_1EIM.html#a9e447802722f336660624fc49f9f85b8", null ],
     [ "M_model", "classFeel_1_1EIM.html#acd208fc36fb740218c02e6d5cea8bf89", null ],
     [ "M_name", "classFeel_1_1EIM.html#a27332224d8a5f6fac2429a23dcf9e418", null ],
     [ "M_offline_done", "classFeel_1_1EIM.html#a5937df6d4c6749c438ddde058ef673a3", null ],
@@ -56,5 +55,6 @@ var classFeel_1_1EIM =
     [ "M_tol", "classFeel_1_1EIM.html#a8b6586cd7b4cabbe358e7f95868ba068", null ],
     [ "M_trainset", "classFeel_1_1EIM.html#a5ff9bcdaa07555b7ffa0190f72ba0bb7", null ],
     [ "M_vm", "classFeel_1_1EIM.html#ad1ff1b1a7b3927384e2eecb58e426dfa", null ],
-    [ "M_WN", "classFeel_1_1EIM.html#adfb95db458021cc8175114ecead47e83", null ]
+    [ "M_WN", "classFeel_1_1EIM.html#adfb95db458021cc8175114ecead47e83", null ],
+    [ "MM_max", "classFeel_1_1EIM.html#aaa34dd6464b3b583cab0f301253798c3", null ]
 ];

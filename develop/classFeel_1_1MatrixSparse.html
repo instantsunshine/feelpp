@@ -316,8 +316,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setMapRow</b> (datama
 <tr class="separator:a86b388887b1de2436fb1a870194b9094"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6127986ed9b1bcd2a5c61e9b3e5b716b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MatrixSparse.html#a6127986ed9b1bcd2a5c61e9b3e5b716b">zero</a> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> start1, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1MatrixSparse.html#a45f5d30f75f23a6a9c39e2de2ffd4ff2">size1</a>, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> start2, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1MatrixSparse.html#a67d70a92c696bf3c398d8f1ba3515674">size2</a>)=0</td></tr>
 <tr class="separator:a6127986ed9b1bcd2a5c61e9b3e5b716b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c542237fbf43a9fd8779cf186c3af02"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MatrixSparse.html#a7c542237fbf43a9fd8779cf186c3af02">zeroRows</a> (std::vector&lt; int &gt; const &amp;rows, std::vector&lt; value_type &gt; const &amp;values, <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; value_type &gt; &amp;rhs, <a class="el" href="classFeel_1_1Context.html">Context</a> const &amp;on_context)=0</td></tr>
-<tr class="separator:a7c542237fbf43a9fd8779cf186c3af02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae60d99b6fc482a4230d9665cf8d10528"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MatrixSparse.html#ae60d99b6fc482a4230d9665cf8d10528">zeroRows</a> (std::vector&lt; int &gt; const &amp;rows, <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; value_type &gt; const &amp;values, <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; value_type &gt; &amp;rhs, <a class="el" href="classFeel_1_1Context.html">Context</a> const &amp;on_context)=0</td></tr>
+<tr class="separator:ae60d99b6fc482a4230d9665cf8d10528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb37362d6cff7fc03e286eda7d2788ba"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MatrixSparse.html#acb37362d6cff7fc03e286eda7d2788ba">~MatrixSparse</a> ()</td></tr>
 <tr class="separator:acb37362d6cff7fc03e286eda7d2788ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -328,15 +328,15 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a4f6f21a85bc3294099bbf7f9cba85972"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f6f21a85bc3294099bbf7f9cba85972"></a>
-graph_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>_M_graph</b></td></tr>
-<tr class="separator:a4f6f21a85bc3294099bbf7f9cba85972"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83fd676ed777d81fc3191cfa880c62bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MatrixSparse.html#a83fd676ed777d81fc3191cfa880c62bd">_M_is_initialized</a></td></tr>
-<tr class="separator:a83fd676ed777d81fc3191cfa880c62bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a752217c8d443365aa7e81b8a3c527417"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a752217c8d443365aa7e81b8a3c527417"></a>
+graph_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>M_graph</b></td></tr>
+<tr class="separator:a752217c8d443365aa7e81b8a3c527417"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a837c27afef4efb0a6dcaf6b739f2fba3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a837c27afef4efb0a6dcaf6b739f2fba3"></a>
 std::vector&lt; std::vector<br class="typebreak"/>
 &lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>M_IndexSplit</b></td></tr>
 <tr class="separator:a837c27afef4efb0a6dcaf6b739f2fba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e4c419f38cc1038240043c486e8d21"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MatrixSparse.html#a80e4c419f38cc1038240043c486e8d21">M_is_initialized</a></td></tr>
+<tr class="separator:a80e4c419f38cc1038240043c486e8d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afff6eccdb6e5f5c4e1edfb9ad121a05f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afff6eccdb6e5f5c4e1edfb9ad121a05f"></a>
 datamap_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>M_mapCol</b></td></tr>
 <tr class="separator:afff6eccdb6e5f5c4e1edfb9ad121a05f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1303,7 +1303,7 @@ template&lt;typename T&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classFeel_1_1MatrixEigenSparse.html#a3cd4d21b513f91d99df57090337f0bed">Feel::MatrixEigenSparse&lt; T &gt;</a>, and <a class="el" href="classFeel_1_1MatrixEigenDense.html#a529e70d9b1ac2ebb59802b40d525d32a">Feel::MatrixEigenDense&lt; T &gt;</a>.</p>
 
-<p>References <a class="el" href="classFeel_1_1MatrixSparse.html#a83fd676ed777d81fc3191cfa880c62bd">Feel::MatrixSparse&lt; T &gt;::_M_is_initialized</a>.</p>
+<p>References <a class="el" href="classFeel_1_1MatrixSparse.html#a80e4c419f38cc1038240043c486e8d21">Feel::MatrixSparse&lt; T &gt;::M_is_initialized</a>.</p>
 
 </div>
 </div>
@@ -1986,7 +1986,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>set initialized only for subclasses </p>
 
-<p>References <a class="el" href="classFeel_1_1MatrixSparse.html#a83fd676ed777d81fc3191cfa880c62bd">Feel::MatrixSparse&lt; T &gt;::_M_is_initialized</a>.</p>
+<p>References <a class="el" href="classFeel_1_1MatrixSparse.html#a80e4c419f38cc1038240043c486e8d21">Feel::MatrixSparse&lt; T &gt;::M_is_initialized</a>.</p>
 
 </div>
 </div>
@@ -2378,7 +2378,7 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a7c542237fbf43a9fd8779cf186c3af02"></a>
+<a class="anchor" id="ae60d99b6fc482a4230d9665cf8d10528"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -2396,7 +2396,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; value_type &gt; const &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; value_type &gt; const &amp;&#160;</td>
           <td class="paramname"><em>values</em>, </td>
         </tr>
         <tr>
@@ -2426,7 +2426,7 @@ template&lt;typename T&gt; </div>
 <p>eliminate rows without change pattern, and put 1 on the diagonal entry</p>
 <dl class="section warning"><dt>Warning</dt><dd>if the matrix was symmetric before this operation, it won't be afterwards. So use the proper solver (nonsymmetric) </dd></dl>
 
-<p>Implemented in <a class="el" href="classFeel_1_1MatrixBlockBase.html#aca49dc68bc19cc98846ab84aef03bf6c">Feel::MatrixBlockBase&lt; T &gt;</a>, <a class="el" href="classFeel_1_1MatrixEigenSparse.html#a08490ebb927e2c061c21bbcd8394bd8e">Feel::MatrixEigenSparse&lt; T &gt;</a>, and <a class="el" href="classFeel_1_1MatrixEigenDense.html#a20e017f104ab693738ac62933cabc485">Feel::MatrixEigenDense&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classFeel_1_1MatrixBlockBase.html#a560e0e1cc4137fe49aa77370d37c3b9c">Feel::MatrixBlockBase&lt; T &gt;</a>, <a class="el" href="classFeel_1_1MatrixEigenSparse.html#aad60033c0a33bca16ec0b44a87f82ac7">Feel::MatrixEigenSparse&lt; T &gt;</a>, and <a class="el" href="classFeel_1_1MatrixEigenDense.html#a99c0e680ac271ea717f74dc70a6485d1">Feel::MatrixEigenDense&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -2471,7 +2471,7 @@ template&lt;typename U &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a83fd676ed777d81fc3191cfa880c62bd"></a>
+<a class="anchor" id="a80e4c419f38cc1038240043c486e8d21"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -2481,7 +2481,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classFeel_1_1MatrixSparse.html">Feel::MatrixSparse</a>&lt; T &gt;::_M_is_initialized</td>
+          <td class="memname">bool <a class="el" href="classFeel_1_1MatrixSparse.html">Feel::MatrixSparse</a>&lt; T &gt;::M_is_initialized</td>
         </tr>
       </table>
   </td>
@@ -2523,7 +2523,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Sep 27 2013 00:02:11 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Sep 29 2013 00:02:50 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -43,5 +43,5 @@ var classFeel_1_1MatrixEigenSparse =
     [ "updateBlockMat", "classFeel_1_1MatrixEigenSparse.html#a55fa2da74463b93e967cb8d32923ff56", null ],
     [ "zero", "classFeel_1_1MatrixEigenSparse.html#a2ba0cc28606d7c84c84cc57e6856aea1", null ],
     [ "zero", "classFeel_1_1MatrixEigenSparse.html#a9cb31a0ff3a64ccd7ede499bbb4afe12", null ],
-    [ "zeroRows", "classFeel_1_1MatrixEigenSparse.html#a08490ebb927e2c061c21bbcd8394bd8e", null ]
+    [ "zeroRows", "classFeel_1_1MatrixEigenSparse.html#aad60033c0a33bca16ec0b44a87f82ac7", null ]
 ];
