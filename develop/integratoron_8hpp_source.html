@@ -561,7 +561,7 @@ $(document).ready(function(){initNavTree('integratoron_8hpp_source.html','');});
 <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;            *itd+=thedofshift;</div>
 <div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    }</div>
 <div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    <span class="keyword">auto</span> x = M_rhs-&gt;clone();</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    CHECK( dofs.size() &gt; 0 ) &lt;&lt; <span class="stringliteral">&quot;Invalid number of Dirichlet dof, should be &gt; 0 &quot;</span>;</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    <span class="comment">//CHECK( dofs.size() &gt; 0 ) &lt;&lt; &quot;Invalid number of Dirichlet dof, should be &gt; 0 &quot;;</span></div>
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    CHECK( values.size() == dofs.size() ) &lt;&lt; <span class="stringliteral">&quot;Invalid dofs/values size: &quot;</span> &lt;&lt; dofs.size() &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; values.size();</div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    <span class="comment">//x-&gt;zero();</span></div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    x-&gt;addVector( dofs.data(), dofs.size(), values.data() );</div>
@@ -691,7 +691,7 @@ $(document).ready(function(){initNavTree('integratoron_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sun Sep 29 2013 00:02:30 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Tue Oct 1 2013 00:01:51 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

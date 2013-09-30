@@ -210,6 +210,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#a2a711e7c9e11aece030e3b62b63231aa">recombine</a> () const </td></tr>
 <tr class="memdesc:a2a711e7c9e11aece030e3b62b63231aa inherit pub_methods_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if recombine, false otherwise <br/></td></tr>
 <tr class="separator:a2a711e7c9e11aece030e3b62b63231aa inherit pub_methods_classFeel_1_1Gmsh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ce260f9925fb53099d5501c4fb6a91 inherit pub_methods_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21ce260f9925fb53099d5501c4fb6a91"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>structuredMesh</b> () const </td></tr>
+<tr class="separator:a21ce260f9925fb53099d5501c4fb6a91 inherit pub_methods_classFeel_1_1Gmsh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a315dcbd98fcf68f0a63c7517ac6d3337 inherit pub_methods_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a315dcbd98fcf68f0a63c7517ac6d3337"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>refinementLevels</b> () const </td></tr>
 <tr class="separator:a315dcbd98fcf68f0a63c7517ac6d3337 inherit pub_methods_classFeel_1_1Gmsh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -274,6 +277,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#aeb1fcccccf00427a0ffb5c7b2c19bb9b">setMshFileByPartition</a> (bool p)</td></tr>
 <tr class="memdesc:aeb1fcccccf00427a0ffb5c7b2c19bb9b inherit pub_methods_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">set save msh file by partitions <br/></td></tr>
 <tr class="separator:aeb1fcccccf00427a0ffb5c7b2c19bb9b inherit pub_methods_classFeel_1_1Gmsh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e804b77bf48bff5f59f1502ff66eb38 inherit pub_methods_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e804b77bf48bff5f59f1502ff66eb38"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setStructuredMesh</b> (bool s)</td></tr>
+<tr class="separator:a5e804b77bf48bff5f59f1502ff66eb38 inherit pub_methods_classFeel_1_1Gmsh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8240abd27257c32e60b20e63297b108 inherit pub_methods_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8240abd27257c32e60b20e63297b108"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setRefinementLevels</b> (int levels)</td></tr>
 <tr class="separator:af8240abd27257c32e60b20e63297b108 inherit pub_methods_classFeel_1_1Gmsh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -390,6 +396,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Gmsh.html#ab1f8392622bb13be1caa9b85be65ff65">M_shear</a></td></tr>
 <tr class="memdesc:ab1f8392622bb13be1caa9b85be65ff65 inherit pro_attribs_classFeel_1_1Gmsh"><td class="mdescLeft">&#160;</td><td class="mdescRight">shear <br/></td></tr>
 <tr class="separator:ab1f8392622bb13be1caa9b85be65ff65 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab89dfb3ad13b175a327e592c330daa20 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab89dfb3ad13b175a327e592c330daa20"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_structured</b></td></tr>
+<tr class="separator:ab89dfb3ad13b175a327e592c330daa20 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32bb72018717c1384c37b65480982760 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32bb72018717c1384c37b65480982760"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_substructuring</b></td></tr>
 <tr class="separator:a32bb72018717c1384c37b65480982760 inherit pro_attribs_classFeel_1_1Gmsh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -412,7 +421,7 @@ WorldComm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sun Sep 29 2013 00:02:49 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Tue Oct 1 2013 00:02:11 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
