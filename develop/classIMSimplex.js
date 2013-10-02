@@ -1,5 +1,6 @@
 var classIMSimplex =
 [
+    [ "convex_type", "classIMSimplex.html#afeab4f5184f87acc09898adf7a98a9fb", null ],
     [ "face_quad_type", "classIMSimplex.html#a79539dbedd051d0db064329f5c6a7ac9", null ],
     [ "face_quad_type", "classIMSimplex.html#ac400cb9f58dd821ddf9ec37a5fe5fd61", null ],
     [ "matrix_type", "classIMSimplex.html#a687b5af2309958c632f2b9746df6cecb", null ],

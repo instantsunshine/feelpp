@@ -1,5 +1,9 @@
 var NAVTREEINDEX26 =
 {
+"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a944cad8563445f1ceee2342d2f9dd839":[10,0,75,3,3],
+"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#aecd8fd101822decdadc1129f4b162277":[10,0,75,3,7],
+"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#af54859a52256782e8ee855322e85f388":[10,0,75,3,9],
+"structFeel_1_1functional_1_1PointsDerivative.html":[10,0,75,11],
 "structFeel_1_1functional_1_1PointsDerivative.html#a24ed64b32e41611e85a3544475570406":[10,0,75,11,0],
 "structFeel_1_1functional_1_1PointsDerivative.html#a6ab866a46b87bfd7b7f43a2d70c94a72":[10,0,75,11,4],
 "structFeel_1_1functional_1_1PointsDerivative.html#a91dc076bcae869fbca03a82b50930dda":[10,0,75,11,2],

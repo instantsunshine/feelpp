@@ -1,5 +1,9 @@
 var NAVTREEINDEX25 =
 {
+"classResidualEstimator.html#add8034ff9fc4d3bfa21b888151150f3b":[10,9,23],
+"classThreeFieldsLaplacian.html":[10,11],
+"classThreeFieldsLaplacian.html#a0af7e3ccbb4fbeadc7af54751ed03ffe":[10,11,29],
+"classThreeFieldsLaplacian.html#a131131234d28f29a37411b4822afe146":[10,11,12],
 "classThreeFieldsLaplacian.html#a14cd7ac982feef75f9bbae089dbb3d1b":[10,11,16],
 "classThreeFieldsLaplacian.html#a16e0de96d9c06491d0ba9ce9c8ff2236":[10,11,26],
 "classThreeFieldsLaplacian.html#a1a500dc48c6b9988b26369ef307eeb66":[10,11,23],
@@ -29,8 +33,8 @@ var NAVTREEINDEX25 =
 "classThreeFieldsLaplacian.html#ad1aada0099d45c1c61e7fb1149f36dc2":[10,11,14],
 "classThreeFieldsLaplacian.html#ad2ba185089e485cdd2d3a50326476b72":[10,11,3],
 "classThreeFieldsLaplacian.html#aef0b85cec754ffad5684a4c3c244c644":[10,11,22],
-"index.html":[],
 "index.html":[0],
+"index.html":[],
 "md_Credits.html":[1],
 "md__home_vhuber_feelpp_COPYING.html":[8],
 "namespaceFeel.html":[10,0],
@@ -90,8 +94,8 @@ var NAVTREEINDEX25 =
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a24f2edf51794093c9006affe4889ea1c":[10,0,101,4],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a263e8c4c3415b075865bb909aaebf3cf":[10,0,101,7],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a47a159d96c1faef9f6b57e104411690f":[10,0,101,6],
-"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,101,3],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,101,2],
+"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,101,3],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aae08c8b04ff5d504167b6b0ef8710a90":[10,0,101,5],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,101,1],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,101,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX25 =
 "structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a45ceb70536cf1078c6067891ea86b482":[10,0,75,3,1],
 "structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a58dd310280ac308f133508269899a965":[10,0,75,3,6],
 "structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a641f5b13dd694bf9ccbf8cbbe7e5c535":[10,0,75,3,8],
-"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a8f2daf051c361aa4b598060e75230b00":[10,0,75,3,5],
-"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a944cad8563445f1ceee2342d2f9dd839":[10,0,75,3,3],
-"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#aecd8fd101822decdadc1129f4b162277":[10,0,75,3,7],
-"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#af54859a52256782e8ee855322e85f388":[10,0,75,3,9],
-"structFeel_1_1functional_1_1PointsDerivative.html":[10,0,75,11]
+"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a8f2daf051c361aa4b598060e75230b00":[10,0,75,3,5]
 };

@@ -8947,84 +8947,85 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l08874"></a><span class="lineno"> 8874</span>&#160;    <span class="keyword">typedef</span> PointSetQuadrature&lt;Simplex&lt;Dim,1&gt; , Order, T&gt; super;</div>
 <div class="line"><a name="l08875"></a><span class="lineno"> 8875</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l08876"></a><span class="lineno"> 8876</span>&#160;</div>
-<div class="line"><a name="l08880"></a><span class="lineno"> 8880</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
-<div class="line"><a name="l08881"></a><span class="lineno"> 8881</span>&#160;    <span class="keyword">typedef</span> ublas::matrix&lt;value_type,ublas::column_major&gt; matrix_type;</div>
-<div class="line"><a name="l08882"></a><span class="lineno"> 8882</span>&#160;    <span class="keyword">typedef</span> ublas::vector&lt;value_type&gt; vector_type;</div>
-<div class="line"><a name="l08883"></a><span class="lineno"> 8883</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;mpl::equal_to&lt;mpl::int_&lt;Dim&gt;,mpl::int_&lt;2&gt; &gt;,</div>
-<div class="line"><a name="l08884"></a><span class="lineno"> 8884</span>&#160;            mpl::identity&lt;detail::IMTriangle&lt;Order,T&gt; &gt;,</div>
-<div class="line"><a name="l08885"></a><span class="lineno"> 8885</span>&#160;            mpl::identity&lt;detail::IMTetrahedra&lt;Order,T&gt; &gt; &gt;::type::type quad_type;</div>
-<div class="line"><a name="l08886"></a><span class="lineno"> 8886</span>&#160;</div>
-<div class="line"><a name="l08887"></a><span class="lineno"> 8887</span>&#160;<span class="preprocessor">#if 1</span></div>
-<div class="line"><a name="l08888"></a><span class="lineno"> 8888</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l08889"></a><span class="lineno"> 8889</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;mpl::equal_to&lt;mpl::int_&lt;Dim&gt;,mpl::int_&lt;2&gt; &gt;,</div>
-<div class="line"><a name="l08890"></a><span class="lineno"> 8890</span>&#160;            mpl::identity&lt;Gauss&lt;Simplex&lt;Dim-1,1&gt;,Order,T&gt; &gt;,</div>
-<div class="line"><a name="l08891"></a><span class="lineno"> 8891</span>&#160;            mpl::identity&lt;Gauss&lt;Simplex&lt;Dim-1,1&gt;,Order,T&gt; &gt; &gt;::type::type face_quad_type;</div>
-<div class="line"><a name="l08892"></a><span class="lineno"> 8892</span>&#160;    <span class="comment">//mpl::identity&lt;IMSimplex&lt;Dim-1,Order,T&gt; &gt; &gt;::type::type face_quad_type;</span></div>
-<div class="line"><a name="l08893"></a><span class="lineno"> 8893</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l08894"></a><span class="lineno"> 8894</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> Gauss&lt;Simplex&lt;Dim-1,1&gt;,Order,T&gt; face_quad_type;</div>
-<div class="line"><a name="l08895"></a><span class="lineno"> 8895</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l08896"></a><span class="lineno"> 8896</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
-<div class="line"><a name="l08897"></a><span class="lineno"> 8897</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> <a class="code" href="classIMSimplex.html" title="brief description ">IMSimplex</a>&lt;Dim-1,Order,T&gt; face_quad_type;</div>
-<div class="line"><a name="l08898"></a><span class="lineno"> 8898</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l08899"></a><span class="lineno"> 8899</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> <a class="code" href="classIMSimplex.html" title="brief description ">IMSimplex&lt;Dim,Order,T&gt;</a> <a class="code" href="classIMSimplex.html" title="brief description ">parent_quadrature_type</a>;</div>
-<div class="line"><a name="l08900"></a><span class="lineno"> 8900</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = Dim;</div>
-<div class="line"><a name="l08901"></a><span class="lineno"> 8901</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = Order;</div>
-<div class="line"><a name="l08902"></a><span class="lineno"> 8902</span>&#160;</div>
-<div class="line"><a name="l08904"></a><span class="lineno"> 8904</span>&#160;</div>
-<div class="line"><a name="l08908"></a><span class="lineno"> 8908</span>&#160;    <a class="code" href="classIMSimplex.html" title="brief description ">IMSimplex</a>(  )</div>
-<div class="line"><a name="l08909"></a><span class="lineno"> 8909</span>&#160;        :</div>
-<div class="line"><a name="l08910"></a><span class="lineno"> 8910</span>&#160;        super( quad_type::nPoints ),</div>
-<div class="line"><a name="l08911"></a><span class="lineno"> 8911</span>&#160;        M_quad()</div>
-<div class="line"><a name="l08912"></a><span class="lineno"> 8912</span>&#160;    {</div>
-<div class="line"><a name="l08913"></a><span class="lineno"> 8913</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i=0; i&lt; quad_type::nPoints; i++ )</div>
-<div class="line"><a name="l08914"></a><span class="lineno"> 8914</span>&#160;        {</div>
-<div class="line"><a name="l08915"></a><span class="lineno"> 8915</span>&#160;</div>
-<div class="line"><a name="l08916"></a><span class="lineno"> 8916</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> j = 0; j &lt; Dim; ++j )</div>
-<div class="line"><a name="l08917"></a><span class="lineno"> 8917</span>&#160;            {</div>
-<div class="line"><a name="l08918"></a><span class="lineno"> 8918</span>&#160;                this-&gt;M_points( j, i ) = M_quad.q[( Dim+1 )*i+j];</div>
-<div class="line"><a name="l08919"></a><span class="lineno"> 8919</span>&#160;            }</div>
-<div class="line"><a name="l08920"></a><span class="lineno"> 8920</span>&#160;</div>
-<div class="line"><a name="l08921"></a><span class="lineno"> 8921</span>&#160;            this-&gt;M_w( i ) = M_quad.q[( Dim+1 )*i+Dim];</div>
-<div class="line"><a name="l08922"></a><span class="lineno"> 8922</span>&#160;        }</div>
-<div class="line"><a name="l08923"></a><span class="lineno"> 8923</span>&#160;</div>
-<div class="line"><a name="l08924"></a><span class="lineno"> 8924</span>&#160;        boost::shared_ptr&lt;GT_Lagrange&lt;Dim,1,Dim,Simplex,T&gt; &gt; gm( <span class="keyword">new</span> GT_Lagrange&lt;Dim, 1, Dim, Simplex, T&gt; );</div>
-<div class="line"><a name="l08925"></a><span class="lineno"> 8925</span>&#160;        boost::shared_ptr&lt;face_quad_type&gt; face_qr( <span class="keyword">new</span> face_quad_type );</div>
-<div class="line"><a name="l08926"></a><span class="lineno"> 8926</span>&#160;        <span class="comment">// construct face quadratures</span></div>
-<div class="line"><a name="l08927"></a><span class="lineno"> 8927</span>&#160;        this-&gt;constructQROnFace( Reference&lt;Simplex&lt;Dim, 1&gt;, Dim, 1&gt;(), gm, face_qr );</div>
-<div class="line"><a name="l08928"></a><span class="lineno"> 8928</span>&#160;    }</div>
-<div class="line"><a name="l08929"></a><span class="lineno"> 8929</span>&#160;</div>
-<div class="line"><a name="l08930"></a><span class="lineno"> 8930</span>&#160;    ~<a class="code" href="classIMSimplex.html" title="brief description ">IMSimplex</a>()</div>
-<div class="line"><a name="l08931"></a><span class="lineno"> 8931</span>&#160;    {}</div>
-<div class="line"><a name="l08932"></a><span class="lineno"> 8932</span>&#160;</div>
-<div class="line"><a name="l08934"></a><span class="lineno"> 8934</span>&#160;</div>
-<div class="line"><a name="l08938"></a><span class="lineno"> 8938</span>&#160;    T factor()<span class="keyword"> const</span></div>
-<div class="line"><a name="l08939"></a><span class="lineno"> 8939</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l08940"></a><span class="lineno"> 8940</span>&#160;        <span class="keywordflow">return</span> ( Dim==2 )?T( 1 )/T( 2 ):T( 1 )/T( 6 );</div>
-<div class="line"><a name="l08941"></a><span class="lineno"> 8941</span>&#160;    }</div>
-<div class="line"><a name="l08942"></a><span class="lineno"> 8942</span>&#160;</div>
+<div class="line"><a name="l08880"></a><span class="lineno"> 8880</span>&#160;    <span class="keyword">typedef</span> Simplex&lt;Dim,1&gt; convex_type;</div>
+<div class="line"><a name="l08881"></a><span class="lineno"> 8881</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
+<div class="line"><a name="l08882"></a><span class="lineno"> 8882</span>&#160;    <span class="keyword">typedef</span> ublas::matrix&lt;value_type,ublas::column_major&gt; matrix_type;</div>
+<div class="line"><a name="l08883"></a><span class="lineno"> 8883</span>&#160;    <span class="keyword">typedef</span> ublas::vector&lt;value_type&gt; vector_type;</div>
+<div class="line"><a name="l08884"></a><span class="lineno"> 8884</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;mpl::equal_to&lt;mpl::int_&lt;Dim&gt;,mpl::int_&lt;2&gt; &gt;,</div>
+<div class="line"><a name="l08885"></a><span class="lineno"> 8885</span>&#160;            mpl::identity&lt;detail::IMTriangle&lt;Order,T&gt; &gt;,</div>
+<div class="line"><a name="l08886"></a><span class="lineno"> 8886</span>&#160;            mpl::identity&lt;detail::IMTetrahedra&lt;Order,T&gt; &gt; &gt;::type::type quad_type;</div>
+<div class="line"><a name="l08887"></a><span class="lineno"> 8887</span>&#160;</div>
+<div class="line"><a name="l08888"></a><span class="lineno"> 8888</span>&#160;<span class="preprocessor">#if 1</span></div>
+<div class="line"><a name="l08889"></a><span class="lineno"> 8889</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#if 0</span></div>
+<div class="line"><a name="l08890"></a><span class="lineno"> 8890</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;mpl::equal_to&lt;mpl::int_&lt;Dim&gt;,mpl::int_&lt;2&gt; &gt;,</div>
+<div class="line"><a name="l08891"></a><span class="lineno"> 8891</span>&#160;            mpl::identity&lt;Gauss&lt;Simplex&lt;Dim-1,1&gt;,Order,T&gt; &gt;,</div>
+<div class="line"><a name="l08892"></a><span class="lineno"> 8892</span>&#160;            mpl::identity&lt;Gauss&lt;Simplex&lt;Dim-1,1&gt;,Order,T&gt; &gt; &gt;::type::type face_quad_type;</div>
+<div class="line"><a name="l08893"></a><span class="lineno"> 8893</span>&#160;    <span class="comment">//mpl::identity&lt;IMSimplex&lt;Dim-1,Order,T&gt; &gt; &gt;::type::type face_quad_type;</span></div>
+<div class="line"><a name="l08894"></a><span class="lineno"> 8894</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l08895"></a><span class="lineno"> 8895</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> Gauss&lt;Simplex&lt;Dim-1,1&gt;,Order,T&gt; face_quad_type;</div>
+<div class="line"><a name="l08896"></a><span class="lineno"> 8896</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l08897"></a><span class="lineno"> 8897</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
+<div class="line"><a name="l08898"></a><span class="lineno"> 8898</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> <a class="code" href="classIMSimplex.html" title="brief description ">IMSimplex</a>&lt;Dim-1,Order,T&gt; face_quad_type;</div>
+<div class="line"><a name="l08899"></a><span class="lineno"> 8899</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l08900"></a><span class="lineno"> 8900</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> <a class="code" href="classIMSimplex.html" title="brief description ">IMSimplex&lt;Dim,Order,T&gt;</a> <a class="code" href="classIMSimplex.html" title="brief description ">parent_quadrature_type</a>;</div>
+<div class="line"><a name="l08901"></a><span class="lineno"> 8901</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = Dim;</div>
+<div class="line"><a name="l08902"></a><span class="lineno"> 8902</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = Order;</div>
+<div class="line"><a name="l08903"></a><span class="lineno"> 8903</span>&#160;</div>
+<div class="line"><a name="l08905"></a><span class="lineno"> 8905</span>&#160;</div>
+<div class="line"><a name="l08909"></a><span class="lineno"> 8909</span>&#160;    <a class="code" href="classIMSimplex.html" title="brief description ">IMSimplex</a>(  )</div>
+<div class="line"><a name="l08910"></a><span class="lineno"> 8910</span>&#160;        :</div>
+<div class="line"><a name="l08911"></a><span class="lineno"> 8911</span>&#160;        super( quad_type::nPoints ),</div>
+<div class="line"><a name="l08912"></a><span class="lineno"> 8912</span>&#160;        M_quad()</div>
+<div class="line"><a name="l08913"></a><span class="lineno"> 8913</span>&#160;    {</div>
+<div class="line"><a name="l08914"></a><span class="lineno"> 8914</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i=0; i&lt; quad_type::nPoints; i++ )</div>
+<div class="line"><a name="l08915"></a><span class="lineno"> 8915</span>&#160;        {</div>
+<div class="line"><a name="l08916"></a><span class="lineno"> 8916</span>&#160;</div>
+<div class="line"><a name="l08917"></a><span class="lineno"> 8917</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> j = 0; j &lt; Dim; ++j )</div>
+<div class="line"><a name="l08918"></a><span class="lineno"> 8918</span>&#160;            {</div>
+<div class="line"><a name="l08919"></a><span class="lineno"> 8919</span>&#160;                this-&gt;M_points( j, i ) = M_quad.q[( Dim+1 )*i+j];</div>
+<div class="line"><a name="l08920"></a><span class="lineno"> 8920</span>&#160;            }</div>
+<div class="line"><a name="l08921"></a><span class="lineno"> 8921</span>&#160;</div>
+<div class="line"><a name="l08922"></a><span class="lineno"> 8922</span>&#160;            this-&gt;M_w( i ) = M_quad.q[( Dim+1 )*i+Dim];</div>
+<div class="line"><a name="l08923"></a><span class="lineno"> 8923</span>&#160;        }</div>
+<div class="line"><a name="l08924"></a><span class="lineno"> 8924</span>&#160;</div>
+<div class="line"><a name="l08925"></a><span class="lineno"> 8925</span>&#160;        boost::shared_ptr&lt;GT_Lagrange&lt;Dim,1,Dim,Simplex,T&gt; &gt; gm( <span class="keyword">new</span> GT_Lagrange&lt;Dim, 1, Dim, Simplex, T&gt; );</div>
+<div class="line"><a name="l08926"></a><span class="lineno"> 8926</span>&#160;        boost::shared_ptr&lt;face_quad_type&gt; face_qr( <span class="keyword">new</span> face_quad_type );</div>
+<div class="line"><a name="l08927"></a><span class="lineno"> 8927</span>&#160;        <span class="comment">// construct face quadratures</span></div>
+<div class="line"><a name="l08928"></a><span class="lineno"> 8928</span>&#160;        this-&gt;constructQROnFace( Reference&lt;Simplex&lt;Dim, 1&gt;, Dim, 1&gt;(), gm, face_qr );</div>
+<div class="line"><a name="l08929"></a><span class="lineno"> 8929</span>&#160;    }</div>
+<div class="line"><a name="l08930"></a><span class="lineno"> 8930</span>&#160;</div>
+<div class="line"><a name="l08931"></a><span class="lineno"> 8931</span>&#160;    ~<a class="code" href="classIMSimplex.html" title="brief description ">IMSimplex</a>()</div>
+<div class="line"><a name="l08932"></a><span class="lineno"> 8932</span>&#160;    {}</div>
+<div class="line"><a name="l08933"></a><span class="lineno"> 8933</span>&#160;</div>
+<div class="line"><a name="l08935"></a><span class="lineno"> 8935</span>&#160;</div>
+<div class="line"><a name="l08939"></a><span class="lineno"> 8939</span>&#160;    T factor()<span class="keyword"> const</span></div>
+<div class="line"><a name="l08940"></a><span class="lineno"> 8940</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l08941"></a><span class="lineno"> 8941</span>&#160;        <span class="keywordflow">return</span> ( Dim==2 )?T( 1 )/T( 2 ):T( 1 )/T( 6 );</div>
+<div class="line"><a name="l08942"></a><span class="lineno"> 8942</span>&#160;    }</div>
 <div class="line"><a name="l08943"></a><span class="lineno"> 8943</span>&#160;</div>
-<div class="line"><a name="l08947"></a><span class="lineno"> 8947</span>&#160;    <a class="code" href="classIMSimplex.html" title="brief description ">IMSimplex</a>&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( <a class="code" href="classIMSimplex.html" title="brief description ">IMSimplex</a> <span class="keyword">const</span> &amp; i )</div>
-<div class="line"><a name="l08948"></a><span class="lineno"> 8948</span>&#160;    {</div>
-<div class="line"><a name="l08949"></a><span class="lineno"> 8949</span>&#160;        <span class="keywordflow">if</span> ( <span class="keyword">this</span> != &amp;i )</div>
-<div class="line"><a name="l08950"></a><span class="lineno"> 8950</span>&#160;        {</div>
-<div class="line"><a name="l08951"></a><span class="lineno"> 8951</span>&#160;            M_quad = i.M_quad;</div>
-<div class="line"><a name="l08952"></a><span class="lineno"> 8952</span>&#160;        }</div>
-<div class="line"><a name="l08953"></a><span class="lineno"> 8953</span>&#160;</div>
-<div class="line"><a name="l08954"></a><span class="lineno"> 8954</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l08955"></a><span class="lineno"> 8955</span>&#160;    }</div>
-<div class="line"><a name="l08957"></a><span class="lineno"> 8957</span>&#160;</div>
+<div class="line"><a name="l08944"></a><span class="lineno"> 8944</span>&#160;</div>
+<div class="line"><a name="l08948"></a><span class="lineno"> 8948</span>&#160;    <a class="code" href="classIMSimplex.html" title="brief description ">IMSimplex</a>&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( <a class="code" href="classIMSimplex.html" title="brief description ">IMSimplex</a> <span class="keyword">const</span> &amp; i )</div>
+<div class="line"><a name="l08949"></a><span class="lineno"> 8949</span>&#160;    {</div>
+<div class="line"><a name="l08950"></a><span class="lineno"> 8950</span>&#160;        <span class="keywordflow">if</span> ( <span class="keyword">this</span> != &amp;i )</div>
+<div class="line"><a name="l08951"></a><span class="lineno"> 8951</span>&#160;        {</div>
+<div class="line"><a name="l08952"></a><span class="lineno"> 8952</span>&#160;            M_quad = i.M_quad;</div>
+<div class="line"><a name="l08953"></a><span class="lineno"> 8953</span>&#160;        }</div>
+<div class="line"><a name="l08954"></a><span class="lineno"> 8954</span>&#160;</div>
+<div class="line"><a name="l08955"></a><span class="lineno"> 8955</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l08956"></a><span class="lineno"> 8956</span>&#160;    }</div>
 <div class="line"><a name="l08958"></a><span class="lineno"> 8958</span>&#160;</div>
-<div class="line"><a name="l08959"></a><span class="lineno"> 8959</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l08960"></a><span class="lineno"> 8960</span>&#160;    quad_type M_quad;</div>
-<div class="line"><a name="l08961"></a><span class="lineno"> 8961</span>&#160;};</div>
-<div class="line"><a name="l08962"></a><span class="lineno"> 8962</span>&#160;</div>
-<div class="line"><a name="l08963"></a><span class="lineno"> 8963</span>&#160;}</div>
-<div class="line"><a name="l08964"></a><span class="lineno"> 8964</span>&#160;</div>
-<div class="line"><a name="l08965"></a><span class="lineno"> 8965</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __IMSimplex_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l08959"></a><span class="lineno"> 8959</span>&#160;</div>
+<div class="line"><a name="l08960"></a><span class="lineno"> 8960</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l08961"></a><span class="lineno"> 8961</span>&#160;    quad_type M_quad;</div>
+<div class="line"><a name="l08962"></a><span class="lineno"> 8962</span>&#160;};</div>
+<div class="line"><a name="l08963"></a><span class="lineno"> 8963</span>&#160;</div>
+<div class="line"><a name="l08964"></a><span class="lineno"> 8964</span>&#160;}</div>
+<div class="line"><a name="l08965"></a><span class="lineno"> 8965</span>&#160;</div>
+<div class="line"><a name="l08966"></a><span class="lineno"> 8966</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __IMSimplex_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Tue Oct 1 2013 00:01:50 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Thu Oct 3 2013 00:01:50 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
