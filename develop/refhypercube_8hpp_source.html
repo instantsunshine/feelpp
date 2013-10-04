@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.95.0</span>
+   &#160;<span id="projectnumber">0.95.0-final</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -268,7 +268,7 @@ $(document).ready(function(){initNavTree('refhypercube_8hpp_source.html','');});
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        computeMeasure();</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    Reference( element_type <span class="keyword">const</span>&amp; e, uint16_type __f )</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    Reference( element_type <span class="keyword">const</span>&amp; e, uint16_type __f, uint16_type __p = permutation_type::IDENTITY )</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        :</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        super(),</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        M_id( __f ),</div>
@@ -461,9 +461,9 @@ $(document).ready(function(){initNavTree('refhypercube_8hpp_source.html','');});
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        <span class="keywordflow">return</span> M_normals.end();</div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    }</div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    topological_face_type topologicalFace( uint16_type __f )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    topological_face_type topologicalFace( uint16_type __f, uint16_type __p = permutation_type::IDENTITY )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        topological_face_type ref( *<span class="keyword">this</span>, __f );</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        topological_face_type ref( *<span class="keyword">this</span>, __f, __p );</div>
 <div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        <span class="keywordflow">return</span> ref;</div>
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    }</div>
 <div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
@@ -1051,7 +1051,7 @@ $(document).ready(function(){initNavTree('refhypercube_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Thu Oct 3 2013 00:02:01 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sat Oct 5 2013 00:02:41 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

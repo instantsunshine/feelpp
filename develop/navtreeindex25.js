@@ -1,5 +1,6 @@
 var NAVTREEINDEX25 =
 {
+"classResidualEstimator.html#adca4ee6f2ccac1101dc0f184d592f2db":[10,9,8],
 "classResidualEstimator.html#add8034ff9fc4d3bfa21b888151150f3b":[10,9,23],
 "classThreeFieldsLaplacian.html":[10,11],
 "classThreeFieldsLaplacian.html#a0af7e3ccbb4fbeadc7af54751ed03ffe":[10,11,29],
@@ -33,8 +34,8 @@ var NAVTREEINDEX25 =
 "classThreeFieldsLaplacian.html#ad1aada0099d45c1c61e7fb1149f36dc2":[10,11,14],
 "classThreeFieldsLaplacian.html#ad2ba185089e485cdd2d3a50326476b72":[10,11,3],
 "classThreeFieldsLaplacian.html#aef0b85cec754ffad5684a4c3c244c644":[10,11,22],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "md_Credits.html":[1],
 "md__home_vhuber_feelpp_COPYING.html":[8],
 "namespaceFeel.html":[10,0],
@@ -97,8 +98,8 @@ var NAVTREEINDEX25 =
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,101,2],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,101,3],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aae08c8b04ff5d504167b6b0ef8710a90":[10,0,101,5],
-"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,101,1],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,101,0],
+"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,101,1],
 "structFeel_1_1IntegrationDegree.html":[10,0,104],
 "structFeel_1_1JacobiDegree.html":[10,0,107],
 "structFeel_1_1MeshTraits.html":[10,0,134],
@@ -248,6 +249,5 @@ var NAVTREEINDEX25 =
 "structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a3795ee3986a9a1e8a34fb6b507ce348f":[10,0,75,3,2],
 "structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a45ceb70536cf1078c6067891ea86b482":[10,0,75,3,1],
 "structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a58dd310280ac308f133508269899a965":[10,0,75,3,6],
-"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a641f5b13dd694bf9ccbf8cbbe7e5c535":[10,0,75,3,8],
-"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a8f2daf051c361aa4b598060e75230b00":[10,0,75,3,5]
+"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a641f5b13dd694bf9ccbf8cbbe7e5c535":[10,0,75,3,8]
 };

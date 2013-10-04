@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.95.0</span>
+   &#160;<span id="projectnumber">0.95.0-final</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -126,7 +126,7 @@ $(document).ready(function(){initNavTree('Environment.html','');});
 Initialize Feel++</h1>
 <p>Environment class is necessary to initialize your application, as seen in <a class="el" href="FirstApp.html">First Feel++ Application</a>. Interface is as follow : </p>
 <div class="fragment"><div class="line">Environment env( _argc, _argv, _desc, _about );</div>
-</div><!-- fragment --><p> No one of those parameters are required but it is highly recomanded to use the minimal declaration : </p>
+</div><!-- fragment --><p> None of those parameters are required but it is highly recommended to use the minimal declaration : </p>
 <div class="fragment"><div class="line">Environment env( _argc=argc, _argv=argv,</div>
 <div class="line">                 _desc=feel_option(),</div>
 <div class="line">                 _about=about(_name=<span class="stringliteral">&quot;name_of_your_app&quot;</span>,</div>
@@ -143,7 +143,7 @@ Feel++ Options Description</h1>
 Add Options</h2>
 <p><code>feel_option()</code> returns a list of default options used in <a href="http://www.feelpp.org">Feel++</a>.<br/>
 </p>
-<p>You can creat a personal list of options as seen in FirstAPP.</p>
+<p>You can create a personal list of options as seen in FirstAPP.</p>
 <p>You can also add a list of options, using a routine as follows : </p>
 <div class="fragment"><div class="line"><span class="keyword">using namespace </span>Feel;</div>
 <div class="line"></div>
@@ -241,7 +241,7 @@ changeRepository</h2>
 <li><code>_subdir</code> : Default = <code>true</code> </li>
 <li><code>_filename</code> : Default = <code>"logfile"</code></li>
 </ul>
-<p>You can use <code>boost::format</code> to custom the path. <br/>
+<p>You can use <code>boost::format</code> to customize the path. <br/>
  <b><a class="el" href="classFeel_1_1Example.html" title="Brief description of the class Example. ">Example</a> :</b><br/>
  From <code>"doc/manual/laplacian/laplacian.cpp"</code> : </p>
 <div class="fragment"><div class="line">Environment::changeRepository( boost::format( <span class="stringliteral">&quot;doc/manual/laplacian/%1%/%2%-%3%/P%4%/h_%5%/&quot;</span> )</div>
@@ -284,7 +284,7 @@ setLogs</h2>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Thu Oct 3 2013 00:02:06 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sat Oct 5 2013 00:02:47 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

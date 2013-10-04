@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"classFeel_1_1VectorUblas.html#ad27d342053e6f08b9f510cf4d51c599e":[10,0,217,73],
 "classFeel_1_1VectorUblas.html#ad6461b9ddeddc696e4b426ad58325088":[10,0,217,48],
 "classFeel_1_1VectorUblas.html#adad7ad6faefc9c87abe9a52025c9a76f":[10,0,217,14],
 "classFeel_1_1VectorUblas.html#ae268064acbfdefab80c99af59257ed12":[10,0,217,67],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "classFeel_1_1functional_1_1IntegralMomentOfDivergence.html#a8cf3c17422cd7043b2274cc98ebf183e":[10,0,75,6,4],
 "classFeel_1_1functional_1_1IntegralMomentOfDivergence.html#aaf6f339966165a6939a2cd89a5d61ff3":[10,0,75,6,5],
 "classFeel_1_1functional_1_1IntegralMomentOnFace.html":[10,0,75,7],
-"classFeel_1_1functional_1_1IntegralMomentOnFace.html#a14f665aebe56e3e0084f21e04f0c89ac":[10,0,75,7,4],
-"classFeel_1_1functional_1_1IntegralMomentOnFace.html#a1e6046af2f998ed356f69399cb7dd3f7":[10,0,75,7,5]
+"classFeel_1_1functional_1_1IntegralMomentOnFace.html#a14f665aebe56e3e0084f21e04f0c89ac":[10,0,75,7,4]
 };

@@ -80,7 +80,7 @@ var NAVTREEINDEX0 =
 "Exporter.html":[5,7],
 "Exporter.html#Introduction":[5,7,0],
 "Exporter.html#VisPrinciples":[5,7,1],
-"Exporter.html#Visualisation":[5,7,2],
+"Exporter.html#Visualization":[5,7,2],
 "FictitiousDomainPenalisationParticle.html":[6,3,2],
 "FictitiousDomainPenalisationParticle.html#FictitiousDomainPenalisationParticle_Intro":[6,3,2,0],
 "FictitiousDomainPenalisationParticle.html#FictitiousDomainPenalisationParticle_Model":[6,3,2,1],
