@@ -1,5 +1,9 @@
 var NAVTREEINDEX25 =
 {
+"classResidualEstimator.html#ac23ca54dce877aca7c067c9b209bda31":[10,9,1],
+"classResidualEstimator.html#ac481980c2e60a962c09791131a5c337a":[10,9,14],
+"classResidualEstimator.html#ac5bbf3f98c0a0102c4576c854ba84a8b":[10,9,13],
+"classResidualEstimator.html#ad0330272a9fa977e8ea2e7e40db7ea7b":[10,9,15],
 "classResidualEstimator.html#adca4ee6f2ccac1101dc0f184d592f2db":[10,9,8],
 "classResidualEstimator.html#add8034ff9fc4d3bfa21b888151150f3b":[10,9,23],
 "classThreeFieldsLaplacian.html":[10,11],
@@ -34,8 +38,8 @@ var NAVTREEINDEX25 =
 "classThreeFieldsLaplacian.html#ad1aada0099d45c1c61e7fb1149f36dc2":[10,11,14],
 "classThreeFieldsLaplacian.html#ad2ba185089e485cdd2d3a50326476b72":[10,11,3],
 "classThreeFieldsLaplacian.html#aef0b85cec754ffad5684a4c3c244c644":[10,11,22],
-"index.html":[],
 "index.html":[0],
+"index.html":[],
 "md_Credits.html":[1],
 "md__home_vhuber_feelpp_COPYING.html":[8],
 "namespaceFeel.html":[10,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX25 =
 "structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#aee2ea38bbc159b224dd1efd87fc7a59d":[10,0,75,2,5],
 "structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html":[10,0,75,3],
 "structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a0bbb5c7491b9f52635f469dc8af18bea":[10,0,75,3,4],
-"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a20e58be26b198c6b4ad61cec330937bf":[10,0,75,3,0],
-"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a3795ee3986a9a1e8a34fb6b507ce348f":[10,0,75,3,2],
-"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a45ceb70536cf1078c6067891ea86b482":[10,0,75,3,1],
-"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a58dd310280ac308f133508269899a965":[10,0,75,3,6],
-"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a641f5b13dd694bf9ccbf8cbbe7e5c535":[10,0,75,3,8]
+"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a20e58be26b198c6b4ad61cec330937bf":[10,0,75,3,0]
 };

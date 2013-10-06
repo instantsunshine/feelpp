@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.95.0-final</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+gitacf3184</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -344,38 +344,13 @@ $(document).ready(function(){initNavTree('matrixeigendense_8hpp_source.html','')
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;};</div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00433"></a><span class="lineno"><a class="code" href="classFeel_1_1MatrixEigenDense.html#a99c0e680ac271ea717f74dc70a6485d1">  433</a></span>&#160;<a class="code" href="classFeel_1_1MatrixEigenDense.html#a99c0e680ac271ea717f74dc70a6485d1">MatrixEigenDense&lt;T&gt;::zeroRows</a>( std::vector&lt;int&gt; <span class="keyword">const</span>&amp; rows,</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                               <a class="code" href="classFeel_1_1Vector.html">Vector&lt;value_type&gt;</a> <span class="keyword">const</span>&amp; vals,</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;                               <a class="code" href="classFeel_1_1Vector.html">Vector&lt;value_type&gt;</a>&amp; rhs,</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;                               <a class="code" href="classFeel_1_1Context.html" title="Context class. ">Context</a> <span class="keyword">const</span>&amp; on_context )</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;{</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    Feel::detail::ignore_unused_variable_warning( rhs );</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    Feel::detail::ignore_unused_variable_warning( vals );</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i = 0; i &lt; rows.size(); ++i )</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    {</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        value_type value = 1.0;</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        <span class="keywordflow">if</span> ( on_context.test( <a class="code" href="namespaceFeel.html#a22e3e6735fed56036283d38e6f0bd10aac885f100d1a310c35efd57a5fe100c8e">ON_ELIMINATION_KEEP_DIAGONAL</a> ) )</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;            value = M_mat( rows[i], rows[i] );</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        M_mat.row( rows[i] ).setZero();</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        <span class="comment">//M_mat.col( rows[i] ).setZero();</span></div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        <span class="comment">// set diagonal</span></div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        M_mat( rows[i], rows[i] ) = value;</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        <span class="comment">// multiply rhs by value of the diagonal entry value</span></div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        rhs.<a class="code" href="classFeel_1_1Vector.html#aa98adb864bb90b44c083922cd091cb7d">set</a>( rows[i], value * vals(rows[i]) );</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    }</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;}</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;} <span class="comment">// Feel</span></div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __MatrixEigenDense_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;} <span class="comment">// Feel</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __MatrixEigenDense_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sat Oct 5 2013 00:02:31 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Mon Oct 7 2013 00:02:46 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
