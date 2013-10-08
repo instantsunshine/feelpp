@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+gitacf3184</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git6b7a0ed</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -167,6 +167,7 @@ Implementation</h1>
 <div class="line">    <span class="comment">// create the mesh</span></div>
 <div class="line">    <span class="keyword">auto</span> mesh = loadMesh(_mesh=<span class="keyword">new</span> Mesh&lt;Simplex&lt; 2 &gt; &gt; );</div>
 <div class="line"></div>
+<div class="line"></div>
 <div class="line">    <span class="comment">// function space</span></div>
 <div class="line">    <span class="keyword">auto</span> Vh = THch&lt;2&gt;( mesh );</div>
 <div class="line"></div>
@@ -181,19 +182,33 @@ Implementation</h1>
 <div class="line">                  _expr=trace(gradt(u)*trans(grad(u))) );</div>
 <div class="line"></div>
 <div class="line">    a+= <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>(_range=<a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>(mesh),</div>
-<div class="line">                  _expr=-div(u)*idt(p)+divt(u)*<span class="keywordtype">id</span>(p));</div>
+<div class="line">                  _expr=-div(u)*idt(p)-divt(u)*<span class="keywordtype">id</span>(p));</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">auto</span> syms = symbols&lt;2&gt;();</div>
+<div class="line">    <span class="keyword">auto</span> u1 = parse( option(_name=<span class="stringliteral">&quot;functions.alpha&quot;</span>).as&lt;std::string&gt;(), syms );</div>
+<div class="line">    <span class="keyword">auto</span> u2 = parse( option(_name=<span class="stringliteral">&quot;functions.beta&quot;</span>).as&lt;std::string&gt;(), syms );</div>
+<div class="line">    matrix u_exact = matrix(2,1);</div>
+<div class="line">    u_exact = u1,u2;</div>
+<div class="line">    <span class="keyword">auto</span> p_exact = parse( option(_name=<span class="stringliteral">&quot;functions.gamma&quot;</span>).as&lt;std::string&gt;(), syms );</div>
+<div class="line">    <span class="keyword">auto</span> f = -laplacian( u_exact, syms ) + grad( p_exact, syms ).transpose();</div>
+<div class="line">    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;rhs : &quot;</span> &lt;&lt; f;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// right hand side</span></div>
 <div class="line">    <span class="keyword">auto</span> l = form1( _test=Vh );</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// boundary condition</span></div>
-<div class="line">    a+=on(_range=<a class="code" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">markedfaces</a>(mesh,<span class="stringliteral">&quot;inlet&quot;</span>), _rhs=l, _element=u,</div>
-<div class="line">          _expr=vec(Py()*(1-Py()),cst(0.)));</div>
-<div class="line">    a+=on(_range=<a class="code" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">markedfaces</a>(mesh,<span class="stringliteral">&quot;wall&quot;</span>), _rhs=l, _element=u,</div>
-<div class="line">          _expr=vec(cst(0.),cst(0.)));</div>
+<div class="line">    l = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>(_range=<a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>(mesh),</div>
+<div class="line">                  _expr=trans(expr&lt;2,1,5&gt;( f, syms ))*<span class="keywordtype">id</span>(u));</div>
+<div class="line">    a+=on(_range=<a class="code" href="namespaceFeel.html#a6d4deea03257c3f53b0e9df514a7bf00">boundaryfaces</a>(mesh), _rhs=l, _element=u,</div>
+<div class="line">          _expr=expr&lt;2,1,5&gt;(u_exact,syms));</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// solve a(u,v)=l(v)</span></div>
 <div class="line">    a.solve(_rhs=l,_solution=U);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">double</span> mean_p = mean(_range=<a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>(mesh),_expr=idv(p))(0,0);</div>
+<div class="line">    <span class="keywordtype">double</span> mean_p_exact = mean(_range=<a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>(mesh),_expr=expr(p_exact,syms))(0,0);</div>
+<div class="line">    <span class="keywordtype">double</span> l2error_u = normL2( _range=<a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>(mesh), _expr=idv(u)-expr&lt;2,1,5&gt;( u_exact, syms ) );</div>
+<div class="line">    <span class="keywordtype">double</span> l2error_p = normL2( _range=<a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>(mesh), _expr=idv(p)-mean_p-(expr( p_exact, syms )-mean_p_exact) );</div>
+<div class="line">    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;L2 error norm u: &quot;</span> &lt;&lt; l2error_u;</div>
+<div class="line">    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;L2 error norm p: &quot;</span> &lt;&lt; l2error_p;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// save results</span></div>
 <div class="line">    <span class="keyword">auto</span> e = exporter( _mesh=mesh );</div>
@@ -204,7 +219,7 @@ Implementation</h1>
 </div><!-- fragment --></div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Oct 7 2013 00:02:58 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Wed Oct 9 2013 00:02:36 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -99,7 +99,7 @@ var searchData=
   ['ftoe',['fToE',['../classFeel_1_1GeoEntity.html#a1139e596630ba0b8d6732941ae3041d1',1,'Feel::GeoEntity']]],
   ['ftop',['fToP',['../classFeel_1_1GeoEntity.html#a0da5efee342338fd88fe8875dd5718b0',1,'Feel::GeoEntity::fToP()'],['../classFeel_1_1GeoND.html#a42b1376c661ec1f5c9a4399e1e2ab715',1,'Feel::GeoND::fToP()']]],
   ['function_2ehpp',['function.hpp',['../function_8hpp.html',1,'']]],
-  ['functional',['functional',['../classFeel_1_1functional.html',1,'Feel::functional&lt; Data &gt;'],['../classFeel_1_1Functional.html',1,'Feel::Functional&lt; P &gt;']]],
+  ['functional',['Functional',['../classFeel_1_1Functional.html',1,'Feel::Functional&lt; P &gt;'],['../classFeel_1_1functional.html',1,'Feel::functional&lt; Data &gt;']]],
   ['functional',['FUNCTIONAL',['../namespaceFeel.html#a47b4e694d7ea6c8735636721e02645c0a5de680925be7c96ef97fd1eb74f207c4',1,'Feel']]],
   ['functional_2ehpp',['functional.hpp',['../functional_8hpp.html',1,'']]],
   ['functional_3c_20space_20_3e',['Functional&lt; Space &gt;',['../classFeel_1_1Functional.html',1,'Feel']]],

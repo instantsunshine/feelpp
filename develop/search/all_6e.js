@@ -8,7 +8,7 @@ var searchData=
   ['nbdof',['nbDof',['../classFeel_1_1PolynomialSet.html#a302650f3b7232c4a279e63f3438ba9a0',1,'Feel::PolynomialSet']]],
   ['nbnearneighbor',['nbNearNeighbor',['../classFeel_1_1KDTree.html#a4c5c6f72dc80365cc3ccfd0e0bc08bd6',1,'Feel::KDTree']]],
   ['nbpoints',['nbPoints',['../classFeel_1_1FiniteElement.html#a4966c7ea9f195b78d1a806ae55097417',1,'Feel::FiniteElement']]],
-  ['ndof',['nDof',['../classFeel_1_1DataMap.html#ae824d566b31908f88345c35f121fe382',1,'Feel::DataMap::nDof()'],['../classFeel_1_1FunctionSpace.html#a3e7c6d744090500c56177328b7ab402d',1,'Feel::FunctionSpace::nDof()'],['../classFeel_1_1EIM.html#a760ab4c7b0db6d80c89ee225c4b1e8cc',1,'Feel::EIM::nDOF()']]],
+  ['ndof',['nDOF',['../classFeel_1_1EIM.html#a760ab4c7b0db6d80c89ee225c4b1e8cc',1,'Feel::EIM::nDOF()'],['../classFeel_1_1DataMap.html#ae824d566b31908f88345c35f121fe382',1,'Feel::DataMap::nDof()'],['../classFeel_1_1FunctionSpace.html#a3e7c6d744090500c56177328b7ab402d',1,'Feel::FunctionSpace::nDof()']]],
   ['ndofonprocessor',['nDofOnProcessor',['../classFeel_1_1DataMap.html#ae967766557cd9a2a1a7ed475d340723e',1,'Feel::DataMap']]],
   ['ndofpercomponent',['nDofPerComponent',['../classFeel_1_1FunctionSpace.html#a11d7b07ab67d461b92d48c6492049822',1,'Feel::FunctionSpace']]],
   ['ndofperedge',['nDofPerEdge',['../classFeel_1_1FiniteElement.html#a1f2eaffa29856ddf3d0df0583d64a02d',1,'Feel::FiniteElement']]],

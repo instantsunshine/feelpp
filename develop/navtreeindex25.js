@@ -1,5 +1,9 @@
 var NAVTREEINDEX25 =
 {
+"classResidualEstimator.html#a9f078fa0c62f12866cdbfd0a962ec98e":[10,9,10],
+"classResidualEstimator.html#aa8e98a17170bf3e86ced8138ef2dc9f2":[10,9,0],
+"classResidualEstimator.html#aab2d3c57134999f992b319853cdb9b23":[10,9,9],
+"classResidualEstimator.html#abfc3e509f6b268114ca34d921ad5214e":[10,9,16],
 "classResidualEstimator.html#ac23ca54dce877aca7c067c9b209bda31":[10,9,1],
 "classResidualEstimator.html#ac481980c2e60a962c09791131a5c337a":[10,9,14],
 "classResidualEstimator.html#ac5bbf3f98c0a0102c4576c854ba84a8b":[10,9,13],
@@ -102,8 +106,8 @@ var NAVTREEINDEX25 =
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,101,2],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#a5b14a31c265d13987d9d2d7f2b19dfd3":[10,0,101,3],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aae08c8b04ff5d504167b6b0ef8710a90":[10,0,101,5],
-"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,101,0],
 "structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,101,1],
+"structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html#aff78ebe8b1d46fcf7f5cdc3c860ec8f6":[10,0,101,0],
 "structFeel_1_1IntegrationDegree.html":[10,0,104],
 "structFeel_1_1JacobiDegree.html":[10,0,107],
 "structFeel_1_1MeshTraits.html":[10,0,134],
@@ -245,9 +249,5 @@ var NAVTREEINDEX25 =
 "structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#ab8e412def7025782eca0fdb349b10f71":[10,0,75,2,6],
 "structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#accf82c5a42aac4caa8e2f7410c3e16c2":[10,0,75,2,1],
 "structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#aeb9bd2e5e907055b9739361fb7ddf5d9":[10,0,75,2,7],
-"structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#aecb6eea3c076bc788c3e22d27e0ed238":[10,0,75,2,2],
-"structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#aee2ea38bbc159b224dd1efd87fc7a59d":[10,0,75,2,5],
-"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html":[10,0,75,3],
-"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a0bbb5c7491b9f52635f469dc8af18bea":[10,0,75,3,4],
-"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a20e58be26b198c6b4ad61cec330937bf":[10,0,75,3,0]
+"structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#aecb6eea3c076bc788c3e22d27e0ed238":[10,0,75,2,2]
 };

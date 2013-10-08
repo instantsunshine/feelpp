@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"Spaces.html#QRFunctionSpaceFn":[5,3,1],
 "StVenantKirchhoff.html":[6,4,2],
 "StokesCurl.html":[6,3,1],
 "StokesCurl.html#StokesCurl_Implementation":[6,3,1,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX1 =
 "classFeel_1_1AdvReact.html#a5781530f0a1cb2e392734fc6c7137c34":[10,0,11,9],
 "classFeel_1_1AdvReact.html#a5b13f08249635d501df9ae123969a967":[10,0,11,2],
 "classFeel_1_1AdvReact.html#a72ed1c65a6886b17402af5a7859f676d":[10,0,11,7],
-"classFeel_1_1AdvReact.html#aaf4b3c4efe4df20d5285ba3dc6eeb4e7":[10,0,11,3]
+"classFeel_1_1AdvReact.html#aaf4b3c4efe4df20d5285ba3dc6eeb4e7":[10,0,11,3],
+"classFeel_1_1AdvReact.html#ab56e38ad977a7486f2cb2b87deb75bf0":[10,0,11,5]
 };

@@ -118,6 +118,7 @@ var searchData=
   ['setparams',['setParams',['../classFeel_1_1ErrorBase.html#aa28031f448872265f30f7e27cd7b1697',1,'Feel::ErrorBase']]],
   ['setpartitioner',['setPartitioner',['../classFeel_1_1Mesh.html#af834b36337c5b6fc473da16b9020d277',1,'Feel::Mesh::setPartitioner()'],['../classFeel_1_1Gmsh.html#ac3988aee134015edafb0e0e177ec4add',1,'Feel::Gmsh::setPartitioner()']]],
   ['setpc',['setPc',['../classFeel_1_1GeoMap_1_1Context.html#a48b6548cb018e992bb8104d43216846d',1,'Feel::GeoMap::Context']]],
+  ['setperiodicentities',['setPeriodicEntities',['../classFeel_1_1Mesh.html#ac7f1a6d23288bd64e1ab660f820cf247',1,'Feel::Mesh']]],
   ['setpetscpreconditionertype',['setPetscPreconditionerType',['../classFeel_1_1PreconditionerPetsc.html#aab7016816edfeedf59f39b28fa40324e',1,'Feel::PreconditionerPetsc']]],
   ['setpngoutput',['setPngOutput',['../classFeel_1_1ExporterGnuplot.html#a15c8665acb6221b4a366f57ca26f76e9',1,'Feel::ExporterGnuplot']]],
   ['setpoint',['setPoint',['../group__GeoXD.html#gae5a32ca499164e865992428944b202c9',1,'Feel::Geo0D::setPoint()'],['../classFeel_1_1GeoElement0D.html#a620a55ce0d329a44e5abf145646729de',1,'Feel::GeoElement0D::setPoint()'],['../classFeel_1_1GeoND.html#adeecb63902dc7e48d84592a5a6c1d6bf',1,'Feel::GeoND::setPoint()']]],
