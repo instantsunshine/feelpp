@@ -45,6 +45,7 @@ var classFeel_1_1Mesh =
     [ "checkAndFixPermutation", "classFeel_1_1Mesh.html#aa1e4450b4edec2dff28efb9d8466ecc0", null ],
     [ "checkLocalPermutation", "classFeel_1_1Mesh.html#ac2473dcd188e511e636de69a46d99d6c", null ],
     [ "checkLocalPermutation", "classFeel_1_1Mesh.html#a3a2abf934ebe1cfbecf0eb0f77031e49", null ],
+    [ "clear", "classFeel_1_1Mesh.html#ad6732eb98018400b002db4de00032446", null ],
     [ "createP1mesh", "classFeel_1_1Mesh.html#a5ff2647ebb8528566465fc30321ca7b4", null ],
     [ "createSubmesh", "classFeel_1_1Mesh.html#a2589a3613649e829d6a763b8b6212a6f", null ],
     [ "createSubmeshByProcessId", "classFeel_1_1Mesh.html#a5a95a8e5b2b7f0e333612a714604fbb6", null ],
