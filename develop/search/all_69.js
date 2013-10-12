@@ -59,7 +59,7 @@ var searchData=
   ['internalpoints',['internalpoints',['../namespaceFeel.html#a5c10346e263af6fbc0709fb6084fcf6f',1,'Feel']]],
   ['interpolate',['interpolate',['../namespaceFeel.html#a0f1f8745f4c451cecb0ea5ab5560d212',1,'Feel']]],
   ['interpolate_2ehpp',['interpolate.hpp',['../interpolate_8hpp.html',1,'']]],
-  ['interprocessfaces',['interprocessfaces',['../namespaceFeel.html#abc95225dae92e77cc06508c91b1be972',1,'Feel']]],
+  ['interprocessfaces',['interprocessfaces',['../namespaceFeel.html#abc95225dae92e77cc06508c91b1be972',1,'Feel::interprocessfaces(MeshType const &amp;mesh)'],['../namespaceFeel.html#ae93b8a80a2a2ed44382700fde432ec7a',1,'Feel::interprocessfaces(MeshType const &amp;mesh, size_type neighbor_pid)']]],
   ['intersects',['intersects',['../classFeel_1_1Sphere.html#a7880c79d26fd44e1a17692e225f44f13',1,'Feel::Sphere']]],
   ['inv_2ehpp',['inv.hpp',['../inv_8hpp.html',1,'']]],
   ['invalid_5fdim_5ftype_5fvalue',['invalid_dim_type_value',['../namespaceFeel.html#a06fcd499069e30f5e897e6e1187c65d0',1,'Feel']]],

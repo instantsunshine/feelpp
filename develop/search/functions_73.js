@@ -117,6 +117,7 @@ var searchData=
   ['setparametriccoordinates',['setParametricCoordinates',['../group__GeoXD.html#ga1252fb573284e4e13d9e86b6b124b6ef',1,'Feel::Geo0D::setParametricCoordinates(parametric_node_type const &amp;x)'],['../group__GeoXD.html#gac3260898f43d35d1bb240599561d0e58',1,'Feel::Geo0D::setParametricCoordinates(value_type u, value_type v)']]],
   ['setparams',['setParams',['../classFeel_1_1ErrorBase.html#aa28031f448872265f30f7e27cd7b1697',1,'Feel::ErrorBase']]],
   ['setpartitioner',['setPartitioner',['../classFeel_1_1Mesh.html#af834b36337c5b6fc473da16b9020d277',1,'Feel::Mesh::setPartitioner()'],['../classFeel_1_1Gmsh.html#ac3988aee134015edafb0e0e177ec4add',1,'Feel::Gmsh::setPartitioner()']]],
+  ['setpath',['setPath',['../classFeel_1_1Exporter.html#aceba2adf3feb8a1421bccab6ac1f90bc',1,'Feel::Exporter']]],
   ['setpc',['setPc',['../classFeel_1_1GeoMap_1_1Context.html#a48b6548cb018e992bb8104d43216846d',1,'Feel::GeoMap::Context']]],
   ['setperiodicentities',['setPeriodicEntities',['../classFeel_1_1Mesh.html#ac7f1a6d23288bd64e1ab660f820cf247',1,'Feel::Mesh']]],
   ['setpetscpreconditionertype',['setPetscPreconditionerType',['../classFeel_1_1PreconditionerPetsc.html#aab7016816edfeedf59f39b28fa40324e',1,'Feel::PreconditionerPetsc']]],

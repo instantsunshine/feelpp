@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+gita6c957c</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8dd2be8</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -304,6 +304,9 @@ template&lt;typename RangeT , int TheTag&gt; </td></tr>
 <tr><td colspan="2"><div class="groupHeader">Accessors</div></td></tr>
 <tr class="memitem:a0de57ea89ec883862511aaffd76154a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a0de57ea89ec883862511aaffd76154a7">numGlobalElements</a> () const </td></tr>
 <tr class="separator:a0de57ea89ec883862511aaffd76154a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad22bc88118c90db291c265741371b3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad22bc88118c90db291c265741371b3e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateNumGlobalElements</b> ()</td></tr>
+<tr class="separator:aad22bc88118c90db291c265741371b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8647363fe5925dabd10a1a17117aec8"><td class="memItemLeft" align="right" valign="top">uint16_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#ad8647363fe5925dabd10a1a17117aec8">dimension</a> () const </td></tr>
 <tr class="separator:ad8647363fe5925dabd10a1a17117aec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7971c57a45052fa3828f042d4900344c"><td class="memItemLeft" align="right" valign="top">gm_ptrtype const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a7971c57a45052fa3828f042d4900344c">gm</a> () const </td></tr>
@@ -486,6 +489,20 @@ template&lt;typename Observer &gt; </td></tr>
 <tr class="memitem:a46ed5237acc56a8354173f59c8b0265d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46ed5237acc56a8354173f59c8b0265d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>removeFacesFromBoundary</b> (std::initializer_list&lt; uint16_type &gt; markers)</td></tr>
 <tr class="separator:a46ed5237acc56a8354173f59c8b0265d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a209b95379a14b0179e672e8892a00dc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a209b95379a14b0179e672e8892a00dc7"></a>
+std::set&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;<br class="typebreak"/>
+::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>beginFaceNeighborSubdomains</b> () const </td></tr>
+<tr class="separator:a209b95379a14b0179e672e8892a00dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d4e1a07efa3f1981ec7a702ca95b5b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d4e1a07efa3f1981ec7a702ca95b5b0"></a>
+std::set&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;<br class="typebreak"/>
+::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>endFaceNeighborSubdomains</b> () const </td></tr>
+<tr class="separator:a0d4e1a07efa3f1981ec7a702ca95b5b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ee404734ae2510985e2f8a92081ec50"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ee404734ae2510985e2f8a92081ec50"></a>
+std::set&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>faceNeighborSubdomains</b> () const </td></tr>
+<tr class="separator:a9ee404734ae2510985e2f8a92081ec50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad105a62f30ad45a4adfc6660dfde1091"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad105a62f30ad45a4adfc6660dfde1091"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addFaceNeighborSubdomain</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> p)</td></tr>
+<tr class="separator:ad105a62f30ad45a4adfc6660dfde1091"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a42907164322ead3b8be2701a3683a9b1"></a>
@@ -1905,7 +1922,7 @@ template&lt;typename C, typename V, int T&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 11 2013 00:02:41 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 13 2013 00:02:39 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
