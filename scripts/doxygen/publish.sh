@@ -2,37 +2,68 @@
 
 function builddox
 {
-    branch=$1
-    cd feelpp.git && git pull && git checkout $branch && cd ..
-    [ -d doxygen-$branch ] && rm -rf doxygen-$branch
-    mkdir doxygen-$branch
-    cd doxygen-$branch
-    cmake ../feelpp.git
-    make doxygen
-    cd doc/manual/ 
-#    make feelpp-manual_pdf
-    cd ../../..
+  doxygen_dir=$HOME/doxygen-${1/\//_}
+  feelpp_source=$2
+  gh_pages=$3
 
-    # now work in feelpp.docs to push the newly created doxygen files
-    mkdir -p feelpp.docs/api/$branch
-    cd feelpp.docs && git pull
-    
-    rsync -avz ../doxygen-$branch/doc/api/html/ api/$branch/html/
-    mkdir api/$branch/pdfs
-#    cp ../doxygen-$branch/doc/manual/feelpp-manual.pdf  api/$branch/pdfs
-    git add api/$branch/html/* 
-#    git add api/$branch/pdfs/* 
-    git commit -m"update $branch doxygen and user manual documentation" -a
-    git push
-    cd ..
+  cd $feelpp_source
+  git checkout $1
+
+  if [ ! -d ${doxygen_dir} ]; 
+  then 
+    mkdir ${doxygen_dir};
+  fi
+
+  cd $doxygen_dir
+  cmake $feelpp_source -DFEELPP_ENABLE_DOXYGEN=ON
+  make doxygen #generate the doc associated to the branch $1 in ${doxygen_dir}/doc/api/html
+
+  # now work in feelpp.docs to push the newly created doxygen files
+  if [ ! -d  $gh_pages/$branch ];
+  then 
+    mkdir -p $gh_pages/$branch;
+  fi
+  cd $gh_pages;
+  rsync -avz $doxygen_dir/doc/api/html/ $branch/
+  git commit -m "update Feel++ online documentation of branch $branch" -a
 }
 
+base_dir=${1:-$HOME}
+#Where the sources are stored
+feelpp_source=$base_dir/${2:-feelpp}
+#Where the gh-pages copy is
+gh_pages=$base_dir/${3:-gh-pages}
 
-if [ ! -d feelpp.docs ]; then git clone  https://code.google.com/p/feelpp.docs/ feelpp.docs; fi
-cd feelpp.docs && git pull && cd ..
-if [ ! -d feelpp.git ]; then git clone  https://github.com/feelpp/feelpp.git feelpp.git; fi
-cd feelpp.git && git pull && cd ..
+#Create and/or update the ${gh-pages}/feelpp clone's repo
+if [ ! -d ${gh_pages} ]; 
+then 
+  mkdir ${gh_pages}; 
+  cd ${gh_pages}; 
+  git clone -b gh-pages --single-branch https://github.com/feelpp/feelpp.git
+else
+  cd ${gh_pages}/feelpp;
+  git pull
+fi
 
-# checkout in master branch
-# builddox master
-builddox develop
+#Create and/or update the feelpp's copy
+if [ ! -d ${feelpp_source} ]; 
+then 
+  mkdir ${feelpp_source}; 
+  cd ${feelpp_source};
+  git clone https://github.com/feelpp/feelpp.git
+else
+  cd $feelpp_source;
+  git pull
+fi
+
+#Create in ${gh_pages}/feelpp the associated doc of the ${branch}
+builddox develop $feelpp_source $gh_pages
+builddox release/version-0.92 $feelpp_source $gh_pages
+builddox release/v0.95.0 $feelpp_source $gh_pages
+
+cd $feelpp_source
+git checkout develop
+cd ${gh_pages}
+git push origin gh-pages
+
+
