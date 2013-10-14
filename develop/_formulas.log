@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2013.8.6)  13 OCT 2013 00:02
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2013.8.6)  14 OCT 2013 12:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1413,7 +1413,7 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  11233 strings out of 495060
  203375 string characters out of 3182054
- 249861 words of memory out of 3000000
+ 249864 words of memory out of 3000000
  14156 multiletter control sequences out of 15000+200000
  18346 words of font info for 56 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
