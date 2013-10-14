@@ -2,8 +2,8 @@ var searchData=
 [
   ['warpblend_2ehpp',['warpblend.hpp',['../warpblend_8hpp.html',1,'']]],
   ['webaddress',['webAddress',['../classFeel_1_1AboutPerson.html#a6d776b1299f09c941b6bafb70c0b312f',1,'Feel::AboutPerson']]],
-  ['weight',['weight',['../classFeel_1_1PointSetQuadrature.html#a6d57c06851b2542daebcee910ec5fecf',1,'Feel::PointSetQuadrature']]],
-  ['weights',['weights',['../classFeel_1_1PointSetQuadrature.html#a2f8a6d36070a24bac7cb61500502db0b',1,'Feel::PointSetQuadrature']]],
+  ['weight',['weight',['../classFeel_1_1PointSetQuadrature.html#abbd937c6ddcd81c553514acbed82341b',1,'Feel::PointSetQuadrature']]],
+  ['weights',['weights',['../classFeel_1_1PointSetQuadrature.html#a5e896aaeb0d141a859b48c7f198b849c',1,'Feel::PointSetQuadrature']]],
   ['wirebasket',['wireBasket',['../classFeel_1_1FunctionSpace.html#acc6ca2858c741871397b9a1b58a2f013',1,'Feel::FunctionSpace']]],
   ['wmat',['wmat',['../classFeel_1_1MatrixValue.html#a821b6aa5bc3ff02b0795853892339a8a',1,'Feel::MatrixValue::wmat() const '],['../classFeel_1_1MatrixValue.html#a66cc004e0279f47d072c607b3543771c',1,'Feel::MatrixValue::wmat()']]],
   ['wn',['wn',['../classFeel_1_1POD.html#a8ffe4421d4ef398de429bcf01e815b64',1,'Feel::POD']]],

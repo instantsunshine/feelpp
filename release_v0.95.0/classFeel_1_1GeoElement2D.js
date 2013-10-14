@@ -42,8 +42,6 @@ var classFeel_1_1GeoElement2D =
     [ "marker3", "classFeel_1_1GeoElement2D.html#a088e6401f7f9c387aebb6f0a9db86556", null ],
     [ "mesh", "classFeel_1_1GeoElement2D.html#a06e8ca4d8478d47ba0627df3cafce457", null ],
     [ "operator=", "classFeel_1_1GeoElement2D.html#a48724810c75d24cd69a8029a92e79007", null ],
-    [ "partition1", "classFeel_1_1GeoElement2D.html#a2607e7fcf1e22a947d83c9e25caa9fd9", null ],
-    [ "partition2", "classFeel_1_1GeoElement2D.html#a52412173a3b5ba7ee9410d8e1c32d4f2", null ],
     [ "permutation", "classFeel_1_1GeoElement2D.html#a18d3c2fa13e04b63dac3f8e1e0897c73", null ],
     [ "processId", "classFeel_1_1GeoElement2D.html#ae321b91afeb2d3158efdb57fd5fb22ac", null ],
     [ "setEdge", "classFeel_1_1GeoElement2D.html#af71469f3216af4f496ff4472f3638612", null ],

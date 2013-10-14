@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1</span>
+   &#160;<span id="projectnumber">0.95.0-beta.4</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -175,8 +175,8 @@ $(document).ready(function(){initNavTree('quadpoint_8hpp_source.html','');});
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    PointSetQuadrature( <span class="keyword">const</span> PointSetQuadrature&amp; Qp )</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        : super( Qp ),</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;          M_w( Qp.<a class="code" href="classFeel_1_1PointSetQuadrature.html#a2f8a6d36070a24bac7cb61500502db0b">weights</a>() ),</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;          M_w_face( Qp.<a class="code" href="classFeel_1_1PointSetQuadrature.html#aa3d4a474ea0951a4b573e97cb1f98c75">allfweights</a>() ),</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;          M_w( Qp.<a class="code" href="classFeel_1_1PointSetQuadrature.html#a5e896aaeb0d141a859b48c7f198b849c">weights</a>() ),</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;          M_w_face( Qp.<a class="code" href="classFeel_1_1PointSetQuadrature.html#adbcec15dc8e2300f4be702ad29aefb03">allfweights</a>() ),</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;          M_n_face( Qp.allfpoints() ),</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;          M_prod( Qp.nPoints() ),</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;          M_exprq( Qp.nPoints() )</div>
@@ -218,66 +218,65 @@ $(document).ready(function(){initNavTree('quadpoint_8hpp_source.html','');});
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSetQuadrature.html#aa3d4a474ea0951a4b573e97cb1f98c75">  131</a></span>&#160;    std::vector&lt;std::map&lt;uint16_type,weights_type&gt; &gt; <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1PointSetQuadrature.html#aa3d4a474ea0951a4b573e97cb1f98c75">allfweights</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">return</span> M_w_face;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    std::vector&lt;std::map&lt;uint16_type,nodes_type &gt; &gt; <span class="keyword">const</span>&amp; allfpoints()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">return</span> M_n_face;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSetQuadrature.html#a2f8a6d36070a24bac7cb61500502db0b">  144</a></span>&#160;    weights_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1PointSetQuadrature.html#a2f8a6d36070a24bac7cb61500502db0b">weights</a>( uint16_type __f, uint16_type __p = 1 )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">if</span> ( __f == uint16_type( -1 ) )</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordflow">return</span> M_w;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        DCHECK( M_w_face[__f].find(__p) != M_w_face[__f].end() ) &lt;&lt; <span class="stringliteral">&quot;invalid permutation :&quot;</span> &lt;&lt; __p &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">return</span> M_w_face[__f].find(__p)-&gt;second;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSetQuadrature.html#a284d11e1d4a5fd64af3022bc91704b73">  156</a></span>&#160;    nodes_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1PointSetQuadrature.html#a284d11e1d4a5fd64af3022bc91704b73">fpoints</a>( uint16_type __f, uint16_type __p = 1 )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">if</span> ( __f == uint16_type( -1 ) )</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordflow">return</span> this-&gt;points();</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        DCHECK( M_n_face[__f].find(__p) != M_n_face[__f].end() ) &lt;&lt; <span class="stringliteral">&quot;invalid permutation :&quot;</span> &lt;&lt; __p &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">return</span> M_n_face[__f].find(__p)-&gt;second;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSetQuadrature.html#adbcec15dc8e2300f4be702ad29aefb03">  132</a></span>&#160;    std::vector&lt;weights_type&gt; <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1PointSetQuadrature.html#adbcec15dc8e2300f4be702ad29aefb03">allfweights</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> M_w_face;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    std::vector&lt;nodes_type&gt; <span class="keyword">const</span>&amp; allfpoints()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">return</span> M_n_face;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSetQuadrature.html#a5e896aaeb0d141a859b48c7f198b849c">  146</a></span>&#160;    weights_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1PointSetQuadrature.html#a5e896aaeb0d141a859b48c7f198b849c">weights</a>( uint16_type __f )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">if</span> ( __f == uint16_type( -1 ) )</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">return</span> M_w;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">return</span> M_w_face[__f];</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSetQuadrature.html#a33240ee59b4f90af3c069d6abbaee9f7">  157</a></span>&#160;    nodes_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1PointSetQuadrature.html#a33240ee59b4f90af3c069d6abbaee9f7">fpoints</a>( uint16_type __f )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">if</span> ( __f == uint16_type( -1 ) )</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordflow">return</span> this-&gt;points();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">return</span> M_n_face[__f];</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSetQuadrature.html#a6d57c06851b2542daebcee910ec5fecf">  169</a></span>&#160;    value_type  <a class="code" href="classFeel_1_1PointSetQuadrature.html#a6d57c06851b2542daebcee910ec5fecf">weight</a>( uint16_type __f,  uint32_type q, uint16_type __p = 1 )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSetQuadrature.html#abbd937c6ddcd81c553514acbed82341b">  169</a></span>&#160;    value_type  <a class="code" href="classFeel_1_1PointSetQuadrature.html#abbd937c6ddcd81c553514acbed82341b">weight</a>( uint16_type __f,  uint32_type q )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        DCHECK( M_w_face[__f].find(__p) != M_w_face[__f].end() ) &lt;&lt; <span class="stringliteral">&quot;invalid permutation :&quot;</span> &lt;&lt; __p &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> M_w_face[__f].find(__p)-&gt;second[q];</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSetQuadrature.html#acdbcaafbca5c0a71e868c05bd0c78f5b">  177</a></span>&#160;    ublas::matrix_column&lt;nodes_type const&gt;  <a class="code" href="classFeel_1_1PointSetQuadrature.html#acdbcaafbca5c0a71e868c05bd0c78f5b">fpoint</a>( uint16_type __f, uint32_type __q, uint16_type __p = 1 )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        DCHECK( M_n_face[__f].find(__p) != M_n_face[__f].end() ) &lt;&lt; <span class="stringliteral">&quot;invalid permutation :&quot;</span> &lt;&lt; __p &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">return</span> ublas::column( M_n_face[__f].find(__p)-&gt;second, __q );</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">return</span> M_w_face[__f][q];</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSetQuadrature.html#a3a109e3e47834243cee93941b08ad4a0">  176</a></span>&#160;    ublas::matrix_column&lt;nodes_type const&gt;  <a class="code" href="classFeel_1_1PointSetQuadrature.html#a3a109e3e47834243cee93941b08ad4a0">fpoint</a>( uint16_type __f, uint32_type __q )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">return</span> ublas::column( M_n_face[__f], __q );</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="comment">//  quadrature_data_type data() const { return boost::make_tuple( this-&gt;M_n, this-&gt;M_w ); }</span></div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="comment">//  quadrature_data_type data() const { return boost::make_tuple( this-&gt;M_n, this-&gt;M_w ); }</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    weights_type <span class="keyword">const</span>&amp; weights()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">return</span> M_w;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    }</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    value_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1PointSetQuadrature.html#a6d57c06851b2542daebcee910ec5fecf">weight</a>( <span class="keywordtype">int</span> q )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">return</span> M_w[q];</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> nFaces()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">return</span> M_n_face.size();</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> nPointsOnFace( uint16_type __face = 0, uint16_type __p = 1 )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        DCHECK( M_n_face[__face].find(__p) != M_n_face[__face].end() ) &lt;&lt; <span class="stringliteral">&quot;invalid permutation :&quot;</span> &lt;&lt; __p &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">return</span> M_n_face[__face].find(__p)-&gt;second.size2();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="comment">//size_type nFaces() const { return M_n_face.size(); }</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="comment">//size_type nPointsOnFace( int __face = 0 ) const { return M_n_face[__face].size2(); }</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    weights_type <span class="keyword">const</span>&amp; weights()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">return</span> M_w;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    value_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1PointSetQuadrature.html#abbd937c6ddcd81c553514acbed82341b">weight</a>( <span class="keywordtype">int</span> q )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">return</span> M_w[q];</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> nFaces()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">return</span> M_n_face.size();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> nPointsOnFace( <span class="keywordtype">int</span> __face = 0 )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">return</span> M_n_face[__face].size2();</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Expression&gt;</div>
@@ -323,7 +322,7 @@ $(document).ready(function(){initNavTree('quadpoint_8hpp_source.html','');});
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        {</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="comment">// integrate on face f</span></div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordflow">for</span> ( uint32_type k = 0; k &lt; this-&gt;nPointsOnFace( __face ); ++k )</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                res += this-&gt;<a class="code" href="classFeel_1_1PointSetQuadrature.html#a6d57c06851b2542daebcee910ec5fecf">weight</a>( __face, k )*f( k );</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                res += this-&gt;<a class="code" href="classFeel_1_1PointSetQuadrature.html#abbd937c6ddcd81c553514acbed82341b">weight</a>( __face, k )*f( k );</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        }</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">else</span></div>
@@ -334,7 +333,7 @@ $(document).ready(function(){initNavTree('quadpoint_8hpp_source.html','');});
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                value_type __res_face( 0.0 );</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                <span class="keywordflow">for</span> ( uint32_type k = 0; k &lt; this-&gt;nPointsOnFace( i ); ++k )</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                    __res_face += this-&gt;<a class="code" href="classFeel_1_1PointSetQuadrature.html#a6d57c06851b2542daebcee910ec5fecf">weight</a>( i, k )*f( k );</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                    __res_face += this-&gt;<a class="code" href="classFeel_1_1PointSetQuadrature.html#abbd937c6ddcd81c553514acbed82341b">weight</a>( i, k )*f( k );</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                <span class="comment">//std::cout &lt;&lt; &quot;res on face &quot; &lt;&lt; i &lt;&lt; &quot; = &quot; &lt;&lt; __res_face &lt;&lt; &quot;\n&quot;;</span></div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                res += __res_face;</div>
@@ -359,7 +358,7 @@ $(document).ready(function(){initNavTree('quadpoint_8hpp_source.html','');});
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        {</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="comment">// integrate on face f</span></div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="keywordflow">for</span> ( uint32_type k = 0; k &lt; this-&gt;nPointsOnFace( __face ); ++k )</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                res += this-&gt;<a class="code" href="classFeel_1_1PointSetQuadrature.html#a6d57c06851b2542daebcee910ec5fecf">weight</a>( __face, k )*f( this-&gt;<a class="code" href="classFeel_1_1PointSetQuadrature.html#acdbcaafbca5c0a71e868c05bd0c78f5b">fpoint</a>( __face, k ) );</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                res += this-&gt;<a class="code" href="classFeel_1_1PointSetQuadrature.html#abbd937c6ddcd81c553514acbed82341b">weight</a>( __face, k )*f( this-&gt;<a class="code" href="classFeel_1_1PointSetQuadrature.html#a3a109e3e47834243cee93941b08ad4a0">fpoint</a>( __face, k ) );</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        }</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">else</span></div>
@@ -370,7 +369,7 @@ $(document).ready(function(){initNavTree('quadpoint_8hpp_source.html','');});
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                value_type __res_face( 0.0 );</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                <span class="keywordflow">for</span> ( uint32_type k = 0; k &lt; this-&gt;nPointsOnFace( i ); ++k )</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                    __res_face += this-&gt;<a class="code" href="classFeel_1_1PointSetQuadrature.html#a6d57c06851b2542daebcee910ec5fecf">weight</a>( i, k )*f( this-&gt;<a class="code" href="classFeel_1_1PointSetQuadrature.html#acdbcaafbca5c0a71e868c05bd0c78f5b">fpoint</a>( i, k ) );</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                    __res_face += this-&gt;<a class="code" href="classFeel_1_1PointSetQuadrature.html#abbd937c6ddcd81c553514acbed82341b">weight</a>( i, k )*f( this-&gt;<a class="code" href="classFeel_1_1PointSetQuadrature.html#a3a109e3e47834243cee93941b08ad4a0">fpoint</a>( i, k ) );</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                <span class="comment">//std::cout &lt;&lt; &quot;res on face &quot; &lt;&lt; i &lt;&lt; &quot; = &quot; &lt;&lt; __res_face &lt;&lt; &quot;\n&quot;;</span></div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                res += __res_face;</div>
@@ -581,145 +580,132 @@ $(document).ready(function(){initNavTree('quadpoint_8hpp_source.html','');});
 <div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                            boost::shared_ptr&lt;IM&gt; <span class="keyword">const</span>&amp; <span class="comment">/*__qr_face*/</span>,</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                            mpl::bool_&lt;false&gt; )</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    {</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> Elem::permutation_type permutation_type;</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;        DCHECK(permutation_type::N_PERMUTATIONS==2) &lt;&lt; <span class="stringliteral">&quot; number of permutation must be equal to 2 here\n&quot;</span>;</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;        BOOST_STATIC_ASSERT( Elem::nDim == 1 );</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        M_n_face.resize( Elem::numTopologicalFaces );</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        M_w_face.resize( Elem::numTopologicalFaces );</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        M_n_face[0][permutation_type::IDENTITY].resize( Elem::nDim, 1 );</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        M_w_face[0][permutation_type::IDENTITY].resize( 1 );</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        M_n_face[0][permutation_type::IDENTITY]( 0, 0 ) = -1;</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;        M_w_face[0][permutation_type::IDENTITY]( 0 ) = 1;</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        M_n_face[1][permutation_type::IDENTITY].resize( Elem::nDim, 1 );</div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        M_w_face[1][permutation_type::IDENTITY].resize( 1 );</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        M_n_face[1][permutation_type::IDENTITY]( 0, 0 ) = 1;</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        M_w_face[1][permutation_type::IDENTITY]( 0 ) = 1;</div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    }</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Elem, <span class="keyword">typename</span> GM, <span class="keyword">typename</span> IM&gt;</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    <span class="keywordtype">void</span> constructQROnFace( Elem <span class="keyword">const</span>&amp; ref_convex,</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;                            boost::shared_ptr&lt;GM&gt; <span class="keyword">const</span>&amp; __gm,</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;                            boost::shared_ptr&lt;IM&gt; <span class="keyword">const</span>&amp; __qr_face,</div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;                            mpl::bool_&lt;true&gt; );</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        BOOST_STATIC_ASSERT( Elem::nDim == 1 );</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;        M_n_face.resize( Elem::numTopologicalFaces );</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;        M_w_face.resize( Elem::numTopologicalFaces );</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        M_n_face[0].resize( Elem::nDim, 1 );</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        M_w_face[0].resize( 1 );</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        M_n_face[0]( 0, 0 ) = -1;</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        M_w_face[0]( 0 ) = 1;</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        M_n_face[1].resize( Elem::nDim, 1 );</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        M_w_face[1].resize( 1 );</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;        M_n_face[1]( 0, 0 ) = 1;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        M_w_face[1]( 0 ) = 1;</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    }</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Elem, <span class="keyword">typename</span> GM, <span class="keyword">typename</span> IM&gt;</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;    <span class="keywordtype">void</span> constructQROnFace( Elem <span class="keyword">const</span>&amp; ref_convex,</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;                            boost::shared_ptr&lt;GM&gt; <span class="keyword">const</span>&amp; __gm,</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;                            boost::shared_ptr&lt;IM&gt; <span class="keyword">const</span>&amp; __qr_face,</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;                            mpl::bool_&lt;true&gt; );</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;    weights_type M_w;</div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    weights_type M_w;</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    std::vector&lt;std::map&lt;uint16_type,weights_type&gt; &gt; M_w_face;</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    std::vector&lt;std::map&lt;uint16_type,nodes_type &gt; &gt; M_n_face;</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    vector_type M_prod;</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    <span class="keyword">mutable</span> vector_type M_exprq;</div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;};</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> Convex, u<span class="keywordtype">int</span>16_type Integration_Degree, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Elem, <span class="keyword">typename</span> GM, <span class="keyword">typename</span> IM&gt;</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;PointSetQuadrature&lt;Convex,Integration_Degree,T&gt;::constructQROnFace( Elem <span class="keyword">const</span>&amp; ref_convex,</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;        boost::shared_ptr&lt;GM&gt; <span class="keyword">const</span>&amp; __gm,</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;        boost::shared_ptr&lt;IM&gt; <span class="keyword">const</span>&amp; __qr_face,</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;        mpl::bool_&lt;true&gt;  )</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;{</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    M_n_face.resize( Elem::numTopologicalFaces );</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    M_w_face.resize( Elem::numTopologicalFaces );</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;</div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Elem::permutation_type permutation_type;</div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    <span class="comment">// FIXME: we don&#39;t handle the case where faces are not of the</span></div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    <span class="comment">// same type like for prism or pyramids. In that case geopc</span></div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    <span class="comment">// should be defined per face</span></div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> GM::face_gm_type::precompute_type face_pc_type;</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> GM::face_gm_type::precompute_ptrtype face_pc_ptrtype;</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;    face_pc_ptrtype __geopc( <span class="keyword">new</span> face_pc_type( __gm-&gt;boundaryMap(),__qr_face-&gt;points() ) );</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    <span class="keywordflow">for</span> ( uint16_type __f = 0; __f &lt; Elem::numTopologicalFaces; ++__f )</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;    {</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;        <span class="keywordflow">for</span> ( permutation_type __p( permutation_type::IDENTITY );</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;              __p &lt; permutation_type( permutation_type::N_PERMUTATIONS ); ++__p )</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;            {</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;                <span class="keyword">typedef</span> <span class="keyword">typename</span> Elem::topological_face_type element_type;</div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;                <span class="comment">// get ref convex of face with a permutation given</span></div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;                element_type ref_convex_face = ref_convex.topologicalFace( __f, __p.value() );</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;                DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[quadpt] ref_convex_face &quot;</span>  &lt;&lt; __f &lt;&lt; <span class="stringliteral">&quot;=&quot;</span> &lt;&lt; ref_convex_face.points() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;                <span class="comment">//toPython( ref_convex_face );</span></div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;                <span class="keyword">typename</span> GM::template Context&lt;vm::JACOBIAN|vm::POINT|vm::KB,element_type&gt; __c( __gm-&gt;boundaryMap(),</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;                                                                                               ref_convex_face,</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;                                                                                               __geopc );</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;                __c.update( ref_convex_face );</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;                DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[quadpt] ref_convex_face &quot;</span>  &lt;&lt; __f &lt;&lt; <span class="stringliteral">&quot; xref&quot;</span> &lt;&lt; __c.xRefs() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;                DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[quadpt] ref_convex_face &quot;</span>  &lt;&lt; __f &lt;&lt; <span class="stringliteral">&quot; xreal&quot;</span> &lt;&lt; __c.xReal() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    std::vector&lt;weights_type&gt; M_w_face;</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    std::vector&lt;nodes_type&gt; M_n_face;</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    vector_type M_prod;</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    <span class="keyword">mutable</span> vector_type M_exprq;</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;};</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> Convex, u<span class="keywordtype">int</span>16_type Integration_Degree, <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Elem, <span class="keyword">typename</span> GM, <span class="keyword">typename</span> IM&gt;</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;PointSetQuadrature&lt;Convex,Integration_Degree,T&gt;::constructQROnFace( Elem <span class="keyword">const</span>&amp; ref_convex,</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;        boost::shared_ptr&lt;GM&gt; <span class="keyword">const</span>&amp; __gm,</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;        boost::shared_ptr&lt;IM&gt; <span class="keyword">const</span>&amp; __qr_face,</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;        mpl::bool_&lt;true&gt;  )</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;{</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    M_n_face.resize( Elem::numTopologicalFaces );</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    M_w_face.resize( Elem::numTopologicalFaces );</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    <span class="comment">// FIXME: we don&#39;t handle the case where faces are not of the</span></div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    <span class="comment">// same type like for prism or pyramids. In that case geopc</span></div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    <span class="comment">// should be defined per face</span></div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> GM::face_gm_type::precompute_type face_pc_type;</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> GM::face_gm_type::precompute_ptrtype face_pc_ptrtype;</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    face_pc_ptrtype __geopc( <span class="keyword">new</span> face_pc_type( __gm-&gt;boundaryMap(),__qr_face-&gt;points() ) );</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    <span class="keywordflow">for</span> ( uint16_type __f = 0; __f &lt; Elem::numTopologicalFaces; ++__f )</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    {</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> Elem::topological_face_type  element_type;</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        element_type ref_convex_face = ref_convex.topologicalFace( __f );</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[quadpt] ref_convex_face &quot;</span>  &lt;&lt; __f &lt;&lt; <span class="stringliteral">&quot;=&quot;</span> &lt;&lt; ref_convex_face.points() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;        <span class="comment">//toPython( ref_convex_face );</span></div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;        <span class="keyword">typename</span> GM::template Context&lt;vm::JACOBIAN|vm::POINT|vm::KB,element_type&gt; __c( __gm-&gt;boundaryMap(),</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;                ref_convex_face,</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;                __geopc );</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;        __c.update( ref_convex_face );</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[quadpt] ref_convex_face &quot;</span>  &lt;&lt; __f &lt;&lt; <span class="stringliteral">&quot; xref&quot;</span> &lt;&lt; __c.xRefs() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[quadpt] ref_convex_face &quot;</span>  &lt;&lt; __f &lt;&lt; <span class="stringliteral">&quot; xreal&quot;</span> &lt;&lt; __c.xReal() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;        value_type __len = 0.0;</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        M_n_face[__f].resize( Elem::nDim, __qr_face-&gt;nPoints() );</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        M_w_face[__f].resize( __qr_face-&gt;nPoints() );</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[PointSetQuadrature::constructQROnFace] npoints on face &quot;</span></div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;                      &lt;&lt; __f &lt;&lt; <span class="stringliteral">&quot; : &quot;</span></div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;                      &lt;&lt; __qr_face-&gt;nPoints() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;        <span class="comment">// transform the quad nodes on the boundary _reference_</span></div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;        <span class="comment">// element to the face of the reference element face</span></div>
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;                value_type __len = 0.0;</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;                M_n_face[__f][__p.value()].resize( Elem::nDim, __qr_face-&gt;nPoints() );</div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;                M_w_face[__f][__p.value()].resize( __qr_face-&gt;nPoints() );</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;        <span class="keywordflow">for</span> ( uint16_type __ip = 0; __ip &lt; __qr_face-&gt;nPoints(); ++__ip )</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;        {</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;            ublas::column( M_n_face[__f], __ip ) = __c.xReal( __ip );</div>
 <div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;                DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[PointSetQuadrature::constructQROnFace] npoints on face &quot;</span></div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;                         &lt;&lt; __f &lt;&lt; <span class="stringliteral">&quot; : &quot;</span></div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;                         &lt;&lt; __qr_face-&gt;nPoints() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;                <span class="comment">// transform the quad nodes on the boundary _reference_</span></div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;                <span class="comment">// element to the face of the reference element face</span></div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;</div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;                <span class="keywordflow">for</span> ( uint16_type __ip = 0; __ip &lt; __qr_face-&gt;nPoints(); ++__ip )</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;                {</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;                    ublas::column( M_n_face[__f][__p.value()], __ip ) = __c.xReal( __ip );</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;</div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;                    <span class="comment">// w = w_face * ||B*n|| * J</span></div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;                    M_w_face[ __f][__p.value()]( __ip ) = __qr_face-&gt;weight( __ip )*__c.J( __ip );</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;                    __len += M_w_face[ __f][__p.value()]( __ip );</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;            <span class="comment">// w = w_face * ||B*n|| * J</span></div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;            M_w_face[ __f]( __ip ) = __qr_face-&gt;weight( __ip )*__c.J( __ip );</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;            __len += M_w_face[ __f]( __ip );</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;            DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;face &quot;</span> &lt;&lt; __f &lt;&lt; <span class="stringliteral">&quot; ip = &quot;</span> &lt;&lt; __ip &lt;&lt; <span class="stringliteral">&quot;       J =&quot;</span> &lt;&lt; __c.J( __ip ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;            DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;face &quot;</span> &lt;&lt; __f &lt;&lt; <span class="stringliteral">&quot; ip = &quot;</span> &lt;&lt; __ip &lt;&lt; <span class="stringliteral">&quot;  weight =&quot;</span> &lt;&lt; __qr_face-&gt;weight( __ip ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;            DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;face &quot;</span> &lt;&lt; __f &lt;&lt; <span class="stringliteral">&quot; ip = &quot;</span> &lt;&lt; __ip &lt;&lt; <span class="stringliteral">&quot;  weight =&quot;</span> &lt;&lt; M_w_face[ __f]( __ip ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;            <span class="comment">//            DVLOG(2) &lt;&lt; &quot;face &quot; &lt;&lt; __f &lt;&lt; &quot; ip = &quot; &lt;&lt; __ip &lt;&lt; &quot;  x  ref =&quot; &lt;&lt; __c.xRef( __ip ) &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;            <span class="comment">//            DVLOG(2) &lt;&lt; &quot;face &quot; &lt;&lt; __f &lt;&lt; &quot; ip = &quot; &lt;&lt; __ip &lt;&lt; &quot;  x real =&quot; &lt;&lt; __c.xReal( __ip ) &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;        }</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;length = &quot;</span> &lt;&lt; __len &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    }</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;}</div>
 <div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;</div>
 <div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;</div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;                    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;face &quot;</span> &lt;&lt; __f &lt;&lt; <span class="stringliteral">&quot; ip = &quot;</span> &lt;&lt; __ip &lt;&lt; <span class="stringliteral">&quot;       J =&quot;</span> &lt;&lt; __c.J( __ip ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;                    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;face &quot;</span> &lt;&lt; __f &lt;&lt; <span class="stringliteral">&quot; ip = &quot;</span> &lt;&lt; __ip &lt;&lt; <span class="stringliteral">&quot;  weight =&quot;</span> &lt;&lt; __qr_face-&gt;weight( __ip ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;                    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;face &quot;</span> &lt;&lt; __f &lt;&lt; <span class="stringliteral">&quot; ip = &quot;</span> &lt;&lt; __ip &lt;&lt; <span class="stringliteral">&quot;  weight =&quot;</span> &lt;&lt; M_w_face[ __f][__p.value()]( __ip ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;                    <span class="comment">//            DVLOG(2) &lt;&lt; &quot;face &quot; &lt;&lt; __f &lt;&lt; &quot; ip = &quot; &lt;&lt; __ip &lt;&lt; &quot;  x  ref =&quot; &lt;&lt; __c.xRef( __ip ) &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;                    <span class="comment">//            DVLOG(2) &lt;&lt; &quot;face &quot; &lt;&lt; __f &lt;&lt; &quot; ip = &quot; &lt;&lt; __ip &lt;&lt; &quot;  x real =&quot; &lt;&lt; __c.xReal( __ip ) &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                }</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;length = &quot;</span> &lt;&lt; __len &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;            }</div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    }</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;}</div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;</div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;} <span class="comment">// Feel</span></div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;</div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;<span class="keyword">namespace </span>std</div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;{</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> Convex, Feel::u<span class="keywordtype">int</span>16_type Integration_Degree, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;std::ostream&amp; operator&lt;&lt;( std::ostream&amp; os,</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;                          <a class="code" href="classFeel_1_1PointSetQuadrature.html" title="Quadrature point set base class. ">Feel::PointSetQuadrature&lt;Convex,Integration_Degree,T&gt;</a> <span class="keyword">const</span>&amp; qps )</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;{</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    os &lt;&lt; <span class="stringliteral">&quot;quadrature point set:\n&quot;</span></div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;       &lt;&lt; <span class="stringliteral">&quot;number of points: &quot;</span> &lt;&lt; qps.nPoints() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;       &lt;&lt; <span class="stringliteral">&quot;points :  &quot;</span> &lt;&lt; qps.points() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;       &lt;&lt; <span class="stringliteral">&quot;weights :  &quot;</span> &lt;&lt; qps.<a class="code" href="classFeel_1_1PointSetQuadrature.html#a2f8a6d36070a24bac7cb61500502db0b">weights</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    <span class="keywordflow">for</span> ( Feel::uint16_type f = 0; f &lt; qps.nFaces(); ++f )</div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;    {</div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;        os &lt;&lt; <span class="stringliteral">&quot; o Face &quot;</span> &lt;&lt; f &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;        os &lt;&lt; qps.<a class="code" href="classFeel_1_1PointSetQuadrature.html#a284d11e1d4a5fd64af3022bc91704b73">fpoints</a>( f ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;        os &lt;&lt; qps.<a class="code" href="classFeel_1_1PointSetQuadrature.html#a2f8a6d36070a24bac7cb61500502db0b">weights</a>( f ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    }</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    <span class="keywordflow">return</span> os;</div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;}</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;}</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;</div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _QuadPoint_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;} <span class="comment">// Feel</span></div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;<span class="keyword">namespace </span>std</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;{</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> Convex, Feel::u<span class="keywordtype">int</span>16_type Integration_Degree, <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;std::ostream&amp; operator&lt;&lt;( std::ostream&amp; os,</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                          <a class="code" href="classFeel_1_1PointSetQuadrature.html" title="Quadrature point set base class. ">Feel::PointSetQuadrature&lt;Convex,Integration_Degree,T&gt;</a> <span class="keyword">const</span>&amp; qps )</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;{</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    os &lt;&lt; <span class="stringliteral">&quot;quadrature point set:\n&quot;</span></div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;       &lt;&lt; <span class="stringliteral">&quot;number of points: &quot;</span> &lt;&lt; qps.nPoints() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;       &lt;&lt; <span class="stringliteral">&quot;points :  &quot;</span> &lt;&lt; qps.points() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;       &lt;&lt; <span class="stringliteral">&quot;weights :  &quot;</span> &lt;&lt; qps.<a class="code" href="classFeel_1_1PointSetQuadrature.html#a5e896aaeb0d141a859b48c7f198b849c">weights</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;    <span class="keywordflow">for</span> ( Feel::uint16_type f = 0; f &lt; qps.nFaces(); ++f )</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;    {</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;        os &lt;&lt; <span class="stringliteral">&quot; o Face &quot;</span> &lt;&lt; f &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;        os &lt;&lt; qps.<a class="code" href="classFeel_1_1PointSetQuadrature.html#a33240ee59b4f90af3c069d6abbaee9f7">fpoints</a>( f ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;        os &lt;&lt; qps.<a class="code" href="classFeel_1_1PointSetQuadrature.html#a5e896aaeb0d141a859b48c7f198b849c">weights</a>( f ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;    }</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;}</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;}</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _QuadPoint_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Oct 14 2013 13:37:41 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Mon Oct 14 2013 14:15:17 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
