@@ -41,7 +41,7 @@ var NAVTREE =
     [ "Quick Reference", "QuickRef.html", "QuickRef" ],
     [ "Learning by Examples", "Learning.html", "Learning" ],
     [ "Miscellaneous", "Miscellaneous.html", "Miscellaneous" ],
-    [ "Copyright", "md__home_vhuber_feelpp_COPYING.html", null ],
+    [ "Copyright", "md__home_vhuber_feelpp_8git_COPYING.html", null ],
     [ "Bibliographic References", "citelist.html", null ],
     [ "Feel Objects", "annotated.html", "annotated" ]
   ] ]

@@ -52,7 +52,7 @@ var NAVTREEINDEX25 =
 "index.html":[],
 "index.html":[0],
 "md_Credits.html":[1],
-"md__home_vhuber_feelpp_COPYING.html":[8],
+"md__home_vhuber_feelpp_8git_COPYING.html":[8],
 "namespaceFeel.html":[10,0],
 "namespaceFeel_1_1detail.html":[10,0,0],
 "namespaceFeel_1_1math.html":[10,0,4],

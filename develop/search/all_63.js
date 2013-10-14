@@ -122,6 +122,6 @@ var searchData=
   ['curl',['curl',['../namespaceFeel.html#af0e68f5f62e0b915cf3b9ac73b5c4080',1,'Feel::curl(Polynomial&lt; Poly, Vectorial &gt; const &amp;p)'],['../namespaceFeel.html#a3788c225ebee3147f0bcd32c6d77478d',1,'Feel::curl(PolynomialSet&lt; Poly, Vectorial &gt; const &amp;p)']]],
   ['curlt',['curlt',['../namespaceFeel.html#a31844ce9bde57a55518ab057fd040744',1,'Feel::curlt(Polynomial&lt; Poly, Vectorial &gt; const &amp;p)'],['../namespaceFeel.html#ad711a250106c87c0df471a90881a2dfb',1,'Feel::curlt(PolynomialSet&lt; Poly, Vectorial &gt; const &amp;p)']]],
   ['custom_5finitialize_5fx0',['custom_initialize_x0',['../classFeel_1_1problem.html#acf094906107e6fffa949c92e54a380af',1,'Feel::problem']]],
-  ['copyright',['Copyright',['../md__home_vhuber_feelpp_COPYING.html',1,'']]],
+  ['copyright',['Copyright',['../md__home_vhuber_feelpp_8git_COPYING.html',1,'']]],
   ['credits',['Credits',['../md_Credits.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2013.8.6)  14 OCT 2013 12:21
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2013.8.6)  15 OCT 2013 00:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -119,8 +119,8 @@ Package: amsthm 2009/07/02 v2.20.1
 \thm@postskip=\skip47
 \thm@headsep=\skip48
 \dth@everypar=\toks25
-) (/home/vhuber/feelpp/doc/api/feelppmacros.sty (/usr/share/texlive/texmf-dist/
-tex/latex/bbold/bbold.sty
+) (/home/vhuber/feelpp.git/doc/api/feelppmacros.sty (/usr/share/texlive/texmf-d
+ist/tex/latex/bbold/bbold.sty
 Package: bbold 1994/04/06 Bbold symbol package
 LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 42.
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
@@ -1412,8 +1412,8 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
  ) 
 Here is how much of TeX's memory you used:
  11233 strings out of 495060
- 203375 string characters out of 3182054
- 249864 words of memory out of 3000000
+ 203399 string characters out of 3182054
+ 249865 words of memory out of 3000000
  14156 multiletter control sequences out of 15000+200000
  18346 words of font info for 56 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
