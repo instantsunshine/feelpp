@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.95.0-beta.4</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -258,8 +258,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3a2abf934ebe1cfbecf0eb0f77031e49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a2abf934ebe1cfbecf0eb0f77031e49"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>checkLocalPermutation</b> (mpl::bool_&lt; true &gt;) const </td></tr>
 <tr class="separator:a3a2abf934ebe1cfbecf0eb0f77031e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6732eb98018400b002db4de00032446"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6732eb98018400b002db4de00032446"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="separator:ad6732eb98018400b002db4de00032446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3932bc5bc367b87b1e9c5278ec177a05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a3932bc5bc367b87b1e9c5278ec177a05">findNeighboringProcessors</a> ()</td></tr>
 <tr class="separator:a3932bc5bc367b87b1e9c5278ec177a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e1ef7dadfbd66cfebc682605f301bd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a9e1ef7dadfbd66cfebc682605f301bd8">isPeriodic</a> () const </td></tr>
+<tr class="separator:a9e1ef7dadfbd66cfebc682605f301bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42907164322ead3b8be2701a3683a9b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a42907164322ead3b8be2701a3683a9b1">Mesh</a> (WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
 <tr class="separator:a42907164322ead3b8be2701a3683a9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76551687cecd0a7ae73f298cab80cdb2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76551687cecd0a7ae73f298cab80cdb2"></a>
@@ -268,6 +273,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>meshModified</b> ()</
 <tr class="memitem:aaa4f3a177319d77168f4b67beeac08d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa4f3a177319d77168f4b67beeac08d5"></a>
 <a class="el" href="classFeel_1_1Mesh.html">self_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (<a class="el" href="classFeel_1_1Mesh.html">self_type</a> const &amp;m)</td></tr>
 <tr class="separator:aaa4f3a177319d77168f4b67beeac08d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f1a6d23288bd64e1ab660f820cf247"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#ac7f1a6d23288bd64e1ab660f820cf247">setPeriodicEntities</a> (std::vector&lt; PeriodicEntity &gt; const &amp;e)</td></tr>
+<tr class="separator:ac7f1a6d23288bd64e1ab660f820cf247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46b1622bfecf550a3a7bd4cdbd404af6"><td class="memTemplParams" colspan="2"><a class="anchor" id="a46b1622bfecf550a3a7bd4cdbd404af6"></a>
 template&lt;typename RangeT &gt; </td></tr>
 <tr class="memitem:a46b1622bfecf550a3a7bd4cdbd404af6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; Shape, T, Tag &gt;<br class="typebreak"/>
@@ -297,6 +304,9 @@ template&lt;typename RangeT , int TheTag&gt; </td></tr>
 <tr><td colspan="2"><div class="groupHeader">Accessors</div></td></tr>
 <tr class="memitem:a0de57ea89ec883862511aaffd76154a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a0de57ea89ec883862511aaffd76154a7">numGlobalElements</a> () const </td></tr>
 <tr class="separator:a0de57ea89ec883862511aaffd76154a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad22bc88118c90db291c265741371b3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad22bc88118c90db291c265741371b3e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateNumGlobalElements</b> ()</td></tr>
+<tr class="separator:aad22bc88118c90db291c265741371b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8647363fe5925dabd10a1a17117aec8"><td class="memItemLeft" align="right" valign="top">uint16_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#ad8647363fe5925dabd10a1a17117aec8">dimension</a> () const </td></tr>
 <tr class="separator:ad8647363fe5925dabd10a1a17117aec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7971c57a45052fa3828f042d4900344c"><td class="memItemLeft" align="right" valign="top">gm_ptrtype const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a7971c57a45052fa3828f042d4900344c">gm</a> () const </td></tr>
@@ -479,6 +489,20 @@ template&lt;typename Observer &gt; </td></tr>
 <tr class="memitem:a46ed5237acc56a8354173f59c8b0265d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46ed5237acc56a8354173f59c8b0265d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>removeFacesFromBoundary</b> (std::initializer_list&lt; uint16_type &gt; markers)</td></tr>
 <tr class="separator:a46ed5237acc56a8354173f59c8b0265d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a209b95379a14b0179e672e8892a00dc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a209b95379a14b0179e672e8892a00dc7"></a>
+std::set&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;<br class="typebreak"/>
+::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>beginFaceNeighborSubdomains</b> () const </td></tr>
+<tr class="separator:a209b95379a14b0179e672e8892a00dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d4e1a07efa3f1981ec7a702ca95b5b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d4e1a07efa3f1981ec7a702ca95b5b0"></a>
+std::set&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt;<br class="typebreak"/>
+::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>endFaceNeighborSubdomains</b> () const </td></tr>
+<tr class="separator:a0d4e1a07efa3f1981ec7a702ca95b5b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ee404734ae2510985e2f8a92081ec50"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ee404734ae2510985e2f8a92081ec50"></a>
+std::set&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>faceNeighborSubdomains</b> () const </td></tr>
+<tr class="separator:a9ee404734ae2510985e2f8a92081ec50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad105a62f30ad45a4adfc6660dfde1091"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad105a62f30ad45a4adfc6660dfde1091"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addFaceNeighborSubdomain</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> p)</td></tr>
+<tr class="separator:ad105a62f30ad45a4adfc6660dfde1091"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a42907164322ead3b8be2701a3683a9b1"></a>
@@ -934,6 +958,32 @@ template&lt;typename C, typename V, int T&gt; </div>
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the geometric mapping of order 1 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9e1ef7dadfbd66cfebc682605f301bd8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename C, typename V, int T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; C, V, T &gt;::isPeriodic </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true if the mesh has periodic entities </dd></dl>
 
 </div>
 </div>
@@ -1450,6 +1500,33 @@ template&lt;typename C, typename V, int T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ac7f1a6d23288bd64e1ab660f820cf247"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename C, typename V, int T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; C, V, T &gt;::setPeriodicEntities </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; PeriodicEntity &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>e</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>set the periodic entities </p>
+
+</div>
+</div>
 <a class="anchor" id="a128395f3509c6f98e0c01b1ad212b342"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1845,7 +1922,7 @@ template&lt;typename C, typename V, int T&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Oct 14 2013 12:37:49 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Mon Oct 14 2013 13:37:52 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

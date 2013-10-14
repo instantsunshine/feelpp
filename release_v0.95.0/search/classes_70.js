@@ -38,7 +38,7 @@ var searchData=
   ['preconditionerpetsc',['PreconditionerPetsc',['../classFeel_1_1PreconditionerPetsc.html',1,'Feel']]],
   ['principal',['Principal',['../classFeel_1_1Principal.html',1,'Feel']]],
   ['problem',['problem',['../classFeel_1_1problem.html',1,'Feel']]],
-  ['projector',['Projector',['../classFeel_1_1Projector.html',1,'Feel']]],
   ['projector',['Projector',['../classFeel_1_1vf_1_1details_1_1Projector.html',1,'Feel::vf::details']]],
+  ['projector',['Projector',['../classFeel_1_1Projector.html',1,'Feel']]],
   ['pslogger',['PsLogger',['../classFeel_1_1PsLogger.html',1,'Feel']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['u',['u',['../group__GeoXD.html#ga34eb8201d0c8fdb61bd9e2718272e74e',1,'Feel::Geo0D::u()'],['../classFeel_1_1SVD.html#a9a8e75cf72a20bda520e843d2dbf1b2a',1,'Feel::SVD::U()']]],
+  ['u',['U',['../classFeel_1_1SVD.html#a9a8e75cf72a20bda520e843d2dbf1b2a',1,'Feel::SVD::U()'],['../group__GeoXD.html#ga34eb8201d0c8fdb61bd9e2718272e74e',1,'Feel::Geo0D::u()']]],
   ['ub',['ub',['../classFeel_1_1CRB.html#a2e3675cdd7b5f8a6d0045d1371e2a9d2',1,'Feel::CRB::ub(size_type N, parameter_type const &amp;mu, std::vector&lt; vectorN_type &gt; &amp;uN, std::vector&lt; vectorN_type &gt; &amp;uNdu) const '],['../classFeel_1_1CRB.html#a01376bad4656812518f9909ae9679684',1,'Feel::CRB::ub(size_type K, parameter_ptrtype const &amp;mu, std::vector&lt; vectorN_type &gt; &amp;uN, std::vector&lt; vectorN_type &gt; &amp;uNdu) const '],['../classFeel_1_1CRBSCM.html#a9f4e5e040647df091f5bf25af26376af',1,'Feel::CRBSCM::ub(parameter_type const &amp;mu, size_type K=invalid_size_type_value) const '],['../classFeel_1_1CRBSCM.html#a5f3d38ba13973f12b1d5a946f91c8352',1,'Feel::CRBSCM::ub(parameter_ptrtype const &amp;mu, size_type K=invalid_size_type_value) const ']]],
   ['unitcircle',['unitCircle',['../namespaceFeel.html#acb52ee369375c35506744aa7b7f77850',1,'Feel']]],
   ['unitcube',['unitCube',['../namespaceFeel.html#a13fd553670b9336583ef4affee5d9fbb',1,'Feel']]],
@@ -8,7 +8,7 @@ var searchData=
   ['unitnormal',['unitNormal',['../classFeel_1_1Sphere.html#ab1b027d8b163b7c8af9ceb39cc02fd62',1,'Feel::Sphere::unitNormal()'],['../classFeel_1_1Surface.html#a9547488d0de97286c259e579b03edf41',1,'Feel::Surface::unitNormal()'],['../classFeel_1_1GeoMap_1_1Context.html#a1f074d2bccedacb70f61be8a1014d426',1,'Feel::GeoMap::Context::unitNormal()']]],
   ['unitsegment',['unitSegment',['../namespaceFeel.html#a0a1f9cc8a7334a06b823b76866aaba04',1,'Feel']]],
   ['unitsphere',['unitSphere',['../namespaceFeel.html#a5f23b38aeff08e0c33d858c57e5093ab',1,'Feel']]],
-  ['unitsquare',['unitSquare',['../namespaceFeel.html#ae825fbe687017d967220cf4674ac4f21',1,'Feel']]],
+  ['unitsquare',['unitSquare',['../namespaceFeel.html#aaf2805e45809b7e7cd370220b9062da0',1,'Feel']]],
   ['unknown',['unknown',['../classFeel_1_1Bdf.html#a98d2fd5f1560bc33f8d97ee02aa0aa74',1,'Feel::Bdf::unknown(int i)'],['../classFeel_1_1Bdf.html#aa8fe7ac84edb16d83ed470596762156e',1,'Feel::Bdf::unknown(int i)']]],
   ['unknownargc',['unknownArgc',['../classFeel_1_1Application.html#a79e745539709940f7d58a6fdb1837bb2',1,'Feel::Application']]],
   ['unknownargv',['unknownArgv',['../classFeel_1_1Application.html#a63fd0cdffe5299845a4bf01800d6de2e',1,'Feel::Application']]],

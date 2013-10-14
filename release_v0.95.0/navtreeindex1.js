@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"StVenantKirchhoff.html":[6,4,2],
+"StokesCurl.html":[6,3,1],
 "StokesCurl.html#StokesCurl_Implementation":[6,3,1,1],
 "StokesCurl.html#StokesCurl_Theory":[6,3,1,0],
 "StokesTutorial.html":[6,1,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "classFeel_1_1AdvReact.html#a5b13f08249635d501df9ae123969a967":[10,0,11,2],
 "classFeel_1_1AdvReact.html#a72ed1c65a6886b17402af5a7859f676d":[10,0,11,7],
 "classFeel_1_1AdvReact.html#aaf4b3c4efe4df20d5285ba3dc6eeb4e7":[10,0,11,3],
-"classFeel_1_1AdvReact.html#ab56e38ad977a7486f2cb2b87deb75bf0":[10,0,11,5],
-"classFeel_1_1AdvReact.html#ab82f955478ca1315b5c599d4c10b677c":[10,0,11,6],
-"classFeel_1_1AdvReact.html#ada2e142e58f07216abe36e8631f9c15c":[10,0,11,0]
+"classFeel_1_1AdvReact.html#ab56e38ad977a7486f2cb2b87deb75bf0":[10,0,11,5]
 };

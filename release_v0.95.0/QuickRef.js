@@ -78,9 +78,9 @@ var QuickRef =
         [ "on", "Forms.html#on", null ]
       ] ]
     ] ],
-    [ "Post-Processing and Visualisation", "Exporter.html", [
+    [ "Post-Processing and Visualization", "Exporter.html", [
       [ "Introduction", "Exporter.html#Introduction", null ],
       [ "General principles", "Exporter.html#VisPrinciples", null ],
-      [ "Visualisation", "Exporter.html#Visualisation", null ]
+      [ "Visualization", "Exporter.html#Visualization", null ]
     ] ]
 ];

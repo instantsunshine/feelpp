@@ -10,6 +10,7 @@ var searchData=
   ['timermap_2ehpp',['timermap.hpp',['../timermap_8hpp.html',1,'']]],
   ['timeset_2ecpp',['timeset.cpp',['../timeset_8cpp.html',1,'']]],
   ['trace_2ehpp',['trace.hpp',['../trace_8hpp.html',1,'']]],
+  ['traces_2ecpp',['traces.cpp',['../traces_8cpp.html',1,'']]],
   ['twovalued_2ehpp',['twovalued.hpp',['../twovalued_8hpp.html',1,'']]],
   ['typetraits_2ehpp',['typetraits.hpp',['../typetraits_8hpp.html',1,'']]]
 ];

@@ -32,6 +32,7 @@ var searchData=
   ['totext',['toText',['../classFeel_1_1ExprBase.html#aa268791c253d266b474dcb93400affeb',1,'Feel::ExprBase']]],
   ['trace',['trace',['../classFeel_1_1FunctionSpace.html#ae33afdfc2163ae92e4ce3959cff05e08',1,'Feel::FunctionSpace::trace()'],['../classFeel_1_1Mesh.html#a128395f3509c6f98e0c01b1ad212b342',1,'Feel::Mesh::trace()']]],
   ['trace_2ehpp',['trace.hpp',['../trace_8hpp.html',1,'']]],
+  ['traces_2ecpp',['traces.cpp',['../traces_8cpp.html',1,'']]],
   ['trainsampling',['trainSampling',['../classFeel_1_1CRB.html#ab3204caa297cbf1ae499a7a8faffa620',1,'Feel::CRB']]],
   ['transform',['transform',['../classFeel_1_1GeoMap.html#a7ca62de11f024e0aca2dbee79113a1c2',1,'Feel::GeoMap::transform(const node_t_type &amp;__ref_p, matrix_node_t_type const &amp;__G) const '],['../classFeel_1_1GeoMap.html#addc763570320c20ec3ef343bfdb8745a',1,'Feel::GeoMap::transform(uint16_type __idref, matrix_node_t_type const &amp;__G, precompute_type const *__pc) const '],['../classFeel_1_1GeoMap.html#a43c603273b1c5484283261320a02a761',1,'Feel::GeoMap::transform(matrix_node_t_type const &amp;G, precompute_type const *pc, matrix_type &amp;x) const ']]],
   ['transient_5fedp',['transient_edp',['../structtransient__edp.html',1,'']]],

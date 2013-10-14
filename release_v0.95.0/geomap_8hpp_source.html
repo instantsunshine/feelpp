@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.95.0-beta.4</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -926,7 +926,7 @@ $(document).ready(function(){initNavTree('geomap_8hpp_source.html','');});
 <div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;</div>
 <div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;}</div>
 <div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;</div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classFeel_1_1GeoMap_1_1Context.html#a456e2331293c2b0cb41955dbc4d4aaa7">update</a>( element_type <span class="keyword">const</span>&amp; __e, uint16_type __f, permutation_type __perm )</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classFeel_1_1GeoMap_1_1Context.html#a456e2331293c2b0cb41955dbc4d4aaa7">update</a>( element_type <span class="keyword">const</span>&amp; __e, uint16_type __f, permutation_type __perm, <span class="keywordtype">bool</span> __updateJacobianCtx=<span class="keyword">true</span> )</div>
 <div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;{</div>
 <div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;    <span class="comment">//M_element_c = boost::shared_ptr&lt;element_type const&gt;(&amp;__e);</span></div>
 <div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    M_element = boost::addressof( __e );</div>
@@ -969,7 +969,7 @@ $(document).ready(function(){initNavTree('geomap_8hpp_source.html','');});
 <div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;            }</div>
 <div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;    }</div>
 <div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;</div>
-<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;    <span class="keywordflow">if</span> ( vm::has_jacobian&lt;context&gt;::value )</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;    <span class="keywordflow">if</span> ( vm::has_jacobian&lt;context&gt;::value &amp;&amp; __updateJacobianCtx )</div>
 <div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;    {</div>
 <div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;        updateJKBN( mpl::bool_&lt;is_linear&gt;() );</div>
 <div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;    }</div>
@@ -2637,7 +2637,7 @@ $(document).ready(function(){initNavTree('geomap_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Oct 14 2013 12:37:27 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Mon Oct 14 2013 13:37:30 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

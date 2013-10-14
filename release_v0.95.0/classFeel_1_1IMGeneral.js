@@ -1,6 +1,6 @@
 var classFeel_1_1IMGeneral =
 [
-    [ "convex_type", "classFeel_1_1IMGeneral.html#a8e70975dbeed3b1baeb8c8acc309e604", null ],
+    [ "convex_type", "classFeel_1_1IMGeneral.html#a1e6156a19af5765d8ba28227e0e5dc64", null ],
     [ "degree_policy_type", "classFeel_1_1IMGeneral.html#a7a666ec084835dccb15199aa12cdf0a9", null ],
     [ "face_quadrature_type", "classFeel_1_1IMGeneral.html#a59e40aaec73aef5843b4cdc130411662", null ],
     [ "node_type", "classFeel_1_1IMGeneral.html#a50a1c638213f61b23f98b1933f755aeb", null ],

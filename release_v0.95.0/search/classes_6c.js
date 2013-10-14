@@ -1,8 +1,8 @@
 var searchData=
 [
   ['lagrange',['Lagrange',['../classFeel_1_1fem_1_1Lagrange.html',1,'Feel::fem']]],
-  ['laplacian',['Laplacian',['../classFeel_1_1Laplacian.html',1,'Feel']]],
   ['laplacian',['Laplacian',['../classLaplacian.html',1,'']]],
+  ['laplacian',['Laplacian',['../classFeel_1_1Laplacian.html',1,'Feel']]],
   ['laplacian_5fparabolic',['Laplacian_parabolic',['../classLaplacian__parabolic.html',1,'']]],
   ['laplacianlm',['LaplacianLM',['../classFeel_1_1LaplacianLM.html',1,'Feel']]],
   ['legendre',['Legendre',['../classFeel_1_1Legendre.html',1,'Feel']]],

@@ -857,3 +857,4 @@
 \form#856:$ \begin{aligned} -\Delta u + u^\lambda = f,\quad u = 0 \text{ on } \partial \Omega. \end{aligned} $
 \form#857:$\lambda \in \mathbb{R_+}$
 \form#858:$ \begin{aligned} -\Delta u + \lambda e^u = f,\quad u = 0 \text{ on } \partial \Omega \end{aligned} $
+\form#859:$2-1=1$
