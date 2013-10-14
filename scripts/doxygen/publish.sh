@@ -2,7 +2,8 @@
 
 function builddox
 {
-  doxygen_dir=$HOME/doxygen-${1/\//_}
+  branch=${1/\//_}
+  doxygen_dir=$HOME/doxygen-$branch
   feelpp_source=$2
   gh_pages=$3
 
