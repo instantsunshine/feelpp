@@ -18,7 +18,7 @@ var searchData=
   ['permutation',['permutation',['../classFeel_1_1GeoElement2D.html#a18d3c2fa13e04b63dac3f8e1e0897c73',1,'Feel::GeoElement2D::permutation()'],['../classFeel_1_1GeoND.html#ac11fdcf33bbf45651af84f92013e31b6',1,'Feel::GeoND::permutation()'],['../classFeel_1_1GeoMap_1_1Context.html#a31bf85298851064fcc0b284c6ffb6419',1,'Feel::GeoMap::Context::permutation()']]],
   ['pfemapp_5foptions',['pfemapp_options',['../namespaceFeel.html#ad2b131cb1baf12462234f232706a3541',1,'Feel']]],
   ['pidinpartition',['pidInPartition',['../classFeel_1_1GeoEntity.html#ae11d3dda92bd8f62233c90bfeb78a87d',1,'Feel::GeoEntity']]],
-  ['pod',['pod',['../classFeel_1_1POD.html#a1b3e78255d4d6f8997ac93fc5880839e',1,'Feel::POD::pod(mode_set_type &amp;ModeSet, bool is_primal)'],['../classFeel_1_1POD.html#aea3caf8c890c0bc9ab3a20abba37b948',1,'Feel::POD::POD(POD const &amp;o)']]],
+  ['pod',['POD',['../classFeel_1_1POD.html#aea3caf8c890c0bc9ab3a20abba37b948',1,'Feel::POD::POD(POD const &amp;o)'],['../classFeel_1_1POD.html#a1b3e78255d4d6f8997ac93fc5880839e',1,'Feel::POD::pod(mode_set_type &amp;ModeSet, bool is_primal)']]],
   ['podmatrix',['podMatrix',['../classFeel_1_1POD.html#ae95a129311da1a5ddff80307bd427440',1,'Feel::POD']]],
   ['point',['point',['../classFeel_1_1GeoElement0D.html#a86362b572ca7f08cb9614a7881abaead',1,'Feel::GeoElement0D::point()'],['../classFeel_1_1GeoND.html#a7b0b3f109c3c67842a600e692cbedc35',1,'Feel::GeoND::point(uint16_type i)'],['../classFeel_1_1GeoND.html#a4051d59feb51b7621e58618d79b36a60',1,'Feel::GeoND::point(uint16_type i) const ']]],
   ['pointelementneighborids',['pointElementNeighborIds',['../classFeel_1_1GeoND.html#aa69cfc18c0acfd2e6a517098139a0c38',1,'Feel::GeoND']]],
@@ -62,7 +62,7 @@ var searchData=
   ['project',['project',['../namespaceFeel.html#ae89776231eca6bd68ba734da512759b3',1,'Feel']]],
   ['projectiononpodspace',['projectionOnPodSpace',['../classFeel_1_1CRB.html#a71c49c891eb5a2a3405c2cbe081d9ad6',1,'Feel::CRB']]],
   ['projector',['projector',['../namespaceFeel.html#aa91126beaf7894e8c7f5198230253625',1,'Feel']]],
-  ['pslogger',['PsLogger',['../classFeel_1_1PsLogger.html#af99b55b39901cdc6fca2737ffac73dd1',1,'Feel::PsLogger']]],
+  ['pslogger',['PsLogger',['../classFeel_1_1PsLogger.html#a466132946b8d2d20d1dd73939e277fa3',1,'Feel::PsLogger']]],
   ['push_5fall',['push_all',['../structFeel_1_1SolverConstrained_1_1Stats.html#a968f389f8550cd09902b73cefdcc4cb1',1,'Feel::SolverConstrained::Stats']]],
   ['push_5fback',['push_back',['../classFeel_1_1ParameterSpace_1_1Sampling.html#aece3f394e4b1b2b8b7c2a7eb3b7cab6d',1,'Feel::ParameterSpace::Sampling']]],
   ['push_5fx',['push_x',['../structFeel_1_1SolverConstrained_1_1Stats.html#a02242d7a0baf9d7556fe15d0e04ccf79',1,'Feel::SolverConstrained::Stats']]]

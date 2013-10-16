@@ -39,7 +39,7 @@ var searchData=
   ['pfemapp_5foptions',['pfemapp_options',['../namespaceFeel.html#ad2b131cb1baf12462234f232706a3541',1,'Feel']]],
   ['pidinpartition',['pidInPartition',['../classFeel_1_1GeoEntity.html#ae11d3dda92bd8f62233c90bfeb78a87d',1,'Feel::GeoEntity']]],
   ['plottingproperties',['PlottingProperties',['../classFeel_1_1ExporterGnuplot.html#a5c3132ff5e3f49c42169ac996516b28b',1,'Feel::ExporterGnuplot']]],
-  ['pod',['pod',['../classFeel_1_1POD.html#a1b3e78255d4d6f8997ac93fc5880839e',1,'Feel::POD::pod(mode_set_type &amp;ModeSet, bool is_primal)'],['../classFeel_1_1POD.html#aea3caf8c890c0bc9ab3a20abba37b948',1,'Feel::POD::POD(POD const &amp;o)']]],
+  ['pod',['POD',['../classFeel_1_1POD.html#aea3caf8c890c0bc9ab3a20abba37b948',1,'Feel::POD::POD(POD const &amp;o)'],['../classFeel_1_1POD.html#a1b3e78255d4d6f8997ac93fc5880839e',1,'Feel::POD::pod(mode_set_type &amp;ModeSet, bool is_primal)']]],
   ['pod',['POD',['../classFeel_1_1POD.html',1,'Feel']]],
   ['pod_2ecpp',['pod.cpp',['../pod_8cpp.html',1,'']]],
   ['pod_2ehpp',['pod.hpp',['../pod_8hpp.html',1,'']]],
@@ -144,7 +144,7 @@ var searchData=
   ['projector',['Projector',['../classFeel_1_1Projector.html',1,'Feel']]],
   ['projectors_2ehpp',['projectors.hpp',['../projectors_8hpp.html',1,'']]],
   ['pslogger',['PsLogger',['../classFeel_1_1PsLogger.html',1,'Feel']]],
-  ['pslogger',['PsLogger',['../classFeel_1_1PsLogger.html#af99b55b39901cdc6fca2737ffac73dd1',1,'Feel::PsLogger']]],
+  ['pslogger',['PsLogger',['../classFeel_1_1PsLogger.html#a466132946b8d2d20d1dd73939e277fa3',1,'Feel::PsLogger']]],
   ['push_5fall',['push_all',['../structFeel_1_1SolverConstrained_1_1Stats.html#a968f389f8550cd09902b73cefdcc4cb1',1,'Feel::SolverConstrained::Stats']]],
   ['push_5fback',['push_back',['../classFeel_1_1ParameterSpace_1_1Sampling.html#aece3f394e4b1b2b8b7c2a7eb3b7cab6d',1,'Feel::ParameterSpace::Sampling']]],
   ['push_5fx',['push_x',['../structFeel_1_1SolverConstrained_1_1Stats.html#a02242d7a0baf9d7556fe15d0e04ccf79',1,'Feel::SolverConstrained::Stats']]]
