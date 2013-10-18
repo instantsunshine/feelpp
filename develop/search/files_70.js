@@ -1,6 +1,7 @@
 var searchData=
 [
   ['parameterspace_2ehpp',['parameterspace.hpp',['../parameterspace_8hpp.html',1,'']]],
+  ['partitionio_2ehpp',['partitionio.hpp',['../partitionio_8hpp.html',1,'']]],
   ['penalisation2_2ecpp',['penalisation2.cpp',['../penalisation2_8cpp.html',1,'']]],
   ['penalisation3_2ecpp',['penalisation3.cpp',['../penalisation3_8cpp.html',1,'']]],
   ['periodic_2ehpp',['periodic.hpp',['../periodic_8hpp.html',1,'']]],

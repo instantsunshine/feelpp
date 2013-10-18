@@ -21,5 +21,6 @@ var Miscellaneous =
       [ "Theory", "Layout.html#Example_Theory", null ],
       [ "Implementation", "Layout.html#Example_Implementation", null ],
       [ "Results", "Layout.html#Example_Results", null ]
-    ] ]
+    ] ],
+    [ "CMakeVariables", "CMakeVariables.html", null ]
 ];

@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git0625c55</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git194a7f1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -122,42 +122,42 @@ Choosing a linear algebra backend</h1>
 <div class="line">     <a class="code" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">Backend&lt;double&gt;::build</a>( BACKEND_PETSC );</div>
 </div><!-- fragment --><p>The backend provides an interface to solve </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ A x = b \]" src="form_743.png"/>
+<img class="formulaDsp" alt="\[ A x = b \]" src="form_742.png"/>
 </p>
-<p> where <img class="formulaInl" alt="$A$" src="form_4.png"/> is a <img class="formulaInl" alt="$n \times n $" src="form_702.png"/> sparse matrix and <img class="formulaInl" alt="$x,b$" src="form_744.png"/> vectors of size <img class="formulaInl" alt="$n$" src="form_426.png"/>. The backend defines the <code>C++</code> types for each of these, e.g : </p>
+<p> where <img class="formulaInl" alt="$A$" src="form_4.png"/> is a <img class="formulaInl" alt="$n \times n $" src="form_701.png"/> sparse matrix and <img class="formulaInl" alt="$x,b$" src="form_743.png"/> vectors of size <img class="formulaInl" alt="$n$" src="form_426.png"/>. The backend defines the <code>C++</code> types for each of these, e.g : </p>
 <div class="fragment"><div class="line">Backend&lt;double&gt;::sparse_matrix_type A;</div>
 <div class="line">Backend&lt;double&gt;::vector_type x,b;</div>
 </div><!-- fragment --><p>In practice, we use the <code>boost::shared_ptr&lt;&gt;</code> shared pointer to ensure that we won't get memory leaks. The backends provide a corresponding <code>typedef</code> </p>
 <div class="fragment"><div class="line">Backend&lt;double&gt;::sparse_matrix_ptrtype A( backend-&gt;newMatrix( Xh, Yh ) );</div>
 <div class="line">Backend&lt;double&gt;::vector_ptrtype x( backend-&gt;newVector( Yh ) );</div>
 <div class="line">Backend&lt;double&gt;::vector_ptrtype b( backend-&gt;newVector( Xh ) );</div>
-</div><!-- fragment --><p>where <img class="formulaInl" alt="$X_h$" src="form_400.png"/> and <img class="formulaInl" alt="$Y_h$" src="form_745.png"/> are function spaces providing the number of degrees of freedom that will define the size of the matrix and vectors thanks to the helpers functions <code><a class="el" href="classFeel_1_1Backend.html#ae9cc4a2666705823d5d435637b24483d">Backend::newMatrix()</a></code> and <code><a class="el" href="classFeel_1_1Backend.html#aa6df4b22de06a12fb97d95a35e08cd0c">Backend::newVector</a></code>. In a parallel setting, the local/global processor mapping would be passed down by the function spaces.</p>
+</div><!-- fragment --><p>where <img class="formulaInl" alt="$X_h$" src="form_400.png"/> and <img class="formulaInl" alt="$Y_h$" src="form_744.png"/> are function spaces providing the number of degrees of freedom that will define the size of the matrix and vectors thanks to the helpers functions <code><a class="el" href="classFeel_1_1Backend.html#ae9cc4a2666705823d5d435637b24483d">Backend::newMatrix()</a></code> and <code><a class="el" href="classFeel_1_1Backend.html#aa6df4b22de06a12fb97d95a35e08cd0c">Backend::newVector</a></code>. In a parallel setting, the local/global processor mapping would be passed down by the function spaces.</p>
 <h1><a class="anchor" id="Linear_Solving"></a>
 Solving</h1>
-<p>To solve the linear problem <img class="formulaInl" alt="$Ax=b$" src="form_746.png"/>, the backend provides a function <code>solve</code>.<br/>
+<p>To solve the linear problem <img class="formulaInl" alt="$Ax=b$" src="form_745.png"/>, the backend provides a function <code>solve</code>.<br/>
  <b>Interface :</b><br/>
  </p>
 <div class="fragment"><div class="line">solve(_matrix=A, _solution=x, _rhs=b)</div>
 </div><!-- fragment --><p> Required Parameters : </p>
 <ul>
 <li><code>_matrix</code> : the matrix <img class="formulaInl" alt="$A$" src="form_4.png"/> has a <code>sparse_matrix_ptrtype</code> type </li>
-<li><code>_solution</code> : the solution <img class="formulaInl" alt="$x$" src="form_616.png"/> has a type <code>vector_type</code> or <code>vector_ptrtype</code> </li>
-<li><code>_rhs</code> : the second member vector <img class="formulaInl" alt="$b$" src="form_747.png"/> has a type <code>vector_ptrtype</code> </li>
+<li><code>_solution</code> : the solution <img class="formulaInl" alt="$x$" src="form_615.png"/> has a type <code>vector_type</code> or <code>vector_ptrtype</code> </li>
+<li><code>_rhs</code> : the second member vector <img class="formulaInl" alt="$b$" src="form_746.png"/> has a type <code>vector_ptrtype</code> </li>
 </ul>
 <p>Optional Parameters </p>
 <ul>
-<li><code>_prec</code> : preconditioner, instead of solving <img class="formulaInl" alt="$Ax=b$" src="form_746.png"/>, we solve <img class="formulaInl" alt="$P^{-1}Ax= P^{-1}b$" src="form_748.png"/>. This method can be applied in iterative methods and permits to decrease the number of iterations in the resolution system </li>
+<li><code>_prec</code> : preconditioner, instead of solving <img class="formulaInl" alt="$Ax=b$" src="form_745.png"/>, we solve <img class="formulaInl" alt="$P^{-1}Ax= P^{-1}b$" src="form_747.png"/>. This method can be applied in iterative methods and permits to decrease the number of iterations in the resolution system </li>
 <li><code>_</code> maxit : maximum number of iterations, this option is used with an iterative solving method </li>
-<li><code>_rtolerance</code> : residual tolerance, the fraction <img class="formulaInl" alt="$\displaystyle{\frac{\mid\mid r^{(k)} \mid\mid }{\mid\mid r^{(0)} \mid\mid}}$" src="form_749.png"/> is inferior to the residual tolerance with <img class="formulaInl" alt="$r^{(k)}=b-Ax^{(k)}$" src="form_750.png"/> and <img class="formulaInl" alt="$x^{(k)}$" src="form_751.png"/> the solution at the <img class="formulaInl" alt="$k^{th}$" src="form_752.png"/> iteration </li>
-<li><code>_atolerance</code> : absolute tolerance, <img class="formulaInl" alt="$\mid\mid r^{(k)} \mid\mid $" src="form_753.png"/> is inferior to the absolute tolerance </li>
+<li><code>_rtolerance</code> : residual tolerance, the fraction <img class="formulaInl" alt="$\displaystyle{\frac{\mid\mid r^{(k)} \mid\mid }{\mid\mid r^{(0)} \mid\mid}}$" src="form_748.png"/> is inferior to the residual tolerance with <img class="formulaInl" alt="$r^{(k)}=b-Ax^{(k)}$" src="form_749.png"/> and <img class="formulaInl" alt="$x^{(k)}$" src="form_750.png"/> the solution at the <img class="formulaInl" alt="$k^{th}$" src="form_751.png"/> iteration </li>
+<li><code>_atolerance</code> : absolute tolerance, <img class="formulaInl" alt="$\mid\mid r^{(k)} \mid\mid $" src="form_752.png"/> is inferior to the absolute tolerance </li>
 <li><code>_dtolerance</code> : different tolerance, sometimes, the residue doesn’t decrease continuously during the iterations. The difference between two plots doesn’t have to exceed the parameter choosen for the difference tolerance. </li>
-<li><code>_transpose</code> : boolean to use transpose matrix, instead of solving <img class="formulaInl" alt="$Ax=b$" src="form_746.png"/>, we solve <img class="formulaInl" alt="$A^{t}x=b$" src="form_754.png"/>. If <img class="formulaInl" alt="$A$" src="form_4.png"/> is defined and positive, <img class="formulaInl" alt="$A^{t}=A$" src="form_755.png"/>.</li>
+<li><code>_transpose</code> : boolean to use transpose matrix, instead of solving <img class="formulaInl" alt="$Ax=b$" src="form_745.png"/>, we solve <img class="formulaInl" alt="$A^{t}x=b$" src="form_753.png"/>. If <img class="formulaInl" alt="$A$" src="form_4.png"/> is defined and positive, <img class="formulaInl" alt="$A^{t}=A$" src="form_754.png"/>.</li>
 </ul>
 <p>The library <code>Boost::Parameters</code> allows you to enter parameters in the order you want. It supports deduced parameters, that is to say parameters whose identity can be deduced from their types. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Thu Oct 17 2013 00:02:39 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sat Oct 19 2013 00:02:23 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
