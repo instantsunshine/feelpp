@@ -2,6 +2,11 @@ var NAVTREE =
 [
   [ "Feel++", "index.html", [
     [ "Introduction", "index.html", null ],
+    [ "CMakeVariables", "CMakeVariables.html", [
+      [ "bite", "CMakeVariables.html#bite", null ],
+      [ "page", "CMakeVariables.html#page", null ],
+      [ "toucpouic", "CMakeVariables.html#toucpouic", null ]
+    ] ],
     [ "Credits", "md_Credits.html", null ],
     [ "Mathematical Concepts and Notations", "Notations.html", [
       [ "Polynomial Library", "Notations.html#PolynomialNotations", [
@@ -47,32 +52,32 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"StokesCurl.html#StokesCurl_Implementation",
-"classFeel_1_1AdvReact.html#aef22693017daf7ec2c9956c8843457fe",
-"classFeel_1_1Backend.html#af7f595eb7c5e4bb85aef7ec903fe6056",
-"classFeel_1_1CRB.html#ab3204caa297cbf1ae499a7a8faffa620",
-"classFeel_1_1CRBModelTrilinear.html#a1e486503252cc63461447124f12be436",
-"classFeel_1_1CastIron.html#ac769efe81b888528a61f5549924cbc48",
-"classFeel_1_1DofTable.html#a84e7a1a1a3f8d4700494891530653d79",
-"classFeel_1_1Example.html#ab0c29875fb7713090b7d17edc4aec5a6",
-"classFeel_1_1FiniteElement.html#a6cb10fea044acbb3300d00fafd6c1018",
-"classFeel_1_1GeoEntity.html#ab97b06c52c6ddeb2aa55aa59396aadea",
-"classFeel_1_1GeoND.html#a8212c542dbedec403d857fffbe486490",
-"classFeel_1_1IMGeneral.html#a40d0c5c12136f89efff979036dfdc884",
-"classFeel_1_1MatrixBlockBase.html#a96593ef6ece0177bd5abfe43b0e0230d",
-"classFeel_1_1MatrixUBlas.html#a6969b264d89bac2871c74e45248e0693",
-"classFeel_1_1Mesh2D.html#a3fe32bcfce43fa297eead3fa08f13d91",
-"classFeel_1_1OperatorLagrangeP1.html#a71278aaed2a4bd307d70a919172bde84",
-"classFeel_1_1POD.html#ae39bf6d125e547bd80025562a232b6cc",
-"classFeel_1_1Polynomial.html#a7e22117299d2950497603d3c33947a38",
-"classFeel_1_1Simget.html#a4a4507e4e99a9634adaf704dce940247",
-"classFeel_1_1SolverNonLinear.html#ab53d2853b7825d9ed335df2f5cb51829",
-"classFeel_1_1SystemImplicitNonLinear.html#ad1833d9e25cd6ea50547ec25ff5603de",
-"classFeel_1_1TimerMap.html#a9b1a72cf1771310737c97ae8eb14fbbd",
-"classFeel_1_1VectorUblas.html#ae541216b48cb6224008a353650a6a955",
-"classFeel_1_1functional_1_1IntegralMomentOnFace.html#af2175817915d6531523c91ee3462bb25",
-"classThreeFieldsLaplacian.html#a14cd7ac982feef75f9bbae089dbb3d1b",
-"structFeel_1_1functional_1_1PointsDerivative.html#a24ed64b32e41611e85a3544475570406"
+"Spaces.html#QRFunctionSpace",
+"classFeel_1_1AdvReact.html#aaf4b3c4efe4df20d5285ba3dc6eeb4e7",
+"classFeel_1_1Backend.html#ae814550c53cc42c83dc4c3e252146905",
+"classFeel_1_1CRB.html#aacfd9442a240b6230944f903fe7d5662",
+"classFeel_1_1CRBModelTrilinear.html#a0bb9c6b03ac66a6f7a9d8e39c70c12c6",
+"classFeel_1_1CastIron.html#a7eae777fa555628e9524f6ef0bccacb4",
+"classFeel_1_1DofTable.html#a7a8626e52d690e16eb98e9ef93452224",
+"classFeel_1_1Example.html#a347792418531c8657b47b42a1febe3f6",
+"classFeel_1_1FiniteElement.html#a3201ef023a1ac4c199f634d682efe783",
+"classFeel_1_1GeoEntity.html#aaff276ccadeff004f57580068405658b",
+"classFeel_1_1GeoND.html#a7c1f6efdcc1240ae37c3ff8a12964d6d",
+"classFeel_1_1IMExact.html#af29b4ad2726676005003839261c0a097",
+"classFeel_1_1MatrixBlockBase.html#a834fbeed0673d0fb39d5f1370460c14a",
+"classFeel_1_1MatrixUBlas.html#a3a5dc093f280a2c5ede7e41fce630a50",
+"classFeel_1_1Mesh2D.html#a266a36d7b531e03d339d1363cb574e33",
+"classFeel_1_1OperatorLagrangeP1.html#a58e65606a9821eb5414029494a72a597",
+"classFeel_1_1POD.html#ac53bc03016b428d12e2bf6a0dec9d6f6",
+"classFeel_1_1Polynomial.html#a700a83518a62558531872782be724089",
+"classFeel_1_1Simget.html#a25001e751c81b958ef3b82cf6e63ff9a",
+"classFeel_1_1SolverNonLinear.html#ab16a063b199eef5f42d2166962fc423a",
+"classFeel_1_1SystemImplicitNonLinear.html#ab023e8bdaabc1e78726c679a9e52a4dd",
+"classFeel_1_1TimerMap.html",
+"classFeel_1_1VectorUblas.html#ad27d342053e6f08b9f510cf4d51c599e",
+"classFeel_1_1functional_1_1IntegralMomentOnFace.html#a1e6046af2f998ed356f69399cb7dd3f7",
+"classResidualEstimator.html#add8034ff9fc4d3bfa21b888151150f3b",
+"structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html#a944cad8563445f1ceee2342d2f9dd839"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
