@@ -18,7 +18,6 @@ var searchData=
   ['lastrowentryonproc',['lastRowEntryOnProc',['../class_feel_1_1_graph_c_s_r.html#a7de7d5965ac32456da584ac21797c420',1,'Feel::GraphCSR']]],
   ['lb',['lb',['../class_feel_1_1_c_r_b.html#a7e97fd602e73429231f6e590314d4d8e',1,'Feel::CRB::lb(size_type N, parameter_type const &amp;mu, std::vector&lt; vectorN_type &gt; &amp;uN, std::vector&lt; vectorN_type &gt; &amp;uNdu, std::vector&lt; vectorN_type &gt; &amp;uNold, std::vector&lt; vectorN_type &gt; &amp;uNduold, int K=0) const '],['../class_feel_1_1_c_r_b.html#a23f8baf22f884034d197e53a7c7404fa',1,'Feel::CRB::lb(parameter_ptrtype const &amp;mu, size_type N, std::vector&lt; vectorN_type &gt; &amp;uN, std::vector&lt; vectorN_type &gt; &amp;uNdu) const '],['../class_feel_1_1_c_r_b_trilinear.html#a7542f8be195700eb1af7d5fff358ec62',1,'Feel::CRBTrilinear::lb()'],['../class_feel_1_1_c_r_b_s_c_m.html#a653dc291e0737c4b2710fad4ea91d9d9',1,'Feel::CRBSCM::lb(parameter_type const &amp;mu, size_type K=invalid_size_type_value, int indexmu=-1) const '],['../class_feel_1_1_c_r_b_s_c_m.html#a607253166212b78ee41585534ef3f2d3',1,'Feel::CRBSCM::lb(parameter_ptrtype const &amp;mu, size_type K=invalid_size_type_value, int indexmu=-1) const ']]],
   ['ldl',['ldl',['../class_feel_1_1glas_1_1ldl.html',1,'Feel::glas']]],
-  ['learning_20by_20examples',['Learning by Examples',['../_learning.html',1,'']]],
   ['lebesgue_2ehpp',['lebesgue.hpp',['../lebesgue_8hpp.html',1,'']]],
   ['legendre',['Legendre',['../class_feel_1_1_legendre.html',1,'Feel']]],
   ['legendre_2ehpp',['legendre.hpp',['../legendre_8hpp.html',1,'']]],
@@ -50,7 +49,7 @@ var searchData=
   ['loop',['Loop',['../class_feel_1_1_geo_tool_1_1_loop.html',1,'Feel::GeoTool']]],
   ['lshape',['LShape',['../class_l_shape.html',1,'LShape&lt; Dim &gt;'],['../class_l_shape.html#a57a32bd0a184a192e125e30fc4789035',1,'LShape::LShape()']]],
   ['lshape_2ecpp',['Lshape.cpp',['../_lshape_8cpp.html',1,'']]],
-  ['lu',['LU',['../class_feel_1_1_l_u.html',1,'Feel']]],
   ['lu',['LU',['../class_feel_1_1_l_u.html#a3dff1dd8de836298409aafc6ace10513',1,'Feel::LU']]],
+  ['lu',['LU',['../class_feel_1_1_l_u.html',1,'Feel']]],
   ['lu_2ehpp',['lu.hpp',['../lu_8hpp.html',1,'']]]
 ];

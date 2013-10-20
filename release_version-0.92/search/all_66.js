@@ -84,7 +84,6 @@ var searchData=
   ['firstrowentryonproc',['firstRowEntryOnProc',['../class_feel_1_1_graph_c_s_r.html#ac70245ce87fcf2b76b1f409b4d6568c2',1,'Feel::GraphCSR']]],
   ['fixedpoint',['fixedPoint',['../class_feel_1_1_c_r_b.html#aab613adb837df3ca32656fd2898c8660',1,'Feel::CRB']]],
   ['flags_2ehpp',['flags.hpp',['../flags_8hpp.html',1,'']]],
-  ['fluid_20mechanics',['Fluid Mechanics',['../_fluid_mechanics.html',1,'Learning']]],
   ['format',['format',['../class_feel_1_1_importer.html#ae597fef05ad19d2fbddfbd5cf5127ba6',1,'Feel::Importer']]],
   ['fpoint',['fpoint',['../class_feel_1_1_point_set_quadrature.html#a3a109e3e47834243cee93941b08ad4a0',1,'Feel::PointSetQuadrature']]],
   ['fpoints',['fpoints',['../class_feel_1_1_point_set_quadrature.html#a33240ee59b4f90af3c069d6abbaee9f7',1,'Feel::PointSetQuadrature']]],

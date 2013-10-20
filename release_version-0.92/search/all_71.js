@@ -6,6 +6,5 @@ var searchData=
   ['ql',['Ql',['../class_feel_1_1_c_r_b_model.html#adcad7ee4ebad10b83a6d911c6523cd5b',1,'Feel::CRBModel::Ql()'],['../class_feel_1_1_c_r_b_model_trilinear.html#ab90c057eada71c7da95d05f5b0e9157e',1,'Feel::CRBModelTrilinear::Ql()'],['../class_convection_crb.html#a7ba1a6fab2b3d6f2fbc98c9db5baee95',1,'ConvectionCrb::Ql()']]],
   ['qm',['Qm',['../class_feel_1_1_c_r_b_model.html#aef46c721d940deee6972bd4a1538159d',1,'Feel::CRBModel']]],
   ['quadmapped',['QuadMapped',['../class_feel_1_1_quad_mapped.html',1,'Feel']]],
-  ['quadmapped_2ehpp',['quadmapped.hpp',['../quadmapped_8hpp.html',1,'']]],
-  ['quick_20reference',['Quick Reference',['../_quick_ref.html',1,'']]]
+  ['quadmapped_2ehpp',['quadmapped.hpp',['../quadmapped_8hpp.html',1,'']]]
 ];

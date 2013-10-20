@@ -28,7 +28,6 @@ var searchData=
   ['hassubmeshdata',['hasSubMeshData',['../class_feel_1_1_mesh_base.html#ab9cd5b8ba76773a6619c9b45575d72b9',1,'Feel::MeshBase']]],
   ['heatsink',['HeatSink',['../class_feel_1_1_heat_sink.html',1,'Feel']]],
   ['heatsink_2ecpp',['heatsink.cpp',['../heatsink_8cpp.html',1,'']]],
-  ['heat_20transfer',['Heat Transfer',['../_heat_transfer.html',1,'Learning']]],
   ['hermite',['Hermite',['../class_feel_1_1fem_1_1_hermite.html',1,'Feel::fem']]],
   ['hermite',['Hermite',['../class_feel_1_1_hermite.html',1,'Feel']]],
   ['hermite_2ehpp',['hermite.hpp',['../hermite_8hpp.html',1,'']]],
