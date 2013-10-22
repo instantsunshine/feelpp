@@ -1,11 +1,5 @@
 var NAVTREEINDEX25 =
 {
-"classResidualEstimator.html#a416ff1c0b5d9e14e92a32eedf3037f8c":[10,9,3],
-"classResidualEstimator.html#a42aeef767e34677f3a83b70f97dbe32d":[10,9,21],
-"classResidualEstimator.html#a476ea6f0da6e70791b8da86c07440a44":[10,9,2],
-"classResidualEstimator.html#a4b5411e7636979f50bce3c5aa18142bd":[10,9,5],
-"classResidualEstimator.html#a70ce10b8aa154b6dbbfffc6ef2836702":[10,9,18],
-"classResidualEstimator.html#a798ee513cee195c0067d2616dd94ae6b":[10,9,20],
 "classResidualEstimator.html#a7b929fc88225b00f606b2e9f707c850c":[10,9,26],
 "classResidualEstimator.html#a93987b13571555052c1c6d2b2c9bc74a":[10,9,6],
 "classResidualEstimator.html#a994984fd63cc1d6f056989fbee9bf17c":[10,9,4],
@@ -249,5 +243,11 @@ var NAVTREEINDEX25 =
 "structFeel_1_1functional_1_1ComponentsPointsEvaluation.html#a46ecf850d5161c288eef81525314f9a7":[10,0,75,1,0],
 "structFeel_1_1functional_1_1ComponentsPointsEvaluation.html#a89f4f0e59ec70f91d18aafb91a4b916b":[10,0,75,1,5],
 "structFeel_1_1functional_1_1ComponentsPointsEvaluation.html#a9c6ce40c4da05fd0df09cc42d39394ed":[10,0,75,1,6],
-"structFeel_1_1functional_1_1ComponentsPointsEvaluation.html#ab8e21ab4b5c41ca7c57854ef25829ac3":[10,0,75,1,4]
+"structFeel_1_1functional_1_1ComponentsPointsEvaluation.html#ab8e21ab4b5c41ca7c57854ef25829ac3":[10,0,75,1,4],
+"structFeel_1_1functional_1_1ComponentsPointsEvaluation.html#ad7b8dba29cd175eeb0768740bdb0df1f":[10,0,75,1,2],
+"structFeel_1_1functional_1_1ComponentsPointsEvaluation.html#ae166bb06b905c910abddd45ff09e7050":[10,0,75,1,1],
+"structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html":[10,0,75,2],
+"structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#a01e3bdca76c64032be7bdfb69d4e52f7":[10,0,75,2,3],
+"structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#a5ad726a2f0b7819162778f9335845339":[10,0,75,2,0],
+"structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html#a7f0661b9999a9b546b514802f6cfd4ce":[10,0,75,2,4]
 };

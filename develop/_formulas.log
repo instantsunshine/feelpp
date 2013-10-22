@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2013.8.6)  19 OCT 2013 00:02
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2013.8.6)  23 OCT 2013 00:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1073,66 +1073,24 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[475] [476] [477] [478] [479] [480] [481] [482] [483] [484]
-! Missing delimiter (. inserted).
-<to be read again> 
-                   $
-l.1462 ...}\; \Gamma \;, \\ \end{aligned} \right $
-                                                  
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-[485] [486] [487] [488] [489]
-! Extra \right.
-l.1477 ...cdot \mathbf v \;. \end{aligned} \right)
-                                                   $
-I'm ignoring a \right that had no matching \left.
-
-[490]
-! Extra \right.
-l.1480 ...cdot \mathbf n \;. \end{aligned} \right)
-                                                   $
-I'm ignoring a \right that had no matching \left.
-
-[491] [492]
-! Extra \right.
-l.1486 ...mathbf u q = 0 \;, \end{aligned} \right)
-                                                   $
-I'm ignoring a \right that had no matching \left.
-
-[493]
-! Extra \right.
-l.1489 ... f \cdot \mathbf v \end{aligned} \right)
-                                                   $
-I'm ignoring a \right that had no matching \left.
-
-[494] [495] [496]
-! Extra \right.
-l.1498 ...= l((\mathbf v,q)) \end{aligned} \right)
-                                                   $
-I'm ignoring a \right that had no matching \left.
-
-[497] [498] [499] [500] [501] [502] [503] [504] [505] [506] [507] [508] [509] [
-510] [511] [512] [513] [514] [515] [516] [517] [518] [519] [520] [521] [522] [5
-23] [524] [525] [526] [527] [528] [529] [530] [531] [532] [533] [534] [535] [53
-6] [537] [538] [539] [540] [541] [542] [543] [544] [545] [546] [547] [548] [549
-] [550] [551] [552] [553] [554] [555] [556] [557] [558] [559] [560] [561] [562]
-[563] [564] [565] [566] [567] [568] [569] [570] [571] [572] [573] [574] [575] [
-576] [577] [578] [579] [580] [581] [582] [583] [584] [585] [586] [587] [588] [5
-89] [590] [591] [592] [593] [594] [595] [596] [597] [598] [599] [600] [601] [60
-2] [603] [604] [605] [606] [607] [608] [609] [610] [611] [612] [613] [614] [615
-] [616] [617] [618] [619] [620] [621] [622] [623] [624] [625] [626] [627] [628]
-[629] [630] [631] [632] [633] [634] [635] [636] [637] [638] [639] [640] [641] [
-642] [643] [644] [645] [646] [647] [648] [649] [650] [651] [652] [653] [654] [6
-55] [656] [657] [658] [659] [660] [661] [662] [663] [664]
+[475] [476] [477] [478] [479] [480] [481] [482] [483] [484] [485] [486] [487] [
+488] [489] [490] [491] [492] [493] [494] [495] [496] [497] [498] [499] [500] [5
+01] [502] [503] [504] [505] [506] [507] [508] [509] [510] [511] [512] [513] [51
+4] [515] [516] [517] [518] [519] [520] [521] [522] [523] [524] [525] [526] [527
+] [528] [529] [530] [531] [532] [533] [534] [535] [536] [537] [538] [539] [540]
+[541] [542] [543] [544] [545] [546] [547] [548] [549] [550] [551] [552] [553] [
+554] [555] [556] [557] [558] [559] [560] [561] [562] [563] [564] [565] [566] [5
+67] [568] [569] [570] [571] [572] [573] [574] [575] [576] [577] [578] [579] [58
+0] [581] [582] [583] [584] [585] [586] [587] [588] [589] [590] [591] [592] [593
+] [594] [595] [596] [597] [598] [599] [600] [601] [602] [603] [604] [605] [606]
+[607] [608] [609] [610] [611] [612] [613] [614] [615] [616] [617] [618] [619] [
+620] [621] [622] [623] [624] [625] [626] [627] [628] [629] [630] [631] [632] [6
+33] [634] [635] [636] [637] [638] [639] [640] [641] [642] [643] [644] [645] [64
+6] [647]
 ! Undefined control sequence.
 <recently read> \acos 
                       
-l.2002 $\acos
+l.1951 $\acos
              (f(\overrightarrow{x}))$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1140,11 +1098,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[665]
+[648]
 ! Undefined control sequence.
 <recently read> \asin 
                       
-l.2005 $\asin
+l.1954 $\asin
              (f(\overrightarrow{x}))$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1152,11 +1110,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[666]
+[649]
 ! Undefined control sequence.
 <recently read> \atan 
                       
-l.2008 $\atan
+l.1957 $\atan
              (f(\overrightarrow{x}))$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1164,15 +1122,15 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[667] [668] [669] [670] [671] [672] [673] [674] [675] [676] [677] [678] [679] [
-680] [681] [682] [683] [684] [685] [686] [687] [688] [689] [690] [691] [692] [6
-93] [694] [695] [696] [697] [698] [699] [700] [701] [702] [703] [704] [705] [70
-6] [707] [708] [709] [710] [711] [712] [713] [714] [715] [716] [717] [718] [719
-] [720] [721] [722] [723] [724]
+[650] [651] [652] [653] [654] [655] [656] [657] [658] [659] [660] [661] [662] [
+663] [664] [665] [666] [667] [668] [669] [670] [671] [672] [673] [674] [675] [6
+76] [677] [678] [679] [680] [681] [682] [683] [684] [685] [686] [687] [688] [68
+9] [690] [691] [692] [693] [694] [695] [696] [697] [698] [699] [700] [701] [702
+] [703] [704] [705] [706] [707]
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2182 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
+l.2131 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
                                                   _F = 0\}\\ \mathbb{H}_h &=...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1183,7 +1141,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2182 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
+l.2131 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
                                                   _F = 0\}\\ \mathbb{H}_h &=...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1192,14 +1150,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Double subscript.
-l.2182 ...orall F \in \mathcal{F}^i_h\ \jump{v_h}_
+l.2131 ...orall F \in \mathcal{F}^i_h\ \jump{v_h}_
                                                   F = 0\}\\ \mathbb{H}_h &= ...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2182 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
+l.2131 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
                                                   _F = \jump{\nabla v_h}_F =...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1210,7 +1168,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2182 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
+l.2131 ...forall F \in \mathcal{F}^i_h\ \jump{v_h}
                                                   _F = \jump{\nabla v_h}_F =...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1219,14 +1177,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Double subscript.
-l.2182 ...orall F \in \mathcal{F}^i_h\ \jump{v_h}_
+l.2131 ...orall F \in \mathcal{F}^i_h\ \jump{v_h}_
                                                   F = \jump{\nabla v_h}_F = ...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2182 ...F}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}
+l.2131 ...F}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}
                                                   _F = 0\}\\ \CR_h &= \{ v_h...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1237,7 +1195,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2182 ...F}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}
+l.2131 ...F}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}
                                                   _F = 0\}\\ \CR_h &= \{ v_h...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1246,14 +1204,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Double subscript.
-l.2182 ...}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}_
+l.2131 ...}^i_h\ \jump{v_h}_F = \jump{\nabla v_h}_
                                                   F = 0\}\\ \CR_h &= \{ v_h ...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2182 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
+l.2131 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
                                                    = 0 \}\\ \RaTu_h &= \{ v_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1264,7 +1222,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2182 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
+l.2131 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
                                                    = 0 \}\\ \RaTu_h &= \{ v_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1275,7 +1233,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2182 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
+l.2131 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
                                                    = 0 \}\\ \RT_h&=\{\bm{v}_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1286,7 +1244,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2182 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
+l.2131 ...orall F \in \calF^i_h\ \int_F \jump{v_h}
                                                    = 0 \}\\ \RT_h&=\{\bm{v}_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1297,7 +1255,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2182 ...\calF^i_h\ \jump{\bm{v}_h \cdot \normal}
+l.2131 ...\calF^i_h\ \jump{\bm{v}_h \cdot \normal}
                                                   _F = 0 \}\\ \N_h&=\{\bm{v}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1308,7 +1266,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2182 ...\calF^i_h\ \jump{\bm{v}_h \cdot \normal}
+l.2131 ...\calF^i_h\ \jump{\bm{v}_h \cdot \normal}
                                                   _F = 0 \}\\ \N_h&=\{\bm{v}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1319,7 +1277,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket 
                      #1\rrbracket 
-l.2182 ...calF^i_h\ \jump{\bm{v}_h \times \normal}
+l.2131 ...calF^i_h\ \jump{\bm{v}_h \times \normal}
                                                   _F = 0 \} \end{aligned} \]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1330,7 +1288,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \jump #1->\llbracket #1\rrbracket 
                                   
-l.2182 ...calF^i_h\ \jump{\bm{v}_h \times \normal}
+l.2131 ...calF^i_h\ \jump{\bm{v}_h \times \normal}
                                                   _F = 0 \} \end{aligned} \]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1338,13 +1296,13 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[725] [726] [727] [728] [729] [730] [731] [732] [733] [734] [735] [736] [737] [
-738] [739] [740] [741] [742] [743] [744] [745] [746] [747] [748] [749] [750] [7
-51] [752] [753] [754] [755] [756] [757] [758]
+[708] [709] [710] [711] [712] [713] [714] [715] [716] [717] [718] [719] [720] [
+721] [722] [723] [724] [725] [726] [727] [728] [729] [730] [731] [732] [733] [7
+34] [735] [736] [737] [738] [739] [740] [741]
 ! Undefined control sequence.
 <argument> \sqrt {\Gr 
                       }
-l.2284 ... \text{sur}\ \partial \Omega \end{split}
+l.2233 ... \text{sur}\ \partial \Omega \end{split}
                                                    \end{equation*}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1355,7 +1313,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \sqrt {\Gr 
                       }
-l.2284 ... \text{sur}\ \partial \Omega \end{split}
+l.2233 ... \text{sur}\ \partial \Omega \end{split}
                                                    \end{equation*}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1363,11 +1321,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[759]
+[742]
 ! Undefined control sequence.
 <recently read> \Gr 
                     
-l.2287 $\Gr
+l.2236 $\Gr
            $
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1375,11 +1333,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[760] [761]
+[743] [744]
 ! Undefined control sequence.
 <argument> \sqrt {\Gr 
                       }\Pr 
-l.2293 ...} &= 1\ \text{sur}\ \Gamma_3 \end{split}
+l.2242 ...} &= 1\ \text{sur}\ \Gamma_3 \end{split}
                                                    \end{equation*}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1390,7 +1348,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \sqrt {\Gr 
                       }\Pr 
-l.2293 ...} &= 1\ \text{sur}\ \Gamma_3 \end{split}
+l.2242 ...} &= 1\ \text{sur}\ \Gamma_3 \end{split}
                                                    \end{equation*}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1398,14 +1356,14 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[762] [763] [764] [765] [766] [767] [768] [769] [770] [771] [772] [773] [774] [
-775] [776] [777] [778] [779] [780] [781] [782] [783] [784] [785] [786] [787] [7
-88] [789] [790] [791] [792] [793] [794] [795] [796] [797] [798] [799] [800] [80
-1] [802] [803] [804] [805] [806] [807] [808] [809] [810] [811] [812] [813] [814
-] [815] [816] [817] [818] [819] [820] [821] [822] [823] [824] [825] [826] [827]
-[828] [829] [830] [831] [832] [833] [834] [835] [836] [837] [838] [839] [840] [
-841] [842] [843] [844] [845] [846] [847] [848] [849] [850] [851] [852] [853] [8
-54] [855] [856] [857] [858] [859] (./_formulas.aux)
+[745] [746] [747] [748] [749] [750] [751] [752] [753] [754] [755] [756] [757] [
+758] [759] [760] [761] [762] [763] [764] [765] [766] [767] [768] [769] [770] [7
+71] [772] [773] [774] [775] [776] [777] [778] [779] [780] [781] [782] [783] [78
+4] [785] [786] [787] [788] [789] [790] [791] [792] [793] [794] [795] [796] [797
+] [798] [799] [800] [801] [802] [803] [804] [805] [806] [807] [808] [809] [810]
+[811] [812] [813] [814] [815] [816] [817] [818] [819] [820] [821] [822] [823] [
+824] [825] [826] [827] [828] [829] [830] [831] [832] [833] [834] [835] [836] [8
+37] [838] [839] [840] [841] [842] (./_formulas.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -1419,4 +1377,4 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  70i,22n,59p,1012b,183s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on _formulas.dvi (859 pages, 195548 bytes).
+Output written on _formulas.dvi (842 pages, 191184 bytes).
