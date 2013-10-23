@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+gitfa57af2</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -2103,7 +2103,7 @@ $(document).ready(function(){initNavTree('functionspace_8hpp_source.html','');})
 <div class="line"><a name="l02093"></a><span class="lineno"> 2093</span>&#160;</div>
 <div class="line"><a name="l02094"></a><span class="lineno"> 2094</span>&#160;            <span class="keyword">typename</span> p0_space_type::element_type p0Element( P0h );</div>
 <div class="line"><a name="l02095"></a><span class="lineno"> 2095</span>&#160;</div>
-<div class="line"><a name="l02096"></a><span class="lineno"> 2096</span>&#160;            <span class="keywordflow">for</span> ( <span class="keyword">auto</span> elt_it = P0h-&gt;mesh()-&gt;beginElement(); elt_it != P0h-&gt;mesh()-&gt;endElement(); ++elt_it )</div>
+<div class="line"><a name="l02096"></a><span class="lineno"> 2096</span>&#160;            <span class="keywordflow">for</span> ( <span class="keyword">auto</span> elt_it = P0h-&gt;mesh()-&gt;beginElementWithProcessId(); elt_it != P0h-&gt;mesh()-&gt;endElementWithProcessId(); ++elt_it )</div>
 <div class="line"><a name="l02097"></a><span class="lineno"> 2097</span>&#160;            {</div>
 <div class="line"><a name="l02098"></a><span class="lineno"> 2098</span>&#160;                <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> eid = elt_it-&gt;id();</div>
 <div class="line"><a name="l02099"></a><span class="lineno"> 2099</span>&#160;</div>
@@ -6160,7 +6160,7 @@ $(document).ready(function(){initNavTree('functionspace_8hpp_source.html','');})
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Oct 14 2013 14:07:04 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Wed Oct 23 2013 10:56:32 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

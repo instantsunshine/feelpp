@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+gitfa57af2</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -1922,6 +1922,14 @@ detail::submeshrangetype<br class="typebreak"/>
 &lt; IteratorRange &gt;::type, <br class="typebreak"/>
 TheTag &gt;::mesh_build_ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>createSubmesh</b> (boost::shared_ptr&lt; MeshType &gt; inputMesh, IteratorRange const &amp;range, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> ctx=EXTRACTION_KEEP_MESH_RELATION)</td></tr>
 <tr class="separator:ad1ffc3b6e6203f83e48101d29eef4ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2040d63098251dcd30506c8161c80e5e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2040d63098251dcd30506c8161c80e5e"></a>
+template&lt;typename MeshType , typename IteratorRange , int TheTag = MeshType::tag&gt; </td></tr>
+<tr class="memitem:a2040d63098251dcd30506c8161c80e5e"><td class="memTemplItemLeft" align="right" valign="top">createSubmeshTool&lt; MeshType, <br class="typebreak"/>
+typename <br class="typebreak"/>
+detail::submeshrangetype<br class="typebreak"/>
+&lt; IteratorRange &gt;::type, <br class="typebreak"/>
+TheTag &gt;::mesh_build_ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>createSubmesh</b> (boost::shared_ptr&lt; MeshType &gt; inputMesh, IteratorRange const &amp;range, WorldComm wc, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> ctx=EXTRACTION_KEEP_MESH_RELATION)</td></tr>
+<tr class="separator:a2040d63098251dcd30506c8161c80e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa393db87731d2b97f5be2785081ea8ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa393db87731d2b97f5be2785081ea8ab"></a>
 boost::shared_ptr&lt; <a class="el" href="classFeel_1_1Mesh.html">Mesh</a><br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; 2 &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>createSubMeshLaplacianBlock</b> (boost::shared_ptr&lt; <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; 2 &gt; &gt; &gt; mesh)</td></tr>
@@ -3254,17 +3262,17 @@ marker2_element_const_iterator &gt;&#160;</td><td class="memItemRight" valign="b
 &lt; marker3_element_const_iterator, <br class="typebreak"/>
 marker3_element_const_iterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a991a7e4609cec0f668af7b1d6a1eea84">elementsWithMarker3</a> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> m, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> p) const </td></tr>
 <tr class="separator:a991a7e4609cec0f668af7b1d6a1eea84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad015c3cd4b939d64422856bdeabdde6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad015c3cd4b939d64422856bdeabdde6c"></a>
-element_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>beginElementWithProcessId</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> m)</td></tr>
-<tr class="separator:ad015c3cd4b939d64422856bdeabdde6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a431c3c74c016a0780693c4e390a26dd9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a431c3c74c016a0780693c4e390a26dd9"></a>
-element_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>endElementWithProcessId</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> m)</td></tr>
-<tr class="separator:a431c3c74c016a0780693c4e390a26dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5682fe586d1c33d9cbfbea33d8744324"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5682fe586d1c33d9cbfbea33d8744324"></a>
+<tr class="memitem:a42fcb80e0865a4adfcba010fa3afdfe0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42fcb80e0865a4adfcba010fa3afdfe0"></a>
+element_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>beginElementWithProcessId</b> (uint16_type p=<a class="el" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a>)</td></tr>
+<tr class="separator:a42fcb80e0865a4adfcba010fa3afdfe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a315bb711582ef3397ebff50df511a6b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a315bb711582ef3397ebff50df511a6b1"></a>
+element_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>endElementWithProcessId</b> (uint16_type p=<a class="el" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a>)</td></tr>
+<tr class="separator:a315bb711582ef3397ebff50df511a6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb46fa8a848e7070140390491379a6e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb46fa8a848e7070140390491379a6e5"></a>
 std::pair<br class="typebreak"/>
 &lt; element_const_iterator, <br class="typebreak"/>
-element_const_iterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>elementsWithProcessId</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> m) const </td></tr>
-<tr class="separator:a5682fe586d1c33d9cbfbea33d8744324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+element_const_iterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>elementsWithProcessId</b> (uint16_type p=<a class="el" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a>) const </td></tr>
+<tr class="separator:afb46fa8a848e7070140390491379a6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b9ef571b03d440d2589dc2ead370b74"><td class="memItemLeft" align="right" valign="top">elements_type::template <br class="typebreak"/>
 nth_index&lt; 0 &gt;::type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a6b9ef571b03d440d2589dc2ead370b74">elementsById</a> ()</td></tr>
 <tr class="separator:a6b9ef571b03d440d2589dc2ead370b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -6920,7 +6928,7 @@ template&lt;int Ngeo = 1&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Oct 14 2013 14:07:24 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Wed Oct 23 2013 10:56:54 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

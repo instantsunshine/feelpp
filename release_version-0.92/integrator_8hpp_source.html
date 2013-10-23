@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+gitfa57af2</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -3428,62 +3428,66 @@ $(document).ready(function(){initNavTree('integrator_8hpp_source.html','');});
 <div class="line"><a name="l03436"></a><span class="lineno"> 3436</span>&#160;      ( grainsize,   ( <span class="keywordtype">int</span> ), 100 )</div>
 <div class="line"><a name="l03437"></a><span class="lineno"> 3437</span>&#160;      ( partitioner,   *, <span class="stringliteral">&quot;auto&quot;</span> )</div>
 <div class="line"><a name="l03438"></a><span class="lineno"> 3438</span>&#160;      ( verbose,   ( <span class="keywordtype">bool</span> ), <span class="keyword">false</span> )</div>
-<div class="line"><a name="l03439"></a><span class="lineno"> 3439</span>&#160;    )</div>
-<div class="line"><a name="l03440"></a><span class="lineno"> 3440</span>&#160;)</div>
-<div class="line"><a name="l03441"></a><span class="lineno"> 3441</span>&#160;{</div>
-<div class="line"><a name="l03442"></a><span class="lineno"> 3442</span>&#160;    <span class="keywordtype">double</span> meas = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( _range=range, _expr=cst(1.0), _quad=quad, _quad1=quad1, _geomap=geomap,</div>
-<div class="line"><a name="l03443"></a><span class="lineno"> 3443</span>&#160;                             _use_tbb=use_tbb, _grainsize=grainsize,</div>
-<div class="line"><a name="l03444"></a><span class="lineno"> 3444</span>&#160;                             _partitioner=partitioner, _verbose=verbose ).evaluate()( 0, 0 );</div>
-<div class="line"><a name="l03445"></a><span class="lineno"> 3445</span>&#160;    DLOG(INFO) &lt;&lt; <span class="stringliteral">&quot;[mean] measure = &quot;</span> &lt;&lt; meas &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l03446"></a><span class="lineno"> 3446</span>&#160;    CHECK( math::abs(meas) &gt; 1e-13 ) &lt;&lt; <span class="stringliteral">&quot;Invalid domain measure : &quot;</span> &lt;&lt; meas &lt;&lt; <span class="stringliteral">&quot;, domain range: &quot;</span> &lt;&lt; <a class="code" href="namespaceFeel.html#a3198793dc5cee5c96bd5b8f22bd2865c">nelements</a>( range ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l03447"></a><span class="lineno"> 3447</span>&#160;    <span class="keyword">auto</span> eint = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( _range=range, _expr=expr, _quad=quad, _geomap=geomap,</div>
-<div class="line"><a name="l03448"></a><span class="lineno"> 3448</span>&#160;                           _quad1=quad1, _use_tbb=use_tbb, _grainsize=grainsize,</div>
-<div class="line"><a name="l03449"></a><span class="lineno"> 3449</span>&#160;                           _partitioner=partitioner, _verbose=verbose ).evaluate();</div>
-<div class="line"><a name="l03450"></a><span class="lineno"> 3450</span>&#160;    DLOG(INFO) &lt;&lt; <span class="stringliteral">&quot;[ein] eint = &quot;</span> &lt;&lt; eint &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l03451"></a><span class="lineno"> 3451</span>&#160;    <span class="keywordflow">return</span> eint/meas;</div>
-<div class="line"><a name="l03452"></a><span class="lineno"> 3452</span>&#160;}</div>
-<div class="line"><a name="l03453"></a><span class="lineno"> 3453</span>&#160;</div>
-<div class="line"><a name="l03454"></a><span class="lineno"> 3454</span>&#160;BOOST_PARAMETER_FUNCTION(</div>
-<div class="line"><a name="l03455"></a><span class="lineno"> 3455</span>&#160;    ( <span class="keywordtype">double</span> ), <span class="comment">// return type</span></div>
-<div class="line"><a name="l03456"></a><span class="lineno"> 3456</span>&#160;    measure,    <span class="comment">// 2. function name</span></div>
+<div class="line"><a name="l03439"></a><span class="lineno"> 3439</span>&#160;      ( parallel,   *( boost::is_integral&lt;mpl::_&gt; ), 1 )</div>
+<div class="line"><a name="l03440"></a><span class="lineno"> 3440</span>&#160;      ( worldcomm,       (WorldComm), Environment::worldComm() )</div>
+<div class="line"><a name="l03441"></a><span class="lineno"> 3441</span>&#160;    )</div>
+<div class="line"><a name="l03442"></a><span class="lineno"> 3442</span>&#160;)</div>
+<div class="line"><a name="l03443"></a><span class="lineno"> 3443</span>&#160;{</div>
+<div class="line"><a name="l03444"></a><span class="lineno"> 3444</span>&#160;    <span class="keywordtype">double</span> meas = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( _range=range, _expr=cst(1.0), _quad=quad, _quad1=quad1, _geomap=geomap,</div>
+<div class="line"><a name="l03445"></a><span class="lineno"> 3445</span>&#160;                             _use_tbb=use_tbb, _grainsize=grainsize,</div>
+<div class="line"><a name="l03446"></a><span class="lineno"> 3446</span>&#160;                             _partitioner=partitioner, _verbose=verbose ).evaluate( parallel,worldcomm )( 0, 0 );</div>
+<div class="line"><a name="l03447"></a><span class="lineno"> 3447</span>&#160;    DLOG(INFO) &lt;&lt; <span class="stringliteral">&quot;[mean] nelements = &quot;</span> &lt;&lt; <a class="code" href="namespaceFeel.html#a3198793dc5cee5c96bd5b8f22bd2865c">nelements</a>(range) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l03448"></a><span class="lineno"> 3448</span>&#160;    DLOG(INFO) &lt;&lt; <span class="stringliteral">&quot;[mean] measure = &quot;</span> &lt;&lt; meas &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l03449"></a><span class="lineno"> 3449</span>&#160;    CHECK( math::abs(meas) &gt; 1e-13 ) &lt;&lt; <span class="stringliteral">&quot;Invalid domain measure : &quot;</span> &lt;&lt; meas &lt;&lt; <span class="stringliteral">&quot;, domain range: &quot;</span> &lt;&lt; <a class="code" href="namespaceFeel.html#a3198793dc5cee5c96bd5b8f22bd2865c">nelements</a>( range ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l03450"></a><span class="lineno"> 3450</span>&#160;    <span class="keyword">auto</span> eint = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( _range=range, _expr=expr, _quad=quad, _geomap=geomap,</div>
+<div class="line"><a name="l03451"></a><span class="lineno"> 3451</span>&#160;                           _quad1=quad1, _use_tbb=use_tbb, _grainsize=grainsize,</div>
+<div class="line"><a name="l03452"></a><span class="lineno"> 3452</span>&#160;                           _partitioner=partitioner, _verbose=verbose ).evaluate( parallel,worldcomm );</div>
+<div class="line"><a name="l03453"></a><span class="lineno"> 3453</span>&#160;    DLOG(INFO) &lt;&lt; <span class="stringliteral">&quot;[mean] integral = &quot;</span> &lt;&lt; eint &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l03454"></a><span class="lineno"> 3454</span>&#160;    DLOG(INFO) &lt;&lt; <span class="stringliteral">&quot;[mean] mean = &quot;</span> &lt;&lt; eint/meas &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l03455"></a><span class="lineno"> 3455</span>&#160;    <span class="keywordflow">return</span> eint/meas;</div>
+<div class="line"><a name="l03456"></a><span class="lineno"> 3456</span>&#160;}</div>
 <div class="line"><a name="l03457"></a><span class="lineno"> 3457</span>&#160;</div>
-<div class="line"><a name="l03458"></a><span class="lineno"> 3458</span>&#160;    tag,           <span class="comment">// 3. namespace of tag types</span></div>
-<div class="line"><a name="l03459"></a><span class="lineno"> 3459</span>&#160;</div>
-<div class="line"><a name="l03460"></a><span class="lineno"> 3460</span>&#160;    ( required</div>
-<div class="line"><a name="l03461"></a><span class="lineno"> 3461</span>&#160;      ( range, *  )</div>
-<div class="line"><a name="l03462"></a><span class="lineno"> 3462</span>&#160;    ) <span class="comment">// 4. one required parameter, and</span></div>
+<div class="line"><a name="l03458"></a><span class="lineno"> 3458</span>&#160;BOOST_PARAMETER_FUNCTION(</div>
+<div class="line"><a name="l03459"></a><span class="lineno"> 3459</span>&#160;    ( <span class="keywordtype">double</span> ), <span class="comment">// return type</span></div>
+<div class="line"><a name="l03460"></a><span class="lineno"> 3460</span>&#160;    measure,    <span class="comment">// 2. function name</span></div>
+<div class="line"><a name="l03461"></a><span class="lineno"> 3461</span>&#160;</div>
+<div class="line"><a name="l03462"></a><span class="lineno"> 3462</span>&#160;    tag,           <span class="comment">// 3. namespace of tag types</span></div>
 <div class="line"><a name="l03463"></a><span class="lineno"> 3463</span>&#160;</div>
-<div class="line"><a name="l03464"></a><span class="lineno"> 3464</span>&#160;    ( optional</div>
-<div class="line"><a name="l03465"></a><span class="lineno"> 3465</span>&#160;      ( quad,   *, <span class="keyword">typename</span> vf::detail::integrate_type&lt;Args&gt;::_quad_type() )</div>
-<div class="line"><a name="l03466"></a><span class="lineno"> 3466</span>&#160;      ( geomap, *, GeomapStrategyType::GEOMAP_OPT )</div>
-<div class="line"><a name="l03467"></a><span class="lineno"> 3467</span>&#160;      ( quad1,   *, <span class="keyword">typename</span> vf::detail::integrate_type&lt;Args&gt;::_quad1_type() )</div>
-<div class="line"><a name="l03468"></a><span class="lineno"> 3468</span>&#160;      ( use_tbb,   ( <span class="keywordtype">bool</span> ), <span class="keyword">false</span> )</div>
-<div class="line"><a name="l03469"></a><span class="lineno"> 3469</span>&#160;      ( grainsize,   ( <span class="keywordtype">int</span> ), 100 )</div>
-<div class="line"><a name="l03470"></a><span class="lineno"> 3470</span>&#160;      ( partitioner,   *, <span class="stringliteral">&quot;auto&quot;</span> )</div>
-<div class="line"><a name="l03471"></a><span class="lineno"> 3471</span>&#160;      ( verbose,   ( <span class="keywordtype">bool</span> ), <span class="keyword">false</span> )</div>
-<div class="line"><a name="l03472"></a><span class="lineno"> 3472</span>&#160;    )</div>
-<div class="line"><a name="l03473"></a><span class="lineno"> 3473</span>&#160;)</div>
-<div class="line"><a name="l03474"></a><span class="lineno"> 3474</span>&#160;{</div>
-<div class="line"><a name="l03475"></a><span class="lineno"> 3475</span>&#160;    <span class="keywordtype">double</span> meas = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( _range=range, _expr=cst(1.0), _quad=quad, _quad1=quad1, _geomap=geomap,</div>
-<div class="line"><a name="l03476"></a><span class="lineno"> 3476</span>&#160;                             _use_tbb=use_tbb, _grainsize=grainsize,</div>
-<div class="line"><a name="l03477"></a><span class="lineno"> 3477</span>&#160;                             _partitioner=partitioner, _verbose=verbose ).evaluate()( 0, 0 );</div>
-<div class="line"><a name="l03478"></a><span class="lineno"> 3478</span>&#160;    DLOG(INFO) &lt;&lt; <span class="stringliteral">&quot;[mean] measure = &quot;</span> &lt;&lt; meas &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l03479"></a><span class="lineno"> 3479</span>&#160;    CHECK( math::abs(meas) &gt; 1e-13 ) &lt;&lt; <span class="stringliteral">&quot;Invalid domain measure : &quot;</span> &lt;&lt; meas &lt;&lt; <span class="stringliteral">&quot;, domain range: &quot;</span> &lt;&lt; <a class="code" href="namespaceFeel.html#a3198793dc5cee5c96bd5b8f22bd2865c">nelements</a>( range ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l03480"></a><span class="lineno"> 3480</span>&#160;    <span class="keywordflow">return</span> meas;</div>
-<div class="line"><a name="l03481"></a><span class="lineno"> 3481</span>&#160;}</div>
-<div class="line"><a name="l03482"></a><span class="lineno"> 3482</span>&#160;</div>
-<div class="line"><a name="l03483"></a><span class="lineno"> 3483</span>&#160;} <span class="comment">// vf</span></div>
-<div class="line"><a name="l03484"></a><span class="lineno"> 3484</span>&#160;</div>
-<div class="line"><a name="l03485"></a><span class="lineno"> 3485</span>&#160;</div>
-<div class="line"><a name="l03486"></a><span class="lineno"> 3486</span>&#160;} <span class="comment">// feel</span></div>
-<div class="line"><a name="l03487"></a><span class="lineno"> 3487</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="integratoron_8hpp.html">feel/feelvf/integratoron.hpp</a>&gt;</span></div>
+<div class="line"><a name="l03464"></a><span class="lineno"> 3464</span>&#160;    ( required</div>
+<div class="line"><a name="l03465"></a><span class="lineno"> 3465</span>&#160;      ( range, *  )</div>
+<div class="line"><a name="l03466"></a><span class="lineno"> 3466</span>&#160;    ) <span class="comment">// 4. one required parameter, and</span></div>
+<div class="line"><a name="l03467"></a><span class="lineno"> 3467</span>&#160;</div>
+<div class="line"><a name="l03468"></a><span class="lineno"> 3468</span>&#160;    ( optional</div>
+<div class="line"><a name="l03469"></a><span class="lineno"> 3469</span>&#160;      ( quad,   *, <span class="keyword">typename</span> vf::detail::integrate_type&lt;Args&gt;::_quad_type() )</div>
+<div class="line"><a name="l03470"></a><span class="lineno"> 3470</span>&#160;      ( geomap, *, GeomapStrategyType::GEOMAP_OPT )</div>
+<div class="line"><a name="l03471"></a><span class="lineno"> 3471</span>&#160;      ( quad1,   *, <span class="keyword">typename</span> vf::detail::integrate_type&lt;Args&gt;::_quad1_type() )</div>
+<div class="line"><a name="l03472"></a><span class="lineno"> 3472</span>&#160;      ( use_tbb,   ( <span class="keywordtype">bool</span> ), <span class="keyword">false</span> )</div>
+<div class="line"><a name="l03473"></a><span class="lineno"> 3473</span>&#160;      ( grainsize,   ( <span class="keywordtype">int</span> ), 100 )</div>
+<div class="line"><a name="l03474"></a><span class="lineno"> 3474</span>&#160;      ( partitioner,   *, <span class="stringliteral">&quot;auto&quot;</span> )</div>
+<div class="line"><a name="l03475"></a><span class="lineno"> 3475</span>&#160;      ( verbose,   ( <span class="keywordtype">bool</span> ), <span class="keyword">false</span> )</div>
+<div class="line"><a name="l03476"></a><span class="lineno"> 3476</span>&#160;    )</div>
+<div class="line"><a name="l03477"></a><span class="lineno"> 3477</span>&#160;)</div>
+<div class="line"><a name="l03478"></a><span class="lineno"> 3478</span>&#160;{</div>
+<div class="line"><a name="l03479"></a><span class="lineno"> 3479</span>&#160;    <span class="keywordtype">double</span> meas = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( _range=range, _expr=cst(1.0), _quad=quad, _quad1=quad1, _geomap=geomap,</div>
+<div class="line"><a name="l03480"></a><span class="lineno"> 3480</span>&#160;                             _use_tbb=use_tbb, _grainsize=grainsize,</div>
+<div class="line"><a name="l03481"></a><span class="lineno"> 3481</span>&#160;                             _partitioner=partitioner, _verbose=verbose ).evaluate()( 0, 0 );</div>
+<div class="line"><a name="l03482"></a><span class="lineno"> 3482</span>&#160;    DLOG(INFO) &lt;&lt; <span class="stringliteral">&quot;[mean] measure = &quot;</span> &lt;&lt; meas &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l03483"></a><span class="lineno"> 3483</span>&#160;    CHECK( math::abs(meas) &gt; 1e-13 ) &lt;&lt; <span class="stringliteral">&quot;Invalid domain measure : &quot;</span> &lt;&lt; meas &lt;&lt; <span class="stringliteral">&quot;, domain range: &quot;</span> &lt;&lt; <a class="code" href="namespaceFeel.html#a3198793dc5cee5c96bd5b8f22bd2865c">nelements</a>( range ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l03484"></a><span class="lineno"> 3484</span>&#160;    <span class="keywordflow">return</span> meas;</div>
+<div class="line"><a name="l03485"></a><span class="lineno"> 3485</span>&#160;}</div>
+<div class="line"><a name="l03486"></a><span class="lineno"> 3486</span>&#160;</div>
+<div class="line"><a name="l03487"></a><span class="lineno"> 3487</span>&#160;} <span class="comment">// vf</span></div>
 <div class="line"><a name="l03488"></a><span class="lineno"> 3488</span>&#160;</div>
 <div class="line"><a name="l03489"></a><span class="lineno"> 3489</span>&#160;</div>
-<div class="line"><a name="l03490"></a><span class="lineno"> 3490</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __Integrator_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l03490"></a><span class="lineno"> 3490</span>&#160;} <span class="comment">// feel</span></div>
+<div class="line"><a name="l03491"></a><span class="lineno"> 3491</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="integratoron_8hpp.html">feel/feelvf/integratoron.hpp</a>&gt;</span></div>
+<div class="line"><a name="l03492"></a><span class="lineno"> 3492</span>&#160;</div>
+<div class="line"><a name="l03493"></a><span class="lineno"> 3493</span>&#160;</div>
+<div class="line"><a name="l03494"></a><span class="lineno"> 3494</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __Integrator_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Oct 14 2013 14:07:08 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Wed Oct 23 2013 10:56:36 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

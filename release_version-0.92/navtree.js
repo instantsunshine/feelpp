@@ -2,6 +2,11 @@ var NAVTREE =
 [
   [ "Feel++", "index.html", [
     [ "Introduction", "index.html", null ],
+    [ "CMakeVariables", "CMakeVariables.html", [
+      [ "bite", "CMakeVariables.html#bite", null ],
+      [ "page", "CMakeVariables.html#page", null ],
+      [ "toucpouic", "CMakeVariables.html#toucpouic", null ]
+    ] ],
     [ "Credits", "md_Credits.html", null ],
     [ "Mathematical Concepts and Notations", "Notations.html", [
       [ "Polynomial Library", "Notations.html#PolynomialNotations", [
@@ -50,16 +55,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"StVenantKirchhoff.html",
-"classFeel_1_1AdvReact.html#ab82f955478ca1315b5c599d4c10b677c",
-"classFeel_1_1Backend.html#ae9cc4a2666705823d5d435637b24483d",
-"classFeel_1_1CRB.html#ab1ef656d79dd09d9e49b6a8100965f39",
-"classFeel_1_1CRBModelTrilinear.html#a0bb9c6b03ac66a6f7a9d8e39c70c12c6",
-"classFeel_1_1CastIron.html#a7eae777fa555628e9524f6ef0bccacb4",
-"classFeel_1_1DofTable.html#a7a8626e52d690e16eb98e9ef93452224",
-"classFeel_1_1Example.html#a347792418531c8657b47b42a1febe3f6",
-"classFeel_1_1FiniteElement.html#a1d446aa275a598c52ee2cd523c303391",
-"classFeel_1_1GeoEntity.html#aa7fe486a3e2378be6fd8b9d8a9d4a563",
+"SolidMechanics.html",
+"classFeel_1_1AdvReact.html#aef22693017daf7ec2c9956c8843457fe",
+"classFeel_1_1Backend.html#af7f595eb7c5e4bb85aef7ec903fe6056",
+"classFeel_1_1CRB.html#ab599edbc7305ff9e6758e3b75f070e9c",
+"classFeel_1_1CRBModelTrilinear.html#a1734146510a90afcff68aa2b3d1b6a39",
+"classFeel_1_1CastIron.html#a8f7c56644123a6c3ef6d66b623734e46",
+"classFeel_1_1DofTable.html#a7e54103a780160fe394c0850ed25cf76",
+"classFeel_1_1Example.html#a5d2f0606860ac97ed702fb6d263aa8b0",
+"classFeel_1_1FiniteElement.html#a3201ef023a1ac4c199f634d682efe783",
+"classFeel_1_1GeoEntity.html#aaff276ccadeff004f57580068405658b",
 "classFeel_1_1GeoND.html#a7af031e75c10f4381e5b134474c293bd",
 "classFeel_1_1IMExact.html#a2bcdfeeb660051f71c6543682350efd3",
 "classFeel_1_1MatrixBlockBase.html#a5a8efdb785c9a4962ec086216a6a4a1c",

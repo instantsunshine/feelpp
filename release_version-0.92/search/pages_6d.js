@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['manipulating_20function_20spaces',['Manipulating Function Spaces',['../_manipulating_function_spaces.html',1,'']]],
-  ['manipulating_20meshes',['Manipulating Meshes',['../_manipulating_meshes.html',1,'']]]
+  ['meshes',['Meshes',['../Mesh.html',1,'QuickRef']]],
+  ['miscellaneous',['Miscellaneous',['../Miscellaneous.html',1,'']]],
+  ['multiphysics',['MultiPhysics',['../MultiPhysics.html',1,'Learning']]],
+  ['mathematical_20concepts_20and_20notations',['Mathematical Concepts and Notations',['../Notations.html',1,'']]]
 ];
