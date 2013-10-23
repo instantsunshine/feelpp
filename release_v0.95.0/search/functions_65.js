@@ -22,7 +22,7 @@ var searchData=
   ['elementsbymarker3',['elementsByMarker3',['../namespaceFeel.html#aac32b0f3de53ed7b2b28909204d0d2a9',1,'Feel']]],
   ['elementsbyprocessid',['elementsByProcessId',['../namespaceFeel.html#ac9674479ec46ec1892e5268d70a9f72a',1,'Feel']]],
   ['elementscalar',['elementScalar',['../classFeel_1_1TimeSet_1_1Step.html#acd333a3295783910008b1a5e12b5ff71',1,'Feel::TimeSet::Step']]],
-  ['elementsghost',['elementsGhost',['../classFeel_1_1GeoEntity.html#a686cce5baf482cc8880bcd924d905b44',1,'Feel::GeoEntity']]],
+  ['elementsghost',['elementsGhost',['../classFeel_1_1GeoEntity.html#aab5d838e7384b31519380af5779845be',1,'Feel::GeoEntity']]],
   ['elementsrange',['elementsRange',['../namespaceFeel.html#ad8a9273a3537c11a78f1c84f79b96eaf',1,'Feel']]],
   ['elementswithmarker',['elementsWithMarker',['../namespaceFeel.html#a65716fbcb634dcee104447c8de8af94e',1,'Feel']]],
   ['elementswithmarker2',['elementsWithMarker2',['../namespaceFeel.html#ae076bdd56bfbde90a1a148de2e0a2b76',1,'Feel']]],

@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.95.0-beta.4</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -254,142 +254,144 @@ $(document).ready(function(){initNavTree('feelcore_2parameter_8hpp_source.html',
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    BOOST_PARAMETER_NAME( funcs )</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    BOOST_PARAMETER_NAME( mesh )</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    BOOST_PARAMETER_NAME( geoentity )</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    BOOST_PARAMETER_NAME( desc )</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    BOOST_PARAMETER_NAME( shape )</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    BOOST_PARAMETER_NAME( convex )</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">// project and integrate</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    BOOST_PARAMETER_NAME( sum )</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    BOOST_PARAMETER_NAME( accumulate )</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    BOOST_PARAMETER_NAME( geomap )</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    BOOST_PARAMETER_NAME( straighten )</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    BOOST_PARAMETER_NAME( expr )</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    BOOST_PARAMETER_NAME( grad_expr)</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    BOOST_PARAMETER_NAME( pset )</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    BOOST_PARAMETER_NAME( quad )</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    BOOST_PARAMETER_NAME( quad1 )</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    BOOST_PARAMETER_NAME( arg )</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    BOOST_PARAMETER_NAME( quadptloc )</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    BOOST_PARAMETER_NAME( pointset )</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    BOOST_PARAMETER_NAME( desc )</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    BOOST_PARAMETER_NAME( shape )</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    BOOST_PARAMETER_NAME( convex )</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">// project and integrate</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    BOOST_PARAMETER_NAME( sum )</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    BOOST_PARAMETER_NAME( accumulate )</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    BOOST_PARAMETER_NAME( geomap )</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    BOOST_PARAMETER_NAME( straighten )</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    BOOST_PARAMETER_NAME( expr )</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    BOOST_PARAMETER_NAME( grad_expr)</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    BOOST_PARAMETER_NAME( pset )</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    BOOST_PARAMETER_NAME( quad )</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    BOOST_PARAMETER_NAME( quad1 )</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    BOOST_PARAMETER_NAME( arg )</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    BOOST_PARAMETER_NAME( quadptloc )</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">// orders</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    BOOST_PARAMETER_NAME( order_u )</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    BOOST_PARAMETER_NAME( order_p )</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    BOOST_PARAMETER_NAME( initial_time )</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    BOOST_PARAMETER_NAME( final_time )</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    BOOST_PARAMETER_NAME( time_step )</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    BOOST_PARAMETER_NAME( strategy )</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    BOOST_PARAMETER_NAME( steady )</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    BOOST_PARAMETER_NAME( restart )</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    BOOST_PARAMETER_NAME( restart_path )</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    BOOST_PARAMETER_NAME( restart_at_last_save )</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    BOOST_PARAMETER_NAME( rank_proc_in_files_name )</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    BOOST_PARAMETER_NAME( freq )</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    BOOST_PARAMETER_NAME( markerName )</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    BOOST_PARAMETER_NAME( markerAll )</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    BOOST_PARAMETER_NAME( marker1 )</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    BOOST_PARAMETER_NAME( marker2 )</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    BOOST_PARAMETER_NAME( marker3 )</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    BOOST_PARAMETER_NAME( marker4 )</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    BOOST_PARAMETER_NAME( marker5 )</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    BOOST_PARAMETER_NAME( marker6 )</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    BOOST_PARAMETER_NAME( marker7 )</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    BOOST_PARAMETER_NAME( marker8 )</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    BOOST_PARAMETER_NAME( marker9 )</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    BOOST_PARAMETER_NAME( marker10 )</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    BOOST_PARAMETER_NAME( marker11 )</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    BOOST_PARAMETER_NAME( marker12 )</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    BOOST_PARAMETER_NAME( domain )</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    BOOST_PARAMETER_NAME( image )</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    BOOST_PARAMETER_NAME( domainSpace )</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    BOOST_PARAMETER_NAME( imageSpace )</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    BOOST_PARAMETER_NAME( range )</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    BOOST_PARAMETER_NAME( element )</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    BOOST_PARAMETER_NAME( parameter )</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    BOOST_PARAMETER_NAME( sampling )</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    BOOST_PARAMETER_NAME( components )</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    BOOST_PARAMETER_NAME( periodicity )</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    BOOST_PARAMETER_NAME( collect_garbage )</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="comment">// orders</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    BOOST_PARAMETER_NAME( order_u )</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    BOOST_PARAMETER_NAME( order_p )</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    BOOST_PARAMETER_NAME( initial_time )</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    BOOST_PARAMETER_NAME( final_time )</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    BOOST_PARAMETER_NAME( time_step )</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    BOOST_PARAMETER_NAME( strategy )</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    BOOST_PARAMETER_NAME( steady )</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    BOOST_PARAMETER_NAME( restart )</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    BOOST_PARAMETER_NAME( restart_path )</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    BOOST_PARAMETER_NAME( restart_at_last_save )</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    BOOST_PARAMETER_NAME( rank_proc_in_files_name )</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    BOOST_PARAMETER_NAME( freq )</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    BOOST_PARAMETER_NAME( markerName )</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    BOOST_PARAMETER_NAME( markerAll )</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    BOOST_PARAMETER_NAME( marker1 )</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    BOOST_PARAMETER_NAME( marker2 )</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    BOOST_PARAMETER_NAME( marker3 )</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    BOOST_PARAMETER_NAME( marker4 )</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    BOOST_PARAMETER_NAME( marker5 )</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    BOOST_PARAMETER_NAME( marker6 )</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    BOOST_PARAMETER_NAME( marker7 )</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    BOOST_PARAMETER_NAME( marker8 )</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    BOOST_PARAMETER_NAME( marker9 )</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    BOOST_PARAMETER_NAME( marker10 )</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    BOOST_PARAMETER_NAME( marker11 )</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    BOOST_PARAMETER_NAME( marker12 )</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    BOOST_PARAMETER_NAME( domain )</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    BOOST_PARAMETER_NAME( image )</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    BOOST_PARAMETER_NAME( domainSpace )</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    BOOST_PARAMETER_NAME( imageSpace )</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    BOOST_PARAMETER_NAME( range )</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    BOOST_PARAMETER_NAME( element )</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    BOOST_PARAMETER_NAME( parameter )</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    BOOST_PARAMETER_NAME( sampling )</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    BOOST_PARAMETER_NAME( components )</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    BOOST_PARAMETER_NAME( periodicity )</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    BOOST_PARAMETER_NAME( periodic )</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    BOOST_PARAMETER_NAME( partitions )</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    BOOST_PARAMETER_NAME( partition_file )</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    BOOST_PARAMETER_NAME( rebuild_partitions )</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    BOOST_PARAMETER_NAME( rebuild_partitions_filename )</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    BOOST_PARAMETER_NAME( worldcomm )</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    BOOST_PARAMETER_NAME( worldscomm )</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    BOOST_PARAMETER_NAME( parallel )</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    BOOST_PARAMETER_NAME( substructuring )</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    BOOST_PARAMETER_NAME( structured )</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    BOOST_PARAMETER_NAME( jacobian )</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    BOOST_PARAMETER_NAME( residual )</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    BOOST_PARAMETER_NAME( currentElt )</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    BOOST_PARAMETER_NAME( newElt )</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    BOOST_PARAMETER_NAME( space )</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    BOOST_PARAMETER_NAME( initial_theta )</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    BOOST_PARAMETER_NAME( min_theta )</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    BOOST_PARAMETER_NAME( forceRelaxation )</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    BOOST_PARAMETER_NAME( use_tbb )</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    BOOST_PARAMETER_NAME( grainsize )</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    BOOST_PARAMETER_NAME( partitioner )</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    BOOST_PARAMETER_NAME( save )</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    BOOST_PARAMETER_NAME( ddmethod )</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    BOOST_PARAMETER_NAME( penaldir )</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    BOOST_PARAMETER_NAME( close )</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    BOOST_PARAMETER_NAME( collect_garbage )</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    BOOST_PARAMETER_NAME( partitions )</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    BOOST_PARAMETER_NAME( partition_file )</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    BOOST_PARAMETER_NAME( rebuild_partitions )</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    BOOST_PARAMETER_NAME( rebuild_partitions_filename )</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    BOOST_PARAMETER_NAME( worldcomm )</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    BOOST_PARAMETER_NAME( worldscomm )</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    BOOST_PARAMETER_NAME( parallel )</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    BOOST_PARAMETER_NAME( substructuring )</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    BOOST_PARAMETER_NAME( structured )</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    BOOST_PARAMETER_NAME( jacobian )</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    BOOST_PARAMETER_NAME( residual )</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    BOOST_PARAMETER_NAME( currentElt )</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    BOOST_PARAMETER_NAME( newElt )</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    BOOST_PARAMETER_NAME( space )</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    BOOST_PARAMETER_NAME( initial_theta )</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    BOOST_PARAMETER_NAME( min_theta )</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    BOOST_PARAMETER_NAME( forceRelaxation )</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    BOOST_PARAMETER_NAME( use_tbb )</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    BOOST_PARAMETER_NAME( grainsize )</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    BOOST_PARAMETER_NAME( partitioner )</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    BOOST_PARAMETER_NAME( save )</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    BOOST_PARAMETER_NAME( ddmethod )</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    BOOST_PARAMETER_NAME( penaldir )</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    BOOST_PARAMETER_NAME( author )</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    BOOST_PARAMETER_NAME( task )</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    BOOST_PARAMETER_NAME( email )</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    BOOST_PARAMETER_NAME( license )</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    BOOST_PARAMETER_NAME( copyright )</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    BOOST_PARAMETER_NAME( home )</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    BOOST_PARAMETER_NAME( bugs )</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    BOOST_PARAMETER_NAME( version )</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;} <span class="comment">// Feel</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;namespace Feel</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;{</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="keyword">namespace </span>detail</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    BOOST_PARAMETER_NAME( close )</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    BOOST_PARAMETER_NAME( author )</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    BOOST_PARAMETER_NAME( task )</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    BOOST_PARAMETER_NAME( email )</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    BOOST_PARAMETER_NAME( license )</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    BOOST_PARAMETER_NAME( copyright )</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    BOOST_PARAMETER_NAME( home )</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    BOOST_PARAMETER_NAME( bugs )</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    BOOST_PARAMETER_NAME( version )</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;} <span class="comment">// Feel</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;namespace Feel</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;{</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TheArgs, <span class="keyword">typename</span> Tag&gt;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="keyword">struct </span>remove_pointer_const_reference_type</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;{</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_pointer&lt;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keyword">typename</span> boost::remove_const&lt;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">typename</span> boost::remove_reference&lt;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keyword">typename</span> parameter::binding&lt;TheArgs, Tag&gt;::type</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    &gt;::type</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    &gt;::type</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    &gt;::type type;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;};</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TheArgs, <span class="keyword">typename</span> Tag, <span class="keyword">typename</span> Default&gt;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="keyword">struct </span>remove_pointer_const_reference_default_type</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;{</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_pointer&lt;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keyword">typename</span> boost::remove_const&lt;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keyword">typename</span> boost::remove_reference&lt;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keyword">typename</span> parameter::binding&lt;TheArgs, Tag, Default&gt;::type</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    &gt;::type</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    &gt;::type</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    &gt;::type type;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;};</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;} <span class="comment">// detail</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;} <span class="comment">// Feel</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __feelcore_parameter_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="keyword">namespace </span>detail</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;{</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TheArgs, <span class="keyword">typename</span> Tag&gt;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="keyword">struct </span>remove_pointer_const_reference_type</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;{</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_pointer&lt;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keyword">typename</span> boost::remove_const&lt;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keyword">typename</span> boost::remove_reference&lt;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keyword">typename</span> parameter::binding&lt;TheArgs, Tag&gt;::type</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    &gt;::type</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    &gt;::type</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    &gt;::type type;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;};</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TheArgs, <span class="keyword">typename</span> Tag, <span class="keyword">typename</span> Default&gt;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="keyword">struct </span>remove_pointer_const_reference_default_type</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;{</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_pointer&lt;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keyword">typename</span> boost::remove_const&lt;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keyword">typename</span> boost::remove_reference&lt;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keyword">typename</span> parameter::binding&lt;TheArgs, Tag, Default&gt;::type</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    &gt;::type</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    &gt;::type</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    &gt;::type type;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;};</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;} <span class="comment">// detail</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;} <span class="comment">// Feel</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __feelcore_parameter_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Oct 21 2013 00:05:15 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Wed Oct 23 2013 10:58:51 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

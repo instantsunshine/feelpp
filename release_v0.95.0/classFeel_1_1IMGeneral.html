@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.95.0-beta.4</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -127,9 +127,9 @@ class Feel::IMGeneral&lt; Dim, Order, T, Entity, QPS, DegreePolicy &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a8e70975dbeed3b1baeb8c8acc309e604"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e70975dbeed3b1baeb8c8acc309e604"></a>
-typedef Entity&lt; Dim, nOrder, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>convex_type</b></td></tr>
-<tr class="separator:a8e70975dbeed3b1baeb8c8acc309e604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e6156a19af5765d8ba28227e0e5dc64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e6156a19af5765d8ba28227e0e5dc64"></a>
+typedef Entity&lt; Dim, 1, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>convex_type</b></td></tr>
+<tr class="separator:a1e6156a19af5765d8ba28227e0e5dc64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a666ec084835dccb15199aa12cdf0a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a666ec084835dccb15199aa12cdf0a9"></a>
 typedef DegreePolicy&lt; Order &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>degree_policy_type</b></td></tr>
 <tr class="separator:a7a666ec084835dccb15199aa12cdf0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,6 +177,9 @@ static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>n
 <tr class="memitem:a3dc77bb70bf12309ba6c19c190ecd17a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3dc77bb70bf12309ba6c19c190ecd17a"></a>
 static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nOrder</b> = degree_policy_type::integration_degree</td></tr>
 <tr class="separator:a3dc77bb70bf12309ba6c19c190ecd17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9626162213623fa4897a1077e2b93f47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9626162213623fa4897a1077e2b93f47"></a>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nQuadPoints</b> = super::Npoints</td></tr>
+<tr class="separator:a9626162213623fa4897a1077e2b93f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="im_8hpp_source.html">im.hpp</a></li>
@@ -184,7 +187,7 @@ static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>n
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Oct 21 2013 00:05:26 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Wed Oct 23 2013 10:59:04 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

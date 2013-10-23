@@ -16,6 +16,8 @@ var classFeel_1_1GeoND =
     [ "point_iterator", "classFeel_1_1GeoND.html#a7b540283dab9d36d1033571d014c4e63", null ],
     [ "point_type", "classFeel_1_1GeoND.html#a73185ff55b5b34db98dc708f5717b7de", null ],
     [ "PointType", "classFeel_1_1GeoND.html#a3e683df40d5cf5adf1ccc35eaed2e391", null ],
+    [ "reference_convex1_type", "classFeel_1_1GeoND.html#a3eb2c201b4688af266bd8c5aaf6b5216", null ],
+    [ "reference_convex_type", "classFeel_1_1GeoND.html#ab955370d334211c8e86a395b639617e5", null ],
     [ "self_type", "classFeel_1_1GeoND.html#a2ab7a7fb41a49db9ad7ad1001bc2c46a", null ],
     [ "value_type", "classFeel_1_1GeoND.html#ab5e8e793d946d0eb35e5dcc0292d6bd9", null ],
     [ "vertex_permutation_type", "classFeel_1_1GeoND.html#a58481949d8e7f4176fc8f6e8e135a213", null ],

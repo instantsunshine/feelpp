@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['n',['n',['../classFeel_1_1problem.html#af758f0e18a0195723848d4babfa2d284',1,'Feel::problem::n()'],['../classFeel_1_1GeoMap_1_1Context.html#a36a807cc25eca5d065303e524d637f8b',1,'Feel::GeoMap::Context::N()'],['../classFeel_1_1GeoMap_1_1Inverse.html#a81db0318b64f232b3ba1c14d2056740d',1,'Feel::GeoMap::Inverse::N()']]],
+  ['n',['N',['../classFeel_1_1GeoMap_1_1Context.html#a36a807cc25eca5d065303e524d637f8b',1,'Feel::GeoMap::Context::N()'],['../classFeel_1_1GeoMap_1_1Inverse.html#a81db0318b64f232b3ba1c14d2056740d',1,'Feel::GeoMap::Inverse::N()'],['../classFeel_1_1problem.html#af758f0e18a0195723848d4babfa2d284',1,'Feel::problem::n()']]],
   ['na',['nA',['../classFeel_1_1problem.html#aa3aa482741a91009453665a52061239b',1,'Feel::problem']]],
   ['name',['name',['../classFeel_1_1AboutPerson.html#a3e63b78b9c4ac13abc05dedb9c254b3f',1,'Feel::AboutPerson::name()'],['../classFeel_1_1Simget.html#af253c82f9e803fd38ee16d18a6ca6337',1,'Feel::Simget::name()'],['../classFeel_1_1TypeInfo.html#ad4fa83dca0bb3ba3cb72bedcefcbdf77',1,'Feel::TypeInfo::name()'],['../classFeel_1_1CRBDB.html#aafbd9eddb9faeb89f4f0fa29d01744e9',1,'Feel::CRBDB::name()'],['../classFeel_1_1TimeSet.html#a089f134efa92dbfa7576b73e48f2e442',1,'Feel::TimeSet::name()'],['../classFeel_1_1Material.html#abcf0af6f4d995c3949494904f95ebf0b',1,'Feel::Material::name()'],['../classFeel_1_1Simplex.html#a55a19a07ddc54c41e5c620723c8d7942',1,'Feel::Simplex::name()'],['../classFeel_1_1PolynomialSet.html#a1595086fc3e00e3cef43003f98c14153',1,'Feel::PolynomialSet::name()'],['../classFeel_1_1Sound.html#a6b7ed5ae55c1b8e2a5721e95a54e2a09',1,'Feel::Sound::name()']]],
   ['nbdof',['nbDof',['../classFeel_1_1PolynomialSet.html#a302650f3b7232c4a279e63f3438ba9a0',1,'Feel::PolynomialSet']]],
@@ -62,11 +62,11 @@ var searchData=
   ['numberofeigenvalues',['numberOfEigenvalues',['../classFeel_1_1SolverEigen.html#a25720fc0e1115b98aa71651a7decf0a7',1,'Feel::SolverEigen']]],
   ['numberofeigenvaluesconverged',['numberOfEigenvaluesConverged',['../classFeel_1_1SolverEigen.html#aed58097eff9d807b3b02ca27a54c9219',1,'Feel::SolverEigen']]],
   ['numberofelements',['numberOfElements',['../classFeel_1_1GeoEntity.html#a99f7fc01c5627410bbd96a5fcfab04b2',1,'Feel::GeoEntity']]],
-  ['numberofelementsghost',['numberOfElementsGhost',['../classFeel_1_1GeoEntity.html#a87a7e4e7250e7f384177f17db019075c',1,'Feel::GeoEntity']]],
   ['numberofneighborpartitions',['numberOfNeighborPartitions',['../classFeel_1_1GeoEntity.html#a25768e7353f568cda03694e9f3f900d2',1,'Feel::GeoEntity']]],
   ['numberofpartitions',['numberOfPartitions',['../classFeel_1_1Gmsh.html#a1322e596ec2e515a23241565a3cb2e11',1,'Feel::Gmsh::numberOfPartitions()'],['../classFeel_1_1GeoEntity.html#a5b7f58ecebfac89024b7ece0c692a9a1',1,'Feel::GeoEntity::numberOfPartitions()'],['../classFeel_1_1MeshBase.html#a70431695f55bdefe53dbe324677d7193',1,'Feel::MeshBase::numberOfPartitions()']]],
   ['numberofpointelementneighbors',['numberOfPointElementNeighbors',['../classFeel_1_1GeoND.html#a5bfe48cf8fd9729a46b0356098867003',1,'Feel::GeoND']]],
   ['numberofprocessors',['numberOfProcessors',['../classFeel_1_1detail_1_1Environment.html#abdfe67905fb6f43796f5432313db61b5',1,'Feel::detail::Environment']]],
+  ['numberofprocghost',['numberOfProcGhost',['../classFeel_1_1GeoEntity.html#aeabda832f821706542ab5c63800ea106',1,'Feel::GeoEntity']]],
   ['numberofsteps',['numberOfSteps',['../classFeel_1_1TimeSet.html#a6c949705661004c28d5163dd98ce7800',1,'Feel::TimeSet::numberOfSteps() const '],['../classFeel_1_1TimeSet.html#a528b69cc2d8783bfb3208f30dc4cbbd7',1,'Feel::TimeSet::numberOfSteps(mpl::bool_&lt; false &gt;) const '],['../classFeel_1_1TimeSet.html#a7a41dd012ca027173774a22674857cc6',1,'Feel::TimeSet::numberOfSteps(mpl::bool_&lt; true &gt;) const ']]],
   ['numberofstepsignored',['numberOfStepsIgnored',['../classFeel_1_1TimeSet.html#ad33b61a24b4b53dda5def76eb1f93307',1,'Feel::TimeSet']]],
   ['numberoftotalsteps',['numberOfTotalSteps',['../classFeel_1_1TimeSet.html#a0e7354f499eb7fecf12d930babc0e0e9',1,'Feel::TimeSet']]],

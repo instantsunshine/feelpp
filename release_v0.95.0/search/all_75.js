@@ -10,7 +10,7 @@ var searchData=
   ['unitnormal',['unitNormal',['../classFeel_1_1Sphere.html#ab1b027d8b163b7c8af9ceb39cc02fd62',1,'Feel::Sphere::unitNormal()'],['../classFeel_1_1Surface.html#a9547488d0de97286c259e579b03edf41',1,'Feel::Surface::unitNormal()'],['../classFeel_1_1GeoMap_1_1Context.html#a1f074d2bccedacb70f61be8a1014d426',1,'Feel::GeoMap::Context::unitNormal()']]],
   ['unitsegment',['unitSegment',['../namespaceFeel.html#a0a1f9cc8a7334a06b823b76866aaba04',1,'Feel']]],
   ['unitsphere',['unitSphere',['../namespaceFeel.html#a5f23b38aeff08e0c33d858c57e5093ab',1,'Feel']]],
-  ['unitsquare',['unitSquare',['../namespaceFeel.html#ae825fbe687017d967220cf4674ac4f21',1,'Feel']]],
+  ['unitsquare',['unitSquare',['../namespaceFeel.html#aaf2805e45809b7e7cd370220b9062da0',1,'Feel']]],
   ['unknown',['unknown',['../classFeel_1_1Bdf.html#a98d2fd5f1560bc33f8d97ee02aa0aa74',1,'Feel::Bdf::unknown(int i)'],['../classFeel_1_1Bdf.html#aa8fe7ac84edb16d83ed470596762156e',1,'Feel::Bdf::unknown(int i)']]],
   ['unknownargc',['unknownArgc',['../classFeel_1_1Application.html#a79e745539709940f7d58a6fdb1837bb2',1,'Feel::Application']]],
   ['unknownargv',['unknownArgv',['../classFeel_1_1Application.html#a63fd0cdffe5299845a4bf01800d6de2e',1,'Feel::Application']]],

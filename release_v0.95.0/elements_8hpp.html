@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.95.0-beta.4</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -136,6 +136,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a023c35f5fde01230b16df67c61011b67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a023c35f5fde01230b16df67c61011b67"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::~Elements</b> ()</td></tr>
 <tr class="separator:a023c35f5fde01230b16df67c61011b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad460a09a7434015813f67e4968bd2cc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad460a09a7434015813f67e4968bd2cc7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::clear</b> ()</td></tr>
+<tr class="separator:ad460a09a7434015813f67e4968bd2cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Operator overloads</div></td></tr>
 <tr class="memitem:a50972fd7b0bc76c7a441e8ed1b779871"><td class="memItemLeft" align="right" valign="top">Elements &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">Feel::operator=</a> (Elements const &amp;e)</td></tr>
 <tr class="separator:a50972fd7b0bc76c7a441e8ed1b779871"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,17 +215,17 @@ marker2_element_const_iterator &gt;&#160;</td><td class="memItemRight" valign="b
 &lt; marker3_element_const_iterator, <br class="typebreak"/>
 marker3_element_const_iterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a991a7e4609cec0f668af7b1d6a1eea84">Feel::elementsWithMarker3</a> (size_type m, size_type p) const </td></tr>
 <tr class="separator:a991a7e4609cec0f668af7b1d6a1eea84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad015c3cd4b939d64422856bdeabdde6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad015c3cd4b939d64422856bdeabdde6c"></a>
-element_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::beginElementWithProcessId</b> (size_type m)</td></tr>
-<tr class="separator:ad015c3cd4b939d64422856bdeabdde6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a431c3c74c016a0780693c4e390a26dd9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a431c3c74c016a0780693c4e390a26dd9"></a>
-element_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::endElementWithProcessId</b> (size_type m)</td></tr>
-<tr class="separator:a431c3c74c016a0780693c4e390a26dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5682fe586d1c33d9cbfbea33d8744324"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5682fe586d1c33d9cbfbea33d8744324"></a>
+<tr class="memitem:a42fcb80e0865a4adfcba010fa3afdfe0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42fcb80e0865a4adfcba010fa3afdfe0"></a>
+element_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::beginElementWithProcessId</b> (uint16_type p=invalid_uint16_type_value)</td></tr>
+<tr class="separator:a42fcb80e0865a4adfcba010fa3afdfe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a315bb711582ef3397ebff50df511a6b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a315bb711582ef3397ebff50df511a6b1"></a>
+element_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::endElementWithProcessId</b> (uint16_type p=invalid_uint16_type_value)</td></tr>
+<tr class="separator:a315bb711582ef3397ebff50df511a6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb46fa8a848e7070140390491379a6e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb46fa8a848e7070140390491379a6e5"></a>
 std::pair<br class="typebreak"/>
 &lt; element_const_iterator, <br class="typebreak"/>
-element_const_iterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::elementsWithProcessId</b> (size_type m) const </td></tr>
-<tr class="separator:a5682fe586d1c33d9cbfbea33d8744324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+element_const_iterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::elementsWithProcessId</b> (uint16_type p=invalid_uint16_type_value) const </td></tr>
+<tr class="separator:afb46fa8a848e7070140390491379a6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b9ef571b03d440d2589dc2ead370b74"><td class="memItemLeft" align="right" valign="top">elements_type::template <br class="typebreak"/>
 nth_index&lt; 0 &gt;::type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFeel.html#a6b9ef571b03d440d2589dc2ead370b74">Feel::elementsById</a> ()</td></tr>
 <tr class="separator:a6b9ef571b03d440d2589dc2ead370b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -303,7 +306,7 @@ WorldComm&#160;</td><td class="memItemRight" valign="bottom"><b>Feel::M_worldCom
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Oct 21 2013 00:05:21 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Wed Oct 23 2013 10:58:58 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

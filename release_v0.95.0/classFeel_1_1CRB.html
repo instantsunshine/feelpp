@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.95.0-beta.4</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -228,8 +228,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>checkOrthonormality
 <tr class="separator:a9e1d3f886f35357eb0fd93330c543228"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5ac52d3e77a6ffedf1bbe31adbefeb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#ab5ac52d3e77a6ffedf1bbe31adbefeb2">exportBasisFunctions</a> (const export_vector_wn_type &amp;wn) const </td></tr>
 <tr class="separator:ab5ac52d3e77a6ffedf1bbe31adbefeb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e97fd602e73429231f6e590314d4d8e"><td class="memItemLeft" align="right" valign="top">boost::tuple&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#a7e97fd602e73429231f6e590314d4d8e">lb</a> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, std::vector&lt; vectorN_type &gt; &amp;uN, std::vector&lt; vectorN_type &gt; &amp;uNdu, std::vector&lt; vectorN_type &gt; &amp;uNold, std::vector&lt; vectorN_type &gt; &amp;uNduold, int K=0) const </td></tr>
-<tr class="separator:a7e97fd602e73429231f6e590314d4d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa40eaa902ad75df8e0e46e2f50b39f4b"><td class="memItemLeft" align="right" valign="top">boost::tuple&lt; double, <br class="typebreak"/>
+matrix_info_tuple &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#aa40eaa902ad75df8e0e46e2f50b39f4b">lb</a> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, std::vector&lt; vectorN_type &gt; &amp;uN, std::vector&lt; vectorN_type &gt; &amp;uNdu, std::vector&lt; vectorN_type &gt; &amp;uNold, std::vector&lt; vectorN_type &gt; &amp;uNduold, bool print_rb_matrix=false, int K=0) const </td></tr>
+<tr class="separator:aa40eaa902ad75df8e0e46e2f50b39f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1b9bb8a017675f5bef0704a337074ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1b9bb8a017675f5bef0704a337074ff"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateJacobian</b> (const map_dense_vector_type &amp;map_X, map_dense_matrix_type &amp;map_J, const <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> &amp;mu, int N) const </td></tr>
 <tr class="separator:ab1b9bb8a017675f5bef0704a337074ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,23 +240,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>updateResidual</b> (c
 <tr class="memitem:a8a0645f4652719bb4fa3443933e243d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a0645f4652719bb4fa3443933e243d6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>computeProjectionInitialGuess</b> (const <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> &amp;mu, int N, vectorN_type &amp;initial_guess) const </td></tr>
 <tr class="separator:a8a0645f4652719bb4fa3443933e243d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3a21070b770129456dc505d065270e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3a21070b770129456dc505d065270e4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>newton</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, vectorN_type &amp;uN, double &amp;condition_number, double &amp;output) const </td></tr>
-<tr class="separator:aa3a21070b770129456dc505d065270e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9db6d2715f035d55374839626a55e172"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9db6d2715f035d55374839626a55e172"></a>
+matrix_info_tuple&#160;</td><td class="memItemRight" valign="bottom"><b>newton</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, vectorN_type &amp;uN, double &amp;output) const </td></tr>
+<tr class="separator:a9db6d2715f035d55374839626a55e172"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f5b0c9c034b2af3a26bbdcf659d976b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f5b0c9c034b2af3a26bbdcf659d976b"></a>
 <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>offlineFixedPointPrimal</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, sparse_matrix_ptrtype &amp;A, bool zero_iteration)</td></tr>
 <tr class="separator:a1f5b0c9c034b2af3a26bbdcf659d976b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a931a5d5705bd8d3c370d1d741d78a44d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a931a5d5705bd8d3c370d1d741d78a44d"></a>
 <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>offlineFixedPointDual</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, element_ptrtype &amp;dual_initial_field, const sparse_matrix_ptrtype &amp;A, const <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a> &amp;u, bool zero_iteration)</td></tr>
 <tr class="separator:a931a5d5705bd8d3c370d1d741d78a44d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bee42baa9f6b46154fa122c35864b72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0bee42baa9f6b46154fa122c35864b72"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fixedPointPrimal</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, std::vector&lt; vectorN_type &gt; &amp;uN, std::vector&lt; vectorN_type &gt; &amp;uNold, double &amp;condition_number, std::vector&lt; double &gt; &amp;output_vector, int K=0) const </td></tr>
-<tr class="separator:a0bee42baa9f6b46154fa122c35864b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2437fdb2e025da243cfdae9f564c663"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2437fdb2e025da243cfdae9f564c663"></a>
+matrix_info_tuple&#160;</td><td class="memItemRight" valign="bottom"><b>fixedPointPrimal</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, std::vector&lt; vectorN_type &gt; &amp;uN, std::vector&lt; vectorN_type &gt; &amp;uNold, std::vector&lt; double &gt; &amp;output_vector, int K=0, bool print_rb_matrix=false) const </td></tr>
+<tr class="separator:ac2437fdb2e025da243cfdae9f564c663"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7eb5d9cf3959f12e605720c542a03d4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7eb5d9cf3959f12e605720c542a03d4a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>fixedPointDual</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, std::vector&lt; vectorN_type &gt; &amp;uNdu, std::vector&lt; vectorN_type &gt; &amp;uNduold, std::vector&lt; double &gt; &amp;output_vector, int K=0) const </td></tr>
 <tr class="separator:a7eb5d9cf3959f12e605720c542a03d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab613adb837df3ca32656fd2898c8660"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#aab613adb837df3ca32656fd2898c8660">fixedPoint</a> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, std::vector&lt; vectorN_type &gt; &amp;uN, std::vector&lt; vectorN_type &gt; &amp;uNdu, std::vector&lt; vectorN_type &gt; &amp;uNold, std::vector&lt; vectorN_type &gt; &amp;uNduold, double &amp;condition_number, std::vector&lt; double &gt; &amp;output_vector, int K=0) const </td></tr>
-<tr class="separator:aab613adb837df3ca32656fd2898c8660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1ef656d79dd09d9e49b6a8100965f39"><td class="memItemLeft" align="right" valign="top">matrix_info_tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#ab1ef656d79dd09d9e49b6a8100965f39">fixedPoint</a> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, std::vector&lt; vectorN_type &gt; &amp;uN, std::vector&lt; vectorN_type &gt; &amp;uNdu, std::vector&lt; vectorN_type &gt; &amp;uNold, std::vector&lt; vectorN_type &gt; &amp;uNduold, std::vector&lt; double &gt; &amp;output_vector, int K=0, bool print_rb_matrix=false) const </td></tr>
+<tr class="separator:ab1ef656d79dd09d9e49b6a8100965f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a641db99e003d2c860fc7682993fffa91"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#a641db99e003d2c860fc7682993fffa91">computeConditioning</a> (matrixN_type &amp;A) const </td></tr>
 <tr class="separator:a641db99e003d2c860fc7682993fffa91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23f8baf22f884034d197e53a7c7404fa"><td class="memItemLeft" align="right" valign="top">boost::tuple&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#a23f8baf22f884034d197e53a7c7404fa">lb</a> (parameter_ptrtype const &amp;mu, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, std::vector&lt; vectorN_type &gt; &amp;uN, std::vector&lt; vectorN_type &gt; &amp;uNdu) const </td></tr>
@@ -311,11 +312,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>checkInitialGuess</b>
 <tr class="memitem:abf13fc58016b50fd1ab53d8797214d58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf13fc58016b50fd1ab53d8797214d58"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>checkInitialGuess</b> (const <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a> expansion_uN, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, vectorN_type &amp;error, mpl::bool_&lt; false &gt;) const </td></tr>
 <tr class="separator:abf13fc58016b50fd1ab53d8797214d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4db7c099b00da3fd83fcbc7e1a164075"><td class="memItemLeft" align="right" valign="top">boost::tuple&lt; double, double, <br class="typebreak"/>
-solutions_tuple, double, <br class="typebreak"/>
-double, double, <br class="typebreak"/>
-upper_bounds_tuple &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#a4db7c099b00da3fd83fcbc7e1a164075">run</a> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, double eps=1e-6, int N=-1)</td></tr>
-<tr class="separator:a4db7c099b00da3fd83fcbc7e1a164075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa775dfc530878531129d6d7ab69c1466"><td class="memItemLeft" align="right" valign="top">boost::tuple&lt; double, double, <br class="typebreak"/>
+solutions_tuple, <br class="typebreak"/>
+matrix_info_tuple, double, <br class="typebreak"/>
+double, upper_bounds_tuple &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#aa775dfc530878531129d6d7ab69c1466">run</a> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, double eps=1e-6, int N=-1, bool print_rb_matrix=false)</td></tr>
+<tr class="separator:aa775dfc530878531129d6d7ab69c1466"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac629aaac157dea1a52e853c9cc4a6e1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#ac629aaac157dea1a52e853c9cc4a6e1d">run</a> (const double *X, unsigned long N, double *Y, unsigned long P)</td></tr>
 <tr class="separator:ac629aaac157dea1a52e853c9cc4a6e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61d6d947c61d612a9d27fbde56c36411"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61d6d947c61d612a9d27fbde56c36411"></a>
@@ -371,6 +372,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>buildVarianceMatrixPh
 <tr class="memitem:ae450b535c04870c615e4f555ea20349b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae450b535c04870c615e4f555ea20349b"></a>
 WorldComm const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>worldComm</b> () const </td></tr>
 <tr class="separator:ae450b535c04870c615e4f555ea20349b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf178d5e1a1f95c67f0add56850e3702"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf178d5e1a1f95c67f0add56850e3702"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printRBMatrix</b> (matrixN_type const &amp;A, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu) const </td></tr>
+<tr class="separator:abf178d5e1a1f95c67f0add56850e3702"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a859c151122fa4104dd7700f926c7ad93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#a859c151122fa4104dd7700f926c7ad93">computationalTimeStatistics</a> (std::string appname)</td></tr>
 <tr class="separator:a859c151122fa4104dd7700f926c7ad93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classFeel_1_1CRBDB"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classFeel_1_1CRBDB')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classFeel_1_1CRBDB.html">Feel::CRBDB</a></td></tr>
@@ -611,6 +615,10 @@ double, double, std::vector<br class="typebreak"/>
  &gt;, std::vector&lt; std::vector<br class="typebreak"/>
 &lt; double &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>upper_bounds_tuple</b></td></tr>
 <tr class="separator:a018983788d30a7d811697bf28f98e2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5e15158d84485bc6879da3e4e79afa7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5e15158d84485bc6879da3e4e79afa7"></a>
+typedef boost::tuple&lt; double, <br class="typebreak"/>
+double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_info_tuple</b></td></tr>
+<tr class="separator:ae5e15158d84485bc6879da3e4e79afa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56c99d94643531c1aa02f3b295387c53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56c99d94643531c1aa02f3b295387c53"></a>
 typedef std::vector&lt; <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mode_set_type</b></td></tr>
 <tr class="separator:a56c99d94643531c1aa02f3b295387c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -738,7 +746,7 @@ template&lt;typename TruthModelType &gt; </div>
   </dd>
 </dl>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#afd59bfa368bf7dabeb1ce0a0aa4de549">Feel::CRB&lt; TruthModelType &gt;::delta()</a>, <a class="el" href="classFeel_1_1CRB.html#a7e97fd602e73429231f6e590314d4d8e">Feel::CRB&lt; TruthModelType &gt;::lb()</a>, and <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#afd59bfa368bf7dabeb1ce0a0aa4de549">Feel::CRB&lt; TruthModelType &gt;::delta()</a>, <a class="el" href="classFeel_1_1CRB.html#aa40eaa902ad75df8e0e46e2f50b39f4b">Feel::CRB&lt; TruthModelType &gt;::lb()</a>, and <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>.</p>
 
 </div>
 </div>
@@ -759,7 +767,7 @@ template&lt;typename TruthModelType &gt; </div>
 </div><div class="memdoc">
 <p>evaluate online time via the option crb.computational-time-neval </p>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#aeea5774ce0d944f1bdd7acf74e0cbd80">Feel::CRB&lt; TruthModelType &gt;::dimension()</a>, and <a class="el" href="classFeel_1_1CRB.html#a4db7c099b00da3fd83fcbc7e1a164075">Feel::CRB&lt; TruthModelType &gt;::run()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#aeea5774ce0d944f1bdd7acf74e0cbd80">Feel::CRB&lt; TruthModelType &gt;::dimension()</a>, and <a class="el" href="classFeel_1_1CRB.html#aa775dfc530878531129d6d7ab69c1466">Feel::CRB&lt; TruthModelType &gt;::run()</a>.</p>
 
 </div>
 </div>
@@ -836,7 +844,7 @@ template&lt;typename TruthModelType &gt; </div>
   </dd>
 </dl>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#afd59bfa368bf7dabeb1ce0a0aa4de549">Feel::CRB&lt; TruthModelType &gt;::delta()</a>, and <a class="el" href="classFeel_1_1CRB.html#a7e97fd602e73429231f6e590314d4d8e">Feel::CRB&lt; TruthModelType &gt;::lb()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#afd59bfa368bf7dabeb1ce0a0aa4de549">Feel::CRB&lt; TruthModelType &gt;::delta()</a>, and <a class="el" href="classFeel_1_1CRB.html#aa40eaa902ad75df8e0e46e2f50b39f4b">Feel::CRB&lt; TruthModelType &gt;::lb()</a>.</p>
 
 </div>
 </div>
@@ -1126,7 +1134,7 @@ template&lt;typename TruthModelType &gt; </div>
 </div><div class="memdoc">
 <p>return the crb expansion at parameter <code></code> , ie <img class="formulaInl" alt="$\sum_{i=0}^N u^N_i \phi_i$" src="form_68.png"/> where $, i=1...N$ are the basis function of the reduced basis space if N&gt;0 take the N^th first elements, else take all elements </p>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#a7e97fd602e73429231f6e590314d4d8e">Feel::CRB&lt; TruthModelType &gt;::lb()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#aa40eaa902ad75df8e0e46e2f50b39f4b">Feel::CRB&lt; TruthModelType &gt;::lb()</a>.</p>
 
 </div>
 </div>
@@ -1192,14 +1200,14 @@ template&lt;typename TruthModelType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aab613adb837df3ca32656fd2898c8660"></a>
+<a class="anchor" id="ab1ef656d79dd09d9e49b6a8100965f39"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename TruthModelType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1CRB.html">Feel::CRB</a>&lt; TruthModelType &gt;::fixedPoint </td>
+          <td class="memname"><a class="el" href="classFeel_1_1CRB.html">CRB</a>&lt; TruthModelType &gt;::matrix_info_tuple <a class="el" href="classFeel_1_1CRB.html">Feel::CRB</a>&lt; TruthModelType &gt;::fixedPoint </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -1237,12 +1245,6 @@ template&lt;typename TruthModelType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>condition_number</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>output_vector</em>, </td>
         </tr>
@@ -1250,7 +1252,13 @@ template&lt;typename TruthModelType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>K</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>K</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>print_rb_matrix</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1278,14 +1286,14 @@ template&lt;typename TruthModelType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a7e97fd602e73429231f6e590314d4d8e"></a>
+<a class="anchor" id="aa40eaa902ad75df8e0e46e2f50b39f4b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename TruthModelType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">boost::tuple&lt; double, double &gt; <a class="el" href="classFeel_1_1CRB.html">Feel::CRB</a>&lt; TruthModelType &gt;::lb </td>
+          <td class="memname">boost::tuple&lt; double, typename <a class="el" href="classFeel_1_1CRB.html">CRB</a>&lt; TruthModelType &gt;::matrix_info_tuple &gt; <a class="el" href="classFeel_1_1CRB.html">Feel::CRB</a>&lt; TruthModelType &gt;::lb </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -1323,6 +1331,12 @@ template&lt;typename TruthModelType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>print_rb_matrix</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>K</em> = <code>0</code>&#160;</td>
         </tr>
@@ -1346,7 +1360,7 @@ template&lt;typename TruthModelType &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>compute online the lower bound  also condition number of matrix A </dd></dl>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#aab613adb837df3ca32656fd2898c8660">Feel::CRB&lt; TruthModelType &gt;::fixedPoint()</a>, <a class="el" href="classFeel_1_1CRBDB.html#aafbd9eddb9faeb89f4f0fa29d01744e9">Feel::CRBDB::name()</a>, and <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#ab1ef656d79dd09d9e49b6a8100965f39">Feel::CRB&lt; TruthModelType &gt;::fixedPoint()</a>, <a class="el" href="classFeel_1_1CRBDB.html#aafbd9eddb9faeb89f4f0fa29d01744e9">Feel::CRBDB::name()</a>, and <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>.</p>
 
 </div>
 </div>
@@ -1407,7 +1421,7 @@ template&lt;typename TruthModelType&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>compute online the lower bound and condition number of matrix A </dd></dl>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#a7e97fd602e73429231f6e590314d4d8e">Feel::CRB&lt; TruthModelType &gt;::lb()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#aa40eaa902ad75df8e0e46e2f50b39f4b">Feel::CRB&lt; TruthModelType &gt;::lb()</a>.</p>
 
 </div>
 </div>
@@ -1465,7 +1479,7 @@ template&lt;typename TruthModelType &gt; </div>
   </dd>
 </dl>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#afd59bfa368bf7dabeb1ce0a0aa4de549">Feel::CRB&lt; TruthModelType &gt;::delta()</a>, <a class="el" href="classFeel_1_1CRB.html#a7e97fd602e73429231f6e590314d4d8e">Feel::CRB&lt; TruthModelType &gt;::lb()</a>, and <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#afd59bfa368bf7dabeb1ce0a0aa4de549">Feel::CRB&lt; TruthModelType &gt;::delta()</a>, <a class="el" href="classFeel_1_1CRB.html#aa40eaa902ad75df8e0e46e2f50b39f4b">Feel::CRB&lt; TruthModelType &gt;::lb()</a>, and <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>.</p>
 
 </div>
 </div>
@@ -1754,14 +1768,14 @@ template&lt;typename TruthModelType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a4db7c099b00da3fd83fcbc7e1a164075"></a>
+<a class="anchor" id="aa775dfc530878531129d6d7ab69c1466"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename TruthModelType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">boost::tuple&lt; double, double, typename <a class="el" href="classFeel_1_1CRB.html">CRB</a>&lt; TruthModelType &gt;::solutions_tuple, double, double, double, typename <a class="el" href="classFeel_1_1CRB.html">CRB</a>&lt; TruthModelType &gt;::upper_bounds_tuple &gt; <a class="el" href="classFeel_1_1CRB.html">Feel::CRB</a>&lt; TruthModelType &gt;::run </td>
+          <td class="memname">boost::tuple&lt; double, double, typename <a class="el" href="classFeel_1_1CRB.html">CRB</a>&lt; TruthModelType &gt;::solutions_tuple, typename <a class="el" href="classFeel_1_1CRB.html">CRB</a>&lt; TruthModelType &gt;::matrix_info_tuple, double, double, typename <a class="el" href="classFeel_1_1CRB.html">CRB</a>&lt; TruthModelType &gt;::upper_bounds_tuple &gt; <a class="el" href="classFeel_1_1CRB.html">Feel::CRB</a>&lt; TruthModelType &gt;::run </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;&#160;</td>
           <td class="paramname"><em>mu</em>, </td>
@@ -1776,7 +1790,13 @@ template&lt;typename TruthModelType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>N</em> = <code>-1</code>&#160;</td>
+          <td class="paramname"><em>N</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>print_rb_matrix</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1787,7 +1807,7 @@ template&lt;typename TruthModelType &gt; </div>
 </div><div class="memdoc">
 <p>run the certified reduced basis with P parameters and returns 1 output </p>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#afd59bfa368bf7dabeb1ce0a0aa4de549">Feel::CRB&lt; TruthModelType &gt;::delta()</a>, <a class="el" href="classFeel_1_1CRB.html#a7e97fd602e73429231f6e590314d4d8e">Feel::CRB&lt; TruthModelType &gt;::lb()</a>, and <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#afd59bfa368bf7dabeb1ce0a0aa4de549">Feel::CRB&lt; TruthModelType &gt;::delta()</a>, <a class="el" href="classFeel_1_1CRB.html#aa40eaa902ad75df8e0e46e2f50b39f4b">Feel::CRB&lt; TruthModelType &gt;::lb()</a>, and <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>.</p>
 
 </div>
 </div>
@@ -1830,7 +1850,7 @@ template&lt;typename TruthModelType &gt; </div>
 </div><div class="memdoc">
 <p>run the certified reduced basis with P parameters and returns 1 output </p>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#a4db7c099b00da3fd83fcbc7e1a164075">Feel::CRB&lt; TruthModelType &gt;::run()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#aa775dfc530878531129d6d7ab69c1466">Feel::CRB&lt; TruthModelType &gt;::run()</a>.</p>
 
 </div>
 </div>
@@ -2046,7 +2066,7 @@ template&lt;typename TruthModelType&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>compute online the lower bound </dd></dl>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#afd59bfa368bf7dabeb1ce0a0aa4de549">Feel::CRB&lt; TruthModelType &gt;::delta()</a>, and <a class="el" href="classFeel_1_1CRB.html#a7e97fd602e73429231f6e590314d4d8e">Feel::CRB&lt; TruthModelType &gt;::lb()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#afd59bfa368bf7dabeb1ce0a0aa4de549">Feel::CRB&lt; TruthModelType &gt;::delta()</a>, and <a class="el" href="classFeel_1_1CRB.html#aa40eaa902ad75df8e0e46e2f50b39f4b">Feel::CRB&lt; TruthModelType &gt;::lb()</a>.</p>
 
 </div>
 </div>
@@ -2115,7 +2135,7 @@ template&lt;typename TruthModelType&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Oct 21 2013 00:05:24 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Wed Oct 23 2013 10:59:00 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

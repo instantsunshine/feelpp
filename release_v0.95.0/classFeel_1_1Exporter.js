@@ -41,6 +41,7 @@ var classFeel_1_1Exporter =
     [ "setMesh", "classFeel_1_1Exporter.html#a47a365ae00633367a2b700c6fc62eb59", null ],
     [ "setOptions", "classFeel_1_1Exporter.html#ab6cf895c8d33d3e4fbfae845f8c19cc3", null ],
     [ "setOptions", "classFeel_1_1Exporter.html#a9f556c9ddc72fc7f54ac3cb25dda9806", null ],
+    [ "setPath", "classFeel_1_1Exporter.html#aceba2adf3feb8a1421bccab6ac1f90bc", null ],
     [ "setPrefix", "classFeel_1_1Exporter.html#ae3bba0a66e5982b327b2592a4d92100f", null ],
     [ "setType", "classFeel_1_1Exporter.html#a39545fa33171ab565d74be13b0595cf1", null ],
     [ "setUseSingleTransientFile", "classFeel_1_1Exporter.html#add8fd3b333fe9eaa20ae108304f1ca6f", null ],
