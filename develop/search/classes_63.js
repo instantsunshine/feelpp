@@ -1,10 +1,10 @@
 var searchData=
 [
   ['castiron',['CastIron',['../classFeel_1_1CastIron.html',1,'Feel']]],
-  ['cmpbareitem',['cmpBareItem',['../structFeel_1_1cmpBareItem.html',1,'Feel']]],
+  ['cmpbareitem',['cmpBareItem',['../group__comparison.html#structFeel_1_1cmpBareItem',1,'Feel']]],
   ['cmpbareitem_3c_20bareedge_20_3e',['cmpBareItem&lt; BareEdge &gt;',['../structFeel_1_1cmpBareItem_3_01BareEdge_01_4.html',1,'Feel']]],
-  ['cmpbareitem_3c_20bareface_20_3e',['cmpBareItem&lt; BareFace &gt;',['../structFeel_1_1cmpBareItem_3_01BareFace_01_4.html',1,'Feel']]],
-  ['cmpbareitem_3c_20barepoint_20_3e',['cmpBareItem&lt; BarePoint &gt;',['../structFeel_1_1cmpBareItem_3_01BarePoint_01_4.html',1,'Feel']]],
+  ['cmpbareitem_3c_20bareface_20_3e',['cmpBareItem&lt; BareFace &gt;',['../group__comparison.html#structFeel_1_1cmpBareItem_3_01BareFace_01_4',1,'Feel']]],
+  ['cmpbareitem_3c_20barepoint_20_3e',['cmpBareItem&lt; BarePoint &gt;',['../group__comparison.html#structFeel_1_1cmpBareItem_3_01BarePoint_01_4',1,'Feel']]],
   ['component',['Component',['../structFeel_1_1Component.html',1,'Feel']]],
   ['componentpointevaluation',['ComponentPointEvaluation',['../classFeel_1_1functional_1_1ComponentPointEvaluation.html',1,'Feel::functional']]],
   ['componentspointsevaluation',['ComponentsPointsEvaluation',['../structFeel_1_1functional_1_1ComponentsPointsEvaluation.html',1,'Feel::functional']]],

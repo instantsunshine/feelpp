@@ -16,7 +16,7 @@ var classConvectionCrb =
     [ "element_ptrtype", "classConvectionCrb.html#aa706418cd6f77fab806fc3ebb0267273", null ],
     [ "element_type", "classConvectionCrb.html#a4c91be9390df876d4de3299defc96b7c", null ],
     [ "ematrix_type", "classConvectionCrb.html#af82d6450d768dfd65045787817a1f980", null ],
-    [ "entity_type", "classConvectionCrb.html#ae26fa5f123f34d8cbfffa6f801987655", null ],
+    [ "entity_type", "classConvectionCrb.html#a10e954f4f1057f5449a10d3677ff46b1", null ],
     [ "export_type", "classConvectionCrb.html#a047e2533060b4c066d3547d342c73f1d", null ],
     [ "functionspace_ptrtype", "classConvectionCrb.html#a05ac1849b1603c43002584513334912e", null ],
     [ "functionspace_type", "classConvectionCrb.html#ae45ead51d14c3051d3c9f7a4ab592382", null ],

@@ -2,8 +2,8 @@ var searchData=
 [
   ['e',['E',['../classFeel_1_1Air.html#aa39d4f358b90d498f8c929b31dbb4f85',1,'Feel::Air::E()'],['../classFeel_1_1CastIron.html#a0b45bc6b1a8583e19b3a988dc375553d',1,'Feel::CastIron::E() const '],['../classFeel_1_1CastIron.html#a0b45bc6b1a8583e19b3a988dc375553d',1,'Feel::CastIron::E() const '],['../classFeel_1_1Material.html#ae77a8a1467a7d659de123bb1931fab92',1,'Feel::Material::E()']]],
   ['e2p',['e2p',['../classFeel_1_1Simplex.html#a87a026e3a9955900903d45caf936baea',1,'Feel::Simplex']]],
-  ['edge',['edge',['../classFeel_1_1GeoElement2D.html#a5ad0ae48278bd7903ae72d241c3c1562',1,'Feel::GeoElement2D::edge(uint16_type i) const '],['../classFeel_1_1GeoElement2D.html#a547bc8176148376aa8c41d71d22c08b0',1,'Feel::GeoElement2D::edge(uint16_type i)']]],
-  ['edgepermutation',['edgePermutation',['../classFeel_1_1GeoElement2D.html#aa0febae423d58be8d246adca78844c1b',1,'Feel::GeoElement2D']]],
+  ['edge',['edge',['../group__GeoEle.html#a5ad0ae48278bd7903ae72d241c3c1562',1,'Feel::GeoElement2D::edge(uint16_type i) const '],['../group__GeoEle.html#a547bc8176148376aa8c41d71d22c08b0',1,'Feel::GeoElement2D::edge(uint16_type i)']]],
+  ['edgepermutation',['edgePermutation',['../group__GeoEle.html#aa0febae423d58be8d246adca78844c1b',1,'Feel::GeoElement2D']]],
   ['edges',['edges',['../namespaceFeel.html#acc2d630cda517a95be1879ea38fb5069',1,'Feel']]],
   ['eigenpair',['eigenPair',['../classFeel_1_1SolverEigen.html#ae607d5a42a4d9d6323409f0ebf8acc61',1,'Feel::SolverEigen']]],
   ['eigenproblemtype',['eigenProblemType',['../classFeel_1_1SolverEigen.html#a21181602fd3b68ffb0656b8bbf072e92',1,'Feel::SolverEigen']]],

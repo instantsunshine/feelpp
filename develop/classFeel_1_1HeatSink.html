@@ -140,9 +140,9 @@ typedef <a class="el" href="classFeel_1_1Bdf.html">Bdf</a>&lt; <a class="el" hre
 <tr class="memitem:a05287357e8e2339f5d1903da3e0243f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05287357e8e2339f5d1903da3e0243f3"></a>
 typedef space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
 <tr class="separator:a05287357e8e2339f5d1903da3e0243f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eb6fbdc257615a91f7aab3339c43b0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0eb6fbdc257615a91f7aab3339c43b0f"></a>
-typedef Entity&lt; Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entity_type</b></td></tr>
-<tr class="separator:a0eb6fbdc257615a91f7aab3339c43b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88f3045c8b50a4d0d55e44e9e2ada222"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88f3045c8b50a4d0d55e44e9e2ada222"></a>
+typedef <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entity_type</b></td></tr>
+<tr class="separator:a88f3045c8b50a4d0d55e44e9e2ada222"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc27689fa79848e4d936eb72e55fe8d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fc27689fa79848e4d936eb72e55fe8d"></a>
 typedef <a class="el" href="classFeel_1_1Exporter.html">Exporter</a>&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>export_type</b></td></tr>
 <tr class="separator:a4fc27689fa79848e4d936eb72e55fe8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,7 +151,7 @@ typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_ptrtype</b></td></tr>
 <tr class="separator:a4d47641ad3b5b805f566490176cb7a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15187ccb3a713aa13f5bd3768c009c1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15187ccb3a713aa13f5bd3768c009c1c"></a>
-typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; entity_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; <a class="el" href="classFeel_1_1Simplex.html">entity_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_type</b></td></tr>
 <tr class="separator:a15187ccb3a713aa13f5bd3768c009c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad79aea35c9592a5a1df2c131f77e39cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad79aea35c9592a5a1df2c131f77e39cd"></a>
 typedef p0_space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><b>p0_element_type</b></td></tr>
@@ -364,7 +364,7 @@ template&lt;int Dim, int Order&gt; </div>
 <p>[marker2]</p>
 <p>[marker2] </p>
 
-<p>References <a class="el" href="classFeel_1_1Application.html#ac559fca482047d68e7382ba720592758">Feel::Application::about()</a>, <a class="el" href="classFeel_1_1Application.html#aeeeb89c0d1a125390b09101b1c6206e2">Feel::Application::changeRepository()</a>, <a class="el" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049">Feel::integrate()</a>, <a class="el" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">Feel::markedfaces()</a>, and <a class="el" href="classFeel_1_1FunctionSpace.html#a32db9068214cab3a221c581f1484045a">Feel::FunctionSpace&lt; A0, A1, A2, A3, A4 &gt;::New()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1Application.html#ac559fca482047d68e7382ba720592758">Feel::Application::about()</a>, <a class="el" href="classFeel_1_1Application.html#aeeeb89c0d1a125390b09101b1c6206e2">Feel::Application::changeRepository()</a>, <a class="el" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049">Feel::integrate()</a>, <a class="el" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">Feel::markedfaces()</a>, <a class="el" href="classFeel_1_1Simplex.html#a55a19a07ddc54c41e5c620723c8d7942">Feel::Simplex&lt; Dim, Order, RDim &gt;::name()</a>, and <a class="el" href="classFeel_1_1FunctionSpace.html#a32db9068214cab3a221c581f1484045a">Feel::FunctionSpace&lt; A0, A1, A2, A3, A4 &gt;::New()</a>.</p>
 
 </div>
 </div>
@@ -409,7 +409,7 @@ template&lt;int Dim, int Order&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:54:24 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:26:54 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

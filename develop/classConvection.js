@@ -10,7 +10,7 @@ var classConvection =
     [ "element_1_type", "classConvection.html#aa8fb81df485f3d97a33c60d409cda679", null ],
     [ "element_2_type", "classConvection.html#a004dadc1696659af2de3d813aa19424e", null ],
     [ "element_type", "classConvection.html#a49c77a380ace50637f4e567ab7f4a2a8", null ],
-    [ "entity_type", "classConvection.html#ab96698bfedb0cb2a6d1a0493f45611cb", null ],
+    [ "entity_type", "classConvection.html#a5995546cc55e8be2acd739ab4a152172", null ],
     [ "export_type", "classConvection.html#a8133c041ca7b5141fa42967d3f382314", null ],
     [ "funlin_ptrtype", "classConvection.html#a29d9a20084a289df3340d4d3eb087379", null ],
     [ "funlin_type", "classConvection.html#a5eac8a9775cb4b502bf9bf0775c728c7", null ],
