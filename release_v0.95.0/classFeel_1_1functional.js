@@ -2,6 +2,7 @@ var classFeel_1_1functional =
 [
     [ "ComponentPointEvaluation", "classFeel_1_1functional_1_1ComponentPointEvaluation.html", "classFeel_1_1functional_1_1ComponentPointEvaluation" ],
     [ "ComponentsPointsEvaluation", "structFeel_1_1functional_1_1ComponentsPointsEvaluation.html", "structFeel_1_1functional_1_1ComponentsPointsEvaluation" ],
+    [ "diff", "structFeel_1_1functional_1_1diff.html", "structFeel_1_1functional_1_1diff" ],
     [ "DirectionalComponentPointEvaluation", "structFeel_1_1functional_1_1DirectionalComponentPointEvaluation.html", "structFeel_1_1functional_1_1DirectionalComponentPointEvaluation" ],
     [ "DirectionalComponentPointsEvaluation", "structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation.html", "structFeel_1_1functional_1_1DirectionalComponentPointsEvaluation" ],
     [ "IntegralMoment", "classFeel_1_1functional_1_1IntegralMoment.html", "classFeel_1_1functional_1_1IntegralMoment" ],

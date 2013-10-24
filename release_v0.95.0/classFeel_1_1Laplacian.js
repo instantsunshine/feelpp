@@ -1,5 +1,6 @@
 var classFeel_1_1Laplacian =
 [
+    [ "space", "structFeel_1_1Laplacian_1_1space.html", "structFeel_1_1Laplacian_1_1space" ],
     [ "backend_ptrtype", "classFeel_1_1Laplacian.html#ade7b411bfac3da375a65df31e2f665f5", null ],
     [ "backend_type", "classFeel_1_1Laplacian.html#a0521d1734496acbac3853e7918f528dd", null ],
     [ "entity_type", "classFeel_1_1Laplacian.html#a24d29128d00882ca2915d4e24d31b16a", null ],

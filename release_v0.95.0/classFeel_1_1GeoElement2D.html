@@ -125,8 +125,8 @@ class Feel::GeoElement2D&lt; Dim, GEOSHAPE, SubFace, T &gt;</h3>
  <div class="center">
   <img src="classFeel_1_1GeoElement2D.png" usemap="#Feel::GeoElement2D&lt; Dim, GEOSHAPE, SubFace, T &gt;_map" alt=""/>
   <map id="Feel::GeoElement2D&lt; Dim, GEOSHAPE, SubFace, T &gt;_map" name="Feel::GeoElement2D&lt; Dim, GEOSHAPE, SubFace, T &gt;_map">
-<area href="classFeel_1_1GeoND.html" alt="Feel::GeoND&lt; Dim, GEOSHAPE, T, GeoElement0D&lt; Dim, SubFaceOfNone, T &gt; &gt;" shape="rect" coords="0,56,480,80"/>
-<area href="classFeel_1_1GeoEntity.html" alt="Feel::GeoEntity&lt; GEOSHAPE &gt;" shape="rect" coords="0,0,480,24"/>
+<area href="classFeel_1_1GeoND.html" alt="Feel::GeoND&lt; Dim, GEOSHAPE, T, GeoElement0D&lt; Dim, SubFaceOfNone, T &gt; &gt;" shape="rect" coords="735,112,1215,136"/>
+<area href="classFeel_1_1GeoEntity.html" alt="Feel::GeoEntity&lt; GEOSHAPE &gt;" shape="rect" coords="735,56,1215,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -136,20 +136,20 @@ Public Types</h2></td></tr>
 typedef <br class="typebreak"/>
 super::edge_permutation_type&#160;</td><td class="memItemRight" valign="bottom"><b>edge_permutation_type</b></td></tr>
 <tr class="separator:ab8462164463808006fa3a06ee8b0b8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a982b5e16dfeebeea4f5d9b572810d695"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a982b5e16dfeebeea4f5d9b572810d695"></a>
+<tr class="memitem:a6fef6ef982046c46d632a8a6fd3a27db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6fef6ef982046c46d632a8a6fd3a27db"></a>
 typedef mpl::if_<br class="typebreak"/>
 &lt; mpl::equal_to&lt; mpl::int_<br class="typebreak"/>
 &lt; nRealDim &gt;, mpl::int_<br class="typebreak"/>
 &lt; 2 &gt; &gt;, mpl::identity<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1GeoElement1D.html">GeoElement1D</a>&lt; Dim, <br class="typebreak"/>
-entity_face_type, SubFaceOf<br class="typebreak"/>
+entity_face_type, <a class="el" href="classFeel_1_1SubFaceOf.html">SubFaceOf</a><br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1GeoElement2D.html">self_type</a> &gt;, T &gt;<br class="typebreak"/>
  &gt;, mpl::identity<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1GeoElement1D.html">GeoElement1D</a>&lt; Dim, <br class="typebreak"/>
-entity_face_type, <br class="typebreak"/>
-SubFaceOfMany&lt; <a class="el" href="classFeel_1_1GeoElement2D.html">self_type</a> &gt;, T &gt;<br class="typebreak"/>
+entity_face_type, <a class="el" href="classFeel_1_1SubFaceOf.html">SubFaceOf</a><br class="typebreak"/>
+&lt; <a class="el" href="classFeel_1_1GeoElement2D.html">self_type</a> &gt;, T &gt;<br class="typebreak"/>
  &gt; &gt;::type::type&#160;</td><td class="memItemRight" valign="bottom"><b>edge_type</b></td></tr>
-<tr class="separator:a982b5e16dfeebeea4f5d9b572810d695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a6fef6ef982046c46d632a8a6fd3a27db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2cfd5f6cf4e851c728b388242c2257a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2cfd5f6cf4e851c728b388242c2257a"></a>
 typedef <br class="typebreak"/>
 super2::element_connectivity_type&#160;</td><td class="memItemRight" valign="bottom"><b>element_connectivity_type</b></td></tr>
@@ -184,7 +184,7 @@ super::edge_permutation_type&#160;</td><td class="memItemRight" valign="bottom">
 <tr class="separator:aff98b70183e6a1d586c4b6622e5e8752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4410cce95bde81be310e75b1c89e1f08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4410cce95bde81be310e75b1c89e1f08"></a>
 typedef <a class="el" href="classFeel_1_1GeoElement0D.html">GeoElement0D</a>&lt; Dim, <br class="typebreak"/>
-SubFaceOfNone, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>point_type</b></td></tr>
+<a class="el" href="classFeel_1_1SubFaceOfNone.html">SubFaceOfNone</a>, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>point_type</b></td></tr>
 <tr class="separator:a4410cce95bde81be310e75b1c89e1f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3802a613d49eebe07e3ebd66a99be804"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3802a613d49eebe07e3ebd66a99be804"></a>
 typedef <a class="el" href="classFeel_1_1GeoElement2D.html">GeoElement2D</a>&lt; Dim, <br class="typebreak"/>
@@ -193,7 +193,7 @@ GEOSHAPE, SubFace, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>
 <tr class="memitem:aa6ccf055a8743e8f072e96aed830c554"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6ccf055a8743e8f072e96aed830c554"></a>
 typedef <a class="el" href="classFeel_1_1GeoND.html">GeoND</a>&lt; Dim, GEOSHAPE, <br class="typebreak"/>
 T, <a class="el" href="classFeel_1_1GeoElement0D.html">GeoElement0D</a>&lt; Dim, <br class="typebreak"/>
-SubFaceOfNone, T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>super</b></td></tr>
+<a class="el" href="classFeel_1_1SubFaceOfNone.html">SubFaceOfNone</a>, T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>super</b></td></tr>
 <tr class="separator:aa6ccf055a8743e8f072e96aed830c554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1f08702b96b4b3edebd685b583c6d37"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1f08702b96b4b3edebd685b583c6d37"></a>
 typedef SubFace&#160;</td><td class="memItemRight" valign="bottom"><b>super2</b></td></tr>
@@ -269,7 +269,7 @@ typedef <a class="el" href="classFeel_1_1GeoElement0D.html">PointType</a>&#160;<
 <tr class="separator:a73185ff55b5b34db98dc708f5717b7de inherit pub_types_classFeel_1_1GeoND"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e683df40d5cf5adf1ccc35eaed2e391 inherit pub_types_classFeel_1_1GeoND"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e683df40d5cf5adf1ccc35eaed2e391"></a>
 typedef <a class="el" href="classFeel_1_1GeoElement0D.html">GeoElement0D</a>&lt; Dim, <br class="typebreak"/>
-SubFaceOfNone, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>PointType</b></td></tr>
+<a class="el" href="classFeel_1_1SubFaceOfNone.html">SubFaceOfNone</a>, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>PointType</b></td></tr>
 <tr class="separator:a3e683df40d5cf5adf1ccc35eaed2e391 inherit pub_types_classFeel_1_1GeoND"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eb2c201b4688af266bd8c5aaf6b5216 inherit pub_types_classFeel_1_1GeoND"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3eb2c201b4688af266bd8c5aaf6b5216"></a>
 typedef <br class="typebreak"/>
@@ -282,7 +282,7 @@ gm_type::super::reference_convex_type&#160;</td><td class="memItemRight" valign=
 <tr class="memitem:a2ab7a7fb41a49db9ad7ad1001bc2c46a inherit pub_types_classFeel_1_1GeoND"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ab7a7fb41a49db9ad7ad1001bc2c46a"></a>
 typedef <a class="el" href="classFeel_1_1GeoND.html">GeoND</a>&lt; Dim, GEOSHAPE, <br class="typebreak"/>
 value_type, <a class="el" href="classFeel_1_1GeoElement0D.html">GeoElement0D</a>&lt; Dim, <br class="typebreak"/>
-SubFaceOfNone, T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>self_type</b></td></tr>
+<a class="el" href="classFeel_1_1SubFaceOfNone.html">SubFaceOfNone</a>, T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>self_type</b></td></tr>
 <tr class="separator:a2ab7a7fb41a49db9ad7ad1001bc2c46a inherit pub_types_classFeel_1_1GeoND"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5e8e793d946d0eb35e5dcc0292d6bd9 inherit pub_types_classFeel_1_1GeoND"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5e8e793d946d0eb35e5dcc0292d6bd9"></a>
 typedef T&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
@@ -1485,7 +1485,7 @@ template&lt;uint16_type Dim, typename GEOSHAPE , typename SubFace  = SubFaceOfNo
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:59:03 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:32:12 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

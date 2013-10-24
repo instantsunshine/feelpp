@@ -1,5 +1,6 @@
 var classFeel_1_1RegionTree =
 [
+    [ "box_index_type", "structFeel_1_1RegionTree_1_1box__index__type.html", "structFeel_1_1RegionTree_1_1box__index__type" ],
     [ "box_container_type", "classFeel_1_1RegionTree.html#a8d48b2242ec9ead1d34ba95238c0e342", null ],
     [ "node_type", "classFeel_1_1RegionTree.html#a9a62ed85528e64e5601783a7f00db304", null ],
     [ "pbox_container_type", "classFeel_1_1RegionTree.html#a510c6c6073869147cd18872b0ede78ee", null ],

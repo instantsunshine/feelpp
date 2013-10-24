@@ -119,8 +119,8 @@ class Feel::GeoMapInverse&lt; Dim, Order, RealDim, T, Entity &gt;</h3>
 Public Types</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Typedefs</div></td></tr>
 <tr class="memitem:ae364710cffd928a4fad5d31c83e68755"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae364710cffd928a4fad5d31c83e68755"></a>
-typedef <a class="el" href="classFeel_1_1GeoMap.html">GeoMap</a>&lt; Dim, Order, <br class="typebreak"/>
-RealDim, T, Entity &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>gm_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1GeoMap.html">GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, <br class="typebreak"/>
+RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>gm_type</b></td></tr>
 <tr class="separator:ae364710cffd928a4fad5d31c83e68755"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b62148e48f1d65c85566c7dcab4f5d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b62148e48f1d65c85566c7dcab4f5d6"></a>
 typedef <a class="el" href="classFeel_1_1GeoMap_1_1Inverse.html">gm_type::Inverse</a>&#160;</td><td class="memItemRight" valign="bottom"><b>gic_type</b></td></tr>
@@ -178,7 +178,7 @@ template&lt;int Dim, int Order = 1, int RealDim = Dim, typename T  = double, tem
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1GeoMapInverse.html">Feel::GeoMapInverse</a>&lt; Dim, Order, RealDim, T, Entity &gt;::addPoint </td>
+          <td class="memname"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1GeoMapInverse.html">Feel::GeoMapInverse</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a> &gt;::addPoint </td>
           <td>(</td>
           <td class="paramtype">typename <a class="el" href="structFeel_1_1node.html">node</a>&lt; value_type &gt;::type const &amp;&#160;</td>
           <td class="paramname"><em>p</em>)</td><td></td>
@@ -209,7 +209,7 @@ template&lt;class CONT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1GeoMapInverse.html">Feel::GeoMapInverse</a>&lt; Dim, Order, RealDim, T, Entity &gt;::addPoints </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1GeoMapInverse.html">Feel::GeoMapInverse</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a> &gt;::addPoints </td>
           <td>(</td>
           <td class="paramtype">const CONT &amp;&#160;</td>
           <td class="paramname"><em>c</em>)</td><td></td>
@@ -238,7 +238,7 @@ template&lt;int Dim, int Order = 1, int RealDim = Dim, typename T  = double, tem
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1GeoMapInverse.html">Feel::GeoMapInverse</a>&lt; Dim, Order, RealDim, T, Entity &gt;::addPointWithId </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1GeoMapInverse.html">Feel::GeoMapInverse</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a> &gt;::addPointWithId </td>
           <td>(</td>
           <td class="paramtype">typename <a class="el" href="structFeel_1_1node.html">node</a>&lt; value_type &gt;::type const &amp;&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -284,7 +284,7 @@ template&lt;int Dim, int Order = 1, int RealDim = Dim, typename T  = double, tem
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1GeoMapInverse.html">Feel::GeoMapInverse</a>&lt; Dim, Order, RealDim, T, Entity &gt;::addPointWithId </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1GeoMapInverse.html">Feel::GeoMapInverse</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a> &gt;::addPointWithId </td>
           <td>(</td>
           <td class="paramtype">boost::tuple&lt; typename <a class="el" href="structFeel_1_1node.html">node</a>&lt; value_type &gt;::type, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>, uint16_type &gt; const &amp;&#160;</td>
           <td class="paramname"><em>p</em>)</td><td></td>
@@ -313,7 +313,7 @@ template&lt;int Dim, int Order = 1, int RealDim = Dim, typename T  = double, tem
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1GeoMapInverse.html">Feel::GeoMapInverse</a>&lt; Dim, Order, RealDim, T, Entity &gt;::clear </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1GeoMapInverse.html">Feel::GeoMapInverse</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a> &gt;::clear </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname">)</td><td></td>
@@ -342,7 +342,7 @@ template&lt;int Dim, int Order = 1, int RealDim = Dim, typename T  = double, tem
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1GeoMapInverse.html">Feel::GeoMapInverse</a>&lt; Dim, Order, RealDim, T, Entity &gt;::nPoints </td>
+          <td class="memname"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1GeoMapInverse.html">Feel::GeoMapInverse</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a> &gt;::nPoints </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname">)</td><td></td>
@@ -371,7 +371,7 @@ template&lt;int Dim, int Order = 1, int RealDim = Dim, typename T  = double, tem
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1GeoMapInverse.html">Feel::GeoMapInverse</a>&lt; Dim, Order, RealDim, T, Entity &gt;::pointsInBox </td>
+          <td class="memname"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1GeoMapInverse.html">Feel::GeoMapInverse</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a> &gt;::pointsInBox </td>
           <td>(</td>
           <td class="paramtype">KDTree::points_type &amp;&#160;</td>
           <td class="paramname"><em>ipts</em>, </td>
@@ -412,7 +412,7 @@ template&lt;int Dim, int Order = 1, int RealDim = Dim, typename T  = double, tem
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:59:03 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:32:12 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

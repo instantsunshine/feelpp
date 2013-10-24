@@ -140,7 +140,7 @@ $(document).ready(function(){initNavTree('createsubmesh_8hpp_source.html','');})
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classFeel_1_1Mesh.html">   41</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> C, <span class="keyword">typename</span> V, <span class="keywordtype">int</span> T&gt; <span class="keyword">class </span><a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">Mesh</a>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType,<span class="keyword">typename</span> IteratorRange, <span class="keywordtype">int</span> TheTag=MeshType::tag&gt;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">class </span>createSubmeshTool</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="classFeel_1_1createSubmeshTool.html">   44</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1createSubmeshTool.html">createSubmeshTool</a></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span> :</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
@@ -149,20 +149,20 @@ $(document).ready(function(){initNavTree('createsubmesh_8hpp_source.html','');})
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::tuples::template element&lt;1, range_type&gt;::type iterator_type;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type tag = TheTag;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">typedef</span> MeshType <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">mesh_type</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">typedef</span> MeshType mesh_type;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mesh_type::value_type value_type;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;mesh_type&gt; mesh_ptrtype;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;mpl::bool_&lt;mesh_type::shape_type::is_simplex&gt;,</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                              mpl::identity&lt; <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">Mesh</a>&lt; <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex</a>&lt; mesh_type::nDim-1,mesh_type::nOrder,mesh_type::nRealDim&gt;, value_type, tag &gt; &gt;,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                              mpl::identity&lt; <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">Mesh</a>&lt; Hypercube&lt;mesh_type::nDim-1,mesh_type::nOrder,mesh_type::nRealDim&gt;, value_type, tag &gt; &gt; &gt;::type::type mesh_faces_type;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                              mpl::identity&lt; <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">Mesh</a>&lt; <a class="code" href="classFeel_1_1Hypercube.html">Hypercube</a>&lt;mesh_type::nDim-1,mesh_type::nOrder,mesh_type::nRealDim&gt;, value_type, tag &gt; &gt; &gt;::type::type mesh_faces_type;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;mesh_faces_type&gt; mesh_faces_ptrtype;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;mpl::bool_&lt;mesh_type::shape_type::is_simplex&gt;,</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                              mpl::identity&lt; <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">Mesh</a>&lt; <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex</a>&lt; (mesh_type::nDim==3)?mesh_type::nDim-2:mesh_type::nDim-1,mesh_type::nOrder,mesh_type::nRealDim&gt;, value_type, tag &gt; &gt;,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                              mpl::identity&lt; <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">Mesh</a>&lt; Hypercube&lt;(mesh_type::nDim==3)?mesh_type::nDim-2:mesh_type::nDim-1,mesh_type::nOrder,mesh_type::nRealDim&gt;, value_type, tag &gt; &gt; &gt;::type::type mesh_edges_type;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                              mpl::identity&lt; <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">Mesh</a>&lt; <a class="code" href="classFeel_1_1Hypercube.html">Hypercube</a>&lt;(mesh_type::nDim==3)?mesh_type::nDim-2:mesh_type::nDim-1,mesh_type::nOrder,mesh_type::nRealDim&gt;, value_type, tag &gt; &gt; &gt;::type::type mesh_edges_type;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;mesh_edges_type&gt; mesh_edges_ptrtype;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt; mpl::equal_to&lt; idim_type ,mpl::size_t&lt;MESH_ELEMENTS&gt; &gt;,</div>
@@ -172,24 +172,24 @@ $(document).ready(function(){initNavTree('createsubmesh_8hpp_source.html','');})
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                                  mpl::identity&lt;mesh_edges_type&gt; &gt;::type&gt;::type::type mesh_build_type;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;mesh_build_type&gt; mesh_build_ptrtype;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1SubMeshData.html" title="data structure storing sub mesh data ">SubMeshData</a> smd_type;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1SubMeshData.html" title="data structure storing sub mesh data ">SubMeshData</a> <a class="code" href="classFeel_1_1SubMeshData.html" title="data structure storing sub mesh data ">smd_type</a>;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;smd_type&gt; smd_ptrtype;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    createSubmeshTool( boost::shared_ptr&lt;MeshType&gt; inputMesh,IteratorRange <span class="keyword">const</span>&amp; range, WorldComm <span class="keyword">const</span>&amp; wc  )</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classFeel_1_1createSubmeshTool.html">createSubmeshTool</a>( boost::shared_ptr&lt;MeshType&gt; inputMesh,IteratorRange <span class="keyword">const</span>&amp; range, <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; wc  )</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        :</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        M_mesh( inputMesh ),</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        M_listRange(),</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        M_smd( new smd_type( inputMesh ) ),</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        M_smd( <span class="keyword">new</span> <a class="code" href="classFeel_1_1SubMeshData.html" title="data structure storing sub mesh data ">smd_type</a>( inputMesh ) ),</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        M_worldComm( wc )</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        {</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            M_listRange.push_back( range );</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    createSubmeshTool( boost::shared_ptr&lt;MeshType&gt; inputMesh,std::list&lt;IteratorRange&gt; <span class="keyword">const</span>&amp; range, WorldComm <span class="keyword">const</span>&amp; wc  )</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="classFeel_1_1createSubmeshTool.html">createSubmeshTool</a>( boost::shared_ptr&lt;MeshType&gt; inputMesh,std::list&lt;IteratorRange&gt; <span class="keyword">const</span>&amp; range, <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; wc  )</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        :</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        M_mesh( inputMesh ),</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        M_listRange( range ),</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        M_smd( new smd_type( inputMesh ) ),</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        M_smd( <span class="keyword">new</span> <a class="code" href="classFeel_1_1SubMeshData.html" title="data structure storing sub mesh data ">smd_type</a>( inputMesh ) ),</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        M_worldComm( wc )</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {}</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
@@ -213,12 +213,12 @@ $(document).ready(function(){initNavTree('createsubmesh_8hpp_source.html','');})
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    mesh_ptrtype M_mesh;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    std::list&lt;range_type&gt; M_listRange;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    smd_ptrtype M_smd;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    WorldComm M_worldComm;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> M_worldComm;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;};</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType,<span class="keyword">typename</span> IteratorRange,<span class="keywordtype">int</span> TheTag&gt;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">typename</span> createSubmeshTool&lt;MeshType,IteratorRange,TheTag&gt;::mesh_ptrtype</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;createSubmeshTool&lt;MeshType,IteratorRange,TheTag&gt;::build( mpl::int_&lt;MESH_ELEMENTS&gt;  )</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<a class="code" href="classFeel_1_1createSubmeshTool.html">createSubmeshTool&lt;MeshType,IteratorRange,TheTag&gt;::build</a>( mpl::int_&lt;MESH_ELEMENTS&gt;  )</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mesh_type::element_type element_type;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mesh_type::point_type point_type;</div>
@@ -1001,7 +1001,7 @@ $(document).ready(function(){initNavTree('createsubmesh_8hpp_source.html','');})
 <div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;<span class="keyword">namespace </span>detail</div>
 <div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;{</div>
 <div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> RangeType&gt;</div>
-<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;<span class="keyword">struct </span>submeshrangetype</div>
+<div class="line"><a name="l00908"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1submeshrangetype.html">  908</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1submeshrangetype.html">submeshrangetype</a></div>
 <div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;{</div>
 <div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt; boost::is_std_list&lt;RangeType&gt;,</div>
 <div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;                               mpl::identity&lt;RangeType&gt;,</div>
@@ -1009,7 +1009,7 @@ $(document).ready(function(){initNavTree('createsubmesh_8hpp_source.html','');})
 <div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;};</div>
 <div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;}</div>
 <div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType,<span class="keyword">typename</span> IteratorRange, <span class="keywordtype">int</span> TheTag = MeshType::tag&gt;</div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;<span class="keyword">typename</span> createSubmeshTool&lt;MeshType,typename detail::submeshrangetype&lt;IteratorRange&gt;::type,TheTag&gt;::mesh_build_ptrtype</div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;<span class="keyword">typename</span> <a class="code" href="classFeel_1_1createSubmeshTool.html">createSubmeshTool&lt;MeshType,typename detail::submeshrangetype&lt;IteratorRange&gt;::type</a>,TheTag&gt;::mesh_build_ptrtype</div>
 <div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;createSubmesh( boost::shared_ptr&lt;MeshType&gt; inputMesh,</div>
 <div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;               IteratorRange <span class="keyword">const</span>&amp; range,</div>
 <div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;               <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> ctx = EXTRACTION_KEEP_MESH_RELATION )</div>
@@ -1017,9 +1017,9 @@ $(document).ready(function(){initNavTree('createsubmesh_8hpp_source.html','');})
 <div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    <span class="comment">//DVLOG(2) &lt;&lt; &quot;[createSubmesh] extracting &quot; &lt;&lt; range.template get&lt;0&gt;() &lt;&lt; &quot; nb elements :&quot;</span></div>
 <div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;    <span class="comment">//&lt;&lt; std::distance(range.template get&lt;1&gt;(),range.template get&lt;2&gt;()) &lt;&lt; &quot;\n&quot;;</span></div>
 <div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;</div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    createSubmeshTool&lt;MeshType,typename detail::submeshrangetype&lt;IteratorRange&gt;::type,TheTag&gt; cSmT( inputMesh,range,inputMesh-&gt;worldComm() );</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    <a class="code" href="classFeel_1_1createSubmeshTool.html">createSubmeshTool&lt;MeshType,typename detail::submeshrangetype&lt;IteratorRange&gt;::type</a>,TheTag&gt; cSmT( inputMesh,range,inputMesh-&gt;worldComm() );</div>
 <div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;    <span class="keyword">auto</span> m = cSmT.build();</div>
-<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;    Context c( ctx );</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;    <a class="code" href="classFeel_1_1Context.html" title="Context class. ">Context</a> c( ctx );</div>
 <div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    <span class="keywordflow">if</span> ( c.test( EXTRACTION_KEEP_MESH_RELATION ) )</div>
 <div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;        m-&gt;setSubMeshData( cSmT.subMeshData() );</div>
 <div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;    <span class="keywordflow">return</span> m;</div>
@@ -1051,7 +1051,7 @@ $(document).ready(function(){initNavTree('createsubmesh_8hpp_source.html','');})
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:58:32 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:31:14 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

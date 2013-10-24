@@ -199,21 +199,21 @@ $(document).ready(function(){initNavTree('functionals2_8hpp_source.html','');});
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">namespace </span>detail</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> P1, <span class="keyword">typename</span> P2&gt;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">struct </span>prod</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="structFeel_1_1functional_1_1detail_1_1prod.html">  112</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1functional_1_1detail_1_1prod.html">prod</a></div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> P1::value_type <a class="code" href="classFeel_1_1core__data.html#aee2aed1d215276cd470455b928965403" title="value type for the functional ">value_type</a>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    prod ( P1 <span class="keyword">const</span>&amp; p1, P2 <span class="keyword">const</span>&amp; p2 )</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> P1::value_type value_type;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="structFeel_1_1functional_1_1detail_1_1prod.html">prod</a> ( P1 <span class="keyword">const</span>&amp; p1, P2 <span class="keyword">const</span>&amp; p2 )</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        :</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        M_p1 ( p1 ),</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        M_p2 ( p2 )</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {}</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor"></span>    <a class="code" href="classFeel_1_1core__data.html#aee2aed1d215276cd470455b928965403" title="value type for the functional ">value_type</a> operator() ( <span class="keyword">typename</span> <a class="code" href="structFeel_1_1node.html">node&lt;value_type&gt;::type</a> <span class="keyword">const</span>&amp; n )</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor"></span>    value_type operator() ( <span class="keyword">typename</span> <a class="code" href="structFeel_1_1node.html">node&lt;value_type&gt;::type</a> <span class="keyword">const</span>&amp; n )</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    {</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> M_p1.evaluate( n )( 0,0 ) * M_p2.evaluate( n )( 0,0 );</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typename</span> node&lt;value_type&gt;::type operator() ( <span class="keyword">typename</span> node&lt;value_type&gt;::type <span class="keyword">const</span>&amp; n )</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typename</span> <a class="code" href="structFeel_1_1node.html">node&lt;value_type&gt;::type</a> operator() ( <span class="keyword">typename</span> <a class="code" href="structFeel_1_1node.html">node&lt;value_type&gt;::type</a> <span class="keyword">const</span>&amp; n )</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    {</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span> ublas::column( ublas::element_prod( M_p1.evaluate( n ), M_p2.evaluate( n ) ), 0 );</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
@@ -293,7 +293,7 @@ $(document).ready(function(){initNavTree('functionals2_8hpp_source.html','');});
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    uint16_type M_k;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="comment">// quadrature rule on the element and faces of the element</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    IM&lt;Space::nDim,2*Space::nOrder+1, value_type&gt; M_q;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <a class="code" href="structFeel_1_1IM.html">IM&lt;Space::nDim,2*Space::nOrder+1, value_type&gt;</a> M_q;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;};</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
@@ -330,7 +330,7 @@ $(document).ready(function(){initNavTree('functionals2_8hpp_source.html','');});
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> gm_type::face_gm_type::precompute_type face_pc_type;</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> gm_type::face_gm_type::precompute_ptrtype face_pc_ptrtype;</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        gm_type __gm;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        IM&lt;reference_convex_type::nDim-1,2*space_type::nOrder-1&gt; __qr_face;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <a class="code" href="structFeel_1_1IM.html">IM</a>&lt;reference_convex_type::nDim-1,2*space_type::nOrder-1&gt; __qr_face;</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        face_pc_ptrtype __geopc( <span class="keyword">new</span> face_pc_type( __gm-&gt;boundaryMap(),__qr_face.points() ) );</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[nc] ref_convex_face &quot;</span>  &lt;&lt; face &lt;&lt; <span class="stringliteral">&quot;=&quot;</span> &lt;&lt; ref_convex_face.points() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -457,7 +457,7 @@ $(document).ready(function(){initNavTree('functionals2_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:58:38 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:31:24 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

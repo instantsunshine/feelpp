@@ -1,5 +1,10 @@
 var classFeel_1_1Mesh =
 [
+    [ "gmc", "structFeel_1_1Mesh_1_1gmc.html", "structFeel_1_1Mesh_1_1gmc" ],
+    [ "Inverse", "structFeel_1_1Mesh_1_1Inverse.html", "structFeel_1_1Mesh_1_1Inverse" ],
+    [ "Localization", "structFeel_1_1Mesh_1_1Localization.html", "structFeel_1_1Mesh_1_1Localization" ],
+    [ "trace_mesh", "structFeel_1_1Mesh_1_1trace__mesh.html", "structFeel_1_1Mesh_1_1trace__mesh" ],
+    [ "trace_trace_mesh", "structFeel_1_1Mesh_1_1trace__trace__mesh.html", "structFeel_1_1Mesh_1_1trace__trace__mesh" ],
     [ "edge_type", "classFeel_1_1Mesh.html#a61ff103e46645b3fd1be840079217a46", null ],
     [ "element_const_iterator", "classFeel_1_1Mesh.html#aad9ce93880d2275eb28e23ec8e3c42d8", null ],
     [ "element_edge_type", "classFeel_1_1Mesh.html#a8534e80f1a7dabf04acb2a24b3f7c9b5", null ],

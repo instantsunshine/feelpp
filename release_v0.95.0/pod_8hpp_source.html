@@ -442,7 +442,7 @@ $(document).ready(function(){initNavTree('pod_8hpp_source.html','');});
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="comment">//here is a barrier. For now, if this barrier is removed, during the bdfj-&gt;restart() the program will wait and the memory increase.</span></div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="comment">//during the init step in bdf, the metadata are read, and it is during this step that the memory could increase dangerously.</span></div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        Environment::worldComm().barrier();</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().barrier();</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordflow">for</span> ( bdfj-&gt;restart(); !bdfj-&gt;isFinished() &amp;&amp; ( bdfj-&gt;iteration() &lt; bdfi-&gt;iteration() ); bdfj-&gt;next() )</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        {</div>
@@ -624,7 +624,7 @@ $(document).ready(function(){initNavTree('pod_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:58:51 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:31:44 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

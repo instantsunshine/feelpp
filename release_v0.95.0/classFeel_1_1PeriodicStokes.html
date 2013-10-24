@@ -127,17 +127,17 @@ class Feel::PeriodicStokes&lt; Dim, Order &gt;</h3>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:ac8be81e979a4877592afdf30fe46bbec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8be81e979a4877592afdf30fe46bbec"></a>
-typedef bases&lt; Lagrange&lt; Order+1, <br class="typebreak"/>
-<a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt;, Lagrange&lt; Order, <br class="typebreak"/>
+typedef <a class="el" href="structFeel_1_1bases.html">bases</a>&lt; <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a>&lt; <a class="el" href="structFeel_1_1Order.html">Order</a>+1, <br class="typebreak"/>
+<a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt;, <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a>&lt; <a class="el" href="structFeel_1_1Order.html">Order</a>, <br class="typebreak"/>
 <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_composite_type</b></td></tr>
 <tr class="separator:ac8be81e979a4877592afdf30fe46bbec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ca43045d8849b05496e98a090a9a09d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ca43045d8849b05496e98a090a9a09d"></a>
 typedef <br class="typebreak"/>
-functionspace_composite_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
+<a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">functionspace_composite_type::element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
 <tr class="separator:a8ca43045d8849b05496e98a090a9a09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78fbf79d68a7c2c986691b6f0fe5ebe9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78fbf79d68a7c2c986691b6f0fe5ebe9"></a>
-typedef Entity&lt; Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entity_type</b></td></tr>
-<tr class="separator:a78fbf79d68a7c2c986691b6f0fe5ebe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0c6b46e068bfda0199b07fd72d1f624"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0c6b46e068bfda0199b07fd72d1f624"></a>
+typedef <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entity_type</b></td></tr>
+<tr class="separator:af0c6b46e068bfda0199b07fd72d1f624"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0905045ef44b3ae308084c2bd240f9ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0905045ef44b3ae308084c2bd240f9ab"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Exporter.html">export_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>export_ptrtype</b></td></tr>
@@ -152,8 +152,8 @@ typedef boost::shared_ptr<br class="typebreak"/>
 <tr class="memitem:a18da534dbbee0929f19fd243657166f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18da534dbbee0929f19fd243657166f5"></a>
 typedef <a class="el" href="classFeel_1_1FunctionSpace.html">FunctionSpace</a><br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a>, <br class="typebreak"/>
-basis_composite_type, <br class="typebreak"/>
-Periodicity&lt; <a class="el" href="classFeel_1_1Periodic.html">Periodic</a><br class="typebreak"/>
+<a class="el" href="structFeel_1_1bases.html">basis_composite_type</a>, <br class="typebreak"/>
+<a class="el" href="structFeel_1_1Periodicity.html">Periodicity</a>&lt; <a class="el" href="classFeel_1_1Periodic.html">Periodic</a><br class="typebreak"/>
 &lt;&gt;, <a class="el" href="classFeel_1_1NoPeriodicity.html">NoPeriodicity</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>functionspace_composite_type</b></td></tr>
 <tr class="separator:a18da534dbbee0929f19fd243657166f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a545fb68d96f191c66e78814f54385cc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a545fb68d96f191c66e78814f54385cc7"></a>
@@ -161,7 +161,7 @@ typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_ptrtype</b></td></tr>
 <tr class="separator:a545fb68d96f191c66e78814f54385cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1dee2bc5280543f48fa15e5d9c5b449"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1dee2bc5280543f48fa15e5d9c5b449"></a>
-typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; entity_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; <a class="el" href="classFeel_1_1Simplex.html">entity_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_type</b></td></tr>
 <tr class="separator:aa1dee2bc5280543f48fa15e5d9c5b449"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c56ef2750fc0168d35b4b4d791f46ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c56ef2750fc0168d35b4b4d791f46ab"></a>
 typedef double&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
@@ -264,7 +264,7 @@ ptree::ptree&#160;</td><td class="memItemRight" valign="bottom"><b>M_stats</b></
 template&lt;int Dim, int Order&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classFeel_1_1PeriodicStokes.html">Feel::PeriodicStokes</a>&lt; Dim, Order &gt;::<a class="el" href="classFeel_1_1PeriodicStokes.html">PeriodicStokes</a> </td>
+          <td class="memname"><a class="el" href="classFeel_1_1PeriodicStokes.html">Feel::PeriodicStokes</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::<a class="el" href="classFeel_1_1PeriodicStokes.html">PeriodicStokes</a> </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -273,7 +273,7 @@ template&lt;int Dim, int Order&gt; </div>
 </div><div class="memdoc">
 <p>constructor </p>
 
-<p>References <a class="el" href="classFeel_1_1Simget.html#a842d077007302c803e3b18897c42f8e6">Feel::Simget::about()</a>, <a class="el" href="classFeel_1_1Simget.html#afcd4ac23a947d7238110967ee57f00dd">Feel::Simget::changeRepository()</a>, and <a class="el" href="classFeel_1_1FunctionSpace.html#a32db9068214cab3a221c581f1484045a">Feel::FunctionSpace&lt; A0, A1, A2, A3, A4 &gt;::New()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1Simget.html#a842d077007302c803e3b18897c42f8e6">Feel::Simget::about()</a>, <a class="el" href="classFeel_1_1Simget.html#afcd4ac23a947d7238110967ee57f00dd">Feel::Simget::changeRepository()</a>, <a class="el" href="classFeel_1_1Simplex.html#a55a19a07ddc54c41e5c620723c8d7942">Feel::Simplex&lt; Dim, Order, RDim &gt;::name()</a>, and <a class="el" href="classFeel_1_1FunctionSpace.html#a32db9068214cab3a221c581f1484045a">Feel::FunctionSpace&lt; A0, A1, A2, A3, A4 &gt;::New()</a>.</p>
 
 </div>
 </div>
@@ -288,7 +288,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1PeriodicStokes.html">Feel::PeriodicStokes</a>&lt; Dim, Order &gt;::run </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1PeriodicStokes.html">Feel::PeriodicStokes</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::run </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -314,7 +314,7 @@ template&lt;int Dim, int Order&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:59:05 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:32:20 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

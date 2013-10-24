@@ -161,7 +161,7 @@ $(document).ready(function(){initNavTree('solvernonlinear_8hpp_source.html','');
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;self_type&gt; solvernonlinear_ptrtype;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> type_traits&lt;T&gt;::real_type real_type;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1type__traits.html">type_traits&lt;T&gt;::real_type</a> real_type;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;Preconditioner&lt;T&gt; &gt; preconditioner_ptrtype;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
@@ -202,7 +202,7 @@ $(document).ready(function(){initNavTree('solvernonlinear_8hpp_source.html','');
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="classFeel_1_1SolverNonLinear.html#a70245ea0c33cd3f2f5e5c9033e68b56a">SolverNonLinear</a>(WorldComm <span class="keyword">const</span>&amp; worldComm = Environment::worldComm() );</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="classFeel_1_1SolverNonLinear.html#a70245ea0c33cd3f2f5e5c9033e68b56a">SolverNonLinear</a>(<a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; worldComm = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() );</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="classFeel_1_1SolverNonLinear.html#a70245ea0c33cd3f2f5e5c9033e68b56a">SolverNonLinear</a>( <a class="code" href="classFeel_1_1SolverNonLinear.html" title="Non linear solver base interface. ">SolverNonLinear</a> <span class="keyword">const</span> &amp; );</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
@@ -210,9 +210,9 @@ $(document).ready(function(){initNavTree('solvernonlinear_8hpp_source.html','');
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keyword">static</span> solvernonlinear_ptrtype <a class="code" href="classFeel_1_1SolverNonLinear.html#a18ee965215859d3c5536cfc16cc90006">build</a>( po::variables_map <span class="keyword">const</span>&amp; vm, std::string <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1SolverNonLinear.html#ab14486836925092e175c35ccecc74499">prefix</a> = <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                                          WorldComm <span class="keyword">const</span>&amp; worldComm = Environment::worldComm() );</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                                          <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; worldComm = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() );</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">static</span> solvernonlinear_ptrtype <a class="code" href="classFeel_1_1SolverNonLinear.html#a18ee965215859d3c5536cfc16cc90006">build</a>( <a class="code" href="namespaceFeel.html#afa8c843b79988c097aea0aedd833c24b">SolverPackage</a> solver_package, WorldComm <span class="keyword">const</span>&amp; worldComm = Environment::worldComm() );</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">static</span> solvernonlinear_ptrtype <a class="code" href="classFeel_1_1SolverNonLinear.html#a18ee965215859d3c5536cfc16cc90006">build</a>( <a class="code" href="namespaceFeel.html#afa8c843b79988c097aea0aedd833c24b">SolverPackage</a> solver_package, <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; worldComm = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() );</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#aedb19152beceb0b5902f5b2ea1f068f7">init</a> () = 0;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
@@ -222,8 +222,8 @@ $(document).ready(function(){initNavTree('solvernonlinear_8hpp_source.html','');
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a18b9eeb268eefdfc42c49a1280b4fb6d">  173</a></span>&#160;    WorldComm <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1SolverNonLinear.html#a18b9eeb268eefdfc42c49a1280b4fb6d">comm</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> M_worldComm; }</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    WorldComm <span class="keyword">const</span>&amp; worldComm()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> M_worldComm; }</div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a18b9eeb268eefdfc42c49a1280b4fb6d">  173</a></span>&#160;    <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1SolverNonLinear.html#a18b9eeb268eefdfc42c49a1280b4fb6d">comm</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> M_worldComm; }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; worldComm()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> M_worldComm; }</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
 <div class="line"><a name="l00180"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a380ac9caa5598ca1e0b3ba80f51a5246">  180</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a380ac9caa5598ca1e0b3ba80f51a5246">initialized</a> ()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keyword">    </span>{</div>
@@ -434,7 +434,7 @@ $(document).ready(function(){initNavTree('solvernonlinear_8hpp_source.html','');
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;</div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    WorldComm M_worldComm;</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> M_worldComm;</div>
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;</div>
 <div class="line"><a name="l00537"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverNonLinear.html#a8ee58c12ff06fe1086944c25ec50640b">  537</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classFeel_1_1SolverNonLinear.html#a8ee58c12ff06fe1086944c25ec50640b">M_is_initialized</a>;</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;</div>
@@ -480,7 +480,7 @@ $(document).ready(function(){initNavTree('solvernonlinear_8hpp_source.html','');
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:58:54 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:31:50 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

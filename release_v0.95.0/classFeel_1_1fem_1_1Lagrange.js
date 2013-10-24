@@ -1,5 +1,6 @@
 var classFeel_1_1fem_1_1Lagrange =
 [
+    [ "SubSpace", "structFeel_1_1fem_1_1Lagrange_1_1SubSpace.html", "structFeel_1_1fem_1_1Lagrange_1_1SubSpace" ],
     [ "component_basis_type", "classFeel_1_1fem_1_1Lagrange.html#aa57fdda42228a53400b6a0656bcf392f", null ],
     [ "continuity_type", "classFeel_1_1fem_1_1Lagrange.html#a90b9e6426496ab3ff8e0a43f7ba6e979", null ],
     [ "convex_type", "classFeel_1_1fem_1_1Lagrange.html#a0a8f62b44b302ec525357e13a649a503", null ],

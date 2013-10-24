@@ -1,12 +1,13 @@
 var classFeel_1_1LaplacianLM =
 [
+    [ "MyIM", "structFeel_1_1LaplacianLM_1_1MyIM.html", null ],
     [ "backend_ptrtype", "classFeel_1_1LaplacianLM.html#a1a5a6a858dc242c57ac189b0311a5766", null ],
     [ "backend_type", "classFeel_1_1LaplacianLM.html#a3dc00055b73c707f526cf8480579e3b7", null ],
     [ "basis_type", "classFeel_1_1LaplacianLM.html#a3520b79ce0a0c9415af0a6f9ab524be8", null ],
     [ "element_0_type", "classFeel_1_1LaplacianLM.html#aeb147638cbc54c4bfd850700cd6b1c17", null ],
     [ "element_1_type", "classFeel_1_1LaplacianLM.html#aa7032a85d6d923ffab910bfa0ff302e1", null ],
     [ "element_type", "classFeel_1_1LaplacianLM.html#a7b590cacc6070707c6a596ed30125403", null ],
-    [ "entity_type", "classFeel_1_1LaplacianLM.html#acfaa85c573e8917881df2b990b3cf076", null ],
+    [ "entity_type", "classFeel_1_1LaplacianLM.html#a48997599d588527834734d1557d16636", null ],
     [ "export_ptrtype", "classFeel_1_1LaplacianLM.html#a9abe519c1bc21e720137fd23812bdb76", null ],
     [ "export_type", "classFeel_1_1LaplacianLM.html#ad3e7771289f133e68329f25dcf3ebe3b", null ],
     [ "functionspace_ptrtype", "classFeel_1_1LaplacianLM.html#aceabf9dacc7e3f10e235a2b55b7a1fd2", null ],

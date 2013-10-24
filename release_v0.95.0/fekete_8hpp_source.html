@@ -149,22 +149,22 @@ $(document).ready(function(){initNavTree('fekete_8hpp_source.html','');});
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class </span>Convex,</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          uint16_type Order,</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;          <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">class </span>PointSetGaussLobatto;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSetGaussLobatto.html">   52</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1PointSetGaussLobatto.html">PointSetGaussLobatto</a>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class </span>Convex,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;          uint16_type Order,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class </span><a class="code" href="classFeel_1_1Convex.html" title="Convex base class. ">Convex</a>,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;          uint16_type <a class="code" href="structFeel_1_1Order.html">Order</a>,</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          <span class="keyword">typename</span> T = <span class="keywordtype">double</span> &gt;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">class </span>PointSetFeketeSimplex : <span class="keyword">public</span>  PointSetInterpolation&lt;Convex::nDim, Order, T, Simplex&gt;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSetFeketeSimplex.html">   57</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1PointSetFeketeSimplex.html">PointSetFeketeSimplex</a> : <span class="keyword">public</span>  <a class="code" href="classFeel_1_1PointSetInterpolation.html" title="Good interpolation point sets on a convex. ">PointSetInterpolation</a>&lt;Convex::nDim, Order, T, Simplex&gt;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">public</span> :</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">typedef</span> PointSetWarpBlend&lt;Convex, Order, T&gt; super;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1PointSetWarpBlend.html">PointSetWarpBlend&lt;Convex, Order, T&gt;</a> <a class="code" href="classFeel_1_1PointSetWarpBlend.html">super</a>;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint32_type Dim = Convex::nDim;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints1D = Order+1;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints1D = <a class="code" href="structFeel_1_1Order.html">Order</a>+1;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> Shape = Convex::Shape;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
@@ -178,7 +178,7 @@ $(document).ready(function(){initNavTree('fekete_8hpp_source.html','');});
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint32_type topological_dimension = Convex::topological_dimension;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint32_type numPoints = super::numPoints;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">typedef</span> Reference&lt;Convex, Dim, Convex::nOrder, Dim, value_type&gt; reference_convex_type;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Reference.html">Reference&lt;Convex, Dim, Convex::nOrder, Dim, value_type&gt;</a> <a class="code" href="classFeel_1_1Reference.html">reference_convex_type</a>;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> reference_convex_type::points_type points_type;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
@@ -186,11 +186,11 @@ $(document).ready(function(){initNavTree('fekete_8hpp_source.html','');});
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">typedef</span> std::vector&lt;uint16_type&gt; orbits_type;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    reference_convex_type RefConv;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="classFeel_1_1Reference.html">reference_convex_type</a> RefConv;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    PointSetFeketeSimplex( <span class="keywordtype">int</span> interior = 0 )</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="classFeel_1_1PointSetFeketeSimplex.html">PointSetFeketeSimplex</a>( <span class="keywordtype">int</span> interior = 0 )</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        PointSetWarpBlend&lt;Convex, Order, T&gt; G( interior );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="classFeel_1_1PointSetWarpBlend.html">PointSetWarpBlend&lt;Convex, Order, T&gt;</a> G( interior );</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        points_type final_pts = G.points();</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
@@ -198,7 +198,7 @@ $(document).ready(function(){initNavTree('fekete_8hpp_source.html','');});
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        this-&gt;setEid( G.getEid() );</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        this-&gt;setPtE( G.getPtE() );</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span> ( Order &gt; 2 )</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span> ( <a class="code" href="structFeel_1_1Order.html">Order</a> &gt; 2 )</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            points_type Gt( Dim, nbPtsPerFace );</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
@@ -215,10 +215,10 @@ $(document).ready(function(){initNavTree('fekete_8hpp_source.html','');});
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        this-&gt;<a class="code" href="classFeel_1_1PointSet.html#a494a65b1dabd0d54070f64a06f483806">setPoints</a>( final_pts );</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        this-&gt;setName( <span class="stringliteral">&quot;fekete&quot;</span>, Order );</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        this-&gt;setName( <span class="stringliteral">&quot;fekete&quot;</span>, <a class="code" href="structFeel_1_1Order.html">Order</a> );</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    ~PointSetFeketeSimplex() {}</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    ~<a class="code" href="classFeel_1_1PointSetFeketeSimplex.html">PointSetFeketeSimplex</a>() {}</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">private</span> :</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
@@ -230,7 +230,7 @@ $(document).ready(function(){initNavTree('fekete_8hpp_source.html','');});
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keyword">using namespace </span>boost::assign;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">switch</span> ( Order )</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">switch</span> ( <a class="code" href="structFeel_1_1Order.html">Order</a> )</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        {</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">case</span> 3:</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        {</div>
@@ -1329,7 +1329,7 @@ $(document).ready(function(){initNavTree('fekete_8hpp_source.html','');});
 <div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;</div>
 <div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;        std::sort( aux.begin(), aux.end(), &amp;order&lt;1&gt; );</div>
 <div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;</div>
-<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;        <span class="keywordflow">for</span> ( uint16_type p=0, i=Order-3; i&gt;0; i-- )</div>
+<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;        <span class="keywordflow">for</span> ( uint16_type p=0, i=<a class="code" href="structFeel_1_1Order.html">Order</a>-3; i&gt;0; i-- )</div>
 <div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;        {</div>
 <div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;            std::sort( aux.begin()+p, aux.begin()+p+i+1, &amp;order&lt;0&gt; );</div>
 <div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;            p += i+1;</div>
@@ -1342,8 +1342,8 @@ $(document).ready(function(){initNavTree('fekete_8hpp_source.html','');});
 <div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;    }</div>
 <div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;};</div>
 <div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;</div>
-<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class </span>Convex,</div>
-<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;          uint16_type Order,</div>
+<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class </span><a class="code" href="classFeel_1_1Convex.html" title="Convex base class. ">Convex</a>,</div>
+<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;          uint16_type <a class="code" href="structFeel_1_1Order.html">Order</a>,</div>
 <div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;          <span class="keyword">typename</span> T = <span class="keywordtype">double</span> &gt;</div>
 <div class="line"><a name="l01251"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSetFekete.html"> 1251</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1PointSetFekete.html">PointSetFekete</a> : <span class="keyword">public</span> mpl::if_&lt;mpl::or_&lt;mpl::equal_to&lt;mpl::bool_&lt;Convex::is_hypercube&gt;, mpl::bool_&lt;true&gt; &gt;,</div>
 <div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;    mpl::equal_to&lt;mpl::int_&lt;Convex::nDim&gt;, mpl::int_&lt;1&gt; &gt; &gt;,</div>
@@ -1367,7 +1367,7 @@ $(document).ready(function(){initNavTree('fekete_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:58:35 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:31:20 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

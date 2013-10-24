@@ -122,7 +122,7 @@ Public Types</h2></td></tr>
 typedef T&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
 <tr class="separator:a7badbbab6a1d1a8d4e446af93943713e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebcf789335675005f811185b697579e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aebcf789335675005f811185b697579e9"></a>
-typedef type_traits&lt; T &gt;::real_type&#160;</td><td class="memItemRight" valign="bottom"><b>real_type</b></td></tr>
+typedef <a class="el" href="structFeel_1_1type__traits.html">type_traits</a>&lt; T &gt;::real_type&#160;</td><td class="memItemRight" valign="bottom"><b>real_type</b></td></tr>
 <tr class="separator:aebcf789335675005f811185b697579e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedac8f93c9e3ae290707db18de3620ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedac8f93c9e3ae290707db18de3620ad"></a>
 typedef <a class="el" href="classFeel_1_1SolverEigen.html">SolverEigen</a>&lt; value_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>solvereigen_type</b></td></tr>
@@ -159,6 +159,13 @@ vector_ptrtype &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>eigenp
 typedef std::map&lt; real_type, <br class="typebreak"/>
 eigenpair_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>eigenmodes_type</b></td></tr>
 <tr class="separator:ae4802984b1823d8410c74142712f272e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a524ada51104525dfbcbada8c3a92ffe7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a524ada51104525dfbcbada8c3a92ffe7"></a>
+typedef <a class="el" href="classFeel_1_1DataMap.html">DataMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>datamap_type</b></td></tr>
+<tr class="separator:a524ada51104525dfbcbada8c3a92ffe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0c53bb629fda5e55e0ffab9e6022f55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0c53bb629fda5e55e0ffab9e6022f55"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classFeel_1_1DataMap.html">datamap_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>datamap_ptrtype</b></td></tr>
+<tr class="separator:ad0c53bb629fda5e55e0ffab9e6022f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -198,6 +205,24 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2ad91d1db1086f105e41f4bdb3666bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af575c3a3350aa029b887117b07a8f9f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#af575c3a3350aa029b887117b07a8f9f9">setNumberOfEigenValuesConverged</a> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> ncv)</td></tr>
 <tr class="separator:af575c3a3350aa029b887117b07a8f9f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aa3802a186f1dbb50258973a3b801ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9aa3802a186f1dbb50258973a3b801ac"></a>
+<a class="el" href="classFeel_1_1DataMap.html">datamap_type</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>mapRow</b> () const </td></tr>
+<tr class="separator:a9aa3802a186f1dbb50258973a3b801ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fa520f98dde2660f3a25cadd3cd81e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fa520f98dde2660f3a25cadd3cd81e0"></a>
+<a class="el" href="classFeel_1_1DataMap.html">datamap_type</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>mapCol</b> () const </td></tr>
+<tr class="separator:a0fa520f98dde2660f3a25cadd3cd81e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1cc3e76e97e28d2097b100c3a593092"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1cc3e76e97e28d2097b100c3a593092"></a>
+datamap_ptrtype const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>mapRowPtr</b> () const </td></tr>
+<tr class="separator:af1cc3e76e97e28d2097b100c3a593092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c650601cc29bcba51ff045d58a0f09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9c650601cc29bcba51ff045d58a0f09"></a>
+datamap_ptrtype const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>mapColPtr</b> () const </td></tr>
+<tr class="separator:af9c650601cc29bcba51ff045d58a0f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3525b04d22d66bf185f22505055b9590"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3525b04d22d66bf185f22505055b9590"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMapRow</b> (datamap_ptrtype const &amp;d)</td></tr>
+<tr class="separator:a3525b04d22d66bf185f22505055b9590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec60d3ea7e9a439ae02bfa3406131cb6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec60d3ea7e9a439ae02bfa3406131cb6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMapCol</b> (datamap_ptrtype const &amp;d)</td></tr>
+<tr class="separator:aec60d3ea7e9a439ae02bfa3406131cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Methods</div></td></tr>
 <tr class="memitem:aee3af76e50d62d058bcab610e652f944"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#aee3af76e50d62d058bcab610e652f944">initialized</a> () const </td></tr>
 <tr class="separator:aee3af76e50d62d058bcab610e652f944"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -222,6 +247,12 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a84465f10c90303db255da4c88f801a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1d3bbcdfea39e8fc9d5d025c758694b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#ad1d3bbcdfea39e8fc9d5d025c758694b">M_is_initialized</a></td></tr>
 <tr class="separator:ad1d3bbcdfea39e8fc9d5d025c758694b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f9468f0bbad944bfd0fc8b322c8567"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03f9468f0bbad944bfd0fc8b322c8567"></a>
+datamap_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>M_mapCol</b></td></tr>
+<tr class="separator:a03f9468f0bbad944bfd0fc8b322c8567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a58150afa178bcf3f079bda7fd93363"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a58150afa178bcf3f079bda7fd93363"></a>
+datamap_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>M_mapRow</b></td></tr>
+<tr class="separator:a4a58150afa178bcf3f079bda7fd93363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcd6f8382b7c9076d89d42efc1e0a099"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcd6f8382b7c9076d89d42efc1e0a099"></a>
 <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverEigen.html#afcd6f8382b7c9076d89d42efc1e0a099">M_maxit</a></td></tr>
 <tr class="memdesc:afcd6f8382b7c9076d89d42efc1e0a099"><td class="mdescLeft">&#160;</td><td class="mdescRight">max number of iterations <br/></td></tr>
@@ -1429,7 +1460,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:59:07 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:32:24 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

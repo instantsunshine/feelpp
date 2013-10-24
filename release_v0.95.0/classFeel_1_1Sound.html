@@ -136,11 +136,11 @@ typedef boost::shared_ptr<br class="typebreak"/>
 typedef <a class="el" href="classFeel_1_1Backend.html">Backend</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>backend_type</b></td></tr>
 <tr class="separator:adecea58e745ad03afb106df392c82673"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad166bb510bd417dde29d75e21d8d1fb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad166bb510bd417dde29d75e21d8d1fb0"></a>
-typedef bases&lt; Lagrange&lt; Order, <br class="typebreak"/>
+typedef <a class="el" href="structFeel_1_1bases.html">bases</a>&lt; <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a>&lt; <a class="el" href="structFeel_1_1Order.html">Order</a>, <br class="typebreak"/>
 <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_type</b></td></tr>
 <tr class="separator:ad166bb510bd417dde29d75e21d8d1fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4a179968b3b9180a766f0a1492b30e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4a179968b3b9180a766f0a1492b30e1"></a>
-typedef space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">space_type::element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
 <tr class="separator:ad4a179968b3b9180a766f0a1492b30e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65dfefa8340ce36b0dc81dadeab3cf56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65dfefa8340ce36b0dc81dadeab3cf56"></a>
 typedef <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; Dim, 1, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entity_type</b></td></tr>
@@ -156,12 +156,12 @@ typedef boost::shared_ptr<br class="typebreak"/>
 typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; <a class="el" href="classFeel_1_1Simplex.html">entity_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_type</b></td></tr>
 <tr class="separator:a61e9b92262b708d59176163d6e282895"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b494d2e8b95e68cf405fd8d15658431"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b494d2e8b95e68cf405fd8d15658431"></a>
-typedef p0_space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><b>p0_element_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">p0_space_type::element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>p0_element_type</b></td></tr>
 <tr class="separator:a1b494d2e8b95e68cf405fd8d15658431"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a606522be0c65917e827b16c1f7c5f791"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a606522be0c65917e827b16c1f7c5f791"></a>
 typedef <a class="el" href="classFeel_1_1FunctionSpace.html">FunctionSpace</a><br class="typebreak"/>
-&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a>, bases&lt; Lagrange<br class="typebreak"/>
-&lt; 0, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt; &gt;, Discontinuous &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>p0_space_type</b></td></tr>
+&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a>, <a class="el" href="structFeel_1_1bases.html">bases</a>&lt; <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a><br class="typebreak"/>
+&lt; 0, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt; &gt;, <a class="el" href="classFeel_1_1Discontinuous.html">Discontinuous</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>p0_space_type</b></td></tr>
 <tr class="separator:a606522be0c65917e827b16c1f7c5f791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd1d1c9efd6034e7dcc0347c300741bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd1d1c9efd6034e7dcc0347c300741bf"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
@@ -169,7 +169,7 @@ typedef boost::shared_ptr<br class="typebreak"/>
 <tr class="separator:acd1d1c9efd6034e7dcc0347c300741bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4633635f7186f7cb3522d5025bc12a28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4633635f7186f7cb3522d5025bc12a28"></a>
 typedef <a class="el" href="classFeel_1_1FunctionSpace.html">FunctionSpace</a><br class="typebreak"/>
-&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a>, basis_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>space_type</b></td></tr>
+&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a>, <a class="el" href="structFeel_1_1bases.html">basis_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>space_type</b></td></tr>
 <tr class="separator:a4633635f7186f7cb3522d5025bc12a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb0b7da6e5acb602e2d59ab4924a62a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb0b7da6e5acb602e2d59ab4924a62a5"></a>
 typedef <br class="typebreak"/>
@@ -258,7 +258,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a2bd46367f7359556b0d700d01ea7baa5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bd46367f7359556b0d700d01ea7baa5"></a>
-static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>imOrder</b> = 2*Order</td></tr>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>imOrder</b> = 2*<a class="el" href="structFeel_1_1Order.html">Order</a></td></tr>
 <tr class="separator:a2bd46367f7359556b0d700d01ea7baa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -291,7 +291,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1Sound.html">Feel::Sound</a>&lt; Dim, Order &gt;::run </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1Sound.html">Feel::Sound</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::run </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -320,7 +320,7 @@ template&lt;int Dim, int Order&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:59:07 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:32:24 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

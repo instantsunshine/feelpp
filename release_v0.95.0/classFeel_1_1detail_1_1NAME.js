@@ -1,5 +1,7 @@
 var classFeel_1_1detail_1_1NAME =
 [
+    [ "Value", "structFeel_1_1detail_1_1NAME_1_1Value.html", "structFeel_1_1detail_1_1NAME_1_1Value" ],
+    [ "Value< true, Expr1_, Expr2_ >", "structFeel_1_1detail_1_1NAME_1_1Value_3_01true_00_01Expr1___00_01Expr2___01_4.html", "structFeel_1_1detail_1_1NAME_1_1Value_3_01true_00_01Expr1___00_01Expr2___01_4" ],
     [ "value_type", "classFeel_1_1detail_1_1NAME.html#ad5adf02812e81f4792cd96e51b6436f6", null ],
     [ "nvar", "classFeel_1_1detail_1_1NAME.html#a3841a92f3f95f3ecf51680058c4dade5a490f4d525975a0b8badac98071c34e1e", null ],
     [ "NAME", "classFeel_1_1detail_1_1NAME.html#a6bb297c094c64c83ff99cd85fd41b2ce", null ],

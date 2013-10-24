@@ -12,7 +12,8 @@ var searchData=
   ['hasshape',['hasShape',['../classFeel_1_1GeoEntity.html#a6dbea56c0d2bdfeed841b3ba00923e26',1,'Feel::GeoEntity']]],
   ['hassubmeshdata',['hasSubMeshData',['../classFeel_1_1MeshBase.html#ab9cd5b8ba76773a6619c9b45575d72b9',1,'Feel::MeshBase']]],
   ['heatsink',['HeatSink',['../classFeel_1_1HeatSink.html#aad7b3f3eb6ea8aad078ecfd2cc5dafa9',1,'Feel::HeatSink']]],
-  ['hessian',['hessian',['../namespaceFeel.html#a8073bad0e88192d69a7b74083ffa640d',1,'Feel']]],
+  ['hess_5f',['hess_',['../classFeel_1_1FunctionSpace_1_1Element.html#af19f21469fe309a05489e6c78aa2a801',1,'Feel::FunctionSpace::Element']]],
+  ['hessian',['hessian',['../classFeel_1_1ADType_3_01T_00_01Nvar_00_012_00_01Var_01_4.html#afbbaae922c9e53899cc266f1778f82bb',1,'Feel::ADType&lt; T, Nvar, 2, Var &gt;::hessian(int __i, int __j) const '],['../classFeel_1_1ADType_3_01T_00_01Nvar_00_012_00_01Var_01_4.html#ae139275f774cc68f4f48e4f02586cf09',1,'Feel::ADType&lt; T, Nvar, 2, Var &gt;::hessian(int __i, int __j)'],['../namespaceFeel.html#a8073bad0e88192d69a7b74083ffa640d',1,'Feel::hessian()']]],
   ['hface',['hFace',['../classFeel_1_1GeoND.html#a804b7e3b128e6392b589eed086cca808',1,'Feel::GeoND::hFace()'],['../classFeel_1_1GeoMap_1_1Context.html#ac9000df9d9a65d4d4bd9b5b8c2e999e2',1,'Feel::GeoMap::Context::hFace()']]],
   ['homepage',['homepage',['../classFeel_1_1AboutData.html#a308275dfe323ec8896b41f511051cc7c',1,'Feel::AboutData']]],
   ['howmany',['howMany',['../classFeel_1_1BareItemsHandler.html#ae1e8777a3464b9c2e5c9b533d2df9b73',1,'Feel::BareItemsHandler']]]

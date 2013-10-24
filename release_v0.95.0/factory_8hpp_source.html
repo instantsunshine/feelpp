@@ -148,12 +148,12 @@ $(document).ready(function(){initNavTree('factory_8hpp_source.html','');});
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;         &gt;</div>
 <div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="structFeel_1_1FactoryDefaultError.html">   52</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1FactoryDefaultError.html">FactoryDefaultError</a></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">class </span>Exception</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="classFeel_1_1FactoryDefaultError_1_1Exception.html">   54</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classFeel_1_1FactoryDefaultError_1_1Exception.html">Exception</a></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        :</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">public</span> std::exception</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        Exception( IdentifierType <span class="keywordtype">id</span> )</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="classFeel_1_1FactoryDefaultError_1_1Exception.html">Exception</a>( IdentifierType <span class="keywordtype">id</span> )</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            :</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            std::exception(),</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            M_ex()</div>
@@ -161,7 +161,7 @@ $(document).ready(function(){initNavTree('factory_8hpp_source.html','');});
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            M_ex = this-&gt;getEx( <span class="keywordtype">id</span> );</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        ~Exception() <span class="keywordflow">throw</span>()</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        ~<a class="code" href="classFeel_1_1FactoryDefaultError_1_1Exception.html">Exception</a>() <span class="keywordflow">throw</span>()</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        {}</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span> ()</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
@@ -186,7 +186,7 @@ $(document).ready(function(){initNavTree('factory_8hpp_source.html','');});
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">static</span> AbstractProduct* onUnknownType( IdentifierType <span class="keywordtype">id</span> )</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">throw</span> Exception( <span class="keywordtype">id</span> );</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classFeel_1_1FactoryDefaultError_1_1Exception.html">Exception</a>( <span class="keywordtype">id</span> );</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
@@ -195,7 +195,7 @@ $(document).ready(function(){initNavTree('factory_8hpp_source.html','');});
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">class </span>AbstractProduct,</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <span class="keyword">typename</span> IdentifierType,</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <span class="keyword">typename</span> ProductCreator = boost::function&lt;AbstractProduct*()&gt;,</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="keyword">template</span>&lt;<span class="keyword">typename</span>, <span class="keyword">class</span>&gt; <span class="keyword">class </span>FactoryErrorPolicy = <a class="code" href="structFeel_1_1FactoryDefaultError.html">FactoryDefaultError</a></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="keyword">template</span>&lt;<span class="keyword">typename</span>, <span class="keyword">class</span>&gt; <span class="keyword">class </span>FactoryErrorPolicy = FactoryDefaultError</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      &gt;</div>
 <div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="classFeel_1_1Factory.html">  112</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1Factory.html" title="Implements a generic object Factory. ">Factory</a></div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    :</div>
@@ -311,7 +311,7 @@ $(document).ready(function(){initNavTree('factory_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:58:35 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:31:20 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

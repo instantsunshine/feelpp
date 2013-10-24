@@ -9,7 +9,7 @@ var classFeel_1_1GeoElement1D =
     [ "GeoShape", "classFeel_1_1GeoElement1D.html#a03828082419aadd765753ada12ac2596", null ],
     [ "node_type", "classFeel_1_1GeoElement1D.html#a505032d93fa2722b2d48ae88da8df7d7", null ],
     [ "permutation_type", "classFeel_1_1GeoElement1D.html#a1a68ba85b9058fee4a0f02d660d22c11", null ],
-    [ "point_type", "classFeel_1_1GeoElement1D.html#a1843c8a35d9bf5dddd6187e7ac939531", null ],
+    [ "point_type", "classFeel_1_1GeoElement1D.html#ae211059dd6ce37ade8a87a5ff2ea8ac5", null ],
     [ "self_type", "classFeel_1_1GeoElement1D.html#a85fec3a1d6f4afeaf78a6e17c250bfcd", null ],
     [ "super", "classFeel_1_1GeoElement1D.html#ab7f5d884a964c8fc80d6fdea48a8b2da", null ],
     [ "super2", "classFeel_1_1GeoElement1D.html#a8106bdc1080dacf15bb805d7b2ad2dbc", null ],

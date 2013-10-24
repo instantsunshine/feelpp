@@ -1,5 +1,6 @@
 var classFeel_1_1Projector =
 [
+    [ "integrate_type", "structFeel_1_1Projector_1_1integrate__type.html", "structFeel_1_1Projector_1_1integrate__type" ],
     [ "backend_ptrtype", "classFeel_1_1Projector.html#af3beae3c1607d4596b9c355b05f74494", null ],
     [ "backend_type", "classFeel_1_1Projector.html#a749821a9df8ed5ff03d32a7692d82c2a", null ],
     [ "domain_element_type", "classFeel_1_1Projector.html#af422b09f3a7bff591ccfa2f656d28973", null ],

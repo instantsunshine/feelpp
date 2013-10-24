@@ -1,5 +1,6 @@
 var classFeel_1_1TensorisedBoundaryAdapted =
 [
+    [ "Convex", "structFeel_1_1TensorisedBoundaryAdapted_1_1Convex.html", "structFeel_1_1TensorisedBoundaryAdapted_1_1Convex" ],
     [ "basis_type", "classFeel_1_1TensorisedBoundaryAdapted.html#a09354956f7dd5b8837c2c62ef61ac5ed", null ],
     [ "convex_type", "classFeel_1_1TensorisedBoundaryAdapted.html#a6a2fb2abd1486689b02ac267ca3ebd84", null ],
     [ "int_type", "classFeel_1_1TensorisedBoundaryAdapted.html#ad6a1a4be10825706d6596575a419f2a9", null ],

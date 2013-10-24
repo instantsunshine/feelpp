@@ -152,7 +152,7 @@ $(document).ready(function(){initNavTree('operatorsteklovpoincare_8hpp_source.ht
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;space_type&gt; space_ptrtype;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">super::backend_type</a> <a class="code" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">backend_type</a>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::backend_ptrtype backend_ptrtype;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">typedef</span> FsFunctionalLinear&lt;fs_type&gt; image_element_type;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FsFunctionalLinear.html">FsFunctionalLinear&lt;fs_type&gt;</a> <a class="code" href="classFeel_1_1FsFunctionalLinear.html">image_element_type</a>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> image_element_type::value_type value_type;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
@@ -166,7 +166,7 @@ $(document).ready(function(){initNavTree('operatorsteklovpoincare_8hpp_source.ht
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    ~<a class="code" href="classFeel_1_1OperatorSteklovPc.html" title="OperatorSteklovPc made easy. ">OperatorSteklovPc</a>() {}</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Args,<span class="keyword">typename</span> IntEltsDefault&gt;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">struct </span>integrate_type</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="structFeel_1_1OperatorSteklovPc_1_1integrate__type.html">   86</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1OperatorSteklovPc_1_1integrate__type.html">integrate_type</a></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> vf::detail::clean_type&lt;Args,tag::expr&gt;::type _expr_type;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> vf::detail::clean2_type&lt;Args,tag::range,IntEltsDefault&gt;::type _range_type;</div>
@@ -183,8 +183,8 @@ $(document).ready(function(){initNavTree('operatorsteklovpoincare_8hpp_source.ht
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;          ( image, * )</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        )</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        ( optional</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;          ( quad,   *, ( <span class="keyword">typename</span> integrate_type&lt;Args,decltype( <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( this-&gt;M_Xh-&gt;mesh() ) )&gt;::_quad_type() ) )</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;          ( quad1,   *, ( <span class="keyword">typename</span> integrate_type&lt;Args,decltype( <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( this-&gt;M_Xh-&gt;mesh() ) )&gt;::_quad1_type() ) )</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;          ( quad,   *, ( <span class="keyword">typename</span> <a class="code" href="structFeel_1_1OperatorSteklovPc_1_1integrate__type.html">integrate_type</a>&lt;Args,decltype( <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( this-&gt;M_Xh-&gt;mesh() ) )&gt;::_quad_type() ) )</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;          ( quad1,   *, ( <span class="keyword">typename</span> <a class="code" href="structFeel_1_1OperatorSteklovPc_1_1integrate__type.html">integrate_type</a>&lt;Args,decltype( <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( this-&gt;M_Xh-&gt;mesh() ) )&gt;::_quad1_type() ) )</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;          ( geomap, *, GeomapStrategyType::GEOMAP_OPT )</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        ) )</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
@@ -231,7 +231,7 @@ $(document).ready(function(){initNavTree('operatorsteklovpoincare_8hpp_source.ht
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:58:51 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:31:43 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

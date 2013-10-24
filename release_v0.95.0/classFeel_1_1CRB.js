@@ -1,5 +1,8 @@
 var classFeel_1_1CRB =
 [
+    [ "ComputeIntegrals", "structFeel_1_1CRB_1_1ComputeIntegrals.html", "structFeel_1_1CRB_1_1ComputeIntegrals" ],
+    [ "ComputeIntegralsSquare", "structFeel_1_1CRB_1_1ComputeIntegralsSquare.html", "structFeel_1_1CRB_1_1ComputeIntegralsSquare" ],
+    [ "ComputePhi", "structFeel_1_1CRB_1_1ComputePhi.html", "structFeel_1_1CRB_1_1ComputePhi" ],
     [ "array_2_type", "classFeel_1_1CRB.html#a4ae3bed9adddfa0dbe9c5d3f026116b7", null ],
     [ "array_3_type", "classFeel_1_1CRB.html#a3e6b93ad9f38dc9c7b5b5d7a56cb2840", null ],
     [ "array_4_type", "classFeel_1_1CRB.html#aae7e451ab5cd3a98dd2a509ba00e4d51", null ],
@@ -146,8 +149,8 @@ var classFeel_1_1CRB =
     [ "updateJacobian", "classFeel_1_1CRB.html#ab1b9bb8a017675f5bef0704a337074ff", null ],
     [ "updateResidual", "classFeel_1_1CRB.html#a2642c35a9088a2986e8636302fd6fd92", null ],
     [ "useWNmu", "classFeel_1_1CRB.html#a81ce1b780871477ccefc3ac5bf422a30", null ],
-    [ "wn", "classFeel_1_1CRB.html#aac49af3956b23aab353cff1627bf3b29", null ],
-    [ "wndu", "classFeel_1_1CRB.html#ae6a4add510e9dd34e56d98d31bdb0515", null ],
+    [ "wn", "classFeel_1_1CRB.html#a1fb0c650fc43e2d87f07ad05c42f22cd", null ],
+    [ "wndu", "classFeel_1_1CRB.html#a326d855fdc832a4b3d96775b2fc2dd82", null ],
     [ "wnmu", "classFeel_1_1CRB.html#aa0962029f8ac6c79c3e4bf57201b0dfa", null ],
     [ "worldComm", "classFeel_1_1CRB.html#ae450b535c04870c615e4f555ea20349b", null ],
     [ "boost::serialization::access", "classFeel_1_1CRB.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ]

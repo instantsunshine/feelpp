@@ -159,7 +159,7 @@ $(document).ready(function(){initNavTree('operatorlinear_8hpp_source.html','');}
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;matrix_type&gt; matrix_ptrtype;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Storage&gt;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">struct </span>domain_element: <span class="keyword">public</span> super::domain_space_type::template Element&lt;T,Storage&gt; {};</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="structFeel_1_1OperatorLinear_1_1domain__element.html">   67</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1OperatorLinear_1_1domain__element.html">domain_element</a>: <span class="keyword">public</span> super::domain_space_type::template Element&lt;T,Storage&gt; {};</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> domain_space_type::template Element&lt;<span class="keyword">typename</span> domain_space_type::value_type,</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keyword">typename</span> <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas&lt;typename domain_space_type::value_type&gt;::range::type</a> &gt; domain_element_range_type;</div>
@@ -176,19 +176,19 @@ $(document).ready(function(){initNavTree('operatorlinear_8hpp_source.html','');}
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">//template&lt;typename T, typename Storage&gt;</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">//struct dual_image_element: public super::dual_image_space_type::template Element&lt;T,Storage&gt; {};</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">typedef</span> FsFunctionalLinear&lt;DualImageSpace&gt; image_element_type;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FsFunctionalLinear.html">FsFunctionalLinear&lt;DualImageSpace&gt;</a> <a class="code" href="classFeel_1_1FsFunctionalLinear.html">image_element_type</a>;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="classFeel_1_1OperatorLinear.html" title="Linear Operator between function spaces, represented by a matrix. ">OperatorLinear</a>()</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        :</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="classFeel_1_1Operator.html" title="Operator between function spaces. ">super_type</a>(),</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        M_backend( <a class="code" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">backend_type::build</a>( BACKEND_PETSC ) ),</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        M_backend( <a class="code" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">backend_type</a>::build( BACKEND_PETSC ) ),</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        M_matrix(),</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        M_pattern( Pattern::COUPLED ),</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        M_name(<span class="stringliteral">&quot;operatorlinear&quot;</span>)</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {}</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="classFeel_1_1OperatorLinear.html" title="Linear Operator between function spaces, represented by a matrix. ">OperatorLinear</a>( <a class="code" href="classFeel_1_1OperatorLinear.html" title="Linear Operator between function spaces, represented by a matrix. ">OperatorLinear</a> <span class="keyword">const</span>&amp; ol, <span class="keywordtype">bool</span> deep_copy = <span class="keyword">false</span> )</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        :</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="classFeel_1_1Operator.html" title="Operator between function spaces. ">super_type</a>( ol ),</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        super_type( ol ),</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        M_backend( ol.M_backend ),</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        M_matrix(),</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        M_pattern( ol.M_pattern ),</div>
@@ -196,7 +196,7 @@ $(document).ready(function(){initNavTree('operatorlinear_8hpp_source.html','');}
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">if</span> ( deep_copy )</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            M_matrix = <span class="keyword">new</span> <a class="code" href="classFeel_1_1MatrixSparse.html">matrix_type</a>( *ol.M_matrix );</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            M_matrix = <span class="keyword">new</span> matrix_type( *ol.M_matrix );</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">else</span></div>
@@ -204,13 +204,13 @@ $(document).ready(function(){initNavTree('operatorlinear_8hpp_source.html','');}
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            M_matrix = ol.M_matrix;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="classFeel_1_1OperatorLinear.html" title="Linear Operator between function spaces, represented by a matrix. ">OperatorLinear</a>( domain_space_ptrtype     domainSpace,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    OperatorLinear( domain_space_ptrtype     domainSpace,</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    dual_image_space_ptrtype dualImageSpace,</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    backend_ptrtype          backend,</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    <span class="keywordtype">bool</span> buildMatrix = <span class="keyword">true</span> ,</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> pattern=Pattern::COUPLED)</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        :</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="classFeel_1_1Operator.html" title="Operator between function spaces. ">super_type</a>( domainSpace, dualImageSpace ),</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        super_type( domainSpace, dualImageSpace ),</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        M_backend( backend ),</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        M_pattern( pattern ),</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        M_name( <span class="stringliteral">&quot;operatorlinear&quot;</span> )</div>
@@ -218,7 +218,7 @@ $(document).ready(function(){initNavTree('operatorlinear_8hpp_source.html','');}
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">if</span> ( buildMatrix ) M_matrix = M_backend-&gt;newMatrix( _trial=domainSpace, _test=dualImageSpace , _pattern=M_pattern );</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    ~<a class="code" href="classFeel_1_1OperatorLinear.html" title="Linear Operator between function spaces, represented by a matrix. ">OperatorLinear</a>() {}</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    ~OperatorLinear() {}</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    init( domain_space_ptrtype     domainSpace,</div>
@@ -508,7 +508,7 @@ $(document).ready(function(){initNavTree('operatorlinear_8hpp_source.html','');}
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
 <div class="line"><a name="l00416"></a><span class="lineno"><a class="code" href="classFeel_1_1OperatorLinear.html#a35bfaecb6c737b9ad5750bfc34ae33d4">  416</a></span>&#160;    <a class="code" href="classFeel_1_1OperatorLinear.html#a35bfaecb6c737b9ad5750bfc34ae33d4" title="apply the inverse of the operator:  ">applyInverse</a>( domain_element_type&amp;      de,</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                  <span class="keyword">const</span> image_element_type&amp; ie )</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                  <span class="keyword">const</span> <a class="code" href="classFeel_1_1FsFunctionalLinear.html">image_element_type</a>&amp; ie )</div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    {</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="keywordflow">if</span> ( ! M_matrix-&gt;closed() )</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        {</div>
@@ -676,7 +676,7 @@ $(document).ready(function(){initNavTree('operatorlinear_8hpp_source.html','');}
 <div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;</div>
 <div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;</div>
 <div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Args&gt;</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;<span class="keyword">struct </span>compute_opLinear_return</div>
+<div class="line"><a name="l00585"></a><span class="lineno"><a class="code" href="structFeel_1_1compute__opLinear__return.html">  585</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1compute__opLinear__return.html">compute_opLinear_return</a></div>
 <div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;{</div>
 <div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_reference&lt;typename parameter::binding&lt;Args, tag::domainSpace&gt;::type&gt;::type::element_type domain_space_type;</div>
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_reference&lt;typename parameter::binding&lt;Args, tag::imageSpace&gt;::type&gt;::type::element_type image_space_type;</div>
@@ -693,13 +693,13 @@ $(document).ready(function(){initNavTree('operatorlinear_8hpp_source.html','');}
 <div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;      ( imageSpace,     *( boost::is_convertible&lt;mpl::_,boost::shared_ptr&lt;FunctionSpaceBase&gt; &gt; ) )</div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    ) <span class="comment">// required</span></div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    ( optional</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;      ( backend,        *, Backend&lt;<span class="keyword">typename</span> compute_opLinear_return&lt;Args&gt;::domain_space_type::value_type&gt;::build() )</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;      ( backend,        *, <a class="code" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">Backend</a>&lt;<span class="keyword">typename</span> <a class="code" href="structFeel_1_1compute__opLinear__return.html">compute_opLinear_return&lt;Args&gt;::domain_space_type::value_type</a>&gt;::build() )</div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;      ( pattern,        *, (<a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a>)Pattern::COUPLED  )</div>
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    ) <span class="comment">// optionnal</span></div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;)</div>
 <div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;{</div>
 <div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    Feel::detail::ignore_unused_variable_warning( args );</div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    <span class="keyword">typedef</span> OperatorLinear&lt;typename compute_opLinear_return&lt;Args&gt;::domain_space_type,</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1OperatorLinear.html" title="Linear Operator between function spaces, represented by a matrix. ">OperatorLinear&lt;typename compute_opLinear_return&lt;Args&gt;::domain_space_type</a>,</div>
 <div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;            <span class="keyword">typename</span> compute_opLinear_return&lt;Args&gt;::image_space_type&gt; operatorlinear_type;</div>
 <div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;</div>
 <div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    boost::shared_ptr&lt;operatorlinear_type&gt; opI( <span class="keyword">new</span> operatorlinear_type( domainSpace,imageSpace,backend,pattern ) );</div>
@@ -718,7 +718,7 @@ $(document).ready(function(){initNavTree('operatorlinear_8hpp_source.html','');}
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:58:50 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:31:42 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

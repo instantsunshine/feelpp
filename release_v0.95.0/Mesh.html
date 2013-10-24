@@ -283,7 +283,7 @@ loadGMSHMesh</h2>
 </div><!-- fragment --><p>From <code>"applications/check/check.cpp"</code> : </p>
 <div class="fragment"><div class="line">mesh = loadGMSHMesh( _mesh=<span class="keyword">new</span> mesh_type,</div>
 <div class="line">                     _filename=this-&gt;vm()[<span class="stringliteral">&quot;filename&quot;</span>].<span class="keyword">template</span> as&lt;std::string&gt;(),</div>
-<div class="line">                     _rebuild_partitions=(Environment::worldComm().size() &gt; 1),</div>
+<div class="line">                     _rebuild_partitions=(<a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().size() &gt; 1),</div>
 <div class="line">                     _update=MESH_RENUMBER|MESH_UPDATE_EDGES|MESH_UPDATE_FACES|MESH_CHECK );</div>
 </div><!-- fragment --><h1><a class="anchor" id="Create"></a>
 Create Meshes</h1>
@@ -337,7 +337,7 @@ geo</h2>
 <div class="fragment"><div class="line">mesh = createGMSHMesh( _mesh=<span class="keyword">new</span> mesh_type,</div>
 <div class="line">                       _desc=geo( _filename=File_Mesh,</div>
 <div class="line">                                  _dim=Dim,</div>
-<div class="line">                                  _h=Environment::vm(_name=<span class="stringliteral">&quot;hsize&quot;</span>).<span class="keyword">template</span> as&lt;double&gt;() ),</div>
+<div class="line">                                  _h=<a class="code" href="classFeel_1_1detail_1_1Environment.html#ab2b28bbafcdbad667fd52b22702be57d">Environment::vm</a>(_name=<span class="stringliteral">&quot;hsize&quot;</span>).<span class="keyword">template</span> as&lt;double&gt;() ),</div>
 <div class="line">                                  _update=MESH_CHECK|MESH_UPDATE_FACES|MESH_UPDATE_EDGES|MESH_RENUMBER );</div>
 </div><!-- fragment --><h2><a class="anchor" id="Domain"></a>
 domain</h2>
@@ -404,7 +404,7 @@ Todo</h1>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:58:59 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:31:56 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

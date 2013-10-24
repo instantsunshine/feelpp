@@ -170,7 +170,7 @@ $(document).ready(function(){initNavTree('tensorisedboundadapted_8hpp_source.htm
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">     * Geometry where the polynomials are defined and constructed</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">typedef</span> Hypercube&lt;nDim, nConvexOrder, nDim&gt; convex_type;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Hypercube.html">Hypercube&lt;nDim, nConvexOrder, nDim&gt;</a> <a class="code" href="classFeel_1_1Hypercube.html">convex_type</a>;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Reference.html">Reference&lt;convex_type, nDim, nConvexOrder, nDim, T&gt;</a> <a class="code" href="classFeel_1_1Reference.html">reference_convex_type</a>;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> reference_convex_type::points_type points_type;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
@@ -178,9 +178,9 @@ $(document).ready(function(){initNavTree('tensorisedboundadapted_8hpp_source.htm
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type numFaces = reference_convex_type::numFaces;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type order&gt;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">struct </span>Convex</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="code" href="structFeel_1_1TensorisedBoundaryAdapted_1_1Convex.html">  102</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1TensorisedBoundaryAdapted_1_1Convex.html">Convex</a></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">typedef</span> Hypercube&lt;nDim, order, nDim&gt; type;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Hypercube.html">Hypercube&lt;nDim, order, nDim&gt;</a> <a class="code" href="classFeel_1_1Hypercube.html">type</a>;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    };</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">/*</span></div>
@@ -202,7 +202,7 @@ $(document).ready(function(){initNavTree('tensorisedboundadapted_8hpp_source.htm
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        M_pts( nDim, numVertices ),</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        M_pts_face( numVertices )</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        PointSetEquiSpaced&lt;convex_type, nOrder, value_type&gt; pts;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <a class="code" href="classFeel_1_1PointSetEquiSpaced.html">PointSetEquiSpaced&lt;convex_type, nOrder, value_type&gt;</a> pts;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="comment">// only the points associated with the vertices</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        M_pts = pts.pointsByEntity( 0 );</div>
@@ -220,16 +220,16 @@ $(document).ready(function(){initNavTree('tensorisedboundadapted_8hpp_source.htm
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <a class="code" href="classFeel_1_1LU.html">LU&lt;matrix_type&gt;</a> lu( A );</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        matrix_type C = lu.solve( D );</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        vector_matrix_type <a class="code" href="classFeel_1_1TensorisedBoundaryAdapted.html#af2e8dfadbbae86a23d2fd4337697100f" title="derivatives of Dubiner polynomials the derivatives are computed at the nodes of the lattice ...">d</a> ( derivate( pts.points() ) );</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        M_D.resize( d.size() );</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        M_D.resize( <a class="code" href="classFeel_1_1TensorisedBoundaryAdapted.html#af2e8dfadbbae86a23d2fd4337697100f" title="derivatives of Dubiner polynomials the derivatives are computed at the nodes of the lattice ...">d</a>.size() );</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i = 0; i &lt; d.size(); ++i )</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i = 0; i &lt; <a class="code" href="classFeel_1_1TensorisedBoundaryAdapted.html#af2e8dfadbbae86a23d2fd4337697100f" title="derivatives of Dubiner polynomials the derivatives are computed at the nodes of the lattice ...">d</a>.size(); ++i )</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            M_D[i] = ublas::prod( d[i], C );</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            M_D[i] = ublas::prod( <a class="code" href="classFeel_1_1TensorisedBoundaryAdapted.html#af2e8dfadbbae86a23d2fd4337697100f" title="derivatives of Dubiner polynomials the derivatives are computed at the nodes of the lattice ...">d</a>[i], C );</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            glas::clean( M_D[i] );</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        }</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="classFeel_1_1TensorisedBoundaryAdapted.html" title="TensorisedBoundaryAdapted Basis on simplex products. ">TensorisedBoundaryAdapted</a>( <a class="code" href="classFeel_1_1TensorisedBoundaryAdapted.html" title="TensorisedBoundaryAdapted Basis on simplex products. ">TensorisedBoundaryAdapted</a> <span class="keyword">const</span> &amp; <a class="code" href="classFeel_1_1TensorisedBoundaryAdapted.html#af2e8dfadbbae86a23d2fd4337697100f" title="derivatives of Dubiner polynomials the derivatives are computed at the nodes of the lattice ...">d</a> )</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    TensorisedBoundaryAdapted( TensorisedBoundaryAdapted <span class="keyword">const</span> &amp; <a class="code" href="classFeel_1_1TensorisedBoundaryAdapted.html#af2e8dfadbbae86a23d2fd4337697100f" title="derivatives of Dubiner polynomials the derivatives are computed at the nodes of the lattice ...">d</a> )</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        :</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        M_refconvex( d.M_refconvex ),</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        M_pts( d.M_pts ),</div>
@@ -237,7 +237,7 @@ $(document).ready(function(){initNavTree('tensorisedboundadapted_8hpp_source.htm
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    {</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    ~<a class="code" href="classFeel_1_1TensorisedBoundaryAdapted.html" title="TensorisedBoundaryAdapted Basis on simplex products. ">TensorisedBoundaryAdapted</a>()</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    ~TensorisedBoundaryAdapted()</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    {</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
@@ -253,7 +253,7 @@ $(document).ready(function(){initNavTree('tensorisedboundadapted_8hpp_source.htm
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    self_type <span class="keyword">const</span>&amp; operator=( self_type <span class="keyword">const</span>&amp; d )</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    self_type <span class="keyword">const</span>&amp; operator=( self_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1TensorisedBoundaryAdapted.html#af2e8dfadbbae86a23d2fd4337697100f" title="derivatives of Dubiner polynomials the derivatives are computed at the nodes of the lattice ...">d</a> )</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    {</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordflow">if</span> ( <span class="keyword">this</span> != &amp;d )</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        {</div>
@@ -1162,7 +1162,7 @@ $(document).ready(function(){initNavTree('tensorisedboundadapted_8hpp_source.htm
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:58:57 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:31:54 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

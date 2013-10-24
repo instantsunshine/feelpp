@@ -255,11 +255,11 @@ $(document).ready(function(){initNavTree('block_8hpp_source.html','');});
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="keyword">struct </span>BlocksBase</div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">  190</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">BlocksBase</a></div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;{</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keyword">typedef</span> T block_type;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    BlocksBase()</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">BlocksBase</a>()</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        :</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        M_nRow( 0 ),</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        M_nCol( 0 ),</div>
@@ -267,7 +267,7 @@ $(document).ready(function(){initNavTree('block_8hpp_source.html','');});
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        M_cptToBuild( 0 )</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    {}</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    BlocksBase( uint16_type nr,uint16_type nc )</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">BlocksBase</a>( uint16_type nr,uint16_type nc )</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        :</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        M_nRow( nr ),</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        M_nCol( nc ),</div>
@@ -275,7 +275,7 @@ $(document).ready(function(){initNavTree('block_8hpp_source.html','');});
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        M_cptToBuild( 0 )</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    {}</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    BlocksBase( uint16_type nr,uint16_type nc,block_type <span class="keyword">const</span>&amp; a )</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">BlocksBase</a>( uint16_type nr,uint16_type nc,block_type <span class="keyword">const</span>&amp; a )</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        :</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        M_nRow( nr ),</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        M_nCol( nc ),</div>
@@ -283,7 +283,7 @@ $(document).ready(function(){initNavTree('block_8hpp_source.html','');});
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        M_cptToBuild( 0 )</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    {}</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    BlocksBase( BlocksBase&lt;T&gt; <span class="keyword">const</span>&amp; b )</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">BlocksBase</a>( <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">BlocksBase&lt;T&gt;</a> <span class="keyword">const</span>&amp; b )</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        :</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        M_nRow( b.M_nRow ),</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        M_nCol( b.M_nCol ),</div>
@@ -291,10 +291,10 @@ $(document).ready(function(){initNavTree('block_8hpp_source.html','');});
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        M_cptToBuild( b.M_cptToBuild )</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    {}</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    BlocksBase&lt;T&gt;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">BlocksBase&lt;T&gt;</a></div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    operator&lt;&lt;( block_type <span class="keyword">const</span>&amp; m )<span class="keyword">  const</span></div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        BlocksBase&lt;T&gt; newBlock( *<span class="keyword">this</span> );</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">BlocksBase&lt;T&gt;</a> newBlock( *<span class="keyword">this</span> );</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        newBlock.M_vec[M_cptToBuild]=m;</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        ++( newBlock.M_cptToBuild );</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">return</span> newBlock;</div>
@@ -350,7 +350,7 @@ $(document).ready(function(){initNavTree('block_8hpp_source.html','');});
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        M_vec.resize( this-&gt;nRow()*this-&gt;nCol() );</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordtype">void</span> merge( uint16_type c1,uint16_type c2,BlocksBase&lt;T&gt; <span class="keyword">const</span>&amp; b )</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordtype">void</span> merge( uint16_type c1,uint16_type c2,<a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">BlocksBase&lt;T&gt;</a> <span class="keyword">const</span>&amp; b )</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    {</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keyword">const</span> uint16_type nRb = b.nRow(), nCb = b.nCol();</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">for</span> ( uint16_type i=0; i&lt;nRb; ++i )</div>
@@ -358,20 +358,20 @@ $(document).ready(function(){initNavTree('block_8hpp_source.html','');});
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                this-&gt;<span class="keyword">operator</span>()( c1+i,c2+j ) = b( i,j );</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    BlocksBase&lt;T&gt; subBlock(uint16_type x1r,uint16_type x1c,uint16_type x2r,uint16_type x2c)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">BlocksBase&lt;T&gt;</a> subBlock(uint16_type x1r,uint16_type x1c,uint16_type x2r,uint16_type x2c)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keyword">const</span> uint16_type nrow = x2r-x1r+1;</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keyword">const</span> uint16_type ncol = x2c-x1c+1;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        BlocksBase&lt;T&gt; res(nrow,ncol);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">BlocksBase&lt;T&gt;</a> res(nrow,ncol);</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordflow">for</span> (uint16_type kr=0;kr&lt;nrow;++kr)</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <span class="keywordflow">for</span> (uint16_type kc=0;kc&lt;ncol;++kc)</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                res(kr,kc)=this-&gt;operator()(x1r+kr,x1c+kc);</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">return</span> res;</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    BlocksBase&lt;T&gt; transpose()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">BlocksBase&lt;T&gt;</a> transpose()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        BlocksBase&lt;T&gt; res(this-&gt;nCol(),this-&gt;nRow());</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">BlocksBase&lt;T&gt;</a> res(this-&gt;nCol(),this-&gt;nRow());</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">for</span> (uint16_type i=0;i&lt;res.nRow();++i)</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="keywordflow">for</span> (uint16_type j=0;j&lt;res.nCol();++j)</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                res(i,j) = this-&gt;operator()(j,i);</div>
@@ -387,33 +387,33 @@ $(document).ready(function(){initNavTree('block_8hpp_source.html','');});
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> NR, <span class="keywordtype">int</span> NC, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="keyword">struct </span>Blocks : <span class="keyword">public</span> BlocksBase&lt;T&gt;</div>
+<div class="line"><a name="l00322"></a><span class="lineno"><a class="code" href="structFeel_1_1vf_1_1Blocks.html">  322</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1vf_1_1Blocks.html">Blocks</a> : <span class="keyword">public</span> <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">BlocksBase</a>&lt;T&gt;</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;{</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type NBLOCKROWS = NR;</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type NBLOCKCOLS = NC;</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keyword">typedef</span> BlocksBase&lt;T&gt; super_type;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">BlocksBase&lt;T&gt;</a> <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">super_type</a>;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keyword">typedef</span> T block_type;</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    Blocks()</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <a class="code" href="structFeel_1_1vf_1_1Blocks.html">Blocks</a>()</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        :</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        super_type( NR,NC )</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">super_type</a>( NR,NC )</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    {}</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    Blocks( block_type <span class="keyword">const</span>&amp; a )</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <a class="code" href="structFeel_1_1vf_1_1Blocks.html">Blocks</a>( block_type <span class="keyword">const</span>&amp; a )</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        :</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        super_type( NR,NC, a )</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">super_type</a>( NR,NC, a )</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    {}</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    Blocks( super_type <span class="keyword">const</span>&amp; a )</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <a class="code" href="structFeel_1_1vf_1_1Blocks.html">Blocks</a>( <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">super_type</a> <span class="keyword">const</span>&amp; a )</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        :</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        super_type( a )</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">super_type</a>( a )</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    {}</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    Blocks&lt;NR,NC,T&gt;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <a class="code" href="structFeel_1_1vf_1_1Blocks.html">Blocks&lt;NR,NC,T&gt;</a></div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    operator&lt;&lt;( block_type <span class="keyword">const</span>&amp; m )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        Blocks&lt;NR,NC,T&gt; newBlock = super_type::operator&lt;&lt;( m ) ;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <a class="code" href="structFeel_1_1vf_1_1Blocks.html">Blocks&lt;NR,NC,T&gt;</a> newBlock = super_type::operator&lt;&lt;( m ) ;</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="keywordflow">return</span> newBlock;</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    }</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
@@ -435,28 +435,28 @@ $(document).ready(function(){initNavTree('block_8hpp_source.html','');});
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;} <span class="comment">// vf</span></div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="keyword">class </span>BlocksStencilPattern : <span class="keyword">public</span> vf::BlocksBase&lt;size_type&gt;</div>
+<div class="line"><a name="l00370"></a><span class="lineno"><a class="code" href="classFeel_1_1BlocksStencilPattern.html">  370</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1BlocksStencilPattern.html">BlocksStencilPattern</a> : <span class="keyword">public</span> <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">vf::BlocksBase</a>&lt;size_type&gt;</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;{</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keyword">typedef</span> vf::BlocksBase&lt;size_type&gt; super_type;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keyword">typedef</span> BlocksStencilPattern self_type;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">vf::BlocksBase&lt;size_type&gt;</a> <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">super_type</a>;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1BlocksStencilPattern.html">BlocksStencilPattern</a> <a class="code" href="classFeel_1_1BlocksStencilPattern.html">self_type</a>;</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="keyword">public</span> :</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    BlocksStencilPattern(uint16_type nr,uint16_type nc)</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <a class="code" href="classFeel_1_1BlocksStencilPattern.html">BlocksStencilPattern</a>(uint16_type nr,uint16_type nc)</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        :</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        super_type(nr,nc)</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">super_type</a>(nr,nc)</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    {}</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    BlocksStencilPattern(uint16_type nr,uint16_type nc, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> pat)</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <a class="code" href="classFeel_1_1BlocksStencilPattern.html">BlocksStencilPattern</a>(uint16_type nr,uint16_type nc, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> pat)</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        :</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        super_type(nr,nc,pat)</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">super_type</a>(nr,nc,pat)</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    {}</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    BlocksStencilPattern(super_type <span class="keyword">const</span> &amp; b)</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <a class="code" href="classFeel_1_1BlocksStencilPattern.html">BlocksStencilPattern</a>(<a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">super_type</a> <span class="keyword">const</span> &amp; b)</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        :</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        super_type(b)</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <a class="code" href="structFeel_1_1vf_1_1BlocksBase.html">super_type</a>(b)</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    {}</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    self_type</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <a class="code" href="classFeel_1_1BlocksStencilPattern.html">self_type</a></div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    operator&lt;&lt;( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> <span class="keyword">const</span>&amp; m )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keywordflow">return</span> super_type::operator&lt;&lt;( m );</div>
@@ -470,7 +470,7 @@ $(document).ready(function(){initNavTree('block_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:58:28 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:31:10 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -140,7 +140,7 @@ $(document).ready(function(){initNavTree('projector_8hpp_source.html','');});
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span>detail</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Args&gt;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">struct </span>projector_args</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1projector__args.html">   43</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1projector__args.html">projector_args</a></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> vf::detail::clean_type&lt;Args,tag::domainSpace&gt;::type::element_type domain_type;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> vf::detail::clean_type&lt;Args,tag::imageSpace&gt;::type::element_type image_type;</div>
@@ -148,7 +148,7 @@ $(document).ready(function(){initNavTree('projector_8hpp_source.html','');});
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Args&gt;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">struct </span>lift_args</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1lift__args.html">   51</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1lift__args.html">lift_args</a></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> vf::detail::clean_type&lt;Args,tag::domainSpace&gt;::type::element_type domain_type;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;Projector&lt;domain_type,domain_type&gt; &gt; lift_return_type;</div>
@@ -156,15 +156,15 @@ $(document).ready(function(){initNavTree('projector_8hpp_source.html','');});
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;} <span class="comment">// detail</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DomainSpace, <span class="keyword">class</span> DualImageSpace&gt;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">class </span>Projector : <span class="keyword">public</span> OperatorLinear&lt;DomainSpace, DualImageSpace&gt;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1Projector.html" title="Projection made easy. ">Projector</a> : <span class="keyword">public</span> <a class="code" href="classFeel_1_1OperatorLinear.html" title="Linear Operator between function spaces, represented by a matrix. ">OperatorLinear</a>&lt;DomainSpace, DualImageSpace&gt;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">typedef</span> Projector&lt;DomainSpace,DualImageSpace&gt; super;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Projector.html" title="Projection made easy. ">Projector&lt;DomainSpace,DualImageSpace&gt;</a> super;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">public</span> :</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">typedef</span> OperatorLinear&lt;DomainSpace, DualImageSpace&gt; ol_type;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1OperatorLinear.html" title="Linear Operator between function spaces, represented by a matrix. ">OperatorLinear&lt;DomainSpace, DualImageSpace&gt;</a> ol_type;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::domain_space_type domain_space_type;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::dual_image_space_type  dual_image_space_type;</div>
@@ -173,20 +173,20 @@ $(document).ready(function(){initNavTree('projector_8hpp_source.html','');});
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> domain_space_type::element_type domain_element_type;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> dual_image_space_type::element_type dual_image_element_type;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::backend_type backend_type;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::backend_type <a class="code" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">backend_type</a>;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::backend_ptrtype backend_ptrtype;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> backend_type::sparse_matrix_type matrix_type;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> backend_type::vector_type vector_type;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1MatrixSparse.html">backend_type::sparse_matrix_type</a> matrix_type;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1Vector.html">backend_type::vector_type</a> <a class="code" href="classFeel_1_1Vector.html">vector_type</a>;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> backend_type::vector_ptrtype vector_ptrtype;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;matrix_type&gt; matrix_ptrtype;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">typedef</span> FsFunctionalLinear&lt;DualImageSpace&gt; image_element_type;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FsFunctionalLinear.html">FsFunctionalLinear&lt;DualImageSpace&gt;</a> image_element_type;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    Projector( domain_space_ptrtype     domainSpace,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="classFeel_1_1Projector.html" title="Projection made easy. ">Projector</a>( domain_space_ptrtype     domainSpace,</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;               dual_image_space_ptrtype dualImageSpace,</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;               backend_ptrtype backend = Backend&lt;double&gt;::build( BACKEND_PETSC ),</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;               backend_ptrtype backend = <a class="code" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">Backend&lt;double&gt;::build</a>( BACKEND_PETSC ),</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;               ProjectorType proj_type=L2,</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;               <span class="keywordtype">double</span> epsilon = 0.01,</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;               <span class="keywordtype">double</span> gamma = 20,</div>
@@ -208,7 +208,7 @@ $(document).ready(function(){initNavTree('projector_8hpp_source.html','');});
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    ~Projector() {}</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Args,<span class="keyword">typename</span> IntEltsDefault&gt;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">struct </span>integrate_type</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="code" href="structFeel_1_1Projector_1_1integrate__type.html">  128</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1Projector_1_1integrate__type.html">integrate_type</a></div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> vf::detail::clean_type&lt;Args,tag::expr&gt;::type _expr_type;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> vf::detail::clean2_type&lt;Args,tag::range,IntEltsDefault&gt;::type _range_type;</div>
@@ -566,7 +566,7 @@ $(document).ready(function(){initNavTree('projector_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:58:52 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:31:45 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

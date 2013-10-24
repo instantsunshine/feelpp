@@ -677,7 +677,7 @@ $(document).ready(function(){initNavTree('evaluator_8hpp_source.html','');});
 <div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;)</div>
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;{</div>
 <div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;</div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    <span class="keywordtype">int</span> proc_number = Environment::worldComm().globalRank();</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    <span class="keywordtype">int</span> proc_number = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank();</div>
 <div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;</div>
 <div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;evaluate expression...&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;</div>
@@ -688,14 +688,14 @@ $(document).ready(function(){initNavTree('evaluator_8hpp_source.html','');});
 <div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    Eigen::Matrix&lt;double, vf::detail::evaluate&lt;Args&gt;::nDim,1&gt; n = e.template get&lt;1&gt;().col(index);</div>
 <div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;proc &quot;</span>&lt;&lt;proc_number&lt;&lt;<span class="stringliteral">&quot; index at which function (size: &quot;</span> &lt;&lt; e.template get&lt;0&gt;().array().size() &lt;&lt; <span class="stringliteral">&quot;) is maximal: &quot;</span>&lt;&lt; index &lt;&lt; <span class="stringliteral">&quot; coord = \n&quot;</span>&lt;&lt;n&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    <span class="keywordtype">int</span> world_size = Environment::worldComm().size();</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    <span class="keywordtype">int</span> world_size = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().size();</div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    std::vector&lt;double&gt; maxe_world( world_size );</div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    mpi::all_gather( Environment::worldComm().globalComm(),</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    mpi::all_gather( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalComm(),</div>
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;                     maxe,</div>
 <div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;                     maxe_world );</div>
 <div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;</div>
 <div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;    std::vector&lt; Eigen::Matrix&lt;double, vf::detail::evaluate&lt;Args&gt;::nDim,1&gt; &gt; n_world( world_size );</div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;    mpi::all_gather( Environment::worldComm().globalComm(),</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;    mpi::all_gather( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalComm(),</div>
 <div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;                     n,</div>
 <div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;                     n_world );</div>
 <div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;</div>
@@ -732,7 +732,7 @@ $(document).ready(function(){initNavTree('evaluator_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:58:34 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:31:18 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

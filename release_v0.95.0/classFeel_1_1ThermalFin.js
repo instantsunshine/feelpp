@@ -4,7 +4,7 @@ var classFeel_1_1ThermalFin =
     [ "backend_type", "classFeel_1_1ThermalFin.html#ac6a5cee31775fc509cb685dbfe4a7c78", null ],
     [ "basis_type", "classFeel_1_1ThermalFin.html#a60c8faa1bcce02c7352c65b95df7891a", null ],
     [ "element_type", "classFeel_1_1ThermalFin.html#aab4a340a83a71868dff1a6aca7c62679", null ],
-    [ "entity_type", "classFeel_1_1ThermalFin.html#a59fdebf4b3f6142f9e303560bd3a8055", null ],
+    [ "entity_type", "classFeel_1_1ThermalFin.html#aa92d215627dd60e0efe1794fb56df41f", null ],
     [ "export_type", "classFeel_1_1ThermalFin.html#a7e5688b4a490d37c289ccc883a0a944b", null ],
     [ "mesh_ptrtype", "classFeel_1_1ThermalFin.html#a4d326456fde79a906536e4043dc88530", null ],
     [ "mesh_type", "classFeel_1_1ThermalFin.html#ae7e62cdee21cbe52cf7154e7842b2331", null ],

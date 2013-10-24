@@ -139,12 +139,12 @@ typedef boost::shared_ptr<br class="typebreak"/>
 typedef <a class="el" href="classFeel_1_1Backend.html">Backend</a>&lt; value_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>backend_type</b></td></tr>
 <tr class="separator:aaeb92425938ca555f5b7751370ea5c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49f3677ae1249cf62a31119cfcd8d1d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49f3677ae1249cf62a31119cfcd8d1d2"></a>
-typedef Lagrange&lt; Order, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_scalar_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a>&lt; <a class="el" href="structFeel_1_1Order.html">Order</a>, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_scalar_type</b></td></tr>
 <tr class="separator:a49f3677ae1249cf62a31119cfcd8d1d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62e1ccb69f20419284f51701e3cae920"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62e1ccb69f20419284f51701e3cae920"></a>
-typedef bases<br class="typebreak"/>
-&lt; basis_scalar_type, <br class="typebreak"/>
-basis_scalar_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_type</b></td></tr>
+typedef <a class="el" href="structFeel_1_1bases.html">bases</a><br class="typebreak"/>
+&lt; <a class="el" href="classFeel_1_1Lagrange.html">basis_scalar_type</a>, <br class="typebreak"/>
+<a class="el" href="classFeel_1_1Lagrange.html">basis_scalar_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_type</b></td></tr>
 <tr class="separator:a62e1ccb69f20419284f51701e3cae920"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdd8f92107098fd4897a30c2acd131c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdd8f92107098fd4897a30c2acd131c5"></a>
 typedef element_type::template <br class="typebreak"/>
@@ -155,10 +155,10 @@ typedef element_type::template <br class="typebreak"/>
 sub_element&lt; 1 &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>element_1_type</b></td></tr>
 <tr class="separator:a87bb9af2878aeefb98b6fa0ce3b79e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8aee229668d612edbf2b1cbc7e365de9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8aee229668d612edbf2b1cbc7e365de9"></a>
-typedef space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">space_type::element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
 <tr class="separator:a8aee229668d612edbf2b1cbc7e365de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade00418bf1e6858db3dbee93e666244d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade00418bf1e6858db3dbee93e666244d"></a>
-typedef Entity&lt; Dim, 1, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entity_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1Entity.html">Entity</a>&lt; Dim, 1, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entity_type</b></td></tr>
 <tr class="separator:ade00418bf1e6858db3dbee93e666244d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6728136a5792a4653cfe0603545d8008"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6728136a5792a4653cfe0603545d8008"></a>
 typedef <a class="el" href="classFeel_1_1Exporter.html">Exporter</a>&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>export_type</b></td></tr>
@@ -168,7 +168,7 @@ typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_ptrtype</b></td></tr>
 <tr class="separator:a514b3c84b927fa2a3435b14c250efdf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6eedb6629389f2d2ba7f9f93ad9de2e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6eedb6629389f2d2ba7f9f93ad9de2e0"></a>
-typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; entity_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; <a class="el" href="classFeel_1_1Entity.html">entity_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_type</b></td></tr>
 <tr class="separator:a6eedb6629389f2d2ba7f9f93ad9de2e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a094620d7091b026f9bd8a8b6713ac3ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a094620d7091b026f9bd8a8b6713ac3ce"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
@@ -176,7 +176,7 @@ typedef boost::shared_ptr<br class="typebreak"/>
 <tr class="separator:a094620d7091b026f9bd8a8b6713ac3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a632cf05e95266b0970554f41e2a7b04c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a632cf05e95266b0970554f41e2a7b04c"></a>
 typedef <a class="el" href="classFeel_1_1FunctionSpace.html">FunctionSpace</a><br class="typebreak"/>
-&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a>, basis_type, <br class="typebreak"/>
+&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a>, <a class="el" href="structFeel_1_1bases.html">basis_type</a>, <br class="typebreak"/>
 value_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>space_type</b></td></tr>
 <tr class="separator:a632cf05e95266b0970554f41e2a7b04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52e24bdbe4e525eb9c5edb8d3706b948"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52e24bdbe4e525eb9c5edb8d3706b948"></a>
@@ -293,9 +293,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Application</b> (
 <tr class="separator:a31a8b2dd7a1a10d4b9f8aefb7a5bfe72 inherit pub_methods_classFeel_1_1Application"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeeeb89c0d1a125390b09101b1c6206e2 inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Application.html">Application</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#aeeeb89c0d1a125390b09101b1c6206e2">changeRepository</a> (boost::format)</td></tr>
 <tr class="separator:aeeeb89c0d1a125390b09101b1c6206e2 inherit pub_methods_classFeel_1_1Application"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a484237215f8368e8eb62c1d0ef6b4f41 inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">WorldComm &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a484237215f8368e8eb62c1d0ef6b4f41">comm</a> ()</td></tr>
+<tr class="memitem:a484237215f8368e8eb62c1d0ef6b4f41 inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a484237215f8368e8eb62c1d0ef6b4f41">comm</a> ()</td></tr>
 <tr class="separator:a484237215f8368e8eb62c1d0ef6b4f41 inherit pub_methods_classFeel_1_1Application"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f7a3bdb1144262aa99760c856111c18 inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">WorldComm const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a2f7a3bdb1144262aa99760c856111c18">comm</a> () const </td></tr>
+<tr class="memitem:a2f7a3bdb1144262aa99760c856111c18 inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a2f7a3bdb1144262aa99760c856111c18">comm</a> () const </td></tr>
 <tr class="separator:a2f7a3bdb1144262aa99760c856111c18 inherit pub_methods_classFeel_1_1Application"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66069d9fcb67b26127ec12fb2b7d23ea inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a66069d9fcb67b26127ec12fb2b7d23ea">barrier</a> ()</td></tr>
 <tr class="separator:a66069d9fcb67b26127ec12fb2b7d23ea inherit pub_methods_classFeel_1_1Application"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -318,7 +318,7 @@ Static Public Attributes</h2></td></tr>
 static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>Dim</b> =2</td></tr>
 <tr class="separator:a4ba4398abbf34e4e41fded4b161faa31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1eb84f5fd7bbac7ed3def9a16c13fcc6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1eb84f5fd7bbac7ed3def9a16c13fcc6"></a>
-static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>imOrder</b> = 4*Order</td></tr>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>imOrder</b> = 4*<a class="el" href="structFeel_1_1Order.html">Order</a></td></tr>
 <tr class="separator:a1eb84f5fd7bbac7ed3def9a16c13fcc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -381,7 +381,7 @@ template&lt;int Order, template&lt; uint16_type, uint16_type, uint16_type &gt; c
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1Elaxi.html">Feel::Elaxi</a>&lt; Order, Entity &gt;::run </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1Elaxi.html">Feel::Elaxi</a>&lt; <a class="el" href="structFeel_1_1Order.html">Order</a>, <a class="el" href="classFeel_1_1Entity.html">Entity</a> &gt;::run </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -407,7 +407,7 @@ template&lt;int Order, template&lt; uint16_type, uint16_type, uint16_type &gt; c
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:59:01 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:32:09 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

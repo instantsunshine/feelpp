@@ -131,7 +131,7 @@ typedef mpl::if_<br class="typebreak"/>
 &lt; mpl::equal_to&lt; mpl::int_<br class="typebreak"/>
 &lt; PDim &gt;, mpl::int_&lt; NDim &gt;<br class="typebreak"/>
  &gt;, mpl::identity&lt; <a class="el" href="classFeel_1_1GeoMap.html">GeoMap</a>&lt; Dim, <br class="typebreak"/>
-Order, NDim, T, Entity, PP &gt;<br class="typebreak"/>
+<a class="el" href="structFeel_1_1Order.html">Order</a>, NDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;<br class="typebreak"/>
  &gt;, typename mpl::if_<br class="typebreak"/>
 &lt; mpl::and_<br class="typebreak"/>
 &lt; mpl::greater_equal<br class="typebreak"/>
@@ -139,8 +139,8 @@ Order, NDim, T, Entity, PP &gt;<br class="typebreak"/>
 &lt; 1 &gt; &gt;, mpl::equal_to<br class="typebreak"/>
 &lt; mpl::int_&lt; PDim &gt;, mpl::int_<br class="typebreak"/>
 &lt; NDim-1 &gt; &gt; &gt;, mpl::identity<br class="typebreak"/>
-&lt; typename <a class="el" href="classFeel_1_1GeoMap.html">GeoMap</a>&lt; NDim, Order, <br class="typebreak"/>
-NDim, T, Entity, PP &gt;<br class="typebreak"/>
+&lt; typename <a class="el" href="classFeel_1_1GeoMap.html">GeoMap</a>&lt; NDim, <a class="el" href="structFeel_1_1Order.html">Order</a>, <br class="typebreak"/>
+NDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;<br class="typebreak"/>
 ::face_gm_type &gt;, typename <br class="typebreak"/>
 mpl::if_&lt; mpl::and_<br class="typebreak"/>
 &lt; mpl::equal_to&lt; mpl::int_<br class="typebreak"/>
@@ -148,8 +148,8 @@ mpl::if_&lt; mpl::and_<br class="typebreak"/>
 &lt; 3 &gt; &gt;, mpl::equal_to<br class="typebreak"/>
 &lt; mpl::int_&lt; PDim &gt;, mpl::int_<br class="typebreak"/>
 &lt; NDim-2 &gt; &gt; &gt;, mpl::identity<br class="typebreak"/>
-&lt; typename <a class="el" href="classFeel_1_1GeoMap.html">GeoMap</a>&lt; NDim, Order, <br class="typebreak"/>
-NDim, T, Entity, PP &gt;<br class="typebreak"/>
+&lt; typename <a class="el" href="classFeel_1_1GeoMap.html">GeoMap</a>&lt; NDim, <a class="el" href="structFeel_1_1Order.html">Order</a>, <br class="typebreak"/>
+NDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;<br class="typebreak"/>
 ::edge_gm_type &gt;<br class="typebreak"/>
 , mpl::identity&lt; boost::none_t &gt;<br class="typebreak"/>
  &gt;::type &gt;::type &gt;::type::type&#160;</td><td class="memItemRight" valign="bottom"><b>gm_type</b></td></tr>
@@ -392,7 +392,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">matrix_type const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::B </td>
+          <td class="memname">matrix_type const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::B </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>i</em>)</td><td></td>
@@ -428,7 +428,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::multi_array&lt;value_type,4&gt; const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::B3 </td>
+          <td class="memname">boost::multi_array&lt;value_type,4&gt; const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::B3 </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -457,7 +457,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">node_t_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::barycenterReal </td>
+          <td class="memname">node_t_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::barycenterReal </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -485,7 +485,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">node_t_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::barycenterRef </td>
+          <td class="memname">node_t_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::barycenterRef </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -513,7 +513,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">gmc_ptrtype <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::clone </td>
+          <td class="memname">gmc_ptrtype <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::clone </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -541,7 +541,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">element_type const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::element </td>
+          <td class="memname">element_type const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::element </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -569,7 +569,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::elementIsAFace </td>
+          <td class="memname">bool <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::elementIsAFace </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -599,7 +599,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">matrix_type const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::G </td>
+          <td class="memname">matrix_type const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::G </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -627,7 +627,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">gm_ptrtype const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::geometricMapping </td>
+          <td class="memname">gm_ptrtype const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::geometricMapping </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -655,7 +655,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">value_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::h </td>
+          <td class="memname">value_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::h </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -683,7 +683,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">value_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::hFace </td>
+          <td class="memname">value_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::hFace </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -712,7 +712,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::id </td>
+          <td class="memname"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::id </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -741,7 +741,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::id1 </td>
+          <td class="memname"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::id1 </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -770,7 +770,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::id2 </td>
+          <td class="memname"><a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::id2 </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -799,7 +799,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::idIn1 </td>
+          <td class="memname">uint16_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::idIn1 </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -828,7 +828,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::idIn2 </td>
+          <td class="memname">uint16_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::idIn2 </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -857,7 +857,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::isOnConvexSurface </td>
+          <td class="memname">bool <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::isOnConvexSurface </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -888,7 +888,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">value_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::J </td>
+          <td class="memname">value_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::J </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>q</em>)</td><td></td>
@@ -924,7 +924,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Marker1 <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::marker </td>
+          <td class="memname">Marker1 <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::marker </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -953,7 +953,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Marker2 <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::marker2 </td>
+          <td class="memname">Marker2 <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::marker2 </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -982,7 +982,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Marker2 <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::marker3 </td>
+          <td class="memname">Marker2 <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::marker3 </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -1011,7 +1011,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::N </td>
+          <td class="memname">uint16_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::N </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -1039,7 +1039,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">node_t_type const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::normal </td>
+          <td class="memname">node_t_type const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::normal </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -1068,7 +1068,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ublas::matrix_column&lt;matrix_node_t_type const&gt; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::normal </td>
+          <td class="memname">ublas::matrix_column&lt;matrix_node_t_type const&gt; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::normal </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>q</em>)</td><td></td>
@@ -1104,7 +1104,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">value_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::normalNorm </td>
+          <td class="memname">value_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::normalNorm </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>q</em>)</td><td></td>
@@ -1134,7 +1134,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::P </td>
+          <td class="memname">uint16_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::P </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -1162,7 +1162,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">precompute_ptrtype const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::pc </td>
+          <td class="memname">precompute_ptrtype const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::pc </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -1190,7 +1190,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::map&lt;permutation_type, precompute_ptrtype&gt; &gt; const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::pcFaces </td>
+          <td class="memname">std::vector&lt;std::map&lt;permutation_type, precompute_ptrtype&gt; &gt; const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::pcFaces </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -1218,7 +1218,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">permutation_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::permutation </td>
+          <td class="memname">permutation_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::permutation </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -1246,7 +1246,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">value_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::radiusEstimate </td>
+          <td class="memname">value_type <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::radiusEstimate </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -1275,7 +1275,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::setPc </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::setPc </td>
           <td>(</td>
           <td class="paramtype">precompute_ptrtype const &amp;&#160;</td>
           <td class="paramname"><em>__pc</em>)</td><td></td>
@@ -1304,7 +1304,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">node_t_type const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::unitNormal </td>
+          <td class="memname">node_t_type const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::unitNormal </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -1333,7 +1333,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::update </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::update </td>
           <td>(</td>
           <td class="paramtype">element_type const &amp;&#160;</td>
           <td class="paramname"><em>__e</em>, </td>
@@ -1378,7 +1378,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::update </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::update </td>
           <td>(</td>
           <td class="paramtype">element_type const &amp;&#160;</td>
           <td class="paramname"><em>__e</em>)</td><td></td>
@@ -1415,7 +1415,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">matrix_type const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::xReal </td>
+          <td class="memname">matrix_type const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::xReal </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -1443,7 +1443,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ublas::matrix_column&lt;matrix_type const&gt; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::xReal </td>
+          <td class="memname">ublas::matrix_column&lt;matrix_type const&gt; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::xReal </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>q</em>)</td><td></td>
@@ -1472,7 +1472,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ublas::matrix_column&lt;matrix_node_t_type const&gt; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::xRef </td>
+          <td class="memname">ublas::matrix_column&lt;matrix_node_t_type const&gt; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::xRef </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>q</em>)</td><td></td>
@@ -1501,7 +1501,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">matrix_node_t_type const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, Order, RealDim, T, Entity, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::xRefs </td>
+          <td class="memname">matrix_node_t_type const&amp; <a class="el" href="classFeel_1_1GeoMap.html">Feel::GeoMap</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, RealDim, T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, PP &gt;::<a class="el" href="classFeel_1_1GeoMap_1_1Context.html">Context</a>&lt; context_v, ElementType &gt;::xRefs </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -1523,7 +1523,7 @@ template&lt;size_type context_v, typename ElementType &gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:59:03 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:32:12 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
