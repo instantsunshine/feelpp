@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -101,6 +101,7 @@ $(document).ready(function(){initNavTree('classFeel_1_1CRBModel.html','');});
 <div class="header">
   <div class="summary">
 <a href="classFeel_1_1CRBModel-members.html">List of all members</a> &#124;
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::CRBModel&lt; ModelType &gt; Class Template Reference</div>  </div>
@@ -123,9 +124,22 @@ class Feel::CRBModel&lt; ModelType &gt;</h3>
 <p>The FEM model type should derive from this class and fill the vector of matrices M_Aq and vector of vectors M_Fq</p>
 <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd>crb </dd></dl>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Feel::CRBModel&lt; ModelType &gt;:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
-<p>Inherits enable_shared_from_this&lt; CRBModel&lt; ModelType &gt; &gt;.</p>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+ <div class="center">
+  <img src="classFeel_1_1CRBModel.png" usemap="#Feel::CRBModel&lt; ModelType &gt;_map" alt=""/>
+  <map id="Feel::CRBModel&lt; ModelType &gt;_map" name="Feel::CRBModel&lt; ModelType &gt;_map">
+</map>
+ </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1CRBModel_1_1ComputeNormL2InCompositeCase.html">ComputeNormL2InCompositeCase</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors, destructor</div></td></tr>
@@ -189,6 +203,10 @@ sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>h1</
 functionspace_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#aa2e4ed155f7c3e3bef638b4cd1d1c4af">functionSpace</a> () const </td></tr>
 <tr class="memdesc:aa2e4ed155f7c3e3bef638b4cd1d1c4af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the function space. <br/></td></tr>
 <tr class="separator:aa2e4ed155f7c3e3bef638b4cd1d1c4af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2a1b479d64949e4fa67dafb602d6c0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2a1b479d64949e4fa67dafb602d6c0f"></a>
+rbfunctionspace_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#af2a1b479d64949e4fa67dafb602d6c0f">rBFunctionSpace</a> () const </td></tr>
+<tr class="memdesc:af2a1b479d64949e4fa67dafb602d6c0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the reduced basis function space. <br/></td></tr>
+<tr class="separator:af2a1b479d64949e4fa67dafb602d6c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7840e771719851b557f7b3c4de018e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7840e771719851b557f7b3c4de018e0"></a>
 <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#ae7840e771719851b557f7b3c4de018e0">Qa</a> () const </td></tr>
 <tr class="memdesc:ae7840e771719851b557f7b3c4de018e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the number of <img class="formulaInl" alt="$\mu$" src="form_67.png"/> independent terms for the bilinear form <br/></td></tr>
@@ -556,6 +574,15 @@ model_type::functionspace_type&#160;</td><td class="memItemRight" valign="bottom
 typedef <br class="typebreak"/>
 model_type::functionspace_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>functionspace_ptrtype</b></td></tr>
 <tr class="separator:a67fd4c46b6c35bc369e3e2de22fc1361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af17f84e843b4a249f020bd5df6372bce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af17f84e843b4a249f020bd5df6372bce"></a>
+typedef <br class="typebreak"/>
+model_type::rbfunctionspace_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#af17f84e843b4a249f020bd5df6372bce">rbfunctionspace_type</a></td></tr>
+<tr class="memdesc:af17f84e843b4a249f020bd5df6372bce"><td class="mdescLeft">&#160;</td><td class="mdescRight">reduced basis function space type <br/></td></tr>
+<tr class="separator:af17f84e843b4a249f020bd5df6372bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcd2ba993975643c2789f36991f8f1d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcd2ba993975643c2789f36991f8f1d6"></a>
+typedef <br class="typebreak"/>
+model_type::rbfunctionspace_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>rbfunctionspace_ptrtype</b></td></tr>
+<tr class="separator:afcd2ba993975643c2789f36991f8f1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a32d976cdcfb1585f71243e7b618ddc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a32d976cdcfb1585f71243e7b618ddc"></a>
 typedef model_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBModel.html#a9a32d976cdcfb1585f71243e7b618ddc">element_type</a></td></tr>
 <tr class="memdesc:a9a32d976cdcfb1585f71243e7b618ddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">element of the functionspace type <br/></td></tr>
@@ -648,21 +675,21 @@ typedef boost::shared_ptr<br class="typebreak"/>
 <tr class="separator:a54d03c5cc11323c18aca0e301c053a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dbe10b798a4d317d7fa2e033b04e8a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7dbe10b798a4d317d7fa2e033b04e8a9"></a>
 typedef <br class="typebreak"/>
-OperatorLinearComposite<br class="typebreak"/>
+<a class="el" href="classFeel_1_1OperatorLinearComposite.html">OperatorLinearComposite</a><br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1CRBModel.html#abfd06e583290cfaeda5ea14a49065468">space_type</a>, <a class="el" href="classFeel_1_1CRBModel.html#abfd06e583290cfaeda5ea14a49065468">space_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operatorcomposite_type</b></td></tr>
 <tr class="separator:a7dbe10b798a4d317d7fa2e033b04e8a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff1bc359037b77fa7d5cb107f03c034d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff1bc359037b77fa7d5cb107f03c034d"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
-&lt; operatorcomposite_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operatorcomposite_ptrtype</b></td></tr>
+&lt; <a class="el" href="classFeel_1_1OperatorLinearComposite.html">operatorcomposite_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operatorcomposite_ptrtype</b></td></tr>
 <tr class="separator:aff1bc359037b77fa7d5cb107f03c034d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec56b5c11708dc3c14f744a0882057c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec56b5c11708dc3c14f744a0882057c9"></a>
 typedef <br class="typebreak"/>
-FsFunctionalLinearComposite<br class="typebreak"/>
+<a class="el" href="classFeel_1_1FsFunctionalLinearComposite.html">FsFunctionalLinearComposite</a><br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1CRBModel.html#abfd06e583290cfaeda5ea14a49065468">space_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>functionalcomposite_type</b></td></tr>
 <tr class="separator:aec56b5c11708dc3c14f744a0882057c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4027a8f771182c4abac6e6693ae6992"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4027a8f771182c4abac6e6693ae6992"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
-&lt; functionalcomposite_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>functionalcomposite_ptrtype</b></td></tr>
+&lt; <a class="el" href="classFeel_1_1FsFunctionalLinearComposite.html">functionalcomposite_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>functionalcomposite_ptrtype</b></td></tr>
 <tr class="separator:ab4027a8f771182c4abac6e6693ae6992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a016bd01d6e7694b4b612d82108ac5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a016bd01d6e7694b4b612d82108ac5c"></a>
 typedef <a class="el" href="classFeel_1_1Preconditioner.html">Preconditioner</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>preconditioner_type</b></td></tr>
@@ -2074,7 +2101,7 @@ template&lt;typename ModelType&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:55 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:29:30 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

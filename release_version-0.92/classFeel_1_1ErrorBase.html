@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -125,16 +125,16 @@ class Feel::ErrorBase&lt; Dim, Order &gt;</h3>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a98f5856a28980c10554f4e9bb9c7586c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98f5856a28980c10554f4e9bb9c7586c"></a>
-typedef bases&lt; Lagrange&lt; Order, <br class="typebreak"/>
+typedef <a class="el" href="structFeel_1_1bases.html">bases</a>&lt; <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a>&lt; <a class="el" href="structFeel_1_1Order.html">Order</a>, <br class="typebreak"/>
 <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1ErrorBase.html#a98f5856a28980c10554f4e9bb9c7586c">basis_type</a></td></tr>
 <tr class="memdesc:a98f5856a28980c10554f4e9bb9c7586c"><td class="mdescLeft">&#160;</td><td class="mdescRight">the basis type of our approximation space <br/></td></tr>
 <tr class="separator:a98f5856a28980c10554f4e9bb9c7586c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abeda7ced5e5a44477be9a40125dbb7f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abeda7ced5e5a44477be9a40125dbb7f1"></a>
 typedef <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1ErrorBase.html#abeda7ced5e5a44477be9a40125dbb7f1">convex_type</a></td></tr>
-<tr class="memdesc:abeda7ced5e5a44477be9a40125dbb7f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">geometry entities type composing the mesh, here <a class="el" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex</a> in Dimension Dim of Order 1 <br/></td></tr>
+<tr class="memdesc:abeda7ced5e5a44477be9a40125dbb7f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">geometry entities type composing the mesh, here <a class="el" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex</a> in Dimension Dim of <a class="el" href="structFeel_1_1Order.html">Order</a> 1 <br/></td></tr>
 <tr class="separator:abeda7ced5e5a44477be9a40125dbb7f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fa8ce83173f335ec83d97155d7d48cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7fa8ce83173f335ec83d97155d7d48cf"></a>
-typedef space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1ErrorBase.html#a7fa8ce83173f335ec83d97155d7d48cf">element_type</a></td></tr>
+typedef <a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">space_type::element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1ErrorBase.html#a7fa8ce83173f335ec83d97155d7d48cf">element_type</a></td></tr>
 <tr class="memdesc:a7fa8ce83173f335ec83d97155d7d48cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">an element type of the approximation function space <br/></td></tr>
 <tr class="separator:a7fa8ce83173f335ec83d97155d7d48cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc4806e6b9ecee36524ca1014d8a6a71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc4806e6b9ecee36524ca1014d8a6a71"></a>
@@ -335,7 +335,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, Order &gt;::computedrhs </td>
+          <td class="memname">bool <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::computedrhs </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -361,7 +361,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, Order &gt;::convergence </td>
+          <td class="memname">bool <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::convergence </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -387,7 +387,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, Order &gt;::getExactRhs </td>
+          <td class="memname">std::string <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::getExactRhs </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -413,7 +413,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, Order &gt;::getExactSolution </td>
+          <td class="memname">std::string <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::getExactSolution </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -439,7 +439,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;symbol&gt; <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, Order &gt;::getParams </td>
+          <td class="memname">std::vector&lt;symbol&gt; <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::getParams </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -465,7 +465,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ex <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, Order &gt;::getRhs </td>
+          <td class="memname">ex <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::getRhs </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -491,7 +491,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ex <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, Order &gt;::getRhs </td>
+          <td class="memname">ex <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::getRhs </td>
           <td>(</td>
           <td class="paramtype">const double &amp;&#160;</td>
           <td class="paramname"><em>value</em>)</td><td></td>
@@ -518,7 +518,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ex <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, Order &gt;::getRhs </td>
+          <td class="memname">ex <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::getRhs </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>values</em>)</td><td></td>
@@ -545,7 +545,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ex <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, Order &gt;::getSolution </td>
+          <td class="memname">ex <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::getSolution </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -571,7 +571,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ex <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, Order &gt;::getSolution </td>
+          <td class="memname">ex <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::getSolution </td>
           <td>(</td>
           <td class="paramtype">const double &amp;&#160;</td>
           <td class="paramname"><em>value</em>)</td><td></td>
@@ -598,7 +598,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ex <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, Order &gt;::getSolution </td>
+          <td class="memname">ex <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::getSolution </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>values</em>)</td><td></td>
@@ -625,7 +625,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;symbol&gt; <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, Order &gt;::getVars </td>
+          <td class="memname">std::vector&lt;symbol&gt; <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::getVars </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -651,7 +651,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, Order &gt;::numberOfConvergenceSteps </td>
+          <td class="memname">int <a class="el" href="classFeel_1_1ErrorBase.html">Feel::ErrorBase</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::numberOfConvergenceSteps </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -673,7 +673,7 @@ template&lt;int Dim, int Order&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:56 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:29:32 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

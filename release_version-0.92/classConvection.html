@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -142,54 +142,54 @@ typedef boost::shared_ptr<br class="typebreak"/>
 typedef <a class="el" href="classFeel_1_1Backend.html">Backend</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>backend_type</b></td></tr>
 <tr class="separator:a74fa906d0170601219c7017e937fd6cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53640a662a46ad64646a86cdf23ae359"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53640a662a46ad64646a86cdf23ae359"></a>
-typedef Lagrange&lt; Order_p, <br class="typebreak"/>
+typedef <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a>&lt; Order_p, <br class="typebreak"/>
 <a class="el" href="structFeel_1_1Scalar.html">Scalar</a>, <a class="el" href="classFeel_1_1Continuous.html">Continuous</a>, <br class="typebreak"/>
 <a class="el" href="classFeel_1_1PointSetFekete.html">PointSetFekete</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_p_type</b></td></tr>
 <tr class="separator:a53640a662a46ad64646a86cdf23ae359"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9b8adc7227f34f078341b3bfa2e8e08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9b8adc7227f34f078341b3bfa2e8e08"></a>
-typedef Lagrange&lt; Order_t, <br class="typebreak"/>
+typedef <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a>&lt; Order_t, <br class="typebreak"/>
 <a class="el" href="structFeel_1_1Scalar.html">Scalar</a>, <a class="el" href="classFeel_1_1Continuous.html">Continuous</a>, <br class="typebreak"/>
 <a class="el" href="classFeel_1_1PointSetFekete.html">PointSetFekete</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_t_type</b></td></tr>
 <tr class="separator:ab9b8adc7227f34f078341b3bfa2e8e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12f2cf973ed4eece5ab4f4bd8a20defc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12f2cf973ed4eece5ab4f4bd8a20defc"></a>
-typedef bases&lt; basis_u_type, <br class="typebreak"/>
-basis_p_type, basis_t_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_type</b></td></tr>
+typedef <a class="el" href="structFeel_1_1bases.html">bases</a>&lt; <a class="el" href="classFeel_1_1Lagrange.html">basis_u_type</a>, <br class="typebreak"/>
+<a class="el" href="classFeel_1_1Lagrange.html">basis_p_type</a>, <a class="el" href="classFeel_1_1Lagrange.html">basis_t_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_type</b></td></tr>
 <tr class="separator:a12f2cf973ed4eece5ab4f4bd8a20defc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7db7931d9caef384aa98d0327a54b2d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7db7931d9caef384aa98d0327a54b2d2"></a>
-typedef Lagrange&lt; Order_s, <br class="typebreak"/>
+typedef <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a>&lt; Order_s, <br class="typebreak"/>
 <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a>, <a class="el" href="classFeel_1_1Continuous.html">Continuous</a>, <br class="typebreak"/>
 <a class="el" href="classFeel_1_1PointSetFekete.html">PointSetFekete</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_u_type</b></td></tr>
 <tr class="separator:a7db7931d9caef384aa98d0327a54b2d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2338160d97a0bfb01783efffcfb8a6fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2338160d97a0bfb01783efffcfb8a6fd"></a>
 typedef <br class="typebreak"/>
-element_type::sub_element<br class="typebreak"/>
+<a class="el" href="structFeel_1_1FunctionSpace_1_1Element_1_1sub__element.html">element_type::sub_element</a><br class="typebreak"/>
 &lt; 0 &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>element_0_type</b></td></tr>
 <tr class="separator:a2338160d97a0bfb01783efffcfb8a6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8fb81df485f3d97a33c60d409cda679"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8fb81df485f3d97a33c60d409cda679"></a>
 typedef <br class="typebreak"/>
-element_type::sub_element<br class="typebreak"/>
+<a class="el" href="structFeel_1_1FunctionSpace_1_1Element_1_1sub__element.html">element_type::sub_element</a><br class="typebreak"/>
 &lt; 1 &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>element_1_type</b></td></tr>
 <tr class="separator:aa8fb81df485f3d97a33c60d409cda679"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a004dadc1696659af2de3d813aa19424e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a004dadc1696659af2de3d813aa19424e"></a>
 typedef <br class="typebreak"/>
-element_type::sub_element<br class="typebreak"/>
+<a class="el" href="structFeel_1_1FunctionSpace_1_1Element_1_1sub__element.html">element_type::sub_element</a><br class="typebreak"/>
 &lt; 2 &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>element_2_type</b></td></tr>
 <tr class="separator:a004dadc1696659af2de3d813aa19424e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49c77a380ace50637f4e567ab7f4a2a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49c77a380ace50637f4e567ab7f4a2a8"></a>
-typedef space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">space_type::element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
 <tr class="separator:a49c77a380ace50637f4e567ab7f4a2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab96698bfedb0cb2a6d1a0493f45611cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab96698bfedb0cb2a6d1a0493f45611cb"></a>
-typedef <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; CONVECTION_DIM &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entity_type</b></td></tr>
-<tr class="separator:ab96698bfedb0cb2a6d1a0493f45611cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5995546cc55e8be2acd739ab4a152172"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5995546cc55e8be2acd739ab4a152172"></a>
+typedef <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entity_type</b></td></tr>
+<tr class="separator:a5995546cc55e8be2acd739ab4a152172"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8133c041ca7b5141fa42967d3f382314"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8133c041ca7b5141fa42967d3f382314"></a>
 typedef <a class="el" href="classFeel_1_1Exporter.html">Exporter</a>&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>export_type</b></td></tr>
 <tr class="separator:a8133c041ca7b5141fa42967d3f382314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29d9a20084a289df3340d4d3eb087379"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29d9a20084a289df3340d4d3eb087379"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
-&lt; funlin_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>funlin_ptrtype</b></td></tr>
+&lt; <a class="el" href="classFeel_1_1FsFunctionalLinear.html">funlin_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>funlin_ptrtype</b></td></tr>
 <tr class="separator:a29d9a20084a289df3340d4d3eb087379"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eac8a9775cb4b502bf9bf0775c728c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5eac8a9775cb4b502bf9bf0775c728c7"></a>
-typedef FsFunctionalLinear<br class="typebreak"/>
+typedef <a class="el" href="classFeel_1_1FsFunctionalLinear.html">FsFunctionalLinear</a><br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1FunctionSpace.html">space_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>funlin_type</b></td></tr>
 <tr class="separator:a5eac8a9775cb4b502bf9bf0775c728c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7ec59aec968a9ca7dbb713d4a77bfd6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7ec59aec968a9ca7dbb713d4a77bfd6"></a>
@@ -216,7 +216,7 @@ typedef boost::shared_ptr<br class="typebreak"/>
 <tr class="separator:a96c2ea987a8da4098779ed48799a9a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d14fb8ffb8bc88529ca198d9380833d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d14fb8ffb8bc88529ca198d9380833d"></a>
 typedef <a class="el" href="classFeel_1_1FunctionSpace.html">FunctionSpace</a><br class="typebreak"/>
-&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a>, basis_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>space_type</b></td></tr>
+&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a>, <a class="el" href="structFeel_1_1bases.html">basis_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>space_type</b></td></tr>
 <tr class="separator:a6d14fb8ffb8bc88529ca198d9380833d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab0a61e47723cc95de0e031bf94f310b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab0a61e47723cc95de0e031bf94f310b"></a>
 typedef <br class="typebreak"/>
@@ -224,7 +224,7 @@ backend_type::sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="b
 <tr class="separator:aab0a61e47723cc95de0e031bf94f310b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22482ba25274082ee76f45db8da88c55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22482ba25274082ee76f45db8da88c55"></a>
 typedef <a class="el" href="classFeel_1_1FunctionSpace.html">FunctionSpace</a><br class="typebreak"/>
-&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a>, basis_t_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>t_space_type</b></td></tr>
+&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a>, <a class="el" href="classFeel_1_1Lagrange.html">basis_t_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>t_space_type</b></td></tr>
 <tr class="separator:a22482ba25274082ee76f45db8da88c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad26611495619bdd5ab3632963690640f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad26611495619bdd5ab3632963690640f"></a>
 typedef double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvection.html#ad26611495619bdd5ab3632963690640f">value_type</a></td></tr>
@@ -270,15 +270,15 @@ Public Member Functions</h2></td></tr>
 Feel::gmsh_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>createMesh</b> ()</td></tr>
 <tr class="separator:abd70fcdfb54b321b8399e63e77bcdf23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97dabcbed16c7cfcbe35bc442da02ffd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97dabcbed16c7cfcbe35bc442da02ffd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>exportResults</b> (boost::format, element_type &amp;U, double t)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>exportResults</b> (boost::format, <a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a> &amp;U, double t)</td></tr>
 <tr class="separator:a97dabcbed16c7cfcbe35bc442da02ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c9c88ef6ab886af253a53cf98a3fec5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c9c88ef6ab886af253a53cf98a3fec5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>exportResults</b> (element_type &amp;U, int i)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>exportResults</b> (<a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a> &amp;U, int i)</td></tr>
 <tr class="separator:a9c9c88ef6ab886af253a53cf98a3fec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab85307576cd08947310013cf75c7ec3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvection.html#ab85307576cd08947310013cf75c7ec3f">run</a> ()</td></tr>
 <tr class="separator:ab85307576cd08947310013cf75c7ec3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3214bf197663277a9d1dd859aba551d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3214bf197663277a9d1dd859aba551d9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>solve</b> (sparse_matrix_ptrtype &amp;D, element_type &amp;u, vector_ptrtype &amp;F)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>solve</b> (sparse_matrix_ptrtype &amp;D, <a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a> &amp;u, vector_ptrtype &amp;F)</td></tr>
 <tr class="separator:a3214bf197663277a9d1dd859aba551d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12709ef7734fee7de52be61acc7fc3cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12709ef7734fee7de52be61acc7fc3cc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateJacobian</b> (const vector_ptrtype &amp;X, sparse_matrix_ptrtype &amp;J)</td></tr>
@@ -330,9 +330,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Application</b> (
 <tr class="separator:a1ddd780ce8d1a26de1b9ce9bbb58c36b inherit pub_methods_classFeel_1_1Application"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeeeb89c0d1a125390b09101b1c6206e2 inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Application.html">Application</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#aeeeb89c0d1a125390b09101b1c6206e2">changeRepository</a> (boost::format)</td></tr>
 <tr class="separator:aeeeb89c0d1a125390b09101b1c6206e2 inherit pub_methods_classFeel_1_1Application"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a484237215f8368e8eb62c1d0ef6b4f41 inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">WorldComm &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a484237215f8368e8eb62c1d0ef6b4f41">comm</a> ()</td></tr>
+<tr class="memitem:a484237215f8368e8eb62c1d0ef6b4f41 inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a484237215f8368e8eb62c1d0ef6b4f41">comm</a> ()</td></tr>
 <tr class="separator:a484237215f8368e8eb62c1d0ef6b4f41 inherit pub_methods_classFeel_1_1Application"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f7a3bdb1144262aa99760c856111c18 inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">WorldComm const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a2f7a3bdb1144262aa99760c856111c18">comm</a> () const </td></tr>
+<tr class="memitem:a2f7a3bdb1144262aa99760c856111c18 inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a2f7a3bdb1144262aa99760c856111c18">comm</a> () const </td></tr>
 <tr class="separator:a2f7a3bdb1144262aa99760c856111c18 inherit pub_methods_classFeel_1_1Application"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66069d9fcb67b26127ec12fb2b7d23ea inherit pub_methods_classFeel_1_1Application"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Application.html#a66069d9fcb67b26127ec12fb2b7d23ea">barrier</a> ()</td></tr>
 <tr class="separator:a66069d9fcb67b26127ec12fb2b7d23ea inherit pub_methods_classFeel_1_1Application"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -380,13 +380,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Application</b> (
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:aa51bc35b2c24651162a7e6233e6e6b7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa51bc35b2c24651162a7e6233e6e6b7e"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Order_p</b> = CONVECTION_ORDER_P</td></tr>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Order_p</b> = 1</td></tr>
 <tr class="separator:aa51bc35b2c24651162a7e6233e6e6b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3d44a9500e7225dfb6d0e40b4b85e59"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3d44a9500e7225dfb6d0e40b4b85e59"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Order_s</b> = CONVECTION_ORDER_U</td></tr>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Order_s</b> = 2</td></tr>
 <tr class="separator:ae3d44a9500e7225dfb6d0e40b4b85e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99b21afcf4f4b8be236e61a65235370b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a99b21afcf4f4b8be236e61a65235370b"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Order_t</b> = CONVECTION_ORDER_T</td></tr>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Order_t</b> = 2</td></tr>
 <tr class="separator:a99b21afcf4f4b8be236e61a65235370b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -463,7 +463,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>processGenericOptions
 
 <p>Reimplemented from <a class="el" href="classFeel_1_1Application.html#a0642acdfe3fdb86f2e6b4558c60af1de">Feel::Application</a>.</p>
 
-<p>References <a class="el" href="classFeel_1_1Application.html#ac559fca482047d68e7382ba720592758">Feel::Application::about()</a>, <a class="el" href="namespaceFeel.html#a6d4deea03257c3f53b0e9df514a7bf00">Feel::boundaryfaces()</a>, <a class="el" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">Feel::elements()</a>, <a class="el" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049">Feel::integrate()</a>, <a class="el" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">Feel::markedfaces()</a>, <a class="el" href="classFeel_1_1Exporter.html#ab5184fd78b9c90b74127ab2027808996">Feel::Exporter&lt; MeshType, N &gt;::New()</a>, <a class="el" href="classFeel_1_1FunctionSpace.html#a32db9068214cab3a221c581f1484045a">Feel::FunctionSpace&lt; A0, A1, A2, A3, A4 &gt;::New()</a>, <a class="el" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">Feel::project()</a>, and <a class="el" href="classFeel_1_1Application.html#a6d636004b73027e9dc226d7ec9e9d89c">Feel::Application::vm()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1Application.html#ac559fca482047d68e7382ba720592758">Feel::Application::about()</a>, <a class="el" href="namespaceFeel.html#a6d4deea03257c3f53b0e9df514a7bf00">Feel::boundaryfaces()</a>, <a class="el" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">Feel::elements()</a>, <a class="el" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049">Feel::integrate()</a>, <a class="el" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">Feel::markedfaces()</a>, <a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html#a67b1393d654c484b96f005c00d711ab5">Feel::FunctionSpace&lt; A0, A1, A2, A3, A4 &gt;::Element&lt; T, Cont &gt;::nDof()</a>, <a class="el" href="classFeel_1_1Exporter.html#ab5184fd78b9c90b74127ab2027808996">Feel::Exporter&lt; MeshType, N &gt;::New()</a>, <a class="el" href="classFeel_1_1FunctionSpace.html#a32db9068214cab3a221c581f1484045a">Feel::FunctionSpace&lt; A0, A1, A2, A3, A4 &gt;::New()</a>, <a class="el" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">Feel::project()</a>, and <a class="el" href="classFeel_1_1Application.html#a6d636004b73027e9dc226d7ec9e9d89c">Feel::Application::vm()</a>.</p>
 
 </div>
 </div>
@@ -481,7 +481,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>processGenericOptions
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:54 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:29:17 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -160,7 +160,7 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">template</span>&lt;uint16_type N,</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;         <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type Dim&gt; <span class="keyword">class </span>PolySetType = Scalar,</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;         <span class="keyword">typename</span> T = <span class="keywordtype">double</span>&gt;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">class </span>RannacherTurekPolynomialSet</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="classFeel_1_1fem_1_1detail_1_1RannacherTurekPolynomialSet.html">   63</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1fem_1_1detail_1_1RannacherTurekPolynomialSet.html">RannacherTurekPolynomialSet</a></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    :</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">public</span> MomentPolynomialSet&lt;N, 2, N, PolySetType, T, Hypercube&gt;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
@@ -168,7 +168,7 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">typedef</span> RannacherTurekPolynomialSet&lt;N, PolySetType, T&gt; self_type;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1fem_1_1detail_1_1RannacherTurekPolynomialSet.html">RannacherTurekPolynomialSet&lt;N, PolySetType, T&gt;</a> <a class="code" href="classFeel_1_1fem_1_1detail_1_1RannacherTurekPolynomialSet.html">self_type</a>;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::value_type value_type;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::convex_type convex_type;</div>
@@ -180,7 +180,7 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nComponents = super::nComponents;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> is_product = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    RannacherTurekPolynomialSet()</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classFeel_1_1fem_1_1detail_1_1RannacherTurekPolynomialSet.html">RannacherTurekPolynomialSet</a>()</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        :</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        super()</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
@@ -195,7 +195,7 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="comment">// y</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            this-&gt;insert( m.template pick&lt;PolySetType&gt;( 3, c ).toSet( <span class="keyword">true</span> ) );</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">// x^2 - y^2</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            Polynomial&lt;Moment&lt;2,2,Hypercube&lt;2&gt; &gt;, PolySetType&gt; p( m );</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="classFeel_1_1Polynomial.html" title="polynomial class ">Polynomial&lt;Moment&lt;2,2,Hypercube&lt;2&gt;</a> &gt;, PolySetType&gt; p( m );</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            p = m.template pick&lt;PolySetType&gt;( 2, c );</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            p -= m.template pick&lt;PolySetType&gt;( 6, c );</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="comment">//std::cout &lt;&lt; &quot;x^2-y^2:&quot; &lt;&lt; p.coeff() &lt;&lt; &quot;\n&quot;;</span></div>
@@ -208,11 +208,11 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Basis, <span class="keyword">template</span>&lt;<span class="keyword">class</span>, u<span class="keywordtype">int</span>16_type, <span class="keyword">class</span>&gt; <span class="keyword">class </span>PointSetType&gt;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">class </span>CrouzeixRaviartDual</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="code" href="classFeel_1_1fem_1_1detail_1_1CrouzeixRaviartDual.html">  111</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1fem_1_1detail_1_1CrouzeixRaviartDual.html">CrouzeixRaviartDual</a></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    :</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">public</span> DualBasis&lt;Basis&gt;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">public</span> <a class="code" href="classFeel_1_1DualBasis.html" title="basis of a space P&#39; dual of some space P ">DualBasis</a>&lt;Basis&gt;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">typedef</span> DualBasis&lt;Basis&gt; super;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1DualBasis.html">DualBasis&lt;Basis&gt;</a> <a class="code" href="classFeel_1_1DualBasis.html">super</a>;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = super::nDim;</div>
@@ -223,11 +223,11 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> primal_space_type::points_type points_type;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> primal_space_type::matrix_type matrix_type;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> primal_space_type::template convex&lt;2&gt;::type convex_type;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">typedef</span> Reference&lt;convex_type, nDim, 2, nDim, value_type&gt; reference_convex_type;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Reference.html">Reference&lt;convex_type, nDim, 2, nDim, value_type&gt;</a> <a class="code" href="classFeel_1_1Reference.html">reference_convex_type</a>;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> reference_convex_type::node_type node_type;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">// point set type associated with the functionals</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">typedef</span> PointSet&lt;convex_type, value_type&gt; pointset_type;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1PointSet.html" title="Class of all PointSet on a Convex. ">PointSet&lt;convex_type, value_type&gt;</a> <a class="code" href="classFeel_1_1PointSet.html" title="Class of all PointSet on a Convex. ">pointset_type</a>;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">typedef</span> PointSetType&lt;convex_type, 2, value_type&gt; equispaced_pointset_type;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nVertices = reference_convex_type::numVertices;</div>
@@ -247,15 +247,15 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type numPoints = ( reference_convex_type::numGeometricFaces*nbPtsPerFace+</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                                           reference_convex_type::numEdges*nbPtsPerEdge );</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDofPerVertex = nbPtsPerVertex;</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="code" href="classFeel_1_1fem_1_1detail_1_1CrouzeixRaviartDual.html#addb0b4a9f5a851b981d09c7799667eda">  151</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type <a class="code" href="classFeel_1_1fem_1_1detail_1_1CrouzeixRaviartDual.html#addb0b4a9f5a851b981d09c7799667eda">nDofPerVertex</a> = nbPtsPerVertex;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDofPerEdge = nbPtsPerEdge;</div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="code" href="classFeel_1_1fem_1_1detail_1_1CrouzeixRaviartDual.html#a673adab292a6216f744f3d677a1fff8b">  154</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type <a class="code" href="classFeel_1_1fem_1_1detail_1_1CrouzeixRaviartDual.html#a673adab292a6216f744f3d677a1fff8b">nDofPerEdge</a> = nbPtsPerEdge;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDofPerFace = nbPtsPerFace;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="code" href="classFeel_1_1fem_1_1detail_1_1CrouzeixRaviartDual.html#a7c1b477ed530febd6fca8b3c5b8354cf">  157</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type <a class="code" href="classFeel_1_1fem_1_1detail_1_1CrouzeixRaviartDual.html#a7c1b477ed530febd6fca8b3c5b8354cf">nDofPerFace</a> = nbPtsPerFace;</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDofPerVolume = nbPtsPerVolume;</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="code" href="classFeel_1_1fem_1_1detail_1_1CrouzeixRaviartDual.html#a92fffebd7a75ecf2227b31cc9d563146">  160</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type <a class="code" href="classFeel_1_1fem_1_1detail_1_1CrouzeixRaviartDual.html#a92fffebd7a75ecf2227b31cc9d563146">nDofPerVolume</a> = nbPtsPerVolume;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nLocalDof = numPoints;</div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="code" href="classFeel_1_1fem_1_1detail_1_1CrouzeixRaviartDual.html#a963a4e3f6371a713cd24b03dc0fe9edd">  163</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type <a class="code" href="classFeel_1_1fem_1_1detail_1_1CrouzeixRaviartDual.html#a963a4e3f6371a713cd24b03dc0fe9edd">nLocalDof</a> = numPoints;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nFacesInConvex = mpl::if_&lt; mpl::equal_to&lt;mpl::int_&lt;nDim&gt;, mpl::int_&lt;1&gt; &gt;,</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                             mpl::int_&lt;nVertices&gt;,</div>
@@ -264,9 +264,9 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                             mpl::int_&lt;nFaces&gt; &gt;::type &gt;::type::value;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    CrouzeixRaviartDual( primal_space_type <span class="keyword">const</span>&amp; primal )</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="classFeel_1_1fem_1_1detail_1_1CrouzeixRaviartDual.html">CrouzeixRaviartDual</a>( primal_space_type <span class="keyword">const</span>&amp; primal )</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        :</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        super( primal ),</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <a class="code" href="classFeel_1_1DualBasis.html">super</a>( primal ),</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        M_convex_ref(),</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        M_eid( M_convex_ref.topologicalDimension()+1 ),</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        M_pts( nDim, numPoints ),</div>
@@ -283,7 +283,7 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot; o- nbPtsPerFace   = &quot;</span> &lt;&lt; ( int )nbPtsPerFace &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot; o- nbPtsPerVolume = &quot;</span> &lt;&lt; ( int )nbPtsPerVolume &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor"></span>        equispaced_pointset_type epts;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor"></span>        <a class="code" href="classFeel_1_1PointSetEquiSpaced.html">equispaced_pointset_type</a> epts;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="comment">// in d-dimension, consider only the d-1 entity mid-points</span></div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordtype">int</span> d = M_convex_ref.topologicalDimension()-1;</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordtype">int</span> p = 0;</div>
@@ -305,11 +305,11 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    points_type <span class="keyword">const</span>&amp; <a class="code" href="namespaceFeel.html#a07ec0494dee4ca9a16b866e8c1f4d495">points</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    points_type <span class="keyword">const</span>&amp; points()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">return</span> M_pts;</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    points_type <span class="keyword">const</span>&amp; <a class="code" href="namespaceFeel.html#a07ec0494dee4ca9a16b866e8c1f4d495">points</a>( uint16_type f )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    points_type <span class="keyword">const</span>&amp; points( uint16_type f )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">return</span> M_points_face[f];</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
@@ -323,13 +323,13 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">void</span> setFset( primal_space_type <span class="keyword">const</span>&amp; primal, points_type <span class="keyword">const</span>&amp; __pts, mpl::bool_&lt;true&gt; )</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    {</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        M_fset.setFunctionalSet( functional::PointsEvaluation&lt;primal_space_type&gt;( primal,</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        M_fset.<a class="code" href="classFeel_1_1FunctionalSet.html#a5a52498e1794cd1190978572a924911c">setFunctionalSet</a>( functional::PointsEvaluation&lt;primal_space_type&gt;( primal,</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                                  __pts ) );</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">void</span> setFset( primal_space_type <span class="keyword">const</span>&amp; primal, points_type <span class="keyword">const</span>&amp; __pts, mpl::bool_&lt;false&gt; )</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    {</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        M_fset.setFunctionalSet( functional::ComponentsPointsEvaluation&lt;primal_space_type&gt;( primal,</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        M_fset.<a class="code" href="classFeel_1_1FunctionalSet.html#a5a52498e1794cd1190978572a924911c">setFunctionalSet</a>( functional::ComponentsPointsEvaluation&lt;primal_space_type&gt;( primal,</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                                  __pts ) );</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
@@ -363,8 +363,8 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FiniteElement.html" title="Finite element following Ciarlet framework. ">FiniteElement&lt;typename mpl::if_&lt;mpl::bool_&lt;Convex&lt;N,1,N&gt;::is_simplex</a>&gt;,</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                                            mpl::identity&lt;Feel::detail::OrthonormalPolynomialSet&lt;N, 1, RealDim, PolySetType, T, TheTAG, Convex&gt; &gt;,</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                                            mpl::identity&lt;fem::detail::RannacherTurekPolynomialSet&lt;N, PolySetType, T&gt; &gt; &gt;::type::type,</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                          detail::CrouzeixRaviartDual,</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                          PointSetEquiSpaced &gt; <a class="code" href="classFeel_1_1FiniteElement.html" title="Finite element following Ciarlet framework. ">super</a>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                          <a class="code" href="classFeel_1_1fem_1_1detail_1_1CrouzeixRaviartDual.html">detail::CrouzeixRaviartDual</a>,</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                          <a class="code" href="classFeel_1_1PointSetEquiSpaced.html">PointSetEquiSpaced</a> &gt; <a class="code" href="classFeel_1_1FiniteElement.html" title="Finite element following Ciarlet framework. ">super</a>;</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    BOOST_STATIC_ASSERT( N &gt; 1 );</div>
@@ -418,7 +418,7 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        super( cr ),</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        M_refconvex()</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    {}</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    ~CrouzeixRaviart()</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    ~<a class="code" href="classFeel_1_1CrouzeixRaviart.html">CrouzeixRaviart</a>()</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    {}</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
@@ -477,14 +477,14 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;         <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type Dim&gt; <span class="keyword">class </span>PolySetType = Scalar,</div>
 <div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;         <span class="keyword">template</span>&lt;<span class="keyword">class</span>, u<span class="keywordtype">int</span>16_type, <span class="keyword">class</span>&gt; <span class="keyword">class </span>Pts = PointSetEquiSpaced,</div>
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;         uint16_type TheTAG=0 &gt;</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="keyword">class </span>CrouzeixRaviart</div>
+<div class="line"><a name="l00424"></a><span class="lineno"><a class="code" href="classFeel_1_1CrouzeixRaviart.html">  424</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1CrouzeixRaviart.html">CrouzeixRaviart</a></div>
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;{</div>
 <div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keyword">template</span>&lt;uint16_type N,</div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;             uint16_type RealDim,</div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;             <span class="keyword">typename</span> T = double,</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;             <span class="keyword">typename</span> Convex = Simplex&lt;N&gt; &gt;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keyword">struct </span>apply</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;             <span class="keyword">typename</span> <a class="code" href="classFeel_1_1Convex.html" title="Convex base class. ">Convex</a> = <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex&lt;N&gt;</a> &gt;</div>
+<div class="line"><a name="l00431"></a><span class="lineno"><a class="code" href="structFeel_1_1CrouzeixRaviart_1_1apply.html">  431</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1CrouzeixRaviart_1_1apply.html">apply</a></div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    {</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;mpl::bool_&lt;Convex::is_simplex&gt;,</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                mpl::identity&lt;fem::CrouzeixRaviart&lt;N,RealDim,PolySetType,T,Simplex,TheTAG&gt; &gt;,</div>
@@ -493,23 +493,23 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    };</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type TheNewTAG&gt;</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keyword">struct </span>ChangeTag</div>
+<div class="line"><a name="l00440"></a><span class="lineno"><a class="code" href="structFeel_1_1CrouzeixRaviart_1_1ChangeTag.html">  440</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1CrouzeixRaviart_1_1ChangeTag.html">ChangeTag</a></div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    {</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        <span class="keyword">typedef</span> CrouzeixRaviart&lt;Order,PolySetType,Pts,TheNewTAG&gt; type;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1CrouzeixRaviart.html">CrouzeixRaviart&lt;Order,PolySetType,Pts,TheNewTAG&gt;</a> <a class="code" href="classFeel_1_1CrouzeixRaviart.html">type</a>;</div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    };</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keyword">typedef</span> CrouzeixRaviart&lt;Order,Scalar,Pts&gt; component_basis_type;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1CrouzeixRaviart.html">CrouzeixRaviart&lt;Order,Scalar,Pts&gt;</a> <a class="code" href="classFeel_1_1CrouzeixRaviart.html">component_basis_type</a>;</div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder =  Order;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder =  <a class="code" href="structFeel_1_1Order.html">Order</a>;</div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type TAG = TheTAG;</div>
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;</div>
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;};</div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="keyword">template</span>&lt;uint16_type Order,</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="keyword">template</span>&lt;uint16_type <a class="code" href="structFeel_1_1Order.html">Order</a>,</div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;         <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type Dim&gt; <span class="keyword">class </span>PolySetType,</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;         <span class="keyword">template</span>&lt;<span class="keyword">class</span>, u<span class="keywordtype">int</span>16_type, <span class="keyword">class</span>&gt; <span class="keyword">class </span>Pts,</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;         uint16_type TheTAG &gt;</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="keyword">const</span> uint16_type CrouzeixRaviart&lt;Order,PolySetType,Pts,TheTAG&gt;::nOrder;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="keyword">const</span> uint16_type <a class="code" href="classFeel_1_1CrouzeixRaviart.html">CrouzeixRaviart&lt;Order,PolySetType,Pts,TheTAG&gt;::nOrder</a>;</div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;</div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;} <span class="comment">// Feel</span></div>
@@ -517,7 +517,7 @@ $(document).ready(function(){initNavTree('crouzeixraviart_8hpp_source.html','');
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:25 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:28:36 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

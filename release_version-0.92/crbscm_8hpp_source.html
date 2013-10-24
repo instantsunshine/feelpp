@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -661,7 +661,7 @@ $(document).ready(function(){initNavTree('crbscm_8hpp_source.html','');});
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        mu = M_C-&gt;at( 0 ); <span class="comment">// first element</span></div>
 <div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;        index = index_vector[0];</div>
 <div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;</div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;            std::cout&lt;&lt;<span class="stringliteral">&quot;[CRBSCM::offline] read sampling C ( sampling size : &quot;</span>&lt;&lt;M_iter_max&lt;&lt;<span class="stringliteral">&quot; )&quot;</span>&lt;&lt;std::endl;</div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;    }</div>
 <div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;    <span class="keywordflow">else</span></div>
@@ -694,7 +694,7 @@ $(document).ready(function(){initNavTree('crbscm_8hpp_source.html','');});
 <div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;</div>
 <div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    <span class="keywordflow">while</span> ( relative_error &gt; M_tolerance &amp;&amp; K &lt;= M_iter_max )</div>
 <div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    {</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;        <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        {</div>
 <div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;============================================================\n&quot;</span>;</div>
 <div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;K=&quot;</span> &lt;&lt; K &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -732,7 +732,7 @@ $(document).ready(function(){initNavTree('crbscm_8hpp_source.html','');});
 <div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;        symmMatrix = M_model-&gt;newMatrix();symmMatrix-&gt;close();</div>
 <div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;        Matrix-&gt;symmetricPart( symmMatrix );</div>
 <div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;        <span class="keywordflow">if</span>( M_print_matrix &amp;&amp; ( Environment::worldComm().globalSize() == 1 ) )</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;        <span class="keywordflow">if</span>( M_print_matrix &amp;&amp; ( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalSize() == 1 ) )</div>
 <div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        {</div>
 <div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;            <span class="keywordflow">if</span>( M_scm_for_mass_matrix)</div>
 <div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;            {</div>
@@ -850,7 +850,7 @@ $(document).ready(function(){initNavTree('crbscm_8hpp_source.html','');});
 <div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;        <span class="comment">// the coercivity constant is independant of the parameter set</span></div>
 <div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;        <span class="keywordflow">if</span> ( relative_error &gt; M_tolerance &amp;&amp; K &lt; M_iter_max  &amp;&amp; ! use_predefined_C )</div>
 <div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;        {</div>
-<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;            <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;            <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot; -- inserting mu - index : &quot;</span>&lt;&lt;index&lt;&lt;<span class="stringliteral">&quot; -  in C (&quot;</span> &lt;&lt; M_C-&gt;size() &lt;&lt; <span class="stringliteral">&quot;)\n&quot;</span>;</div>
 <div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;            M_C-&gt;push_back( mu, index );</div>
 <div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;</div>
@@ -864,7 +864,7 @@ $(document).ready(function(){initNavTree('crbscm_8hpp_source.html','');});
 <div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;        }</div>
 <div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;</div>
 <div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        ++K;</div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;============================================================\n&quot;</span>;</div>
 <div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;    }</div>
 <div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;</div>
@@ -1486,7 +1486,7 @@ $(document).ready(function(){initNavTree('crbscm_8hpp_source.html','');});
 <div class="line"><a name="l01526"></a><span class="lineno"> 1526</span>&#160;</div>
 <div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;            Matrix-&gt;close();</div>
 <div class="line"><a name="l01528"></a><span class="lineno"> 1528</span>&#160;            Matrix-&gt;symmetricPart( symmMatrix );</div>
-<div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;            <span class="keywordflow">if</span>( Environment::worldComm().globalSize() == 1 )</div>
+<div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;            <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalSize() == 1 )</div>
 <div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;            {</div>
 <div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160;                os &lt;&lt; <span class="stringliteral">&quot;yb_Matrix&quot;</span> &lt;&lt; q &lt;&lt; <span class="stringliteral">&quot; - &quot;</span>&lt;&lt; m &lt;&lt; <span class="stringliteral">&quot;.m&quot;</span>;</div>
 <div class="line"><a name="l01532"></a><span class="lineno"> 1532</span>&#160;                Matrix-&gt;printMatlab( os.str() );</div>
@@ -1549,7 +1549,7 @@ $(document).ready(function(){initNavTree('crbscm_8hpp_source.html','');});
 <div class="line"><a name="l01589"></a><span class="lineno"> 1589</span>&#160;                <span class="keywordflow">if</span> ( modes.empty() )</div>
 <div class="line"><a name="l01590"></a><span class="lineno"> 1590</span>&#160;                {</div>
 <div class="line"><a name="l01591"></a><span class="lineno"> 1591</span>&#160;                    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;[Computeybounds] eigmin did not converge for q=&quot;</span> &lt;&lt; q &lt;&lt; <span class="stringliteral">&quot; (set to 0)\n&quot;</span>;</div>
-<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;                    <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;                    <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160;                        std::cout &lt;&lt; <span class="stringliteral">&quot;[Computeybounds] eigmin did not converge for q=&quot;</span> &lt;&lt; q &lt;&lt; <span class="stringliteral">&quot; (set to 0)&quot;</span>&lt;&lt;std::endl;</div>
 <div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;                }</div>
 <div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;</div>
@@ -1576,12 +1576,12 @@ $(document).ready(function(){initNavTree('crbscm_8hpp_source.html','');});
 <div class="line"><a name="l01616"></a><span class="lineno"> 1616</span>&#160;                <span class="keywordflow">if</span> ( modes.empty() )</div>
 <div class="line"><a name="l01617"></a><span class="lineno"> 1617</span>&#160;                {</div>
 <div class="line"><a name="l01618"></a><span class="lineno"> 1618</span>&#160;                    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;[Computeybounds] eigmax did not converge for q=&quot;</span> &lt;&lt; q &lt;&lt; <span class="stringliteral">&quot; (set to 0)\n&quot;</span>;</div>
-<div class="line"><a name="l01619"></a><span class="lineno"> 1619</span>&#160;                    <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01619"></a><span class="lineno"> 1619</span>&#160;                    <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01620"></a><span class="lineno"> 1620</span>&#160;                        std::cout &lt;&lt; <span class="stringliteral">&quot;[Computeybounds] eigmax did not converge for q=&quot;</span> &lt;&lt; q &lt;&lt; <span class="stringliteral">&quot; (set to 0)&quot;</span>&lt;&lt;std::endl;</div>
 <div class="line"><a name="l01621"></a><span class="lineno"> 1621</span>&#160;                }</div>
 <div class="line"><a name="l01622"></a><span class="lineno"> 1622</span>&#160;</div>
 <div class="line"><a name="l01623"></a><span class="lineno"> 1623</span>&#160;                <span class="keywordtype">double</span> eigmax = modes.empty()?0:modes.rbegin()-&gt;second.template get&lt;0&gt;();</div>
-<div class="line"><a name="l01624"></a><span class="lineno"> 1624</span>&#160;                <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01624"></a><span class="lineno"> 1624</span>&#160;                <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01625"></a><span class="lineno"> 1625</span>&#160;                    std::cout&lt;&lt;<span class="stringliteral">&quot;[computeYBounds] bounds for (q,m) = (&quot;</span>&lt;&lt;q&lt;&lt;<span class="stringliteral">&quot;,&quot;</span>&lt;&lt;m&lt;&lt;<span class="stringliteral">&quot;) [ &quot;</span>&lt;&lt;eigmin&lt;&lt;<span class="stringliteral">&quot; ; &quot;</span>&lt;&lt;eigmax&lt;&lt;<span class="stringliteral">&quot;]&quot;</span>&lt;&lt;std::endl;</div>
 <div class="line"><a name="l01626"></a><span class="lineno"> 1626</span>&#160;                LOG(INFO)&lt;&lt;<span class="stringliteral">&quot;[computeYBounds] bounds for (q,m) = (&quot;</span>&lt;&lt;q&lt;&lt;<span class="stringliteral">&quot;,&quot;</span>&lt;&lt;m&lt;&lt;<span class="stringliteral">&quot;) [ &quot;</span>&lt;&lt;eigmin&lt;&lt;<span class="stringliteral">&quot; ; &quot;</span>&lt;&lt;eigmax&lt;&lt;<span class="stringliteral">&quot;]\n&quot;</span>;</div>
 <div class="line"><a name="l01627"></a><span class="lineno"> 1627</span>&#160;                <span class="comment">//std::cout &lt;&lt; &quot;[Computeybounds] q= &quot; &lt;&lt; q &lt;&lt; &quot; eigmin=&quot; &lt;&lt; std::setprecision(16) &lt;&lt; eigmin &lt;&lt; &quot; eigmax=&quot; &lt;&lt; std::setprecision(16) &lt;&lt; eigmax &lt;&lt; &quot;\n&quot;;</span></div>
@@ -1803,7 +1803,7 @@ $(document).ready(function(){initNavTree('crbscm_8hpp_source.html','');});
 <div class="line"><a name="l01843"></a><span class="lineno"> 1843</span>&#160;<span class="keyword">namespace </span>serialization</div>
 <div class="line"><a name="l01844"></a><span class="lineno"> 1844</span>&#160;{</div>
 <div class="line"><a name="l01845"></a><span class="lineno"> 1845</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l01846"></a><span class="lineno"> 1846</span>&#160;<span class="keyword">struct </span>version&lt; Feel::<a class="code" href="classFeel_1_1CRBSCM.html#a8ea04971c7311a7c037a275521b98c57" title="default constructor ">CRBSCM</a>&lt;T&gt; &gt;</div>
+<div class="line"><a name="l01846"></a><span class="lineno"><a class="code" href="structboost_1_1serialization_1_1version_3_01Feel_1_1CRBSCM_3_01T_01_4_01_4.html"> 1846</a></span>&#160;<span class="keyword">struct </span>version&lt; Feel::<a class="code" href="classFeel_1_1CRBSCM.html#a8ea04971c7311a7c037a275521b98c57" title="default constructor ">CRBSCM</a>&lt;T&gt; &gt;</div>
 <div class="line"><a name="l01847"></a><span class="lineno"> 1847</span>&#160;{</div>
 <div class="line"><a name="l01848"></a><span class="lineno"> 1848</span>&#160;    <span class="comment">// at the moment the version of the CRBSCM DB is 0. if any changes is done</span></div>
 <div class="line"><a name="l01849"></a><span class="lineno"> 1849</span>&#160;    <span class="comment">// to the format it is mandatory to increase the version number below</span></div>
@@ -1820,7 +1820,7 @@ $(document).ready(function(){initNavTree('crbscm_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:24 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:28:34 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

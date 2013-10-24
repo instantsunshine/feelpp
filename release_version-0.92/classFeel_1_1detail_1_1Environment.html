@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -110,25 +110,32 @@ $(document).ready(function(){initNavTree('classFeel_1_1detail_1_1Environment.htm
 <p>The <code><a class="el" href="classFeel_1_1detail_1_1Environment.html" title="Initialize, finalize, and query the Feel++ environment. ">Environment</a></code> class is used to initialize, finalize, and query the Feel++ environment. It will typically be used in the <code>main()</code> function of a program, which will create a single instance of <code><a class="el" href="classFeel_1_1detail_1_1Environment.html" title="Initialize, finalize, and query the Feel++ environment. ">Environment</a></code> initialized with the arguments passed to the program:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line">{</div>
-<div class="line">  Feel::Environment env(argc, argv);</div>
+<div class="line">  <a class="code" href="classFeel_1_1Environment.html">Feel::Environment</a> env(argc, argv);</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>The instance of <code><a class="el" href="classFeel_1_1detail_1_1Environment.html" title="Initialize, finalize, and query the Feel++ environment. ">Environment</a></code> will initialize Feel++ (by calling <code>MPI</code>, <code>PETSc</code>, <code>SLEPc</code> and <code>MAdLib</code> initialization routines) in its constructor and finalize in its destructor.</p>
 <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classFeel_1_1Application.html" title="provides information about the Application ">Application</a> </dd></dl>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Feel::detail::Environment:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
-<p>Inherits noncopyable.</p>
-
-<p>Inherited by Feel::Environment.</p>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+ <div class="center">
+  <img src="classFeel_1_1detail_1_1Environment.png" usemap="#Feel::detail::Environment_map" alt=""/>
+  <map id="Feel::detail::Environment_map" name="Feel::detail::Environment_map">
+<area href="classFeel_1_1Environment.html" alt="Feel::Environment" shape="rect" coords="0,112,149,136"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Typedefs</div></td></tr>
 <tr class="memitem:af70620ce97c6a93b9de4273e51f1efd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af70620ce97c6a93b9de4273e51f1efd2"></a>
-typedef WorldComm&#160;</td><td class="memItemRight" valign="bottom"><b>worldcomm_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a>&#160;</td><td class="memItemRight" valign="bottom"><b>worldcomm_type</b></td></tr>
 <tr class="separator:af70620ce97c6a93b9de4273e51f1efd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71faa05dad06573dc7f2f3a4e518ed23"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71faa05dad06573dc7f2f3a4e518ed23"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
-&lt; WorldComm &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>worldcomm_ptrtype</b></td></tr>
+&lt; <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>worldcomm_ptrtype</b></td></tr>
 <tr class="separator:a71faa05dad06573dc7f2f3a4e518ed23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -155,23 +162,23 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a04f2999c33e2834e1e6c6dd14019fa8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61ceeed3c0ec07c6f4de819b3b73be60"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#a61ceeed3c0ec07c6f4de819b3b73be60">finalized</a> ()</td></tr>
 <tr class="separator:a61ceeed3c0ec07c6f4de819b3b73be60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae60e87ffd72558a37c29852634190641"><td class="memItemLeft" align="right" valign="top">static WorldComm &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">worldComm</a> ()</td></tr>
+<tr class="memitem:ae60e87ffd72558a37c29852634190641"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">worldComm</a> ()</td></tr>
 <tr class="separator:ae60e87ffd72558a37c29852634190641"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac14f45765515d7fd347067926cf78db4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac14f45765515d7fd347067926cf78db4"></a>
-static WorldComm &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>worldCommSeq</b> ()</td></tr>
+static <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>worldCommSeq</b> ()</td></tr>
 <tr class="separator:ac14f45765515d7fd347067926cf78db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc34a3d8c5a9b7bb0353941af2c8ada8"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; WorldComm &gt;<br class="typebreak"/>
+<tr class="memitem:abc34a3d8c5a9b7bb0353941af2c8ada8"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> &gt;<br class="typebreak"/>
  const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#abc34a3d8c5a9b7bb0353941af2c8ada8">worldsComm</a> (int n)</td></tr>
 <tr class="separator:abc34a3d8c5a9b7bb0353941af2c8ada8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a16d5c77bcf48aa579590d6e2f9ac7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a16d5c77bcf48aa579590d6e2f9ac7a"></a>
-static std::vector&lt; WorldComm &gt;<br class="typebreak"/>
+static std::vector&lt; <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> &gt;<br class="typebreak"/>
  const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>worldsCommSeq</b> (int n)</td></tr>
 <tr class="separator:a3a16d5c77bcf48aa579590d6e2f9ac7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a213617c664d9447facac79d8e7e2af01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a213617c664d9447facac79d8e7e2af01"></a>
-static std::vector&lt; WorldComm &gt;<br class="typebreak"/>
+static std::vector&lt; <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> &gt;<br class="typebreak"/>
  const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>worldsCommGroupBySubspace</b> (int n)</td></tr>
 <tr class="separator:a213617c664d9447facac79d8e7e2af01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8e4a9e2baddd9178b1f9e394498dce6"><td class="memItemLeft" align="right" valign="top">static WorldComm const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#af8e4a9e2baddd9178b1f9e394498dce6">masterWorldComm</a> (int n)</td></tr>
+<tr class="memitem:af8e4a9e2baddd9178b1f9e394498dce6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#af8e4a9e2baddd9178b1f9e394498dce6">masterWorldComm</a> (int n)</td></tr>
 <tr class="separator:af8e4a9e2baddd9178b1f9e394498dce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdfe67905fb6f43796f5432313db61b5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#abdfe67905fb6f43796f5432313db61b5">numberOfProcessors</a> ()</td></tr>
 <tr class="separator:abdfe67905fb6f43796f5432313db61b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,7 +193,7 @@ static <a class="el" href="classFeel_1_1AboutData.html">AboutData</a> const &amp
 const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#ab4b8596baef27e631769ab7ba5cbc8cf">optionsDescription</a> ()</td></tr>
 <tr class="separator:ab4b8596baef27e631769ab7ba5cbc8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Mutators</div></td></tr>
-<tr class="memitem:aca4440fef331b4cfa5fb75a8d6843158"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#aca4440fef331b4cfa5fb75a8d6843158">setWorldComm</a> (WorldComm &amp;worldcomm)</td></tr>
+<tr class="memitem:aca4440fef331b4cfa5fb75a8d6843158"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#aca4440fef331b4cfa5fb75a8d6843158">setWorldComm</a> (<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> &amp;worldcomm)</td></tr>
 <tr class="separator:aca4440fef331b4cfa5fb75a8d6843158"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Methods</div></td></tr>
 <tr class="memitem:ac14a1f5d50dca4cbc198b1996adb4864"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#ac14a1f5d50dca4cbc198b1996adb4864">rootRepository</a> ()</td></tr>
@@ -205,7 +212,7 @@ const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:accc0286be09be956304e56a142ce9766"><td class="memItemLeft" align="right" valign="top">static boost::tuple<br class="typebreak"/>
 &lt; std::string, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#accc0286be09be956304e56a142ce9766">systemConfigRepository</a> ()</td></tr>
 <tr class="separator:accc0286be09be956304e56a142ce9766"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae72a5f2f5a5310f367f0fa395e0b17d8"><td class="memItemLeft" align="right" valign="top">static MemoryUsage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#ae72a5f2f5a5310f367f0fa395e0b17d8">logMemoryUsage</a> (std::string const &amp;message)</td></tr>
+<tr class="memitem:ae72a5f2f5a5310f367f0fa395e0b17d8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structFeel_1_1detail_1_1MemoryUsage.html">MemoryUsage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#ae72a5f2f5a5310f367f0fa395e0b17d8">logMemoryUsage</a> (std::string const &amp;message)</td></tr>
 <tr class="separator:ae72a5f2f5a5310f367f0fa395e0b17d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d5768d6df047f5d26e92933e7ceeca0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1detail_1_1Environment.html#a8d5768d6df047f5d26e92933e7ceeca0">setLogs</a> (std::string const &amp;prefix)</td></tr>
 <tr class="memdesc:a8d5768d6df047f5d26e92933e7ceeca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">get <code>variables_map</code> from <code>options_description</code> <code>desc</code>  <a href="#a8d5768d6df047f5d26e92933e7ceeca0">More...</a><br/></td></tr>
@@ -467,7 +474,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>clearSomeMemor
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">MemoryUsage Feel::detail::Environment::logMemoryUsage </td>
+          <td class="memname"><a class="el" href="structFeel_1_1detail_1_1MemoryUsage.html">MemoryUsage</a> Feel::detail::Environment::logMemoryUsage </td>
           <td>(</td>
           <td class="paramtype">std::string const &amp;&#160;</td>
           <td class="paramname"><em>message</em>)</td><td></td>
@@ -498,7 +505,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>clearSomeMemor
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">WorldComm const &amp; Feel::detail::Environment::masterWorldComm </td>
+          <td class="memname"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp; Feel::detail::Environment::masterWorldComm </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>n</em>)</td><td></td>
@@ -678,7 +685,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>clearSomeMemor
         <tr>
           <td class="memname">static void Feel::detail::Environment::setWorldComm </td>
           <td>(</td>
-          <td class="paramtype">WorldComm &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> &amp;&#160;</td>
           <td class="paramname"><em>worldcomm</em>)</td><td></td>
           <td></td>
         </tr>
@@ -777,7 +784,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>clearSomeMemor
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static WorldComm&amp; Feel::detail::Environment::worldComm </td>
+          <td class="memname">static <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a>&amp; Feel::detail::Environment::worldComm </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -801,7 +808,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>clearSomeMemor
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; WorldComm &gt; const &amp; Feel::detail::Environment::worldsComm </td>
+          <td class="memname">std::vector&lt; <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> &gt; const &amp; Feel::detail::Environment::worldsComm </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>n</em>)</td><td></td>
@@ -825,7 +832,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>clearSomeMemor
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:57:03 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:29:49 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

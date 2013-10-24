@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -114,6 +114,12 @@ $(document).ready(function(){initNavTree('problem_8hpp.html','');});
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1core__data.html">Feel::core_data&lt; Data, Id &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1inequalities_1_1diff.html">Feel::inequalities&lt; Data &gt;::diff&lt; Diff &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1functional_1_1diff.html">Feel::functional&lt; Data &gt;::diff&lt; Data &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1diff__order.html">Feel::diff_order&lt; O &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1dummy__data.html">Feel::dummy_data&lt; N &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">dummy data type  <a href="structFeel_1_1dummy__data.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,6 +131,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1inequalities.html">Feel::inequalities&lt; Data &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">define the inequalities type  <a href="classFeel_1_1inequalities.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1noop.html">Feel::noop&lt; T, int &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1problem.html">Feel::problem&lt; Data &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimization problem specifications.  <a href="classFeel_1_1problem.html#details">More...</a><br/></td></tr>
@@ -141,15 +149,15 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a47b4e694d7ea6c8735636721e02645c0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br/>
-&#160;&#160;<a class="el" href="namespaceFeel.html#a47b4e694d7ea6c8735636721e02645c0a5de680925be7c96ef97fd1eb74f207c4">Feel::FUNCTIONAL</a> = 0, 
+<tr class="memitem:a34cd635f91f114ba48ffe2a223ccf770"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br/>
+&#160;&#160;<a class="el" href="namespaceFeel.html#a34cd635f91f114ba48ffe2a223ccf770a5de680925be7c96ef97fd1eb74f207c4">Feel::FUNCTIONAL</a> = 0, 
 <br/>
-&#160;&#160;<a class="el" href="namespaceFeel.html#a47b4e694d7ea6c8735636721e02645c0a1bbc9f343f78b454c9b4a2ab47472d35">Feel::EQUALITIES</a>, 
+&#160;&#160;<a class="el" href="namespaceFeel.html#a34cd635f91f114ba48ffe2a223ccf770a1bbc9f343f78b454c9b4a2ab47472d35">Feel::EQUALITIES</a>, 
 <br/>
-&#160;&#160;<a class="el" href="namespaceFeel.html#a47b4e694d7ea6c8735636721e02645c0a74b4d2a807277ec9fae5ea86fc4af15d">Feel::INEQUALITIES</a>
+&#160;&#160;<a class="el" href="namespaceFeel.html#a34cd635f91f114ba48ffe2a223ccf770a74b4d2a807277ec9fae5ea86fc4af15d">Feel::INEQUALITIES</a>
 <br/>
  }</td></tr>
-<tr class="separator:a47b4e694d7ea6c8735636721e02645c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a34cd635f91f114ba48ffe2a223ccf770"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme <a href="#" onclick="location.href='mai'+'lto:'+'chr'+'is'+'top'+'he'+'.pr'+'ud'+'hom'+'me'+'@fe'+'el'+'pp.'+'or'+'g'; return false;">chris<span style="display: none;">.nosp@m.</span>toph<span style="display: none;">.nosp@m.</span>e.pru<span style="display: none;">.nosp@m.</span>dhom<span style="display: none;">.nosp@m.</span>me@fe<span style="display: none;">.nosp@m.</span>elpp<span style="display: none;">.nosp@m.</span>.org</a> </dd></dl>
@@ -157,7 +165,7 @@ Enumerations</h2></td></tr>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:53 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:29:16 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

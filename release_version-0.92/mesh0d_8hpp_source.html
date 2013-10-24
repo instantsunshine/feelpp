@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -163,7 +163,7 @@ $(document).ready(function(){initNavTree('mesh0d_8hpp_source.html','');});
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Shape&gt;</div>
 <div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="classFeel_1_1Mesh0D.html">   76</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1Mesh0D.html" title="0D mesh class ">Mesh0D</a></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    :</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">public</span> VisitableBase&lt;&gt;,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">public</span> <a class="code" href="classFeel_1_1VisitableBase.html">VisitableBase</a>&lt;&gt;,</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">public</span> <a class="code" href="classFeel_1_1MeshBase.html" title="base mesh class ">MeshBase</a>,</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">public</span> Elements&lt;Shape&gt;,</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">public</span> Points&lt;Shape::nRealDim&gt;</div>
@@ -178,9 +178,9 @@ $(document).ready(function(){initNavTree('mesh0d_8hpp_source.html','');});
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = Shape::nRealDim;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nRealDim = Shape::nRealDim;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> VisitableBase&lt;&gt;::return_type return_type;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1VisitableBase.html">VisitableBase&lt;&gt;::return_type</a> return_type;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">typedef</span> VisitableBase&lt;&gt; super_visitable;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1VisitableBase.html">VisitableBase&lt;&gt;</a> <a class="code" href="classFeel_1_1VisitableBase.html">super_visitable</a>;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1MeshBase.html" title="base mesh class ">MeshBase</a> <a class="code" href="classFeel_1_1MeshBase.html" title="base mesh class ">super</a>;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">typedef</span> Elements&lt;Shape&gt; super_elements;</div>
@@ -202,9 +202,9 @@ $(document).ready(function(){initNavTree('mesh0d_8hpp_source.html','');});
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="code" href="classFeel_1_1Mesh0D.html#ad4f8cd1c6ee8cf60cabd2ed54c4e7034">  127</a></span>&#160;    <a class="code" href="classFeel_1_1Mesh0D.html#ad4f8cd1c6ee8cf60cabd2ed54c4e7034">Mesh0D</a>( WorldComm <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1MeshBase.html#a5a883e96959039e3a5fa81ca15a15bb7">worldComm</a> = Environment::worldComm() )</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="code" href="classFeel_1_1Mesh0D.html#ad4f8cd1c6ee8cf60cabd2ed54c4e7034">  127</a></span>&#160;    <a class="code" href="classFeel_1_1Mesh0D.html#ad4f8cd1c6ee8cf60cabd2ed54c4e7034">Mesh0D</a>( <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1MeshBase.html#a5a883e96959039e3a5fa81ca15a15bb7">worldComm</a> = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() )</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        :</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        super_visitable(),</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="classFeel_1_1VisitableBase.html">super_visitable</a>(),</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <a class="code" href="classFeel_1_1MeshBase.html" title="base mesh class ">super</a>( <a class="code" href="classFeel_1_1MeshBase.html#a5a883e96959039e3a5fa81ca15a15bb7">worldComm</a> ),</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        super_elements( <a class="code" href="classFeel_1_1MeshBase.html#a5a883e96959039e3a5fa81ca15a15bb7">worldComm</a> ),</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        super_points( <a class="code" href="classFeel_1_1MeshBase.html#a5a883e96959039e3a5fa81ca15a15bb7">worldComm</a> )</div>
@@ -213,7 +213,7 @@ $(document).ready(function(){initNavTree('mesh0d_8hpp_source.html','');});
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
 <div class="line"><a name="l00139"></a><span class="lineno"><a class="code" href="classFeel_1_1Mesh0D.html#a9135396d9a2a6df16253545cfb1828db">  139</a></span>&#160;    <a class="code" href="classFeel_1_1Mesh0D.html#a9135396d9a2a6df16253545cfb1828db">Mesh0D</a>( <a class="code" href="classFeel_1_1Mesh0D.html" title="0D mesh class ">Mesh0D</a> <span class="keyword">const</span> &amp; m )</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        :</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        super_visitable(),</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <a class="code" href="classFeel_1_1VisitableBase.html">super_visitable</a>(),</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="classFeel_1_1MeshBase.html" title="base mesh class ">super</a>( m ),</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        super_elements( m ),</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        super_points( m )</div>
@@ -331,7 +331,7 @@ $(document).ready(function(){initNavTree('mesh0d_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:40 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:28:57 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

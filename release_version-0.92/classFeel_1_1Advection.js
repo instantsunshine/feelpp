@@ -1,5 +1,6 @@
 var classFeel_1_1Advection =
 [
+    [ "space", "structFeel_1_1Advection_1_1space.html", "structFeel_1_1Advection_1_1space" ],
     [ "backend_ptrtype", "classFeel_1_1Advection.html#a4f9f9bc43af917d6a09d02b6f7f8054f", null ],
     [ "backend_type", "classFeel_1_1Advection.html#a8794ba152aec6fb7ddfae7a4848c3113", null ],
     [ "entity_type", "classFeel_1_1Advection.html#a38ffca895ca786cfccb587c9dbb979a7", null ],

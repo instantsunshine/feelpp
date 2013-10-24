@@ -1,10 +1,11 @@
 var searchData=
 [
   ['e',['E',['../classFeel_1_1Air.html#aa39d4f358b90d498f8c929b31dbb4f85',1,'Feel::Air::E()'],['../classFeel_1_1CastIron.html#a0b45bc6b1a8583e19b3a988dc375553d',1,'Feel::CastIron::E() const '],['../classFeel_1_1CastIron.html#a0b45bc6b1a8583e19b3a988dc375553d',1,'Feel::CastIron::E() const '],['../classFeel_1_1Material.html#ae77a8a1467a7d659de123bb1931fab92',1,'Feel::Material::E()']]],
-  ['e2p',['e2p',['../classFeel_1_1Simplex.html#a87a026e3a9955900903d45caf936baea',1,'Feel::Simplex']]],
+  ['e2p',['e2p',['../classFeel_1_1Hypercube.html#a52a23e7c65d87ebf834c74fca727d8fe',1,'Feel::Hypercube::e2p()'],['../classFeel_1_1Simplex.html#a87a026e3a9955900903d45caf936baea',1,'Feel::Simplex::e2p()']]],
   ['edge',['edge',['../classFeel_1_1GeoElement2D.html#a5ad0ae48278bd7903ae72d241c3c1562',1,'Feel::GeoElement2D::edge(uint16_type i) const '],['../classFeel_1_1GeoElement2D.html#a547bc8176148376aa8c41d71d22c08b0',1,'Feel::GeoElement2D::edge(uint16_type i)']]],
   ['edgepermutation',['edgePermutation',['../classFeel_1_1GeoElement2D.html#aa0febae423d58be8d246adca78844c1b',1,'Feel::GeoElement2D']]],
   ['edges',['edges',['../namespaceFeel.html#acc2d630cda517a95be1879ea38fb5069',1,'Feel']]],
+  ['eid',['eId',['../classFeel_1_1PolynomialSet_1_1Context.html#a83de991a17b8b5cd21457772560eb625',1,'Feel::PolynomialSet::Context']]],
   ['eigenpair',['eigenPair',['../classFeel_1_1SolverEigen.html#ae607d5a42a4d9d6323409f0ebf8acc61',1,'Feel::SolverEigen']]],
   ['eigenproblemtype',['eigenProblemType',['../classFeel_1_1SolverEigen.html#a21181602fd3b68ffb0656b8bbf072e92',1,'Feel::SolverEigen']]],
   ['eigensolvertype',['eigenSolverType',['../classFeel_1_1SolverEigen.html#abac16f073c7206f605e1dc69b5b79764',1,'Feel::SolverEigen']]],
@@ -40,6 +41,7 @@ var searchData=
   ['endelementwithmarker3',['endElementWithMarker3',['../namespaceFeel.html#ae3efae318cfa04df0a8f3f5904e2dc6a',1,'Feel']]],
   ['endghostelement',['endGhostElement',['../namespaceFeel.html#a21d2d4147633e1221c5d0147f8dd8aef',1,'Feel']]],
   ['endinternalelement',['endInternalElement',['../namespaceFeel.html#a5d5303a0a7321b1dd7b4d7d9d41421b9',1,'Feel']]],
+  ['endnormal',['endNormal',['../classFeel_1_1Reference_3_01Hypercube_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#aad2231986443dd8030a7f4a95d599e5a',1,'Feel::Reference&lt; Hypercube&lt; Dim, Order, RDim &gt;, Dim, Order, RDim, T &gt;::endNormal()'],['../classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#a0324bc705d510bdd9e202902137cd697',1,'Feel::Reference&lt; Simplex&lt; Dim, Order, RDim &gt;, Dim, Order, RDim, T &gt;::endNormal()']]],
   ['endscalar',['endScalar',['../classFeel_1_1TimeSet_1_1Step.html#aa555976c2b76f6e068e6b61f56ca7b3e',1,'Feel::TimeSet::Step']]],
   ['energy',['energy',['../classFeel_1_1MatrixBlockBase.html#a2570ad512eb22765063fc3f98966b4ff',1,'Feel::MatrixBlockBase::energy()'],['../classFeel_1_1MatrixEigenDense.html#a34da5ba0904312149813b715f1c389a1',1,'Feel::MatrixEigenDense::energy()'],['../classFeel_1_1MatrixEigenSparse.html#a35dde643e292d1e615bb676c6b9b78ee',1,'Feel::MatrixEigenSparse::energy()'],['../classFeel_1_1MatrixSparse.html#aec47bcf734704ed4305b0fd57b9c61bb',1,'Feel::MatrixSparse::energy(vector_type const &amp;v, vector_type const &amp;u, bool transpose=false) const =0'],['../classFeel_1_1MatrixSparse.html#a69aecfabdde84488b0c1b5c18e2cc1ea',1,'Feel::MatrixSparse::energy(vector_ptrtype const &amp;v, vector_ptrtype const &amp;u, bool _transpose=false) const '],['../classFeel_1_1MatrixUBlas.html#a8c9984a49dc4bfeaa25a710ba01200ba',1,'Feel::MatrixUBlas::energy()'],['../classFeel_1_1MatrixValue.html#a568c40a9c6f9d719844d471b42655b0f',1,'Feel::MatrixValue::energy()']]],
   ['entity',['entity',['../classFeel_1_1Dof.html#ab94cbbea3396cb928e848b2e428f70f6',1,'Feel::Dof']]],
@@ -67,7 +69,7 @@ var searchData=
   ['exportergnuplot',['ExporterGnuplot',['../classFeel_1_1ExporterGnuplot.html#a384cdc9dead2391044dd2eecd5963352',1,'Feel::ExporterGnuplot']]],
   ['exportresults',['exportResults',['../classConvectionCrb.html#aae368a987ceec6d263808cd8d161419f',1,'ConvectionCrb']]],
   ['exprbase',['ExprBase',['../classFeel_1_1ExprBase.html#ade5077f5338b506fd116dcab12a72948',1,'Feel::ExprBase']]],
-  ['expression',['expression',['../classFeel_1_1vf_1_1details_1_1Projector.html#af6ce91a91972c004249887c5484a5b61',1,'Feel::vf::details::Projector']]],
+  ['expression',['expression',['../classFeel_1_1vf_1_1details_1_1EvaluatorContext.html#a071355df774f3274e4e4e5adb9a1e7b8',1,'Feel::vf::details::EvaluatorContext::expression()'],['../classFeel_1_1vf_1_1details_1_1Projector.html#af6ce91a91972c004249887c5484a5b61',1,'Feel::vf::details::Projector::expression()']]],
   ['extrapolate',['extrapolate',['../classFeel_1_1Bdf.html#ab27129c9ec56f53502df9f4df4f15760',1,'Feel::Bdf']]],
   ['extrapolatecoefficient',['extrapolateCoefficient',['../classFeel_1_1Bdf.html#a1bef56c8f81d9c70e5f2bb8271190d54',1,'Feel::Bdf']]]
 ];

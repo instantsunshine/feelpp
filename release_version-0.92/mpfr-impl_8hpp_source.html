@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -789,11 +789,11 @@ $(document).ready(function(){initNavTree('mpfr-impl_8hpp_source.html','');});
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;<span class="comment"> ******************************************************/</span></div>
 <div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;</div>
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;<span class="comment">/* Heap Memory gestion */</span></div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;<span class="keyword">typedef</span> <span class="keyword">union</span></div>
+<div class="line"><a name="l00687"></a><span class="lineno"><a class="code" href="unionmpfr__size__limb__t.html">  687</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">union</span></div>
 <div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;{</div>
 <div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    mp_size_t s;</div>
 <div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    mp_limb_t l;</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;} mpfr_size_limb_t;</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;} <a class="code" href="unionmpfr__size__limb__t.html">mpfr_size_limb_t</a>;</div>
 <div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;<span class="preprocessor">#define MPFR_GET_ALLOC_SIZE(x) \</span></div>
 <div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;<span class="preprocessor"> ( ((mp_size_t*) MPFR_MANT(x))[-1] + 0)</span></div>
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MPFR_SET_ALLOC_SIZE(x, n) \</span></div>
@@ -1004,12 +1004,12 @@ $(document).ready(function(){initNavTree('mpfr-impl_8hpp_source.html','');});
 <div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;<span class="comment">   They are used to set the exponent range to the maximum</span></div>
 <div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;<span class="comment">   temporarily */</span></div>
 <div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;</div>
-<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00902"></a><span class="lineno"><a class="code" href="structmpfr__save__expo__t.html">  902</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
 <div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;{</div>
 <div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> saved_flags;</div>
 <div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;    mp_exp_t saved_emin;</div>
 <div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;    mp_exp_t saved_emax;</div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;} mpfr_save_expo_t;</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;} <a class="code" href="structmpfr__save__expo__t.html">mpfr_save_expo_t</a>;</div>
 <div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;</div>
 <div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;<span class="preprocessor">#define MPFR_SAVE_EXPO_DECL(x) mpfr_save_expo_t x</span></div>
 <div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MPFR_SAVE_EXPO_MARK(x)     \</span></div>
@@ -1439,7 +1439,7 @@ $(document).ready(function(){initNavTree('mpfr-impl_8hpp_source.html','');});
 <div class="line"><a name="l01334"></a><span class="lineno"> 1334</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define MPFR_GROUP_STATIC_SIZE 16</span></div>
 <div class="line"><a name="l01335"></a><span class="lineno"> 1335</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01336"></a><span class="lineno"> 1336</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l01337"></a><span class="lineno"> 1337</span>&#160;<span class="keyword">struct </span>mpfr_group_t</div>
+<div class="line"><a name="l01337"></a><span class="lineno"><a class="code" href="structmpfr__group__t.html"> 1337</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmpfr__group__t.html">mpfr_group_t</a></div>
 <div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;{</div>
 <div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;    <span class="keywordtype">size_t</span>     alloc;</div>
 <div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;    mp_limb_t *mant;</div>
@@ -1634,7 +1634,7 @@ $(document).ready(function(){initNavTree('mpfr-impl_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:42 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:28:59 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

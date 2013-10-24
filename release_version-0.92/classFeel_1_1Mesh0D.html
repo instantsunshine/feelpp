@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -126,14 +126,15 @@ class Feel::Mesh0D&lt; Shape &gt;</h3>
  <div class="center">
   <img src="classFeel_1_1Mesh0D.png" usemap="#Feel::Mesh0D&lt; Shape &gt;_map" alt=""/>
   <map id="Feel::Mesh0D&lt; Shape &gt;_map" name="Feel::Mesh0D&lt; Shape &gt;_map">
-<area href="classFeel_1_1MeshBase.html" title="base mesh class " alt="Feel::MeshBase" shape="rect" coords="0,0,150,24"/>
+<area href="classFeel_1_1VisitableBase.html" alt="Feel::VisitableBase&lt;&gt;" shape="rect" coords="0,0,165,24"/>
+<area href="classFeel_1_1MeshBase.html" title="base mesh class " alt="Feel::MeshBase" shape="rect" coords="175,0,340,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors, destructor</div></td></tr>
-<tr class="memitem:ad4f8cd1c6ee8cf60cabd2ed54c4e7034"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh0D.html#ad4f8cd1c6ee8cf60cabd2ed54c4e7034">Mesh0D</a> (WorldComm const &amp;<a class="el" href="classFeel_1_1MeshBase.html#a5a883e96959039e3a5fa81ca15a15bb7">worldComm</a>=Environment::worldComm())</td></tr>
+<tr class="memitem:ad4f8cd1c6ee8cf60cabd2ed54c4e7034"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh0D.html#ad4f8cd1c6ee8cf60cabd2ed54c4e7034">Mesh0D</a> (<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;<a class="el" href="classFeel_1_1MeshBase.html#a5a883e96959039e3a5fa81ca15a15bb7">worldComm</a>=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
 <tr class="separator:ad4f8cd1c6ee8cf60cabd2ed54c4e7034"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9135396d9a2a6df16253545cfb1828db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh0D.html#a9135396d9a2a6df16253545cfb1828db">Mesh0D</a> (<a class="el" href="classFeel_1_1Mesh0D.html">Mesh0D</a> const &amp;m)</td></tr>
 <tr class="separator:a9135396d9a2a6df16253545cfb1828db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,17 +163,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8705353d86e5fb4421e201f489d51833"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8705353d86e5fb4421e201f489d51833"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_DEFINE_VISITABLE</b> ()</td></tr>
 <tr class="separator:a8705353d86e5fb4421e201f489d51833"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classFeel_1_1VisitableBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classFeel_1_1VisitableBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classFeel_1_1VisitableBase.html">Feel::VisitableBase&lt; R, CatchAll &gt;</a></td></tr>
+<tr class="inherit_header pub_methods_classFeel_1_1VisitableBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classFeel_1_1VisitableBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classFeel_1_1VisitableBase.html">Feel::VisitableBase&lt;&gt;</a></td></tr>
 <tr class="memitem:ac7b07f2867755cbada340cfc2043790b inherit pub_methods_classFeel_1_1VisitableBase"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7b07f2867755cbada340cfc2043790b"></a>
-virtual return_type&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (<a class="el" href="classFeel_1_1VisitorBase.html">VisitorBase</a> &amp;)=0</td></tr>
+virtual return_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VisitableBase.html#ac7b07f2867755cbada340cfc2043790b">accept</a> (<a class="el" href="classFeel_1_1VisitorBase.html">VisitorBase</a> &amp;)=0</td></tr>
 <tr class="memdesc:ac7b07f2867755cbada340cfc2043790b inherit pub_methods_classFeel_1_1VisitableBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">accept visitor: use S_DEFINE_VISITABLE() to redefine it <br/></td></tr>
 <tr class="separator:ac7b07f2867755cbada340cfc2043790b inherit pub_methods_classFeel_1_1VisitableBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac52d2427c7efab2bcab31d7e5d63171e inherit pub_methods_classFeel_1_1VisitableBase"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac52d2427c7efab2bcab31d7e5d63171e"></a>
-virtual return_type&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (<a class="el" href="classFeel_1_1VisitorBase.html">VisitorBase</a> *)=0</td></tr>
+virtual return_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VisitableBase.html#ac52d2427c7efab2bcab31d7e5d63171e">accept</a> (<a class="el" href="classFeel_1_1VisitorBase.html">VisitorBase</a> *)=0</td></tr>
 <tr class="memdesc:ac52d2427c7efab2bcab31d7e5d63171e inherit pub_methods_classFeel_1_1VisitableBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">accept visitor: use S_DEFINE_VISITABLE() to redefine it <br/></td></tr>
 <tr class="separator:ac52d2427c7efab2bcab31d7e5d63171e inherit pub_methods_classFeel_1_1VisitableBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classFeel_1_1MeshBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classFeel_1_1MeshBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classFeel_1_1MeshBase.html">Feel::MeshBase</a></td></tr>
-<tr class="memitem:a1303d8e0da46dae1afc2411757b5229b inherit pub_methods_classFeel_1_1MeshBase"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a1303d8e0da46dae1afc2411757b5229b">MeshBase</a> (WorldComm const &amp;<a class="el" href="classFeel_1_1MeshBase.html#a5a883e96959039e3a5fa81ca15a15bb7">worldComm</a>=Environment::worldComm())</td></tr>
+<tr class="memitem:a1303d8e0da46dae1afc2411757b5229b inherit pub_methods_classFeel_1_1MeshBase"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a1303d8e0da46dae1afc2411757b5229b">MeshBase</a> (<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;<a class="el" href="classFeel_1_1MeshBase.html#a5a883e96959039e3a5fa81ca15a15bb7">worldComm</a>=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
 <tr class="separator:a1303d8e0da46dae1afc2411757b5229b inherit pub_methods_classFeel_1_1MeshBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5328f1259e75d4273d8868676b7b59b2 inherit pub_methods_classFeel_1_1MeshBase"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a5328f1259e75d4273d8868676b7b59b2">MeshBase</a> (<a class="el" href="classFeel_1_1MeshBase.html">MeshBase</a> const &amp;)</td></tr>
 <tr class="separator:a5328f1259e75d4273d8868676b7b59b2 inherit pub_methods_classFeel_1_1MeshBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,13 +211,13 @@ virtual return_type&#160;</td><td class="memItemRight" valign="bottom"><b>accept
 <tr class="separator:aafc348f41e694a49aa14f3bac0a27e50 inherit pub_methods_classFeel_1_1MeshBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87e08db85fd4469f5d759c88cfb158a0 inherit pub_methods_classFeel_1_1MeshBase"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a87e08db85fd4469f5d759c88cfb158a0">partition</a> (const uint16_type n_parts)=0</td></tr>
 <tr class="separator:a87e08db85fd4469f5d759c88cfb158a0 inherit pub_methods_classFeel_1_1MeshBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a883e96959039e3a5fa81ca15a15bb7 inherit pub_methods_classFeel_1_1MeshBase"><td class="memItemLeft" align="right" valign="top">WorldComm const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a5a883e96959039e3a5fa81ca15a15bb7">worldComm</a> () const </td></tr>
+<tr class="memitem:a5a883e96959039e3a5fa81ca15a15bb7 inherit pub_methods_classFeel_1_1MeshBase"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a5a883e96959039e3a5fa81ca15a15bb7">worldComm</a> () const </td></tr>
 <tr class="separator:a5a883e96959039e3a5fa81ca15a15bb7 inherit pub_methods_classFeel_1_1MeshBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf053c0c4f9069b531a11e31b8ee04b7 inherit pub_methods_classFeel_1_1MeshBase"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf053c0c4f9069b531a11e31b8ee04b7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setWorldComm</b> (WorldComm const &amp;_worldComm)=0</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setWorldComm</b> (<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;_worldComm)=0</td></tr>
 <tr class="separator:abf053c0c4f9069b531a11e31b8ee04b7 inherit pub_methods_classFeel_1_1MeshBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76ac6e10835f85ee5ad86a4a0dd4902d inherit pub_methods_classFeel_1_1MeshBase"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76ac6e10835f85ee5ad86a4a0dd4902d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setWorldCommMeshBase</b> (WorldComm const &amp;_worldComm)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWorldCommMeshBase</b> (<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;_worldComm)</td></tr>
 <tr class="separator:a76ac6e10835f85ee5ad86a4a0dd4902d inherit pub_methods_classFeel_1_1MeshBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52d73883cc705c2dbbb293e5a5c27e3e inherit pub_methods_classFeel_1_1MeshBase"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52d73883cc705c2dbbb293e5a5c27e3e"></a>
 mpi::communicator const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>comm</b> () const </td></tr>
@@ -289,7 +290,7 @@ Typedefs</h2></td></tr>
 typedef VisitableBase::return_type&#160;</td><td class="memItemRight" valign="bottom"><b>return_type</b></td></tr>
 <tr class="separator:acaeec74791e61d9b37b5c1dbb1d29170"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39d5a892c5652c4e6e31b29de01c3531"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39d5a892c5652c4e6e31b29de01c3531"></a>
-typedef VisitableBase&#160;</td><td class="memItemRight" valign="bottom"><b>super_visitable</b></td></tr>
+typedef <a class="el" href="classFeel_1_1VisitableBase.html">VisitableBase</a>&#160;</td><td class="memItemRight" valign="bottom"><b>super_visitable</b></td></tr>
 <tr class="separator:a39d5a892c5652c4e6e31b29de01c3531"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c98becfb9eccf642bc77e0503f45cc1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c98becfb9eccf642bc77e0503f45cc1"></a>
 typedef <a class="el" href="classFeel_1_1MeshBase.html">MeshBase</a>&#160;</td><td class="memItemRight" valign="bottom"><b>super</b></td></tr>
@@ -348,9 +349,9 @@ static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>n
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classFeel_1_1VisitableBase"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1VisitableBase')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classFeel_1_1VisitableBase.html">Feel::VisitableBase&lt; R, CatchAll &gt;</a></td></tr>
+<tr class="inherit_header pub_types_classFeel_1_1VisitableBase"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1VisitableBase')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classFeel_1_1VisitableBase.html">Feel::VisitableBase&lt;&gt;</a></td></tr>
 <tr class="memitem:a9b0a20152288f8a548afbadb2e3331c7 inherit pub_types_classFeel_1_1VisitableBase"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b0a20152288f8a548afbadb2e3331c7"></a>
-typedef R&#160;</td><td class="memItemRight" valign="bottom"><b>return_type</b></td></tr>
+typedef void&#160;</td><td class="memItemRight" valign="bottom"><b>return_type</b></td></tr>
 <tr class="separator:a9b0a20152288f8a548afbadb2e3331c7 inherit pub_types_classFeel_1_1VisitableBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classFeel_1_1MeshBase"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1MeshBase')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classFeel_1_1MeshBase.html">Feel::MeshBase</a></td></tr>
 <tr class="memitem:a3a4f37a7436de677c1e9a8d576975721 inherit pub_types_classFeel_1_1MeshBase"><td class="memItemLeft" align="right" valign="top">typedef boost::tuple<br class="typebreak"/>
@@ -363,9 +364,8 @@ typedef <a class="el" href="classFeel_1_1SubMeshData.html">SubMeshData</a>&#160;
 typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1SubMeshData.html">smd_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>smd_ptrtype</b></td></tr>
 <tr class="separator:a9cee799cbf0f3363370040bca58022fb inherit pub_types_classFeel_1_1MeshBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_static_methods_classFeel_1_1VisitableBase"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classFeel_1_1VisitableBase')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classFeel_1_1VisitableBase.html">Feel::VisitableBase&lt; R, CatchAll &gt;</a></td></tr>
-<tr class="memitem:a3c4ac7ee3fa9b1ef11cd1e075cb38e49 inherit pro_static_methods_classFeel_1_1VisitableBase"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a3c4ac7ee3fa9b1ef11cd1e075cb38e49 inherit pro_static_methods_classFeel_1_1VisitableBase"><td class="memTemplItemLeft" align="right" valign="top">static return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>acceptImpl</b> (T *visited, <a class="el" href="classFeel_1_1VisitorBase.html">VisitorBase</a> *guest)</td></tr>
+<tr class="inherit_header pro_static_methods_classFeel_1_1VisitableBase"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classFeel_1_1VisitableBase')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classFeel_1_1VisitableBase.html">Feel::VisitableBase&lt;&gt;</a></td></tr>
+<tr class="memitem:a3c4ac7ee3fa9b1ef11cd1e075cb38e49 inherit pro_static_methods_classFeel_1_1VisitableBase"><td class="memItemLeft" align="right" valign="top">static return_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VisitableBase.html#a3c4ac7ee3fa9b1ef11cd1e075cb38e49">acceptImpl</a> (T *visited, <a class="el" href="classFeel_1_1VisitorBase.html">VisitorBase</a> *guest)</td></tr>
 <tr class="separator:a3c4ac7ee3fa9b1ef11cd1e075cb38e49 inherit pro_static_methods_classFeel_1_1VisitableBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -381,8 +381,8 @@ template&lt;typename Shape &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classFeel_1_1Mesh0D.html">Feel::Mesh0D</a>&lt; Shape &gt;::<a class="el" href="classFeel_1_1Mesh0D.html">Mesh0D</a> </td>
           <td>(</td>
-          <td class="paramtype">WorldComm const &amp;&#160;</td>
-          <td class="paramname"><em>worldComm</em> = <code>Environment::worldComm()</code>)</td><td></td>
+          <td class="paramtype"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td>
+          <td class="paramname"><em>worldComm</em> = <code><a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>()</code>)</td><td></td>
           <td></td>
         </tr>
       </table>
@@ -737,7 +737,7 @@ template&lt;typename Shape &gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:57:00 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:29:39 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

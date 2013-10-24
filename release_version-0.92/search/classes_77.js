@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['worldcomm',['WorldComm',['../class_feel_1_1_world_comm.html',1,'Feel']]]
+  ['worldcomm',['WorldComm',['../classFeel_1_1WorldComm.html',1,'Feel']]]
 ];

@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -175,7 +175,7 @@ $(document).ready(function(){initNavTree('vectorpetsc_8hpp_source.html','');});
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    VectorPetsc ( <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> n, WorldComm <span class="keyword">const</span>&amp; _worldComm = Environment::worldComm() )</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    VectorPetsc ( <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> n, WorldComm <span class="keyword">const</span>&amp; _worldComm = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() )</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        :</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        super( n, _worldComm ),</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        M_destroy_vec_on_exit( true )</div>
@@ -185,7 +185,7 @@ $(document).ready(function(){initNavTree('vectorpetsc_8hpp_source.html','');});
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    VectorPetsc ( <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> n,</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                  <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> n_local,</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                  WorldComm <span class="keyword">const</span>&amp; _worldComm = Environment::worldComm() )</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                  WorldComm <span class="keyword">const</span>&amp; _worldComm = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() )</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        :</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        super( n, n_local, _worldComm ),</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        M_destroy_vec_on_exit( true )</div>
@@ -255,7 +255,7 @@ $(document).ready(function(){initNavTree('vectorpetsc_8hpp_source.html','');});
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordtype">int</span> n = index.size();</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        PetscMalloc(n*<span class="keyword">sizeof</span>(PetscInt),&amp;map);</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;n; i++) map[i] = index[i];</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        ierr = ISCreateGeneral(Environment::worldComm(),n,map,PETSC_COPY_VALUES,&amp;is);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        ierr = ISCreateGeneral(<a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>(),n,map,PETSC_COPY_VALUES,&amp;is);</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        CHKERRABORT( this-&gt;comm(),ierr );</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        PetscFree(map);</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
@@ -611,7 +611,7 @@ $(document).ready(function(){initNavTree('vectorpetsc_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:52 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:29:15 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

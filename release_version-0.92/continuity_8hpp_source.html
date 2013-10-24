@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -139,9 +139,9 @@ $(document).ready(function(){initNavTree('continuity_8hpp_source.html','');});
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span>detail</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">struct </span>continuity_base {};</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1continuity__base.html">   42</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1continuity__base.html">continuity_base</a> {};</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="classFeel_1_1Continuous.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1Continuous.html" title="describe continuous functions ">Continuous</a> : <span class="keyword">public</span> detail::continuity_base</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="classFeel_1_1Continuous.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1Continuous.html" title="describe continuous functions ">Continuous</a> : <span class="keyword">public</span> <a class="code" href="structFeel_1_1detail_1_1continuity__base.html">detail::continuity_base</a></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
@@ -182,7 +182,7 @@ $(document).ready(function(){initNavTree('continuity_8hpp_source.html','');});
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, <span class="keyword">typename</span> DofType&gt;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">class </span>apply</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="code" href="classFeel_1_1Continuous_1_1apply.html">  124</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classFeel_1_1Continuous_1_1apply.html">apply</a></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> result_type;</div>
@@ -190,7 +190,7 @@ $(document).ready(function(){initNavTree('continuity_8hpp_source.html','');});
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keyword">typedef</span> DofType dof_type;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> dof_type::fe_type fe_type;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        apply( MeshType&amp; M, DofType&amp; D )</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="classFeel_1_1Continuous_1_1apply.html">apply</a>( MeshType&amp; M, DofType&amp; D )</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            :</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            M_mesh( M ),</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            M_dof( D )</div>
@@ -218,7 +218,7 @@ $(document).ready(function(){initNavTree('continuity_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:21 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:28:31 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -238,14 +238,14 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    OpusApp( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv, AboutData <span class="keyword">const</span>&amp; ad, po::options_description <span class="keyword">const</span>&amp; od )</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        :</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        super( argc, argv, ad, <a class="code" href="namespaceFeel.html#a599520e9ce1572efc7e71afaef20fd70">opusapp_options</a>( ad.appName() ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( od ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( crbOptions() ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( feel_options() ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( eimOptions() ) ),</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        super( ad, <a class="code" href="namespaceFeel.html#a599520e9ce1572efc7e71afaef20fd70">opusapp_options</a>( ad.appName() ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( od ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( crbOptions() ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( feel_options() ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( eimOptions() ) ),</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        M_mode( ( CRBModelMode )option(_name=_o( this-&gt;<a class="code" href="classFeel_1_1Application.html#ac559fca482047d68e7382ba720592758">about</a>().appName(),<span class="stringliteral">&quot;run.mode&quot;</span> )).template as&lt;int&gt;() )</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        {</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            this-&gt;init();</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        }</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    OpusApp( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv, AboutData <span class="keyword">const</span>&amp; ad, po::options_description <span class="keyword">const</span>&amp; od, CRBModelMode mode )</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        :</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        super( argc, argv, ad, <a class="code" href="namespaceFeel.html#a599520e9ce1572efc7e71afaef20fd70">opusapp_options</a>( ad.appName() ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( od ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( crbOptions() ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( feel_options() ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( eimOptions() ) ),</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        super( ad, <a class="code" href="namespaceFeel.html#a599520e9ce1572efc7e71afaef20fd70">opusapp_options</a>( ad.appName() ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( od ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( crbOptions() ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( feel_options() ).<a class="code" href="classFeel_1_1Application.html#a3a665c340ba4df177090b4d78c1d9ded">add</a>( eimOptions() ) ),</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        M_mode( mode )</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        {</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            this-&gt;init();</div>
@@ -257,7 +257,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                M_current_path = fs::current_path();</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                std::srand( static_cast&lt;unsigned&gt;( std::time( 0 ) ) );</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                    std::cout &lt;&lt; this-&gt;<a class="code" href="classFeel_1_1Application.html#ac559fca482047d68e7382ba720592758">about</a>().<a class="code" href="classFeel_1_1AboutData.html#aa0656098984fb7a34fe15bfda0a6e10e">appName</a>() &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;[OpusApp] constructor &quot;</span> &lt;&lt; this-&gt;<a class="code" href="classFeel_1_1Application.html#ac559fca482047d68e7382ba720592758">about</a>().<a class="code" href="classFeel_1_1AboutData.html#aa0656098984fb7a34fe15bfda0a6e10e">appName</a>()  &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
@@ -320,13 +320,13 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">void</span> loadDB()</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        {</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keywordtype">int</span> proc_number = Environment::worldComm().globalRank();</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="keywordtype">int</span> global_size = Environment::worldComm().globalSize();</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keywordtype">int</span> proc_number = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank();</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="keywordtype">int</span> global_size = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalSize();</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            std::string pslogfile = ( boost::format(<span class="stringliteral">&quot;PsLogCrbOffline-%1%_%2%&quot;</span>) %global_size %proc_number ).str();</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <span class="keywordtype">bool</span> only_master=option(_name=<span class="stringliteral">&quot;crb.system-memory-evolution&quot;</span>).template as&lt;bool&gt;();</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <span class="keywordtype">bool</span> all_procs  =option(_name=<span class="stringliteral">&quot;crb.system-memory-evolution-on-all-procs&quot;</span>).template as&lt;bool&gt;();</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="keywordtype">bool</span> only_one_proc=only_master * ( Environment::worldComm().globalRank()==Environment::worldComm().masterRank() );</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="keywordtype">bool</span> only_one_proc=only_master * ( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank()==<a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() );</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="keywordtype">bool</span> write_memory_evolution = all_procs || only_one_proc ;</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordtype">bool</span> crb_use_predefined = option(_name=<span class="stringliteral">&quot;crb.use-predefined-WNmu&quot;</span>).template as&lt;bool&gt;();</div>
@@ -362,7 +362,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            {</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                <span class="keywordflow">if</span> ( M_mode == CRBModelMode::SCM )</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                {</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                    <span class="keywordflow">if</span>( proc_number == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                    <span class="keywordflow">if</span>( proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                        std::cout &lt;&lt; <span class="stringliteral">&quot;No SCM DB available, do scm offline computations first...\n&quot;</span>;</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                    <span class="keywordflow">if</span>( crb-&gt;scm()-&gt;doScmForMassMatrix() )</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                        crb-&gt;scm()-&gt;setScmForMassMatrix( <span class="keyword">true</span> );</div>
@@ -376,7 +376,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                <span class="keywordflow">if</span> ( M_mode == CRBModelMode::CRB )</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                    <span class="comment">//|| M_mode == CRBModelMode::SCM )</span></div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                    <span class="keywordflow">if</span>( proc_number == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                    <span class="keywordflow">if</span>( proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                        std::cout &lt;&lt; <span class="stringliteral">&quot;No CRB DB available, do crb offline computations...\n&quot;</span>;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                    crb-&gt;setOfflineStep( <span class="keyword">true</span> );</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                    crb-&gt;offline();</div>
@@ -425,7 +425,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            <span class="keywordtype">bool</span> export_solution = option(_name=_o( this-&gt;<a class="code" href="classFeel_1_1Application.html#ac559fca482047d68e7382ba720592758">about</a>().appName(),<span class="stringliteral">&quot;export-solution&quot;</span> )).template as&lt;bool&gt;();</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            <span class="keywordtype">int</span> proc_number =  Environment::worldComm().globalRank();</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            <span class="keywordtype">int</span> proc_number =  <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank();</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classFeel_1_1Application.html#a6d636004b73027e9dc226d7ec9e9d89c">vm</a>().count( <span class="stringliteral">&quot;help&quot;</span> ) )</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            {</div>
@@ -511,7 +511,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            {</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                <span class="keywordflow">if</span>( crb-&gt;printErrorDuringOfflineStep() )</div>
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                    crb-&gt;printErrorsDuringRbConstruction();</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                <span class="keywordflow">if</span> ( crb-&gt;showMuSelection() &amp;&amp; Environment::worldComm().globalRank()==Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                <span class="keywordflow">if</span> ( crb-&gt;showMuSelection() &amp;&amp; <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank()==<a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                    crb-&gt;printMuSelection();</div>
 <div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;            }</div>
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;</div>
@@ -566,10 +566,10 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;            <span class="keywordflow">if</span>( option(_name=<span class="stringliteral">&quot;crb.script-mode&quot;</span>).<span class="keyword">template</span> as&lt;bool&gt;() )</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                {</div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                    <span class="comment">// Sampling will be the parameter given by OT</span></div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                    <span class="keywordflow">if</span>( proc_number == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                    <span class="keywordflow">if</span>( proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                            buildSamplingFromCfg();</div>
 <div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                    Environment::worldComm().barrier();</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                    <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().barrier();</div>
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;</div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                    compute_fem = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                    compute_stat = <span class="keyword">false</span>;</div>
@@ -687,7 +687,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;                element_type u_crb; <span class="comment">// expansion of reduced solution</span></div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;                element_type u_crb_dual; <span class="comment">// expansion of reduced solution ( dual )</span></div>
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;<span class="preprocessor">#if !NDEBUG</span></div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;<span class="preprocessor"></span>                <span class="keywordflow">if</span>( proc_number == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;<span class="preprocessor"></span>                <span class="keywordflow">if</span>( proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;                {</div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;                    std::cout &lt;&lt; <span class="stringliteral">&quot;(&quot;</span> &lt;&lt; curpar &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; Sampling-&gt;size() &lt;&lt; <span class="stringliteral">&quot;) mu = [ &quot;</span>;</div>
 <div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;                    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i=0; i&lt;size-1; i++ ) std::cout&lt;&lt; mu[i] &lt;&lt;<span class="stringliteral">&quot; , &quot;</span>;</div>
@@ -747,7 +747,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;                        <span class="keywordflow">case</span>  CRBModelMode::PFEM:</div>
 <div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;                            {</div>
 <div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;                                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;PFEM mode&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;                                <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;                                <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;                                    std::cout &lt;&lt; <span class="stringliteral">&quot;PFEM mode&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;                                boost::mpi::timer ti;</div>
 <div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;</div>
@@ -762,7 +762,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;                                    exporter-&gt;step(0)-&gt;add( u_fem.name(), u_fem );</div>
 <div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;                                <span class="comment">//model-&gt;solve( mu );</span></div>
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;                                std::vector&lt;double&gt; o = boost::assign::list_of( model-&gt;output( output_index,mu , u_fem, <span class="keyword">true</span>) )( ti.elapsed() );</div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;                                <span class="keywordflow">if</span>(proc_number == Environment::worldComm().masterRank() ) std::cout &lt;&lt; <span class="stringliteral">&quot;output=&quot;</span> &lt;&lt; o[0] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;                                <span class="keywordflow">if</span>(proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() ) std::cout &lt;&lt; <span class="stringliteral">&quot;output=&quot;</span> &lt;&lt; o[0] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;                                printEntry( ostr, mu, o );</div>
 <div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;</div>
 <div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;                                std::ofstream res(option(_name=<span class="stringliteral">&quot;result-file&quot;</span>).<span class="keyword">template</span> as&lt;std::string&gt;() );</div>
@@ -774,7 +774,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;                        <span class="keywordflow">case</span>  CRBModelMode::CRB:</div>
 <div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;                            {</div>
 <div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;                                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;CRB mode\n&quot;</span>;</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;                                <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;                                <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;                                    std::cout &lt;&lt; <span class="stringliteral">&quot;CRB mode\n&quot;</span>;</div>
 <div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;</div>
 <div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;</div>
@@ -901,7 +901,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;                                {</div>
 <div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;                                    <span class="keywordtype">double</span> ocrb = o.template get&lt;0&gt;();</div>
 <div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;                                    std::vector&lt;double&gt; v = boost::assign::list_of( output_fem )( time_fem )( ocrb )( relative_estimated_error )( time_crb )( relative_error )( condition_number )( l2_error )( h1_error );</div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;                                    <span class="keywordflow">if</span>( proc_number == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;                                    <span class="keywordflow">if</span>( proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;                                    {</div>
 <div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;                                        std::cout &lt;&lt; <span class="stringliteral">&quot;output=&quot;</span> &lt;&lt; ocrb &lt;&lt; <span class="stringliteral">&quot; with &quot;</span> &lt;&lt; o.template get&lt;1&gt;() &lt;&lt; <span class="stringliteral">&quot; basis functions\n&quot;</span>;</div>
 <div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;                                        printEntry( file_summary_of_simulations, mu, v );</div>
@@ -929,7 +929,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;                                    <span class="comment">//    throw std::logic_error( &quot;ERROR TYPE must be 2 when using CRBTrilinear (no error estimation)&quot; );</span></div>
 <div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;                                    <span class="keywordtype">double</span> ocrb = o.template get&lt;0&gt;();</div>
 <div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;                                    std::vector&lt;double&gt; v = boost::assign::list_of( output_fem )( time_fem )( ocrb )( relative_estimated_error )( ti.elapsed() ) ( relative_error )( condition_number )( l2_error )( h1_error ) ;</div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;                                    <span class="keywordflow">if</span>( proc_number == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;                                    <span class="keywordflow">if</span>( proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;                                    {</div>
 <div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;                                        std::cout &lt;&lt; <span class="stringliteral">&quot;output=&quot;</span> &lt;&lt; ocrb &lt;&lt; <span class="stringliteral">&quot; with &quot;</span> &lt;&lt; o.template get&lt;1&gt;() &lt;&lt; <span class="stringliteral">&quot; basis functions  (relative error estimation on this output : &quot;</span> &lt;&lt; relative_estimated_error&lt;&lt;<span class="stringliteral">&quot;) \n&quot;</span>;</div>
 <div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;                                        <span class="comment">//std::ofstream file_summary_of_simulations( ( boost::format( &quot;summary_of_simulations_%d&quot; ) % o.template get&lt;2&gt;() ).str().c_str() ,std::ios::out | std::ios::app );</span></div>
@@ -1154,7 +1154,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;                                        conver[N]=boost::make_tuple( rel_err, l2_error, h1_error , relative_estimated_error, condition_number , output_error_bound_efficiency , relative_primal_solution_error_bound_efficiency );</div>
 <div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;</div>
 <div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;                                        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;N=&quot;</span> &lt;&lt; N &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; rel_err &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; l2_error &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; h1_error &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;condition_number&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;                                        <span class="keywordflow">if</span> ( proc_number == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;                                        <span class="keywordflow">if</span> ( proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;                                            std::cout &lt;&lt; <span class="stringliteral">&quot;N=&quot;</span> &lt;&lt; N &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; rel_err &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; l2_error &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; h1_error &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;relative_estimated_error&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;condition_number&lt;&lt;std::endl;</div>
 <div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;                                        M_mapConvCRB[<span class="stringliteral">&quot;L2&quot;</span>][N-1](curpar - 1) = l2_error;</div>
 <div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;                                        M_mapConvCRB[<span class="stringliteral">&quot;H1&quot;</span>][N-1](curpar - 1) = h1_error;</div>
@@ -1248,7 +1248,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;                                        }<span class="comment">//check residuals computations</span></div>
 <div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;</div>
 <div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;                                    }<span class="comment">//loop over basis functions ( N )</span></div>
-<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;                                    <span class="keywordflow">if</span>( proc_number == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;                                    <span class="keywordflow">if</span>( proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;                                    {</div>
 <div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;                                        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;save in logfile\n&quot;</span>;</div>
 <div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;                                        std::string mu_str;</div>
@@ -1294,7 +1294,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;                        <span class="keywordflow">case</span>  CRBModelMode::SCM:</div>
 <div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;                            {</div>
 <div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;</div>
-<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;                                <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;                                <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;                                    std::cout &lt;&lt; <span class="stringliteral">&quot;SCM mode\n&quot;</span>;</div>
 <div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;                                <span class="keywordtype">int</span> kmax = crb-&gt;scm()-&gt;KMax();</div>
 <div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;                                <span class="keyword">auto</span> o = crb-&gt;scm()-&gt;run( mu, kmax );</div>
@@ -1312,11 +1312,11 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;                                        <span class="keyword">auto</span> o = crb-&gt;scm()-&gt;run( mu, N);</div>
 <div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;                                        <span class="keywordtype">double</span> relative_error = o[6];</div>
 <div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;                                        conver[N]=boost::make_tuple( relative_error );</div>
-<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;                                        <span class="keywordflow">if</span> ( proc_number == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;                                        <span class="keywordflow">if</span> ( proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;                                            std::cout &lt;&lt; <span class="stringliteral">&quot;N=&quot;</span> &lt;&lt; N &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; relative_error &lt;&lt;std::endl;</div>
 <div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;                                        M_mapConvSCM[<span class="stringliteral">&quot;RelativeError&quot;</span>][N-1](curpar - 1) = relative_error;</div>
 <div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;                                    }</div>
-<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;                                    <span class="keywordflow">if</span>( proc_number == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;                                    <span class="keywordflow">if</span>( proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;                                    {</div>
 <div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;                                        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;save in logfile\n&quot;</span>;</div>
 <div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;                                        std::string mu_str;</div>
@@ -1350,7 +1350,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;            <span class="keywordflow">if</span>( export_solution )</div>
 <div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;                exporter-&gt;save();</div>
 <div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;</div>
-<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;            <span class="keywordflow">if</span>( proc_number == Environment::worldComm().masterRank() ) std::cout &lt;&lt; ostr.str() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;            <span class="keywordflow">if</span>( proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() ) std::cout &lt;&lt; ostr.str() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;</div>
 <div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;            <span class="keywordflow">if</span> (option(_name=<span class="stringliteral">&quot;eim.cvg-study&quot;</span>).<span class="keyword">template</span> as&lt;bool&gt;() &amp;&amp; M_mode==CRBModelMode::CRB)</div>
 <div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;                this-&gt;doTheEimConvergenceStat( Sampling-&gt;size() );</div>
@@ -1402,7 +1402,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;                    min_estimated_error = relative_estimated_error_vector.minCoeff(&amp;index_min_estimated_error);</div>
 <div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;                    mean_estimated_error = relative_estimated_error_vector.mean();</div>
 <div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;                }</div>
-<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;                <span class="keywordflow">if</span>( proc_number == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;                <span class="keywordflow">if</span>( proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;                {</div>
 <div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;                    file_summary_of_simulations &lt;&lt;<span class="stringliteral">&quot;\n\nStatistics\n&quot;</span>;</div>
 <div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;                    file_summary_of_simulations &lt;&lt;<span class="stringliteral">&quot;max of output error : &quot;</span>&lt;&lt;max_output_error&lt;&lt;<span class="stringliteral">&quot; at the &quot;</span>&lt;&lt;index_max_output_error+1&lt;&lt;<span class="stringliteral">&quot;^th simulation\n&quot;</span>;</div>
@@ -1433,7 +1433,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;                <span class="keywordtype">double</span> max_error = scm_relative_error.maxCoeff(&amp;index_max_error);</div>
 <div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;                <span class="keywordtype">double</span> min_error = scm_relative_error.minCoeff(&amp;index_min_error);</div>
 <div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;                <span class="keywordtype">double</span> mean_error = scm_relative_error.mean();</div>
-<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;                <span class="keywordflow">if</span>( proc_number == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;                <span class="keywordflow">if</span>( proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;                {</div>
 <div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;                    file_summary_of_simulations &lt;&lt;<span class="stringliteral">&quot;\n\nStatistics\n&quot;</span>;</div>
 <div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;                    file_summary_of_simulations &lt;&lt;<span class="stringliteral">&quot;max of relative error : &quot;</span>&lt;&lt;max_error&lt;&lt;<span class="stringliteral">&quot; at the &quot;</span>&lt;&lt;index_max_error+1&lt;&lt;<span class="stringliteral">&quot;^th simulation\n&quot;</span>;</div>
@@ -1551,8 +1551,8 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160;            <span class="keywordflow">throw</span> std::logic_error( <span class="stringliteral">&quot;[OpusApp::generateMemoryEvaluation] ERROR loading the file generated by ps-log (does not exist)&quot;</span> );</div>
 <div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160;        }<span class="comment">//no file</span></div>
 <div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;</div>
-<div class="line"><a name="l01467"></a><span class="lineno"> 1467</span>&#160;        <span class="keywordtype">int</span> proc_number = Environment::worldComm().globalRank();</div>
-<div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160;        <span class="keywordtype">int</span> global_size = Environment::worldComm().globalSize();</div>
+<div class="line"><a name="l01467"></a><span class="lineno"> 1467</span>&#160;        <span class="keywordtype">int</span> proc_number = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank();</div>
+<div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160;        <span class="keywordtype">int</span> global_size = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalSize();</div>
 <div class="line"><a name="l01469"></a><span class="lineno"> 1469</span>&#160;        std::string file_name = ( boost::format(<span class="stringliteral">&quot;MemoryEvolution-%1%_%2%&quot;</span>) %global_size %proc_number ).str();</div>
 <div class="line"><a name="l01470"></a><span class="lineno"> 1470</span>&#160;        std::ofstream file_write;</div>
 <div class="line"><a name="l01471"></a><span class="lineno"> 1471</span>&#160;        file_write.open( file_name,std::ios::out );</div>
@@ -1709,7 +1709,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01622"></a><span class="lineno"> 1622</span>&#160;            std::ofstream conv;</div>
 <div class="line"><a name="l01623"></a><span class="lineno"> 1623</span>&#160;            std::string file_name = <span class="stringliteral">&quot;cvg-eim-&quot;</span>+eim-&gt;name()+<span class="stringliteral">&quot;-stats.dat&quot;</span>;</div>
 <div class="line"><a name="l01624"></a><span class="lineno"> 1624</span>&#160;</div>
-<div class="line"><a name="l01625"></a><span class="lineno"> 1625</span>&#160;            <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01625"></a><span class="lineno"> 1625</span>&#160;            <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01626"></a><span class="lineno"> 1626</span>&#160;            {</div>
 <div class="line"><a name="l01627"></a><span class="lineno"> 1627</span>&#160;                conv.open(file_name, std::ios::app);</div>
 <div class="line"><a name="l01628"></a><span class="lineno"> 1628</span>&#160;                conv &lt;&lt; <span class="stringliteral">&quot;NbBasis&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Min&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Max&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Mean&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Variance&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -1724,7 +1724,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01637"></a><span class="lineno"> 1637</span>&#160;                    variance += (M_mapConvEIM[eim-&gt;name()][j](k) - mean)*(M_mapConvEIM[eim-&gt;name()][j](k) - mean)/sampling_size;</div>
 <div class="line"><a name="l01638"></a><span class="lineno"> 1638</span>&#160;                }</div>
 <div class="line"><a name="l01639"></a><span class="lineno"> 1639</span>&#160;</div>
-<div class="line"><a name="l01640"></a><span class="lineno"> 1640</span>&#160;                <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01640"></a><span class="lineno"> 1640</span>&#160;                <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01641"></a><span class="lineno"> 1641</span>&#160;                {</div>
 <div class="line"><a name="l01642"></a><span class="lineno"> 1642</span>&#160;                    conv &lt;&lt; j+1 &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span></div>
 <div class="line"><a name="l01643"></a><span class="lineno"> 1643</span>&#160;                         &lt;&lt; M_mapConvEIM[eim-&gt;name()][j].minCoeff() &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span></div>
@@ -1742,7 +1742,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01655"></a><span class="lineno"> 1655</span>&#160;            std::ofstream conv;</div>
 <div class="line"><a name="l01656"></a><span class="lineno"> 1656</span>&#160;            std::string file_name = <span class="stringliteral">&quot;cvg-eim-&quot;</span>+eim-&gt;name()+<span class="stringliteral">&quot;-stats.dat&quot;</span>;</div>
 <div class="line"><a name="l01657"></a><span class="lineno"> 1657</span>&#160;</div>
-<div class="line"><a name="l01658"></a><span class="lineno"> 1658</span>&#160;            <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01658"></a><span class="lineno"> 1658</span>&#160;            <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01659"></a><span class="lineno"> 1659</span>&#160;            {</div>
 <div class="line"><a name="l01660"></a><span class="lineno"> 1660</span>&#160;                conv.open(file_name, std::ios::app);</div>
 <div class="line"><a name="l01661"></a><span class="lineno"> 1661</span>&#160;                conv &lt;&lt; <span class="stringliteral">&quot;NbBasis&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Min&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Max&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Mean&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Variance&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -1755,7 +1755,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01668"></a><span class="lineno"> 1668</span>&#160;                <span class="keywordflow">for</span>( <span class="keywordtype">int</span> k=0; k &lt; sampling_size; k++)</div>
 <div class="line"><a name="l01669"></a><span class="lineno"> 1669</span>&#160;                    variance += (M_mapConvEIM[eim-&gt;name()][j](k) - mean)*(M_mapConvEIM[eim-&gt;name()][j](k) - mean)/sampling_size;</div>
 <div class="line"><a name="l01670"></a><span class="lineno"> 1670</span>&#160;</div>
-<div class="line"><a name="l01671"></a><span class="lineno"> 1671</span>&#160;                <span class="keywordflow">if</span>( Environment::worldComm().globalRank()  == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01671"></a><span class="lineno"> 1671</span>&#160;                <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank()  == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01672"></a><span class="lineno"> 1672</span>&#160;                {</div>
 <div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160;                    conv &lt;&lt; j+1 &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span></div>
 <div class="line"><a name="l01674"></a><span class="lineno"> 1674</span>&#160;                         &lt;&lt; M_mapConvEIM[eim-&gt;name()][j].minCoeff() &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span></div>
@@ -1790,7 +1790,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01703"></a><span class="lineno"> 1703</span>&#160;            std::ofstream conv;</div>
 <div class="line"><a name="l01704"></a><span class="lineno"> 1704</span>&#160;            std::string file_name = <span class="stringliteral">&quot;cvg-crb-&quot;</span>+ error_name +<span class="stringliteral">&quot;-stats.dat&quot;</span>;</div>
 <div class="line"><a name="l01705"></a><span class="lineno"> 1705</span>&#160;</div>
-<div class="line"><a name="l01706"></a><span class="lineno"> 1706</span>&#160;            <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01706"></a><span class="lineno"> 1706</span>&#160;            <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01707"></a><span class="lineno"> 1707</span>&#160;            {</div>
 <div class="line"><a name="l01708"></a><span class="lineno"> 1708</span>&#160;                <span class="keywordflow">if</span>( error_name==<span class="stringliteral">&quot;SolutionErrorEstimated&quot;</span> || error_name==<span class="stringliteral">&quot;SolutionDualErrorEstimated&quot;</span> || error_name==<span class="stringliteral">&quot;OutputEstimatedError&quot;</span> ||</div>
 <div class="line"><a name="l01709"></a><span class="lineno"> 1709</span>&#160;                    error_name==<span class="stringliteral">&quot;SolutionErrorBoundEfficiency&quot;</span> || error_name==<span class="stringliteral">&quot;SolutionDualErrorBoundEfficiency&quot;</span> || error_name==<span class="stringliteral">&quot;OutputErrorBoundEfficiency&quot;</span>)</div>
@@ -1812,7 +1812,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01725"></a><span class="lineno"> 1725</span>&#160;                <span class="keywordflow">for</span>( <span class="keywordtype">int</span> k=0; k &lt; sampling_size; k++)</div>
 <div class="line"><a name="l01726"></a><span class="lineno"> 1726</span>&#160;                    variance += (M_mapConvCRB[error_name][j](k) - mean)*(M_mapConvCRB[error_name][j](k) - mean)/sampling_size;</div>
 <div class="line"><a name="l01727"></a><span class="lineno"> 1727</span>&#160;</div>
-<div class="line"><a name="l01728"></a><span class="lineno"> 1728</span>&#160;                <span class="keywordflow">if</span>( Environment::worldComm().globalRank()  == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01728"></a><span class="lineno"> 1728</span>&#160;                <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank()  == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01729"></a><span class="lineno"> 1729</span>&#160;                {</div>
 <div class="line"><a name="l01730"></a><span class="lineno"> 1730</span>&#160;</div>
 <div class="line"><a name="l01731"></a><span class="lineno"> 1731</span>&#160;                    <span class="keywordflow">if</span>( error_name==<span class="stringliteral">&quot;SolutionErrorEstimated&quot;</span> || error_name==<span class="stringliteral">&quot;SolutionDualErrorEstimated&quot;</span> || error_name==<span class="stringliteral">&quot;OutputEstimatedError&quot;</span> ||</div>
@@ -1936,7 +1936,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01849"></a><span class="lineno"> 1849</span>&#160;            std::ofstream conv;</div>
 <div class="line"><a name="l01850"></a><span class="lineno"> 1850</span>&#160;            std::string file_name = <span class="stringliteral">&quot;cvg-scm-&quot;</span>+ error_name +<span class="stringliteral">&quot;-stats.dat&quot;</span>;</div>
 <div class="line"><a name="l01851"></a><span class="lineno"> 1851</span>&#160;</div>
-<div class="line"><a name="l01852"></a><span class="lineno"> 1852</span>&#160;            <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01852"></a><span class="lineno"> 1852</span>&#160;            <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01853"></a><span class="lineno"> 1853</span>&#160;            {</div>
 <div class="line"><a name="l01854"></a><span class="lineno"> 1854</span>&#160;                conv.open(file_name, std::ios::app);</div>
 <div class="line"><a name="l01855"></a><span class="lineno"> 1855</span>&#160;                conv &lt;&lt; <span class="stringliteral">&quot;Nb_basis&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Min&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Max&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Mean&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Variance&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -1949,7 +1949,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 <div class="line"><a name="l01862"></a><span class="lineno"> 1862</span>&#160;                <span class="keywordflow">for</span>( <span class="keywordtype">int</span> k=0; k &lt; sampling_size; k++)</div>
 <div class="line"><a name="l01863"></a><span class="lineno"> 1863</span>&#160;                    variance += (M_mapConvSCM[error_name][j](k) - mean)*(M_mapConvSCM[error_name][j](k) - mean)/sampling_size;</div>
 <div class="line"><a name="l01864"></a><span class="lineno"> 1864</span>&#160;</div>
-<div class="line"><a name="l01865"></a><span class="lineno"> 1865</span>&#160;                <span class="keywordflow">if</span>( Environment::worldComm().globalRank()  == Environment::worldComm().masterRank() )</div>
+<div class="line"><a name="l01865"></a><span class="lineno"> 1865</span>&#160;                <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank()  == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
 <div class="line"><a name="l01866"></a><span class="lineno"> 1866</span>&#160;                {</div>
 <div class="line"><a name="l01867"></a><span class="lineno"> 1867</span>&#160;                    conv &lt;&lt; j+1 &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span></div>
 <div class="line"><a name="l01868"></a><span class="lineno"> 1868</span>&#160;                         &lt;&lt; M_mapConvSCM[error_name][j].minCoeff() &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span></div>
@@ -2046,7 +2046,7 @@ $(document).ready(function(){initNavTree('opusapp_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:45 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:29:04 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

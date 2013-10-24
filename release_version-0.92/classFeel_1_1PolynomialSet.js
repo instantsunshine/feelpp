@@ -1,5 +1,7 @@
 var classFeel_1_1PolynomialSet =
 [
+    [ "Context", "classFeel_1_1PolynomialSet_1_1Context.html", "classFeel_1_1PolynomialSet_1_1Context" ],
+    [ "PreCompute", "classFeel_1_1PolynomialSet_1_1PreCompute.html", "classFeel_1_1PolynomialSet_1_1PreCompute" ],
     [ "basis_type", "classFeel_1_1PolynomialSet.html#a7048966b6e64910162b52ab0866277ba", null ],
     [ "component_type", "classFeel_1_1PolynomialSet.html#a19a908e62dfa5e6c5f3990b6d4013d61", null ],
     [ "convex_type", "classFeel_1_1PolynomialSet.html#a74ed782c9fd7f18a7ac4130468ed2e6a", null ],
@@ -25,7 +27,7 @@ var classFeel_1_1PolynomialSet =
     [ "BOOST_STATIC_ASSERT", "classFeel_1_1PolynomialSet.html#a2030e4b4006a51557f1b9ad6870a747b", null ],
     [ "BOOST_STATIC_ASSERT", "classFeel_1_1PolynomialSet.html#a0e0771b901f2bab354faca0b10d957c0", null ],
     [ "coeff", "classFeel_1_1PolynomialSet.html#a47c3378ff4692aa26fe75815bbd92033", null ],
-    [ "context", "classFeel_1_1PolynomialSet.html#ab914ede36116210688f920d5770e2166", null ],
+    [ "context", "classFeel_1_1PolynomialSet.html#aca9229af22ea85aefb3e73ce39201fa1", null ],
     [ "ctx", "classFeel_1_1PolynomialSet.html#a785ddf5213052ebcc34c2fe46911323a", null ],
     [ "ctx", "classFeel_1_1PolynomialSet.html#af675e93488bd0efb2a46a5da02f9cc97", null ],
     [ "d", "classFeel_1_1PolynomialSet.html#af1b85c8e12b5e98b0818f73216fc6148", null ],
@@ -55,6 +57,7 @@ var classFeel_1_1PolynomialSet =
     [ "polynomialsRange", "classFeel_1_1PolynomialSet.html#a452cf21fa77f2b1860b457a12d1f778e", null ],
     [ "polynomialsUpToDimension", "classFeel_1_1PolynomialSet.html#abd900d138922da2de657c7cffb56e76e", null ],
     [ "preCompute", "classFeel_1_1PolynomialSet.html#a63bd0d24c8d4e1e447962878fce75007", null ],
+    [ "preCompute", "classFeel_1_1PolynomialSet.html#a95bb07d2cd72a82abedfdfa802d2777d", null ],
     [ "preComputeOnFaces", "classFeel_1_1PolynomialSet.html#aa0c81fb4faf475c1fbbd773bd9f4b479", null ],
     [ "setCoefficient", "classFeel_1_1PolynomialSet.html#a4b48cdd141c5bdd03465fa3764f4b21d", null ]
 ];

@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -126,8 +126,9 @@ Christophe Prud'homme </dd></dl>
  <div class="center">
   <img src="classFeel_1_1Gauss.png" usemap="#Feel::Gauss&lt; Convex, Integration_Degree, T &gt;_map" alt=""/>
   <map id="Feel::Gauss&lt; Convex, Integration_Degree, T &gt;_map" name="Feel::Gauss&lt; Convex, Integration_Degree, T &gt;_map">
-<area href="classFeel_1_1PointSetQuadrature.html" title="Quadrature point set base class. " alt="Feel::PointSetQuadrature&lt; Convex, Integration_Degree, T &gt;" shape="rect" coords="0,56,354,80"/>
-<area href="classFeel_1_1PointSet.html" title="Class of all PointSet on a Convex. " alt="Feel::PointSet&lt; Convex, T &gt;" shape="rect" coords="0,0,354,24"/>
+<area href="classFeel_1_1PointSetQuadrature.html" title="Quadrature point set base class. " alt="Feel::PointSetQuadrature&lt; Convex, Integration_Degree, T &gt;" shape="rect" coords="0,112,354,136"/>
+<area href="classFeel_1_1PointSet.html" title="Class of all PointSet on a Convex. " alt="Feel::PointSet&lt; Convex, T &gt;" shape="rect" coords="0,56,354,80"/>
+<area href="classFeel_1_1VisitableBase.html" alt="Feel::VisitableBase&lt;&gt;" shape="rect" coords="0,0,354,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -135,7 +136,7 @@ Christophe Prud'homme </dd></dl>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classFeel_1_1PointSetQuadrature"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1PointSetQuadrature')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classFeel_1_1PointSetQuadrature.html">Feel::PointSetQuadrature&lt; Convex, Integration_Degree, T &gt;</a></td></tr>
 <tr class="memitem:a6ca38bbe16edec47b01078648701d504 inherit pub_types_classFeel_1_1PointSetQuadrature"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ca38bbe16edec47b01078648701d504"></a>
-typedef Face&#160;</td><td class="memItemRight" valign="bottom"><b>face_quadrature_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1PointSetQuadrature_1_1Face.html">Face</a>&#160;</td><td class="memItemRight" valign="bottom"><b>face_quadrature_type</b></td></tr>
 <tr class="separator:a6ca38bbe16edec47b01078648701d504 inherit pub_types_classFeel_1_1PointSetQuadrature"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9dcff7bc45b578a3248e42f49c498a6 inherit pub_types_classFeel_1_1PointSetQuadrature"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9dcff7bc45b578a3248e42f49c498a6"></a>
 typedef super::node_type&#160;</td><td class="memItemRight" valign="bottom"><b>node_type</b></td></tr>
@@ -179,7 +180,7 @@ std::vector&lt; std::map<br class="typebreak"/>
  &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1PointSetQuadrature.html#aa3d4a474ea0951a4b573e97cb1f98c75">allfweights</a> () const </td></tr>
 <tr class="separator:aa3d4a474ea0951a4b573e97cb1f98c75 inherit pub_methods_classFeel_1_1PointSetQuadrature"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59d221d81d353062993b5d8369078d5d inherit pub_methods_classFeel_1_1PointSetQuadrature"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59d221d81d353062993b5d8369078d5d"></a>
-face_quadrature_type&#160;</td><td class="memItemRight" valign="bottom"><b>face</b> (uint16_type f) const </td></tr>
+<a class="el" href="classFeel_1_1PointSetQuadrature_1_1Face.html">face_quadrature_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>face</b> (uint16_type f) const </td></tr>
 <tr class="separator:a59d221d81d353062993b5d8369078d5d inherit pub_methods_classFeel_1_1PointSetQuadrature"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75a6a713cd581b77bf7a180ae18322a3 inherit pub_methods_classFeel_1_1PointSetQuadrature"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75a6a713cd581b77bf7a180ae18322a3"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>FEELPP_DEFINE_VISITABLE</b> ()</td></tr>
@@ -270,22 +271,21 @@ static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_face_
 <tr class="inherit_header pro_methods_classFeel_1_1PointSetQuadrature"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classFeel_1_1PointSetQuadrature')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classFeel_1_1PointSetQuadrature.html">Feel::PointSetQuadrature&lt; Convex, Integration_Degree, T &gt;</a></td></tr>
 <tr class="memitem:aa0fd6cd51a00712aba61ca139d100fdf inherit pro_methods_classFeel_1_1PointSetQuadrature"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa0fd6cd51a00712aba61ca139d100fdf"></a>
 template&lt;typename Elem , typename GM , typename IM &gt; </td></tr>
-<tr class="memitem:aa0fd6cd51a00712aba61ca139d100fdf inherit pro_methods_classFeel_1_1PointSetQuadrature"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>constructQROnFace</b> (Elem const &amp;ref_convex, boost::shared_ptr&lt; GM &gt; const &amp;__gm, boost::shared_ptr&lt; IM &gt; const &amp;__qr_face)</td></tr>
+<tr class="memitem:aa0fd6cd51a00712aba61ca139d100fdf inherit pro_methods_classFeel_1_1PointSetQuadrature"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>constructQROnFace</b> (Elem const &amp;ref_convex, boost::shared_ptr&lt; GM &gt; const &amp;__gm, boost::shared_ptr&lt; <a class="el" href="structFeel_1_1IM.html">IM</a> &gt; const &amp;__qr_face)</td></tr>
 <tr class="separator:aa0fd6cd51a00712aba61ca139d100fdf inherit pro_methods_classFeel_1_1PointSetQuadrature"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a583538d47326b0f352ae5cc9a99bdd41 inherit pro_methods_classFeel_1_1PointSetQuadrature"><td class="memTemplParams" colspan="2"><a class="anchor" id="a583538d47326b0f352ae5cc9a99bdd41"></a>
 template&lt;typename Elem , typename GM , typename IM &gt; </td></tr>
-<tr class="memitem:a583538d47326b0f352ae5cc9a99bdd41 inherit pro_methods_classFeel_1_1PointSetQuadrature"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>constructQROnFace</b> (Elem const &amp;, boost::shared_ptr&lt; GM &gt; const &amp;, boost::shared_ptr&lt; IM &gt; const &amp;, mpl::bool_&lt; false &gt;)</td></tr>
+<tr class="memitem:a583538d47326b0f352ae5cc9a99bdd41 inherit pro_methods_classFeel_1_1PointSetQuadrature"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>constructQROnFace</b> (Elem const &amp;, boost::shared_ptr&lt; GM &gt; const &amp;, boost::shared_ptr&lt; <a class="el" href="structFeel_1_1IM.html">IM</a> &gt; const &amp;, mpl::bool_&lt; false &gt;)</td></tr>
 <tr class="separator:a583538d47326b0f352ae5cc9a99bdd41 inherit pro_methods_classFeel_1_1PointSetQuadrature"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a211e1323de3a68342c04e24c8a97519f inherit pro_methods_classFeel_1_1PointSetQuadrature"><td class="memTemplParams" colspan="2"><a class="anchor" id="a211e1323de3a68342c04e24c8a97519f"></a>
 template&lt;typename Elem , typename GM , typename IM &gt; </td></tr>
-<tr class="memitem:a211e1323de3a68342c04e24c8a97519f inherit pro_methods_classFeel_1_1PointSetQuadrature"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>constructQROnFace</b> (Elem const &amp;ref_convex, boost::shared_ptr&lt; GM &gt; const &amp;__gm, boost::shared_ptr&lt; IM &gt; const &amp;__qr_face, mpl::bool_&lt; true &gt;)</td></tr>
+<tr class="memitem:a211e1323de3a68342c04e24c8a97519f inherit pro_methods_classFeel_1_1PointSetQuadrature"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>constructQROnFace</b> (Elem const &amp;ref_convex, boost::shared_ptr&lt; GM &gt; const &amp;__gm, boost::shared_ptr&lt; <a class="el" href="structFeel_1_1IM.html">IM</a> &gt; const &amp;__qr_face, mpl::bool_&lt; true &gt;)</td></tr>
 <tr class="separator:a211e1323de3a68342c04e24c8a97519f inherit pro_methods_classFeel_1_1PointSetQuadrature"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6111431f0a3efaae7da1a3196b7da0cc inherit pro_methods_classFeel_1_1PointSetQuadrature"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6111431f0a3efaae7da1a3196b7da0cc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setWeights</b> (weights_type const &amp;w)</td></tr>
 <tr class="separator:a6111431f0a3efaae7da1a3196b7da0cc inherit pro_methods_classFeel_1_1PointSetQuadrature"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_static_methods_classFeel_1_1VisitableBase"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classFeel_1_1VisitableBase')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classFeel_1_1VisitableBase.html">Feel::VisitableBase&lt; R, CatchAll &gt;</a></td></tr>
-<tr class="memitem:a3c4ac7ee3fa9b1ef11cd1e075cb38e49 inherit pro_static_methods_classFeel_1_1VisitableBase"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a3c4ac7ee3fa9b1ef11cd1e075cb38e49 inherit pro_static_methods_classFeel_1_1VisitableBase"><td class="memTemplItemLeft" align="right" valign="top">static return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>acceptImpl</b> (T *visited, <a class="el" href="classFeel_1_1VisitorBase.html">VisitorBase</a> *guest)</td></tr>
+<tr class="inherit_header pro_static_methods_classFeel_1_1VisitableBase"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classFeel_1_1VisitableBase')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classFeel_1_1VisitableBase.html">Feel::VisitableBase&lt;&gt;</a></td></tr>
+<tr class="memitem:a3c4ac7ee3fa9b1ef11cd1e075cb38e49 inherit pro_static_methods_classFeel_1_1VisitableBase"><td class="memItemLeft" align="right" valign="top">static return_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VisitableBase.html#a3c4ac7ee3fa9b1ef11cd1e075cb38e49">acceptImpl</a> (T *visited, <a class="el" href="classFeel_1_1VisitorBase.html">VisitorBase</a> *guest)</td></tr>
 <tr class="separator:a3c4ac7ee3fa9b1ef11cd1e075cb38e49 inherit pro_static_methods_classFeel_1_1VisitableBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classFeel_1_1PointSetQuadrature"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classFeel_1_1PointSetQuadrature')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classFeel_1_1PointSetQuadrature.html">Feel::PointSetQuadrature&lt; Convex, Integration_Degree, T &gt;</a></td></tr>
 <tr class="memitem:af2940b690154bdd1bc05738b3a2ba7fa inherit pro_attribs_classFeel_1_1PointSetQuadrature"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2940b690154bdd1bc05738b3a2ba7fa"></a>
@@ -312,7 +312,7 @@ std::vector&lt; std::map<br class="typebreak"/>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:57 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:29:34 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

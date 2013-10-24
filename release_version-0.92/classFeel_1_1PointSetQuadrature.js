@@ -1,5 +1,6 @@
 var classFeel_1_1PointSetQuadrature =
 [
+    [ "Face", "classFeel_1_1PointSetQuadrature_1_1Face.html", "classFeel_1_1PointSetQuadrature_1_1Face" ],
     [ "face_quadrature_type", "classFeel_1_1PointSetQuadrature.html#a6ca38bbe16edec47b01078648701d504", null ],
     [ "node_type", "classFeel_1_1PointSetQuadrature.html#af9dcff7bc45b578a3248e42f49c498a6", null ],
     [ "nodes_type", "classFeel_1_1PointSetQuadrature.html#a647687f6f9e454f113ce79033a36c206", null ],

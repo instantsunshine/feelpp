@@ -1,5 +1,7 @@
 var classFeel_1_1DofTable =
 [
+    [ "element_access", "structFeel_1_1DofTable_1_1element__access.html", "structFeel_1_1DofTable_1_1element__access" ],
+    [ "face_access", "structFeel_1_1DofTable_1_1face__access.html", "structFeel_1_1DofTable_1_1face__access" ],
     [ "Container_fromface", "classFeel_1_1DofTable.html#a54deb5e14cf5183e690a8b2f1359674e", null ],
     [ "continuity_type", "classFeel_1_1DofTable.html#a1e79cbe1ea134ed2e55c5dfe4aa49f12", null ],
     [ "convex_type", "classFeel_1_1DofTable.html#aff472adc82366b699be84bfe5f8d5905", null ],

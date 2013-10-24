@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -123,7 +123,7 @@ class Feel::Backend&lt; T &gt;</h3>
  <div class="center">
   <img src="classFeel_1_1Backend.png" usemap="#Feel::Backend&lt; T &gt;_map" alt=""/>
   <map id="Feel::Backend&lt; T &gt;_map" name="Feel::Backend&lt; T &gt;_map">
-<area href="classFeel_1_1BackendEigen.html" alt="Feel::BackendEigen&lt; T, _Options &gt;" shape="rect" coords="0,56,214,80"/>
+<area href="classFeel_1_1BackendEigen.html" alt="Feel::BackendEigen&lt; T, _Options &gt;" shape="rect" coords="0,112,294,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -134,7 +134,7 @@ Public Types</h2></td></tr>
 typedef T&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
 <tr class="separator:a84d7e4e8815fef30dafaa3387ea9a9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1aa3b619df8c92a171793bc80ebffe33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1aa3b619df8c92a171793bc80ebffe33"></a>
-typedef type_traits&lt; T &gt;::real_type&#160;</td><td class="memItemRight" valign="bottom"><b>real_type</b></td></tr>
+typedef <a class="el" href="structFeel_1_1type__traits.html">type_traits</a>&lt; T &gt;::real_type&#160;</td><td class="memItemRight" valign="bottom"><b>real_type</b></td></tr>
 <tr class="separator:a1aa3b619df8c92a171793bc80ebffe33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3289d97e3a68539e3637101ed97ee60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3289d97e3a68539e3637101ed97ee60"></a>
 typedef <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; value_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vector_type</b></td></tr>
@@ -248,7 +248,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>converged</b> () cons
 <tr class="memitem:a16eced4cb169375eecc11ccc76621a18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16eced4cb169375eecc11ccc76621a18"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>transpose</b> () const </td></tr>
 <tr class="separator:a16eced4cb169375eecc11ccc76621a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a084ba908a4171edac918e7aad7560d27"><td class="memItemLeft" align="right" valign="top">WorldComm const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a084ba908a4171edac918e7aad7560d27">comm</a> () const </td></tr>
+<tr class="memitem:a084ba908a4171edac918e7aad7560d27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a084ba908a4171edac918e7aad7560d27">comm</a> () const </td></tr>
 <tr class="separator:a084ba908a4171edac918e7aad7560d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ababfdb3501ad49b7f7fb328f4fde5ddb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ababfdb3501ad49b7f7fb328f4fde5ddb"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>showKSPMonitor</b> () const </td></tr>
@@ -348,10 +348,10 @@ preconditioner_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>M_p
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Constructors, destructor</h2></td></tr>
 <tr class="memitem:abf4e27c4a6f863c6c9ad6743da1d6baf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf4e27c4a6f863c6c9ad6743da1d6baf"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Backend</b> (WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Backend</b> (<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
 <tr class="separator:abf4e27c4a6f863c6c9ad6743da1d6baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a305d0917e5920bd334b566ec19011e18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a305d0917e5920bd334b566ec19011e18"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Backend</b> (po::variables_map const &amp;vm, std::string const &amp;<a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">prefix</a>=&quot;&quot;, WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Backend</b> (po::variables_map const &amp;vm, std::string const &amp;<a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">prefix</a>=&quot;&quot;, <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
 <tr class="separator:a305d0917e5920bd334b566ec19011e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc5ca22f72ad952dbed1e41fffe324cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc5ca22f72ad952dbed1e41fffe324cc"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Backend</b> (<a class="el" href="classFeel_1_1Backend.html">Backend</a> const &amp;)</td></tr>
@@ -378,21 +378,21 @@ virtual sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"
 template&lt;typename DomainSpace , typename ImageSpace &gt; </td></tr>
 <tr class="memitem:a1b38302501043eb08a7a58f43312b966"><td class="memTemplItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>newMatrix</b> (DomainSpace const &amp;dm, ImageSpace const &amp;im, sparse_matrix_ptrtype const &amp;M, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> prop=<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae">NON_HERMITIAN</a>)</td></tr>
 <tr class="separator:a1b38302501043eb08a7a58f43312b966"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae814550c53cc42c83dc4c3e252146905"><td class="memItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ae814550c53cc42c83dc4c3e252146905">newBlockMatrixImpl</a> (vf::BlocksBase&lt; sparse_matrix_ptrtype &gt; const &amp;b, bool copy_values=true, bool diag_is_nonzero=true)</td></tr>
+<tr class="memitem:ae814550c53cc42c83dc4c3e252146905"><td class="memItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ae814550c53cc42c83dc4c3e252146905">newBlockMatrixImpl</a> (<a class="el" href="structFeel_1_1vf_1_1BlocksBase.html">vf::BlocksBase</a>&lt; sparse_matrix_ptrtype &gt; const &amp;b, bool copy_values=true, bool diag_is_nonzero=true)</td></tr>
 <tr class="separator:ae814550c53cc42c83dc4c3e252146905"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a673f80eccb5035439748045c0b2d846b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a673f80eccb5035439748045c0b2d846b"></a>
-sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>newBlockMatrixImpl</b> (vf::BlocksBase&lt; boost::shared_ptr&lt; <a class="el" href="classFeel_1_1GraphCSR.html">GraphCSR</a> &gt; &gt; const &amp;b, bool copy_values=true, bool diag_is_nonzero=true)</td></tr>
+sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>newBlockMatrixImpl</b> (<a class="el" href="structFeel_1_1vf_1_1BlocksBase.html">vf::BlocksBase</a>&lt; boost::shared_ptr&lt; <a class="el" href="classFeel_1_1GraphCSR.html">GraphCSR</a> &gt; &gt; const &amp;b, bool copy_values=true, bool diag_is_nonzero=true)</td></tr>
 <tr class="separator:a673f80eccb5035439748045c0b2d846b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a339c85259745dbf2d883c9464b994a8c"><td class="memTemplParams" colspan="2">template&lt;typename BlockType  = vector_ptrtype&gt; </td></tr>
-<tr class="memitem:a339c85259745dbf2d883c9464b994a8c"><td class="memTemplItemLeft" align="right" valign="top">vector_ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a339c85259745dbf2d883c9464b994a8c">newBlockVectorImpl</a> (vf::BlocksBase&lt; BlockType &gt; const &amp;b, bool copy_values=true)</td></tr>
+<tr class="memitem:a339c85259745dbf2d883c9464b994a8c"><td class="memTemplItemLeft" align="right" valign="top">vector_ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a339c85259745dbf2d883c9464b994a8c">newBlockVectorImpl</a> (<a class="el" href="structFeel_1_1vf_1_1BlocksBase.html">vf::BlocksBase</a>&lt; BlockType &gt; const &amp;b, bool copy_values=true)</td></tr>
 <tr class="separator:a339c85259745dbf2d883c9464b994a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6df4b22de06a12fb97d95a35e08cd0c"><td class="memItemLeft" align="right" valign="top">virtual vector_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#aa6df4b22de06a12fb97d95a35e08cd0c">newVector</a> (datamap_ptrtype const &amp;dm)=0</td></tr>
 <tr class="separator:aa6df4b22de06a12fb97d95a35e08cd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa94fb4e059fa9ef32e77b22b9f6a6b1e"><td class="memItemLeft" align="right" valign="top">virtual vector_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#aa94fb4e059fa9ef32e77b22b9f6a6b1e">newVector</a> (const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n, const <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> n_local)=0</td></tr>
 <tr class="separator:aa94fb4e059fa9ef32e77b22b9f6a6b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5bc3b49e46db5039d07ac87ec3fdd42"><td class="memItemLeft" align="right" valign="top">static backend_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">build</a> (<a class="el" href="namespaceFeel.html#a4da28efa430cc4bd3a6a86cde30a9809">BackendType</a>=BACKEND_GMM, WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
+<tr class="memitem:ab5bc3b49e46db5039d07ac87ec3fdd42"><td class="memItemLeft" align="right" valign="top">static backend_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">build</a> (<a class="el" href="namespaceFeel.html#a4da28efa430cc4bd3a6a86cde30a9809">BackendType</a>=BACKEND_GMM, <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
 <tr class="separator:ab5bc3b49e46db5039d07ac87ec3fdd42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32239a0ae0d141e881606ba4dc29497d"><td class="memItemLeft" align="right" valign="top">static backend_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a32239a0ae0d141e881606ba4dc29497d">build</a> (po::variables_map const &amp;vm, std::string const &amp;<a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">prefix</a>=&quot;&quot;, WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
+<tr class="memitem:a32239a0ae0d141e881606ba4dc29497d"><td class="memItemLeft" align="right" valign="top">static backend_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a32239a0ae0d141e881606ba4dc29497d">build</a> (po::variables_map const &amp;vm, std::string const &amp;<a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">prefix</a>=&quot;&quot;, <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
 <tr class="separator:a32239a0ae0d141e881606ba4dc29497d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -551,8 +551,8 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">WorldComm const &amp;&#160;</td>
-          <td class="paramname"><em>worldComm</em> = <code>Environment::worldComm()</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td>
+          <td class="paramname"><em>worldComm</em> = <code><a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -594,8 +594,8 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">WorldComm const &amp;&#160;</td>
-          <td class="paramname"><em>worldComm</em> = <code>Environment::worldComm()</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td>
+          <td class="paramname"><em>worldComm</em> = <code><a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -610,6 +610,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Builds a <code><a class="el" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">Backend</a></code> </p>
+
+<p>References <a class="el" href="classFeel_1_1detail_1_1Environment.html#ab2b28bbafcdbad667fd52b22702be57d">Feel::detail::Environment::vm()</a>.</p>
 
 </div>
 </div>
@@ -649,7 +651,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">WorldComm const&amp; <a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::comm </td>
+          <td class="memname"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const&amp; <a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::comm </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -967,7 +969,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">sparse_matrix_ptrtype <a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::newBlockMatrixImpl </td>
           <td>(</td>
-          <td class="paramtype">vf::BlocksBase&lt; sparse_matrix_ptrtype &gt; const &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structFeel_1_1vf_1_1BlocksBase.html">vf::BlocksBase</a>&lt; sparse_matrix_ptrtype &gt; const &amp;&#160;</td>
           <td class="paramname"><em>b</em>, </td>
         </tr>
         <tr>
@@ -1012,7 +1014,7 @@ template&lt;typename BlockType  = vector_ptrtype&gt; </div>
         <tr>
           <td class="memname">vector_ptrtype <a class="el" href="classFeel_1_1Backend.html">Feel::Backend</a>&lt; T &gt;::newBlockVectorImpl </td>
           <td>(</td>
-          <td class="paramtype">vf::BlocksBase&lt; BlockType &gt; const &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structFeel_1_1vf_1_1BlocksBase.html">vf::BlocksBase</a>&lt; BlockType &gt; const &amp;&#160;</td>
           <td class="paramname"><em>b</em>, </td>
         </tr>
         <tr>
@@ -2113,7 +2115,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:55 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:29:29 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

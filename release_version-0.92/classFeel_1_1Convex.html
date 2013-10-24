@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -122,12 +122,16 @@ class Feel::Convex&lt; Dim, Order, RDim &gt;</h3>
  <div class="center">
   <img src="classFeel_1_1Convex.png" usemap="#Feel::Convex&lt; Dim, Order, RDim &gt;_map" alt=""/>
   <map id="Feel::Convex&lt; Dim, Order, RDim &gt;_map" name="Feel::Convex&lt; Dim, Order, RDim &gt;_map">
-<area href="classFeel_1_1Simplex.html" title="simplex of dimension Dim " alt="Feel::Simplex&lt; Dim, Order, RDim &gt;" shape="rect" coords="0,56,247,80"/>
-<area href="classFeel_1_1Simplex.html" alt="Feel::Simplex&lt; 0, 1, Dim &gt;" shape="rect" coords="257,56,504,80"/>
-<area href="classFeel_1_1GeoEntity.html" alt="Feel::GeoEntity&lt; Simplex&lt; 0, 1, Dim &gt; &gt;" shape="rect" coords="257,112,504,136"/>
-<area href="classFeel_1_1Geo0D.html" alt="Feel::Geo0D&lt; Dim, T &gt;" shape="rect" coords="128,168,375,192"/>
-<area href="classFeel_1_1Geo0D.html" alt="Feel::Geo0D&lt; 3 &gt;" shape="rect" coords="385,168,632,192"/>
-<area href="classFeel_1_1GeoElement0D.html" alt="Feel::GeoElement0D&lt; Dim, SubFace, T &gt;" shape="rect" coords="128,224,375,248"/>
+<area href="classFeel_1_1ConvexBase.html" alt="Feel::ConvexBase" shape="rect" coords="452,0,894,24"/>
+<area href="classFeel_1_1Hypercube.html" alt="Feel::Hypercube&lt; Dim, Order, RDim &gt;" shape="rect" coords="0,112,442,136"/>
+<area href="classFeel_1_1Simplex.html" title="simplex of dimension Dim " alt="Feel::Simplex&lt; Dim, Order, RDim &gt;" shape="rect" coords="452,112,894,136"/>
+<area href="classFeel_1_1Simplex.html" alt="Feel::Simplex&lt; 0, 1, Dim &gt;" shape="rect" coords="904,112,1346,136"/>
+<area href="classFeel_1_1Reference_3_01Hypercube_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html" alt="Feel::Reference&lt; Hypercube&lt; Dim, Order, RDim &gt;, Dim, Order, RDim, T &gt;" shape="rect" coords="0,168,442,192"/>
+<area href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html" alt="Feel::Reference&lt; Simplex&lt; Dim, Order, RDim &gt;, Dim, Order, RDim, T &gt;" shape="rect" coords="452,168,894,192"/>
+<area href="classFeel_1_1GeoEntity.html" alt="Feel::GeoEntity&lt; Simplex&lt; 0, 1, Dim &gt; &gt;" shape="rect" coords="904,168,1346,192"/>
+<area href="classFeel_1_1Geo0D.html" alt="Feel::Geo0D&lt; Dim, T &gt;" shape="rect" coords="678,224,1120,248"/>
+<area href="classFeel_1_1Geo0D.html" alt="Feel::Geo0D&lt; 3 &gt;" shape="rect" coords="1130,224,1572,248"/>
+<area href="classFeel_1_1GeoElement0D.html" alt="Feel::GeoElement0D&lt; Dim, SubFace, T &gt;" shape="rect" coords="678,280,1120,304"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -159,7 +163,7 @@ Static Public Attributes</h2></td></tr>
 static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nDim</b> = Dim</td></tr>
 <tr class="separator:a5df6ca6a6a5d425ff2c304eb1b5fbbbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d10547ebf7ea8c3f060c66dcd50115f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d10547ebf7ea8c3f060c66dcd50115f"></a>
-static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nOrder</b> = Order</td></tr>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nOrder</b> = <a class="el" href="structFeel_1_1Order.html">Order</a></td></tr>
 <tr class="separator:a6d10547ebf7ea8c3f060c66dcd50115f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89d45b3c2674d8eeb7771198e1aaebd7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89d45b3c2674d8eeb7771198e1aaebd7"></a>
 static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nRealDim</b> = RDim</td></tr>
@@ -171,7 +175,7 @@ static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>n
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:55 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:29:30 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

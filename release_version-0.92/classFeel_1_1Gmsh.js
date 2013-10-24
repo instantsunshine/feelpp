@@ -1,5 +1,6 @@
 var classFeel_1_1Gmsh =
 [
+    [ "Factory", "structFeel_1_1Gmsh_1_1Factory.html", "structFeel_1_1Gmsh_1_1Factory" ],
     [ "DomainType", "classFeel_1_1Gmsh.html#a31488b937b792e7375be5e0713003f5e", [
       [ "GMSH_REFERENCE_DOMAIN", "classFeel_1_1Gmsh.html#a31488b937b792e7375be5e0713003f5ead4dc32a8969bbb89097705418efa424e", null ],
       [ "GMSH_REAL_DOMAIN", "classFeel_1_1Gmsh.html#a31488b937b792e7375be5e0713003f5ea1f71e5dad973f6dd3a36379481a8d812", null ]

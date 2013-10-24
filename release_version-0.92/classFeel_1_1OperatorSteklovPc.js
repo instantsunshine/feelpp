@@ -1,5 +1,6 @@
 var classFeel_1_1OperatorSteklovPc =
 [
+    [ "integrate_type", "structFeel_1_1OperatorSteklovPc_1_1integrate__type.html", "structFeel_1_1OperatorSteklovPc_1_1integrate__type" ],
     [ "backend_ptrtype", "classFeel_1_1OperatorSteklovPc.html#a75f8a32b85c129429c613dd37df861c2", null ],
     [ "backend_type", "classFeel_1_1OperatorSteklovPc.html#ad008a564facf157be9125d1e56b7c747", null ],
     [ "image_element_type", "classFeel_1_1OperatorSteklovPc.html#a4adc8780cd425ffb6436a18a9aaf0b13", null ],

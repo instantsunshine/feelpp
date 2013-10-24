@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -132,41 +132,41 @@ $(document).ready(function(){initNavTree('adtypeorder0_8hpp_source.html','');});
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span>Feel</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keywordtype">int</span> Nvar, <span class="keywordtype">int</span> Var&gt;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">class </span>ADType&lt;T, Nvar, 0, Var&gt;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="classFeel_1_1ADType_3_01T_00_01Nvar_00_010_00_01Var_01_4.html">   52</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1ADType.html" title="Automatically Diffentiated Numerical Type. ">ADType</a>&lt;T, Nvar, 0, Var&gt;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">enum</span> { nvar = Nvar };</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">enum</span> { order = 1 };</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">typedef</span> ADVariable&lt;Var&gt; variable_type;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structFeel_1_1ADVariable.html">ADVariable&lt;Var&gt;</a> <a class="code" href="structFeel_1_1ADVariable.html">variable_type</a>;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">typedef</span> ADType&lt;T, Nvar, 0, Var&gt; This;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1ADType_3_01T_00_01Nvar_00_010_00_01Var_01_4.html">ADType&lt;T, Nvar, 0, Var&gt;</a> <a class="code" href="classFeel_1_1ADType_3_01T_00_01Nvar_00_010_00_01Var_01_4.html">This</a>;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> NumT, <span class="keywordtype">int</span> NumVar, <span class="keywordtype">int</span> Order, <span class="keywordtype">int</span> VarNum&gt; <span class="keyword">friend</span> <span class="keyword">class </span>ADType;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> NumT, <span class="keywordtype">int</span> NumVar, <span class="keywordtype">int</span> Order, <span class="keywordtype">int</span> VarNum&gt; <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classFeel_1_1ADType.html" title="Automatically Diffentiated Numerical Type. ">ADType</a>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">operator</span> T()</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> M_val;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    ADType (  T __v = 0 )</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classFeel_1_1ADType.html" title="Automatically Diffentiated Numerical Type. ">ADType</a> (  T __v = 0 )</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        :</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        M_val (  __v )</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">template</span>&lt;<span class="keywordtype">int</span> VarNum&gt;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    ADType( ADType&lt;T,Nvar,0,VarNum&gt; <span class="keyword">const</span>&amp; sad )</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classFeel_1_1ADType.html" title="Automatically Diffentiated Numerical Type. ">ADType</a>( <a class="code" href="classFeel_1_1ADType.html" title="Automatically Diffentiated Numerical Type. ">ADType&lt;T,Nvar,0,VarNum&gt;</a> <span class="keyword">const</span>&amp; sad )</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        :</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        M_val( sad.M_val )</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ExprT&gt;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    ADType ( <span class="keyword">const</span> ADExpr&lt;ExprT&gt;&amp; expr )</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    ADType ( <span class="keyword">const</span> <a class="code" href="classFeel_1_1ADExpr.html" title="brief description ">ADExpr&lt;ExprT&gt;</a>&amp; expr )</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        :</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        M_val( 0 )</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
@@ -187,20 +187,20 @@ $(document).ready(function(){initNavTree('adtypeorder0_8hpp_source.html','');});
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    This&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( T <span class="keyword">const</span>&amp; );</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    This&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( This <span class="keyword">const</span>&amp; );</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> ExprT&gt; This&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( <span class="keyword">const</span> ADExpr&lt;ExprT&gt;&amp; expr );</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="classFeel_1_1ADType_3_01T_00_01Nvar_00_010_00_01Var_01_4.html">This</a>&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( T <span class="keyword">const</span>&amp; );</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="classFeel_1_1ADType_3_01T_00_01Nvar_00_010_00_01Var_01_4.html">This</a>&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( <a class="code" href="classFeel_1_1ADType_3_01T_00_01Nvar_00_010_00_01Var_01_4.html">This</a> <span class="keyword">const</span>&amp; );</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> ExprT&gt; <a class="code" href="classFeel_1_1ADType_3_01T_00_01Nvar_00_010_00_01Var_01_4.html">This</a>&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( <span class="keyword">const</span> <a class="code" href="classFeel_1_1ADExpr.html" title="brief description ">ADExpr&lt;ExprT&gt;</a>&amp; expr );</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    ADExpr&lt; ADUnaryPlus&lt; This &gt; &gt; operator+ ()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="code" href="classFeel_1_1ADType_3_01T_00_01Nvar_00_010_00_01Var_01_4.html#a4fce44bc5ff61352262d0678c95e3455">  124</a></span>&#160;    <a class="code" href="classFeel_1_1ADExpr.html" title="brief description ">ADExpr&lt; ADUnaryPlus&lt; This &gt;</a> &gt; operator+ ()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keyword">typedef</span> ADUnaryPlus&lt;This&gt; expr_t;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> ADExpr&lt;expr_t&gt; ( expr_t ( *<span class="keyword">this</span> ) );</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1ADUnaryPlus.html">ADUnaryPlus&lt;This&gt;</a> expr_t;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1ADExpr.html" title="brief description ">ADExpr&lt;expr_t&gt;</a> ( expr_t ( *<span class="keyword">this</span> ) );</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    ADExpr&lt; ADUnaryMinus&lt; This &gt; &gt; operator- ()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="code" href="classFeel_1_1ADType_3_01T_00_01Nvar_00_010_00_01Var_01_4.html#a20728c946f1eed07cc77d1bf434b87b8">  131</a></span>&#160;    <a class="code" href="classFeel_1_1ADExpr.html" title="brief description ">ADExpr&lt; ADUnaryMinus&lt; This &gt;</a> &gt; operator- ()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keyword">typedef</span> ADUnaryMinus&lt;This&gt; expr_t;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> ADExpr&lt;expr_t&gt; ( expr_t ( *<span class="keyword">this</span> ) );</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1ADUnaryMinus.html">ADUnaryMinus&lt;This&gt;</a> expr_t;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1ADExpr.html" title="brief description ">ADExpr&lt;expr_t&gt;</a> ( expr_t ( *<span class="keyword">this</span> ) );</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#define AD_UNARY_OP( op )                       \</span></div>
@@ -313,7 +313,7 @@ $(document).ready(function(){initNavTree('adtypeorder0_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:19 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:28:28 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

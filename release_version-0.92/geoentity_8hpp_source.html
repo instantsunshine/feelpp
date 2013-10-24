@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -142,14 +142,14 @@ $(document).ready(function(){initNavTree('geoentity_8hpp_source.html','');});
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    boost::equality_comparable&lt;GeoEntity&lt;Entity&gt; &gt;,</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    boost::less_than_comparable&lt;GeoEntity&lt;Entity&gt; &gt;,</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    boost::less_than_comparable&lt;GeoEntity&lt;Entity&gt;, size_type&gt;,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span> Entity</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span> <a class="code" href="classFeel_1_1Entity.html">Entity</a></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">typedef</span> Entity super;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Entity.html">Entity</a> <a class="code" href="classFeel_1_1Entity.html">super</a>;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1GeoEntity.html" title="base class for all geometric entities ">GeoEntity&lt;Entity&gt;</a> <a class="code" href="classFeel_1_1GeoEntity.html" title="base class for all geometric entities ">GeoShape</a>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1GeoEntity.html" title="base class for all geometric entities ">GeoEntity&lt;Entity&gt;</a> <a class="code" href="classFeel_1_1GeoEntity.html" title="base class for all geometric entities ">self_type</a>;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::topological_face_type face_type;</div>
@@ -178,7 +178,7 @@ $(document).ready(function(){initNavTree('geoentity_8hpp_source.html','');});
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nbPtsPerFace = super::nbPtsPerFace;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nbPtsPerVolume = super::nbPtsPerVolume;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">typedef</span> Entity convex_type;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Entity.html">Entity</a> <a class="code" href="classFeel_1_1Entity.html">convex_type</a>;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> is_simplex = super::is_simplex;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> is_hypercube = super::is_hypercube;</div>
@@ -192,7 +192,7 @@ $(document).ready(function(){initNavTree('geoentity_8hpp_source.html','');});
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="classFeel_1_1GeoEntity.html" title="base class for all geometric entities ">GeoEntity</a>()</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        :</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        super(),</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="classFeel_1_1Entity.html">super</a>(),</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        M_id( 0 ),</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        M_entity( <a class="code" href="group__GeoEntites.html#ga5df59a8b1a63f40c3c1d5a65162254d5ab58df77c4224c0712d878f278a68ffb3">MESH_ENTITY_INTERNAL</a> ),</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        M_geometry( Geometry ),</div>
@@ -688,7 +688,7 @@ $(document).ready(function(){initNavTree('geoentity_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:33 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:28:48 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

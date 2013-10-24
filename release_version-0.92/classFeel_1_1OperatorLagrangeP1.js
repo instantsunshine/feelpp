@@ -6,6 +6,7 @@ var classFeel_1_1OperatorLagrangeP1 =
     [ "domain_mesh_ptrtype", "classFeel_1_1OperatorLagrangeP1.html#aebbcbc9e49b0155f62d283bd01d68bdf", null ],
     [ "domain_mesh_type", "classFeel_1_1OperatorLagrangeP1.html#a5a1f2626cd720ced5b1a1f610c32812b", null ],
     [ "domain_reference_convex_type", "classFeel_1_1OperatorLagrangeP1.html#a58e65606a9821eb5414029494a72a597", null ],
+    [ "domain_reference_mesh_ptrtype", "classFeel_1_1OperatorLagrangeP1.html#a13862ac6e7371c05e44019d328329124", null ],
     [ "domain_space_ptrtype", "classFeel_1_1OperatorLagrangeP1.html#a7c432b06476b23da38a7106841f48d30", null ],
     [ "domain_space_type", "classFeel_1_1OperatorLagrangeP1.html#a382f9a8fad9a4b38895891bb9674bc5b", null ],
     [ "dual_image_space_ptrtype", "classFeel_1_1OperatorLagrangeP1.html#a2fc7238ff2f50dc063d004ee0579bd63", null ],
@@ -23,12 +24,13 @@ var classFeel_1_1OperatorLagrangeP1 =
     [ "p2m_type", "classFeel_1_1OperatorLagrangeP1.html#ac42e2dd837b18a81a2ddb706a52b1ce5", null ],
     [ "pset_type", "classFeel_1_1OperatorLagrangeP1.html#a847aab87bcdf1f9437459dcb23518c27", null ],
     [ "value_type", "classFeel_1_1OperatorLagrangeP1.html#ab5de60681699e6313743bfe0923908e4", null ],
-    [ "OperatorLagrangeP1", "classFeel_1_1OperatorLagrangeP1.html#ae409191111a8f596e8531bbc05c4966f", null ],
+    [ "OperatorLagrangeP1", "classFeel_1_1OperatorLagrangeP1.html#a53d486c6c6523a79bd754cc3708f651c", null ],
     [ "~OperatorLagrangeP1", "classFeel_1_1OperatorLagrangeP1.html#a3f13fbaa75a023567f24fc27516395bf", null ],
     [ "check", "classFeel_1_1OperatorLagrangeP1.html#a971d5c17a7caac20b5095a0d14bbb28b", null ],
     [ "localDof", "classFeel_1_1OperatorLagrangeP1.html#a843248c6157c6178d502067ef6efe465", null ],
     [ "localDof", "classFeel_1_1OperatorLagrangeP1.html#a75f4e9a33e5ba27b3dee61f6ffe0e5fc", null ],
     [ "localDof", "classFeel_1_1OperatorLagrangeP1.html#a83f3f893513e546913818952198c2f77", null ],
     [ "mesh", "classFeel_1_1OperatorLagrangeP1.html#a09cb8961b05c3cbcc4b2aa8a0a3de126", null ],
-    [ "operator=", "classFeel_1_1OperatorLagrangeP1.html#ad1019fde7f912d972cc21bbf48df955c", null ]
+    [ "operator=", "classFeel_1_1OperatorLagrangeP1.html#ad1019fde7f912d972cc21bbf48df955c", null ],
+    [ "referenceMesh", "classFeel_1_1OperatorLagrangeP1.html#aff5c349264c990abf7f64edd9893a032", null ]
 ];

@@ -1,12 +1,26 @@
 var searchData=
 [
+  ['lagrange',['Lagrange',['../classFeel_1_1Lagrange.html',1,'Feel']]],
   ['lagrange',['Lagrange',['../classFeel_1_1fem_1_1Lagrange.html',1,'Feel::fem']]],
   ['laplacian',['Laplacian',['../classFeel_1_1Laplacian.html',1,'Feel']]],
   ['laplacian',['Laplacian',['../classLaplacian.html',1,'']]],
   ['laplacian_5fparabolic',['Laplacian_parabolic',['../classLaplacian__parabolic.html',1,'']]],
   ['laplacianlm',['LaplacianLM',['../classFeel_1_1LaplacianLM.html',1,'Feel']]],
+  ['ldl',['ldl',['../classFeel_1_1glas_1_1ldl.html',1,'Feel::glas']]],
   ['legendre',['Legendre',['../classFeel_1_1Legendre.html',1,'Feel']]],
   ['legendre_3c_20dim_2c_20order_2c_20normalized_3c_20false_20_3e_2c_20t_20_3e',['Legendre&lt; Dim, Order, Normalized&lt; false &gt;, T &gt;',['../classFeel_1_1Legendre.html',1,'Feel']]],
+  ['legendretag',['LegendreTag',['../structFeel_1_1LegendreTag.html',1,'Feel']]],
+  ['legendretraits',['LegendreTraits',['../structFeel_1_1LegendreTraits.html',1,'Feel']]],
+  ['lift_5fargs',['lift_args',['../structFeel_1_1detail_1_1lift__args.html',1,'Feel::detail']]],
+  ['line',['Line',['../structFeel_1_1Line.html',1,'Feel']]],
+  ['linearformcontext',['linearformContext',['../structFeel_1_1QuadPtLocalization_1_1linearformContext.html',1,'Feel::QuadPtLocalization']]],
+  ['linelaxi',['LinElAxi',['../classFeel_1_1LinElAxi.html',1,'Feel']]],
+  ['listreturntypes',['ListReturnTypes',['../structFeel_1_1ListReturnTypes.html',1,'Feel']]],
+  ['localdof',['LocalDof',['../classFeel_1_1LocalDof.html',1,'Feel']]],
+  ['localdofset',['LocalDofSet',['../classFeel_1_1LocalDofSet.html',1,'Feel']]],
+  ['localization',['Localization',['../structFeel_1_1Mesh_1_1Localization.html',1,'Feel::Mesh']]],
+  ['loop',['Loop',['../classFeel_1_1GeoTool_1_1Loop.html',1,'Feel::GeoTool']]],
   ['lshape',['LShape',['../classLShape.html',1,'']]],
+  ['ltstep',['ltstep',['../structFeel_1_1TimeSet_1_1ltstep.html',1,'Feel::TimeSet']]],
   ['lu',['LU',['../classFeel_1_1LU.html',1,'Feel']]]
 ];

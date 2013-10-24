@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -140,12 +140,12 @@ $(document).ready(function(){initNavTree('geoelement_8hpp_source.html','');});
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span>Feel</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">class </span>SubFaceOfNone</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="classFeel_1_1SubFaceOfNone.html">   44</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1SubFaceOfNone.html">SubFaceOfNone</a></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 1;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ET&gt;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">struct </span>Element</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="structFeel_1_1SubFaceOfNone_1_1Element.html">   49</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1SubFaceOfNone_1_1Element.html">Element</a></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">typedef</span> ET type;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    };</div>
@@ -156,7 +156,7 @@ $(document).ready(function(){initNavTree('geoelement_8hpp_source.html','');});
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> boost::none_t();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    SubFaceOfNone() {}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classFeel_1_1SubFaceOfNone.html">SubFaceOfNone</a>() {}</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    SubFaceOfNone( SubFaceOfNone <span class="keyword">const</span>&amp; ) {}</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">virtual</span> ~SubFaceOfNone() {}</div>
@@ -186,25 +186,25 @@ $(document).ready(function(){initNavTree('geoelement_8hpp_source.html','');});
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ElementType&gt;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">class </span>SubFaceOf</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="classFeel_1_1SubFaceOf.html">   90</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1SubFaceOf.html">SubFaceOf</a></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = ElementType::nDim;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ET&gt;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">struct </span>Element</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="code" href="structFeel_1_1SubFaceOf_1_1Element.html">   95</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1SubFaceOf_1_1Element.html">Element</a></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keyword">typedef</span> ElementType type;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    };</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">typedef</span> ElementType entity_type;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">typedef</span> boost::tuple&lt;ElementType const*, size_type, uint16_type, size_type&gt; element_connectivity_type;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    SubFaceOf()</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="classFeel_1_1SubFaceOf.html">SubFaceOf</a>()</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        :</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        M_element0( 0, <a class="code" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">invalid_size_type_value</a>, <a class="code" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a>, <a class="code" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">invalid_size_type_value</a> ),</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        M_element1( 0, <a class="code" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">invalid_size_type_value</a>, <a class="code" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a>, <a class="code" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">invalid_size_type_value</a> )</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {}</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    SubFaceOf( element_connectivity_type <span class="keyword">const</span>&amp; connect0 )</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="classFeel_1_1SubFaceOf.html">SubFaceOf</a>( element_connectivity_type <span class="keyword">const</span>&amp; connect0 )</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        :</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        M_element0( connect0 ),</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        M_element1( 0, <a class="code" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">invalid_size_type_value</a>, <a class="code" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a>, <a class="code" href="namespaceFeel.html#a74681da1036cc5b236aabef05d8a8f87">invalid_uint16_type_value</a> )</div>
@@ -230,7 +230,7 @@ $(document).ready(function(){initNavTree('geoelement_8hpp_source.html','');});
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">virtual</span> ~SubFaceOf() {}</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    SubFaceOf&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( SubFaceOf <span class="keyword">const</span>&amp; sf )</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    SubFaceOf&amp; operator=( SubFaceOf <span class="keyword">const</span>&amp; sf )</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">if</span> ( <span class="keyword">this</span> != &amp;sf )</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        {</div>
@@ -241,7 +241,7 @@ $(document).ready(function(){initNavTree('geoelement_8hpp_source.html','');});
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    SubFaceOf&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( SubFaceOfNone <span class="keyword">const</span>&amp; <span class="comment">/*sf*/</span> )</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    SubFaceOf&amp; operator=( SubFaceOfNone <span class="keyword">const</span>&amp; <span class="comment">/*sf*/</span> )</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    {</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    }</div>
@@ -1297,14 +1297,14 @@ $(document).ready(function(){initNavTree('geoelement_8hpp_source.html','');});
 <div class="line"><a name="l01393"></a><span class="lineno"><a class="code" href="classFeel_1_1GeoElement3D.html"> 1393</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1GeoElement3D.html" title="Class for 3D elements. ">GeoElement3D</a></div>
 <div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;    :</div>
 <div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;<span class="keyword">public</span> <a class="code" href="classFeel_1_1GeoND.html" title="Base class for Multi-dimensional basis Geometrical Entities. ">GeoND</a>&lt;Dim, GEOSHAPE, T, GeoElement0D&lt;Dim, SubFaceOfNone, T&gt; &gt;,</div>
-<div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;<span class="keyword">public</span> SubFaceOfNone</div>
+<div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;<span class="keyword">public</span> <a class="code" href="classFeel_1_1SubFaceOfNone.html">SubFaceOfNone</a></div>
 <div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;{</div>
 <div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;</div>
 <div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = Dim;</div>
 <div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;</div>
 <div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1GeoND.html" title="Base class for Multi-dimensional basis Geometrical Entities. ">GeoND&lt;Dim, GEOSHAPE, T, GeoElement0D&lt;Dim, SubFaceOfNone, T&gt;</a> &gt; <a class="code" href="classFeel_1_1GeoND.html">super</a>;</div>
-<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;    <span class="keyword">typedef</span> SubFaceOfNone super2;</div>
+<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1SubFaceOfNone.html">SubFaceOfNone</a> <a class="code" href="classFeel_1_1SubFaceOfNone.html">super2</a>;</div>
 <div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;</div>
 <div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;    <span class="keyword">typedef</span> GEOSHAPE GeoShape;</div>
 <div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;</div>
@@ -1330,7 +1330,7 @@ $(document).ready(function(){initNavTree('geoelement_8hpp_source.html','');});
 <div class="line"><a name="l01434"></a><span class="lineno"><a class="code" href="classFeel_1_1GeoElement3D.html#af00d580be851d1a7f9b79fae42215a68"> 1434</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classFeel_1_1GeoElement3D.html#af00d580be851d1a7f9b79fae42215a68">GeoElement3D</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> <span class="keywordtype">id</span> = 0 )</div>
 <div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;        :</div>
 <div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;        <a class="code" href="classFeel_1_1GeoND.html">super</a>( <a class="code" href="classFeel_1_1GeoElement3D.html#ad4c1190d101d23e65c3a1be9272259c0">id</a> ),</div>
-<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;        super2(),</div>
+<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;        <a class="code" href="classFeel_1_1SubFaceOfNone.html">super2</a>(),</div>
 <div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;        M_edges( <a class="code" href="classFeel_1_1GeoElement3D.html#a50a1b8957e74fecc340284028909a22d" title="Number of local Edges (using Euler Formula) ">numLocalEdges</a>, nullptr ),</div>
 <div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;        M_faces( <a class="code" href="classFeel_1_1GeoElement3D.html#a22ba9a233e3e59f4e4133599dd001241" title="Number of local Faces. ">numLocalFaces</a> ),</div>
 <div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;        M_edge_permutation( <a class="code" href="classFeel_1_1GeoElement3D.html#a50a1b8957e74fecc340284028909a22d" title="Number of local Edges (using Euler Formula) ">numLocalEdges</a>, edge_permutation_type( edge_permutation_type::IDENTITY ) ),</div>
@@ -1344,7 +1344,7 @@ $(document).ready(function(){initNavTree('geoelement_8hpp_source.html','');});
 <div class="line"><a name="l01451"></a><span class="lineno"><a class="code" href="classFeel_1_1GeoElement3D.html#a9bb3b297215c8341d606f0e6faa051e7"> 1451</a></span>&#160;    <a class="code" href="classFeel_1_1GeoElement3D.html#a9bb3b297215c8341d606f0e6faa051e7">GeoElement3D</a>( <a class="code" href="classFeel_1_1GeoElement3D.html" title="Class for 3D elements. ">GeoElement3D</a> <span class="keyword">const</span>&amp; g )</div>
 <div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;        :</div>
 <div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;        <a class="code" href="classFeel_1_1GeoND.html">super</a>( g ),</div>
-<div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160;        super2( g ),</div>
+<div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160;        <a class="code" href="classFeel_1_1SubFaceOfNone.html">super2</a>( g ),</div>
 <div class="line"><a name="l01455"></a><span class="lineno"> 1455</span>&#160;        M_edges( g.M_edges ),</div>
 <div class="line"><a name="l01456"></a><span class="lineno"> 1456</span>&#160;        M_faces( g.M_faces ),</div>
 <div class="line"><a name="l01457"></a><span class="lineno"> 1457</span>&#160;        M_edge_permutation( g.M_edge_permutation ),</div>
@@ -1595,7 +1595,7 @@ $(document).ready(function(){initNavTree('geoelement_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:33 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:28:48 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

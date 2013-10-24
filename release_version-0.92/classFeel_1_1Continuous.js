@@ -1,5 +1,6 @@
 var classFeel_1_1Continuous =
 [
+    [ "apply", "classFeel_1_1Continuous_1_1apply.html", "classFeel_1_1Continuous_1_1apply" ],
     [ "discontinuity_markers_type", "classFeel_1_1Continuous.html#ad5c355394b765e861cd991a5c91ac7be", null ],
     [ "Continuous", "classFeel_1_1Continuous.html#a803448b128b9dd86232fca93c3849046", null ],
     [ "Continuous", "classFeel_1_1Continuous.html#a522e65cd9fae39197cb49a02129eb4fa", null ],

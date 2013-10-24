@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git7e01af8</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -138,7 +138,7 @@ $(document).ready(function(){initNavTree('geond_8hpp_source.html','');});
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">class </span>MeshBase;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">int</span> Dim, <span class="keywordtype">int</span> Order, <span class="keywordtype">int</span> RealDim, <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type,u<span class="keywordtype">int</span>16_type,u<span class="keywordtype">int</span>16_type&gt; <span class="keyword">class </span>Entity, <span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>GT_Lagrange;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="structFeel_1_1GT__Lagrange.html">   39</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">int</span> Dim, <span class="keywordtype">int</span> Order, <span class="keywordtype">int</span> RealDim, <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type,u<span class="keywordtype">int</span>16_type,u<span class="keywordtype">int</span>16_type&gt; <span class="keyword">class </span><a class="code" href="classFeel_1_1Entity.html">Entity</a>, <span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code" href="structFeel_1_1GT__Lagrange.html">GT_Lagrange</a>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">namespace </span>detail</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
@@ -201,7 +201,7 @@ $(document).ready(function(){initNavTree('geond_8hpp_source.html','');});
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nRealDim = super::nRealDim;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">template</span>&lt;<span class="keywordtype">int</span> GmOrder&gt;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">struct </span>GetGm</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="code" href="structFeel_1_1GeoND_1_1GetGm.html">  113</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1GeoND_1_1GetGm.html">GetGm</a></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;mpl::bool_&lt;GeoShape::is_hypercube&gt;,</div>
@@ -209,11 +209,11 @@ $(document).ready(function(){initNavTree('geond_8hpp_source.html','');});
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                mpl::identity&lt;GT_Lagrange&lt;nDim, GmOrder, nRealDim, Simplex, T&gt; &gt; &gt;::type::type type;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keyword">typedef</span> boost::shared_ptr&lt;type&gt; ptrtype;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    };</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> GetGm&lt;nOrder&gt;::type gm_type;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> GetGm&lt;nOrder&gt;::ptrtype gm_ptrtype;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1GeoND_1_1GetGm.html">GetGm&lt;nOrder&gt;::type</a> gm_type;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1GeoND_1_1GetGm.html">GetGm&lt;nOrder&gt;::ptrtype</a> gm_ptrtype;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> GetGm&lt;1&gt;::type gm1_type;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> GetGm&lt;1&gt;::ptrtype gm1_ptrtype;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1GeoND_1_1GetGm.html">GetGm&lt;1&gt;::type</a> gm1_type;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1GeoND_1_1GetGm.html">GetGm&lt;1&gt;::ptrtype</a> gm1_ptrtype;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> gm_type::super::reference_convex_type reference_convex_type;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> gm1_type::super::reference_convex_type reference_convex1_type;</div>
@@ -528,9 +528,9 @@ $(document).ready(function(){initNavTree('geond_8hpp_source.html','');});
 <div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        <span class="keywordflow">return</span> M_h_edge[f];</div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    }</div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    <span class="keyword">struct </span>tt</div>
+<div class="line"><a name="l00602"></a><span class="lineno"><a class="code" href="structFeel_1_1GeoND_1_1tt.html">  602</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1GeoND_1_1tt.html">tt</a></div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    {</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;        <span class="keyword">static</span> uint16_type <a class="code" href="classFeel_1_1GeoND.html#a42b1376c661ec1f5c9a4399e1e2ab715">fToP</a>( uint16_type <span class="keyword">const</span> _localFace, uint16_type <span class="keyword">const</span> _point )</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;        <span class="keyword">static</span> uint16_type fToP( uint16_type <span class="keyword">const</span> _localFace, uint16_type <span class="keyword">const</span> _point )</div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;        {</div>
 <div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1GeoEntity.html#a62a2566454057e967fa22fffe4432814">super::eToP</a>( _localFace, _point );</div>
 <div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        }</div>
@@ -997,7 +997,7 @@ $(document).ready(function(){initNavTree('geond_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Wed Oct 23 2013 10:56:34 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Fri Oct 25 2013 00:28:49 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
