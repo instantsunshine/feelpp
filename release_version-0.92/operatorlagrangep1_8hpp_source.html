@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -140,7 +140,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span>detailOpLagP1</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> SpaceType&gt;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="structFeel_1_1detailOpLagP1_1_1SpaceToLagrangeP1Space.html">   47</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detailOpLagP1_1_1SpaceToLagrangeP1Space.html">SpaceToLagrangeP1Space</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">struct </span>SpaceToLagrangeP1Space</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">typedef</span> SpaceType domain_space_type;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> domain_space_type::fe_type::convex_type convex_type;</div>
@@ -152,15 +152,15 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                              mpl::identity&lt;convex_type&gt; &gt;::type::type domain_reference_convex_type;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">template</span>&lt; <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type Dim&gt; <span class="keyword">class </span>PsetType&gt;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="structFeel_1_1detailOpLagP1_1_1SpaceToLagrangeP1Space_1_1SelectConvex.html">   59</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1detailOpLagP1_1_1SpaceToLagrangeP1Space_1_1SelectConvex.html">SelectConvex</a></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">struct </span>SelectConvex</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//typedef typename PsetType&lt;convex_type::nDim&gt;::value_type value_type;</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> SpaceType::value_type value_type;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Lagrange.html">Lagrange&lt;1,PsetType&gt;</a> <a class="code" href="classFeel_1_1Lagrange.html">type</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">typedef</span> Lagrange&lt;1,PsetType&gt; type;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    };</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> convex_type::template shape&lt;domain_mesh_type::nDim, 1, domain_mesh_type::nRealDim&gt;::type image_convex_type;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">Mesh&lt;image_convex_type&gt;</a> <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">image_mesh_type</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">typedef</span> Mesh&lt;image_convex_type&gt; image_mesh_type;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;mpl::bool_&lt;domain_space_type::is_scalar&gt;,</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            mpl::identity&lt;typename SelectConvex&lt;Scalar&gt;::type&gt;,</div>
@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            mpl::identity&lt;typename SelectConvex&lt;Tensor2&gt;::type&gt; &gt;::type&gt;::type::type basis_type;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FunctionSpace.html">FunctionSpace&lt;image_mesh_type, bases&lt;basis_type&gt;</a> &gt; <a class="code" href="classFeel_1_1FunctionSpace.html">image_space_type</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">typedef</span> FunctionSpace&lt;image_mesh_type, bases&lt;basis_type&gt; &gt; image_space_type;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
@@ -1031,7 +1031,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;</div>
 <div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;</div>
 <div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Args&gt;</div>
-<div class="line"><a name="l00996"></a><span class="lineno"><a class="code" href="structFeel_1_1compute__opLagrangeP1__return.html">  996</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1compute__opLagrangeP1__return.html">compute_opLagrangeP1_return</a></div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;<span class="keyword">struct </span>compute_opLagrangeP1_return</div>
 <div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;{</div>
 <div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_reference&lt;typename parameter::binding&lt;Args, tag::space&gt;::type&gt;::type::element_type space_type;</div>
 <div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;OperatorLagrangeP1&lt;space_type&gt; &gt; type;</div>
@@ -1046,7 +1046,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 <div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;      ( space,    *( boost::is_convertible&lt;mpl::_,boost::shared_ptr&lt;FunctionSpaceBase&gt; &gt; ) )</div>
 <div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;    ) <span class="comment">// required</span></div>
 <div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;    ( optional</div>
-<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;      ( backend,    *, <a class="code" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">Backend</a>&lt;<span class="keyword">typename</span> <a class="code" href="structFeel_1_1compute__opLagrangeP1__return.html">compute_opLagrangeP1_return&lt;Args&gt;::space_type::value_type</a>&gt;::build() )</div>
+<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;      ( backend,    *, Backend&lt;<span class="keyword">typename</span> compute_opLagrangeP1_return&lt;Args&gt;::space_type::value_type&gt;::build() )</div>
 <div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;      ( path,       *( boost::is_convertible&lt;mpl::_,std::string&gt; ), std::string(<span class="stringliteral">&quot;.&quot;</span>) )</div>
 <div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;      ( prefix,     *( boost::is_convertible&lt;mpl::_,std::string&gt; ), std::string(<span class="stringliteral">&quot;&quot;</span>) )</div>
 <div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;      ( rebuild,    *( boost::is_integral&lt;mpl::_&gt; ), 1 )</div>
@@ -1072,7 +1072,7 @@ $(document).ready(function(){initNavTree('operatorlagrangep1_8hpp_source.html','
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:02 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:09 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

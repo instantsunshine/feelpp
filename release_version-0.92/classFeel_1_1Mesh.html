@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -101,7 +101,6 @@ $(document).ready(function(){initNavTree('classFeel_1_1Mesh.html','');});
 <div class="header">
   <div class="summary">
 <a href="classFeel_1_1Mesh-members.html">List of all members</a> &#124;
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
@@ -119,30 +118,9 @@ class Feel::Mesh&lt; C, V, T &gt;</h3>
 <p>unifying mesh class </p>
 <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd></dd></dl>
-</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Feel::Mesh&lt; C, V, T &gt;:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
- <div class="center">
-  <img src="classFeel_1_1Mesh.png" usemap="#Feel::Mesh&lt; C, V, T &gt;_map" alt=""/>
-  <map id="Feel::Mesh&lt; C, V, T &gt;_map" name="Feel::Mesh&lt; C, V, T &gt;_map">
-</map>
- </div></div>
+<p>Inherits type&lt; mpl::equal_to&lt; mpl::int_&lt; GeoShape::nDim &gt;, mpl::int_&lt; 0 &gt; &gt;, mpl::identity&lt; Mesh0D&lt; GeoShape &gt; &gt;, mpl::if_&lt; mpl::equal_to&lt; mpl::int_&lt; GeoShape::nDim &gt;, mpl::int_&lt; 1 &gt; &gt;, mpl::identity&lt; Mesh1D&lt; GeoShape &gt; &gt;, mpl::if_&lt; mpl::equal_to&lt; mpl::int_&lt; GeoShape::nDim &gt;, mpl::int_&lt; 2 &gt; &gt;, mpl::identity&lt; Mesh2D&lt; GeoShape &gt; &gt;, mpl::identity&lt; Mesh3D&lt; GeoShape &gt; &gt; &gt;::type &gt;::type &gt;, addable&lt; Mesh&lt; GeoShape, T, Tag &gt; &gt;, and enable_shared_from_this&lt; Mesh&lt; GeoShape, T, Tag &gt; &gt;.</p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1Mesh_1_1gmc.html">gmc</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1Mesh_1_1Inverse.html">Inverse</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1Mesh_1_1Localization.html">Localization</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1Mesh_1_1trace__mesh.html">trace_mesh</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1Mesh_1_1trace__trace__mesh.html">trace_trace_mesh</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Typedefs</div></td></tr>
@@ -219,7 +197,7 @@ typedef boost::shared_ptr<br class="typebreak"/>
 &lt; gm1_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>gm1_ptrtype</b></td></tr>
 <tr class="separator:a28650896e01facd0b7ddb136f559db21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0849e72317903b4df76615475c78b31c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0849e72317903b4df76615475c78b31c"></a>
-typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; shape_type, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>self_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; shape_type, T, Tag &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>self_type</b></td></tr>
 <tr class="separator:a0849e72317903b4df76615475c78b31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41b0f71c39f4f439525f1b345f98681c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41b0f71c39f4f439525f1b345f98681c"></a>
 typedef <a class="el" href="classFeel_1_1Mesh.html">self_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_type</b></td></tr>
@@ -247,11 +225,11 @@ typedef mpl::if_&lt; mpl::bool_<br class="typebreak"/>
 , mpl::identity&lt; <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; <a class="el" href="classFeel_1_1Simplex.html">Simplex</a><br class="typebreak"/>
 &lt; GeoShape::nDim, <br class="typebreak"/>
 1, GeoShape::nRealDim &gt;<br class="typebreak"/>
-, value_type, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;<br class="typebreak"/>
+, value_type, Tag &gt;<br class="typebreak"/>
  &gt;, mpl::identity&lt; <a class="el" href="classFeel_1_1Mesh.html">Mesh</a><br class="typebreak"/>
-&lt; <a class="el" href="classFeel_1_1Hypercube.html">Hypercube</a>&lt; GeoShape::nDim, <br class="typebreak"/>
+&lt; Hypercube&lt; GeoShape::nDim, <br class="typebreak"/>
 1, GeoShape::nRealDim &gt;<br class="typebreak"/>
-, value_type, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;<br class="typebreak"/>
+, value_type, Tag &gt;<br class="typebreak"/>
  &gt; &gt;::type::type&#160;</td><td class="memItemRight" valign="bottom"><b>P1_mesh_type</b></td></tr>
 <tr class="separator:aa45660694aab98981433209a787967e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a592efc0263ec839f46370ffe5085ffbb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a592efc0263ec839f46370ffe5085ffbb"></a>
@@ -259,17 +237,17 @@ typedef boost::shared_ptr<br class="typebreak"/>
 &lt; P1_mesh_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>P1_mesh_ptrtype</b></td></tr>
 <tr class="separator:a592efc0263ec839f46370ffe5085ffbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0927c7653a2bde83cd88bf9696a19cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0927c7653a2bde83cd88bf9696a19cf"></a>
-typedef <a class="el" href="structFeel_1_1Mesh_1_1trace__mesh.html">trace_mesh</a>&lt; <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>trace_mesh_type</b></td></tr>
+typedef trace_mesh&lt; Tag &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>trace_mesh_type</b></td></tr>
 <tr class="separator:ad0927c7653a2bde83cd88bf9696a19cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a277ba69f44dcfc98344d87b58d060a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a277ba69f44dcfc98344d87b58d060a"></a>
-typedef <a class="el" href="structFeel_1_1Mesh_1_1trace__mesh.html">trace_mesh</a>&lt; <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>trace_mesh_ptrtype</b></td></tr>
+typedef trace_mesh&lt; Tag &gt;::ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>trace_mesh_ptrtype</b></td></tr>
 <tr class="separator:a1a277ba69f44dcfc98344d87b58d060a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b51eb81fe53b4bb528a7809b57a90dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b51eb81fe53b4bb528a7809b57a90dc"></a>
-typedef <a class="el" href="structFeel_1_1Mesh_1_1trace__trace__mesh.html">trace_trace_mesh</a>&lt; <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;<br class="typebreak"/>
+typedef trace_trace_mesh&lt; Tag &gt;<br class="typebreak"/>
 ::type&#160;</td><td class="memItemRight" valign="bottom"><b>trace_trace_mesh_type</b></td></tr>
 <tr class="separator:a9b51eb81fe53b4bb528a7809b57a90dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf32ae1534ccff83e4d6d50bf7323181"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf32ae1534ccff83e4d6d50bf7323181"></a>
-typedef <a class="el" href="structFeel_1_1Mesh_1_1trace__trace__mesh.html">trace_trace_mesh</a>&lt; <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;<br class="typebreak"/>
+typedef trace_trace_mesh&lt; Tag &gt;<br class="typebreak"/>
 ::ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>trace_trace_mesh_ptrtype</b></td></tr>
 <tr class="separator:acf32ae1534ccff83e4d6d50bf7323181"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -287,7 +265,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr
 <tr class="separator:a3932bc5bc367b87b1e9c5278ec177a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e1ef7dadfbd66cfebc682605f301bd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a9e1ef7dadfbd66cfebc682605f301bd8">isPeriodic</a> () const </td></tr>
 <tr class="separator:a9e1ef7dadfbd66cfebc682605f301bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42907164322ead3b8be2701a3683a9b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a42907164322ead3b8be2701a3683a9b1">Mesh</a> (<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
+<tr class="memitem:a42907164322ead3b8be2701a3683a9b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a42907164322ead3b8be2701a3683a9b1">Mesh</a> (WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
 <tr class="separator:a42907164322ead3b8be2701a3683a9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76551687cecd0a7ae73f298cab80cdb2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76551687cecd0a7ae73f298cab80cdb2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>meshModified</b> ()</td></tr>
@@ -295,32 +273,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>meshModified</b> ()</
 <tr class="memitem:aaa4f3a177319d77168f4b67beeac08d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa4f3a177319d77168f4b67beeac08d5"></a>
 <a class="el" href="classFeel_1_1Mesh.html">self_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (<a class="el" href="classFeel_1_1Mesh.html">self_type</a> const &amp;m)</td></tr>
 <tr class="separator:aaa4f3a177319d77168f4b67beeac08d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7f1a6d23288bd64e1ab660f820cf247"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#ac7f1a6d23288bd64e1ab660f820cf247">setPeriodicEntities</a> (std::vector&lt; <a class="el" href="structFeel_1_1PeriodicEntity.html">PeriodicEntity</a> &gt; const &amp;e)</td></tr>
+<tr class="memitem:ac7f1a6d23288bd64e1ab660f820cf247"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#ac7f1a6d23288bd64e1ab660f820cf247">setPeriodicEntities</a> (std::vector&lt; PeriodicEntity &gt; const &amp;e)</td></tr>
 <tr class="separator:ac7f1a6d23288bd64e1ab660f820cf247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46b1622bfecf550a3a7bd4cdbd404af6"><td class="memTemplParams" colspan="2"><a class="anchor" id="a46b1622bfecf550a3a7bd4cdbd404af6"></a>
 template&lt;typename RangeT &gt; </td></tr>
-<tr class="memitem:a46b1622bfecf550a3a7bd4cdbd404af6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;<br class="typebreak"/>
-::template <a class="el" href="structFeel_1_1Mesh_1_1trace__mesh.html">trace_mesh</a>&lt; <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;<br class="typebreak"/>
+<tr class="memitem:a46b1622bfecf550a3a7bd4cdbd404af6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; Shape, T, Tag &gt;<br class="typebreak"/>
+::template trace_mesh&lt; Tag &gt;<br class="typebreak"/>
 ::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>trace</b> (RangeT const &amp;range) const </td></tr>
 <tr class="separator:a46b1622bfecf550a3a7bd4cdbd404af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c519f62d86a87f8c5f923113f6126e3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4c519f62d86a87f8c5f923113f6126e3"></a>
 template&lt;typename RangeT , int TheTag&gt; </td></tr>
-<tr class="memitem:a4c519f62d86a87f8c5f923113f6126e3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;<br class="typebreak"/>
-::template <a class="el" href="structFeel_1_1Mesh_1_1trace__mesh.html">trace_mesh</a>&lt; TheTag &gt;<br class="typebreak"/>
+<tr class="memitem:a4c519f62d86a87f8c5f923113f6126e3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; Shape, T, Tag &gt;<br class="typebreak"/>
+::template trace_mesh&lt; TheTag &gt;<br class="typebreak"/>
 ::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>trace</b> (RangeT const &amp;range, mpl::int_&lt; TheTag &gt;) const </td></tr>
 <tr class="separator:a4c519f62d86a87f8c5f923113f6126e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6caf27fc85076cacde66b5d00b7abb42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a6caf27fc85076cacde66b5d00b7abb42">updateForUse</a> ()</td></tr>
 <tr class="separator:a6caf27fc85076cacde66b5d00b7abb42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8abe2df74e1d32bcc2ac1434b8621404"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8abe2df74e1d32bcc2ac1434b8621404"></a>
 template&lt;typename RangeT &gt; </td></tr>
-<tr class="memitem:a8abe2df74e1d32bcc2ac1434b8621404"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;<br class="typebreak"/>
-::template <a class="el" href="structFeel_1_1Mesh_1_1trace__trace__mesh.html">trace_trace_mesh</a><br class="typebreak"/>
-&lt; <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>wireBasket</b> (RangeT const &amp;range) const </td></tr>
+<tr class="memitem:a8abe2df74e1d32bcc2ac1434b8621404"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; Shape, T, Tag &gt;<br class="typebreak"/>
+::template trace_trace_mesh<br class="typebreak"/>
+&lt; Tag &gt;::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>wireBasket</b> (RangeT const &amp;range) const </td></tr>
 <tr class="separator:a8abe2df74e1d32bcc2ac1434b8621404"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d902248351cd61724698b4cf9459e8a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3d902248351cd61724698b4cf9459e8a"></a>
 template&lt;typename RangeT , int TheTag&gt; </td></tr>
-<tr class="memitem:a3d902248351cd61724698b4cf9459e8a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;<br class="typebreak"/>
-::template <a class="el" href="structFeel_1_1Mesh_1_1trace__trace__mesh.html">trace_trace_mesh</a><br class="typebreak"/>
+<tr class="memitem:a3d902248351cd61724698b4cf9459e8a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; Shape, T, Tag &gt;<br class="typebreak"/>
+::template trace_trace_mesh<br class="typebreak"/>
 &lt; TheTag &gt;::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>wireBasket</b> (RangeT const &amp;range, mpl::int_&lt; TheTag &gt;) const </td></tr>
 <tr class="separator:a3d902248351cd61724698b4cf9459e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Accessors</div></td></tr>
@@ -361,7 +339,7 @@ std::vector&lt; <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695
 <tr class="separator:a4c486ffd91ba5b5f53b9e816949bd759"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a308a16cfb88c7c5bced6051ca763dac6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a308a16cfb88c7c5bced6051ca763dac6"></a>
 boost::shared_ptr&lt; typename <br class="typebreak"/>
-<a class="el" href="structFeel_1_1Mesh_1_1Localization.html">self_type::Localization</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tool_localization</b> ()</td></tr>
+self_type::Localization &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tool_localization</b> ()</td></tr>
 <tr class="separator:a308a16cfb88c7c5bced6051ca763dac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92254ad7c7029f19113b4acb36443052"><td class="memItemLeft" align="right" valign="top">value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a92254ad7c7029f19113b4acb36443052">measure</a> () const </td></tr>
 <tr class="separator:a92254ad7c7029f19113b4acb36443052"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -379,26 +357,26 @@ flag_type&#160;</td><td class="memItemRight" valign="bottom"><b>markerId</b> (bo
 <tr class="separator:aee19b49098ea7ff5122f8c345d12089b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb067a508738c495247411cf5d60a24e"><td class="memTemplParams" colspan="2"><a class="anchor" id="acb067a508738c495247411cf5d60a24e"></a>
 template&lt;typename RangeT , int TheTag&gt; </td></tr>
-<tr class="memitem:acb067a508738c495247411cf5d60a24e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structFeel_1_1Mesh_1_1trace__mesh.html">trace_mesh</a>&lt; TheTag &gt;::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>trace</b> (RangeT const &amp;range, mpl::int_&lt; TheTag &gt;) const </td></tr>
+<tr class="memitem:acb067a508738c495247411cf5d60a24e"><td class="memTemplItemLeft" align="right" valign="top">trace_mesh&lt; TheTag &gt;::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>trace</b> (RangeT const &amp;range, mpl::int_&lt; TheTag &gt;) const </td></tr>
 <tr class="separator:acb067a508738c495247411cf5d60a24e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a128395f3509c6f98e0c01b1ad212b342"><td class="memTemplParams" colspan="2">template&lt;int TheTag = Tag&gt; </td></tr>
-<tr class="memitem:a128395f3509c6f98e0c01b1ad212b342"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structFeel_1_1Mesh_1_1trace__mesh.html">trace_mesh</a>&lt; TheTag &gt;::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a128395f3509c6f98e0c01b1ad212b342">trace</a> () const </td></tr>
+<tr class="memitem:a128395f3509c6f98e0c01b1ad212b342"><td class="memTemplItemLeft" align="right" valign="top">trace_mesh&lt; TheTag &gt;::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a128395f3509c6f98e0c01b1ad212b342">trace</a> () const </td></tr>
 <tr class="separator:a128395f3509c6f98e0c01b1ad212b342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a163a7d6391b08bc2e43e0aebe9d2216a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a163a7d6391b08bc2e43e0aebe9d2216a"></a>
 template&lt;typename RangeT &gt; </td></tr>
-<tr class="memitem:a163a7d6391b08bc2e43e0aebe9d2216a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structFeel_1_1Mesh_1_1trace__mesh.html">trace_mesh</a>&lt; <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>trace</b> (RangeT const &amp;range) const </td></tr>
+<tr class="memitem:a163a7d6391b08bc2e43e0aebe9d2216a"><td class="memTemplItemLeft" align="right" valign="top">trace_mesh&lt; Tag &gt;::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>trace</b> (RangeT const &amp;range) const </td></tr>
 <tr class="separator:a163a7d6391b08bc2e43e0aebe9d2216a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dafb5ec4b74e79f00f2c9485d036178"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4dafb5ec4b74e79f00f2c9485d036178"></a>
 template&lt;int TheTag = Tag&gt; </td></tr>
-<tr class="memitem:a4dafb5ec4b74e79f00f2c9485d036178"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structFeel_1_1Mesh_1_1trace__mesh.html">trace_mesh</a>&lt; TheTag &gt;::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>wireBasket</b> () const </td></tr>
+<tr class="memitem:a4dafb5ec4b74e79f00f2c9485d036178"><td class="memTemplItemLeft" align="right" valign="top">trace_mesh&lt; TheTag &gt;::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>wireBasket</b> () const </td></tr>
 <tr class="separator:a4dafb5ec4b74e79f00f2c9485d036178"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a943724eac9b32d0f9386ce8154823482"><td class="memTemplParams" colspan="2"><a class="anchor" id="a943724eac9b32d0f9386ce8154823482"></a>
 template&lt;typename RangeT , int TheTag&gt; </td></tr>
-<tr class="memitem:a943724eac9b32d0f9386ce8154823482"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structFeel_1_1Mesh_1_1trace__trace__mesh.html">trace_trace_mesh</a>&lt; TheTag &gt;::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>wireBasket</b> (RangeT const &amp;range, mpl::int_&lt; TheTag &gt;) const </td></tr>
+<tr class="memitem:a943724eac9b32d0f9386ce8154823482"><td class="memTemplItemLeft" align="right" valign="top">trace_trace_mesh&lt; TheTag &gt;::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>wireBasket</b> (RangeT const &amp;range, mpl::int_&lt; TheTag &gt;) const </td></tr>
 <tr class="separator:a943724eac9b32d0f9386ce8154823482"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a859b07b5998afec76b7c4372d63959da"><td class="memTemplParams" colspan="2"><a class="anchor" id="a859b07b5998afec76b7c4372d63959da"></a>
 template&lt;typename RangeT &gt; </td></tr>
-<tr class="memitem:a859b07b5998afec76b7c4372d63959da"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structFeel_1_1Mesh_1_1trace__trace__mesh.html">trace_trace_mesh</a>&lt; <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>wireBasket</b> (RangeT const &amp;range) const </td></tr>
+<tr class="memitem:a859b07b5998afec76b7c4372d63959da"><td class="memTemplItemLeft" align="right" valign="top">trace_trace_mesh&lt; Tag &gt;::ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>wireBasket</b> (RangeT const &amp;range) const </td></tr>
 <tr class="separator:a859b07b5998afec76b7c4372d63959da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2589a3613649e829d6a763b8b6212a6f"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2589a3613649e829d6a763b8b6212a6f"></a>
 template&lt;typename Iterator &gt; </td></tr>
@@ -476,7 +454,7 @@ static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>S
 static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>nOrder</b> = GeoShape::nOrder</td></tr>
 <tr class="separator:ad12c45c15f6518ac33d66dd909534603"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac34682422af2ef272324847c6c97f2a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac34682422af2ef272324847c6c97f2a5"></a>
-static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>tag</b> = <a class="el" href="structFeel_1_1Tag.html">Tag</a></td></tr>
+static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>tag</b> = Tag</td></tr>
 <tr class="separator:ac34682422af2ef272324847c6c97f2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -534,10 +512,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>addFaceNeighborSubdom
 template&lt;typename Shape , typename T , int Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::<a class="el" href="classFeel_1_1Mesh.html">Mesh</a> </td>
+          <td class="memname"><a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, Tag &gt;::<a class="el" href="classFeel_1_1Mesh.html">Mesh</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td>
-          <td class="paramname"><em>worldComm</em> = <code><a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>()</code>)</td><td></td>
+          <td class="paramtype">WorldComm const &amp;&#160;</td>
+          <td class="paramname"><em>worldComm</em> = <code>Environment::worldComm()</code>)</td><td></td>
           <td></td>
         </tr>
       </table>
@@ -627,7 +605,7 @@ template&lt;typename Shape , typename T , int Tag&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::check </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, Tag &gt;::check </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -652,7 +630,7 @@ template&lt;typename Shape , typename T , int Tag&gt; </div>
 template&lt;typename Shape , typename T , int Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::checkAndFixPermutation </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, Tag &gt;::checkAndFixPermutation </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -699,7 +677,7 @@ template&lt;typename C, typename V, int T&gt; </div>
 template&lt;typename Shape , typename T , int Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::P1_mesh_ptrtype <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::createP1mesh </td>
+          <td class="memname"><a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; Shape, T, Tag &gt;::P1_mesh_ptrtype <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, Tag &gt;::createP1mesh </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -763,7 +741,7 @@ template&lt;typename C, typename V, int T&gt; </div>
 template&lt;typename Shape , typename T , int Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::decode </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, Tag &gt;::decode </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -772,7 +750,7 @@ template&lt;typename Shape , typename T , int Tag&gt; </div>
 </div><div class="memdoc">
 <p>decode the mesh data structure from a tighter data structure and to avoid pointers in order to serialize it for saving/loading and sending/receiving the mesh </p>
 
-<p>References <a class="el" href="namespaceFeel.html#a5556fc8b6fb24e847bc4d574a6153cd0">Feel::addElement()</a>, <a class="el" href="classFeel_1_1GmshOrdering.html#aaafaceaf10e70312e95805e192c9059f">Feel::GmshOrdering&lt; ConvexType &gt;::fromGmshId()</a>, and <a class="el" href="classFeel_1_1GmshOrdering.html#a0dde2c8364dba6d9d740fb80a60fa3e4">Feel::GmshOrdering&lt; ConvexType &gt;::type()</a>.</p>
+<p>References <a class="el" href="namespaceFeel.html#a5556fc8b6fb24e847bc4d574a6153cd0">Feel::addElement()</a>.</p>
 
 </div>
 </div>
@@ -809,7 +787,7 @@ template&lt;typename C, typename V, int T&gt; </div>
 template&lt;typename Shape , typename T , int Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::encode </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, Tag &gt;::encode </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -818,7 +796,7 @@ template&lt;typename Shape , typename T , int Tag&gt; </div>
 </div><div class="memdoc">
 <p>encode the mesh data structure into a tighter data structure and to avoid pointers in order to serialize it for saving/loading and sending/receiving the mesh </p>
 
-<p>References <a class="el" href="namespaceFeel.html#a6d4deea03257c3f53b0e9df514a7bf00">Feel::boundaryfaces()</a>, <a class="el" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">Feel::elements()</a>, <a class="el" href="namespaceFeel.html#a12d0226a5e73e64f3b97bf9c723ee239">Feel::faces()</a>, <a class="el" href="classFeel_1_1GmshOrdering.html#aaafaceaf10e70312e95805e192c9059f">Feel::GmshOrdering&lt; ConvexType &gt;::fromGmshId()</a>, and <a class="el" href="classFeel_1_1GmshOrdering.html#a0dde2c8364dba6d9d740fb80a60fa3e4">Feel::GmshOrdering&lt; ConvexType &gt;::type()</a>.</p>
+<p>References <a class="el" href="namespaceFeel.html#a6d4deea03257c3f53b0e9df514a7bf00">Feel::boundaryfaces()</a>, <a class="el" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">Feel::elements()</a>, and <a class="el" href="namespaceFeel.html#a12d0226a5e73e64f3b97bf9c723ee239">Feel::faces()</a>.</p>
 
 </div>
 </div>
@@ -829,7 +807,7 @@ template&lt;typename Shape , typename T , int Tag&gt; </div>
 template&lt;typename Shape , typename T , int Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::element_iterator <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::eraseElement </td>
+          <td class="memname"><a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; Shape, T, Tag &gt;::element_iterator <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, Tag &gt;::eraseElement </td>
           <td>(</td>
           <td class="paramtype">element_iterator&#160;</td>
           <td class="paramname"><em>position</em>, </td>
@@ -868,7 +846,7 @@ template&lt;typename Shape , typename T , int Tag&gt; </div>
 template&lt;typename Shape , typename T , int Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::findNeighboringProcessors </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, Tag &gt;::findNeighboringProcessors </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -1166,7 +1144,7 @@ template&lt;typename C, typename V, int T&gt; </div>
 template&lt;typename Shape , typename T , int Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::localrenumber </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, Tag &gt;::localrenumber </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -1375,7 +1353,7 @@ template&lt;typename C, typename V, int T&gt; </div>
 template&lt;typename Shape , typename T , int Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::partition </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, Tag &gt;::partition </td>
           <td>(</td>
           <td class="paramtype">const uint16_type&#160;</td>
           <td class="paramname"><em>n_parts</em> = <code>1</code>)</td><td></td>
@@ -1394,7 +1372,7 @@ template&lt;typename Shape , typename T , int Tag&gt; </div>
 template&lt;typename Shape , typename T , int Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::recv </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, Tag &gt;::recv </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -1475,7 +1453,7 @@ template&lt;typename C, typename V, int T&gt; </div>
 template&lt;typename Shape , typename T , int Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::send </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, Tag &gt;::send </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -1536,7 +1514,7 @@ template&lt;typename C, typename V, int T&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; C, V, T &gt;::setPeriodicEntities </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="structFeel_1_1PeriodicEntity.html">PeriodicEntity</a> &gt; const &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; PeriodicEntity &gt; const &amp;&#160;</td>
           <td class="paramname"><em>e</em>)</td><td></td>
           <td></td>
         </tr>
@@ -1563,7 +1541,7 @@ template&lt;int TheTag = Tag&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structFeel_1_1Mesh_1_1trace__mesh.html">trace_mesh</a>&lt;TheTag&gt;::ptrtype <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; C, V, T &gt;::trace </td>
+          <td class="memname">trace_mesh&lt;TheTag&gt;::ptrtype <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; C, V, T &gt;::trace </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -1600,7 +1578,7 @@ template&lt;typename Shape , typename T , int Tag&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::updateEntitiesCoDimensionOne </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, Tag &gt;::updateEntitiesCoDimensionOne </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -1650,7 +1628,7 @@ template&lt;typename C, typename V, int T&gt; </div>
 template&lt;typename Shape , typename T , int Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, <a class="el" href="structFeel_1_1Tag.html">Tag</a> &gt;::updateForUse </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; Shape, T, Tag &gt;::updateForUse </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -1660,7 +1638,7 @@ template&lt;typename Shape , typename T , int Tag&gt; </div>
 <p>update the mesh data structure before using it</p>
 <p>by default if the number of processors if &gt; 1, we partition the mesh. A different behaviour is controlled by setting properly <code>setComponents()</code>, <code>components()</code> </p>
 
-<p>References <a class="el" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">Feel::elements()</a>, <a class="el" href="namespaceFeel.html#ad8a9273a3537c11a78f1c84f79b96eaf">Feel::elementsRange()</a>, <a class="el" href="namespaceFeel.html#a12d0226a5e73e64f3b97bf9c723ee239">Feel::faces()</a>, <a class="el" href="namespaceFeel.html#a10420503bae61d1236dbc91c2dff5e9e">Feel::hasElement()</a>, and <a class="el" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">Feel::invalid_size_type_value</a>.</p>
+<p>References <a class="el" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">Feel::elements()</a>, <a class="el" href="namespaceFeel.html#ad8a9273a3537c11a78f1c84f79b96eaf">Feel::elementsRange()</a>, <a class="el" href="namespaceFeel.html#a12d0226a5e73e64f3b97bf9c723ee239">Feel::faces()</a>, <a class="el" href="namespaceFeel.html#ac5004dc4ae1bd485dac6f693e19e7647">Feel::hasElement()</a>, and <a class="el" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">Feel::invalid_size_type_value</a>.</p>
 
 </div>
 </div>
@@ -1946,7 +1924,7 @@ template&lt;typename C, typename V, int T&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:38 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:26 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

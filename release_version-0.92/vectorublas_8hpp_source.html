@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -168,44 +168,44 @@ $(document).ready(function(){initNavTree('vectorublas_8hpp_source.html','');});
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> vector_type::iterator iterator;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> vector_type::const_iterator const_iterator;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="structFeel_1_1VectorUblas_1_1range.html">   85</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1VectorUblas_1_1range.html">range</a></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">struct </span>range</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">typedef</span> ublas::vector_range&lt;ublas::vector&lt;value_type&gt; &gt; subtype;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas&lt;value_type,subtype&gt;</a> <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">type</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">typedef</span> VectorUblas&lt;value_type,subtype&gt; type;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    };</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="structFeel_1_1VectorUblas_1_1slice.html">   91</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1VectorUblas_1_1slice.html">slice</a></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">struct </span>slice</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keyword">typedef</span> ublas::vector_slice&lt;ublas::vector&lt;value_type&gt; &gt; subtype;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas&lt;value_type,subtype&gt;</a> <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">type</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keyword">typedef</span> VectorUblas&lt;value_type,subtype&gt; type;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    };</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1DataMap.html" title="data layout in a multi-processor environnement ">super1::datamap_type</a> <a class="code" href="classFeel_1_1DataMap.html" title="data layout in a multi-processor environnement ">datamap_type</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super1::datamap_type datamap_type;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super1::datamap_ptrtype datamap_ptrtype;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    VectorUblas();</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __s );</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    VectorUblas( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __s );</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas</a>( datamap_ptrtype <span class="keyword">const</span>&amp; dm );</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    VectorUblas( datamap_ptrtype <span class="keyword">const</span>&amp; dm );</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __s, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __n_local );</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    VectorUblas( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __s, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __n_local );</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas</a>( <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas</a> <span class="keyword">const</span> &amp; m );</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    VectorUblas( VectorUblas <span class="keyword">const</span> &amp; m );</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas</a>( <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas&lt;value_type&gt;</a>&amp; m, range_type <span class="keyword">const</span>&amp; <a class="code" href="structFeel_1_1VectorUblas_1_1range.html">range</a>, datamap_ptrtype <span class="keyword">const</span>&amp; dm );</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    VectorUblas( VectorUblas&lt;value_type&gt;&amp; m, range_type <span class="keyword">const</span>&amp; range, datamap_ptrtype <span class="keyword">const</span>&amp; dm );</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas</a>( ublas::vector&lt;value_type&gt;&amp; m, range_type <span class="keyword">const</span>&amp; <a class="code" href="structFeel_1_1VectorUblas_1_1range.html">range</a> );</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    VectorUblas( ublas::vector&lt;value_type&gt;&amp; m, range_type <span class="keyword">const</span>&amp; range );</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas</a>( <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas&lt;value_type&gt;</a>&amp; m, slice_type <span class="keyword">const</span>&amp; <a class="code" href="structFeel_1_1VectorUblas_1_1slice.html">slice</a> );</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    VectorUblas( VectorUblas&lt;value_type&gt;&amp; m, slice_type <span class="keyword">const</span>&amp; slice );</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas</a>( ublas::vector&lt;value_type&gt;&amp; m, slice_type <span class="keyword">const</span>&amp; <a class="code" href="structFeel_1_1VectorUblas_1_1slice.html">slice</a> );</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    VectorUblas( ublas::vector&lt;value_type&gt;&amp; m, slice_type <span class="keyword">const</span>&amp; slice );</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    ~<a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas</a>();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    ~VectorUblas();</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1VectorUblas.html#a0a7d185a2a530d5c764352b7dbc19d62">init</a> ( <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> N,</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> n_local,</div>
@@ -729,7 +729,7 @@ $(document).ready(function(){initNavTree('vectorublas_8hpp_source.html','');});
 <div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    ( v1.localSize() )( v2.localSize() )</div>
 <div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;    ( v1.size() )( v2.size() ).error( <span class="stringliteral">&quot;incompatible vector sizes&quot;</span> );</div>
 <div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;</div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1type__traits.html">type_traits&lt;T&gt;::real_type</a> real_type;</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> type_traits&lt;T&gt;::real_type real_type;</div>
 <div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;</div>
 <div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;    <a class="code" href="classFeel_1_1VectorUblas.html" title="interface to vector ">VectorUblas&lt;real_type&gt;</a> _t( v1.mapPtr() );</div>
 <div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> s = v1.localSize();</div>
@@ -762,7 +762,7 @@ $(document).ready(function(){initNavTree('vectorublas_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:15 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:18 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

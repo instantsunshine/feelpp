@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -176,9 +176,9 @@ $(document).ready(function(){initNavTree('visitor_8hpp_source.html','');});
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">class </span>TList,</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="keyword">typename</span> R = <span class="keywordtype">void</span></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      &gt;</div>
-<div class="line"><a name="l00126"></a><span class="lineno"><a class="code" href="classFeel_1_1VisitorList.html">  126</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1VisitorList.html">VisitorList</a></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">class </span>VisitorList</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    :</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">public</span> <a class="code" href="classFeel_1_1Visitor.html">Visitor</a>&lt;typename mpl::front&lt;TList&gt;::type, R&gt;,</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">public</span> Visitor&lt;typename mpl::front&lt;TList&gt;::type, R&gt;,</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">public</span> mpl::if_&lt;mpl::greater&lt;mpl::size&lt;TList&gt;,mpl::long_&lt;1l&gt; &gt;,</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    mpl::identity&lt;VisitorList&lt;mpl::pop_front&lt;TList&gt;,R&gt; &gt;,</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    mpl::identity&lt;mpl::identity&lt;VisitorBase&gt; &gt; &gt;::type::type</div>
@@ -200,15 +200,15 @@ $(document).ready(function(){initNavTree('visitor_8hpp_source.html','');});
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      <span class="keyword">class </span>Tail,</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keyword">typename</span> R</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      &gt;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1Visitor.html">Visitor</a>&lt; mpl::list&lt;Head, Tail&gt;, R &gt;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keyword">class </span>Visitor&lt; mpl::list&lt;Head, Tail&gt;, R &gt;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    :</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="keyword">public</span> <a class="code" href="classFeel_1_1Visitor.html">Visitor</a>&lt;Head, R&gt;,</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="keyword">public</span> <a class="code" href="classFeel_1_1Visitor.html">Visitor</a>&lt;Tail, R&gt;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="keyword">public</span> Visitor&lt;Head, R&gt;,</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="keyword">public</span> Visitor&lt;Tail, R&gt;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;{</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keyword">typedef</span> R return_type;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">using</span> <a class="code" href="classFeel_1_1Visitor.html">Visitor&lt;Head, R&gt;::visit</a>;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keyword">using</span> <a class="code" href="classFeel_1_1Visitor.html">Visitor&lt;Tail, R&gt;::visit</a>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">using</span> <a class="code" href="classFeel_1_1Visitor.html#a98acadae64f9daa013409b11fd6db989" title="visit a data structure ">Visitor&lt;Head, R&gt;::visit</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keyword">using</span> Visitor&lt;Tail, R&gt;::visit;</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;};</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keyword">template</span> &lt;</div>
@@ -237,7 +237,7 @@ $(document).ready(function(){initNavTree('visitor_8hpp_source.html','');});
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      <span class="keyword">class </span>Tail,</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      <span class="keyword">typename</span> R</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      &gt;</div>
-<div class="line"><a name="l00217"></a><span class="lineno"><a class="code" href="classFeel_1_1VisitorBaseImpl_3_01mpl_1_1list_3_01Head_00_01Tail_01_4_00_01R_01_4.html">  217</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1VisitorBaseImpl.html" title="Implements non-strict visitation (you can implement only part of the Visit functions) ...">VisitorBaseImpl</a>&lt; mpl::list&lt;Head, Tail&gt;, R &gt;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1VisitorBaseImpl.html" title="Implements non-strict visitation (you can implement only part of the Visit functions) ...">VisitorBaseImpl</a>&lt; mpl::list&lt;Head, Tail&gt;, R &gt;</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    :</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="keyword">public</span> <a class="code" href="classFeel_1_1Visitor.html">Visitor</a>&lt;Head, R&gt;,</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="keyword">public</span> <a class="code" href="classFeel_1_1VisitorBaseImpl.html" title="Implements non-strict visitation (you can implement only part of the Visit functions) ...">VisitorBaseImpl</a>&lt;Tail, R&gt;</div>
@@ -245,7 +245,7 @@ $(document).ready(function(){initNavTree('visitor_8hpp_source.html','');});
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="comment">// using BaseVisitorImpl&lt;Tail, R&gt;::Visit;</span></div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
-<div class="line"><a name="l00225"></a><span class="lineno"><a class="code" href="classFeel_1_1VisitorBaseImpl_3_01mpl_1_1list_3_01Head_00_01Tail_01_4_00_01R_01_4.html#a5b987068575ecfb31007f9fc24e12afd">  225</a></span>&#160;    <span class="keyword">virtual</span> R <a class="code" href="classFeel_1_1VisitorBaseImpl_3_01mpl_1_1list_3_01Head_00_01Tail_01_4_00_01R_01_4.html#a5b987068575ecfb31007f9fc24e12afd" title="visit a data structure ">visit</a>( Head* )</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">virtual</span> R visit( Head* )</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    {</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">return</span> R();</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    }</div>
@@ -256,12 +256,12 @@ $(document).ready(function(){initNavTree('visitor_8hpp_source.html','');});
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="keyword">class </span>Head,</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keyword">typename</span> R</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      &gt;</div>
-<div class="line"><a name="l00236"></a><span class="lineno"><a class="code" href="classFeel_1_1VisitorBaseImpl_3_01mpl_1_1list_3_01Head_01_4_00_01R_01_4.html">  236</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1VisitorBaseImpl.html" title="Implements non-strict visitation (you can implement only part of the Visit functions) ...">VisitorBaseImpl</a>&lt; mpl::list&lt;Head&gt;, R &gt;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="keyword">class </span>VisitorBaseImpl&lt; mpl::list&lt;Head&gt;, R &gt;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    :</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">public</span> <a class="code" href="classFeel_1_1Visitor.html">Visitor</a>&lt;Head, R&gt;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">public</span> Visitor&lt;Head, R&gt;</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;{</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00241"></a><span class="lineno"><a class="code" href="classFeel_1_1VisitorBaseImpl_3_01mpl_1_1list_3_01Head_01_4_00_01R_01_4.html#a0102d0e416e4e1234a343d6e0f304e12">  241</a></span>&#160;    <span class="keyword">virtual</span> R <a class="code" href="classFeel_1_1VisitorBaseImpl_3_01mpl_1_1list_3_01Head_01_4_00_01R_01_4.html#a0102d0e416e4e1234a343d6e0f304e12" title="visit a data structure ">visit</a>( Head* )</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keyword">virtual</span> R visit( Head* )</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    {</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">return</span> R();</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
@@ -272,14 +272,14 @@ $(document).ready(function(){initNavTree('visitor_8hpp_source.html','');});
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="keyword">typename</span> R,</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;         <span class="keyword">typename</span> Visited</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;         &gt;</div>
-<div class="line"><a name="l00255"></a><span class="lineno"><a class="code" href="structFeel_1_1VisitableCatchAllDefault.html">  255</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1VisitableCatchAllDefault.html">VisitableCatchAllDefault</a></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="keyword">struct </span>VisitableCatchAllDefault</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;{</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keyword">static</span> R onUnknownVisitor( Visited&amp;, <a class="code" href="classFeel_1_1VisitorBase.html" title="The base class of any Acyclic Visitor. ">VisitorBase</a>&amp; )</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keyword">static</span> R onUnknownVisitor( Visited&amp;, VisitorBase&amp; )</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    {</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">return</span> R();</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    }</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keyword">static</span> R onUnknownVisitor( Visited*, <a class="code" href="classFeel_1_1VisitorBase.html" title="The base class of any Acyclic Visitor. ">VisitorBase</a>* )</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keyword">static</span> R onUnknownVisitor( Visited*, VisitorBase* )</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    {</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">return</span> R();</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    }</div>
@@ -289,29 +289,29 @@ $(document).ready(function(){initNavTree('visitor_8hpp_source.html','');});
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="keyword">template</span></div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;&lt;</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="keyword">typename</span> R = void,</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;         <span class="keyword">template</span> &lt;<span class="keyword">class</span>, <span class="keyword">class</span>&gt; <span class="keyword">class </span>CatchAll = <a class="code" href="structFeel_1_1VisitableCatchAllDefault.html">VisitableCatchAllDefault</a></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;         <span class="keyword">template</span> &lt;<span class="keyword">class</span>, <span class="keyword">class</span>&gt; <span class="keyword">class </span>CatchAll = VisitableCatchAllDefault</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;         &gt;</div>
-<div class="line"><a name="l00277"></a><span class="lineno"><a class="code" href="classFeel_1_1VisitableBase.html">  277</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1VisitableBase.html">VisitableBase</a></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="keyword">class </span>VisitableBase</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;{</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keyword">typedef</span> R return_type;</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classFeel_1_1VisitableBase.html">VisitableBase</a>() {}</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keyword">virtual</span> ~VisitableBase() {}</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keyword">virtual</span> return_type <a class="code" href="classFeel_1_1VisitableBase.html#ac7b07f2867755cbada340cfc2043790b" title="accept visitor: use S_DEFINE_VISITABLE() to redefine it ">accept</a>( <a class="code" href="classFeel_1_1VisitorBase.html" title="The base class of any Acyclic Visitor. ">VisitorBase</a>&amp; ) = 0;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keyword">virtual</span> return_type accept( VisitorBase&amp; ) = 0;</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keyword">virtual</span> return_type <a class="code" href="classFeel_1_1VisitableBase.html#ac7b07f2867755cbada340cfc2043790b" title="accept visitor: use S_DEFINE_VISITABLE() to redefine it ">accept</a>( <a class="code" href="classFeel_1_1VisitorBase.html" title="The base class of any Acyclic Visitor. ">VisitorBase</a>* ) = 0;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keyword">virtual</span> return_type accept( VisitorBase* ) = 0;</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keyword">static</span></div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    return_type</div>
-<div class="line"><a name="l00301"></a><span class="lineno"><a class="code" href="classFeel_1_1VisitableBase.html#a3c4ac7ee3fa9b1ef11cd1e075cb38e49">  301</a></span>&#160;    <a class="code" href="classFeel_1_1VisitableBase.html#a3c4ac7ee3fa9b1ef11cd1e075cb38e49">acceptImpl</a>( T* visited, <a class="code" href="classFeel_1_1VisitorBase.html" title="The base class of any Acyclic Visitor. ">VisitorBase</a>* guest )</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    acceptImpl( T* visited, VisitorBase* guest )</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    {</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="comment">// Apply the Acyclic Visitor</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">if</span> ( <a class="code" href="classFeel_1_1Visitor.html">Visitor&lt;T&gt;</a>* p = <span class="keyword">dynamic_cast&lt;</span> <a class="code" href="classFeel_1_1Visitor.html">Visitor&lt;T&gt;</a>* <span class="keyword">&gt;</span>( guest ) )</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">if</span> ( Visitor&lt;T&gt;* p = <span class="keyword">dynamic_cast&lt;</span> Visitor&lt;T&gt;* <span class="keyword">&gt;</span>( guest ) )</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        {</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="keywordflow">return</span> p-&gt;visit( visited );</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        }</div>
@@ -373,7 +373,7 @@ $(document).ready(function(){initNavTree('visitor_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:16 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:18 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

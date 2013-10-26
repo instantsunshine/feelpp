@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -178,20 +178,20 @@ $(document).ready(function(){initNavTree('residualestimator_8hpp_source.html',''
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
 <div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="classResidualEstimator.html#a125d97fcd2d780263c9a18fb8a43aa1e">  105</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FunctionSpace.html">FunctionSpace&lt;mesh_type, bases&lt;Lagrange&lt;0,Scalar,Discontinuous&gt;</a> &gt; &gt; <a class="code" href="classResidualEstimator.html#a125d97fcd2d780263c9a18fb8a43aa1e" title="function space that holds piecewise constant ( ) functions (e.g. to store material properties or part...">p0_space_type</a>;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;p0_space_type&gt; p0_space_ptrtype;</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="classResidualEstimator.html#aab2d3c57134999f992b319853cdb9b23">  108</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">p0_space_type::element_type</a> <a class="code" href="classResidualEstimator.html#aab2d3c57134999f992b319853cdb9b23" title="an element type of the  discontinuous function space ">p0_element_type</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="classResidualEstimator.html#aab2d3c57134999f992b319853cdb9b23">  108</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> p0_space_type::element_type <a class="code" href="classResidualEstimator.html#aab2d3c57134999f992b319853cdb9b23" title="an element type of the  discontinuous function space ">p0_element_type</a>;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="classResidualEstimator.html#a37fa8c31d656425fcd7f12faa41637be">  112</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structFeel_1_1bases.html">bases&lt;Lagrange&lt;1,Scalar&gt;</a> &gt; <a class="code" href="classResidualEstimator.html#a37fa8c31d656425fcd7f12faa41637be" title="the basis type of our approximation space ">p1_basis_type</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="classResidualEstimator.html#a37fa8c31d656425fcd7f12faa41637be">  112</a></span>&#160;    <span class="keyword">typedef</span> bases&lt;Lagrange&lt;1,Scalar&gt; &gt; <a class="code" href="classResidualEstimator.html#a37fa8c31d656425fcd7f12faa41637be" title="the basis type of our approximation space ">p1_basis_type</a>;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FunctionSpace.html">FunctionSpace&lt;mesh_type, p1_basis_type&gt;</a> <a class="code" href="classFeel_1_1FunctionSpace.html">p1_space_type</a>;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;p1_space_type&gt; p1_space_ptrtype;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">p1_space_type::element_type</a> <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">p1_element_type</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> p1_space_type::element_type p1_element_type;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="code" href="classResidualEstimator.html#a476ea6f0da6e70791b8da86c07440a44">  119</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structFeel_1_1bases.html">bases&lt;Lagrange&lt;Order,Scalar&gt;</a> &gt; <a class="code" href="classResidualEstimator.html#a476ea6f0da6e70791b8da86c07440a44" title="the basis type of our approximation space ">basis_type</a>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="code" href="classResidualEstimator.html#a476ea6f0da6e70791b8da86c07440a44">  119</a></span>&#160;    <span class="keyword">typedef</span> bases&lt;Lagrange&lt;Order,Scalar&gt; &gt; <a class="code" href="classResidualEstimator.html#a476ea6f0da6e70791b8da86c07440a44" title="the basis type of our approximation space ">basis_type</a>;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
 <div class="line"><a name="l00122"></a><span class="lineno"><a class="code" href="classResidualEstimator.html#a0cbbb8ab4a77d5d507b47899f5c8c809">  122</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FunctionSpace.html">FunctionSpace&lt;mesh_type, basis_type&gt;</a> <a class="code" href="classResidualEstimator.html#a0cbbb8ab4a77d5d507b47899f5c8c809" title="the approximation function space type ">space_type</a>;</div>
 <div class="line"><a name="l00124"></a><span class="lineno"><a class="code" href="classResidualEstimator.html#abfc3e509f6b268114ca34d921ad5214e">  124</a></span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;space_type&gt; <a class="code" href="classResidualEstimator.html#abfc3e509f6b268114ca34d921ad5214e" title="the approximation function space type (shared_ptr&lt;&gt; type) ">space_ptrtype</a>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno"><a class="code" href="classResidualEstimator.html#a994984fd63cc1d6f056989fbee9bf17c">  126</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">space_type::element_type</a> <a class="code" href="classResidualEstimator.html#a994984fd63cc1d6f056989fbee9bf17c" title="an element type of the approximation function space ">element_type</a>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="code" href="classResidualEstimator.html#a994984fd63cc1d6f056989fbee9bf17c">  126</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_type::element_type <a class="code" href="classResidualEstimator.html#a994984fd63cc1d6f056989fbee9bf17c" title="an element type of the approximation function space ">element_type</a>;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
 <div class="line"><a name="l00129"></a><span class="lineno"><a class="code" href="classResidualEstimator.html#a93987b13571555052c1c6d2b2c9bc74a">  129</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Exporter.html" title="export Feel generated data to some file formatsUse the visitor and factory pattern. ">Exporter&lt;mesh_type,1&gt;</a> <a class="code" href="classResidualEstimator.html#a93987b13571555052c1c6d2b2c9bc74a" title="the exporter factory type ">export_type</a>;</div>
 <div class="line"><a name="l00131"></a><span class="lineno"><a class="code" href="classResidualEstimator.html#a4b5411e7636979f50bce3c5aa18142bd">  131</a></span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;export_type&gt; <a class="code" href="classResidualEstimator.html#a4b5411e7636979f50bce3c5aa18142bd" title="the exporter factory (shared_ptr&lt;&gt; type) ">export_ptrtype</a>;</div>
@@ -387,7 +387,7 @@ $(document).ready(function(){initNavTree('residualestimator_8hpp_source.html',''
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;{</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">if</span> ( dim &amp;&amp; dim != Dim ) return ;</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">if</span> ( order &amp;&amp; order != <a class="code" href="structFeel_1_1Order.html">Order</a> ) return ;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">if</span> ( order &amp;&amp; order != Order ) return ;</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;------------------------------------------------------------\n&quot;</span>;</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Execute ResidualEstimator&lt;&quot;</span> &lt;&lt; Dim &lt;&lt; <span class="stringliteral">&quot;&gt;\n&quot;</span>;</div>
@@ -449,7 +449,7 @@ $(document).ready(function(){initNavTree('residualestimator_8hpp_source.html',''
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                                           % this-&gt;about().appName()</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                                           % shape</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                                           % Dim</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                                           % <a class="code" href="structFeel_1_1Order.html">Order</a></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                                           % Order</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                                           % meshSize );</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        mesh = createGMSHMesh( _mesh=<span class="keyword">new</span> <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">mesh_type</a>,</div>
@@ -470,8 +470,8 @@ $(document).ready(function(){initNavTree('residualestimator_8hpp_source.html',''
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    P0h = p0_space_type::New( mesh );</div>
 <div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    P1h = p1_space_type::New( mesh );</div>
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <a class="code" href="classResidualEstimator.html#abfc3e509f6b268114ca34d921ad5214e" title="the approximation function space type (shared_ptr&lt;&gt; type) ">space_ptrtype</a> Xh = space_type::New( mesh );</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a> u( Xh, <span class="stringliteral">&quot;u&quot;</span> );</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a> v( Xh, <span class="stringliteral">&quot;v&quot;</span> );</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <a class="code" href="classResidualEstimator.html#a994984fd63cc1d6f056989fbee9bf17c" title="an element type of the approximation function space ">element_type</a> u( Xh, <span class="stringliteral">&quot;u&quot;</span> );</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <a class="code" href="classResidualEstimator.html#a994984fd63cc1d6f056989fbee9bf17c" title="an element type of the approximation function space ">element_type</a> v( Xh, <span class="stringliteral">&quot;v&quot;</span> );</div>
 <div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    <span class="comment">// [toto1]</span></div>
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;</div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div>
@@ -580,8 +580,8 @@ $(document).ready(function(){initNavTree('residualestimator_8hpp_source.html',''
 <div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    <span class="keywordtype">double</span> H1exact = math::sqrt( <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( mesh ),g*g+grad_g*trans( grad_g ) ).evaluate()( 0,0 ) );</div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;</div>
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    <span class="keyword">auto</span> RealL2ErrorP0 = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( mesh ), ( idv( u )-g )*( idv( u )-g ), <a class="code" href="structFeel_1_1__Q.html">_Q&lt;10&gt;</a>() ).broken( P0h );</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    <span class="keyword">auto</span> RealSemiH1ErrorP0 = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( mesh ), ( gradv( u )-grad_g )* trans( gradv( u )-grad_g ), <a class="code" href="structFeel_1_1__Q.html">_Q&lt;10&gt;</a>() ).broken( P0h );</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    <span class="keyword">auto</span> RealL2ErrorP0 = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( mesh ), ( idv( u )-g )*( idv( u )-g ), _Q&lt;10&gt;() ).broken( P0h );</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    <span class="keyword">auto</span> RealSemiH1ErrorP0 = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( mesh ), ( gradv( u )-grad_g )* trans( gradv( u )-grad_g ), _Q&lt;10&gt;() ).broken( P0h );</div>
 <div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    <span class="keyword">auto</span> H1RealErrorP0 = RealL2ErrorP0;</div>
 <div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    H1RealErrorP0 += RealSemiH1ErrorP0;</div>
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    H1RealErrorP0 = H1RealErrorP0.sqrt();</div>
@@ -594,7 +594,7 @@ $(document).ready(function(){initNavTree('residualestimator_8hpp_source.html',''
 <div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    <span class="keyword">auto</span> term3 = gradv( u )*vf::N()-grad_g*N();</div>
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;</div>
 <div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    <span class="keyword">auto</span> rho = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( mesh ), term1*term1, <a class="code" href="structFeel_1_1__Q.html">_Q&lt;10&gt;</a>() ).broken( P0h ).sqrt();</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    <span class="keyword">auto</span> rho = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( mesh ), term1*term1, _Q&lt;10&gt;() ).broken( P0h ).sqrt();</div>
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;</div>
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;</div>
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;    rho += <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( <a class="code" href="namespaceFeel.html#a6c53147b25bf664bdf6bec2b30b56af7">internalfaces</a>( mesh ),0.25*vf::h()*term2*term2 ).broken( P0h ).sqrt();</div>
@@ -609,7 +609,7 @@ $(document).ready(function(){initNavTree('residualestimator_8hpp_source.html',''
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;</div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    <span class="comment">//if we use real error for adaptation then H1errorP1 will be the projection of H1RealErrorP0 on P1 space</span></div>
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    <span class="comment">//else H1errorP1 will be the projection of H1estimator on P1 space</span></div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">p1_element_type</a> H1errorP1;</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    p1_element_type H1errorP1;</div>
 <div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;</div>
 <div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    <span class="keywordflow">if</span> ( error_type==2 )</div>
 <div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    {</div>
@@ -643,15 +643,15 @@ $(document).ready(function(){initNavTree('residualestimator_8hpp_source.html',''
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;</div>
 <div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    h_new = <a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">vf::project</a>( P1h, <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( mesh ),</div>
 <div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;                         vf::max( vf::pow(</div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;                                      vf::pow( vf::h(),<a class="code" href="structFeel_1_1Order.html">Order</a> )*( tol )/idv( H1errorP1 ),</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;                                      1./<a class="code" href="structFeel_1_1Order.html">Order</a> ),</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;                                      vf::pow( vf::h(),Order )*( tol )/idv( H1errorP1 ),</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;                                      1./Order ),</div>
 <div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;                                  this-&gt;vm()[<span class="stringliteral">&quot;adapt-hmin&quot;</span>].<span class="keyword">template</span> as&lt;double&gt;() ) );</div>
 <div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    <span class="comment">/**********************end of residual estimaor*************/</span></div>
 <div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;</div>
 <div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a> exact_solution( Xh, <span class="stringliteral">&quot;exact_solution&quot;</span> );</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    <a class="code" href="classResidualEstimator.html#a994984fd63cc1d6f056989fbee9bf17c" title="an element type of the approximation function space ">element_type</a> exact_solution( Xh, <span class="stringliteral">&quot;exact_solution&quot;</span> );</div>
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    exact_solution = <a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">vf::project</a>( Xh, <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( mesh ), g );</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a> u_minus_exact( Xh, <span class="stringliteral">&quot;u-g&quot;</span> );</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    <a class="code" href="classResidualEstimator.html#a994984fd63cc1d6f056989fbee9bf17c" title="an element type of the approximation function space ">element_type</a> u_minus_exact( Xh, <span class="stringliteral">&quot;u-g&quot;</span> );</div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    u_minus_exact = <a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">vf::project</a>( Xh, <a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>( mesh ), idv( u )-g );</div>
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;</div>
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;</div>
@@ -706,7 +706,7 @@ $(document).ready(function(){initNavTree('residualestimator_8hpp_source.html',''
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:11 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:14 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

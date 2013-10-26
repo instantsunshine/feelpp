@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -145,7 +145,7 @@ typedef <a class="el" href="classFeel_1_1Backend.html">Backend</a>&lt; <a class=
 <tr class="memdesc:ac23ca54dce877aca7c067c9b209bda31"><td class="mdescLeft">&#160;</td><td class="mdescRight">linear algebra backend factory <br/></td></tr>
 <tr class="separator:ac23ca54dce877aca7c067c9b209bda31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a476ea6f0da6e70791b8da86c07440a44"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a476ea6f0da6e70791b8da86c07440a44"></a>
-typedef <a class="el" href="structFeel_1_1bases.html">bases</a>&lt; <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a>&lt; <a class="el" href="structFeel_1_1Order.html">Order</a>, <br class="typebreak"/>
+typedef bases&lt; Lagrange&lt; Order, <br class="typebreak"/>
 <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResidualEstimator.html#a476ea6f0da6e70791b8da86c07440a44">basis_type</a></td></tr>
 <tr class="memdesc:a476ea6f0da6e70791b8da86c07440a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">the basis type of our approximation space <br/></td></tr>
 <tr class="separator:a476ea6f0da6e70791b8da86c07440a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,7 +154,7 @@ typedef <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; Dim &gt;&
 <tr class="memdesc:a416ff1c0b5d9e14e92a32eedf3037f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">geometry entities type composing the mesh, here Simplex in Dimension Dim of Order 1 <br/></td></tr>
 <tr class="separator:a416ff1c0b5d9e14e92a32eedf3037f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a994984fd63cc1d6f056989fbee9bf17c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a994984fd63cc1d6f056989fbee9bf17c"></a>
-typedef <a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">space_type::element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResidualEstimator.html#a994984fd63cc1d6f056989fbee9bf17c">element_type</a></td></tr>
+typedef space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResidualEstimator.html#a994984fd63cc1d6f056989fbee9bf17c">element_type</a></td></tr>
 <tr class="memdesc:a994984fd63cc1d6f056989fbee9bf17c"><td class="mdescLeft">&#160;</td><td class="mdescRight">an element type of the approximation function space <br/></td></tr>
 <tr class="separator:a994984fd63cc1d6f056989fbee9bf17c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b5411e7636979f50bce3c5aa18142bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b5411e7636979f50bce3c5aa18142bd"></a>
@@ -176,7 +176,7 @@ typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; <a class="el" h
 <tr class="memdesc:adca4ee6f2ccac1101dc0f184d592f2db"><td class="mdescLeft">&#160;</td><td class="mdescRight">mesh type <br/></td></tr>
 <tr class="separator:adca4ee6f2ccac1101dc0f184d592f2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab2d3c57134999f992b319853cdb9b23"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab2d3c57134999f992b319853cdb9b23"></a>
-typedef <a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">p0_space_type::element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResidualEstimator.html#aab2d3c57134999f992b319853cdb9b23">p0_element_type</a></td></tr>
+typedef p0_space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResidualEstimator.html#aab2d3c57134999f992b319853cdb9b23">p0_element_type</a></td></tr>
 <tr class="memdesc:aab2d3c57134999f992b319853cdb9b23"><td class="mdescLeft">&#160;</td><td class="mdescRight">an element type of the <img class="formulaInl" alt="$P_0$" src="form_224.png"/> discontinuous function space <br/></td></tr>
 <tr class="separator:aab2d3c57134999f992b319853cdb9b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f078fa0c62f12866cdbfd0a962ec98e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f078fa0c62f12866cdbfd0a962ec98e"></a>
@@ -185,17 +185,17 @@ typedef boost::shared_ptr<br class="typebreak"/>
 <tr class="separator:a9f078fa0c62f12866cdbfd0a962ec98e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a125d97fcd2d780263c9a18fb8a43aa1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a125d97fcd2d780263c9a18fb8a43aa1e"></a>
 typedef <a class="el" href="classFeel_1_1FunctionSpace.html">FunctionSpace</a><br class="typebreak"/>
-&lt; <a class="el" href="classResidualEstimator.html#adca4ee6f2ccac1101dc0f184d592f2db">mesh_type</a>, <a class="el" href="structFeel_1_1bases.html">bases</a>&lt; <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a><br class="typebreak"/>
-&lt; 0, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a>, <a class="el" href="classFeel_1_1Discontinuous.html">Discontinuous</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResidualEstimator.html#a125d97fcd2d780263c9a18fb8a43aa1e">p0_space_type</a></td></tr>
+&lt; <a class="el" href="classResidualEstimator.html#adca4ee6f2ccac1101dc0f184d592f2db">mesh_type</a>, bases&lt; Lagrange<br class="typebreak"/>
+&lt; 0, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a>, Discontinuous &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResidualEstimator.html#a125d97fcd2d780263c9a18fb8a43aa1e">p0_space_type</a></td></tr>
 <tr class="memdesc:a125d97fcd2d780263c9a18fb8a43aa1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">function space that holds piecewise constant ( <img class="formulaInl" alt="$P_0$" src="form_224.png"/>) functions (e.g. to store material properties or partitioning <br/></td></tr>
 <tr class="separator:a125d97fcd2d780263c9a18fb8a43aa1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37fa8c31d656425fcd7f12faa41637be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37fa8c31d656425fcd7f12faa41637be"></a>
-typedef <a class="el" href="structFeel_1_1bases.html">bases</a>&lt; <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a><br class="typebreak"/>
+typedef bases&lt; Lagrange<br class="typebreak"/>
 &lt; 1, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResidualEstimator.html#a37fa8c31d656425fcd7f12faa41637be">p1_basis_type</a></td></tr>
 <tr class="memdesc:a37fa8c31d656425fcd7f12faa41637be"><td class="mdescLeft">&#160;</td><td class="mdescRight">the basis type of our approximation space <br/></td></tr>
 <tr class="separator:a37fa8c31d656425fcd7f12faa41637be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5bbf3f98c0a0102c4576c854ba84a8b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5bbf3f98c0a0102c4576c854ba84a8b"></a>
-typedef <a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">p1_space_type::element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>p1_element_type</b></td></tr>
+typedef p1_space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><b>p1_element_type</b></td></tr>
 <tr class="separator:ac5bbf3f98c0a0102c4576c854ba84a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac481980c2e60a962c09791131a5c337a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac481980c2e60a962c09791131a5c337a"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
@@ -333,7 +333,7 @@ template&lt;int Dim, int Order = 1&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classResidualEstimator.html">ResidualEstimator</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::<a class="el" href="classResidualEstimator.html">ResidualEstimator</a> </td>
+          <td class="memname"><a class="el" href="classResidualEstimator.html">ResidualEstimator</a>&lt; Dim, Order &gt;::<a class="el" href="classResidualEstimator.html">ResidualEstimator</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classFeel_1_1AboutData.html">AboutData</a> const &amp;&#160;</td>
           <td class="paramname"><em>about</em>)</td><td></td>
@@ -361,7 +361,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classResidualEstimator.html">ResidualEstimator</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::run </td>
+          <td class="memname">void <a class="el" href="classResidualEstimator.html">ResidualEstimator</a>&lt; Dim, Order &gt;::run </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -389,7 +389,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classResidualEstimator.html">ResidualEstimator</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::run </td>
+          <td class="memname">void <a class="el" href="classResidualEstimator.html">ResidualEstimator</a>&lt; Dim, Order &gt;::run </td>
           <td>(</td>
           <td class="paramtype">const double *&#160;</td>
           <td class="paramname"><em>X</em>, </td>
@@ -527,7 +527,7 @@ template&lt;int Dim, int Order&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:17 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:20 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -139,15 +139,15 @@ $(document).ready(function(){initNavTree('meshhighorder_8hpp_source.html','');})
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> is_simplex = Convex::is_simplex;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type Dim = Convex::nDim;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type <a class="code" href="structFeel_1_1Order.html">Order</a> = Convex::nOrder;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type Order = Convex::nOrder;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt; mpl::bool_&lt; is_simplex &gt;, <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex&lt;Dim, 1&gt;</a>, <a class="code" href="classFeel_1_1Hypercube.html">Hypercube&lt;Dim, 1&gt;</a> &gt;::type convex_type;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt; mpl::bool_&lt; is_simplex &gt;, <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex&lt;Dim, 1&gt;</a>, Hypercube&lt;Dim, 1&gt; &gt;::type convex_type;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">Mesh&lt; convex_type &gt;</a> <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">mesh_type</a>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;mesh_type&gt; mesh_ptrtype;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt; mpl::bool_&lt; is_simplex &gt;, <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex&lt;2, Order&gt;</a>, <a class="code" href="classFeel_1_1Hypercube.html">Hypercube&lt;2, Order&gt;</a> &gt;::type new_convex_type;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt; mpl::bool_&lt; is_simplex &gt;, <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex&lt;2, Order&gt;</a>, Hypercube&lt;2, Order&gt; &gt;::type new_convex_type;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">Mesh&lt; new_convex_type &gt;</a> <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">new_mesh_type</a>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;new_mesh_type&gt; new_mesh_ptrtype;</div>
@@ -164,8 +164,8 @@ $(document).ready(function(){initNavTree('meshhighorder_8hpp_source.html','');})
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> new_mesh_type::element_type new_element_type;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> new_mesh_type::element_const_iterator new_element_const_iterator;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1PointSetEquiSpaced.html">PointSetEquiSpaced&lt;Hypercube&lt;1,1&gt;</a>, <a class="code" href="structFeel_1_1Order.html">Order</a>, <span class="keywordtype">double</span>&gt; <a class="code" href="classFeel_1_1PointSetEquiSpaced.html">oned_pointset_type</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1PointSetEquiSpaced.html">PointSetEquiSpaced&lt;convex_type, Order, double&gt;</a> <a class="code" href="classFeel_1_1PointSetEquiSpaced.html">interior_pointset_type</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">typedef</span> PointSetEquiSpaced&lt;Hypercube&lt;1,1&gt;, Order, <span class="keywordtype">double</span>&gt; oned_pointset_type;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">typedef</span> PointSetEquiSpaced&lt;convex_type, Order, double&gt; interior_pointset_type;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> oned_pointset_type::points_type node_points_type;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> interior_pointset_type::points_type points_type;</div>
@@ -193,7 +193,7 @@ $(document).ready(function(){initNavTree('meshhighorder_8hpp_source.html','');})
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        new_mesh-&gt;clear();</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">//Create pointset</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="classFeel_1_1PointSetEquiSpaced.html">oned_pointset_type</a> pts_space;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        oned_pointset_type pts_space;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        node_points_type span = pts_space.pointsBySubEntity( 1,0 );</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="comment">// stores a boolean indicating if the vertex is in the new mesh</span></div>
@@ -272,7 +272,7 @@ $(document).ready(function(){initNavTree('meshhighorder_8hpp_source.html','');})
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                node_type <a class="code" href="structFeel_1_1node.html">node</a>( Dim );</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="keywordflow">for</span> ( uint16_type j=2; j&lt;=<a class="code" href="structFeel_1_1Order.html">Order</a>; ++j )</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="keywordflow">for</span> ( uint16_type j=2; j&lt;=Order; ++j )</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                {</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                    <span class="keywordtype">double</span> t = span( 0,j-2 );</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
@@ -313,14 +313,14 @@ $(document).ready(function(){initNavTree('meshhighorder_8hpp_source.html','');})
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                            new_point.setId( edgesMap[ new_edge.id() ] + j - 2 );</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                            new_point.setId( edgesMap[ new_edge.id() ] + <a class="code" href="structFeel_1_1Order.html">Order</a> - j );</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                            new_point.setId( edgesMap[ new_edge.id() ] + Order - j );</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                    }</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                    new_element.setPoint( element_type::numVertices +  ( <a class="code" href="structFeel_1_1Order.html">Order</a>-1 )*i +j-2, new_mesh-&gt;point( new_point.id() ) );</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                    new_element.setPoint( element_type::numVertices +  ( Order-1 )*i +j-2, new_mesh-&gt;point( new_point.id() ) );</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">#if !defined ( NDEBUG )</span></div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="preprocessor"></span>                    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[AddPointToElement] Add point with local id &quot;</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                                  &lt;&lt; element_type::numVertices + ( <a class="code" href="structFeel_1_1Order.html">Order</a>-1 )*i +j-2</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                                  &lt;&lt; element_type::numVertices + ( Order-1 )*i +j-2</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                                  &lt;&lt; <span class="stringliteral">&quot; with global id &quot;</span> &lt;&lt; new_mesh-&gt;point( new_point.id() ).<span class="keywordtype">id</span>()</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                                  &lt;&lt; <span class="stringliteral">&quot; to element &quot;</span> &lt;&lt; new_element.id() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor">#endif</span></div>
@@ -340,9 +340,9 @@ $(document).ready(function(){initNavTree('meshhighorder_8hpp_source.html','');})
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor"></span>            } <span class="comment">// end for in edges</span></div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <span class="comment">// for in the points in the interior of the element</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordflow">if</span> ( <a class="code" href="structFeel_1_1Order.html">Order</a> &gt; ( 1 + is_simplex ) )</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordflow">if</span> ( Order &gt; ( 1 + is_simplex ) )</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            {</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                <a class="code" href="classFeel_1_1PointSetEquiSpaced.html">interior_pointset_type</a> pts_interior( 1 );</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                interior_pointset_type pts_interior( 1 );</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                points_type pts = pts_interior.points();</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
@@ -361,12 +361,12 @@ $(document).ready(function(){initNavTree('meshhighorder_8hpp_source.html','');})
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                    new_mesh-&gt;addPoint( new_point );</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                    new_element.setPoint( element_type::numVertices + ( <a class="code" href="structFeel_1_1Order.html">Order</a>-1 )*element_type::numEdges +i,</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                    new_element.setPoint( element_type::numVertices + ( Order-1 )*element_type::numEdges +i,</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                                          new_mesh-&gt;point( new_point.id() ) );</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">#if !defined ( NDEBUG )</span></div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="preprocessor"></span>                    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;Added Point &quot;</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                                  &lt;&lt; element_type::numVertices + ( <a class="code" href="structFeel_1_1Order.html">Order</a>-1 )*element_type::numEdges +i</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                                  &lt;&lt; element_type::numVertices + ( Order-1 )*element_type::numEdges +i</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                                  &lt;&lt; <span class="stringliteral">&quot;: id=&quot;</span> &lt;&lt; new_mesh-&gt;point( new_point.id() ).<span class="keywordtype">id</span>() &lt;&lt; <span class="stringliteral">&quot;; &quot;</span></div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                                  &lt;&lt; new_mesh-&gt;point( new_point.id() ).node() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="preprocessor">#endif</span></div>
@@ -793,7 +793,7 @@ $(document).ready(function(){initNavTree('meshhighorder_8hpp_source.html','');})
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:28:58 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:06 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

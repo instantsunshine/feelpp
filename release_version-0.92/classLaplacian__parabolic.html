@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -133,7 +133,7 @@ class Laplacian_parabolic&lt; Dim, Order &gt;</h3>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a6b8f5bc96992045c84fdf0a5386e18c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b8f5bc96992045c84fdf0a5386e18c2"></a>
-typedef <a class="el" href="structFeel_1_1bases.html">bases</a>&lt; <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a>&lt; <a class="el" href="structFeel_1_1Order.html">Order</a>, <br class="typebreak"/>
+typedef bases&lt; Lagrange&lt; Order, <br class="typebreak"/>
 <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLaplacian__parabolic.html#a6b8f5bc96992045c84fdf0a5386e18c2">basis_type</a></td></tr>
 <tr class="memdesc:a6b8f5bc96992045c84fdf0a5386e18c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">the basis type of our approximation space <br/></td></tr>
 <tr class="separator:a6b8f5bc96992045c84fdf0a5386e18c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,7 +149,7 @@ typedef <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; Dim &gt;&
 <tr class="memdesc:a9cecd9680e71b60e0ad0fe6d294ff7e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">geometry entities type composing the mesh, here Simplex in Dimension Dim of Order 1 <br/></td></tr>
 <tr class="separator:a9cecd9680e71b60e0ad0fe6d294ff7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85f6f3a55302523b7795f1aa1c52955b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85f6f3a55302523b7795f1aa1c52955b"></a>
-typedef <a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">space_type::element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLaplacian__parabolic.html#a85f6f3a55302523b7795f1aa1c52955b">element_type</a></td></tr>
+typedef space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLaplacian__parabolic.html#a85f6f3a55302523b7795f1aa1c52955b">element_type</a></td></tr>
 <tr class="memdesc:a85f6f3a55302523b7795f1aa1c52955b"><td class="mdescLeft">&#160;</td><td class="mdescRight">an element type of the approximation function space <br/></td></tr>
 <tr class="separator:a85f6f3a55302523b7795f1aa1c52955b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a558a2b26a4647045e6d0d0759a9a7165"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a558a2b26a4647045e6d0d0759a9a7165"></a>
@@ -157,7 +157,7 @@ typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1ErrorBase.html">error_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>error_ptrtype</b></td></tr>
 <tr class="separator:a558a2b26a4647045e6d0d0759a9a7165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e0ff43009ec6e5f4eb076cd5ab401e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e0ff43009ec6e5f4eb076cd5ab401e5"></a>
-typedef <a class="el" href="classFeel_1_1ErrorBase.html">ErrorBase</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>error_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1ErrorBase.html">ErrorBase</a>&lt; Dim, Order &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>error_type</b></td></tr>
 <tr class="separator:a6e0ff43009ec6e5f4eb076cd5ab401e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a629e4d0ad3f6baf836676026babb85f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a629e4d0ad3f6baf836676026babb85f9"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
@@ -287,7 +287,7 @@ template&lt;int Dim, int Order = 1&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classLaplacian__parabolic.html">Laplacian_parabolic</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::<a class="el" href="classLaplacian__parabolic.html">Laplacian_parabolic</a> </td>
+          <td class="memname"><a class="el" href="classLaplacian__parabolic.html">Laplacian_parabolic</a>&lt; Dim, Order &gt;::<a class="el" href="classLaplacian__parabolic.html">Laplacian_parabolic</a> </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -314,7 +314,7 @@ template&lt;int Dim, int Order&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classLaplacian__parabolic.html">Laplacian_parabolic</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;::run </td>
+          <td class="memname">void <a class="el" href="classLaplacian__parabolic.html">Laplacian_parabolic</a>&lt; Dim, Order &gt;::run </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -506,7 +506,7 @@ template&lt;int Dim, int Order&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:17 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:20 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

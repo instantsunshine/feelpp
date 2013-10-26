@@ -1,23 +1,12 @@
 var searchData=
 [
-  ['tag',['Tag',['../structFeel_1_1Tag.html',1,'Feel']]],
   ['tensor2',['Tensor2',['../structFeel_1_1Tensor2.html',1,'Feel']]],
   ['tensor3',['Tensor3',['../structFeel_1_1Tensor3.html',1,'Feel']]],
   ['tensorisedboundaryadapted',['TensorisedBoundaryAdapted',['../classFeel_1_1TensorisedBoundaryAdapted.html',1,'Feel']]],
-  ['tetrahedron',['Tetrahedron',['../structFeel_1_1Tetrahedron.html',1,'Feel']]],
   ['thermalfin',['ThermalFin',['../classFeel_1_1ThermalFin.html',1,'Feel']]],
   ['threefieldslaplacian',['ThreeFieldsLaplacian',['../classThreeFieldsLaplacian.html',1,'']]],
   ['timermap',['TimerMap',['../classFeel_1_1TimerMap.html',1,'Feel']]],
-  ['timerpair',['TimerPair',['../structFeel_1_1TimerPair.html',1,'Feel']]],
-  ['times_5frotx',['times_rotx',['../structFeel_1_1detail_1_1times__rotx.html',1,'Feel::detail']]],
-  ['times_5fx',['times_x',['../structFeel_1_1detail_1_1times__x.html',1,'Feel::detail']]],
   ['timeset',['TimeSet',['../classFeel_1_1TimeSet.html',1,'Feel']]],
-  ['trace_5fmesh',['trace_mesh',['../structFeel_1_1Mesh_1_1trace__mesh.html',1,'Feel::Mesh']]],
-  ['trace_5ftrace_5fmesh',['trace_trace_mesh',['../structFeel_1_1Mesh_1_1trace__trace__mesh.html',1,'Feel::Mesh']]],
-  ['traces',['Traces',['../classFeel_1_1Traces.html',1,'Feel']]],
   ['transient_5fedp',['transient_edp',['../structtransient__edp.html',1,'']]],
-  ['triangle',['Triangle',['../structFeel_1_1Triangle.html',1,'Feel']]],
-  ['tt',['tt',['../structFeel_1_1GeoND_1_1tt.html',1,'Feel::GeoND']]],
-  ['type_5ftraits',['type_traits',['../structFeel_1_1type__traits.html',1,'Feel']]],
   ['typeinfo',['TypeInfo',['../classFeel_1_1TypeInfo.html',1,'Feel']]]
 ];

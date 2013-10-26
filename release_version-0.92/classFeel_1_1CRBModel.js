@@ -1,6 +1,5 @@
 var classFeel_1_1CRBModel =
 [
-    [ "ComputeNormL2InCompositeCase", "structFeel_1_1CRBModel_1_1ComputeNormL2InCompositeCase.html", "structFeel_1_1CRBModel_1_1ComputeNormL2InCompositeCase" ],
     [ "affine_decomposition_type", "classFeel_1_1CRBModel.html#a08e000cb265613cb38ca7b0e2ae279ac", null ],
     [ "backend_ptrtype", "classFeel_1_1CRBModel.html#a8bd23c52dd325c073057fa86c11e7753", null ],
     [ "backend_type", "classFeel_1_1CRBModel.html#ac1bf12bbcdbcbf97b208c1a403b7e163", null ],

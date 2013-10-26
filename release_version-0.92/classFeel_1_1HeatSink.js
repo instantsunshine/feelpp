@@ -4,7 +4,7 @@ var classFeel_1_1HeatSink =
     [ "bdf_ptrtype", "classFeel_1_1HeatSink.html#a896a449f592c96bdb18f8dfec3003313", null ],
     [ "bdf_type", "classFeel_1_1HeatSink.html#ae332344a996de305784b414ce8f6dbeb", null ],
     [ "element_type", "classFeel_1_1HeatSink.html#a05287357e8e2339f5d1903da3e0243f3", null ],
-    [ "entity_type", "classFeel_1_1HeatSink.html#a88f3045c8b50a4d0d55e44e9e2ada222", null ],
+    [ "entity_type", "classFeel_1_1HeatSink.html#a0eb6fbdc257615a91f7aab3339c43b0f", null ],
     [ "export_type", "classFeel_1_1HeatSink.html#a4fc27689fa79848e4d936eb72e55fe8d", null ],
     [ "mesh_ptrtype", "classFeel_1_1HeatSink.html#a4d47641ad3b5b805f566490176cb7a09", null ],
     [ "mesh_type", "classFeel_1_1HeatSink.html#a15187ccb3a713aa13f5bd3768c009c1c", null ],

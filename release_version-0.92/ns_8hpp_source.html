@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -151,69 +151,69 @@ $(document).ready(function(){initNavTree('ns_8hpp_source.html','');});
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">namespace </span>Feel</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="classFeel_1_1NavierStokes.html">   67</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1NavierStokes.html">NavierStokes</a></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">class </span>NavierStokes</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    :</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">public</span> <a class="code" href="classFeel_1_1Simget.html" title="Simulation Object. ">Simget</a></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">public</span> Simget</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Simget.html" title="Simulation Object. ">Simget</a> <a class="code" href="classFeel_1_1Simget.html" title="Simulation Object. ">super</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Simget.html#a47356f761b64cbd1f78d89131828a9e2">Simget</a> super;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">double</span> value_type;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">Backend&lt;value_type&gt;</a> <a class="code" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">backend_type</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">typedef</span> Backend&lt;value_type&gt; backend_type;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;backend_type&gt; backend_ptrtype;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">/*mesh*/</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex&lt;FEELPP_NS_DIM&gt;</a> <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">convex_type</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">Mesh&lt;convex_type&gt;</a> <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">mesh_type</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">typedef</span> Simplex&lt;FEELPP_NS_DIM&gt; convex_type;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">typedef</span> Mesh&lt;convex_type&gt; mesh_type;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;mesh_type&gt; mesh_ptrtype;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">/*basis*/</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">//# marker1 #,</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Lagrange.html">Lagrange&lt;FEELPP_NS_ORDER+1, Vectorial&gt;</a> <a class="code" href="classFeel_1_1Lagrange.html">basis_u_type</a>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Lagrange.html">Lagrange&lt;FEELPP_NS_ORDER, Scalar&gt;</a> <a class="code" href="classFeel_1_1Lagrange.html">basis_p_type</a>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Lagrange.html">Lagrange&lt;0, Scalar&gt;</a> <a class="code" href="classFeel_1_1Lagrange.html">basis_l_type</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">typedef</span> Lagrange&lt;FEELPP_NS_ORDER+1, Vectorial&gt; basis_u_type;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">typedef</span> Lagrange&lt;FEELPP_NS_ORDER, Scalar&gt; basis_p_type;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">typedef</span> Lagrange&lt;0, Scalar&gt; basis_l_type;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// use lagrange multipliers to ensure zero mean pressure</span></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#if defined( FEELPP_USE_LM )</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> <a class="code" href="structFeel_1_1bases.html">bases&lt;basis_u_type,basis_p_type, basis_l_type&gt;</a> <a class="code" href="structFeel_1_1bases.html">basis_type</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> bases&lt;basis_u_type,basis_p_type, basis_l_type&gt; basis_type;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> <a class="code" href="structFeel_1_1bases.html">bases&lt;basis_u_type,basis_p_type&gt;</a> <a class="code" href="structFeel_1_1bases.html">basis_type</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> bases&lt;basis_u_type,basis_p_type&gt; basis_type;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor"></span>    <span class="comment">//# endmarker1 #</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">/*space*/</span></div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">//# marker2 #</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FunctionSpace.html">FunctionSpace&lt;mesh_type, basis_type&gt;</a> <a class="code" href="classFeel_1_1FunctionSpace.html">space_type</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">typedef</span> FunctionSpace&lt;mesh_type, basis_type&gt; space_type;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;space_type&gt; space_ptrtype;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">//# endmarker2 #</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">/* functions */</span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">//# marker3 #</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">space_type::element_type</a> <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">typedef</span> space_type::element_type element_type;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">//# endmarker3 #</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">typedef</span> BDF&lt;space_type&gt; bdf_type;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;bdf_type&gt; bdf_ptrtype;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">/* export */</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Exporter.html" title="export Feel generated data to some file formatsUse the visitor and factory pattern. ">Exporter&lt;mesh_type&gt;</a> <a class="code" href="classFeel_1_1Exporter.html" title="export Feel generated data to some file formatsUse the visitor and factory pattern. ">export_type</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">typedef</span> Exporter&lt;mesh_type&gt; export_type;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    FEELPP_DONT_INLINE</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="classFeel_1_1NavierStokes.html">NavierStokes</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    NavierStokes();</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">// init mesh and space</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    FEELPP_DONT_INLINE</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">void</span> init();</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    FEELPP_DONT_INLINE</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1NavierStokes.html#a6cd2745ac51b7106573520fcd2dd3150">run</a>();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1Simget.html#a4a4507e4e99a9634adaf704dce940247">run</a>();</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    FEELPP_DONT_INLINE</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">void</span> exportResults( <span class="keywordtype">double</span> time, <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a>&amp; u );</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">void</span> exportResults( <span class="keywordtype">double</span> time, element_type&amp; u );</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
@@ -233,11 +233,11 @@ $(document).ready(function(){initNavTree('ns_8hpp_source.html','');});
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;NavierStokes::NavierStokes()</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    :</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    super(),</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    M_backend( <a class="code" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">backend_type</a>::build( this-&gt;vm() ) ),</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    M_backend( backend_type::build( this-&gt;vm() ) ),</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    meshSize( this-&gt;vm()[<span class="stringliteral">&quot;hsize&quot;</span>].as&lt;double&gt;() ),</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    mu( this-&gt;vm()[<span class="stringliteral">&quot;mu&quot;</span>].as&lt;value_type&gt;() ),</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    penalbc( this-&gt;vm()[<span class="stringliteral">&quot;bccoeff&quot;</span>].as&lt;value_type&gt;() ),</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    exporter( <a class="code" href="classFeel_1_1Exporter.html" title="export Feel generated data to some file formatsUse the visitor and factory pattern. ">Exporter</a>&lt;mesh_type&gt;::New( this-&gt;vm(), this-&gt;about().appName() ) )</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    exporter( Exporter&lt;mesh_type&gt;::New( this-&gt;vm(), this-&gt;about().appName() ) )</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;{</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
@@ -246,23 +246,23 @@ $(document).ready(function(){initNavTree('ns_8hpp_source.html','');});
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;NavierStokes::init()</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;{</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    Environment::changeRepository( boost::format( <span class="stringliteral">&quot;doc/manual/ns/%1%/%2%/P%3%P%4%/h_%5%/&quot;</span> )</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                                   % this-&gt;<a class="code" href="classFeel_1_1Simget.html#a842d077007302c803e3b18897c42f8e6">about</a>().appName()</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                                   % <a class="code" href="classFeel_1_1Simplex.html#a55a19a07ddc54c41e5c620723c8d7942">convex_type::name</a>()</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                                   % this-&gt;about().appName()</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                                   % convex_type::name()</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                                   % basis_u_type::nOrder % basis_p_type::nOrder</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                                   % this-&gt;<a class="code" href="classFeel_1_1Simget.html#a2778e828ee4c102e72a33e03b1ede4b1">vm</a>()[<span class="stringliteral">&quot;hsize&quot;</span>].as&lt;double&gt;() );</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                                   % this-&gt;vm()[<span class="stringliteral">&quot;hsize&quot;</span>].as&lt;double&gt;() );</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    mesh = createGMSHMesh( _mesh=<span class="keyword">new</span> mesh_type,</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                           _desc=geo( _filename=this-&gt;<a class="code" href="classFeel_1_1Simget.html#a2778e828ee4c102e72a33e03b1ede4b1">vm</a>()[<span class="stringliteral">&quot;geofile&quot;</span>].as&lt;std::string&gt;()</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                           _desc=geo( _filename=this-&gt;vm()[<span class="stringliteral">&quot;geofile&quot;</span>].as&lt;std::string&gt;()</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                                      _dim=FEELPP_NS_DIM,</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                                      _h=<a class="code" href="classFeel_1_1Simget.html#a650dd47e8e42f51f68d87b29d0632a1d" title="return the mesh size ">meshSize</a> ) );</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                                      _h=meshSize ) );</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    Xh = <a class="code" href="classFeel_1_1FunctionSpace.html#a32db9068214cab3a221c581f1484045a">space_type::New</a>( mesh );</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    Xh = space_type::New( mesh );</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno"><a class="code" href="classFeel_1_1NavierStokes.html#a6cd2745ac51b7106573520fcd2dd3150">  184</a></span>&#160;<a class="code" href="classFeel_1_1NavierStokes.html#a6cd2745ac51b7106573520fcd2dd3150">NavierStokes::run</a>()</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;NavierStokes::run()</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;{</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    this-&gt;init();</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
@@ -286,8 +286,8 @@ $(document).ready(function(){initNavTree('ns_8hpp_source.html','');});
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;[dof] number of dof/proc(P): &quot;</span> &lt;&lt; Xh-&gt;functionSpace&lt;1&gt;()-&gt;nLocalDof()  &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;Data Summary:\n&quot;</span>;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;   hsize = &quot;</span> &lt;&lt; <a class="code" href="classFeel_1_1Simget.html#a650dd47e8e42f51f68d87b29d0632a1d" title="return the mesh size ">meshSize</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  export = &quot;</span> &lt;&lt; this-&gt;<a class="code" href="classFeel_1_1Simget.html#a2778e828ee4c102e72a33e03b1ede4b1">vm</a>().count( <span class="stringliteral">&quot;export&quot;</span> ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;   hsize = &quot;</span> &lt;&lt; meshSize &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  export = &quot;</span> &lt;&lt; this-&gt;vm().count( <span class="stringliteral">&quot;export&quot;</span> ) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;      mu = &quot;</span> &lt;&lt; mu &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot; bccoeff = &quot;</span> &lt;&lt; penalbc &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
@@ -338,7 +338,7 @@ $(document).ready(function(){initNavTree('ns_8hpp_source.html','');});
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    std::for_each( inflow_conditions.begin(), inflow_conditions.end(),</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                   [&amp;]( <a class="code" href="classFeel_1_1BoundaryCondition.html">BoundaryCondition</a> <span class="keyword">const</span>&amp;  bc )</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                   [&amp;]( BoundaryCondition <span class="keyword">const</span>&amp;  bc )</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                   {</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                       <span class="comment">// right hand side</span></div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                       ns_rhs += <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( <a class="code" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">markedfaces</a>( mesh, bc.marker() ), inner( idf(&amp;bc,BoundaryCondition::operator()),-SigmaN+penalbc*id( v )/hFace() ) );</div>
@@ -348,14 +348,14 @@ $(document).ready(function(){initNavTree('ns_8hpp_source.html','');});
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                       navierstokes +=<a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( <a class="code" href="namespaceFeel.html#a6d4deea03257c3f53b0e9df514a7bf00">boundaryfaces</a>( mesh ), +penalbc*inner( idt( u ),<span class="keywordtype">id</span>( v ) )/hFace() );</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                   });</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    std::for_each( wall_conditions.begin(), wall_conditions.end(),</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                   [&amp;]( <a class="code" href="classFeel_1_1BoundaryCondition.html">BoundaryCondition</a> <span class="keyword">const</span>&amp;  bc )</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                   [&amp;]( BoundaryCondition <span class="keyword">const</span>&amp;  bc )</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                   {</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                       navierstokes +=<a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( <a class="code" href="namespaceFeel.html#a6d4deea03257c3f53b0e9df514a7bf00">boundaryfaces</a>( mesh ), -inner( SigmaNt,<span class="keywordtype">id</span>( v ) ) );</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                       navierstokes +=<a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( <a class="code" href="namespaceFeel.html#a6d4deea03257c3f53b0e9df514a7bf00">boundaryfaces</a>( mesh ), -inner( SigmaN,idt( u ) ) );</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                       navierstokes +=<a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( <a class="code" href="namespaceFeel.html#a6d4deea03257c3f53b0e9df514a7bf00">boundaryfaces</a>( mesh ), +penalbc*inner( idt( u ),<span class="keywordtype">id</span>( v ) )/hFace() );</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                   });</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    std::for_each( outflow_conditions.begin(), outflow_conditions.end(),</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                   [&amp;]( <a class="code" href="classFeel_1_1BoundaryCondition.html">BoundaryCondition</a> <span class="keyword">const</span>&amp;  bc )</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                   [&amp;]( BoundaryCondition <span class="keyword">const</span>&amp;  bc )</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                   {</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                       ns_rhs += <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>( <a class="code" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">markedfaces</a>( mesh, bc.marker() ), inner( idf(&amp;bc,BoundaryCondition::operator()),N() ) );</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                   });</div>
@@ -429,7 +429,7 @@ $(document).ready(function(){initNavTree('ns_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:01 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:08 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

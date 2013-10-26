@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -124,7 +124,7 @@ class Feel::BackendEigen&lt; T, _Options &gt;</h3>
  <div class="center">
   <img src="classFeel_1_1BackendEigen.png" usemap="#Feel::BackendEigen&lt; T, _Options &gt;_map" alt=""/>
   <map id="Feel::BackendEigen&lt; T, _Options &gt;_map" name="Feel::BackendEigen&lt; T, _Options &gt;_map">
-<area href="classFeel_1_1Backend.html" title="base class for all linear algebra backends " alt="Feel::Backend&lt; T &gt;" shape="rect" coords="0,56,294,80"/>
+<area href="classFeel_1_1Backend.html" title="base class for all linear algebra backends " alt="Feel::Backend&lt; T &gt;" shape="rect" coords="0,0,214,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -193,7 +193,7 @@ typedef <a class="el" href="classFeel_1_1Vector.html">super::vector_type</a>&#16
 typedef T&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
 <tr class="separator:a84d7e4e8815fef30dafaa3387ea9a9bd inherit pub_types_classFeel_1_1Backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1aa3b619df8c92a171793bc80ebffe33 inherit pub_types_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1aa3b619df8c92a171793bc80ebffe33"></a>
-typedef <a class="el" href="structFeel_1_1type__traits.html">type_traits</a>&lt; T &gt;::real_type&#160;</td><td class="memItemRight" valign="bottom"><b>real_type</b></td></tr>
+typedef type_traits&lt; T &gt;::real_type&#160;</td><td class="memItemRight" valign="bottom"><b>real_type</b></td></tr>
 <tr class="separator:a1aa3b619df8c92a171793bc80ebffe33 inherit pub_types_classFeel_1_1Backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3289d97e3a68539e3637101ed97ee60 inherit pub_types_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3289d97e3a68539e3637101ed97ee60"></a>
 typedef <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; value_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vector_type</b></td></tr>
@@ -258,10 +258,10 @@ typedef boost::shared_ptr<br class="typebreak"/>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0790bc983b4375d59f9717c76e0b19ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0790bc983b4375d59f9717c76e0b19ed"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BackendEigen</b> (<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BackendEigen</b> (WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
 <tr class="separator:a0790bc983b4375d59f9717c76e0b19ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dc1fc1fe3f80836fe52ffb91253514b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6dc1fc1fe3f80836fe52ffb91253514b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BackendEigen</b> (po::variables_map const &amp;vm, std::string const &amp;<a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">prefix</a>=&quot;&quot;, <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BackendEigen</b> (po::variables_map const &amp;vm, std::string const &amp;<a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">prefix</a>=&quot;&quot;, WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
 <tr class="separator:a6dc1fc1fe3f80836fe52ffb91253514b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fbb4e60ed7b9b7168ab1e7cb3d79bdd"><td class="memItemLeft" align="right" valign="top">real_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1BackendEigen.html#a5fbb4e60ed7b9b7168ab1e7cb3d79bdd">dot</a> (const <a class="el" href="classFeel_1_1Vector.html">vector_type</a> &amp;f, const <a class="el" href="classFeel_1_1Vector.html">vector_type</a> &amp;x) const </td></tr>
 <tr class="separator:a5fbb4e60ed7b9b7168ab1e7cb3d79bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -340,7 +340,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>converged</b> () cons
 <tr class="memitem:a16eced4cb169375eecc11ccc76621a18 inherit pub_methods_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16eced4cb169375eecc11ccc76621a18"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>transpose</b> () const </td></tr>
 <tr class="separator:a16eced4cb169375eecc11ccc76621a18 inherit pub_methods_classFeel_1_1Backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a084ba908a4171edac918e7aad7560d27 inherit pub_methods_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a084ba908a4171edac918e7aad7560d27">comm</a> () const </td></tr>
+<tr class="memitem:a084ba908a4171edac918e7aad7560d27 inherit pub_methods_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top">WorldComm const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a084ba908a4171edac918e7aad7560d27">comm</a> () const </td></tr>
 <tr class="separator:a084ba908a4171edac918e7aad7560d27 inherit pub_methods_classFeel_1_1Backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ababfdb3501ad49b7f7fb328f4fde5ddb inherit pub_methods_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ababfdb3501ad49b7f7fb328f4fde5ddb"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>showKSPMonitor</b> () const </td></tr>
@@ -423,10 +423,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setReuseJacRebuildAtF
 <tr class="memitem:ad66bbc3dbf94fd9949183f27e8728239 inherit pub_methods_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ad66bbc3dbf94fd9949183f27e8728239">sendDeleteSignal</a> ()</td></tr>
 <tr class="separator:ad66bbc3dbf94fd9949183f27e8728239 inherit pub_methods_classFeel_1_1Backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf4e27c4a6f863c6c9ad6743da1d6baf inherit pub_methods_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf4e27c4a6f863c6c9ad6743da1d6baf"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Backend</b> (<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Backend</b> (WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
 <tr class="separator:abf4e27c4a6f863c6c9ad6743da1d6baf inherit pub_methods_classFeel_1_1Backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a305d0917e5920bd334b566ec19011e18 inherit pub_methods_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a305d0917e5920bd334b566ec19011e18"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Backend</b> (po::variables_map const &amp;vm, std::string const &amp;<a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">prefix</a>=&quot;&quot;, <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Backend</b> (po::variables_map const &amp;vm, std::string const &amp;<a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">prefix</a>=&quot;&quot;, WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
 <tr class="separator:a305d0917e5920bd334b566ec19011e18 inherit pub_methods_classFeel_1_1Backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc5ca22f72ad952dbed1e41fffe324cc inherit pub_methods_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc5ca22f72ad952dbed1e41fffe324cc"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Backend</b> (<a class="el" href="classFeel_1_1Backend.html">Backend</a> const &amp;)</td></tr>
@@ -442,13 +442,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Backend</b> ()</t
 template&lt;typename DomainSpace , typename ImageSpace &gt; </td></tr>
 <tr class="memitem:a1b38302501043eb08a7a58f43312b966 inherit pub_methods_classFeel_1_1Backend"><td class="memTemplItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>newMatrix</b> (DomainSpace const &amp;dm, ImageSpace const &amp;im, sparse_matrix_ptrtype const &amp;M, <a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> prop=<a class="el" href="namespaceFeel.html#afacc311419d607ce6ac26decbbd04917ab146fe1f68cf920d34534cebcb0c48ae">NON_HERMITIAN</a>)</td></tr>
 <tr class="separator:a1b38302501043eb08a7a58f43312b966 inherit pub_methods_classFeel_1_1Backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae814550c53cc42c83dc4c3e252146905 inherit pub_methods_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ae814550c53cc42c83dc4c3e252146905">newBlockMatrixImpl</a> (<a class="el" href="structFeel_1_1vf_1_1BlocksBase.html">vf::BlocksBase</a>&lt; sparse_matrix_ptrtype &gt; const &amp;b, bool copy_values=true, bool diag_is_nonzero=true)</td></tr>
+<tr class="memitem:ae814550c53cc42c83dc4c3e252146905 inherit pub_methods_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top">sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ae814550c53cc42c83dc4c3e252146905">newBlockMatrixImpl</a> (vf::BlocksBase&lt; sparse_matrix_ptrtype &gt; const &amp;b, bool copy_values=true, bool diag_is_nonzero=true)</td></tr>
 <tr class="separator:ae814550c53cc42c83dc4c3e252146905 inherit pub_methods_classFeel_1_1Backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a673f80eccb5035439748045c0b2d846b inherit pub_methods_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a673f80eccb5035439748045c0b2d846b"></a>
-sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>newBlockMatrixImpl</b> (<a class="el" href="structFeel_1_1vf_1_1BlocksBase.html">vf::BlocksBase</a>&lt; boost::shared_ptr&lt; <a class="el" href="classFeel_1_1GraphCSR.html">GraphCSR</a> &gt; &gt; const &amp;b, bool copy_values=true, bool diag_is_nonzero=true)</td></tr>
+sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>newBlockMatrixImpl</b> (vf::BlocksBase&lt; boost::shared_ptr&lt; <a class="el" href="classFeel_1_1GraphCSR.html">GraphCSR</a> &gt; &gt; const &amp;b, bool copy_values=true, bool diag_is_nonzero=true)</td></tr>
 <tr class="separator:a673f80eccb5035439748045c0b2d846b inherit pub_methods_classFeel_1_1Backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a339c85259745dbf2d883c9464b994a8c inherit pub_methods_classFeel_1_1Backend"><td class="memTemplParams" colspan="2">template&lt;typename BlockType  = vector_ptrtype&gt; </td></tr>
-<tr class="memitem:a339c85259745dbf2d883c9464b994a8c inherit pub_methods_classFeel_1_1Backend"><td class="memTemplItemLeft" align="right" valign="top">vector_ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a339c85259745dbf2d883c9464b994a8c">newBlockVectorImpl</a> (<a class="el" href="structFeel_1_1vf_1_1BlocksBase.html">vf::BlocksBase</a>&lt; BlockType &gt; const &amp;b, bool copy_values=true)</td></tr>
+<tr class="memitem:a339c85259745dbf2d883c9464b994a8c inherit pub_methods_classFeel_1_1Backend"><td class="memTemplItemLeft" align="right" valign="top">vector_ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a339c85259745dbf2d883c9464b994a8c">newBlockVectorImpl</a> (vf::BlocksBase&lt; BlockType &gt; const &amp;b, bool copy_values=true)</td></tr>
 <tr class="separator:a339c85259745dbf2d883c9464b994a8c inherit pub_methods_classFeel_1_1Backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -466,9 +466,9 @@ template&lt;typename SpaceT &gt; </td></tr>
 <tr class="memitem:a4f6077b0b22e1448b4ba5f1083ec1896"><td class="memTemplItemLeft" align="right" valign="top">static vector_ptrtype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>newVector</b> (SpaceT const &amp;space)</td></tr>
 <tr class="separator:a4f6077b0b22e1448b4ba5f1083ec1896"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classFeel_1_1Backend"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classFeel_1_1Backend')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classFeel_1_1Backend.html">Feel::Backend&lt; T &gt;</a></td></tr>
-<tr class="memitem:ab5bc3b49e46db5039d07ac87ec3fdd42 inherit pub_static_methods_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top">static backend_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">build</a> (<a class="el" href="namespaceFeel.html#a4da28efa430cc4bd3a6a86cde30a9809">BackendType</a>=BACKEND_GMM, <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
+<tr class="memitem:ab5bc3b49e46db5039d07ac87ec3fdd42 inherit pub_static_methods_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top">static backend_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">build</a> (<a class="el" href="namespaceFeel.html#a4da28efa430cc4bd3a6a86cde30a9809">BackendType</a>=BACKEND_GMM, WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
 <tr class="separator:ab5bc3b49e46db5039d07ac87ec3fdd42 inherit pub_static_methods_classFeel_1_1Backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32239a0ae0d141e881606ba4dc29497d inherit pub_static_methods_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top">static backend_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a32239a0ae0d141e881606ba4dc29497d">build</a> (po::variables_map const &amp;vm, std::string const &amp;<a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">prefix</a>=&quot;&quot;, <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
+<tr class="memitem:a32239a0ae0d141e881606ba4dc29497d inherit pub_static_methods_classFeel_1_1Backend"><td class="memItemLeft" align="right" valign="top">static backend_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Backend.html#a32239a0ae0d141e881606ba4dc29497d">build</a> (po::variables_map const &amp;vm, std::string const &amp;<a class="el" href="classFeel_1_1Backend.html#a29351a65c633e75a6f0058a221229660">prefix</a>=&quot;&quot;, WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
 <tr class="separator:a32239a0ae0d141e881606ba4dc29497d inherit pub_static_methods_classFeel_1_1Backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -948,7 +948,7 @@ template&lt;typename T, int _Options = 0&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:29 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:21 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

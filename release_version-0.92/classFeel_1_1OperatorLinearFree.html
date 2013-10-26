@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -176,7 +176,7 @@ super::dual_image_space_type&#160;</td><td class="memItemRight" valign="bottom">
 typedef ExprType&#160;</td><td class="memItemRight" valign="bottom"><b>expr_type</b></td></tr>
 <tr class="separator:ab8ae85a9719785ce28545a52da431641"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad94e86004b00258b4695b70e0bbcab37"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad94e86004b00258b4695b70e0bbcab37"></a>
-typedef <a class="el" href="classFeel_1_1FsFunctionalLinear.html">FsFunctionalLinear</a><br class="typebreak"/>
+typedef FsFunctionalLinear<br class="typebreak"/>
 &lt; DualImageSpace &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>image_element_type</b></td></tr>
 <tr class="separator:ad94e86004b00258b4695b70e0bbcab37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad99537eb1983ba1dc5ebf2d34f8ea5d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad99537eb1983ba1dc5ebf2d34f8ea5d1"></a>
@@ -261,7 +261,7 @@ typedef <br class="typebreak"/>
 super::dual_image_space_type&#160;</td><td class="memItemRight" valign="bottom"><b>dual_image_space_type</b></td></tr>
 <tr class="separator:a19f7c767e6defb297f6cfba816fdd76c inherit pub_types_classFeel_1_1OperatorLinear"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4c0eaa6208f072d1f1056b8eb77b707 inherit pub_types_classFeel_1_1OperatorLinear"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4c0eaa6208f072d1f1056b8eb77b707"></a>
-typedef <a class="el" href="classFeel_1_1FsFunctionalLinear.html">FsFunctionalLinear</a><br class="typebreak"/>
+typedef FsFunctionalLinear<br class="typebreak"/>
 &lt; DualImageSpace &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>image_element_type</b></td></tr>
 <tr class="separator:ad4c0eaa6208f072d1f1056b8eb77b707 inherit pub_types_classFeel_1_1OperatorLinear"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a851b08829bd3dfad77ec84d448aa90b3 inherit pub_types_classFeel_1_1OperatorLinear"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a851b08829bd3dfad77ec84d448aa90b3"></a>
@@ -314,7 +314,7 @@ typedef boost::shared_ptr<br class="typebreak"/>
 typedef DualImageSpace&#160;</td><td class="memItemRight" valign="bottom"><b>dual_image_space_type</b></td></tr>
 <tr class="separator:a93dd999c7a485d1ecd8f73d3f33a75db inherit pub_types_classFeel_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1f2a88f909c0d44123e22e45f6de5ce inherit pub_types_classFeel_1_1Operator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1f2a88f909c0d44123e22e45f6de5ce"></a>
-typedef <a class="el" href="classFeel_1_1FsFunctionalLinear.html">FsFunctionalLinear</a><br class="typebreak"/>
+typedef FsFunctionalLinear<br class="typebreak"/>
 &lt; dual_image_space_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>image_element_type</b></td></tr>
 <tr class="separator:aa1f2a88f909c0d44123e22e45f6de5ce inherit pub_types_classFeel_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7891c68562645c1cb4adb28a096fbfa inherit pub_types_classFeel_1_1Operator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7891c68562645c1cb4adb28a096fbfa"></a>
@@ -325,7 +325,7 @@ domain_space_type::value_type&#160;</td><td class="memItemRight" valign="bottom"
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3a86902fe6d6ec2c9501212c05d871e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a86902fe6d6ec2c9501212c05d871e3"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const domain_element_type &amp;de, <a class="el" href="classFeel_1_1FsFunctionalLinear.html">image_element_type</a> &amp;ie) const </td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const domain_element_type &amp;de, image_element_type &amp;ie) const </td></tr>
 <tr class="separator:a3a86902fe6d6ec2c9501212c05d871e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fe6cb8e1a15fb7c6282694a4ec488ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fe6cb8e1a15fb7c6282694a4ec488ba"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const typename domain_space_type::element_type &amp;de, typename dual_image_space_type::element_type &amp;ie)</td></tr>
@@ -355,7 +355,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const domain_element_slice_type &amp;de, dual_image_element_range_type &amp;ie)</td></tr>
 <tr class="separator:a37a1f2d9cbc166bb04719e7cde43e6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1094a9dfcfb30ed1bbba47568a49384"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1094a9dfcfb30ed1bbba47568a49384"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1OperatorLinearFree.html#ad1094a9dfcfb30ed1bbba47568a49384">applyInverse</a> (domain_element_type &amp;de, const <a class="el" href="classFeel_1_1FsFunctionalLinear.html">image_element_type</a> &amp;ie)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1OperatorLinearFree.html#ad1094a9dfcfb30ed1bbba47568a49384">applyInverse</a> (domain_element_type &amp;de, const image_element_type &amp;ie)</td></tr>
 <tr class="memdesc:ad1094a9dfcfb30ed1bbba47568a49384"><td class="mdescLeft">&#160;</td><td class="mdescRight">apply the inverse of the operator: <img class="formulaInl" alt="$de = O^{-1} ie$" src="form_135.png"/> <br/></td></tr>
 <tr class="separator:ad1094a9dfcfb30ed1bbba47568a49384"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a55ebbbe1376084f201779a036d43a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a55ebbbe1376084f201779a036d43a1"></a>
@@ -387,7 +387,7 @@ template&lt;typename T &gt; </td></tr>
 <tr class="separator:a1308383d71f3f99b0eb5be45ce1fc8fe inherit pub_methods_classFeel_1_1OperatorLinear"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a567569437957b1046c426f82f18a9049 inherit pub_methods_classFeel_1_1OperatorLinear"><td class="memTemplParams" colspan="2"><a class="anchor" id="a567569437957b1046c426f82f18a9049"></a>
 template&lt;typename Storage &gt; </td></tr>
-<tr class="memitem:a567569437957b1046c426f82f18a9049 inherit pub_methods_classFeel_1_1OperatorLinear"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="structFeel_1_1OperatorLinear_1_1domain__element.html">domain_element</a>&lt; typename domain_element_type::value_type, Storage &gt; &amp;de, <a class="el" href="classFeel_1_1FsFunctionalLinear.html">image_element_type</a> &amp;ie) const </td></tr>
+<tr class="memitem:a567569437957b1046c426f82f18a9049 inherit pub_methods_classFeel_1_1OperatorLinear"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>apply</b> (const domain_element&lt; typename domain_element_type::value_type, Storage &gt; &amp;de, image_element_type &amp;ie) const </td></tr>
 <tr class="separator:a567569437957b1046c426f82f18a9049 inherit pub_methods_classFeel_1_1OperatorLinear"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a800c00033823003ab20aef22f21fe0b7 inherit pub_methods_classFeel_1_1OperatorLinear"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a800c00033823003ab20aef22f21fe0b7"></a>
 backend_ptrtype &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>backend</b> ()</td></tr>
@@ -468,7 +468,7 @@ const dual_image_space_ptrtype&#160;</td><td class="memItemRight" valign="bottom
 &#160;</td><td class="memItemRight" valign="bottom"><b>Operator</b> (domain_space_ptrtype domainSpace, dual_image_space_ptrtype dualImageSpace)</td></tr>
 <tr class="separator:abc5dc203f4e65c7ac97b24de73f41160 inherit pub_methods_classFeel_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedeb29952db46dfc00dad6b69cb1af85 inherit pub_methods_classFeel_1_1Operator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedeb29952db46dfc00dad6b69cb1af85"></a>
-<a class="el" href="classFeel_1_1FsFunctionalLinear.html">image_element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const domain_element_type &amp;de) const </td></tr>
+image_element_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const domain_element_type &amp;de) const </td></tr>
 <tr class="separator:aedeb29952db46dfc00dad6b69cb1af85 inherit pub_methods_classFeel_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fcd7f19a4af7887e7376cc1ac92f764 inherit pub_methods_classFeel_1_1Operator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fcd7f19a4af7887e7376cc1ac92f764"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setDomainSpace</b> (domain_space_ptrtype const &amp;domainspace)</td></tr>
@@ -483,7 +483,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setDualImageSpace</b>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:41 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:27 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

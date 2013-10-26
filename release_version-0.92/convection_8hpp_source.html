@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -197,15 +197,15 @@ $(document).ready(function(){initNavTree('convection_8hpp_source.html','');});
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">typedef</span> backend_type::vector_ptrtype vector_ptrtype;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// space and associated elements definitions</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Lagrange.html">Lagrange&lt;Order_s, Vectorial,Continuous,PointSetFekete&gt;</a> <a class="code" href="classFeel_1_1Lagrange.html">basis_u_type</a>; <span class="comment">// velocity space</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Lagrange.html">Lagrange&lt;Order_p, Scalar,Continuous,PointSetFekete&gt;</a> <a class="code" href="classFeel_1_1Lagrange.html">basis_p_type</a>; <span class="comment">// pressure space</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Lagrange.html">Lagrange&lt;Order_t, Scalar,Continuous,PointSetFekete&gt;</a> <a class="code" href="classFeel_1_1Lagrange.html">basis_t_type</a>; <span class="comment">// temperature space</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">typedef</span> Lagrange&lt;Order_s, Vectorial,Continuous,PointSetFekete&gt; basis_u_type; <span class="comment">// velocity space</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">typedef</span> Lagrange&lt;Order_p, Scalar,Continuous,PointSetFekete&gt; basis_p_type; <span class="comment">// pressure space</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">typedef</span> Lagrange&lt;Order_t, Scalar,Continuous,PointSetFekete&gt; basis_t_type; <span class="comment">// temperature space</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#if defined( FEELPP_USE_LM )</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Lagrange.html">Lagrange&lt;0, Scalar&gt;</a> basis_l_type; <span class="comment">// multipliers for pressure space</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structFeel_1_1bases.html">bases&lt; basis_u_type , basis_p_type , basis_t_type,basis_l_type&gt;</a> <a class="code" href="structFeel_1_1bases.html">basis_type</a>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> Lagrange&lt;0, Scalar&gt; basis_l_type; <span class="comment">// multipliers for pressure space</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">typedef</span> bases&lt; basis_u_type , basis_p_type , basis_t_type,basis_l_type&gt; basis_type;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> <a class="code" href="structFeel_1_1bases.html">bases&lt; basis_u_type , basis_p_type , basis_t_type&gt;</a> <a class="code" href="structFeel_1_1bases.html">basis_type</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> bases&lt; basis_u_type , basis_p_type , basis_t_type&gt; basis_type;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="classConvection.html#ad26611495619bdd5ab3632963690640f">  121</a></span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code" href="classConvection.html#ad26611495619bdd5ab3632963690640f" title="numerical type is double ">value_type</a>;</div>
@@ -213,17 +213,17 @@ $(document).ready(function(){initNavTree('convection_8hpp_source.html','');});
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FunctionSpace.html">FunctionSpace&lt;mesh_type, basis_t_type&gt;</a> <a class="code" href="classFeel_1_1FunctionSpace.html">t_space_type</a>;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FunctionSpace.html">FunctionSpace&lt;mesh_type, basis_type&gt;</a> <a class="code" href="classFeel_1_1FunctionSpace.html">space_type</a>;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;space_type&gt; space_ptrtype;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">space_type::element_type</a> <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a>;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1FunctionSpace_1_1Element_1_1sub__element.html">element_type:: sub_element&lt;0&gt;::type</a> element_0_type;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1FunctionSpace_1_1Element_1_1sub__element.html">element_type:: sub_element&lt;1&gt;::type</a> element_1_type;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1FunctionSpace_1_1Element_1_1sub__element.html">element_type:: sub_element&lt;2&gt;::type</a> element_2_type;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_type::element_type element_type;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> element_type:: sub_element&lt;0&gt;::type element_0_type;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> element_type:: sub_element&lt;1&gt;::type element_1_type;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> element_type:: sub_element&lt;2&gt;::type element_2_type;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#if defined( FEELPP_USE_LM )</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1FunctionSpace_1_1Element_1_1sub__element.html">element_type:: sub_element&lt;3&gt;::type</a> element_3_type;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> element_type:: sub_element&lt;3&gt;::type element_3_type;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1OperatorLinear.html">OperatorLinear&lt;space_type,space_type&gt;</a> <a class="code" href="classFeel_1_1OperatorLinear.html">oplin_type</a>;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;oplin_type&gt; oplin_ptrtype;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FsFunctionalLinear.html">FsFunctionalLinear&lt;space_type&gt;</a> <a class="code" href="classFeel_1_1FsFunctionalLinear.html">funlin_type</a>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">typedef</span> FsFunctionalLinear&lt;space_type&gt; funlin_type;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;funlin_type&gt; funlin_ptrtype;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">// Definition pour les exportations</span></div>
@@ -244,11 +244,11 @@ $(document).ready(function(){initNavTree('convection_8hpp_source.html','');});
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">// Definition de la procedure pour resoudre le systeme lineaire</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">void</span> solve( sparse_matrix_ptrtype&amp; D, <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a>&amp; u, vector_ptrtype&amp; F );</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">void</span> solve( sparse_matrix_ptrtype&amp; D, element_type&amp; u, vector_ptrtype&amp; F );</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="comment">// Definition de la procedure pour exporter les solutions</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">void</span> exportResults( boost::format, <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a>&amp; U, <span class="keywordtype">double</span> t );</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">void</span> exportResults( <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a>&amp; U, <span class="keywordtype">int</span> i );</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">void</span> exportResults( boost::format, element_type&amp; U, <span class="keywordtype">double</span> t );</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">void</span> exportResults( element_type&amp; U, <span class="keywordtype">int</span> i );</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">void</span> initLinearOperator( sparse_matrix_ptrtype&amp; L );</div>
@@ -286,7 +286,7 @@ $(document).ready(function(){initNavTree('convection_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:28:31 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:03:45 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

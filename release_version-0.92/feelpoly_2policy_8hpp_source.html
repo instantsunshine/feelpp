@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -275,7 +275,7 @@ $(document).ready(function(){initNavTree('feelpoly_2policy_8hpp_source.html','')
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="keyword">namespace </span>detail</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;{</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type N, u<span class="keywordtype">int</span>16_type M&gt;</div>
-<div class="line"><a name="l00192"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1Field.html">  192</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1Field.html">Field</a></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword">struct </span>Field</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;{</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type rank = ( M &gt; 1 );</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = N;</div>
@@ -310,12 +310,12 @@ $(document).ready(function(){initNavTree('feelpoly_2policy_8hpp_source.html','')
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type M&gt;</div>
-<div class="line"><a name="l00227"></a><span class="lineno"><a class="code" href="structFeel_1_1Field.html">  227</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1Field.html">Field</a></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="keyword">struct </span>Field</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;{</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keyword">template</span> &lt;u<span class="keywordtype">int</span>16_type Nvar&gt;</div>
-<div class="line"><a name="l00230"></a><span class="lineno"><a class="code" href="structFeel_1_1Field_1_1apply.html">  230</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1Field_1_1apply.html">apply</a></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keyword">struct </span>apply</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="structFeel_1_1detail_1_1Field.html">detail::Field&lt;Nvar,M&gt;</a> <a class="code" href="structFeel_1_1detail_1_1Field.html">type</a>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keyword">typedef</span> detail::Field&lt;Nvar,M&gt; type;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    };</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;};</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
@@ -424,12 +424,12 @@ $(document).ready(function(){initNavTree('feelpoly_2policy_8hpp_source.html','')
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;};</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">int</span> Dim&gt;</div>
-<div class="line"><a name="l00351"></a><span class="lineno"><a class="code" href="structFeel_1_1ListReturnTypes.html">  351</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1ListReturnTypes.html">ListReturnTypes</a></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="keyword">struct </span>ListReturnTypes</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;{</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keyword">typedef</span> mpl::vector&lt;Scalar&lt;Dim&gt;, <a class="code" href="structFeel_1_1Vectorial.html">Vectorial&lt;Dim&gt;</a>, <a class="code" href="structFeel_1_1Tensor2.html">Tensor2&lt;Dim&gt;</a>, <a class="code" href="structFeel_1_1Tensor3.html">Tensor3&lt;Dim&gt;</a> &gt; return_types;</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;};</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T1, <span class="keyword">typename</span> T2&gt;</div>
-<div class="line"><a name="l00356"></a><span class="lineno"><a class="code" href="structFeel_1_1ReturnSelect.html">  356</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1ReturnSelect.html">ReturnSelect</a></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="keyword">struct </span>ReturnSelect</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;{</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;boost::is_same&lt;T1, T2&gt;,</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            mpl::identity&lt;T1&gt;,</div>
@@ -485,7 +485,7 @@ $(document).ready(function(){initNavTree('feelpoly_2policy_8hpp_source.html','')
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;};</div>
 <div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00426"></a><span class="lineno"><a class="code" href="structFeel_1_1RankUp2.html">  426</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1RankUp2.html">RankUp2</a></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="keyword">struct </span>RankUp2</div>
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;{</div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = T::nDim;</div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keyword">typedef</span> mpl::vector&lt;Scalar&lt;nDim&gt;, <a class="code" href="structFeel_1_1Vectorial.html">Vectorial&lt;nDim&gt;</a>, <a class="code" href="structFeel_1_1Tensor2.html">Tensor2&lt;nDim&gt;</a>, <a class="code" href="structFeel_1_1Tensor3.html">Tensor3&lt;nDim&gt;</a> &gt; types;</div>
@@ -494,17 +494,17 @@ $(document).ready(function(){initNavTree('feelpoly_2policy_8hpp_source.html','')
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;};</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00435"></a><span class="lineno"><a class="code" href="structFeel_1_1RankSame.html">  435</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1RankSame.html">RankSame</a></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="keyword">struct </span>RankSame</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;{</div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = T::nDim;</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keyword">typedef</span> T type;</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;};</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;</div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00442"></a><span class="lineno"><a class="code" href="structFeel_1_1RankDown.html">  442</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1RankDown.html">RankDown</a></div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="keyword">struct </span>RankDown</div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;{</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = T::nDim;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keyword">typedef</span> mpl::vector&lt;Scalar&lt;nDim&gt;, <a class="code" href="structFeel_1_1Vectorial.html">Vectorial&lt;nDim&gt;</a>, <a class="code" href="structFeel_1_1Tensor2.html">Tensor2&lt;nDim&gt;</a>, <a class="code" href="structFeel_1_1Tensor3.html">Tensor3&lt;nDim&gt;</a> &gt; types;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keyword">typedef</span> mpl::vector&lt;Scalar&lt;nDim&gt;, Vectorial&lt;nDim&gt;, Tensor2&lt;nDim&gt;, Tensor3&lt;nDim&gt; &gt; types;</div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::find&lt;types, T&gt;::type iter;</div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::deref&lt;typename mpl::prior&lt;iter&gt;::type&gt;::type _type;</div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;boost::is_same&lt;_type,mpl::void_&gt;,</div>
@@ -537,7 +537,7 @@ $(document).ready(function(){initNavTree('feelpoly_2policy_8hpp_source.html','')
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:05 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:11 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

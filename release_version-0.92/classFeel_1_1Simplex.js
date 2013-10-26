@@ -1,6 +1,5 @@
 var classFeel_1_1Simplex =
 [
-    [ "shape", "structFeel_1_1Simplex_1_1shape.html", "structFeel_1_1Simplex_1_1shape" ],
     [ "edge_permutation_type", "classFeel_1_1Simplex.html#a0a5eb542f579272991f1e3137b9c1775", null ],
     [ "edge_to_point_t", "classFeel_1_1Simplex.html#a2af1cfe43851815bafd5e6e94e750fb1", null ],
     [ "element_type", "classFeel_1_1Simplex.html#aaf69b9b0d5195882ad13aa1e16f87cf8", null ],

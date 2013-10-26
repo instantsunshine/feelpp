@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -330,7 +330,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
 <div class="line"><a name="l00304"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet.html#a1367b281b8f8dddbbcc8d32e5c474e69">  304</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classFeel_1_1PolynomialSet.html#a1367b281b8f8dddbbcc8d32e5c474e69">isZero</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordflow">return</span> ublas::norm_frobenius( M_coeff ) &lt; <a class="code" href="structFeel_1_1type__traits.html">Feel::type_traits&lt;value_type&gt;::epsilon</a>();</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordflow">return</span> ublas::norm_frobenius( M_coeff ) &lt; Feel::type_traits&lt;value_type&gt;::epsilon();</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    }</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
 <div class="line"><a name="l00313"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet.html#a1e5b0d36d1fa501d100dd8478f6fc2a6">  313</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classFeel_1_1PolynomialSet.html#a1e5b0d36d1fa501d100dd8478f6fc2a6">familyName</a>()<span class="keyword"> const</span></div>
@@ -630,7 +630,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;</div>
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;</div>
 <div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    <span class="comment">/******************************************************/</span></div>
-<div class="line"><a name="l00718"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html">  718</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html">PreCompute</a></div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    <span class="keyword">class </span>PreCompute</div>
 <div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;    {</div>
 <div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;        EIGEN_MAKE_ALIGNED_OPERATOR_NEW</div>
@@ -653,13 +653,13 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        <span class="keyword">typedef</span> boost::multi_array&lt;id_type,2&gt; functionvalue_type;</div>
 <div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        <span class="keyword">typedef</span> boost::multi_array&lt;g_type,2&gt; grad_type;</div>
 <div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;        <span class="keyword">typedef</span> boost::multi_array&lt;h_type,2&gt; hessian_type;</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html">PreCompute</a>() {}</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        PreCompute() {}</div>
 <div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;</div>
 <div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;<span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html">PreCompute</a>( matrix_node_t_type <span class="keyword">const</span>&amp; __pts )</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        PreCompute( matrix_node_t_type <span class="keyword">const</span>&amp; __pts )</div>
 <div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;            :</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;            M_ref_ele( <span class="keyword">new</span> reference_element_type() ),</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;            M_ref_ele( new reference_element_type() ),</div>
 <div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;            M_nodes( __pts ),</div>
 <div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;            M_phi(),</div>
 <div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;            M_grad(),</div>
@@ -669,7 +669,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;        }</div>
 <div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00764"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#a87d91f713db5e777c395eec9c140e09c">  764</a></span>&#160;        <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#a87d91f713db5e777c395eec9c140e09c">PreCompute</a>( reference_element_ptrtype <span class="keyword">const</span>&amp; __ref_ele,</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;        PreCompute( reference_element_ptrtype <span class="keyword">const</span>&amp; __ref_ele,</div>
 <div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;                    matrix_node_t_type <span class="keyword">const</span>&amp; __pts )</div>
 <div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;            :</div>
 <div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;            M_ref_ele( __ref_ele ),</div>
@@ -681,7 +681,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;            init( M_ref_ele, __pts, mpl::int_&lt;rank&gt;() );</div>
 <div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;        }</div>
 <div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;</div>
-<div class="line"><a name="l00777"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#a4eacf1bf3fdda6ad765b8895804971cc">  777</a></span>&#160;        <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#a4eacf1bf3fdda6ad765b8895804971cc">PreCompute</a>( <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html">PreCompute</a> <span class="keyword">const</span>&amp; __pc )</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;        PreCompute( PreCompute <span class="keyword">const</span>&amp; __pc )</div>
 <div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;            :</div>
 <div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;            M_ref_ele( __pc.M_ref_ele ),</div>
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;            M_nodes( __pc.M_nodes ),</div>
@@ -690,10 +690,10 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;            M_hessian( __pc.M_hessian )</div>
 <div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;        {}</div>
 <div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;        ~<a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html">PreCompute</a>()</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;        ~PreCompute()</div>
 <div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        {}</div>
 <div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;</div>
-<div class="line"><a name="l00791"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#acc1a209233ceb8cdf21e022f7f5a47b2">  791</a></span>&#160;        <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html">PreCompute</a>&amp; <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#acc1a209233ceb8cdf21e022f7f5a47b2">operator=</a>( <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html">PreCompute</a> <span class="keyword">const</span>&amp; __pc )</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;        PreCompute&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( PreCompute <span class="keyword">const</span>&amp; __pc )</div>
 <div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;        {</div>
 <div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;            <span class="keywordflow">if</span> ( <span class="keyword">this</span> != &amp;__pc )</div>
 <div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;            {</div>
@@ -713,39 +713,39 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;            init( M_ref_ele, __pts, mpl::int_&lt;rank&gt;() );</div>
 <div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;        }</div>
 <div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;</div>
-<div class="line"><a name="l00814"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#a5c4834e25c4859754c1c8e473c70df6e">  814</a></span>&#160;        uint16_type <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#a5c4834e25c4859754c1c8e473c70df6e">dim</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;        uint16_type dim()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;            <span class="keywordflow">return</span> reference_element_type::nDim;</div>
 <div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;        }</div>
 <div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;</div>
-<div class="line"><a name="l00823"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#a5865e67667ec34aa7b86b44c1e5e8ffd">  823</a></span>&#160;        uint16_type <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#a5865e67667ec34aa7b86b44c1e5e8ffd">nComputedNodes</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;        uint16_type nComputedNodes()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;            <span class="keywordflow">return</span> M_nodes.size2();</div>
 <div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;        }</div>
 <div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;</div>
-<div class="line"><a name="l00832"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#a76d048204db144fc6bf90317787cf263">  832</a></span>&#160;        uint16_type <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#a76d048204db144fc6bf90317787cf263">nPoints</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;        uint16_type nPoints()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;            <span class="keywordflow">return</span> M_nodes.size2();</div>
 <div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;        }</div>
 <div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;</div>
-<div class="line"><a name="l00841"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#aa9b8e59f9a19eaa9bbfe78b42d9e8439">  841</a></span>&#160;        matrix_node_t_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#aa9b8e59f9a19eaa9bbfe78b42d9e8439">nodes</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;        matrix_node_t_type <span class="keyword">const</span>&amp; nodes()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;            <span class="keywordflow">return</span> M_nodes;</div>
 <div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;        }</div>
 <div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;</div>
-<div class="line"><a name="l00850"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#a8096b6655d8d80322a423289e3411f26">  850</a></span>&#160;        ublas::matrix_column&lt;matrix_node_t_type const&gt; <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#a8096b6655d8d80322a423289e3411f26">node</a>( uint16_type __i )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;        ublas::matrix_column&lt;matrix_node_t_type const&gt; node( uint16_type __i )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;            <span class="keywordflow">return</span> ublas::column( M_nodes, __i );</div>
 <div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;        }</div>
 <div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;</div>
-<div class="line"><a name="l00861"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#acddb0c8c835d528031ea06ebb1e1a1e1">  861</a></span>&#160;        functionvalue_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#acddb0c8c835d528031ea06ebb1e1a1e1">phi</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;        functionvalue_type <span class="keyword">const</span>&amp; phi()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;            <span class="keywordflow">return</span> M_phi;</div>
 <div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;        }</div>
 <div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;</div>
-<div class="line"><a name="l00870"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#ac53298646e9b4e5953bce0ad201532a3">  870</a></span>&#160;        value_type <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#ac53298646e9b4e5953bce0ad201532a3">phi</a>( uint16_type i, uint16_type c1, uint16_type c2, uint16_type q )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;        value_type phi( uint16_type i, uint16_type c1, uint16_type c2, uint16_type q )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;            FEELPP_ASSERT( q &lt; <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#a5865e67667ec34aa7b86b44c1e5e8ffd">nComputedNodes</a>() )( q )( <a class="code" href="classFeel_1_1PolynomialSet_1_1PreCompute.html#a5865e67667ec34aa7b86b44c1e5e8ffd">nComputedNodes</a>() ).error( <span class="stringliteral">&quot;invalid node index&quot;</span> );</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;            FEELPP_ASSERT( q &lt; nComputedNodes() )( q )( nComputedNodes() ).error( <span class="stringliteral">&quot;invalid node index&quot;</span> );</div>
 <div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;            FEELPP_ASSERT( i &lt; M_ref_ele-&gt;<a class="code" href="classFeel_1_1PolynomialSet.html#a302650f3b7232c4a279e63f3438ba9a0">nbDof</a>() )( i )( M_ref_ele-&gt;nbDof() ).error( <span class="stringliteral">&quot;invalid dof index&quot;</span> );</div>
 <div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;</div>
 <div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;            <span class="keywordflow">return</span> M_phi[i][q]( c1,c2 );</div>
@@ -761,12 +761,12 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;            <span class="keywordflow">return</span> M_grad[i][q]( c1,c2 );</div>
 <div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;        }</div>
 <div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;</div>
-<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;        hessian_type <span class="keyword">const</span>&amp; hessian()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;        hessian_type <span class="keyword">const</span>&amp; <a class="code" href="namespaceFeel.html#a8073bad0e88192d69a7b74083ffa640d" title="compute the gradient of a vectorial polynomial set ">hessian</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;            <span class="keywordflow">return</span> M_hessian;</div>
 <div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;        }</div>
 <div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;</div>
-<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;        value_type hessian( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i, uint16_type c1, uint16_type c2, uint16_type q )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;        value_type <a class="code" href="namespaceFeel.html#a8073bad0e88192d69a7b74083ffa640d" title="compute the gradient of a vectorial polynomial set ">hessian</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> i, uint16_type c1, uint16_type c2, uint16_type q )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;            <span class="keywordflow">return</span> M_hessian[i][q]( c1,c2 );</div>
 <div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;        }</div>
@@ -911,7 +911,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;</div>
 <div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;</div>
 <div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;    <span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span>ype context_v, <span class="keyword">typename</span> Basis_t, <span class="keyword">typename</span> Geo_t, <span class="keyword">typename</span> ElementType, <span class="keywordtype">size_t</span>ype context_g = context_v&gt;</div>
-<div class="line"><a name="l01039"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html"> 1039</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html">Context</a></div>
+<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;    <span class="keyword">class </span>Context</div>
 <div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;    {</div>
 <div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;        EIGEN_MAKE_ALIGNED_OPERATOR_NEW</div>
@@ -938,10 +938,10 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> reference_element_type::value_type value_type;</div>
 <div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;</div>
 <div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;        <span class="keyword">typedef</span> ElementType geometric_element_type;</div>
-<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> Geo_t::template <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html">Context&lt;context_g, ElementType&gt;</a> geometric_mapping_context_type;</div>
+<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> Geo_t::template Context&lt;context_g, ElementType&gt; geometric_mapping_context_type;</div>
 <div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;        <span class="keyword">typedef</span> boost::shared_ptr&lt;geometric_mapping_context_type&gt; geometric_mapping_context_ptrtype;</div>
 <div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;</div>
-<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1node.html">node&lt;value_type&gt;::type</a> node_type;</div>
+<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> node&lt;value_type&gt;::type node_type;</div>
 <div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;</div>
 <div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;        <span class="keyword">typedef</span> ublas::matrix&lt;value_type&gt; matrix_type;</div>
 <div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;        <span class="keyword">typedef</span> points_type matrix_node_t_type;</div>
@@ -986,18 +986,18 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;</div>
 <div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;</div>
 <div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;        <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type TheRank = polyset_type::rank+2&gt;</div>
-<div class="line"><a name="l01114"></a><span class="lineno"><a class="code" href="structFeel_1_1PolynomialSet_1_1Context_1_1Index.html"> 1114</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structFeel_1_1PolynomialSet_1_1Context_1_1Index.html">Index</a></div>
+<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;        <span class="keyword">struct </span>Index</div>
 <div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;        {</div>
 <div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;            <span class="keyword">static</span> <span class="keyword">const</span> uint16_type rank = TheRank;</div>
 <div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;            <span class="keyword">typedef</span> boost::array&lt;size_type,rank&gt; index_type;</div>
 <div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;            <span class="keyword">typedef</span> boost::detail::multi_array::extent_gen&lt;rank&gt; extents_type;</div>
 <div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;            <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type&gt; <span class="keyword">friend</span> <span class="keyword">class </span>Rank;</div>
-<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;            <a class="code" href="structFeel_1_1PolynomialSet_1_1Context_1_1Index.html">Index</a>()</div>
+<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;            Index()</div>
 <div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;            {</div>
 <div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;                <span class="comment">//std::cout &lt;&lt; &quot;Index::rank = &quot; &lt;&lt; rank &lt;&lt; &quot;\n&quot;;</span></div>
 <div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;                init( mpl::int_&lt;rank&gt;() );</div>
 <div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;            }</div>
-<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;            <a class="code" href="structFeel_1_1PolynomialSet_1_1Context_1_1Index.html">Index</a>( <a class="code" href="structFeel_1_1PolynomialSet_1_1Context_1_1Index.html">Index</a> <span class="keyword">const</span>&amp; i )</div>
+<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;            Index( Index <span class="keyword">const</span>&amp; i )</div>
 <div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;                :</div>
 <div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;                M_index( i.M_index ),</div>
 <div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;                M_extents( i.M_extents ),</div>
@@ -1007,9 +1007,9 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;            }</div>
 <div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;</div>
 <div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;            <span class="comment">// rank + 1</span></div>
-<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;            <a class="code" href="structFeel_1_1PolynomialSet_1_1Context_1_1Index.html">Index</a>( <a class="code" href="structFeel_1_1PolynomialSet_1_1Context_1_1Index.html">Index&lt;rank-1&gt;</a> <span class="keyword">const</span>&amp; __index )</div>
+<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;            Index( Index&lt;rank-1&gt; <span class="keyword">const</span>&amp; __index )</div>
 <div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;                :</div>
-<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;                M_extents( __index.extents()[<a class="code" href="structFeel_1_1RankUp.html">RankUp&lt;polyset_type&gt;::type::nComponentsLast</a>] )</div>
+<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;                M_extents( __index.extents()[RankUp&lt;polyset_type&gt;::type::nComponentsLast] )</div>
 <div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;            {</div>
 <div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;                std::copy( __index.beginIndex(), __index.endIndex(), M_index.begin() );</div>
 <div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;                <span class="comment">//std::cout &lt;&lt; &quot;[rankup] index&lt;&quot; &lt;&lt; rank &lt;&lt; &quot;&gt;: &quot;;</span></div>
@@ -1018,7 +1018,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;            }</div>
 <div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;<span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;<span class="preprocessor"></span>            <span class="comment">// rank reduction wrt the last extent</span></div>
-<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;            <a class="code" href="structFeel_1_1PolynomialSet_1_1Context_1_1Index.html">Index</a>( <a class="code" href="structFeel_1_1PolynomialSet_1_1Context_1_1Index.html">Index&lt;rank+1&gt;</a> <span class="keyword">const</span>&amp; index )</div>
+<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;            Index( Index&lt;rank+1&gt; <span class="keyword">const</span>&amp; index )</div>
 <div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;                :</div>
 <div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;                M_extents()</div>
 <div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;            {</div>
@@ -1030,9 +1030,9 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;<span class="preprocessor"></span>            }</div>
 <div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;<span class="preprocessor"></span>            ~<a class="code" href="structFeel_1_1PolynomialSet_1_1Context_1_1Index.html">Index</a>() {}</div>
+<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;<span class="preprocessor"></span>            ~Index() {}</div>
 <div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;</div>
-<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;            <a class="code" href="structFeel_1_1PolynomialSet_1_1Context_1_1Index.html">Index</a> <span class="keyword">const</span>&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( <a class="code" href="structFeel_1_1PolynomialSet_1_1Context_1_1Index.html">Index</a> <span class="keyword">const</span>&amp; i )</div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;            Index <span class="keyword">const</span>&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( Index <span class="keyword">const</span>&amp; i )</div>
 <div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;            {</div>
 <div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;                <span class="keywordflow">if</span> ( <span class="keyword">this</span> != &amp;i )</div>
 <div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;                {</div>
@@ -1087,9 +1087,9 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;                <span class="keywordflow">return</span> M_comp;</div>
 <div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;            }</div>
 <div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;</div>
-<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;            <a class="code" href="structFeel_1_1PolynomialSet_1_1Context_1_1Index.html">Index&lt;rank+1&gt;</a> rankUp()<span class="keyword"> const</span></div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;            Index&lt;rank+1&gt; rankUp()<span class="keyword"> const</span></div>
 <div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="structFeel_1_1PolynomialSet_1_1Context_1_1Index.html">Index&lt;rank+1&gt;</a>( M_extents[<a class="code" href="structFeel_1_1RankUp.html">RankUp&lt;polyset_type&gt;::type::nComponentsLast</a>] );</div>
+<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;                <span class="keywordflow">return</span> Index&lt;rank+1&gt;( M_extents[RankUp&lt;polyset_type&gt;::type::nComponentsLast] );</div>
 <div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;            }</div>
 <div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;</div>
 <div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;            <span class="keyword">operator</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a>()<span class="keyword"> const</span></div>
@@ -1132,8 +1132,8 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;            }</div>
 <div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;            <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> index( mpl::int_&lt;4&gt; )<span class="keyword"> const</span></div>
 <div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;                <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> d = M_extents.ranges_[1].size();</div>
-<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;                <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> d2 = d*d;</div>
+<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;                <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> <a class="code" href="classFeel_1_1PolynomialSet.html#af1b85c8e12b5e98b0818f73216fc6148" title="derivatives of Dubiner polynomials the derivatives are computed at the nodes of the lattice ...">d</a> = M_extents.ranges_[1].size();</div>
+<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;                <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> d2 = d*<a class="code" href="classFeel_1_1PolynomialSet.html#af1b85c8e12b5e98b0818f73216fc6148" title="derivatives of Dubiner polynomials the derivatives are computed at the nodes of the lattice ...">d</a>;</div>
 <div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;                <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> n = M_extents.ranges_[0].size();</div>
 <div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;<span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;<span class="preprocessor"></span>                <span class="keywordflow">return</span> ( d2*n*( d*M_index[1]+M_index[2] ) +</div>
@@ -1179,12 +1179,12 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;            uint16_type M_comp;</div>
 <div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;        };</div>
 <div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;</div>
-<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;        <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html">Context</a>( reference_element_ptrtype <span class="keyword">const</span>&amp; __RefEle,</div>
+<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;        Context( reference_element_ptrtype <span class="keyword">const</span>&amp; __RefEle,</div>
 <div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;                 geometric_mapping_context_ptrtype <span class="keyword">const</span>&amp; __gmc,</div>
 <div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;                 precompute_ptrtype <span class="keyword">const</span>&amp; __pc )</div>
 <div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;            :</div>
 <div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;            M_pc( __pc ),</div>
-<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;            M_npoints( __pc-&gt;<a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a56fd3f67dee880dd4960aedbdc5fcd15">nPoints</a>() ),</div>
+<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;            M_npoints( __pc-&gt;nPoints() ),</div>
 <div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;</div>
 <div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;            M_ipt( 0 ),</div>
 <div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;            M_ref_ele( __RefEle ),</div>
@@ -1198,7 +1198,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;            M_dy(),</div>
 <div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;            M_dz()</div>
 <div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;        {</div>
-<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;            <span class="keywordflow">if</span> ( <a class="code" href="structFeel_1_1vm_1_1has__grad.html">vm::has_grad&lt;context&gt;::value</a> || <a class="code" href="structFeel_1_1vm_1_1has__first__derivative.html">vm::has_first_derivative&lt;context&gt;::value</a>  )</div>
+<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;            <span class="keywordflow">if</span> ( vm::has_grad&lt;context&gt;::value || vm::has_first_derivative&lt;context&gt;::value  )</div>
 <div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;            {</div>
 <div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">int</span> ntdof = nDof*nComponents1;</div>
 <div class="line"><a name="l01329"></a><span class="lineno"> 1329</span>&#160;                M_grad.resize( boost::extents[ntdof][M_npoints] );</div>
@@ -1206,17 +1206,17 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01331"></a><span class="lineno"> 1331</span>&#160;                M_dy.resize( boost::extents[ntdof][M_npoints] );</div>
 <div class="line"><a name="l01332"></a><span class="lineno"> 1332</span>&#160;                M_dz.resize( boost::extents[ntdof][M_npoints] );</div>
 <div class="line"><a name="l01333"></a><span class="lineno"> 1333</span>&#160;</div>
-<div class="line"><a name="l01334"></a><span class="lineno"> 1334</span>&#160;                <span class="keywordflow">if</span> ( <a class="code" href="structFeel_1_1vm_1_1has__first__derivative__normal.html">vm::has_first_derivative_normal&lt;context&gt;::value</a> )</div>
+<div class="line"><a name="l01334"></a><span class="lineno"> 1334</span>&#160;                <span class="keywordflow">if</span> ( vm::has_first_derivative_normal&lt;context&gt;::value )</div>
 <div class="line"><a name="l01335"></a><span class="lineno"> 1335</span>&#160;                {</div>
 <div class="line"><a name="l01336"></a><span class="lineno"> 1336</span>&#160;                    M_dn.resize( boost::extents[ntdof][M_npoints] );</div>
 <div class="line"><a name="l01337"></a><span class="lineno"> 1337</span>&#160;                }</div>
 <div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;</div>
-<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;                <span class="keywordflow">if</span> ( <a class="code" href="structFeel_1_1vm_1_1has__div.html">vm::has_div&lt;context&gt;::value</a> )</div>
+<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;                <span class="keywordflow">if</span> ( vm::has_div&lt;context&gt;::value )</div>
 <div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;                {</div>
 <div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;                    M_div.resize( boost::extents[ntdof][M_npoints] );</div>
 <div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;                }</div>
 <div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;</div>
-<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;                <span class="keywordflow">if</span> ( <a class="code" href="structFeel_1_1vm_1_1has__curl.html">vm::has_curl&lt;context&gt;::value</a> )</div>
+<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;                <span class="keywordflow">if</span> ( vm::has_curl&lt;context&gt;::value )</div>
 <div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;                {</div>
 <div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;                    M_curl.resize( boost::extents[ntdof][M_npoints] );</div>
 <div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;                }</div>
@@ -1230,7 +1230,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;            update( __gmc );</div>
 <div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;        }</div>
 <div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;    <span class="keyword">virtual</span> ~Context() {}</div>
-<div class="line"><a name="l01362"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a5228cc1e9c602b5e289e650d4f630995"> 1362</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a5228cc1e9c602b5e289e650d4f630995">transformationEquivalence</a>( geometric_mapping_context_ptrtype <span class="keyword">const</span>&amp; __gmc,</div>
+<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;        <span class="keywordtype">void</span> transformationEquivalence( geometric_mapping_context_ptrtype <span class="keyword">const</span>&amp; __gmc,</div>
 <div class="line"><a name="l01363"></a><span class="lineno"> 1363</span>&#160;                                        mpl::bool_&lt;true&gt; )</div>
 <div class="line"><a name="l01364"></a><span class="lineno"> 1364</span>&#160;        {</div>
 <div class="line"><a name="l01365"></a><span class="lineno"> 1365</span>&#160;            <span class="comment">// M_phi = phi;</span></div>
@@ -1240,13 +1240,13 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;            <span class="comment">//     M_hessphi = M_pc-&gt;hessian();</span></div>
 <div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160;        }</div>
 <div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;</div>
-<div class="line"><a name="l01378"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a2ab5819175b4da184106b6c038468443"> 1378</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a2ab5819175b4da184106b6c038468443">transformationEquivalence</a>( geometric_mapping_context_ptrtype <span class="keyword">const</span>&amp; __gmc,</div>
+<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;        <span class="keywordtype">void</span> transformationEquivalence( geometric_mapping_context_ptrtype <span class="keyword">const</span>&amp; __gmc,</div>
 <div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;                                        mpl::bool_&lt;false&gt; )</div>
 <div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;        {</div>
 <div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;            <span class="comment">//M_ref_ele-&gt;transform( __gmc, phi, M_phi, M_gradphi, M_hessphi );</span></div>
 <div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;            M_ref_ele-&gt;transform( __gmc, M_pc.get(), M_phi,</div>
-<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;                                   M_gradphi, ( <a class="code" href="structFeel_1_1vm_1_1has__div.html">vm::has_div&lt;context&gt;::value</a> || <a class="code" href="structFeel_1_1vm_1_1has__curl.html">vm::has_curl&lt;context&gt;::value</a> || <a class="code" href="structFeel_1_1vm_1_1has__grad.html">vm::has_grad&lt;context&gt;::value</a> || <a class="code" href="structFeel_1_1vm_1_1has__first__derivative.html">vm::has_first_derivative&lt;context&gt;::value</a> ),</div>
-<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;                                   M_hessphi, ( <a class="code" href="structFeel_1_1vm_1_1has__hessian.html">vm::has_hessian&lt;context&gt;::value</a> || <a class="code" href="structFeel_1_1vm_1_1has__second__derivative.html">vm::has_second_derivative&lt;context&gt;::value</a>  )</div>
+<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;                                   M_gradphi, ( vm::has_div&lt;context&gt;::value || vm::has_curl&lt;context&gt;::value || vm::has_grad&lt;context&gt;::value || vm::has_first_derivative&lt;context&gt;::value ),</div>
+<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;                                   M_hessphi, ( vm::has_hessian&lt;context&gt;::value || vm::has_second_derivative&lt;context&gt;::value  )</div>
 <div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;                                 );</div>
 <div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;        }</div>
 <div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;</div>
@@ -1270,19 +1270,19 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;                M_phi.resize( boost::extents[ntdof][M_npoints] );</div>
 <div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;                M_gradphi.resize( boost::extents[ntdof][M_npoints] );</div>
 <div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160;</div>
-<div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160;                <span class="keywordflow">if</span> ( <a class="code" href="structFeel_1_1vm_1_1has__grad.html">vm::has_grad&lt;context&gt;::value</a> || <a class="code" href="structFeel_1_1vm_1_1has__first__derivative.html">vm::has_first_derivative&lt;context&gt;::value</a>  )</div>
+<div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160;                <span class="keywordflow">if</span> ( vm::has_grad&lt;context&gt;::value || vm::has_first_derivative&lt;context&gt;::value  )</div>
 <div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;                {</div>
 <div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160;                    M_grad.resize( boost::extents[ntdof][M_npoints] );</div>
 <div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;                    M_dx.resize( boost::extents[ntdof][M_npoints] );</div>
 <div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;                    M_dy.resize( boost::extents[ntdof][M_npoints] );</div>
 <div class="line"><a name="l01413"></a><span class="lineno"> 1413</span>&#160;                    M_dz.resize( boost::extents[ntdof][M_npoints] );</div>
 <div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160;</div>
-<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;                    <span class="keywordflow">if</span> ( <a class="code" href="structFeel_1_1vm_1_1has__div.html">vm::has_div&lt;context&gt;::value</a> )</div>
+<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;                    <span class="keywordflow">if</span> ( vm::has_div&lt;context&gt;::value )</div>
 <div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;                    {</div>
 <div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;                        M_div.resize( boost::extents[ntdof][M_npoints] );</div>
 <div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;                    }</div>
 <div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;</div>
-<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;                    <span class="keywordflow">if</span> ( <a class="code" href="structFeel_1_1vm_1_1has__curl.html">vm::has_curl&lt;context&gt;::value</a> )</div>
+<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;                    <span class="keywordflow">if</span> ( vm::has_curl&lt;context&gt;::value )</div>
 <div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;                    {</div>
 <div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;                        M_curl.resize( boost::extents[ntdof][M_npoints] );</div>
 <div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;                    }</div>
@@ -1309,7 +1309,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;            <span class="comment">//M_phi = M_pc-&gt;get()-&gt;phi();</span></div>
 <div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;            <span class="comment">//M_gradphi = M_pc-&gt;get()-&gt;grad();</span></div>
 <div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;            <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> do_opt= ( nOrder&lt;=1 ) &amp;&amp; ( Geo_t::nOrder==1 ) &amp;&amp; ( convex_type::is_simplex );</div>
-<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;            <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a5228cc1e9c602b5e289e650d4f630995">transformationEquivalence</a>( __gmc, mpl::bool_&lt;Basis_t::isTransformationEquivalent&gt;() );</div>
+<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;            transformationEquivalence( __gmc, mpl::bool_&lt;Basis_t::isTransformationEquivalent&gt;() );</div>
 <div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;<span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 0; i &lt; M_gradphi.num_elements(); ++i )</div>
@@ -1359,7 +1359,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01494"></a><span class="lineno"> 1494</span>&#160;                {</div>
 <div class="line"><a name="l01495"></a><span class="lineno"> 1495</span>&#160;                    std::fill( M_dn.data(), M_dn.data()+M_dn.num_elements(), dn_type::Zero() );</div>
 <div class="line"><a name="l01496"></a><span class="lineno"> 1496</span>&#160;                    <span class="keyword">const</span> uint16_type I = M_ref_ele-&gt;nbDof()*nComponents;</div>
-<div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;                    <span class="keyword">const</span> uint16_type Q = <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a56fd3f67dee880dd4960aedbdc5fcd15">nPoints</a>();</div>
+<div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;                    <span class="keyword">const</span> uint16_type Q = nPoints();</div>
 <div class="line"><a name="l01498"></a><span class="lineno"> 1498</span>&#160;</div>
 <div class="line"><a name="l01499"></a><span class="lineno"> 1499</span>&#160;                    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 0; i &lt; I; ++i )</div>
 <div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;                    {</div>
@@ -1447,7 +1447,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01582"></a><span class="lineno"> 1582</span>&#160;                {</div>
 <div class="line"><a name="l01583"></a><span class="lineno"> 1583</span>&#160;                    std::fill( M_dn.data(), M_dn.data()+M_dn.num_elements(), dn_type::Zero() );</div>
 <div class="line"><a name="l01584"></a><span class="lineno"> 1584</span>&#160;                    <span class="keyword">const</span> uint16_type I = M_ref_ele-&gt;nbDof()*nComponents;</div>
-<div class="line"><a name="l01585"></a><span class="lineno"> 1585</span>&#160;                    <span class="keyword">const</span> uint16_type Q = <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a56fd3f67dee880dd4960aedbdc5fcd15">nPoints</a>();</div>
+<div class="line"><a name="l01585"></a><span class="lineno"> 1585</span>&#160;                    <span class="keyword">const</span> uint16_type Q = nPoints();</div>
 <div class="line"><a name="l01586"></a><span class="lineno"> 1586</span>&#160;</div>
 <div class="line"><a name="l01587"></a><span class="lineno"> 1587</span>&#160;                    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 0; i &lt; I; ++i )</div>
 <div class="line"><a name="l01588"></a><span class="lineno"> 1588</span>&#160;                    {</div>
@@ -1568,7 +1568,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01703"></a><span class="lineno"> 1703</span>&#160;                {</div>
 <div class="line"><a name="l01704"></a><span class="lineno"> 1704</span>&#160;                    std::fill( M_dn.data(), M_dn.data()+M_dn.num_elements(), dn_type::Zero() );</div>
 <div class="line"><a name="l01705"></a><span class="lineno"> 1705</span>&#160;                    <span class="keyword">const</span> uint16_type I = nDof*nComponents1;</div>
-<div class="line"><a name="l01706"></a><span class="lineno"> 1706</span>&#160;                    <span class="keyword">const</span> uint16_type Q = <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a56fd3f67dee880dd4960aedbdc5fcd15">nPoints</a>();</div>
+<div class="line"><a name="l01706"></a><span class="lineno"> 1706</span>&#160;                    <span class="keyword">const</span> uint16_type Q = nPoints();</div>
 <div class="line"><a name="l01707"></a><span class="lineno"> 1707</span>&#160;</div>
 <div class="line"><a name="l01708"></a><span class="lineno"> 1708</span>&#160;                    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 0; i &lt; I; ++i )</div>
 <div class="line"><a name="l01709"></a><span class="lineno"> 1709</span>&#160;                        <span class="keywordflow">for</span> ( uint16_type q = 0; q &lt; Q; ++q )</div>
@@ -1659,7 +1659,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01794"></a><span class="lineno"> 1794</span>&#160;                {</div>
 <div class="line"><a name="l01795"></a><span class="lineno"> 1795</span>&#160;                    std::fill( M_dn.data(), M_dn.data()+M_dn.num_elements(), dn_type::Zero() );</div>
 <div class="line"><a name="l01796"></a><span class="lineno"> 1796</span>&#160;                    <span class="keyword">const</span> uint16_type I = nDof*nComponents1;</div>
-<div class="line"><a name="l01797"></a><span class="lineno"> 1797</span>&#160;                    <span class="keyword">const</span> uint16_type Q = <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a56fd3f67dee880dd4960aedbdc5fcd15">nPoints</a>();</div>
+<div class="line"><a name="l01797"></a><span class="lineno"> 1797</span>&#160;                    <span class="keyword">const</span> uint16_type Q = nPoints();</div>
 <div class="line"><a name="l01798"></a><span class="lineno"> 1798</span>&#160;</div>
 <div class="line"><a name="l01799"></a><span class="lineno"> 1799</span>&#160;                    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 0; i &lt; I; ++i )</div>
 <div class="line"><a name="l01800"></a><span class="lineno"> 1800</span>&#160;                        <span class="keywordflow">for</span> ( uint16_type q = 0; q &lt; Q; ++q )</div>
@@ -1677,27 +1677,27 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01812"></a><span class="lineno"> 1812</span>&#160;            } <span class="comment">// grad</span></div>
 <div class="line"><a name="l01813"></a><span class="lineno"> 1813</span>&#160;        }</div>
 <div class="line"><a name="l01814"></a><span class="lineno"> 1814</span>&#160;</div>
-<div class="line"><a name="l01819"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a56fd3f67dee880dd4960aedbdc5fcd15"> 1819</a></span>&#160;        uint16_type <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a56fd3f67dee880dd4960aedbdc5fcd15">nPoints</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l01819"></a><span class="lineno"> 1819</span>&#160;        uint16_type nPoints()<span class="keyword"> const</span></div>
 <div class="line"><a name="l01820"></a><span class="lineno"> 1820</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l01821"></a><span class="lineno"> 1821</span>&#160;            <span class="keywordflow">return</span> M_npoints;</div>
 <div class="line"><a name="l01822"></a><span class="lineno"> 1822</span>&#160;        }</div>
 <div class="line"><a name="l01823"></a><span class="lineno"> 1823</span>&#160;</div>
-<div class="line"><a name="l01827"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#acfcb351d4599bf7bf95c7ec1da4dbf71"> 1827</a></span>&#160;        geometric_mapping_context_ptrtype <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#acfcb351d4599bf7bf95c7ec1da4dbf71">gmContext</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l01827"></a><span class="lineno"> 1827</span>&#160;        geometric_mapping_context_ptrtype <span class="keyword">const</span>&amp; gmContext()<span class="keyword"> const</span></div>
 <div class="line"><a name="l01828"></a><span class="lineno"> 1828</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l01829"></a><span class="lineno"> 1829</span>&#160;            <span class="keywordflow">return</span> M_gmc;</div>
 <div class="line"><a name="l01830"></a><span class="lineno"> 1830</span>&#160;        }</div>
 <div class="line"><a name="l01831"></a><span class="lineno"> 1831</span>&#160;</div>
-<div class="line"><a name="l01833"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a83de991a17b8b5cd21457772560eb625"> 1833</a></span>&#160;        <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a83de991a17b8b5cd21457772560eb625">eId</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l01833"></a><span class="lineno"> 1833</span>&#160;        <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> eId()<span class="keyword"> const</span></div>
 <div class="line"><a name="l01834"></a><span class="lineno"> 1834</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l01835"></a><span class="lineno"> 1835</span>&#160;            <span class="keywordflow">return</span> M_gmc-&gt;id();</div>
 <div class="line"><a name="l01836"></a><span class="lineno"> 1836</span>&#160;        }</div>
 <div class="line"><a name="l01837"></a><span class="lineno"> 1837</span>&#160;</div>
-<div class="line"><a name="l01839"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a6396759fa42434a2a6ba46c95b616f9a"> 1839</a></span>&#160;        matrix_node_t_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a6396759fa42434a2a6ba46c95b616f9a">xRefs</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l01839"></a><span class="lineno"> 1839</span>&#160;        matrix_node_t_type <span class="keyword">const</span>&amp; xRefs()<span class="keyword"> const</span></div>
 <div class="line"><a name="l01840"></a><span class="lineno"> 1840</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l01841"></a><span class="lineno"> 1841</span>&#160;            <span class="keywordflow">return</span> M_gmc-&gt;xRefs();</div>
 <div class="line"><a name="l01842"></a><span class="lineno"> 1842</span>&#160;        }</div>
 <div class="line"><a name="l01843"></a><span class="lineno"> 1843</span>&#160;</div>
-<div class="line"><a name="l01845"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a737296154128c209305b1ca4a1e2a656"> 1845</a></span>&#160;        precompute_ptrtype <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a737296154128c209305b1ca4a1e2a656">pc</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l01845"></a><span class="lineno"> 1845</span>&#160;        precompute_ptrtype <span class="keyword">const</span>&amp; pc()<span class="keyword"> const</span></div>
 <div class="line"><a name="l01846"></a><span class="lineno"> 1846</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l01847"></a><span class="lineno"> 1847</span>&#160;            <span class="keywordflow">return</span> M_pc.get();</div>
 <div class="line"><a name="l01848"></a><span class="lineno"> 1848</span>&#160;        }</div>
@@ -1748,7 +1748,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01893"></a><span class="lineno"> 1893</span>&#160;            <span class="keywordflow">return</span> M_phi[i][q]( c1,c2 );</div>
 <div class="line"><a name="l01894"></a><span class="lineno"> 1894</span>&#160;        }</div>
 <div class="line"><a name="l01895"></a><span class="lineno"> 1895</span>&#160;</div>
-<div class="line"><a name="l01896"></a><span class="lineno"> 1896</span>&#160;        value_type d( uint32_type i, uint16_type c1, uint16_type c2, uint32_type q )<span class="keyword"> const</span></div>
+<div class="line"><a name="l01896"></a><span class="lineno"> 1896</span>&#160;        value_type <a class="code" href="classFeel_1_1PolynomialSet.html#af1b85c8e12b5e98b0818f73216fc6148" title="derivatives of Dubiner polynomials the derivatives are computed at the nodes of the lattice ...">d</a>( uint32_type i, uint16_type c1, uint16_type c2, uint32_type q )<span class="keyword"> const</span></div>
 <div class="line"><a name="l01897"></a><span class="lineno"> 1897</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l01898"></a><span class="lineno"> 1898</span>&#160;            <span class="keywordflow">return</span> M_grad[i][q]( c1,c2 );</div>
 <div class="line"><a name="l01899"></a><span class="lineno"> 1899</span>&#160;        }</div>
@@ -1799,7 +1799,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01944"></a><span class="lineno"> 1944</span>&#160;</div>
 <div class="line"><a name="l01949"></a><span class="lineno"> 1949</span>&#160;        <span class="comment">//matrix_type const&amp; dn() const { return M_dn; }</span></div>
 <div class="line"><a name="l01950"></a><span class="lineno"> 1950</span>&#160;</div>
-<div class="line"><a name="l01955"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#aa8050ee6d257c0d6e042d3be74474b2d"> 1955</a></span>&#160;        value_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#aa8050ee6d257c0d6e042d3be74474b2d">dn</a>( uint32_type i,</div>
+<div class="line"><a name="l01955"></a><span class="lineno"> 1955</span>&#160;        value_type <span class="keyword">const</span>&amp; dn( uint32_type i,</div>
 <div class="line"><a name="l01956"></a><span class="lineno"> 1956</span>&#160;                              uint16_type c1,</div>
 <div class="line"><a name="l01957"></a><span class="lineno"> 1957</span>&#160;                              uint16_type c2,</div>
 <div class="line"><a name="l01958"></a><span class="lineno"> 1958</span>&#160;                              uint32_type q  )<span class="keyword"> const</span></div>
@@ -1807,7 +1807,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01960"></a><span class="lineno"> 1960</span>&#160;            <span class="keywordflow">return</span> M_dn[i][q]( c1,c2 );</div>
 <div class="line"><a name="l01961"></a><span class="lineno"> 1961</span>&#160;        }</div>
 <div class="line"><a name="l01962"></a><span class="lineno"> 1962</span>&#160;</div>
-<div class="line"><a name="l01963"></a><span class="lineno"> 1963</span>&#160;        dn_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#aa8050ee6d257c0d6e042d3be74474b2d">dn</a>( uint16_type i, uint32_type q )<span class="keyword"> const</span></div>
+<div class="line"><a name="l01963"></a><span class="lineno"> 1963</span>&#160;        dn_type <span class="keyword">const</span>&amp; dn( uint16_type i, uint32_type q )<span class="keyword"> const</span></div>
 <div class="line"><a name="l01964"></a><span class="lineno"> 1964</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l01965"></a><span class="lineno"> 1965</span>&#160;            <span class="keywordflow">return</span> M_dn[i][q];</div>
 <div class="line"><a name="l01966"></a><span class="lineno"> 1966</span>&#160;        }</div>
@@ -1844,14 +1844,14 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l01997"></a><span class="lineno"> 1997</span>&#160;            <span class="keywordflow">return</span> M_dz[i][q];</div>
 <div class="line"><a name="l01998"></a><span class="lineno"> 1998</span>&#160;        }</div>
 <div class="line"><a name="l01999"></a><span class="lineno"> 1999</span>&#160;</div>
-<div class="line"><a name="l02008"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a502bcb40b274ff74ff8679794b9acb43"> 2008</a></span>&#160;        value_type <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a502bcb40b274ff74ff8679794b9acb43">div</a>( uint16_type i, uint16_type c1, uint16_type c2, uint32_type q )<span class="keyword"> const</span></div>
+<div class="line"><a name="l02008"></a><span class="lineno"> 2008</span>&#160;        value_type div( uint16_type i, uint16_type c1, uint16_type c2, uint32_type q )<span class="keyword"> const</span></div>
 <div class="line"><a name="l02009"></a><span class="lineno"> 2009</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l02010"></a><span class="lineno"> 2010</span>&#160;            detail::ignore_unused_variable_warning( c1 );</div>
 <div class="line"><a name="l02011"></a><span class="lineno"> 2011</span>&#160;            detail::ignore_unused_variable_warning( c2 );</div>
-<div class="line"><a name="l02012"></a><span class="lineno"> 2012</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a502bcb40b274ff74ff8679794b9acb43">div</a>( i, c1, c2, q, mpl::int_&lt;rank&gt;() );</div>
+<div class="line"><a name="l02012"></a><span class="lineno"> 2012</span>&#160;            <span class="keywordflow">return</span> div( i, c1, c2, q, mpl::int_&lt;rank&gt;() );</div>
 <div class="line"><a name="l02013"></a><span class="lineno"> 2013</span>&#160;        }</div>
 <div class="line"><a name="l02014"></a><span class="lineno"> 2014</span>&#160;</div>
-<div class="line"><a name="l02015"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a6a93bf06c8eff5a559fb8ca2a63c48d9"> 2015</a></span>&#160;        value_type <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a6a93bf06c8eff5a559fb8ca2a63c48d9">div</a>( uint16_type i,  uint16_type c1, uint16_type c2, uint32_type q, mpl::int_&lt;0&gt; )<span class="keyword"> const</span></div>
+<div class="line"><a name="l02015"></a><span class="lineno"> 2015</span>&#160;        value_type div( uint16_type i,  uint16_type c1, uint16_type c2, uint32_type q, mpl::int_&lt;0&gt; )<span class="keyword"> const</span></div>
 <div class="line"><a name="l02016"></a><span class="lineno"> 2016</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l02017"></a><span class="lineno"> 2017</span>&#160;            detail::ignore_unused_variable_warning( i );</div>
 <div class="line"><a name="l02018"></a><span class="lineno"> 2018</span>&#160;            detail::ignore_unused_variable_warning( q );</div>
@@ -1861,7 +1861,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l02025"></a><span class="lineno"> 2025</span>&#160;            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l02026"></a><span class="lineno"> 2026</span>&#160;        }</div>
 <div class="line"><a name="l02027"></a><span class="lineno"> 2027</span>&#160;</div>
-<div class="line"><a name="l02028"></a><span class="lineno"> 2028</span>&#160;        value_type <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a502bcb40b274ff74ff8679794b9acb43">div</a>( uint16_type i, uint16_type c1, uint16_type c2, uint32_type q, mpl::int_&lt;1&gt; )<span class="keyword"> const</span></div>
+<div class="line"><a name="l02028"></a><span class="lineno"> 2028</span>&#160;        value_type div( uint16_type i, uint16_type c1, uint16_type c2, uint32_type q, mpl::int_&lt;1&gt; )<span class="keyword"> const</span></div>
 <div class="line"><a name="l02029"></a><span class="lineno"> 2029</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l02030"></a><span class="lineno"> 2030</span>&#160;            detail::ignore_unused_variable_warning( c1 );</div>
 <div class="line"><a name="l02031"></a><span class="lineno"> 2031</span>&#160;            detail::ignore_unused_variable_warning( c2 );</div>
@@ -1876,14 +1876,14 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l02040"></a><span class="lineno"> 2040</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l02041"></a><span class="lineno"> 2041</span>&#160;<span class="preprocessor"></span>        }</div>
 <div class="line"><a name="l02042"></a><span class="lineno"> 2042</span>&#160;</div>
-<div class="line"><a name="l02051"></a><span class="lineno"><a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a441af904f6385c482de864f64c68b15d"> 2051</a></span>&#160;        value_type <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a441af904f6385c482de864f64c68b15d">curl</a>( uint16_type i, uint16_type c1, uint16_type c2, uint32_type q )<span class="keyword"> const</span></div>
+<div class="line"><a name="l02051"></a><span class="lineno"> 2051</span>&#160;        value_type <a class="code" href="namespaceFeel.html#af0e68f5f62e0b915cf3b9ac73b5c4080" title="compute the curl of a vectorial polynomial p ">curl</a>( uint16_type i, uint16_type c1, uint16_type c2, uint32_type q )<span class="keyword"> const</span></div>
 <div class="line"><a name="l02052"></a><span class="lineno"> 2052</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l02053"></a><span class="lineno"> 2053</span>&#160;            detail::ignore_unused_variable_warning( c1 );</div>
 <div class="line"><a name="l02054"></a><span class="lineno"> 2054</span>&#160;            detail::ignore_unused_variable_warning( c2 );</div>
-<div class="line"><a name="l02055"></a><span class="lineno"> 2055</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a441af904f6385c482de864f64c68b15d">curl</a>( i, c1, c2, q, mpl::int_&lt;rank&gt;() );</div>
+<div class="line"><a name="l02055"></a><span class="lineno"> 2055</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespaceFeel.html#af0e68f5f62e0b915cf3b9ac73b5c4080" title="compute the curl of a vectorial polynomial p ">curl</a>( i, c1, c2, q, mpl::int_&lt;rank&gt;() );</div>
 <div class="line"><a name="l02056"></a><span class="lineno"> 2056</span>&#160;        }</div>
 <div class="line"><a name="l02057"></a><span class="lineno"> 2057</span>&#160;</div>
-<div class="line"><a name="l02058"></a><span class="lineno"> 2058</span>&#160;        value_type <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a441af904f6385c482de864f64c68b15d">curl</a>( uint16_type i,  uint16_type c1, uint16_type c2, uint32_type q, mpl::int_&lt;0&gt; )<span class="keyword"> const</span></div>
+<div class="line"><a name="l02058"></a><span class="lineno"> 2058</span>&#160;        value_type <a class="code" href="namespaceFeel.html#af0e68f5f62e0b915cf3b9ac73b5c4080" title="compute the curl of a vectorial polynomial p ">curl</a>( uint16_type i,  uint16_type c1, uint16_type c2, uint32_type q, mpl::int_&lt;0&gt; )<span class="keyword"> const</span></div>
 <div class="line"><a name="l02059"></a><span class="lineno"> 2059</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l02060"></a><span class="lineno"> 2060</span>&#160;            detail::ignore_unused_variable_warning( i );</div>
 <div class="line"><a name="l02061"></a><span class="lineno"> 2061</span>&#160;            detail::ignore_unused_variable_warning( q );</div>
@@ -1893,7 +1893,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 <div class="line"><a name="l02065"></a><span class="lineno"> 2065</span>&#160;            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l02066"></a><span class="lineno"> 2066</span>&#160;        }</div>
 <div class="line"><a name="l02067"></a><span class="lineno"> 2067</span>&#160;</div>
-<div class="line"><a name="l02068"></a><span class="lineno"> 2068</span>&#160;        value_type <a class="code" href="classFeel_1_1PolynomialSet_1_1Context.html#a441af904f6385c482de864f64c68b15d">curl</a>( uint16_type i, uint16_type c1, uint16_type c2, uint32_type q, mpl::int_&lt;1&gt; )<span class="keyword"> const</span></div>
+<div class="line"><a name="l02068"></a><span class="lineno"> 2068</span>&#160;        value_type <a class="code" href="namespaceFeel.html#af0e68f5f62e0b915cf3b9ac73b5c4080" title="compute the curl of a vectorial polynomial p ">curl</a>( uint16_type i, uint16_type c1, uint16_type c2, uint32_type q, mpl::int_&lt;1&gt; )<span class="keyword"> const</span></div>
 <div class="line"><a name="l02069"></a><span class="lineno"> 2069</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l02070"></a><span class="lineno"> 2070</span>&#160;            detail::ignore_unused_variable_warning( c2 );</div>
 <div class="line"><a name="l02071"></a><span class="lineno"> 2071</span>&#160;            <span class="keywordflow">return</span> M_curl[i][q]( c1 );</div>
@@ -2057,7 +2057,7 @@ $(document).ready(function(){initNavTree('polynomialset_8hpp_source.html','');})
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:06 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:11 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -166,9 +166,9 @@ $(document).ready(function(){initNavTree('region_8hpp_source.html','');});
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">return</span> v;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="structFeel_1_1Region.html">   73</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1Region.html">Region</a></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">struct </span>Region</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="structFeel_1_1Region.html">Region</a>() {}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">virtual</span> ~Region() {}</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> SpaceType, <span class="keyword">typename</span> Expr&gt;</div>
@@ -204,7 +204,7 @@ $(document).ready(function(){initNavTree('region_8hpp_source.html','');});
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="code" href="structFeel_1_1RegionProcess.html">  122</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1RegionProcess.html">RegionProcess</a> : <span class="keyword">public</span> <a class="code" href="structFeel_1_1Region.html">Region</a></div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="code" href="structFeel_1_1RegionProcess.html">  122</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1RegionProcess.html">RegionProcess</a> : <span class="keyword">public</span> Region</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> SpaceType&gt;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">typename</span> SpaceType::element_type</div>
@@ -221,7 +221,7 @@ $(document).ready(function(){initNavTree('region_8hpp_source.html','');});
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">return</span> region( space, lambda::bind( &amp;SpaceType::mesh_type::element_type::marker, lambda::_1 ) );</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
-<div class="line"><a name="l00146"></a><span class="lineno"><a class="code" href="structFeel_1_1RegionMarkre.html">  146</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1RegionMarkre.html">RegionMarkre</a> : <span class="keyword">public</span> <a class="code" href="structFeel_1_1Region.html">Region</a></div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="code" href="structFeel_1_1RegionMarkre.html">  146</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1RegionMarkre.html">RegionMarkre</a> : <span class="keyword">public</span> Region</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> SpaceType&gt;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">typename</span> SpaceType::element_type</div>
@@ -239,7 +239,7 @@ $(document).ready(function(){initNavTree('region_8hpp_source.html','');});
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno"><a class="code" href="structFeel_1_1RegionMarker2.html">  171</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1RegionMarker2.html">RegionMarker2</a> : <span class="keyword">public</span> <a class="code" href="structFeel_1_1Region.html">Region</a></div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="code" href="structFeel_1_1RegionMarker2.html">  171</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1RegionMarker2.html">RegionMarker2</a> : <span class="keyword">public</span> Region</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;{</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> SpaceType&gt;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keyword">typename</span> SpaceType::element_type</div>
@@ -257,7 +257,7 @@ $(document).ready(function(){initNavTree('region_8hpp_source.html','');});
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno"><a class="code" href="structFeel_1_1RegionMarker3.html">  196</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1RegionMarker3.html">RegionMarker3</a> : <span class="keyword">public</span> <a class="code" href="structFeel_1_1Region.html">Region</a></div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="code" href="structFeel_1_1RegionMarker3.html">  196</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1RegionMarker3.html">RegionMarker3</a> : <span class="keyword">public</span> Region</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;{</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> SpaceType&gt;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keyword">typename</span> SpaceType::element_type</div>
@@ -273,7 +273,7 @@ $(document).ready(function(){initNavTree('region_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:11 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:14 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

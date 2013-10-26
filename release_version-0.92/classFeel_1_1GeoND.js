@@ -1,7 +1,5 @@
 var classFeel_1_1GeoND =
 [
-    [ "GetGm", "structFeel_1_1GeoND_1_1GetGm.html", "structFeel_1_1GeoND_1_1GetGm" ],
-    [ "tt", "structFeel_1_1GeoND_1_1tt.html", null ],
     [ "edge_permutation_type", "classFeel_1_1GeoND.html#a4fe25086dc476514a508896d1ac6d10e", null ],
     [ "element_type", "classFeel_1_1GeoND.html#a546a90afeb4d19711304d28205c5fed4", null ],
     [ "face_permutation_type", "classFeel_1_1GeoND.html#a894d618d1c4a9662f3a842e1d37a6fe5", null ],

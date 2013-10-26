@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -160,11 +160,11 @@ $(document).ready(function(){initNavTree('vector_8hpp_source.html','');});
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classFeel_1_1Vector.html#aeae03d306c99af6cb09412e2d8a5ccd9">Vector</a> ( datamap_ptrtype <span class="keyword">const</span>&amp; n );</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classFeel_1_1Vector.html#aeae03d306c99af6cb09412e2d8a5ccd9">Vector</a> ( <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> n, WorldComm <span class="keyword">const</span>&amp; _worldComm = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() );</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classFeel_1_1Vector.html#aeae03d306c99af6cb09412e2d8a5ccd9">Vector</a> ( <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> n, WorldComm <span class="keyword">const</span>&amp; _worldComm = Environment::worldComm() );</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="classFeel_1_1Vector.html#aeae03d306c99af6cb09412e2d8a5ccd9">Vector</a> ( <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> n,</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;             <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> n_local,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;             WorldComm <span class="keyword">const</span>&amp; _worldComm = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;             WorldComm <span class="keyword">const</span>&amp; _worldComm = Environment::worldComm() );</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="classFeel_1_1Vector.html#aeae03d306c99af6cb09412e2d8a5ccd9">Vector</a> ( <a class="code" href="classFeel_1_1Vector.html#aeae03d306c99af6cb09412e2d8a5ccd9">Vector</a> <span class="keyword">const</span>&amp; v );</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
@@ -296,7 +296,7 @@ $(document).ready(function(){initNavTree('vector_8hpp_source.html','');});
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1Vector.html#a4853175f01b878e3ecc4a7406b0a4390">M_map</a>-&gt;dofGlobalProcessIsGhost(localDof);</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    }</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
-<div class="line"><a name="l00332"></a><span class="lineno"><a class="code" href="classFeel_1_1Vector.html#a06319f6056ae5cc9796c271493dfb5e0">  332</a></span>&#160;    <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1Vector.html#a06319f6056ae5cc9796c271493dfb5e0">comm</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno"><a class="code" href="classFeel_1_1Vector.html#a06319f6056ae5cc9796c271493dfb5e0">  332</a></span>&#160;    WorldComm <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1Vector.html#a06319f6056ae5cc9796c271493dfb5e0">comm</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1Vector.html#a4853175f01b878e3ecc4a7406b0a4390">M_map</a>-&gt;comm();</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    }</div>
@@ -406,7 +406,7 @@ $(document).ready(function(){initNavTree('vector_8hpp_source.html','');});
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;<span class="comment">/*----------------------- Inline functions ----------------------------------*/</span></div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;</div>
 <div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;<span class="keyword">typename</span> <a class="code" href="structFeel_1_1type__traits.html">type_traits&lt;T&gt;::real_type</a></div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;<span class="keyword">typename</span> type_traits&lt;T&gt;::real_type</div>
 <div class="line"><a name="l00579"></a><span class="lineno"><a class="code" href="namespaceFeel.html#a73707c3e6d405359ea9b4e1f21c9e530">  579</a></span>&#160;<a class="code" href="namespaceFeel.html#a73707c3e6d405359ea9b4e1f21c9e530">inner_product</a>( <a class="code" href="classFeel_1_1Vector.html">Vector&lt;T&gt;</a> <span class="keyword">const</span>&amp; v1, <a class="code" href="classFeel_1_1Vector.html">Vector&lt;T&gt;</a> <span class="keyword">const</span>&amp; v2 )</div>
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;{</div>
 <div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    FEELPP_ASSERT( v1.localSize() == v2.localSize() &amp;&amp;</div>
@@ -414,7 +414,7 @@ $(document).ready(function(){initNavTree('vector_8hpp_source.html','');});
 <div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    ( v1.localSize() )( v2.localSize() )</div>
 <div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    ( v1.size() )( v2.size() ).error( <span class="stringliteral">&quot;incompatible vector sizes&quot;</span> );</div>
 <div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1type__traits.html">type_traits&lt;T&gt;::real_type</a> real_type;</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> type_traits&lt;T&gt;::real_type real_type;</div>
 <div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;</div>
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> s = v1.localSize();</div>
 <div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    <span class="comment">//size_type s = v1.map().nLocalDofWithoutGhost();</span></div>
@@ -475,7 +475,7 @@ $(document).ready(function(){initNavTree('vector_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:15 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:18 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

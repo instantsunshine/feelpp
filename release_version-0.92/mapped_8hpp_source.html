@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -159,7 +159,7 @@ $(document).ready(function(){initNavTree('mapped_8hpp_source.html','');});
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          uint16_type Order,</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;          <span class="keyword">typename</span> T = double ,</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;          <span class="keyword">template</span>&lt;<span class="keyword">class</span>, u<span class="keywordtype">int</span>16_type, <span class="keyword">class</span>&gt; <span class="keyword">class </span>PointSetType = PointSetEquiSpaced&gt;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSetMapped.html">   62</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1PointSetMapped.html">PointSetMapped</a> : <span class="keyword">public</span> PointSetType&lt;Convex, Order, T&gt;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">class </span>PointSetMapped : <span class="keyword">public</span> PointSetType&lt;Convex, Order, T&gt;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">public</span> :</div>
@@ -173,7 +173,7 @@ $(document).ready(function(){initNavTree('mapped_8hpp_source.html','');});
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> is_simplex = Convex::is_simplex;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> pointset_type::nodes_type nodes_type;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1matrix__node.html">matrix_node&lt;value_type&gt;::type</a> points_type;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> matrix_node&lt;value_type&gt;::type points_type;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> element_type::gm_type gm_type;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> element_type::gm_ptrtype gm_ptrtype;</div>
@@ -185,21 +185,21 @@ $(document).ready(function(){initNavTree('mapped_8hpp_source.html','');});
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">typedef</span> ublas::mapped_matrix&lt;uint16_type&gt; permutation_matrix_type;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">typedef</span> mpl::if_&lt; mpl::bool_&lt; is_simplex &gt;,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex&lt;Dim, Order, Dim&gt;</a> ,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <a class="code" href="classFeel_1_1Hypercube.html">Hypercube&lt;Dim, Order, Dim&gt;</a> &gt; conv_order_type;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            Simplex&lt;Dim, Order, Dim&gt; ,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            Hypercube&lt;Dim, Order, Dim&gt; &gt; conv_order_type;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint32_type nbPtsPerVertex = conv_order_type::type::nbPtsPerVertex;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint32_type nbPtsPerEdge = conv_order_type::type::nbPtsPerEdge;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint32_type nbPtsPerFace = conv_order_type::type::nbPtsPerFace;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Reference.html">Reference&lt;Convex, Dim, convexOrder, Dim, value_type&gt;</a> <a class="code" href="classFeel_1_1Reference.html">RefElem</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">typedef</span> Reference&lt;Convex, Dim, convexOrder, Dim, value_type&gt; RefElem;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> pointset_type::range_type range_type;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> pointset_type::index_map_type index_map_type;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="classFeel_1_1Reference.html">RefElem</a> RefConv;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    RefElem RefConv;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="classFeel_1_1PointSetMapped.html">PointSetMapped</a>( element_type <span class="keyword">const</span>&amp; _elt )</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    PointSetMapped( element_type <span class="keyword">const</span>&amp; _elt )</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        :</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        M_elt( _elt )</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
@@ -207,12 +207,12 @@ $(document).ready(function(){initNavTree('mapped_8hpp_source.html','');});
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        points_type Gt = updatePoints&lt;2&gt;( updatePoints&lt;1&gt;( pts.points(), pts, mpl::bool_&lt; ( Order &gt; 2 ) &gt;() ),</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                          pts,</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                          mpl::bool_&lt; ( Dim == 3 &amp;&amp; <a class="code" href="structFeel_1_1Order.html">Order</a> &gt; 2+uint16_type( is_simplex ) ) &gt;() );</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                          mpl::bool_&lt; ( Dim == 3 &amp;&amp; Order &gt; 2+uint16_type( is_simplex ) ) &gt;() );</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        this-&gt;setPoints( Gt );</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    ~<a class="code" href="classFeel_1_1PointSetMapped.html">PointSetMapped</a>() {}</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    ~PointSetMapped() {}</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    permutation_vector_type getVectorPermutation ( face_permutation_type P )</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    {</div>
@@ -287,7 +287,7 @@ $(document).ready(function(){initNavTree('mapped_8hpp_source.html','');});
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">if</span> ( top_dim == 2 )</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            generateFacePermutations( <a class="code" href="structFeel_1_1Order.html">Order</a> - 1-uint16_type( is_simplex ),</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            generateFacePermutations( Order - 1-uint16_type( is_simplex ),</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                                      mpl::int_&lt;Dim&gt;(), mpl::bool_&lt; is_simplex &gt;() );</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        }</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
@@ -485,7 +485,7 @@ $(document).ready(function(){initNavTree('mapped_8hpp_source.html','');});
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="keyword">typename</span> gm_type::precompute_ptrtype __geopc( <span class="keyword">new</span> <span class="keyword">typename</span> gm_type::precompute_type( _gm_ptr, Gt ) );</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="keyword">typename</span> gm_type::template <a class="code" href="classFeel_1_1Context.html" title="Context class. ">Context&lt;vm::POINT, element_type&gt;</a> gmc( _gm_ptr, M_elt, __geopc );</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="keyword">typename</span> gm_type::template Context&lt;vm::POINT, element_type&gt; gmc( _gm_ptr, M_elt, __geopc );</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordflow">return</span> gmc.xReal();</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    }</div>
@@ -496,7 +496,7 @@ $(document).ready(function(){initNavTree('mapped_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:28:55 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:04 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

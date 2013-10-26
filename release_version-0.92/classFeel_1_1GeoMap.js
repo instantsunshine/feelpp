@@ -1,8 +1,6 @@
 var classFeel_1_1GeoMap =
 [
     [ "Context", "classFeel_1_1GeoMap_1_1Context.html", "classFeel_1_1GeoMap_1_1Context" ],
-    [ "edge_gm", "structFeel_1_1GeoMap_1_1edge__gm.html", "structFeel_1_1GeoMap_1_1edge__gm" ],
-    [ "face_gm", "structFeel_1_1GeoMap_1_1face__gm.html", "structFeel_1_1GeoMap_1_1face__gm" ],
     [ "Inverse", "classFeel_1_1GeoMap_1_1Inverse.html", "classFeel_1_1GeoMap_1_1Inverse" ],
     [ "convex_type", "classFeel_1_1GeoMap.html#a365da115611b0992d34eba2902c9ee1d", null ],
     [ "edge_gm_ptrtype", "classFeel_1_1GeoMap.html#aeb2c832c859cb941e6c3af1e4d786e5a", null ],

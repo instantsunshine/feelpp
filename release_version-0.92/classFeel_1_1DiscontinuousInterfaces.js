@@ -1,6 +1,5 @@
 var classFeel_1_1DiscontinuousInterfaces =
 [
-    [ "apply", "classFeel_1_1DiscontinuousInterfaces_1_1apply.html", "classFeel_1_1DiscontinuousInterfaces_1_1apply" ],
     [ "discontinuity_markers_type", "classFeel_1_1DiscontinuousInterfaces.html#a1514a2b4e23943de36012252e401008c", null ],
     [ "DiscontinuousInterfaces", "classFeel_1_1DiscontinuousInterfaces.html#aa44d7c33254c5055f1faede980e25d48", null ],
     [ "DiscontinuousInterfaces", "classFeel_1_1DiscontinuousInterfaces.html#afd6f5fe1ce9a9ce86f99b4ea91af8dfe", null ],

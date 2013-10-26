@@ -1,7 +1,5 @@
 var classFeel_1_1PolynomialSet =
 [
-    [ "Context", "classFeel_1_1PolynomialSet_1_1Context.html", "classFeel_1_1PolynomialSet_1_1Context" ],
-    [ "PreCompute", "classFeel_1_1PolynomialSet_1_1PreCompute.html", "classFeel_1_1PolynomialSet_1_1PreCompute" ],
     [ "basis_type", "classFeel_1_1PolynomialSet.html#a7048966b6e64910162b52ab0866277ba", null ],
     [ "component_type", "classFeel_1_1PolynomialSet.html#a19a908e62dfa5e6c5f3990b6d4013d61", null ],
     [ "convex_type", "classFeel_1_1PolynomialSet.html#a74ed782c9fd7f18a7ac4130468ed2e6a", null ],

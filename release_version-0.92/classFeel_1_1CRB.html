@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -101,7 +101,6 @@ $(document).ready(function(){initNavTree('classFeel_1_1CRB.html','');});
 <div class="header">
   <div class="summary">
 <a href="classFeel_1_1CRB-members.html">List of all members</a> &#124;
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::CRB&lt; TruthModelType &gt; Class Template Reference</div>  </div>
@@ -129,15 +128,6 @@ class Feel::CRB&lt; TruthModelType &gt;</h3>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1CRB_1_1ComputeIntegrals.html">ComputeIntegrals</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1CRB_1_1ComputeIntegralsSquare.html">ComputeIntegralsSquare</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1CRB_1_1ComputePhi.html">ComputePhi</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors, destructor</div></td></tr>
@@ -380,7 +370,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>buildVarianceMatrixPh
 void&#160;</td><td class="memItemRight" valign="bottom"><b>buildVarianceMatrixPhi</b> (int const N, mpl::bool_&lt; false &gt;)</td></tr>
 <tr class="separator:aaf8f7a4e5205ce50a81cf1f1ded59056"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae450b535c04870c615e4f555ea20349b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae450b535c04870c615e4f555ea20349b"></a>
-<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>worldComm</b> () const </td></tr>
+WorldComm const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>worldComm</b> () const </td></tr>
 <tr class="separator:ae450b535c04870c615e4f555ea20349b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf178d5e1a1f95c67f0add56850e3702"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf178d5e1a1f95c67f0add56850e3702"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>printRBMatrix</b> (matrixN_type const &amp;A, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu) const </td></tr>
@@ -520,7 +510,7 @@ typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1CRB.html#a2fc2d7ca8939cbf2816728f57c61c716">scm_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>scm_ptrtype</b></td></tr>
 <tr class="separator:a398a045842f376c75bb9329ad03c4d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2964effaa2b0cd23cbb5fa8963982fb5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2964effaa2b0cd23cbb5fa8963982fb5"></a>
-typedef <a class="el" href="classFeel_1_1CRBElementsDB.html">CRBElementsDB</a><br class="typebreak"/>
+typedef CRBElementsDB<br class="typebreak"/>
 &lt; truth_model_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#a2964effaa2b0cd23cbb5fa8963982fb5">crb_elements_db_type</a></td></tr>
 <tr class="memdesc:a2964effaa2b0cd23cbb5fa8963982fb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">elements database <br/></td></tr>
 <tr class="separator:a2964effaa2b0cd23cbb5fa8963982fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -777,7 +767,7 @@ template&lt;typename TruthModelType &gt; </div>
 </div><div class="memdoc">
 <p>evaluate online time via the option crb.computational-time-neval </p>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#aeea5774ce0d944f1bdd7acf74e0cbd80">Feel::CRB&lt; TruthModelType &gt;::dimension()</a>, <a class="el" href="classFeel_1_1CRB.html#aa775dfc530878531129d6d7ab69c1466">Feel::CRB&lt; TruthModelType &gt;::run()</a>, and <a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Feel::detail::Environment::worldComm()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#aeea5774ce0d944f1bdd7acf74e0cbd80">Feel::CRB&lt; TruthModelType &gt;::dimension()</a>, and <a class="el" href="classFeel_1_1CRB.html#aa775dfc530878531129d6d7ab69c1466">Feel::CRB&lt; TruthModelType &gt;::run()</a>.</p>
 
 </div>
 </div>
@@ -1489,7 +1479,7 @@ template&lt;typename TruthModelType &gt; </div>
   </dd>
 </dl>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#afd59bfa368bf7dabeb1ce0a0aa4de549">Feel::CRB&lt; TruthModelType &gt;::delta()</a>, <a class="el" href="classFeel_1_1CRB.html#aa40eaa902ad75df8e0e46e2f50b39f4b">Feel::CRB&lt; TruthModelType &gt;::lb()</a>, <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>, and <a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Feel::detail::Environment::worldComm()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#afd59bfa368bf7dabeb1ce0a0aa4de549">Feel::CRB&lt; TruthModelType &gt;::delta()</a>, <a class="el" href="classFeel_1_1CRB.html#aa40eaa902ad75df8e0e46e2f50b39f4b">Feel::CRB&lt; TruthModelType &gt;::lb()</a>, and <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>.</p>
 
 </div>
 </div>
@@ -1536,7 +1526,7 @@ template&lt;typename TruthModelType &gt; </div>
 <p>Offline computation</p>
 <dl class="section return"><dt>Returns</dt><dd>the convergence history (max error) </dd></dl>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#a7e91a6877d6064fba476540ca71c0772">Feel::CRB&lt; TruthModelType &gt;::check()</a>, <a class="el" href="classFeel_1_1CRB.html#ab5ac52d3e77a6ffedf1bbe31adbefeb2">Feel::CRB&lt; TruthModelType &gt;::exportBasisFunctions()</a>, <a class="el" href="namespaceFeel.html#a73707c3e6d405359ea9b4e1f21c9e530">Feel::inner_product()</a>, <a class="el" href="classFeel_1_1CRBElementsDB.html#a718ab77bfd066fd7a75a65d19788f5f8">Feel::CRBElementsDB&lt; ModelType &gt;::loadDB()</a>, <a class="el" href="classFeel_1_1CRBDB.html#ac80c6f91b8fffec72cbc69a13bef3ab0">Feel::CRBDB::lookForDB()</a>, <a class="el" href="classFeel_1_1CRB.html#a7878f971a68f86fb1bb261b6f9aac137">Feel::CRB&lt; TruthModelType &gt;::maxErrorBounds()</a>, <a class="el" href="classFeel_1_1CRB.html#a8084a3cd7bc559a3d39dba3b89cf7a17">Feel::CRB&lt; TruthModelType &gt;::offlineResidual()</a>, <a class="el" href="classFeel_1_1CRB.html#a502e37b1aab2435a5d0ec16c3ecc6de4">Feel::CRB&lt; TruthModelType &gt;::orthonormalize()</a>, <a class="el" href="classFeel_1_1CRBElementsDB.html#a071880bff4108fa3f47f90342b765628">Feel::CRBElementsDB&lt; ModelType &gt;::saveDB()</a>, <a class="el" href="classFeel_1_1CRB.html#a39d510c1295521c3f2de52d359b368ee">Feel::CRB&lt; TruthModelType &gt;::saveDB()</a>, <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>, and <a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Feel::detail::Environment::worldComm()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#a7e91a6877d6064fba476540ca71c0772">Feel::CRB&lt; TruthModelType &gt;::check()</a>, <a class="el" href="classFeel_1_1CRB.html#ab5ac52d3e77a6ffedf1bbe31adbefeb2">Feel::CRB&lt; TruthModelType &gt;::exportBasisFunctions()</a>, <a class="el" href="namespaceFeel.html#a73707c3e6d405359ea9b4e1f21c9e530">Feel::inner_product()</a>, <a class="el" href="classFeel_1_1CRB.html#a7878f971a68f86fb1bb261b6f9aac137">Feel::CRB&lt; TruthModelType &gt;::maxErrorBounds()</a>, <a class="el" href="classFeel_1_1CRB.html#a8084a3cd7bc559a3d39dba3b89cf7a17">Feel::CRB&lt; TruthModelType &gt;::offlineResidual()</a>, <a class="el" href="classFeel_1_1CRB.html#a502e37b1aab2435a5d0ec16c3ecc6de4">Feel::CRB&lt; TruthModelType &gt;::orthonormalize()</a>, <a class="el" href="classFeel_1_1CRB.html#a39d510c1295521c3f2de52d359b368ee">Feel::CRB&lt; TruthModelType &gt;::saveDB()</a>, and <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>.</p>
 
 </div>
 </div>
@@ -2145,7 +2135,7 @@ template&lt;typename TruthModelType&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:30 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:22 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

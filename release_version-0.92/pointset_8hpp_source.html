@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -139,9 +139,9 @@ $(document).ready(function(){initNavTree('pointset_8hpp_source.html','');});
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span>ublas = boost::numeric::ublas;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> Convex, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSet.html">   54</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1PointSet.html" title="Class of all PointSet on a Convex. ">PointSet</a> : <span class="keyword">public</span> <a class="code" href="classFeel_1_1VisitableBase.html">VisitableBase</a>&lt;&gt;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="classFeel_1_1PointSet.html">   54</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1PointSet.html" title="Class of all PointSet on a Convex. ">PointSet</a> : <span class="keyword">public</span> VisitableBase&lt;&gt;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1VisitableBase.html">VisitableBase&lt;&gt;</a> <a class="code" href="classFeel_1_1VisitableBase.html">super</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">typedef</span> VisitableBase&lt;&gt; super;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
@@ -156,7 +156,7 @@ $(document).ready(function(){initNavTree('pointset_8hpp_source.html','');});
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classFeel_1_1PointSet.html" title="Class of all PointSet on a Convex. ">PointSet</a>()</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        :</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="classFeel_1_1VisitableBase.html">super</a>(),</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        super(),</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        M_npoints( 0 ),</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        M_points(),</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        M_points_face( Convex::numTopologicalFaces )</div>
@@ -164,7 +164,7 @@ $(document).ready(function(){initNavTree('pointset_8hpp_source.html','');});
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classFeel_1_1PointSet.html" title="Class of all PointSet on a Convex. ">PointSet</a>( <span class="keyword">const</span> <a class="code" href="classFeel_1_1PointSet.html" title="Class of all PointSet on a Convex. ">self_type</a>&amp; P )</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        :</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="classFeel_1_1VisitableBase.html">super</a>(),</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        super(),</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        M_npoints( P.nPoints() ),</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        M_points( P.points() ),</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        M_points_face( P.M_points_face )</div>
@@ -172,7 +172,7 @@ $(document).ready(function(){initNavTree('pointset_8hpp_source.html','');});
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="classFeel_1_1PointSet.html" title="Class of all PointSet on a Convex. ">PointSet</a>( uint32_type Npoints )</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        :</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="classFeel_1_1VisitableBase.html">super</a>(),</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        super(),</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        M_npoints( Npoints ),</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        M_points( Convex::nDim, Npoints ),</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        M_points_face( Convex::numTopologicalFaces )</div>
@@ -180,7 +180,7 @@ $(document).ready(function(){initNavTree('pointset_8hpp_source.html','');});
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="classFeel_1_1PointSet.html" title="Class of all PointSet on a Convex. ">PointSet</a>( uint32_type Npoints, uint16_type Dim )</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        :</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="classFeel_1_1VisitableBase.html">super</a>(),</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        super(),</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        M_npoints( Npoints ),</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        M_points( Dim, Npoints ),</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        M_points_face( Convex::numTopologicalFaces )</div>
@@ -188,7 +188,7 @@ $(document).ready(function(){initNavTree('pointset_8hpp_source.html','');});
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="classFeel_1_1PointSet.html" title="Class of all PointSet on a Convex. ">PointSet</a>( nodes_type <span class="keyword">const</span>&amp; SomePoints )</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        :</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="classFeel_1_1VisitableBase.html">super</a>(),</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        super(),</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        M_npoints( SomePoints.size2() ),</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        M_points( SomePoints ),</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        M_points_face( Convex::numTopologicalFaces )</div>
@@ -379,7 +379,7 @@ $(document).ready(function(){initNavTree('pointset_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:29:05 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:04:11 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

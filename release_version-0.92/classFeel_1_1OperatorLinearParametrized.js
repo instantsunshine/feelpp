@@ -1,6 +1,5 @@
 var classFeel_1_1OperatorLinearParametrized =
 [
-    [ "domain_element", "structFeel_1_1OperatorLinearParametrized_1_1domain__element.html", null ],
     [ "backend_ptrtype", "classFeel_1_1OperatorLinearParametrized.html#aa45e8ee407ccd80f1c48fa02f39237b5", null ],
     [ "backend_type", "classFeel_1_1OperatorLinearParametrized.html#a6da3e6ec07eaeeafc5331d95d412fd52", null ],
     [ "domain_element_type", "classFeel_1_1OperatorLinearParametrized.html#a6f4ddbaeaa8b159288c3d01777dfcb4b", null ],

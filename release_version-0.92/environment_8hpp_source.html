@@ -36,7 +36,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git8249e26</span>
+   &#160;<span id="projectnumber">0.96.0-alpha.1+git5f899a5</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -149,7 +149,7 @@ $(document).ready(function(){initNavTree('environment_8hpp_source.html','');});
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">namespace </span>detail</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1MemoryUsage.html">   52</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1MemoryUsage.html">MemoryUsage</a></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">struct </span>MemoryUsage</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#if defined ( FEELPP_HAS_PETSC_H )</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor"></span>    PetscLogDouble memory_usage;</div>
@@ -158,10 +158,10 @@ $(document).ready(function(){initNavTree('environment_8hpp_source.html','');});
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor"></span>};</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">inline</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<a class="code" href="classFeel_1_1AboutData.html" title="Holds information needed by the &quot;About&quot; box and other classes. ">AboutData</a></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;AboutData</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;makeAbout( <span class="keywordtype">char</span>* name )</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classFeel_1_1AboutData.html" title="Holds information needed by the &quot;About&quot; box and other classes. ">AboutData</a> about( name,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    AboutData about( name,</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                     name,</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                     <span class="stringliteral">&quot;0.1&quot;</span>,</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                     name,</div>
@@ -182,7 +182,7 @@ $(document).ready(function(){initNavTree('environment_8hpp_source.html','');});
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <a class="code" href="classFeel_1_1WorldComm.html">worldcomm_type</a>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keyword">typedef</span> WorldComm worldcomm_type;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;WorldComm&gt; worldcomm_ptrtype;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
@@ -237,15 +237,15 @@ $(document).ready(function(){initNavTree('environment_8hpp_source.html','');});
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classFeel_1_1detail_1_1Environment.html#a61ceeed3c0ec07c6f4de819b3b73be60">finalized</a>();</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00222"></a><span class="lineno"><a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">  222</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a>&amp; <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">worldComm</a>() { <span class="keywordflow">return</span> *S_worldcomm; }</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keyword">static</span> <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a>&amp; worldCommSeq() { <span class="keywordflow">return</span> *S_worldcommSeq; }</div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">  222</a></span>&#160;    <span class="keyword">static</span> WorldComm&amp; <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">worldComm</a>() { <span class="keywordflow">return</span> *S_worldcomm; }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keyword">static</span> WorldComm&amp; worldCommSeq() { <span class="keywordflow">return</span> *S_worldcommSeq; }</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keyword">static</span> std::vector&lt;WorldComm&gt; <span class="keyword">const</span>&amp;  <a class="code" href="classFeel_1_1detail_1_1Environment.html#abc34a3d8c5a9b7bb0353941af2c8ada8">worldsComm</a>( <span class="keywordtype">int</span> n );</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keyword">static</span> std::vector&lt;WorldComm&gt; <span class="keyword">const</span>&amp;  worldsCommSeq( <span class="keywordtype">int</span> n );</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keyword">static</span> std::vector&lt;WorldComm&gt; <span class="keyword">const</span>&amp;  worldsCommGroupBySubspace( <span class="keywordtype">int</span> n );</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keyword">static</span> <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1detail_1_1Environment.html#af8e4a9e2baddd9178b1f9e394498dce6">masterWorldComm</a>( <span class="keywordtype">int</span> n );</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keyword">static</span> WorldComm <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1detail_1_1Environment.html#af8e4a9e2baddd9178b1f9e394498dce6">masterWorldComm</a>( <span class="keywordtype">int</span> n );</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
 <div class="line"><a name="l00241"></a><span class="lineno"><a class="code" href="classFeel_1_1detail_1_1Environment.html#abdfe67905fb6f43796f5432313db61b5">  241</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classFeel_1_1detail_1_1Environment.html#abdfe67905fb6f43796f5432313db61b5">numberOfProcessors</a>()  { <span class="keywordflow">return</span> S_worldcomm-&gt;godSize(); }</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
@@ -259,7 +259,7 @@ $(document).ready(function(){initNavTree('environment_8hpp_source.html','');});
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
-<div class="line"><a name="l00269"></a><span class="lineno"><a class="code" href="classFeel_1_1detail_1_1Environment.html#aca4440fef331b4cfa5fb75a8d6843158">  269</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1detail_1_1Environment.html#aca4440fef331b4cfa5fb75a8d6843158">setWorldComm</a>( <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a>&amp; worldcomm ) { S_worldcomm = worldcomm.shared_from_this(); }</div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="code" href="classFeel_1_1detail_1_1Environment.html#aca4440fef331b4cfa5fb75a8d6843158">  269</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1detail_1_1Environment.html#aca4440fef331b4cfa5fb75a8d6843158">setWorldComm</a>( WorldComm&amp; worldcomm ) { S_worldcomm = worldcomm.shared_from_this(); }</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
@@ -285,7 +285,7 @@ $(document).ready(function(){initNavTree('environment_8hpp_source.html','');});
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        (required</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;         (name,(std::string)))</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        (optional</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;         (worldcomm, ( <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> ), <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() )</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;         (worldcomm, ( WorldComm ), <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() )</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;         (sub,( std::string ),<span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;         (prefix,( std::string ),<span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            ))</div>
@@ -357,11 +357,11 @@ $(document).ready(function(){initNavTree('environment_8hpp_source.html','');});
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;</div>
-<div class="line"><a name="l00414"></a><span class="lineno"><a class="code" href="classFeel_1_1Environment.html">  414</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1Environment.html">Environment</a> : <span class="keyword">public</span> <a class="code" href="classFeel_1_1detail_1_1Environment.html" title="Initialize, finalize, and query the Feel++ environment. ">detail::Environment</a></div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="keyword">class </span>Environment : <span class="keyword">public</span> detail::Environment</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;{</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    BOOST_PARAMETER_CONSTRUCTOR(</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <a class="code" href="classFeel_1_1Environment.html">Environment</a>, (<a class="code" href="classFeel_1_1detail_1_1Environment.html" title="Initialize, finalize, and query the Feel++ environment. ">detail::Environment</a>), tag,</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        Environment, (detail::Environment), tag,</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        (required</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;         (argc,*)</div>
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;         (argv,*))</div>
@@ -378,18 +378,18 @@ $(document).ready(function(){initNavTree('environment_8hpp_source.html','');});
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    (required</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;     (name,(std::string)))</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    (optional</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;     (worldcomm, ( <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> ), <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() )</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;     (worldcomm, ( WorldComm ), Environment::worldComm() )</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;     (sub,( std::string ),<span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;     (prefix,( std::string ),<span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        ))</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;{</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1detail_1_1Environment.html#ab2b28bbafcdbad667fd52b22702be57d">Environment::vm</a>(_name=name,_worldcomm=worldcomm,_sub=sub,_prefix=prefix);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keywordflow">return</span> Environment::vm(_name=name,_worldcomm=worldcomm,_sub=sub,_prefix=prefix);</div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;}</div>
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;</div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="keyword">namespace </span>detail</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;{</div>
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Args, <span class="keyword">typename</span> Tag=tag::opt&gt;</div>
-<div class="line"><a name="l00446"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1option.html">  446</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1option.html">option</a></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="keyword">struct </span>option</div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;{</div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_pointer&lt;</div>
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        <span class="keyword">typename</span> boost::remove_const&lt;</div>
@@ -409,14 +409,14 @@ $(document).ready(function(){initNavTree('environment_8hpp_source.html','');});
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;     (name,(std::string))</div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;     (in_out(opt),*))</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    (optional</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;     (worldcomm, ( <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> ), <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() )</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;     (worldcomm, ( WorldComm ), Environment::worldComm() )</div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;     (sub,( std::string ),<span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;     (prefix,( std::string ),<span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        ))</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;{</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordflow">try</span></div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    {</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        opt = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ab2b28bbafcdbad667fd52b22702be57d">Environment::vm</a>(_name=name,_worldcomm=worldcomm,_sub=sub,_prefix=prefix).template as&lt;typename Feel::detail::option&lt;Args&gt;::type&gt;();</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        opt = Environment::vm(_name=name,_worldcomm=worldcomm,_sub=sub,_prefix=prefix).template as&lt;typename Feel::detail::option&lt;Args&gt;::type&gt;();</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    }</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    <span class="keywordflow">catch</span> (boost::bad_any_cast bac)</div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    {</div>
@@ -430,7 +430,7 @@ $(document).ready(function(){initNavTree('environment_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:28:38 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:03:51 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

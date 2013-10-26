@@ -19,6 +19,8 @@ var classFeel_1_1MeshBase =
     [ "isRelatedTo", "classFeel_1_1MeshBase.html#ab8f228433a102a9593d74ccb58a02643", null ],
     [ "isSameMesh", "classFeel_1_1MeshBase.html#a19aa93418c1bbc2cf2c85525caef9aa9", null ],
     [ "isSameMesh", "classFeel_1_1MeshBase.html#aedefef669b2f95469b5c02c12fb8bf39", null ],
+    [ "isSiblingOf", "classFeel_1_1MeshBase.html#aba790d3b54a8332129e12208aaf2087f", null ],
+    [ "isSubMesh", "classFeel_1_1MeshBase.html#a02b97642b632a0f1f477921433752cde", null ],
     [ "isSubMeshFrom", "classFeel_1_1MeshBase.html#aca88d84255d571cbf3b141f7d03cc020", null ],
     [ "isSubMeshFrom", "classFeel_1_1MeshBase.html#acff1b5cf17685564edc19b262360786a", null ],
     [ "isUpdatedForUse", "classFeel_1_1MeshBase.html#a3d226fd28e57bfd81f91de01922b7f3d", null ],
