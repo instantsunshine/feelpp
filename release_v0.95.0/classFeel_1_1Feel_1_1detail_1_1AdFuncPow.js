@@ -1,7 +1,5 @@
 var classFeel_1_1Feel_1_1detail_1_1AdFuncPow =
 [
-    [ "Value", "structFeel_1_1Feel_1_1detail_1_1AdFuncPow_1_1Value.html", "structFeel_1_1Feel_1_1detail_1_1AdFuncPow_1_1Value" ],
-    [ "Value< true, Expr1_, Expr2_ >", "structFeel_1_1Feel_1_1detail_1_1AdFuncPow_1_1Value_3_01true_00_01Expr1___00_01Expr2___01_4.html", "structFeel_1_1Feel_1_1detail_1_1AdFuncPow_1_1Value_3_01true_00_01Expr1___00_01Expr2___01_4" ],
     [ "value_type", "classFeel_1_1Feel_1_1detail_1_1AdFuncPow.html#a460de99f3222bc2871a4c7fde88fb308", null ],
     [ "nvar", "classFeel_1_1Feel_1_1detail_1_1AdFuncPow.html#a7774ef5b2ee0184ce69791850d9b5209ad7d5b5ef7d4329e06319267298189b3b", null ],
     [ "AdFuncPow", "classFeel_1_1Feel_1_1detail_1_1AdFuncPow.html#acb02e37cd3daedf8b2e922994210f16c", null ],

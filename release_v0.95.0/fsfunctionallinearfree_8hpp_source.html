@@ -137,12 +137,12 @@ $(document).ready(function(){initNavTree('fsfunctionallinearfree_8hpp_source.htm
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> Space, <span class="keyword">class</span> ExprType&gt;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classFeel_1_1FsFunctionalLinearFree.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1FsFunctionalLinearFree.html">FsFunctionalLinearFree</a> : <span class="keyword">public</span> <a class="code" href="classFeel_1_1FsFunctionalLinear.html">FsFunctionalLinear</a>&lt;Space&gt;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">class </span>FsFunctionalLinearFree : <span class="keyword">public</span> FsFunctionalLinear&lt;Space&gt;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FsFunctionalLinearFree.html">FsFunctionalLinearFree&lt;Space,ExprType&gt;</a> <a class="code" href="classFeel_1_1FsFunctionalLinear.html">this_type</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FsFunctionalLinear.html">FsFunctionalLinear&lt;Space&gt;</a> <a class="code" href="classFeel_1_1FsFunctional.html">super_type</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">typedef</span> FsFunctionalLinearFree&lt;Space,ExprType&gt; this_type;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">typedef</span> FsFunctionalLinear&lt;Space&gt; super_type;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">typedef</span> Space space_type;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
@@ -151,22 +151,22 @@ $(document).ready(function(){initNavTree('fsfunctionallinearfree_8hpp_source.htm
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_type::value_type value_type;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">Backend&lt;value_type&gt;</a> <a class="code" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">backend_type</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">typedef</span> Backend&lt;value_type&gt; backend_type;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;backend_type&gt; backend_ptrtype;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1Vector.html">backend_type::vector_type</a> <a class="code" href="classFeel_1_1Vector.html">vector_type</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> backend_type::vector_type vector_type;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> backend_type::vector_ptrtype vector_ptrtype;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">typedef</span> ExprType expr_type;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classFeel_1_1FsFunctionalLinearFree.html">FsFunctionalLinearFree</a>( space_ptrtype space , expr_type expr ) :</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="classFeel_1_1FsFunctional.html">super_type</a>( space ),</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        M_backend( <a class="code" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">backend_type::build</a>( BACKEND_PETSC ) ),</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    FsFunctionalLinearFree( space_ptrtype space , expr_type expr ) :</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        super_type( space ),</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        M_backend( backend_type::build( BACKEND_PETSC ) ),</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        M_expr( expr )</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {}</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classFeel_1_1FsFunctionalLinearFree.html">FsFunctionalLinearFree</a>( space_ptrtype space, backend_ptrtype backend , expr_type expr ) :</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classFeel_1_1FsFunctional.html">super_type</a>( space ),</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    FsFunctionalLinearFree( space_ptrtype space, backend_ptrtype backend , expr_type expr ) :</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        super_type( space ),</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        M_backend( backend ),</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        M_expr( expr )</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {}</div>
@@ -198,7 +198,7 @@ $(document).ready(function(){initNavTree('fsfunctionallinearfree_8hpp_source.htm
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">//fill a vector to have the container</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> container( <a class="code" href="classFeel_1_1Vector.html">vector_type</a> &amp; vector_to_fill )</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> container( vector_type &amp; vector_to_fill )</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">auto</span> vector = M_backend-&gt;newVector( this-&gt;space() );</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        form1( _test=this-&gt;space(),_vector=vector) = M_expr;</div>
@@ -207,7 +207,7 @@ $(document).ready(function(){initNavTree('fsfunctionallinearfree_8hpp_source.htm
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        vector_to_fill = *vector;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="classFeel_1_1FsFunctionalLinear.html">this_type</a>&amp; operator=( <a class="code" href="classFeel_1_1FsFunctionalLinear.html">this_type</a> <span class="keyword">const</span>&amp; m )</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    this_type&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( this_type <span class="keyword">const</span>&amp; m )</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    {</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        M_backend = m.M_backend;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        M_expr = m.M_expr;</div>
@@ -225,12 +225,12 @@ $(document).ready(function(){initNavTree('fsfunctionallinearfree_8hpp_source.htm
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Args&gt;</div>
-<div class="line"><a name="l00129"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1compute__functionalLinearFree__return.html">  129</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1compute__functionalLinearFree__return.html">compute_functionalLinearFree_return</a></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">struct </span>compute_functionalLinearFree_return</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_reference&lt;typename parameter::binding&lt;Args, tag::space&gt;::type&gt;::type::element_type space_type;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_reference&lt;typename parameter::binding&lt;Args, tag::expr&gt;::type&gt;<a class="code" href="classFeel_1_1FsFunctionalLinearFree.html">::type</a> expr_type;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_reference&lt;typename parameter::binding&lt;Args, tag::expr&gt;::type&gt;::type expr_type;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FsFunctionalLinearFree.html">FsFunctionalLinearFree&lt;space_type, expr_type&gt;</a> <a class="code" href="classFeel_1_1FsFunctionalLinearFree.html">type</a>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">typedef</span> FsFunctionalLinearFree&lt;space_type, expr_type&gt; type;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;FsFunctionalLinearFree&lt;space_type,expr_type&gt; &gt; ptrtype;</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;};</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
@@ -244,13 +244,13 @@ $(document).ready(function(){initNavTree('fsfunctionallinearfree_8hpp_source.htm
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      ( expr ,   * )</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    ) <span class="comment">// required</span></div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    ( optional</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      ( backend,        *, <a class="code" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">Backend</a>&lt;<span class="keyword">typename</span> <a class="code" href="structFeel_1_1detail_1_1compute__functionalLinearFree__return.html">Feel::detail::compute_functionalLinearFree_return&lt;Args&gt;::space_type::value_type</a>&gt;::build() )</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      ( backend,        *, Backend&lt;<span class="keyword">typename</span> Feel::detail::compute_functionalLinearFree_return&lt;Args&gt;::space_type::value_type&gt;::build() )</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    ) <span class="comment">// optionnal</span></div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;)</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    Feel::detail::ignore_unused_variable_warning( args );</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1FsFunctionalLinearFree.html">Feel::detail::compute_functionalLinearFree_return&lt;Args&gt;::type</a> functionalfree_type;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Feel::detail::compute_functionalLinearFree_return&lt;Args&gt;::type functionalfree_type;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Feel::detail::compute_functionalLinearFree_return&lt;Args&gt;::ptrtype functionalfree_ptrtype;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">return</span> functionalfree_ptrtype ( <span class="keyword">new</span> functionalfree_type( space , backend , expr ) );</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
@@ -263,7 +263,7 @@ $(document).ready(function(){initNavTree('fsfunctionallinearfree_8hpp_source.htm
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:21 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:05:50 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

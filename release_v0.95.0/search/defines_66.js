@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['feelpp_5fbinary_5ffuncs_5fop',['FEELPP_BINARY_FUNCS_OP',['../typetraits_8hpp.html#a3712b09a711779005cbe94444a3980a1',1,'typetraits.hpp']]],
   ['feelpp_5fconstructor_5fbegin',['FEELPP_CONSTRUCTOR_BEGIN',['../feelmacros_8hpp.html#aa7db438b007de409caf4724d548d5c39',1,'feelmacros.hpp']]],
   ['feelpp_5fconstructor_5fend',['FEELPP_CONSTRUCTOR_END',['../feelmacros_8hpp.html#aaa1fb5f1c77aff551591188b80dbb7c5',1,'feelmacros.hpp']]],
   ['feelpp_5fdebug_5fbegin',['FEELPP_DEBUG_BEGIN',['../debug_8hpp.html#a2765aa64d61f895c0d6a09aeffe3edb1',1,'debug.hpp']]],

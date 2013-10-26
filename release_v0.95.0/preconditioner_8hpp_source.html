@@ -162,7 +162,7 @@ $(document).ready(function(){initNavTree('preconditioner_8hpp_source.html','');}
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classFeel_1_1Preconditioner.html#aeb3a3c22bccee5ccef4ff1566999041c" title="default constructor ">Preconditioner</a>( std::string <span class="keyword">const</span>&amp; name = <span class="stringliteral">&quot;&quot;</span>, <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; worldComm=<a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classFeel_1_1Preconditioner.html#aeb3a3c22bccee5ccef4ff1566999041c" title="default constructor ">Preconditioner</a>( std::string <span class="keyword">const</span>&amp; name = <span class="stringliteral">&quot;&quot;</span>, WorldComm <span class="keyword">const</span>&amp; worldComm=Environment::worldComm() );</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno"><a class="code" href="classFeel_1_1Preconditioner.html#aef7545e5d254a486d6305af30357c6cf">   87</a></span>&#160;    <a class="code" href="classFeel_1_1Preconditioner.html#aef7545e5d254a486d6305af30357c6cf" title="copy constructor ">Preconditioner</a>( <a class="code" href="classFeel_1_1Preconditioner.html" title="base class for preconditioner ">Preconditioner</a> <span class="keyword">const</span> &amp; o )</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    :</div>
@@ -178,7 +178,7 @@ $(document).ready(function(){initNavTree('preconditioner_8hpp_source.html','');}
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="classFeel_1_1Preconditioner.html#abc069203478f30db0bd3930cd9ab54ef" title="destructor ">~Preconditioner</a>();</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">static</span> preconditioner_ptrtype build( std::string <span class="keyword">const</span>&amp; name = <span class="stringliteral">&quot;&quot;</span>, <a class="code" href="namespaceFeel.html#a4da28efa430cc4bd3a6a86cde30a9809">BackendType</a> = BACKEND_PETSC, <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; worldComm=<a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() );</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">static</span> preconditioner_ptrtype build( std::string <span class="keyword">const</span>&amp; name = <span class="stringliteral">&quot;&quot;</span>, <a class="code" href="namespaceFeel.html#a4da28efa430cc4bd3a6a86cde30a9809">BackendType</a> = BACKEND_PETSC, WorldComm <span class="keyword">const</span>&amp; worldComm=Environment::worldComm() );</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno"><a class="code" href="classFeel_1_1Preconditioner.html#a76a877afa7a329c9d6a34ab8fff44aa3">  107</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1Preconditioner.html#a76a877afa7a329c9d6a34ab8fff44aa3">init</a> () {};</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
@@ -212,7 +212,7 @@ $(document).ready(function(){initNavTree('preconditioner_8hpp_source.html','');}
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1Preconditioner.html#a5065971a8bb9aa3702adf699f75987fc">M_is_initialized</a>;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        }</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; worldComm()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1Preconditioner.html#a8f161a521809cf5d4325038d995a2f24">M_worldComm</a>; }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    WorldComm <span class="keyword">const</span>&amp; worldComm()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1Preconditioner.html#a8f161a521809cf5d4325038d995a2f24">M_worldComm</a>; }</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1Preconditioner.html#a797ec630b280d5012a407012c303dd95">apply</a>( <span class="keyword">const</span> Vector&lt;T&gt; &amp; x, Vector&lt;T&gt; &amp; y ) = 0;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
@@ -256,7 +256,7 @@ $(document).ready(function(){initNavTree('preconditioner_8hpp_source.html','');}
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
 <div class="line"><a name="l00232"></a><span class="lineno"><a class="code" href="classFeel_1_1Preconditioner.html#adac9b259564bb6bc86a0be18bcd31207">  232</a></span>&#160;    std::string <a class="code" href="classFeel_1_1Preconditioner.html#adac9b259564bb6bc86a0be18bcd31207">M_name</a>;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno"><a class="code" href="classFeel_1_1Preconditioner.html#a8f161a521809cf5d4325038d995a2f24">  237</a></span>&#160;    <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <a class="code" href="classFeel_1_1Preconditioner.html#a8f161a521809cf5d4325038d995a2f24">M_worldComm</a>;</div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="code" href="classFeel_1_1Preconditioner.html#a8f161a521809cf5d4325038d995a2f24">  237</a></span>&#160;    WorldComm <a class="code" href="classFeel_1_1Preconditioner.html#a8f161a521809cf5d4325038d995a2f24">M_worldComm</a>;</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
 <div class="line"><a name="l00243"></a><span class="lineno"><a class="code" href="classFeel_1_1Preconditioner.html#ac99c9dd0c7ed7dce03c79b98dbffc7ce">  243</a></span>&#160;    sparse_matrix_ptrtype  <a class="code" href="classFeel_1_1Preconditioner.html#ac99c9dd0c7ed7dce03c79b98dbffc7ce">M_matrix</a>;</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
@@ -276,7 +276,7 @@ $(document).ready(function(){initNavTree('preconditioner_8hpp_source.html','');}
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;FEELPP_STRONG_INLINE</div>
-<div class="line"><a name="l00273"></a><span class="lineno"><a class="code" href="classFeel_1_1Preconditioner.html#aeb3a3c22bccee5ccef4ff1566999041c">  273</a></span>&#160;<a class="code" href="classFeel_1_1Preconditioner.html#aeb3a3c22bccee5ccef4ff1566999041c" title="default constructor ">Preconditioner&lt;T&gt;::Preconditioner</a> ( std::string <span class="keyword">const</span>&amp; name, <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; worldComm )</div>
+<div class="line"><a name="l00273"></a><span class="lineno"><a class="code" href="classFeel_1_1Preconditioner.html#aeb3a3c22bccee5ccef4ff1566999041c">  273</a></span>&#160;<a class="code" href="classFeel_1_1Preconditioner.html#aeb3a3c22bccee5ccef4ff1566999041c" title="default constructor ">Preconditioner&lt;T&gt;::Preconditioner</a> ( std::string <span class="keyword">const</span>&amp; name, WorldComm <span class="keyword">const</span>&amp; worldComm )</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;:</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;M_name(name),</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;M_worldComm(worldComm),</div>
@@ -303,7 +303,7 @@ $(document).ready(function(){initNavTree('preconditioner_8hpp_source.html','');}
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="keyword">namespace </span>detail</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;{</div>
-<div class="line"><a name="l00300"></a><span class="lineno"><a class="code" href="classFeel_1_1detail_1_1PreconditionerManagerImpl.html">  300</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1detail_1_1PreconditionerManagerImpl.html">PreconditionerManagerImpl</a>:</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="keyword">class </span>PreconditionerManagerImpl:</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keyword">public</span> std::map&lt;std::pair&lt;backend_ptrtype,std::string&gt;, preconditioner_ptrtype &gt;,</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keyword">public</span> boost::noncopyable</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;{</div>
@@ -313,9 +313,9 @@ $(document).ready(function(){initNavTree('preconditioner_8hpp_source.html','');}
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keyword">typedef</span> std::map&lt;key_type, value_type&gt; preconditioner_manager_type;</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;};</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern ">Feel::Singleton&lt;PreconditionerManagerImpl&gt;</a> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern ">PreconditionerManager</a>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern ">Feel::Singleton&lt;PreconditionerManagerImpl&gt;</a> PreconditionerManager;</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
-<div class="line"><a name="l00312"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1PreconditionerManagerDeleterImpl.html">  312</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1PreconditionerManagerDeleterImpl.html">PreconditionerManagerDeleterImpl</a></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="keyword">struct </span>PreconditionerManagerDeleterImpl</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;{</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordtype">void</span> operator()()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="keyword">        </span>{</div>
@@ -324,11 +324,11 @@ $(document).ready(function(){initNavTree('preconditioner_8hpp_source.html','');}
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;[PreconditionerManagerDeleter] clear PreconditionerManager done\n&quot;</span>;</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        }</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;};</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern ">Feel::Singleton&lt;PreconditionerManagerDeleterImpl&gt;</a> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern ">PreconditionerManagerDeleter</a>;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern ">Feel::Singleton&lt;PreconditionerManagerDeleterImpl&gt;</a> PreconditionerManagerDeleter;</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;} <span class="comment">// detail</span></div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;BOOST_PARAMETER_MEMBER_FUNCTION( ( boost::shared_ptr&lt;<a class="code" href="classFeel_1_1Preconditioner.html" title="base class for preconditioner ">Preconditioner&lt;double&gt;</a> &gt; ),</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;BOOST_PARAMETER_MEMBER_FUNCTION( ( boost::shared_ptr&lt;Preconditioner&lt;double&gt; &gt; ),</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                                 preconditioner,</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                                 tag,</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                                 ( required</div>
@@ -387,7 +387,7 @@ $(document).ready(function(){initNavTree('preconditioner_8hpp_source.html','');}
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:45 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:06:08 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -137,12 +137,12 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 <div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="classFeel_1_1Gauss.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1Gauss.html" title="Gauss quadrature points. ">Gauss</a> : <span class="keyword">public</span> <a class="code" href="classFeel_1_1PointSetQuadrature.html" title="Quadrature point set base class. ">PointSetQuadrature</a>&lt;Convex, Integration_Degree, T&gt;  {};</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">template</span>&lt; u<span class="keywordtype">int</span>16_type Integration_Degree, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="classFeel_1_1Gauss_3_01Simplex_3_010_00_011_01_4_00_01Integration__Degree_00_01T_01_4.html">   54</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1Gauss.html" title="Gauss quadrature points. ">Gauss</a>&lt;<a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex</a>&lt;0,1&gt; , Integration_Degree ,T &gt;  : <span class="keyword">public</span> <a class="code" href="classFeel_1_1PointSetQuadrature.html" title="Quadrature point set base class. ">PointSetQuadrature</a>&lt;Simplex&lt;0,1&gt; , Integration_Degree, T&gt;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1Gauss.html" title="Gauss quadrature points. ">Gauss</a>&lt;<a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex</a>&lt;0,1&gt; , Integration_Degree ,T &gt;  : <span class="keyword">public</span> <a class="code" href="classFeel_1_1PointSetQuadrature.html" title="Quadrature point set base class. ">PointSetQuadrature</a>&lt;Simplex&lt;0,1&gt; , Integration_Degree, T&gt;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span> :</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1PointSetQuadrature.html" title="Quadrature point set base class. ">PointSetQuadrature&lt;Simplex&lt;0,1&gt;</a> , Integration_Degree, T&gt; <a class="code" href="classFeel_1_1VisitableBase.html">super</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1PointSetQuadrature.html" title="Quadrature point set base class. ">PointSetQuadrature&lt;Simplex&lt;0,1&gt;</a> , Integration_Degree, T&gt; super;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::return_type return_type;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::node_type node_type;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::nodes_type nodes_type;</div>
@@ -153,23 +153,23 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classFeel_1_1Gauss.html" title="Gauss quadrature points. ">Gauss</a>()</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        :</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classFeel_1_1VisitableBase.html">super</a>( Npoints )</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        super( Npoints )</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    ~<a class="code" href="classFeel_1_1Gauss.html" title="Gauss quadrature points. ">Gauss</a>() {}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    ~Gauss() {}</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    FEELPP_DEFINE_VISITABLE();</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">template</span>&lt; u<span class="keywordtype">int</span>16_type Integration_Degree, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1Gauss.html" title="Gauss quadrature points. ">Gauss</a>&lt;<a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex</a>&lt;1,1&gt; , Integration_Degree ,T &gt;  : <span class="keyword">public</span> <a class="code" href="classFeel_1_1PointSetQuadrature.html" title="Quadrature point set base class. ">PointSetQuadrature</a>&lt;Simplex&lt;1,1&gt; , Integration_Degree, T&gt;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">class </span>Gauss&lt;Simplex&lt;1,1&gt; , Integration_Degree ,T &gt;  : <span class="keyword">public</span> PointSetQuadrature&lt;Simplex&lt;1,1&gt; , Integration_Degree, T&gt;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">public</span> :</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1PointSetQuadrature.html" title="Quadrature point set base class. ">PointSetQuadrature&lt;Simplex&lt;1,1&gt;</a> , Integration_Degree, T&gt; super;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">typedef</span> PointSetQuadrature&lt;Simplex&lt;1,1&gt; , Integration_Degree, T&gt; super;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::return_type return_type;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::node_type node_type;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::nodes_type nodes_type;</div>
@@ -178,9 +178,9 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type Degree = ( Integration_Degree+1 )/2+1;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint32_type Npoints = Degree;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Gauss.html" title="Gauss quadrature points. ">Gauss&lt;Simplex&lt;0,1&gt;</a>,Integration_Degree, T&gt; face_quad_type;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">typedef</span> Gauss&lt;Simplex&lt;0,1&gt;,Integration_Degree, T&gt; face_quad_type;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="classFeel_1_1Gauss.html" title="Gauss quadrature points. ">Gauss</a>()</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    Gauss()</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        :</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        super( Npoints )</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
@@ -189,10 +189,10 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        details::gaussjacobi&lt;Npoints, T, ublas::vector&lt;T&gt;, ublas::vector&lt;T&gt; &gt;( this-&gt;M_w, px );</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        ublas::row( this-&gt;M_points, 0 ) = px;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        boost::shared_ptr&lt;GT_Lagrange&lt;1,1,1,Simplex,T&gt; &gt; gm( <span class="keyword">new</span> <a class="code" href="structFeel_1_1GT__Lagrange.html">GT_Lagrange&lt;1, 1, 1, Simplex, T&gt;</a> );</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        boost::shared_ptr&lt;GT_Lagrange&lt;1,1,1,Simplex,T&gt; &gt; gm( <span class="keyword">new</span> GT_Lagrange&lt;1, 1, 1, Simplex, T&gt; );</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        boost::shared_ptr&lt;face_quad_type&gt; face_qr( <span class="keyword">new</span> face_quad_type );</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="comment">// construct face quadratures</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        this-&gt;constructQROnFace( <a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference</a>&lt;<a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex&lt;1, 1&gt;</a>, 1, 1&gt;(), gm, face_qr );</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        this-&gt;constructQROnFace( Reference&lt;Simplex&lt;1, 1&gt;, 1, 1&gt;(), gm, face_qr );</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
@@ -631,7 +631,7 @@ $(document).ready(function(){initNavTree('gauss_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:27 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:05:54 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

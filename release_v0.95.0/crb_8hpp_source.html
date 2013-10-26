@@ -216,7 +216,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00141"></a><span class="lineno"><a class="code" href="classFeel_1_1CRB.html#a2fc2d7ca8939cbf2816728f57c61c716">  141</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1CRBSCM.html" title="SCM algorithm. ">CRBSCM&lt;truth_model_type&gt;</a> <a class="code" href="classFeel_1_1CRB.html#a2fc2d7ca8939cbf2816728f57c61c716" title="scm ">scm_type</a>;</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;scm_type&gt; scm_ptrtype;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno"><a class="code" href="classFeel_1_1CRB.html#a2964effaa2b0cd23cbb5fa8963982fb5">  145</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1CRBElementsDB.html">CRBElementsDB&lt;truth_model_type&gt;</a> <a class="code" href="classFeel_1_1CRB.html#a2964effaa2b0cd23cbb5fa8963982fb5" title="elements database ">crb_elements_db_type</a>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="code" href="classFeel_1_1CRB.html#a2964effaa2b0cd23cbb5fa8963982fb5">  145</a></span>&#160;    <span class="keyword">typedef</span> CRBElementsDB&lt;truth_model_type&gt; <a class="code" href="classFeel_1_1CRB.html#a2964effaa2b0cd23cbb5fa8963982fb5" title="elements database ">crb_elements_db_type</a>;</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;crb_elements_db_type&gt; crb_elements_db_ptrtype;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
 <div class="line"><a name="l00149"></a><span class="lineno"><a class="code" href="classFeel_1_1CRB.html#a7b4c7d89ae5e544759e88bab9122f16b">  149</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1POD.html" title="POD class. ">POD&lt;truth_model_type&gt;</a> <a class="code" href="classFeel_1_1CRB.html#a7b4c7d89ae5e544759e88bab9122f16b" title="POD. ">pod_type</a>;</div>
@@ -295,7 +295,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        :</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <a class="code" href="classFeel_1_1CRBDB.html" title="brief description ">super</a>(),</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        M_elements_database(),</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        M_nlsolver( <a class="code" href="classFeel_1_1SolverNonLinear.html" title="Non linear solver base interface. ">SolverNonLinear</a>&lt;double&gt;::build( SOLVERS_PETSC, <a class="code" href="classFeel_1_1Environment.html">Environment</a>::worldComm() ) ),</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        M_nlsolver( <a class="code" href="classFeel_1_1SolverNonLinear.html" title="Non linear solver base interface. ">SolverNonLinear</a>&lt;double&gt;::build( SOLVERS_PETSC, Environment::worldComm() ) ),</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        M_model(),</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        M_output_index( 0 ),</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        M_tolerance( 1e-2 ),</div>
@@ -323,11 +323,11 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                            name,</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                            ( boost::format( <span class="stringliteral">&quot;%1%-%2%-%3%-elements&quot;</span> ) % name % vm[<span class="stringliteral">&quot;crb.output-index&quot;</span>].template as&lt;int&gt;() % vm[<span class="stringliteral">&quot;crb.error-type&quot;</span>].template as&lt;int&gt;() ).str(),</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                            vm ),</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        M_nlsolver( <a class="code" href="classFeel_1_1SolverNonLinear.html" title="Non linear solver base interface. ">SolverNonLinear</a>&lt;double&gt;::build( SOLVERS_PETSC, <a class="code" href="classFeel_1_1Environment.html">Environment</a>::worldComm() ) ),</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        M_nlsolver( <a class="code" href="classFeel_1_1SolverNonLinear.html" title="Non linear solver base interface. ">SolverNonLinear</a>&lt;double&gt;::build( SOLVERS_PETSC, Environment::worldComm() ) ),</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        M_model(),</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        M_backend( backend_type::build( vm ) ),</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        M_backend_primal( backend_type::build( vm ) ),</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        M_backend_dual( backend_type::build( vm ) ),</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        M_backend_primal( backend_type::build( vm , <span class="stringliteral">&quot;backend-primal&quot;</span> ) ),</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        M_backend_dual( backend_type::build( vm , <span class="stringliteral">&quot;backend-dual&quot;</span>) ),</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        M_output_index( vm[<span class="stringliteral">&quot;crb.output-index&quot;</span>].template as&lt;int&gt;() ),</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        M_tolerance( vm[<span class="stringliteral">&quot;crb.error-max&quot;</span>].template as&lt;double&gt;() ),</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        M_iter_max( vm[<span class="stringliteral">&quot;crb.dimension-max&quot;</span>].template as&lt;int&gt;() ),</div>
@@ -363,11 +363,11 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                            ( boost::format( <span class="stringliteral">&quot;%1%-%2%-%3%-elements&quot;</span> ) % name % vm[<span class="stringliteral">&quot;crb.output-index&quot;</span>].template as&lt;int&gt;() % vm[<span class="stringliteral">&quot;crb.error-type&quot;</span>].template as&lt;int&gt;() ).str(),</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                            vm ,</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                            model ),</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        M_nlsolver( <a class="code" href="classFeel_1_1SolverNonLinear.html" title="Non linear solver base interface. ">SolverNonLinear</a>&lt;double&gt;::build( SOLVERS_PETSC, <a class="code" href="classFeel_1_1Environment.html">Environment</a>::worldComm() ) ),</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        M_nlsolver( <a class="code" href="classFeel_1_1SolverNonLinear.html" title="Non linear solver base interface. ">SolverNonLinear</a>&lt;double&gt;::build( SOLVERS_PETSC, Environment::worldComm() ) ),</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        M_model(),</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        M_backend( backend_type::build( vm ) ),</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        M_backend_primal( backend_type::build( vm ) ),</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        M_backend_dual( backend_type::build( vm ) ),</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        M_backend_primal( backend_type::build( vm , <span class="stringliteral">&quot;backend-primal&quot;</span> ) ),</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        M_backend_dual( backend_type::build( vm , <span class="stringliteral">&quot;backend-dual&quot;</span>) ),</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        M_output_index( vm[<span class="stringliteral">&quot;crb.output-index&quot;</span>].template as&lt;int&gt;() ),</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        M_tolerance( vm[<span class="stringliteral">&quot;crb.error-max&quot;</span>].template as&lt;double&gt;() ),</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        M_iter_max( vm[<span class="stringliteral">&quot;crb.dimension-max&quot;</span>].template as&lt;int&gt;() ),</div>
@@ -387,9 +387,9 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;Database &quot;</span> &lt;&lt; this-&gt;<a class="code" href="classFeel_1_1CRBDB.html#ac80c6f91b8fffec72cbc69a13bef3ab0">lookForDB</a>() &lt;&lt; <span class="stringliteral">&quot; available and loaded\n&quot;</span>;</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="comment">//this will be in the offline step (it&#39;s only when we enrich or create the database that we want to have access to elements of the RB)</span></div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        M_elements_database.setMN( M_N );</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="keywordflow">if</span>( M_elements_database.<a class="code" href="classFeel_1_1CRBElementsDB.html#a718ab77bfd066fd7a75a65d19788f5f8">loadDB</a>() )</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="keywordflow">if</span>( M_elements_database.loadDB() )</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        {</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;database for basis functions &quot;</span> &lt;&lt; M_elements_database.<a class="code" href="classFeel_1_1CRBDB.html#ac80c6f91b8fffec72cbc69a13bef3ab0">lookForDB</a>() &lt;&lt; <span class="stringliteral">&quot; available and loaded\n&quot;</span>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;database for basis functions &quot;</span> &lt;&lt; M_elements_database.lookForDB() &lt;&lt; <span class="stringliteral">&quot; available and loaded\n&quot;</span>;</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keyword">auto</span> basis_functions = M_elements_database.wn();</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            M_model-&gt;rBFunctionSpace()-&gt;setBasis( basis_functions );</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        }</div>
@@ -565,10 +565,10 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        M_offline_step = b;</div>
 <div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    }</div>
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;</div>
-<div class="line"><a name="l00537"></a><span class="lineno"><a class="code" href="structFeel_1_1CRB_1_1ComputePhi.html">  537</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1CRB_1_1ComputePhi.html">ComputePhi</a></div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <span class="keyword">struct </span>ComputePhi</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    {</div>
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        <a class="code" href="structFeel_1_1CRB_1_1ComputePhi.html">ComputePhi</a>( wn_type v)</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        ComputePhi( wn_type v)</div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;        :</div>
 <div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        M_curs( 0 ),</div>
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        M_vect( v )</div>
@@ -601,10 +601,10 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    };</div>
 <div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;</div>
 <div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;</div>
-<div class="line"><a name="l00573"></a><span class="lineno"><a class="code" href="structFeel_1_1CRB_1_1ComputeIntegrals.html">  573</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1CRB_1_1ComputeIntegrals.html">ComputeIntegrals</a></div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    <span class="keyword">struct </span>ComputeIntegrals</div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    {</div>
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;        <a class="code" href="structFeel_1_1CRB_1_1ComputeIntegrals.html">ComputeIntegrals</a>( <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> <span class="keyword">const</span> composite_e1 ,</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;        ComputeIntegrals( <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> <span class="keyword">const</span> composite_e1 ,</div>
 <div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;                          <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> <span class="keyword">const</span> composite_e2 )</div>
 <div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;        :</div>
 <div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;            M_composite_e1 ( composite_e1 ),</div>
@@ -633,10 +633,10 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;        <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> M_composite_e2;</div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    };</div>
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;</div>
-<div class="line"><a name="l00605"></a><span class="lineno"><a class="code" href="structFeel_1_1CRB_1_1ComputeIntegralsSquare.html">  605</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1CRB_1_1ComputeIntegralsSquare.html">ComputeIntegralsSquare</a></div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    <span class="keyword">struct </span>ComputeIntegralsSquare</div>
 <div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    {</div>
 <div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;</div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;        <a class="code" href="structFeel_1_1CRB_1_1ComputeIntegralsSquare.html">ComputeIntegralsSquare</a>( <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> <span class="keyword">const</span> composite_e1 ,</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;        ComputeIntegralsSquare( <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> <span class="keyword">const</span> composite_e1 ,</div>
 <div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;                                <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> <span class="keyword">const</span> composite_e2 )</div>
 <div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;        :</div>
 <div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;            M_composite_e1 ( composite_e1 ),</div>
@@ -679,10 +679,10 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;</div>
 <div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classFeel_1_1CRB.html#a502e37b1aab2435a5d0ec16c3ecc6de4">orthonormalize</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> N, wn_type&amp; wn, <span class="keywordtype">int</span> Nm = 1 );</div>
 <div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    <span class="keywordtype">void</span> checkResidual( <a class="code" href="classFeel_1_1ParameterSpace_1_1Element.html" title="element of a parameter space ">parameter_type</a> <span class="keyword">const</span>&amp; mu, std::vector&lt; std::vector&lt;double&gt; &gt; <span class="keyword">const</span>&amp; primal_residual_coeffs,</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    <span class="keywordtype">void</span> checkResidual( parameter_type <span class="keyword">const</span>&amp; mu, std::vector&lt; std::vector&lt;double&gt; &gt; <span class="keyword">const</span>&amp; primal_residual_coeffs,</div>
 <div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;                        std::vector&lt; std::vector&lt;double&gt; &gt; <span class="keyword">const</span>&amp; dual_residual_coeffs , <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> &amp; u, <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> &amp; udu ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="keywordtype">void</span> compareResidualsForTransientProblems(<span class="keywordtype">int</span> N, <a class="code" href="classFeel_1_1ParameterSpace_1_1Element.html" title="element of a parameter space ">parameter_type</a> <span class="keyword">const</span>&amp; mu, std::vector&lt;element_type&gt; <span class="keyword">const</span> &amp; Un,</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="keywordtype">void</span> compareResidualsForTransientProblems(<span class="keywordtype">int</span> N, parameter_type <span class="keyword">const</span>&amp; mu, std::vector&lt;element_type&gt; <span class="keyword">const</span> &amp; Un,</div>
 <div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;                                              std::vector&lt;element_type&gt; <span class="keyword">const</span> &amp; Unold, std::vector&lt;element_type&gt; <span class="keyword">const</span>&amp; Undu,</div>
 <div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;                                              std::vector&lt;element_type&gt; <span class="keyword">const</span> &amp; Unduold,</div>
 <div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;                                              std::vector&lt; std::vector&lt;double&gt; &gt; <span class="keyword">const</span>&amp; primal_residual_coeffs,</div>
@@ -705,7 +705,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1CRB.html#ab5ac52d3e77a6ffedf1bbe31adbefeb2">exportBasisFunctions</a>( <span class="keyword">const</span> export_vector_wn_type&amp; wn )<span class="keyword">const</span> ;</div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;</div>
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;    <span class="comment">//    boost::tuple&lt;double,double&gt; lb( size_type N, parameter_type const&amp; mu, std::vector&lt; vectorN_type &gt;&amp; uN, std::vector&lt; vectorN_type &gt;&amp; uNdu , std::vector&lt;vectorN_type&gt; &amp; uNold=std::vector&lt;vectorN_type&gt;(), std::vector&lt;vectorN_type&gt; &amp; uNduold=std::vector&lt;vectorN_type&gt;(), int K=0) const;</span></div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    boost::tuple&lt;double,matrix_info_tuple&gt; <a class="code" href="classFeel_1_1CRB.html#aa40eaa902ad75df8e0e46e2f50b39f4b">lb</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> N, <a class="code" href="classFeel_1_1ParameterSpace_1_1Element.html" title="element of a parameter space ">parameter_type</a> <span class="keyword">const</span>&amp; mu, std::vector&lt; vectorN_type &gt;&amp; uN, std::vector&lt; vectorN_type &gt;&amp; uNdu ,</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    boost::tuple&lt;double,matrix_info_tuple&gt; <a class="code" href="classFeel_1_1CRB.html#aa40eaa902ad75df8e0e46e2f50b39f4b">lb</a>( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> N, parameter_type <span class="keyword">const</span>&amp; mu, std::vector&lt; vectorN_type &gt;&amp; uN, std::vector&lt; vectorN_type &gt;&amp; uNdu ,</div>
 <div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;                                               std::vector&lt;vectorN_type&gt; &amp; uNold, std::vector&lt;vectorN_type&gt; &amp; uNduold, <span class="keywordtype">bool</span> print_rb_matrix=<span class="keyword">false</span>, <span class="keywordtype">int</span> K=0 ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;</div>
 <div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;    <span class="comment">/*</span></div>
@@ -715,7 +715,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;<span class="comment">     * \param mu : current parameter</span></div>
 <div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="comment">     * \param N : dimension of the reduced basis</span></div>
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;    <span class="keywordtype">void</span> updateJacobian( <span class="keyword">const</span> map_dense_vector_type&amp; map_X, map_dense_matrix_type&amp; map_J , <span class="keyword">const</span> <a class="code" href="classFeel_1_1ParameterSpace_1_1Element.html" title="element of a parameter space ">parameter_type</a> &amp; mu , <span class="keywordtype">int</span> N) <span class="keyword">const</span> ;</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;    <span class="keywordtype">void</span> updateJacobian( <span class="keyword">const</span> map_dense_vector_type&amp; map_X, map_dense_matrix_type&amp; map_J , <span class="keyword">const</span> parameter_type &amp; mu , <span class="keywordtype">int</span> N) <span class="keyword">const</span> ;</div>
 <div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;</div>
 <div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="comment">     * update the residual</span></div>
@@ -724,7 +724,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;<span class="comment">     * \param mu : current parameter</span></div>
 <div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;<span class="comment">     * \param N : dimension of the reduced basis</span></div>
 <div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    <span class="keywordtype">void</span> updateResidual( <span class="keyword">const</span> map_dense_vector_type&amp; map_X, map_dense_vector_type&amp; map_R , <span class="keyword">const</span> <a class="code" href="classFeel_1_1ParameterSpace_1_1Element.html" title="element of a parameter space ">parameter_type</a> &amp; mu, <span class="keywordtype">int</span> N ) <span class="keyword">const</span> ;</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    <span class="keywordtype">void</span> updateResidual( <span class="keyword">const</span> map_dense_vector_type&amp; map_X, map_dense_vector_type&amp; map_R , <span class="keyword">const</span> parameter_type &amp; mu, <span class="keywordtype">int</span> N ) <span class="keyword">const</span> ;</div>
 <div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;</div>
 <div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;<span class="comment">     * compute the projection of the initial guess</span></div>
@@ -732,7 +732,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;<span class="comment">     * \param N : dimension of the reduced basis</span></div>
 <div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;<span class="comment">     * \param initial guess</span></div>
 <div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;    <span class="keywordtype">void</span> computeProjectionInitialGuess( <span class="keyword">const</span> <a class="code" href="classFeel_1_1ParameterSpace_1_1Element.html" title="element of a parameter space ">parameter_type</a> &amp; mu, <span class="keywordtype">int</span> N , vectorN_type&amp; initial_guess ) <span class="keyword">const</span> ;</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;    <span class="keywordtype">void</span> computeProjectionInitialGuess( <span class="keyword">const</span> parameter_type &amp; mu, <span class="keywordtype">int</span> N , vectorN_type&amp; initial_guess ) <span class="keyword">const</span> ;</div>
 <div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;</div>
 <div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;<span class="comment">     * newton algorithm to solve non linear problem</span></div>
@@ -741,7 +741,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;<span class="comment">     * \param uN : reduced solution ( vectorN_type )</span></div>
 <div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;<span class="comment">     * \param condition number of the reduced jacobian</span></div>
 <div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    matrix_info_tuple newton(  <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> N, <a class="code" href="classFeel_1_1ParameterSpace_1_1Element.html" title="element of a parameter space ">parameter_type</a> <span class="keyword">const</span>&amp; mu , vectorN_type &amp; uN, <span class="keywordtype">double</span>&amp; output) <span class="keyword">const</span> ;</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    matrix_info_tuple newton(  <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> N, parameter_type <span class="keyword">const</span>&amp; mu , vectorN_type &amp; uN, <span class="keywordtype">double</span>&amp; output) <span class="keyword">const</span> ;</div>
 <div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;</div>
 <div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;<span class="comment">     * fixed point for primal problem ( offline step )</span></div>
@@ -749,7 +749,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;<span class="comment">     * \param A : matrix of the bilinear form (fill the matrix)</span></div>
 <div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="comment">     * \param zero_iteration : don&#39;t perfom iterations if true ( for linear problems for example )</span></div>
 <div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> offlineFixedPointPrimal( <a class="code" href="classFeel_1_1ParameterSpace_1_1Element.html" title="element of a parameter space ">parameter_type</a> <span class="keyword">const</span>&amp; mu, sparse_matrix_ptrtype &amp; A, <span class="keywordtype">bool</span> zero_iteration ) ;</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> offlineFixedPointPrimal( parameter_type <span class="keyword">const</span>&amp; mu, sparse_matrix_ptrtype &amp; A, <span class="keywordtype">bool</span> zero_iteration ) ;</div>
 <div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;</div>
 <div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;<span class="comment">     * \param mu : current parameter</span></div>
@@ -758,7 +758,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;<span class="comment">     * \param u : solution of the primal problem, needed only to check dual properties</span></div>
 <div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;<span class="comment">     * \param zero_iteration : don&#39;t perfom iterations if true ( for linear problems for example )</span></div>
 <div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> offlineFixedPointDual( <a class="code" href="classFeel_1_1ParameterSpace_1_1Element.html" title="element of a parameter space ">parameter_type</a> <span class="keyword">const</span>&amp; mu , element_ptrtype &amp; dual_initial_field, <span class="keyword">const</span> sparse_matrix_ptrtype &amp; A, <span class="keyword">const</span> <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> &amp; u, <span class="keywordtype">bool</span> zero_iteration ) ;</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> offlineFixedPointDual( parameter_type <span class="keyword">const</span>&amp; mu , element_ptrtype &amp; dual_initial_field, <span class="keyword">const</span> sparse_matrix_ptrtype &amp; A, <span class="keyword">const</span> <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> &amp; u, <span class="keywordtype">bool</span> zero_iteration ) ;</div>
 <div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;</div>
 <div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;<span class="comment">     * fixed point ( primal problem ) - ONLINE step</span></div>
@@ -770,7 +770,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;<span class="comment">     * \param output : vector of outpus at each time step</span></div>
 <div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;<span class="comment">     * \param K : number of time step ( default value, must be &gt;0 if used )</span></div>
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    matrix_info_tuple fixedPointPrimal( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> N, <a class="code" href="classFeel_1_1ParameterSpace_1_1Element.html" title="element of a parameter space ">parameter_type</a> <span class="keyword">const</span>&amp; mu, std::vector&lt; vectorN_type &gt; &amp; uN,  std::vector&lt;vectorN_type&gt; &amp; uNold,</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    matrix_info_tuple fixedPointPrimal( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> N, parameter_type <span class="keyword">const</span>&amp; mu, std::vector&lt; vectorN_type &gt; &amp; uN,  std::vector&lt;vectorN_type&gt; &amp; uNold,</div>
 <div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;                                        std::vector&lt; double &gt; &amp; output_vector, <span class="keywordtype">int</span> K=0, <span class="keywordtype">bool</span> print_rb_matrix=<span class="keyword">false</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;</div>
 <div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;    <span class="comment">/*</span></div>
@@ -782,9 +782,9 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;<span class="comment">     * \param output : vector of outpus at each time step</span></div>
 <div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;<span class="comment">     * \param K : number of time step ( default value, must be &gt;0 if used )</span></div>
 <div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;    <span class="keywordtype">void</span> fixedPointDual(  <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> N, <a class="code" href="classFeel_1_1ParameterSpace_1_1Element.html" title="element of a parameter space ">parameter_type</a> <span class="keyword">const</span>&amp; mu, std::vector&lt; vectorN_type &gt; &amp; uNdu,  std::vector&lt;vectorN_type&gt; &amp; uNduold, std::vector&lt; double &gt; &amp; output_vector, <span class="keywordtype">int</span> K=0) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;    <span class="keywordtype">void</span> fixedPointDual(  <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> N, parameter_type <span class="keyword">const</span>&amp; mu, std::vector&lt; vectorN_type &gt; &amp; uNdu,  std::vector&lt;vectorN_type&gt; &amp; uNduold, std::vector&lt; double &gt; &amp; output_vector, <span class="keywordtype">int</span> K=0) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;    matrix_info_tuple <a class="code" href="classFeel_1_1CRB.html#ab1ef656d79dd09d9e49b6a8100965f39">fixedPoint</a>(  <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> N, <a class="code" href="classFeel_1_1ParameterSpace_1_1Element.html" title="element of a parameter space ">parameter_type</a> <span class="keyword">const</span>&amp; mu, std::vector&lt; vectorN_type &gt; &amp; uN, std::vector&lt; vectorN_type &gt; &amp; uNdu,</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;    matrix_info_tuple <a class="code" href="classFeel_1_1CRB.html#ab1ef656d79dd09d9e49b6a8100965f39">fixedPoint</a>(  <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> N, parameter_type <span class="keyword">const</span>&amp; mu, std::vector&lt; vectorN_type &gt; &amp; uN, std::vector&lt; vectorN_type &gt; &amp; uNdu,</div>
 <div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;                                   std::vector&lt;vectorN_type&gt; &amp; uNold, std::vector&lt;vectorN_type&gt; &amp; uNduold,</div>
 <div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;                                   std::vector&lt; double &gt; &amp; output_vector, <span class="keywordtype">int</span> K=0, <span class="keywordtype">bool</span> print_rb_matrix=<span class="keyword">false</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;</div>
@@ -933,7 +933,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;    <span class="keywordtype">void</span> buildVarianceMatrixPhi(<span class="keywordtype">int</span> <span class="keyword">const</span> N , mpl::bool_&lt;true&gt; );</div>
 <div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;    <span class="keywordtype">void</span> buildVarianceMatrixPhi(<span class="keywordtype">int</span> <span class="keyword">const</span> N , mpl::bool_&lt;false&gt; );</div>
 <div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;</div>
-<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;    WorldComm <span class="keyword">const</span>&amp; worldComm()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() ; }</div>
+<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;    WorldComm <span class="keyword">const</span>&amp; worldComm()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Environment::worldComm() ; }</div>
 <div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;</div>
 <div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;    <span class="keywordtype">void</span> printRBMatrix(matrixN_type <span class="keyword">const</span>&amp; A, parameter_type <span class="keyword">const</span>&amp; mu)<span class="keyword"> const</span></div>
 <div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;<span class="keyword">    </span>{</div>
@@ -941,7 +941,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;        <span class="keywordtype">int</span> cols=A.cols();</div>
 <div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;        <span class="keywordtype">int</span> N = rows;</div>
 <div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;        std::string file_name = ( boost::format(<span class="stringliteral">&quot;RBmatrix-N%1%-mu-%2%&quot;</span>) %N  %mu[0] ).str();</div>
-<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;        <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;        {</div>
 <div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;            std::ofstream file;</div>
 <div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;            file.open( file_name,std::ios::out );</div>
@@ -1131,7 +1131,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> l=0; l&lt;nl; l++)</div>
 <div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;        F[l]=M_model-&gt;newVector();</div>
 <div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;</div>
-<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;    M_backend_primal = <a class="code" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">backend_type::build</a>( BACKEND_PETSC );</div>
+<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;    <span class="comment">//M_backend_primal = backend_type::build( BACKEND_PETSC );</span></div>
 <div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;    <span class="keywordtype">bool</span> reuse_prec = this-&gt;<a class="code" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">vm</a>()[<span class="stringliteral">&quot;crb.reuse-prec&quot;</span>].template as&lt;bool&gt;() ;</div>
 <div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;</div>
 <div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160;    M_bdf_primal = bdf( _space=M_model-&gt;functionSpace(), _vm=this-&gt;<a class="code" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">vm</a>() , _name=<span class="stringliteral">&quot;bdf_primal&quot;</span> );</div>
@@ -1302,7 +1302,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;CRB&lt;TruthModelType&gt;::offlineFixedPointDual(parameter_type <span class="keyword">const</span>&amp; mu, element_ptrtype &amp; dual_initial_field, <span class="keyword">const</span> sparse_matrix_ptrtype &amp; A, <span class="keyword">const</span> <a class="code" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a" title="element of the functionspace type ">element_type</a> &amp; u, <span class="keywordtype">bool</span> zero_iteration )</div>
 <div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;{</div>
 <div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;</div>
-<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;    M_backend_dual = <a class="code" href="classFeel_1_1Backend.html#ab5bc3b49e46db5039d07ac87ec3fdd42">backend_type::build</a>( BACKEND_PETSC );</div>
+<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;    <span class="comment">//M_backend_dual = backend_type::build( BACKEND_PETSC );</span></div>
 <div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;    <span class="keywordtype">bool</span> reuse_prec = this-&gt;<a class="code" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">vm</a>()[<span class="stringliteral">&quot;crb.reuse-prec&quot;</span>].template as&lt;bool&gt;() ;</div>
 <div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;</div>
 <div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;    <span class="keyword">auto</span> udu = M_model-&gt;functionSpace()-&gt;element();</div>
@@ -1505,9 +1505,9 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l01649"></a><span class="lineno"> 1649</span>&#160;</div>
 <div class="line"><a name="l01650"></a><span class="lineno"> 1650</span>&#160;<span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l01651"></a><span class="lineno"> 1651</span>&#160;<span class="preprocessor"></span>    M_elements_database.setMN( M_N );</div>
-<div class="line"><a name="l01652"></a><span class="lineno"> 1652</span>&#160;    <span class="keywordflow">if</span>( M_elements_database.<a class="code" href="classFeel_1_1CRBElementsDB.html#a718ab77bfd066fd7a75a65d19788f5f8">loadDB</a>() )</div>
+<div class="line"><a name="l01652"></a><span class="lineno"> 1652</span>&#160;    <span class="keywordflow">if</span>( M_elements_database.loadDB() )</div>
 <div class="line"><a name="l01653"></a><span class="lineno"> 1653</span>&#160;    {</div>
-<div class="line"><a name="l01654"></a><span class="lineno"> 1654</span>&#160;        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;database for basis functions &quot;</span> &lt;&lt; M_elements_database.<a class="code" href="classFeel_1_1CRBDB.html#ac80c6f91b8fffec72cbc69a13bef3ab0">lookForDB</a>() &lt;&lt; <span class="stringliteral">&quot; available and loaded\n&quot;</span>;</div>
+<div class="line"><a name="l01654"></a><span class="lineno"> 1654</span>&#160;        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;database for basis functions &quot;</span> &lt;&lt; M_elements_database.lookForDB() &lt;&lt; <span class="stringliteral">&quot; available and loaded\n&quot;</span>;</div>
 <div class="line"><a name="l01655"></a><span class="lineno"> 1655</span>&#160;        <span class="keyword">auto</span> basis_functions = M_elements_database.wn();</div>
 <div class="line"><a name="l01656"></a><span class="lineno"> 1656</span>&#160;        <span class="comment">//M_WN = basis_functions.template get&lt;0&gt;();</span></div>
 <div class="line"><a name="l01657"></a><span class="lineno"> 1657</span>&#160;        <span class="comment">//M_WNdu = basis_functions.template get&lt;1&gt;();</span></div>
@@ -1575,7 +1575,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l01719"></a><span class="lineno"> 1719</span>&#160;</div>
 <div class="line"><a name="l01720"></a><span class="lineno"> 1720</span>&#160;        <span class="keywordflow">if</span>( proc_number == 0 ) std::cout&lt;&lt;<span class="stringliteral">&quot;[CRB offline] M_error_type = &quot;</span>&lt;&lt;M_error_type&lt;&lt;std::endl;</div>
 <div class="line"><a name="l01721"></a><span class="lineno"> 1721</span>&#160;</div>
-<div class="line"><a name="l01722"></a><span class="lineno"> 1722</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l01722"></a><span class="lineno"> 1722</span>&#160;        <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l01723"></a><span class="lineno"> 1723</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot; -- sampling init done in &quot;</span> &lt;&lt; ti.elapsed() &lt;&lt; <span class="stringliteral">&quot;s\n&quot;</span>;</div>
 <div class="line"><a name="l01724"></a><span class="lineno"> 1724</span>&#160;        ti.restart();</div>
 <div class="line"><a name="l01725"></a><span class="lineno"> 1725</span>&#160;</div>
@@ -1812,7 +1812,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l01956"></a><span class="lineno"> 1956</span>&#160;</div>
 <div class="line"><a name="l01957"></a><span class="lineno"> 1957</span>&#160;            }<span class="comment">//end of if ( model_type::is_time_dependent )</span></div>
 <div class="line"><a name="l01958"></a><span class="lineno"> 1958</span>&#160;        }<span class="comment">//end of if ( M_error_type == CRB_RESIDUAL || M_error_type == CRB_RESIDUAL_SCM )</span></div>
-<div class="line"><a name="l01959"></a><span class="lineno"> 1959</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l01959"></a><span class="lineno"> 1959</span>&#160;        <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l01960"></a><span class="lineno"> 1960</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot; -- residual data init done in &quot;</span> &lt;&lt; ti.elapsed() &lt;&lt; std::endl;</div>
 <div class="line"><a name="l01961"></a><span class="lineno"> 1961</span>&#160;        ti.restart();</div>
 <div class="line"><a name="l01962"></a><span class="lineno"> 1962</span>&#160;</div>
@@ -2005,10 +2005,10 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l02149"></a><span class="lineno"> 2149</span>&#160;    }</div>
 <div class="line"><a name="l02150"></a><span class="lineno"> 2150</span>&#160;</div>
 <div class="line"><a name="l02151"></a><span class="lineno"> 2151</span>&#160;    <span class="keywordtype">bool</span> all_procs = option(_name=<span class="stringliteral">&quot;crb.system-memory-evolution-on-all-procs&quot;</span>).template as&lt;bool&gt;() ;</div>
-<div class="line"><a name="l02152"></a><span class="lineno"> 2152</span>&#160;    <a class="code" href="classFeel_1_1PsLogger.html">PsLogger</a> ps (<span class="stringliteral">&quot;PsLogCrbOffline&quot;</span> , <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() , <span class="stringliteral">&quot;rss pmem pcpu&quot;</span> , all_procs );</div>
+<div class="line"><a name="l02152"></a><span class="lineno"> 2152</span>&#160;    <a class="code" href="classFeel_1_1PsLogger.html">PsLogger</a> ps (<span class="stringliteral">&quot;PsLogCrbOffline&quot;</span> , Environment::worldComm() , <span class="stringliteral">&quot;rss pmem pcpu&quot;</span> , all_procs );</div>
 <div class="line"><a name="l02153"></a><span class="lineno"> 2153</span>&#160;</div>
 <div class="line"><a name="l02154"></a><span class="lineno"> 2154</span>&#160;    <span class="keywordtype">bool</span> only_master=option(_name=<span class="stringliteral">&quot;crb.system-memory-evolution&quot;</span>).template as&lt;bool&gt;();</div>
-<div class="line"><a name="l02155"></a><span class="lineno"> 2155</span>&#160;    <span class="keywordtype">bool</span> only_one_proc= only_master * ( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank()==<a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() );</div>
+<div class="line"><a name="l02155"></a><span class="lineno"> 2155</span>&#160;    <span class="keywordtype">bool</span> only_one_proc= only_master * ( Environment::worldComm().globalRank()==Environment::worldComm().masterRank() );</div>
 <div class="line"><a name="l02156"></a><span class="lineno"> 2156</span>&#160;    <span class="keywordtype">bool</span> write_memory_evolution = all_procs || only_one_proc ;</div>
 <div class="line"><a name="l02157"></a><span class="lineno"> 2157</span>&#160;</div>
 <div class="line"><a name="l02158"></a><span class="lineno"> 2158</span>&#160;    <span class="keywordflow">while</span> ( M_maxerror &gt; M_tolerance &amp;&amp; M_N &lt; M_iter_max  )</div>
@@ -2561,11 +2561,11 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l02705"></a><span class="lineno"> 2705</span>&#160;</div>
 <div class="line"><a name="l02706"></a><span class="lineno"> 2706</span>&#160;        <span class="keywordflow">if</span> ( M_error_type==CRB_RESIDUAL || M_error_type == CRB_RESIDUAL_SCM )</div>
 <div class="line"><a name="l02707"></a><span class="lineno"> 2707</span>&#160;        {</div>
-<div class="line"><a name="l02708"></a><span class="lineno"> 2708</span>&#160;            <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l02708"></a><span class="lineno"> 2708</span>&#160;            <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l02709"></a><span class="lineno"> 2709</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;  -- offlineResidual update starts\n&quot;</span>;</div>
 <div class="line"><a name="l02710"></a><span class="lineno"> 2710</span>&#160;            <a class="code" href="classFeel_1_1CRB.html#a8084a3cd7bc559a3d39dba3b89cf7a17">offlineResidual</a>( M_N, number_of_added_elements );</div>
 <div class="line"><a name="l02711"></a><span class="lineno"> 2711</span>&#160;            LOG(INFO)&lt;&lt;<span class="stringliteral">&quot;[CRB::offline] end of call offlineResidual and M_N = &quot;</span>&lt;&lt; M_N &lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l02712"></a><span class="lineno"> 2712</span>&#160;            <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l02712"></a><span class="lineno"> 2712</span>&#160;            <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l02713"></a><span class="lineno"> 2713</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;  -- offlineResidual updated in &quot;</span> &lt;&lt; timer2.elapsed() &lt;&lt; <span class="stringliteral">&quot;s\n&quot;</span>;</div>
 <div class="line"><a name="l02714"></a><span class="lineno"> 2714</span>&#160;            timer2.restart();</div>
 <div class="line"><a name="l02715"></a><span class="lineno"> 2715</span>&#160;        }</div>
@@ -2612,7 +2612,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l02756"></a><span class="lineno"> 2756</span>&#160;            <span class="keywordtype">int</span> count = std::count( M_index.begin(),M_index.end(),index );</div>
 <div class="line"><a name="l02757"></a><span class="lineno"> 2757</span>&#160;            M_mode_number = count;</div>
 <div class="line"><a name="l02758"></a><span class="lineno"> 2758</span>&#160;</div>
-<div class="line"><a name="l02759"></a><span class="lineno"> 2759</span>&#160;            <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l02759"></a><span class="lineno"> 2759</span>&#160;            <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l02760"></a><span class="lineno"> 2760</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;  -- max error bounds computed in &quot;</span> &lt;&lt; timer2.elapsed() &lt;&lt; <span class="stringliteral">&quot;s\n&quot;</span>;</div>
 <div class="line"><a name="l02761"></a><span class="lineno"> 2761</span>&#160;</div>
 <div class="line"><a name="l02762"></a><span class="lineno"> 2762</span>&#160;            timer2.restart();</div>
@@ -2636,7 +2636,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l02780"></a><span class="lineno"> 2780</span>&#160;</div>
 <div class="line"><a name="l02781"></a><span class="lineno"> 2781</span>&#160;        <span class="comment">// M_elements_database.setWn( boost::make_tuple( M_WN , M_WNdu ) );</span></div>
 <div class="line"><a name="l02782"></a><span class="lineno"> 2782</span>&#160;        M_elements_database.setWn( boost::make_tuple( M_model-&gt;rBFunctionSpace()-&gt;primalRB() , M_model-&gt;rBFunctionSpace()-&gt;dualRB() ) );</div>
-<div class="line"><a name="l02783"></a><span class="lineno"> 2783</span>&#160;        M_elements_database.<a class="code" href="classFeel_1_1CRBElementsDB.html#a071880bff4108fa3f47f90342b765628">saveDB</a>();</div>
+<div class="line"><a name="l02783"></a><span class="lineno"> 2783</span>&#160;        M_elements_database.saveDB();</div>
 <div class="line"><a name="l02784"></a><span class="lineno"> 2784</span>&#160;    }</div>
 <div class="line"><a name="l02785"></a><span class="lineno"> 2785</span>&#160;</div>
 <div class="line"><a name="l02786"></a><span class="lineno"> 2786</span>&#160;    <span class="keywordflow">if</span>( proc_number == 0 )</div>
@@ -3730,13 +3730,13 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l03874"></a><span class="lineno"> 3874</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> m=0; m &lt; M_model-&gt;mMaxA(q); m++)</div>
 <div class="line"><a name="l03875"></a><span class="lineno"> 3875</span>&#160;                Adu += betaAqm[q][m]*M_Aqm_du[q][m].block( 0,0,N,N );</div>
 <div class="line"><a name="l03876"></a><span class="lineno"> 3876</span>&#160;        }</div>
-<div class="line"><a name="l03877"></a><span class="lineno"> 3877</span>&#160;        LOG( INFO ) &lt;&lt; <span class="stringliteral">&quot;Adu : \n&quot;</span>&lt;&lt;Adu;</div>
+<div class="line"><a name="l03877"></a><span class="lineno"> 3877</span>&#160;        <span class="comment">//LOG( INFO ) &lt;&lt; &quot;Adu : \n&quot;&lt;&lt;Adu;</span></div>
 <div class="line"><a name="l03878"></a><span class="lineno"> 3878</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> q = 0; q &lt; M_model-&gt;Ql( M_output_index ); ++q )</div>
 <div class="line"><a name="l03879"></a><span class="lineno"> 3879</span>&#160;        {</div>
 <div class="line"><a name="l03880"></a><span class="lineno"> 3880</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> m=0; m &lt; M_model-&gt;mMaxF(M_output_index,q); m++)</div>
 <div class="line"><a name="l03881"></a><span class="lineno"> 3881</span>&#160;                Ldu += betaFqm[M_output_index][q][m]*M_Lqm_du[q][m].head( N );</div>
 <div class="line"><a name="l03882"></a><span class="lineno"> 3882</span>&#160;        }</div>
-<div class="line"><a name="l03883"></a><span class="lineno"> 3883</span>&#160;        LOG( INFO ) &lt;&lt; <span class="stringliteral">&quot;Ldu : \n&quot;</span>&lt;&lt;Ldu;</div>
+<div class="line"><a name="l03883"></a><span class="lineno"> 3883</span>&#160;        <span class="comment">//LOG( INFO ) &lt;&lt; &quot;Ldu : \n&quot;&lt;&lt;Ldu;</span></div>
 <div class="line"><a name="l03884"></a><span class="lineno"> 3884</span>&#160;        uNdu[0] = Adu.lu().solve( -Ldu );</div>
 <div class="line"><a name="l03885"></a><span class="lineno"> 3885</span>&#160;    }</div>
 <div class="line"><a name="l03886"></a><span class="lineno"> 3886</span>&#160;</div>
@@ -4476,7 +4476,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l04620"></a><span class="lineno"> 4620</span>&#160;    }</div>
 <div class="line"><a name="l04621"></a><span class="lineno"> 4621</span>&#160;</div>
 <div class="line"><a name="l04622"></a><span class="lineno"> 4622</span>&#160;    <span class="keywordtype">int</span> proc_number = this-&gt;worldComm().globalRank();</div>
-<div class="line"><a name="l04623"></a><span class="lineno"> 4623</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l04623"></a><span class="lineno"> 4623</span>&#160;    <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l04624"></a><span class="lineno"> 4624</span>&#160;        std::cout&lt;&lt; std::setprecision(15)&lt;&lt;<span class="stringliteral">&quot;[CRB maxerror] proc &quot;</span>&lt;&lt; proc_number&lt;&lt;<span class="stringliteral">&quot; delta_pr : &quot;</span>&lt;&lt;delta_pr&lt;&lt;<span class="stringliteral">&quot; - delta_du : &quot;</span>&lt;&lt;delta_du&lt;&lt;<span class="stringliteral">&quot; at index : &quot;</span>&lt;&lt;_index&lt;&lt;std::endl;</div>
 <div class="line"><a name="l04625"></a><span class="lineno"> 4625</span>&#160;    <a class="code" href="classFeel_1_1CRB.html#aa40eaa902ad75df8e0e46e2f50b39f4b">lb</a>( N, mu, uN, uNdu , uNold ,uNduold );</div>
 <div class="line"><a name="l04626"></a><span class="lineno"> 4626</span>&#160;</div>
@@ -4549,7 +4549,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l04693"></a><span class="lineno"> 4693</span>&#160;</div>
 <div class="line"><a name="l04694"></a><span class="lineno"> 4694</span>&#160;    A -= I;</div>
 <div class="line"><a name="l04695"></a><span class="lineno"> 4695</span>&#160;    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;orthonormalization: &quot;</span> &lt;&lt; A.norm() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l04696"></a><span class="lineno"> 4696</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l04696"></a><span class="lineno"> 4696</span>&#160;    <span class="keywordflow">if</span> ( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l04697"></a><span class="lineno"> 4697</span>&#160;    {</div>
 <div class="line"><a name="l04698"></a><span class="lineno"> 4698</span>&#160;        LOG( INFO ) &lt;&lt; <span class="stringliteral">&quot;    o check : &quot;</span> &lt;&lt; A.norm() &lt;&lt; <span class="stringliteral">&quot; (should be 0)&quot;</span>;</div>
 <div class="line"><a name="l04699"></a><span class="lineno"> 4699</span>&#160;    }</div>
@@ -5178,7 +5178,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l05322"></a><span class="lineno"> 5322</span>&#160;    <span class="keywordtype">int</span> __Qm = M_model-&gt;Qm();</div>
 <div class="line"><a name="l05323"></a><span class="lineno"> 5323</span>&#160;    <span class="keywordtype">int</span> __N = Ncur;</div>
 <div class="line"><a name="l05324"></a><span class="lineno"> 5324</span>&#160;</div>
-<div class="line"><a name="l05325"></a><span class="lineno"> 5325</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l05325"></a><span class="lineno"> 5325</span>&#160;    <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l05326"></a><span class="lineno"> 5326</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;     o N=&quot;</span> &lt;&lt; Ncur &lt;&lt; <span class="stringliteral">&quot; QLhs=&quot;</span> &lt;&lt; __QLhs</div>
 <div class="line"><a name="l05327"></a><span class="lineno"> 5327</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; QRhs=&quot;</span> &lt;&lt; __QRhs &lt;&lt; <span class="stringliteral">&quot; Qoutput=&quot;</span> &lt;&lt; __QOutput</div>
 <div class="line"><a name="l05328"></a><span class="lineno"> 5328</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; Qm=&quot;</span> &lt;&lt; __Qm &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -5239,7 +5239,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l05383"></a><span class="lineno"> 5383</span>&#160;        }<span class="comment">//m1</span></div>
 <div class="line"><a name="l05384"></a><span class="lineno"> 5384</span>&#160;    }<span class="comment">//q1</span></div>
 <div class="line"><a name="l05385"></a><span class="lineno"> 5385</span>&#160;</div>
-<div class="line"><a name="l05386"></a><span class="lineno"> 5386</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l05386"></a><span class="lineno"> 5386</span>&#160;    <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l05387"></a><span class="lineno"> 5387</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;     o M_Cmf_pr updated in &quot;</span> &lt;&lt; ti.elapsed() &lt;&lt; <span class="stringliteral">&quot;s\n&quot;</span>;</div>
 <div class="line"><a name="l05388"></a><span class="lineno"> 5388</span>&#160;    ti.restart();</div>
 <div class="line"><a name="l05389"></a><span class="lineno"> 5389</span>&#160;</div>
@@ -5297,7 +5297,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l05441"></a><span class="lineno"> 5441</span>&#160;        }<span class="comment">// on m1</span></div>
 <div class="line"><a name="l05442"></a><span class="lineno"> 5442</span>&#160;    } <span class="comment">// on q1</span></div>
 <div class="line"><a name="l05443"></a><span class="lineno"> 5443</span>&#160;</div>
-<div class="line"><a name="l05444"></a><span class="lineno"> 5444</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l05444"></a><span class="lineno"> 5444</span>&#160;    <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l05445"></a><span class="lineno"> 5445</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;     o M_Cma_pr updated in &quot;</span> &lt;&lt; ti.elapsed() &lt;&lt; <span class="stringliteral">&quot;s\n&quot;</span>;</div>
 <div class="line"><a name="l05446"></a><span class="lineno"> 5446</span>&#160;    ti.restart();</div>
 <div class="line"><a name="l05447"></a><span class="lineno"> 5447</span>&#160;</div>
@@ -5356,7 +5356,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l05500"></a><span class="lineno"> 5500</span>&#160;        }<span class="comment">// on m1</span></div>
 <div class="line"><a name="l05501"></a><span class="lineno"> 5501</span>&#160;    } <span class="comment">// on q1</span></div>
 <div class="line"><a name="l05502"></a><span class="lineno"> 5502</span>&#160;</div>
-<div class="line"><a name="l05503"></a><span class="lineno"> 5503</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l05503"></a><span class="lineno"> 5503</span>&#160;    <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l05504"></a><span class="lineno"> 5504</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;     o M_Cmm_pr updated in &quot;</span> &lt;&lt; ti.elapsed() &lt;&lt; <span class="stringliteral">&quot;s\n&quot;</span>;</div>
 <div class="line"><a name="l05505"></a><span class="lineno"> 5505</span>&#160;    ti.restart();</div>
 <div class="line"><a name="l05506"></a><span class="lineno"> 5506</span>&#160;</div>
@@ -5481,7 +5481,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l05625"></a><span class="lineno"> 5625</span>&#160;        }<span class="comment">// m1</span></div>
 <div class="line"><a name="l05626"></a><span class="lineno"> 5626</span>&#160;    } <span class="comment">// q1</span></div>
 <div class="line"><a name="l05627"></a><span class="lineno"> 5627</span>&#160;</div>
-<div class="line"><a name="l05628"></a><span class="lineno"> 5628</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l05628"></a><span class="lineno"> 5628</span>&#160;    <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l05629"></a><span class="lineno"> 5629</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;     o Cma_du updated in &quot;</span> &lt;&lt; ti.elapsed() &lt;&lt; <span class="stringliteral">&quot;s\n&quot;</span>;</div>
 <div class="line"><a name="l05630"></a><span class="lineno"> 5630</span>&#160;</div>
 <div class="line"><a name="l05631"></a><span class="lineno"> 5631</span>&#160;    ti.restart();</div>
@@ -5550,7 +5550,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l05694"></a><span class="lineno"> 5694</span>&#160;        }<span class="comment">// m1</span></div>
 <div class="line"><a name="l05695"></a><span class="lineno"> 5695</span>&#160;    } <span class="comment">// q1</span></div>
 <div class="line"><a name="l05696"></a><span class="lineno"> 5696</span>&#160;</div>
-<div class="line"><a name="l05697"></a><span class="lineno"> 5697</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l05697"></a><span class="lineno"> 5697</span>&#160;    <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l05698"></a><span class="lineno"> 5698</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;     o Cmm_du updated in &quot;</span> &lt;&lt; ti.elapsed() &lt;&lt; <span class="stringliteral">&quot;s\n&quot;</span>;</div>
 <div class="line"><a name="l05699"></a><span class="lineno"> 5699</span>&#160;    ti.restart();</div>
 <div class="line"><a name="l05700"></a><span class="lineno"> 5700</span>&#160;</div>
@@ -5570,7 +5570,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l05714"></a><span class="lineno"> 5714</span>&#160;    <span class="keywordtype">int</span> __QOutput = M_model-&gt;Ql( M_output_index );</div>
 <div class="line"><a name="l05715"></a><span class="lineno"> 5715</span>&#160;    <span class="keywordtype">int</span> __N = Ncur;</div>
 <div class="line"><a name="l05716"></a><span class="lineno"> 5716</span>&#160;</div>
-<div class="line"><a name="l05717"></a><span class="lineno"> 5717</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l05717"></a><span class="lineno"> 5717</span>&#160;    <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l05718"></a><span class="lineno"> 5718</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;     o N=&quot;</span> &lt;&lt; Ncur &lt;&lt; <span class="stringliteral">&quot; QLhs=&quot;</span> &lt;&lt; __QLhs</div>
 <div class="line"><a name="l05719"></a><span class="lineno"> 5719</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; QRhs=&quot;</span> &lt;&lt; __QRhs &lt;&lt; <span class="stringliteral">&quot; Qoutput=&quot;</span> &lt;&lt; __QOutput &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l05720"></a><span class="lineno"> 5720</span>&#160;</div>
@@ -5631,7 +5631,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l05775"></a><span class="lineno"> 5775</span>&#160;        }<span class="comment">//end of loop __q1</span></div>
 <div class="line"><a name="l05776"></a><span class="lineno"> 5776</span>&#160;    }<span class="comment">// Ncur==1</span></div>
 <div class="line"><a name="l05777"></a><span class="lineno"> 5777</span>&#160;</div>
-<div class="line"><a name="l05778"></a><span class="lineno"> 5778</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l05778"></a><span class="lineno"> 5778</span>&#160;    <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l05779"></a><span class="lineno"> 5779</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;     o initialize offlineResidual in &quot;</span> &lt;&lt; ti.elapsed() &lt;&lt; <span class="stringliteral">&quot;s\n&quot;</span>;</div>
 <div class="line"><a name="l05780"></a><span class="lineno"> 5780</span>&#160;    ti.restart();</div>
 <div class="line"><a name="l05781"></a><span class="lineno"> 5781</span>&#160;</div>
@@ -5704,7 +5704,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l05848"></a><span class="lineno"> 5848</span>&#160;        }<span class="comment">//end of __q1</span></div>
 <div class="line"><a name="l05849"></a><span class="lineno"> 5849</span>&#160;    }<span class="comment">//elem</span></div>
 <div class="line"><a name="l05850"></a><span class="lineno"> 5850</span>&#160;</div>
-<div class="line"><a name="l05851"></a><span class="lineno"> 5851</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l05851"></a><span class="lineno"> 5851</span>&#160;    <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l05852"></a><span class="lineno"> 5852</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;     o Lambda_pr updated in &quot;</span> &lt;&lt; ti.elapsed() &lt;&lt; <span class="stringliteral">&quot;s\n&quot;</span>;</div>
 <div class="line"><a name="l05853"></a><span class="lineno"> 5853</span>&#160;</div>
 <div class="line"><a name="l05854"></a><span class="lineno"> 5854</span>&#160;    ti.restart();</div>
@@ -5774,7 +5774,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l05918"></a><span class="lineno"> 5918</span>&#160;        }<span class="comment">// on m1</span></div>
 <div class="line"><a name="l05919"></a><span class="lineno"> 5919</span>&#160;    } <span class="comment">// on q1</span></div>
 <div class="line"><a name="l05920"></a><span class="lineno"> 5920</span>&#160;</div>
-<div class="line"><a name="l05921"></a><span class="lineno"> 5921</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l05921"></a><span class="lineno"> 5921</span>&#160;    <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l05922"></a><span class="lineno"> 5922</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;     o Gamma_pr updated in &quot;</span> &lt;&lt; ti.elapsed() &lt;&lt; <span class="stringliteral">&quot;s\n&quot;</span>;</div>
 <div class="line"><a name="l05923"></a><span class="lineno"> 5923</span>&#160;    ti.restart();</div>
 <div class="line"><a name="l05924"></a><span class="lineno"> 5924</span>&#160;    sparse_matrix_ptrtype Atq1 = M_model-&gt;newMatrix();</div>
@@ -5816,7 +5816,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l05960"></a><span class="lineno"> 5960</span>&#160;                }<span class="comment">//end of loop __m1</span></div>
 <div class="line"><a name="l05961"></a><span class="lineno"> 5961</span>&#160;            }<span class="comment">//end of loop __q1</span></div>
 <div class="line"><a name="l05962"></a><span class="lineno"> 5962</span>&#160;</div>
-<div class="line"><a name="l05963"></a><span class="lineno"> 5963</span>&#160;            <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l05963"></a><span class="lineno"> 5963</span>&#160;            <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l05964"></a><span class="lineno"> 5964</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;     o C0_du updated in &quot;</span> &lt;&lt; ti.elapsed() &lt;&lt; <span class="stringliteral">&quot;s\n&quot;</span>;</div>
 <div class="line"><a name="l05965"></a><span class="lineno"> 5965</span>&#160;            ti.restart();</div>
 <div class="line"><a name="l05966"></a><span class="lineno"> 5966</span>&#160;        }</div>
@@ -5862,7 +5862,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l06006"></a><span class="lineno"> 6006</span>&#160;            } <span class="comment">// q1</span></div>
 <div class="line"><a name="l06007"></a><span class="lineno"> 6007</span>&#160;        }<span class="comment">//elem</span></div>
 <div class="line"><a name="l06008"></a><span class="lineno"> 6008</span>&#160;</div>
-<div class="line"><a name="l06009"></a><span class="lineno"> 6009</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l06009"></a><span class="lineno"> 6009</span>&#160;        <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l06010"></a><span class="lineno"> 6010</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;     o Lambda_du updated in &quot;</span> &lt;&lt; ti.elapsed() &lt;&lt; <span class="stringliteral">&quot;s\n&quot;</span>;</div>
 <div class="line"><a name="l06011"></a><span class="lineno"> 6011</span>&#160;        ti.restart();</div>
 <div class="line"><a name="l06012"></a><span class="lineno"> 6012</span>&#160;</div>
@@ -5942,7 +5942,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l06086"></a><span class="lineno"> 6086</span>&#160;            }<span class="comment">// on m1</span></div>
 <div class="line"><a name="l06087"></a><span class="lineno"> 6087</span>&#160;        } <span class="comment">// on q1</span></div>
 <div class="line"><a name="l06088"></a><span class="lineno"> 6088</span>&#160;</div>
-<div class="line"><a name="l06089"></a><span class="lineno"> 6089</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l06089"></a><span class="lineno"> 6089</span>&#160;        <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l06090"></a><span class="lineno"> 6090</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;     o Gamma_du updated in &quot;</span> &lt;&lt; ti.elapsed() &lt;&lt; <span class="stringliteral">&quot;s\n&quot;</span>;</div>
 <div class="line"><a name="l06091"></a><span class="lineno"> 6091</span>&#160;        ti.restart();</div>
 <div class="line"><a name="l06092"></a><span class="lineno"> 6092</span>&#160;        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;[offlineResidual] Done.\n&quot;</span>;</div>
@@ -6416,8 +6416,8 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l06560"></a><span class="lineno"> 6560</span>&#160;    <span class="keywordflow">if</span>( cvg ) <span class="comment">//if we want to compute time statistics for every crb basis then we start at 1</span></div>
 <div class="line"><a name="l06561"></a><span class="lineno"> 6561</span>&#160;        N=1;</div>
 <div class="line"><a name="l06562"></a><span class="lineno"> 6562</span>&#160;</div>
-<div class="line"><a name="l06563"></a><span class="lineno"> 6563</span>&#160;    <span class="keywordtype">int</span> proc_number =  <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank();</div>
-<div class="line"><a name="l06564"></a><span class="lineno"> 6564</span>&#160;    <span class="keywordtype">int</span> master =  <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank();</div>
+<div class="line"><a name="l06563"></a><span class="lineno"> 6563</span>&#160;    <span class="keywordtype">int</span> proc_number =  Environment::worldComm().globalRank();</div>
+<div class="line"><a name="l06564"></a><span class="lineno"> 6564</span>&#160;    <span class="keywordtype">int</span> master =  Environment::worldComm().masterRank();</div>
 <div class="line"><a name="l06565"></a><span class="lineno"> 6565</span>&#160;</div>
 <div class="line"><a name="l06566"></a><span class="lineno"> 6566</span>&#160;    <span class="comment">//write on a file</span></div>
 <div class="line"><a name="l06567"></a><span class="lineno"> 6567</span>&#160;    std::string file_name = <span class="stringliteral">&quot;cvg-timing-crb.dat&quot;</span>;</div>
@@ -6752,7 +6752,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 <div class="line"><a name="l06896"></a><span class="lineno"> 6896</span>&#160;<span class="keyword">namespace </span>serialization</div>
 <div class="line"><a name="l06897"></a><span class="lineno"> 6897</span>&#160;{</div>
 <div class="line"><a name="l06898"></a><span class="lineno"> 6898</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l06899"></a><span class="lineno"><a class="code" href="structboost_1_1serialization_1_1version_3_01Feel_1_1CRB_3_01T_01_4_01_4.html"> 6899</a></span>&#160;<span class="keyword">struct </span>version&lt; Feel::<a class="code" href="classFeel_1_1CRB.html#ac1ebf1a0031cd9f1c2f0a07d7dce726e" title="default constructor ">CRB</a>&lt;T&gt; &gt;</div>
+<div class="line"><a name="l06899"></a><span class="lineno"> 6899</span>&#160;<span class="keyword">struct </span>version&lt; Feel::<a class="code" href="classFeel_1_1CRB.html#ac1ebf1a0031cd9f1c2f0a07d7dce726e" title="default constructor ">CRB</a>&lt;T&gt; &gt;</div>
 <div class="line"><a name="l06900"></a><span class="lineno"> 6900</span>&#160;{</div>
 <div class="line"><a name="l06901"></a><span class="lineno"> 6901</span>&#160;    <span class="comment">// at the moment the version of the CRB DB is 0. if any changes is done</span></div>
 <div class="line"><a name="l06902"></a><span class="lineno"> 6902</span>&#160;    <span class="comment">// to the format it is mandatory to increase the version number below</span></div>
@@ -6768,7 +6768,7 @@ $(document).ready(function(){initNavTree('crb_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:13 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:05:44 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

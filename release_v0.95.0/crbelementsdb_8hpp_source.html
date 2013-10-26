@@ -147,37 +147,37 @@ $(document).ready(function(){initNavTree('crbelementsdb_8hpp_source.html','');})
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ModelType&gt;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="classFeel_1_1CRBElementsDB.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1CRBElementsDB.html">CRBElementsDB</a> : <span class="keyword">public</span> <a class="code" href="classFeel_1_1CRBDB.html" title="brief description ">CRBDB</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">class </span>CRBElementsDB : <span class="keyword">public</span> CRBDB</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">typedef</span>  <a class="code" href="classFeel_1_1CRBDB.html" title="brief description ">CRBDB</a> <a class="code" href="classFeel_1_1CRBDB.html" title="brief description ">super</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">typedef</span>  <a class="code" href="classFeel_1_1CRBDB.html#a63ce83e6c566106d8f133bfa4f222706" title="default constructor ">CRBDB</a> super;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span> :</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">typedef</span> ModelType model_type;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;model_type&gt; model_ptrtype;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="classFeel_1_1CRBElementsDB.html#ab9e0ce2a4d6424d3063bc9c661179cb0">   62</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> model_type::element_type <a class="code" href="classFeel_1_1CRBElementsDB.html#ab9e0ce2a4d6424d3063bc9c661179cb0" title="element of the functionspace type ">element_type</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> model_type::element_type element_type;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> model_type::element_ptrtype element_ptrtype;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="classFeel_1_1CRBElementsDB.html#a6bf521332f3923505255b97548f16ff3">   66</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> model_type::mesh_type <a class="code" href="classFeel_1_1CRBElementsDB.html#a6bf521332f3923505255b97548f16ff3" title="mesh type ">mesh_type</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> model_type::mesh_type mesh_type;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;mesh_type&gt; mesh_ptrtype;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="classFeel_1_1CRBElementsDB.html#a2f1589253d06addb7bd0983da7b9257c">   70</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> model_type::space_type <a class="code" href="classFeel_1_1CRBElementsDB.html#a2f1589253d06addb7bd0983da7b9257c" title="function space type ">space_type</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> model_type::space_type space_type;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;space_type&gt; space_ptrtype;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">typedef</span> std::vector&lt;element_type&gt; wn_type;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="classFeel_1_1CRBElementsDB.html#a63a19e59d723926fc020e4aedf13ae20">   76</a></span>&#160;    <a class="code" href="classFeel_1_1CRBElementsDB.html#a63a19e59d723926fc020e4aedf13ae20" title="constructors ">CRBElementsDB</a>()</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    CRBElementsDB()</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    :</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="classFeel_1_1CRBDB.html" title="brief description ">super</a>()</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        super()</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classFeel_1_1CRBElementsDB.html#a63a19e59d723926fc020e4aedf13ae20" title="constructors ">CRBElementsDB</a>( std::string prefixdir,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                std::string <a class="code" href="classFeel_1_1CRBDB.html#aafbd9eddb9faeb89f4f0fa29d01744e9">name</a>,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    CRBElementsDB( std::string prefixdir,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                std::string name,</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                std::string dbprefix,</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                po::variables_map <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">vm</a>,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                po::variables_map <span class="keyword">const</span>&amp; vm,</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                model_ptrtype <span class="keyword">const</span> &amp; model )</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    :</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        super( prefixdir,</div>
@@ -190,13 +190,13 @@ $(document).ready(function(){initNavTree('crbelementsdb_8hpp_source.html','');})
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="classFeel_1_1CRBElementsDB.html#a5accdaacdb5afd810006ace845b14158">   99</a></span>&#160;    <a class="code" href="classFeel_1_1CRBElementsDB.html#a5accdaacdb5afd810006ace845b14158" title="destructor ">~CRBElementsDB</a>()</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    ~CRBElementsDB()</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {}</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1CRBElementsDB.html#a071880bff4108fa3f47f90342b765628">saveDB</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> saveDB();</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classFeel_1_1CRBElementsDB.html#a718ab77bfd066fd7a75a65d19788f5f8">loadDB</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">bool</span> loadDB();</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    boost::tuple&lt;wn_type, wn_type&gt; wn()</div>
@@ -243,7 +243,7 @@ $(document).ready(function(){initNavTree('crbelementsdb_8hpp_source.html','');})
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;template&lt;typename ModelType&gt;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno"><a class="code" href="classFeel_1_1CRBElementsDB.html#a071880bff4108fa3f47f90342b765628">  158</a></span>&#160;<a class="code" href="classFeel_1_1CRBElementsDB.html">CRBElementsDB</a>&lt;ModelType&gt;::<a class="code" href="classFeel_1_1CRBElementsDB.html#a071880bff4108fa3f47f90342b765628">saveDB</a>()</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;CRBElementsDB&lt;ModelType&gt;::saveDB()</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;{</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    fs::ofstream ofs( this-&gt;<a class="code" href="classFeel_1_1CRBDB.html#a6ab0476785ef1a656f50e0a86fe81703">dbLocalPath</a>() / this-&gt;<a class="code" href="classFeel_1_1CRBDB.html#af37a10b53fc44efe766ebf6febee3b86">dbFilename</a>() );</div>
@@ -259,7 +259,7 @@ $(document).ready(function(){initNavTree('crbelementsdb_8hpp_source.html','');})
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ModelType&gt;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno"><a class="code" href="classFeel_1_1CRBElementsDB.html#a718ab77bfd066fd7a75a65d19788f5f8">  174</a></span>&#160;<a class="code" href="classFeel_1_1CRBElementsDB.html#a718ab77bfd066fd7a75a65d19788f5f8">CRBElementsDB&lt;ModelType&gt;::loadDB</a>()</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;CRBElementsDB&lt;ModelType&gt;::loadDB()</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;{</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">if</span>( option(_name=<span class="stringliteral">&quot;crb.rebuild-database&quot;</span>).<span class="keyword">template</span> as&lt;bool&gt;() )</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -296,7 +296,7 @@ $(document).ready(function(){initNavTree('crbelementsdb_8hpp_source.html','');})
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ModelType&gt;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> Archive&gt;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<a class="code" href="classFeel_1_1CRBElementsDB.html">CRBElementsDB&lt;ModelType&gt;::save</a>( Archive &amp; ar, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> version )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;CRBElementsDB&lt;ModelType&gt;::save( Archive &amp; ar, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> version )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor"></span>    <span class="keyword">auto</span> mesh = mesh_type::New();</div>
@@ -349,7 +349,7 @@ $(document).ready(function(){initNavTree('crbelementsdb_8hpp_source.html','');})
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;[load] get mesh/Xh from model done.\n&quot;</span>;</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    }</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <a class="code" href="classFeel_1_1CRBElementsDB.html#ab9e0ce2a4d6424d3063bc9c661179cb0" title="element of the functionspace type ">element_type</a> temp = Xh-&gt;element();</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    element_type temp = Xh-&gt;element();</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0 ; i &lt; M_N ; i++ )</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    {</div>
@@ -379,7 +379,7 @@ $(document).ready(function(){initNavTree('crbelementsdb_8hpp_source.html','');})
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="keyword">namespace </span>serialization</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;{</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00294"></a><span class="lineno"><a class="code" href="structboost_1_1serialization_1_1version_3_01Feel_1_1CRBElementsDB_3_01T_01_4_01_4.html">  294</a></span>&#160;<span class="keyword">struct </span>version&lt; Feel::CRBElementsDB&lt;T&gt; &gt;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="keyword">struct </span>version&lt; Feel::CRBElementsDB&lt;T&gt; &gt;</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;{</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="comment">// at the moment the version of the CRB DB is 0. if any changes is done</span></div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="comment">// to the format it is mandatory to increase the version number below</span></div>
@@ -396,7 +396,7 @@ $(document).ready(function(){initNavTree('crbelementsdb_8hpp_source.html','');})
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:13 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:05:45 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

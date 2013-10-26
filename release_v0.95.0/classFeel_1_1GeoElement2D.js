@@ -1,7 +1,7 @@
 var classFeel_1_1GeoElement2D =
 [
     [ "edge_permutation_type", "classFeel_1_1GeoElement2D.html#ab8462164463808006fa3a06ee8b0b8aa", null ],
-    [ "edge_type", "classFeel_1_1GeoElement2D.html#a6fef6ef982046c46d632a8a6fd3a27db", null ],
+    [ "edge_type", "classFeel_1_1GeoElement2D.html#a982b5e16dfeebeea4f5d9b572810d695", null ],
     [ "element_connectivity_type", "classFeel_1_1GeoElement2D.html#af2cfd5f6cf4e851c728b388242c2257a", null ],
     [ "element_type", "classFeel_1_1GeoElement2D.html#a2b58cd9de7cfaac7eb2ed3b01484517f", null ],
     [ "entity_face_type", "classFeel_1_1GeoElement2D.html#ad5cd1d9d40e088bdd91823077e16c9ea", null ],

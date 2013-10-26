@@ -1,18 +1,5 @@
 var classFeel_1_1FunctionSpace =
 [
-    [ "Basis", "structFeel_1_1FunctionSpace_1_1Basis.html", "structFeel_1_1FunctionSpace_1_1Basis" ],
-    [ "ChangeBasis", "structFeel_1_1FunctionSpace_1_1ChangeBasis.html", "structFeel_1_1FunctionSpace_1_1ChangeBasis" ],
-    [ "ChangeBasisToComponentBasis", "structFeel_1_1FunctionSpace_1_1ChangeBasisToComponentBasis.html", "structFeel_1_1FunctionSpace_1_1ChangeBasisToComponentBasis" ],
-    [ "ChangeMesh", "structFeel_1_1FunctionSpace_1_1ChangeMesh.html", "structFeel_1_1FunctionSpace_1_1ChangeMesh" ],
-    [ "ChangeToMeshPtr", "structFeel_1_1FunctionSpace_1_1ChangeToMeshPtr.html", "structFeel_1_1FunctionSpace_1_1ChangeToMeshPtr" ],
-    [ "Context", "classFeel_1_1FunctionSpace_1_1Context.html", "classFeel_1_1FunctionSpace_1_1Context" ],
-    [ "Element", "classFeel_1_1FunctionSpace_1_1Element.html", "classFeel_1_1FunctionSpace_1_1Element" ],
-    [ "GetComponentBasis", "structFeel_1_1FunctionSpace_1_1GetComponentBasis.html", "structFeel_1_1FunctionSpace_1_1GetComponentBasis" ],
-    [ "GetMesh", "structFeel_1_1FunctionSpace_1_1GetMesh.html", "structFeel_1_1FunctionSpace_1_1GetMesh" ],
-    [ "GetNComponents", "structFeel_1_1FunctionSpace_1_1GetNComponents.html", "structFeel_1_1FunctionSpace_1_1GetNComponents" ],
-    [ "GetPeriodicity", "structFeel_1_1FunctionSpace_1_1GetPeriodicity.html", "structFeel_1_1FunctionSpace_1_1GetPeriodicity" ],
-    [ "nodim", "structFeel_1_1FunctionSpace_1_1nodim.html", null ],
-    [ "sub_functionspace", "structFeel_1_1FunctionSpace_1_1sub__functionspace.html", "structFeel_1_1FunctionSpace_1_1sub__functionspace" ],
     [ "args", "classFeel_1_1FunctionSpace.html#a59c9133c635219a7b12c443d91928ea4", null ],
     [ "bases_list", "classFeel_1_1FunctionSpace.html#af1ba2df5fb0ed8fdb6800fb196dff2df", null ],
     [ "basis_0_type", "classFeel_1_1FunctionSpace.html#a21d5eb38ef99b443d82c146369063b10", null ],

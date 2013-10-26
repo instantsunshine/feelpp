@@ -151,7 +151,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">namespace </span>detail</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="classFeel_1_1detail_1_1GMSHPoint.html">   55</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1detail_1_1GMSHPoint.html">GMSHPoint</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">class </span>GMSHPoint</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    Eigen::Vector3d x;</div>
@@ -163,13 +163,13 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    EIGEN_MAKE_ALIGNED_OPERATOR_NEW</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classFeel_1_1detail_1_1GMSHPoint.html">GMSHPoint</a>()</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    GMSHPoint()</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        :</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        x( Eigen::Vector3d::Zero() ),</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        uv( Eigen::Vector2d::Zero() ),</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        id( 0 ),</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        onbdy( <span class="keyword">false</span> ),</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        parametric( <span class="keyword">false</span> ),</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        onbdy( false ),</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        parametric( false ),</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        gdim( 0 ),</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        gtag( 0 )</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {}</div>
@@ -184,19 +184,19 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        gtag( p.gtag )</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        {}</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">   88</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">GMSHElement</a></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">struct </span>GMSHElement</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">GMSHElement</a>()</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    GMSHElement()</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        :</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        num( 0 ),</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        type( MSH_PNT ),</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        physical( 0 ),</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        elementary( 0 ),</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html#a3eb24190eebd31120f08cd2d0278c67d" title="partitioning info ">numPartitions</a>( 1 ),</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        numPartitions( 1 ),</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        partition( 0 ),</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        ghosts(),</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        is_on_processor( <span class="keyword">false</span> ),</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        is_ghost( <span class="keyword">false</span> ),</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        is_on_processor( false ),</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        is_ghost( false ),</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        ghost_partition_id( -1 ),</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        parent( 0 ),</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        dom1(0), dom2(0),</div>
@@ -204,7 +204,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        indices()</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {}</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">GMSHElement</a>( <span class="keywordtype">int</span> n,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    GMSHElement( <span class="keywordtype">int</span> n,</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                 <span class="keywordtype">int</span> t,</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                 <span class="keywordtype">int</span> p,</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                 <span class="keywordtype">int</span> e,</div>
@@ -221,11 +221,11 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        type( t ),</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        physical( p ),</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        elementary( e ),</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html#a3eb24190eebd31120f08cd2d0278c67d" title="partitioning info ">numPartitions</a>( _numPartitions ),</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        numPartitions( _numPartitions ),</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        partition( _partition ),</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        ghosts( _ghosts ),</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        is_on_processor( <span class="keyword">false</span> ),</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        is_ghost( <span class="keyword">false</span> ),</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        is_on_processor( false ),</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        is_ghost( false ),</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        ghost_partition_id( partition ),</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        parent( _parent ),</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        dom1(_dom1), dom2(_dom2),</div>
@@ -256,13 +256,13 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            }</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;   <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">GMSHElement</a>( <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">GMSHElement</a> <span class="keyword">const</span>&amp; g )</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;   GMSHElement( GMSHElement <span class="keyword">const</span>&amp; g )</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    :</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        num( g.num ),</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        type( g.type ),</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        physical( g.physical ),</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        elementary( g.elementary ),</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html#a3eb24190eebd31120f08cd2d0278c67d" title="partitioning info ">numPartitions</a>( g.<a class="code" href="structFeel_1_1detail_1_1GMSHElement.html#a3eb24190eebd31120f08cd2d0278c67d" title="partitioning info ">numPartitions</a> ),</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        numPartitions( g.numPartitions ),</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        partition( g.partition ),</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        ghosts( g.ghosts ),</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        is_on_processor( g.is_on_processor ),</div>
@@ -286,7 +286,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">int</span> physical;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">int</span> elementary;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00191"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1GMSHElement.html#a3eb24190eebd31120f08cd2d0278c67d">  191</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html#a3eb24190eebd31120f08cd2d0278c67d" title="partitioning info ">numPartitions</a>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">int</span> numPartitions;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">int</span> partition;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    std::vector&lt;int&gt; ghosts;</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">bool</span> is_on_processor;</div>
@@ -340,7 +340,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type npoints_per_element = element_type::numPoints;</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="classFeel_1_1ImporterGmsh.html" title="gmsh importer class ">ImporterGmsh</a>( <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; _worldcomm = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() )</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="classFeel_1_1ImporterGmsh.html" title="gmsh importer class ">ImporterGmsh</a>( WorldComm <span class="keyword">const</span>&amp; _worldcomm = Environment::worldComm() )</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        :</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        super( GMSH, _worldcomm ),</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        M_version( FEELPP_GMSH_FORMAT_VERSION ),</div>
@@ -351,7 +351,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    }</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keyword">explicit</span> ImporterGmsh( std::string <span class="keyword">const</span>&amp; _fname, std::string _version = FEELPP_GMSH_FORMAT_VERSION,</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                           WorldComm <span class="keyword">const</span>&amp; _worldcomm = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() )</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                           WorldComm <span class="keyword">const</span>&amp; _worldcomm = Environment::worldComm() )</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        :</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        super( _fname, GMSH, _worldcomm ),</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        M_version( _version ),</div>
@@ -415,25 +415,25 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordtype">void</span> addPoint( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel );</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordtype">void</span> addPoint( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;1&gt; );</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordtype">void</span> addPoint( mesh_type* <span class="comment">/*mesh*/</span>, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; <span class="comment">/*__e*/</span>, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;2&gt; );</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keywordtype">void</span> addPoint( mesh_type* <span class="comment">/*mesh*/</span>, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; <span class="comment">/*__e*/</span>, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;3&gt; );</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordtype">void</span> addPoint( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel );</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordtype">void</span> addPoint( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;1&gt; );</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordtype">void</span> addPoint( mesh_type* <span class="comment">/*mesh*/</span>, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; <span class="comment">/*__e*/</span>, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;2&gt; );</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keywordtype">void</span> addPoint( mesh_type* <span class="comment">/*mesh*/</span>, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; <span class="comment">/*__e*/</span>, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;3&gt; );</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordtype">void</span> addEdge( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel );</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keywordtype">void</span> addEdge( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;1&gt; );</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordtype">void</span> addEdge( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;2&gt; );</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordtype">void</span> addEdge( mesh_type* <span class="comment">/*mesh*/</span>, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; <span class="comment">/*__e*/</span>, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;3&gt; );</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordtype">void</span> addEdge( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel );</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keywordtype">void</span> addEdge( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;1&gt; );</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordtype">void</span> addEdge( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;2&gt; );</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordtype">void</span> addEdge( mesh_type* <span class="comment">/*mesh*/</span>, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; <span class="comment">/*__e*/</span>, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;3&gt; );</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordtype">void</span> addFace( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel );</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">void</span> addFace( mesh_type* <span class="comment">/*mesh*/</span>, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; <span class="comment">/*__e*/</span>, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;1&gt; );</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordtype">void</span> addFace( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;2&gt; );</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordtype">void</span> addFace( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;3&gt; );</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordtype">void</span> addFace( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel );</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">void</span> addFace( mesh_type* <span class="comment">/*mesh*/</span>, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; <span class="comment">/*__e*/</span>, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;1&gt; );</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordtype">void</span> addFace( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;2&gt; );</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordtype">void</span> addFace( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;3&gt; );</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordtype">void</span> addVolume( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel );</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordtype">void</span> addVolume( mesh_type* <span class="comment">/*mesh*/</span>, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; <span class="comment">/*__e*/</span>, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span> , mpl::int_&lt;1&gt; );</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <span class="keywordtype">void</span> addVolume( mesh_type* <span class="comment">/*mesh*/</span>, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; <span class="comment">/*__e*/</span>, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span> , mpl::int_&lt;2&gt; );</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordtype">void</span> addVolume( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;3&gt; );</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordtype">void</span> addVolume( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel );</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordtype">void</span> addVolume( mesh_type* <span class="comment">/*mesh*/</span>, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; <span class="comment">/*__e*/</span>, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span> , mpl::int_&lt;1&gt; );</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <span class="keywordtype">void</span> addVolume( mesh_type* <span class="comment">/*mesh*/</span>, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; <span class="comment">/*__e*/</span>, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span> , mpl::int_&lt;2&gt; );</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordtype">void</span> addVolume( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;3&gt; );</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordtype">void</span> updateGhostCellInfo( mesh_type* mesh, std::map&lt;int,int&gt; <span class="keyword">const</span>&amp; __idGmshToFeel, std::map&lt;<span class="keywordtype">int</span>,boost::tuple&lt;int,int&gt; &gt; <span class="keyword">const</span>&amp; __mapGhostElt,</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                              std::vector&lt;int&gt; <span class="keyword">const</span>&amp; nbMsgToRecv );</div>
@@ -778,7 +778,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;              physical = elementary;</div>
 <div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;          }</div>
 <div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;          <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> gmshElt( num, type, physical, elementary,</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;          Feel::detail::GMSHElement gmshElt( num, type, physical, elementary,</div>
 <div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;                                             numPartitions, partition, ghosts,</div>
 <div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;                                             parent, dom1, dom2,</div>
 <div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;                                             numVertices, indices,</div>
@@ -857,7 +857,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;                    physical = elementary;</div>
 <div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;                }</div>
 <div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;                <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> gmshElt( num, type, physical, elementary,</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;                Feel::detail::GMSHElement gmshElt( num, type, physical, elementary,</div>
 <div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;                                                   numPartitions, partition, ghosts,</div>
 <div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;                                                   parent, dom1, dom2,</div>
 <div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;                                                   numVertices, indices,</div>
@@ -912,7 +912,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        {</div>
 <div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;            <span class="keywordtype">int</span> dim,slave,master;</div>
 <div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;            __is &gt;&gt; dim &gt;&gt; slave &gt;&gt; master;</div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;            <a class="code" href="structFeel_1_1PeriodicEntity.html">PeriodicEntity</a> e( dim, slave, master );</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;            PeriodicEntity e( dim, slave, master );</div>
 <div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;            <span class="keywordtype">int</span> numv;</div>
 <div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;            __is &gt;&gt; numv;</div>
 <div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; numv; j++)</div>
@@ -1025,7 +1025,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;                coords[j] = gmshpt.x[j];</div>
 <div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;</div>
 <div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;            point_type pt( ptid, coords, gmshpt.onbdy );</div>
-<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;</div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;            pt.setProcessIdInPartition( this-&gt;worldComm().localRank() );</div>
 <div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;            <span class="keywordflow">if</span> ( gmshpt.parametric )</div>
 <div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;            {</div>
 <div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;                pt.setGDim( gmshpt.gdim );</div>
@@ -1179,20 +1179,20 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;</div>
 <div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;<a class="code" href="classFeel_1_1ImporterGmsh.html" title="gmsh importer class ">ImporterGmsh&lt;MeshType&gt;::addPoint</a>( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel )</div>
+<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;<a class="code" href="classFeel_1_1ImporterGmsh.html" title="gmsh importer class ">ImporterGmsh&lt;MeshType&gt;::addPoint</a>( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel )</div>
 <div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;{</div>
 <div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;    addPoint( mesh, __e, __idGmshToFeel, mpl::int_&lt;mesh_type::nDim&gt;() );</div>
 <div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;}</div>
 <div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;ImporterGmsh&lt;MeshType&gt;::addPoint( mesh_type*mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;1&gt; )</div>
+<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;ImporterGmsh&lt;MeshType&gt;::addPoint( mesh_type*mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;1&gt; )</div>
 <div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;{</div>
 <div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;    face_type pf;</div>
 <div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;    pf.setProcessIdInPartition( this-&gt;worldComm().localRank() );</div>
 <div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;    pf.setId( mesh-&gt;numFaces() );</div>
 <div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;    pf.setMarker( __e.physical );</div>
 <div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;    pf.setMarker2( __e.elementary );</div>
-<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;    pf.setNumberOfPartitions( __e.<a class="code" href="structFeel_1_1detail_1_1GMSHElement.html#a3eb24190eebd31120f08cd2d0278c67d" title="partitioning info ">numPartitions</a> );</div>
+<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;    pf.setNumberOfPartitions( __e.numPartitions );</div>
 <div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;    pf.setProcessId( __e.partition );</div>
 <div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;    pf.setNeighborPartitionIds( __e.ghosts );</div>
 <div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;</div>
@@ -1217,14 +1217,14 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;}</div>
 <div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;ImporterGmsh&lt;MeshType&gt;::addPoint( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;2&gt; )</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;ImporterGmsh&lt;MeshType&gt;::addPoint( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;2&gt; )</div>
 <div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;{</div>
 <div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;    <span class="keyword">auto</span> pit = mesh-&gt;points().modify( mesh-&gt;pointIterator(__e.indices[0]),</div>
 <div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;                                      [&amp;__e]( point_type&amp; e )</div>
 <div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;                                      {</div>
 <div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;                                          e.setMarker( __e.physical );</div>
 <div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;                                          e.setMarker2( __e.elementary );</div>
-<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;                                          e.setNumberOfPartitions( __e.<a class="code" href="structFeel_1_1detail_1_1GMSHElement.html#a3eb24190eebd31120f08cd2d0278c67d" title="partitioning info ">numPartitions</a> );</div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;                                          e.setNumberOfPartitions( __e.numPartitions );</div>
 <div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;                                          e.setProcessId( __e.partition );</div>
 <div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;                                          e.setNeighborPartitionIds( __e.ghosts );</div>
 <div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;                                      } );</div>
@@ -1234,7 +1234,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;}</div>
 <div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;ImporterGmsh&lt;MeshType&gt;::addPoint( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;3&gt; )</div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;ImporterGmsh&lt;MeshType&gt;::addPoint( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;3&gt; )</div>
 <div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;{</div>
 <div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;    <span class="keyword">auto</span> pit = mesh-&gt;pointIterator(__e.indices[0]);</div>
 <div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;    <span class="keywordtype">bool</span> mod = mesh-&gt;points().modify( pit,</div>
@@ -1242,7 +1242,7 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;                                      {</div>
 <div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;                                          e.setMarker( __e.physical );</div>
 <div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;                                          e.setMarker2( __e.elementary );</div>
-<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;                                          e.setNumberOfPartitions( __e.<a class="code" href="structFeel_1_1detail_1_1GMSHElement.html#a3eb24190eebd31120f08cd2d0278c67d" title="partitioning info ">numPartitions</a> );</div>
+<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;                                          e.setNumberOfPartitions( __e.numPartitions );</div>
 <div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;                                          e.setProcessId( __e.partition );</div>
 <div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;                                          e.setNeighborPartitionIds( __e.ghosts );</div>
 <div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;                                      } );</div>
@@ -1252,20 +1252,20 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;</div>
 <div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;ImporterGmsh&lt;MeshType&gt;::addEdge( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel )</div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;ImporterGmsh&lt;MeshType&gt;::addEdge( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel )</div>
 <div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;{</div>
 <div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;    addEdge( mesh, __e, __idGmshToFeel, mpl::int_&lt;mesh_type::nDim&gt;() );</div>
 <div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;}</div>
 <div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;ImporterGmsh&lt;MeshType&gt;::addEdge( mesh_type*mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;1&gt; )</div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;ImporterGmsh&lt;MeshType&gt;::addEdge( mesh_type*mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;1&gt; )</div>
 <div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;{</div>
 <div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;    element_type e;</div>
 <div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;    <span class="comment">//e.setWorldComm(this-&gt;worldComm());</span></div>
 <div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;    e.setProcessIdInPartition( this-&gt;worldComm().localRank() );</div>
 <div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;    e.setMarker( __e.physical );</div>
 <div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;    e.setMarker2( __e.elementary );</div>
-<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;    e.setNumberOfPartitions( __e.<a class="code" href="structFeel_1_1detail_1_1GMSHElement.html#a3eb24190eebd31120f08cd2d0278c67d" title="partitioning info ">numPartitions</a> );</div>
+<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;    e.setNumberOfPartitions( __e.numPartitions );</div>
 <div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;    e.setProcessId( __e.partition );</div>
 <div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;    e.setNeighborPartitionIds( __e.ghosts );</div>
 <div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;</div>
@@ -1278,438 +1278,439 @@ $(document).ready(function(){initNavTree('importergmsh_8hpp_source.html','');});
 <div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;        <span class="keywordtype">int</span> count_pt_on_boundary = 0;</div>
 <div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;        <span class="keywordflow">for</span> ( uint16_type jj = 0; jj &lt; npoints_per_element; ++jj )</div>
 <div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;        {</div>
-<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;            e.setPoint( jj, mesh-&gt;point( __e.indices[jj] ) );</div>
-<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;            <span class="comment">//ptseen[mesh-&gt;point( __e.indices[jj] ).id()]=1;</span></div>
-<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;            <span class="keywordflow">if</span> ( mesh-&gt;point( __e.indices[jj] ).isOnBoundary() )</div>
-<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;                ++count_pt_on_boundary;</div>
-<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;        }</div>
-<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;        <span class="keywordflow">if</span> ( count_pt_on_boundary &gt;= 1 )</div>
-<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;        {</div>
-<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;            e.setOnBoundary( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;        }</div>
-<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;</div>
-<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;    }</div>
-<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;</div>
-<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;    mesh-&gt;addElement( e );</div>
-<div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;    __idGmshToFeel=e.id();</div>
-<div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160;</div>
-<div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
-<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
-<div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;added edge with id :&quot;</span> &lt;&lt; e.id()</div>
-<div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; n1: &quot;</span> &lt;&lt; mesh-&gt;point( __e.indices[0] ).node()</div>
-<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; n2: &quot;</span> &lt;&lt; mesh-&gt;point( __e.indices[1] ).node() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;}</div>
-<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;</div>
-<div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;ImporterGmsh&lt;MeshType&gt;::addEdge( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;2&gt; )</div>
-<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;{</div>
-<div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;    face_type e;</div>
-<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;    e.setProcessIdInPartition( this-&gt;worldComm().localRank() );</div>
-<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;    e.setId( mesh-&gt;numFaces() );</div>
-<div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;    e.setMarker( __e.physical );</div>
-<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;    e.setMarker2( __e.elementary );</div>
-<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;    e.setNumberOfPartitions( __e.<a class="code" href="structFeel_1_1detail_1_1GMSHElement.html#a3eb24190eebd31120f08cd2d0278c67d" title="partitioning info ">numPartitions</a> );</div>
-<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;    e.setProcessId( __e.partition );</div>
-<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;    e.setNeighborPartitionIds( __e.ghosts );</div>
-<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;</div>
-<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1afea6a1908b3cd3a722e987cf6861eca8" title="Line (2 nodes). ">GMSH_LINE</a> ||</div>
-<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ac6c38ea3f936ef5022b62c88003137d5" title="Second order line (3 nodes: 2 associated. ">GMSH_LINE_2</a> ||</div>
-<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a0800058b7a8fc81417cbcbeb530dddff" title="line of order 3 ">GMSH_LINE_3</a> ||</div>
-<div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ac70e34fe9d12e0279e8dda2ee527e2e3" title="line of order 4 ">GMSH_LINE_4</a> ||</div>
-<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a1dd62f2520e365961f6c04c726fa7928" title="line of order 5 ">GMSH_LINE_5</a> )</div>
-<div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160;    {</div>
-<div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;        DCHECK( __e.indices.size() == npoints_per_edge )</div>
-<div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;Invalid element indices, &quot;</span></div>
-<div class="line"><a name="l01284"></a><span class="lineno"> 1284</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;indices size : &quot;</span> &lt;&lt; __e.indices.size() &lt;&lt; <span class="stringliteral">&quot; points per edge : &quot;</span> &lt;&lt; npoints_per_edge;</div>
-<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160;        <span class="keywordtype">int</span> count_pt_on_boundary = 0;</div>
-<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span>&#160;        <span class="keywordflow">for</span> ( uint16_type jj = 0; jj &lt; npoints_per_edge; ++jj )</div>
-<div class="line"><a name="l01287"></a><span class="lineno"> 1287</span>&#160;        {</div>
-<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160;            e.setPoint( jj, mesh-&gt;point( __e.indices[jj] ) );</div>
-<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160;            <span class="keywordflow">if</span> ( mesh-&gt;point( __e.indices[jj] ).isOnBoundary() )</div>
-<div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;                ++count_pt_on_boundary;</div>
-<div class="line"><a name="l01291"></a><span class="lineno"> 1291</span>&#160;        }</div>
-<div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;        <span class="keywordflow">if</span> ( count_pt_on_boundary &gt;= 2 )</div>
-<div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;            e.setOnBoundary( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;</div>
-<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;    }</div>
-<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;</div>
-<div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
-<div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
-<div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;</div>
-<div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;    <span class="comment">//M_n_b_vertices[ __e.indices[0] ] = 1;</span></div>
-<div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;    <span class="comment">//M_n_b_vertices[ __e.indices[1] ] = 1;</span></div>
-<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;</div>
-<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;    <span class="keywordtype">bool</span> inserted;</div>
-<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;    face_iterator fit;</div>
-<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;    boost::tie( fit, inserted ) = mesh-&gt;addFace( e );</div>
-<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;    __idGmshToFeel=e.id();</div>
-<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;</div>
-<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;added edge on boundary (&quot;</span></div>
-<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;                  &lt;&lt; fit-&gt;isOnBoundary() &lt;&lt; <span class="stringliteral">&quot;) with id :&quot;</span> &lt;&lt; fit-&gt;id()</div>
-<div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; n1: &quot;</span> &lt;&lt; mesh-&gt;point( __e.indices[0] ).node()</div>
-<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; n2: &quot;</span> &lt;&lt; mesh-&gt;point( __e.indices[1] ).node() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;}</div>
-<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;ImporterGmsh&lt;MeshType&gt;::addEdge( mesh_type*mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;3&gt; )</div>
-<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;{</div>
-<div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;    edge_type e;</div>
-<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;    e.setProcessIdInPartition( this-&gt;worldComm().localRank() );</div>
-<div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;    e.setId( mesh-&gt;numEdges() );</div>
-<div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;    e.setMarker( __e.physical );</div>
-<div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;    e.setMarker2( __e.elementary );</div>
-<div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;    e.setNumberOfPartitions( __e.<a class="code" href="structFeel_1_1detail_1_1GMSHElement.html#a3eb24190eebd31120f08cd2d0278c67d" title="partitioning info ">numPartitions</a> );</div>
-<div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;    e.setProcessId( __e.partition );</div>
-<div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;    e.setNeighborPartitionIds( __e.ghosts );</div>
-<div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;</div>
-<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1afea6a1908b3cd3a722e987cf6861eca8" title="Line (2 nodes). ">GMSH_LINE</a> ||</div>
-<div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ac6c38ea3f936ef5022b62c88003137d5" title="Second order line (3 nodes: 2 associated. ">GMSH_LINE_2</a> ||</div>
-<div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a0800058b7a8fc81417cbcbeb530dddff" title="line of order 3 ">GMSH_LINE_3</a> ||</div>
-<div class="line"><a name="l01329"></a><span class="lineno"> 1329</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ac70e34fe9d12e0279e8dda2ee527e2e3" title="line of order 4 ">GMSH_LINE_4</a> ||</div>
-<div class="line"><a name="l01330"></a><span class="lineno"> 1330</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a1dd62f2520e365961f6c04c726fa7928" title="line of order 5 ">GMSH_LINE_5</a> )</div>
-<div class="line"><a name="l01331"></a><span class="lineno"> 1331</span>&#160;    {</div>
-<div class="line"><a name="l01332"></a><span class="lineno"> 1332</span>&#160;        <span class="keywordtype">int</span> count_pt_on_boundary = 0;</div>
-<div class="line"><a name="l01333"></a><span class="lineno"> 1333</span>&#160;        <span class="keywordflow">for</span> ( uint16_type jj = 0; jj &lt; npoints_per_edge; ++jj )</div>
-<div class="line"><a name="l01334"></a><span class="lineno"> 1334</span>&#160;        {</div>
-<div class="line"><a name="l01335"></a><span class="lineno"> 1335</span>&#160;            e.setPoint( jj, mesh-&gt;point( __e.indices[jj] ) );</div>
-<div class="line"><a name="l01336"></a><span class="lineno"> 1336</span>&#160;            <span class="keywordflow">if</span> ( mesh-&gt;point( __e.indices[jj] ).isOnBoundary() )</div>
-<div class="line"><a name="l01337"></a><span class="lineno"> 1337</span>&#160;                ++count_pt_on_boundary;</div>
-<div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;        }</div>
-<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;        <span class="keywordflow">if</span> ( count_pt_on_boundary &gt;= 2 )</div>
-<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;        {</div>
-<div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;            e.setOnBoundary( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;        }</div>
-<div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;    }</div>
-<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;</div>
-<div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
-<div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
-<div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;</div>
-<div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;    <span class="comment">//M_n_b_vertices[ __e.indices[0] ] = 1;</span></div>
-<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;    <span class="comment">//M_n_b_vertices[ __e.indices[1] ] = 1;</span></div>
-<div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;</div>
-<div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;    <span class="keyword">auto</span> eit = mesh-&gt;addEdge( e );</div>
-<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;    __idGmshToFeel=eit.id();</div>
-<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;</div>
-<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;    <span class="keywordflow">if</span> ( npoints_per_edge == 2 )</div>
-<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;added edge on boundary (&quot;</span></div>
-<div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;                      &lt;&lt; eit.isOnBoundary() &lt;&lt; <span class="stringliteral">&quot;) with id :&quot;</span> &lt;&lt; eit.id()</div>
-<div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; n1: &quot;</span> &lt;&lt; eit.point( 0 ).node()</div>
-<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; n2: &quot;</span> &lt;&lt; eit.point( 1 ).node() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;</div>
-<div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160;}</div>
-<div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160;</div>
-<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a name="l01363"></a><span class="lineno"> 1363</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01364"></a><span class="lineno"> 1364</span>&#160;ImporterGmsh&lt;MeshType&gt;::addFace( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel )</div>
-<div class="line"><a name="l01365"></a><span class="lineno"> 1365</span>&#160;{</div>
-<div class="line"><a name="l01366"></a><span class="lineno"> 1366</span>&#160;    addFace( mesh, __e, __idGmshToFeel, mpl::int_&lt;mesh_type::nDim&gt;() );</div>
-<div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160;}</div>
-<div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160;</div>
-<div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;ImporterGmsh&lt;MeshType&gt;::addFace( mesh_type*, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp;, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;1&gt; )</div>
-<div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;{}</div>
-<div class="line"><a name="l01373"></a><span class="lineno"> 1373</span>&#160;</div>
-<div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;ImporterGmsh&lt;MeshType&gt;::addFace( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;2&gt; )</div>
-<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;{</div>
-<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;    GmshOrdering&lt;element_type&gt; ordering;</div>
-<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;</div>
-<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;    element_type e;</div>
-<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;    e.setProcessIdInPartition( this-&gt;worldComm().localRank() );</div>
-<div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;    e.setMarker( __e.physical );</div>
-<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;    e.setMarker2( __e.elementary );</div>
-<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;    e.setNumberOfPartitions( __e.<a class="code" href="structFeel_1_1detail_1_1GMSHElement.html#a3eb24190eebd31120f08cd2d0278c67d" title="partitioning info ">numPartitions</a> );</div>
-<div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;    e.setProcessId( __e.partition );</div>
-<div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;    e.setNeighborPartitionIds( __e.ghosts );</div>
-<div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;</div>
-<div class="line"><a name="l01388"></a><span class="lineno"> 1388</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3ce5e16332068d450d959e1839ebde2d" title="Quadrangle (4 nodes). ">GMSH_QUADRANGLE</a> ||</div>
-<div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1af01f3dae9d29212f81d374233e9f013d" title="Second order quadrangle (9 nodes: 4. ">GMSH_QUADRANGLE_2</a> ||</div>
-<div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1aaed86b38abd76b1aeb06bf30e3d54062" title="Triangle (3 nodes). ">GMSH_TRIANGLE</a> ||</div>
-<div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3b0a4272c4f1aa39c3ec4e036d9be611" title="Second order triangle (6 nodes: 3. ">GMSH_TRIANGLE_2</a> ||</div>
-<div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a79c9343bfd5996352dbc52d0085116e9" title="triangle of order 3 ">GMSH_TRIANGLE_3</a> ||</div>
-<div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a88f4fbeaf4332ea44eb880a60057a99b" title="triangle of order 4 ">GMSH_TRIANGLE_4</a> ||</div>
-<div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a54f3f4b7a65f4d7a1b42d3aa045de648" title="triangle of order 5 ">GMSH_TRIANGLE_5</a> )</div>
-<div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;    {</div>
-<div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;        <span class="keywordtype">int</span> count_pt_on_boundary = 0;</div>
-<div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;        <span class="keywordflow">for</span> ( uint16_type jj = 0; jj &lt; npoints_per_element; ++jj )</div>
-<div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;        {</div>
-<div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;            <span class="comment">//ptseen[mesh-&gt;point( __e.indices[jj] ).id()]=1;</span></div>
-<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;            <span class="keywordflow">if</span> (!e.isGhostCell()) mesh-&gt;points().modify( mesh-&gt;pointIterator( __e.indices[jj] ), Feel::detail::UpdateProcessId(e.processId()) );</div>
-<div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;            e.setPoint( ordering.fromGmshId( jj ), mesh-&gt;point( __e.indices[jj] ) );</div>
-<div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;            <span class="keywordflow">if</span> ( mesh-&gt;point( __e.indices[jj] ).isOnBoundary() )</div>
-<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;                ++count_pt_on_boundary;</div>
-<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;        }</div>
-<div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;        <span class="keywordflow">if</span> ( ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1aaed86b38abd76b1aeb06bf30e3d54062" title="Triangle (3 nodes). ">GMSH_TRIANGLE</a> ||</div>
-<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3b0a4272c4f1aa39c3ec4e036d9be611" title="Second order triangle (6 nodes: 3. ">GMSH_TRIANGLE_2</a> ||</div>
-<div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a79c9343bfd5996352dbc52d0085116e9" title="triangle of order 3 ">GMSH_TRIANGLE_3</a> ||</div>
-<div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a88f4fbeaf4332ea44eb880a60057a99b" title="triangle of order 4 ">GMSH_TRIANGLE_4</a> ||</div>
-<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a54f3f4b7a65f4d7a1b42d3aa045de648" title="triangle of order 5 ">GMSH_TRIANGLE_5</a> ) &amp;&amp;</div>
-<div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160;             count_pt_on_boundary &gt;= 2 )</div>
-<div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;        {</div>
-<div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;            e.setOnBoundary( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l01413"></a><span class="lineno"> 1413</span>&#160;        }</div>
-<div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160;        <span class="keywordflow">if</span> ( (__e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3ce5e16332068d450d959e1839ebde2d" title="Quadrangle (4 nodes). ">GMSH_QUADRANGLE</a> ||</div>
-<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;              __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1af01f3dae9d29212f81d374233e9f013d" title="Second order quadrangle (9 nodes: 4. ">GMSH_QUADRANGLE_2</a>) &amp;&amp;</div>
-<div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;             count_pt_on_boundary &gt;= 2 )</div>
-<div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;            e.setOnBoundary( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;</div>
-<div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;    }</div>
-<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;</div>
-<div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;    mesh-&gt;addElement( e );</div>
-<div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;    __idGmshToFeel=e.id();</div>
-<div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;</div>
-<div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
-<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
-<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;    M_n_vertices[ __e.indices[2] ] = 1;</div>
-<div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160;</div>
-<div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3ce5e16332068d450d959e1839ebde2d" title="Quadrangle (4 nodes). ">GMSH_QUADRANGLE</a> ||</div>
-<div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1af01f3dae9d29212f81d374233e9f013d" title="Second order quadrangle (9 nodes: 4. ">GMSH_QUADRANGLE_2</a> )</div>
-<div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160;        M_n_vertices[ __e.indices[3] ] = 1;</div>
-<div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160;}</div>
-<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;ImporterGmsh&lt;MeshType&gt;::addFace( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;3&gt; )</div>
-<div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;{</div>
-<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;    GmshOrdering&lt;face_type&gt; ordering;</div>
-<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;</div>
-<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;    face_type e;</div>
-<div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;    e.setProcessIdInPartition( this-&gt;worldComm().localRank() );</div>
-<div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;    e.setId( mesh-&gt;numFaces() );</div>
-<div class="line"><a name="l01441"></a><span class="lineno"> 1441</span>&#160;    e.setMarker( __e.physical );</div>
-<div class="line"><a name="l01442"></a><span class="lineno"> 1442</span>&#160;    e.setMarker2( __e.elementary );</div>
-<div class="line"><a name="l01443"></a><span class="lineno"> 1443</span>&#160;    e.setNumberOfPartitions( __e.<a class="code" href="structFeel_1_1detail_1_1GMSHElement.html#a3eb24190eebd31120f08cd2d0278c67d" title="partitioning info ">numPartitions</a> );</div>
-<div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;    e.setProcessId( __e.partition );</div>
-<div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;    e.setNeighborPartitionIds( __e.ghosts );</div>
-<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;</div>
-<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;    <span class="comment">// we consider in 3D that all faces provided by Gmsh are on the boundary</span></div>
-<div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;    <span class="comment">// which might not be true</span></div>
-<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;    <span class="comment">// \warning there might be a bug here</span></div>
-<div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;    e.setOnBoundary( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;</div>
-<div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3ce5e16332068d450d959e1839ebde2d" title="Quadrangle (4 nodes). ">GMSH_QUADRANGLE</a> ||</div>
-<div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1af01f3dae9d29212f81d374233e9f013d" title="Second order quadrangle (9 nodes: 4. ">GMSH_QUADRANGLE_2</a> ||</div>
-<div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1aaed86b38abd76b1aeb06bf30e3d54062" title="Triangle (3 nodes). ">GMSH_TRIANGLE</a> ||</div>
-<div class="line"><a name="l01455"></a><span class="lineno"> 1455</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3b0a4272c4f1aa39c3ec4e036d9be611" title="Second order triangle (6 nodes: 3. ">GMSH_TRIANGLE_2</a> ||</div>
-<div class="line"><a name="l01456"></a><span class="lineno"> 1456</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a79c9343bfd5996352dbc52d0085116e9" title="triangle of order 3 ">GMSH_TRIANGLE_3</a> ||</div>
-<div class="line"><a name="l01457"></a><span class="lineno"> 1457</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a88f4fbeaf4332ea44eb880a60057a99b" title="triangle of order 4 ">GMSH_TRIANGLE_4</a> ||</div>
-<div class="line"><a name="l01458"></a><span class="lineno"> 1458</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a54f3f4b7a65f4d7a1b42d3aa045de648" title="triangle of order 5 ">GMSH_TRIANGLE_5</a> )</div>
-<div class="line"><a name="l01459"></a><span class="lineno"> 1459</span>&#160;    {</div>
-<div class="line"><a name="l01460"></a><span class="lineno"> 1460</span>&#160;        <span class="keywordflow">for</span> ( uint16_type jj = 0; jj &lt; npoints_per_face; ++jj )</div>
-<div class="line"><a name="l01461"></a><span class="lineno"> 1461</span>&#160;        {</div>
-<div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;            <span class="comment">//ptseen[mesh-&gt;point( __e.indices[jj] ).id()]=1;</span></div>
-<div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;            e.setPoint( ordering.fromGmshId( jj ), mesh-&gt;point( __e.indices[jj] ) );</div>
-<div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160;        }</div>
-<div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160;</div>
-<div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;        <span class="comment">//e.setPoint( jj, mesh-&gt;point( __e[jj] ) );</span></div>
-<div class="line"><a name="l01467"></a><span class="lineno"> 1467</span>&#160;    }</div>
-<div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160;</div>
-<div class="line"><a name="l01469"></a><span class="lineno"> 1469</span>&#160;    <span class="keywordtype">bool</span> inserted;</div>
-<div class="line"><a name="l01470"></a><span class="lineno"> 1470</span>&#160;    face_iterator fit;</div>
-<div class="line"><a name="l01471"></a><span class="lineno"> 1471</span>&#160;    boost::tie( fit, inserted ) = mesh-&gt;addFace( e );</div>
-<div class="line"><a name="l01472"></a><span class="lineno"> 1472</span>&#160;</div>
-<div class="line"><a name="l01473"></a><span class="lineno"> 1473</span>&#160;    __idGmshToFeel=e.id();</div>
-<div class="line"><a name="l01474"></a><span class="lineno"> 1474</span>&#160;</div>
-<div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
-<div class="line"><a name="l01476"></a><span class="lineno"> 1476</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
-<div class="line"><a name="l01477"></a><span class="lineno"> 1477</span>&#160;    M_n_vertices[ __e.indices[2] ] = 1;</div>
-<div class="line"><a name="l01478"></a><span class="lineno"> 1478</span>&#160;</div>
-<div class="line"><a name="l01479"></a><span class="lineno"> 1479</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3ce5e16332068d450d959e1839ebde2d" title="Quadrangle (4 nodes). ">GMSH_QUADRANGLE</a> ||</div>
-<div class="line"><a name="l01480"></a><span class="lineno"> 1480</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1af01f3dae9d29212f81d374233e9f013d" title="Second order quadrangle (9 nodes: 4. ">GMSH_QUADRANGLE_2</a> )</div>
-<div class="line"><a name="l01481"></a><span class="lineno"> 1481</span>&#160;        M_n_vertices[ __e.indices[3] ] = 1;</div>
-<div class="line"><a name="l01482"></a><span class="lineno"> 1482</span>&#160;</div>
-<div class="line"><a name="l01483"></a><span class="lineno"> 1483</span>&#160;}</div>
-<div class="line"><a name="l01484"></a><span class="lineno"> 1484</span>&#160;</div>
-<div class="line"><a name="l01485"></a><span class="lineno"> 1485</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a name="l01486"></a><span class="lineno"> 1486</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01487"></a><span class="lineno"> 1487</span>&#160;ImporterGmsh&lt;MeshType&gt;::addVolume( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel )</div>
-<div class="line"><a name="l01488"></a><span class="lineno"> 1488</span>&#160;{</div>
-<div class="line"><a name="l01489"></a><span class="lineno"> 1489</span>&#160;    addVolume( mesh, __e, __idGmshToFeel, mpl::int_&lt;mesh_type::nDim&gt;() );</div>
-<div class="line"><a name="l01490"></a><span class="lineno"> 1490</span>&#160;}</div>
-<div class="line"><a name="l01491"></a><span class="lineno"> 1491</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a name="l01492"></a><span class="lineno"> 1492</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01493"></a><span class="lineno"> 1493</span>&#160;ImporterGmsh&lt;MeshType&gt;::addVolume( mesh_type*, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp;, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;1&gt; )</div>
-<div class="line"><a name="l01494"></a><span class="lineno"> 1494</span>&#160;{}</div>
-<div class="line"><a name="l01495"></a><span class="lineno"> 1495</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a name="l01496"></a><span class="lineno"> 1496</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;ImporterGmsh&lt;MeshType&gt;::addVolume( mesh_type*, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp;, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;2&gt; )</div>
-<div class="line"><a name="l01498"></a><span class="lineno"> 1498</span>&#160;{}</div>
-<div class="line"><a name="l01499"></a><span class="lineno"> 1499</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01501"></a><span class="lineno"> 1501</span>&#160;ImporterGmsh&lt;MeshType&gt;::addVolume( mesh_type* mesh, <a class="code" href="structFeel_1_1detail_1_1GMSHElement.html">Feel::detail::GMSHElement</a> <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;3&gt; )</div>
-<div class="line"><a name="l01502"></a><span class="lineno"> 1502</span>&#160;{</div>
-<div class="line"><a name="l01503"></a><span class="lineno"> 1503</span>&#160;    element_type e;</div>
-<div class="line"><a name="l01504"></a><span class="lineno"> 1504</span>&#160;    e.setProcessIdInPartition( this-&gt;worldComm().localRank() );</div>
-<div class="line"><a name="l01505"></a><span class="lineno"> 1505</span>&#160;    GmshOrdering&lt;element_type&gt; ordering;</div>
-<div class="line"><a name="l01506"></a><span class="lineno"> 1506</span>&#160;    e.setMarker( __e.physical );</div>
-<div class="line"><a name="l01507"></a><span class="lineno"> 1507</span>&#160;    e.setMarker2( __e.elementary );</div>
-<div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160;    e.setNumberOfPartitions( __e.<a class="code" href="structFeel_1_1detail_1_1GMSHElement.html#a3eb24190eebd31120f08cd2d0278c67d" title="partitioning info ">numPartitions</a> );</div>
-<div class="line"><a name="l01509"></a><span class="lineno"> 1509</span>&#160;    e.setProcessId( __e.partition );</div>
-<div class="line"><a name="l01510"></a><span class="lineno"> 1510</span>&#160;    e.setNeighborPartitionIds( __e.ghosts );</div>
-<div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160;</div>
+<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;            <span class="keywordflow">if</span> (!e.isGhostCell()) mesh-&gt;points().modify( mesh-&gt;pointIterator( __e.indices[jj] ), Feel::detail::UpdateProcessId(e.processId()) );</div>
+<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;            e.setPoint( jj, mesh-&gt;point( __e.indices[jj] ) );</div>
+<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;            <span class="comment">//ptseen[mesh-&gt;point( __e.indices[jj] ).id()]=1;</span></div>
+<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;            <span class="keywordflow">if</span> ( mesh-&gt;point( __e.indices[jj] ).isOnBoundary() )</div>
+<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;                ++count_pt_on_boundary;</div>
+<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;        }</div>
+<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;        <span class="keywordflow">if</span> ( count_pt_on_boundary &gt;= 1 )</div>
+<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;        {</div>
+<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;            e.setOnBoundary( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;        }</div>
+<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;</div>
+<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;    }</div>
+<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;</div>
+<div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;    mesh-&gt;addElement( e );</div>
+<div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160;    __idGmshToFeel=e.id();</div>
+<div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;</div>
+<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
+<div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
+<div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;added edge with id :&quot;</span> &lt;&lt; e.id()</div>
+<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; n1: &quot;</span> &lt;&lt; mesh-&gt;point( __e.indices[0] ).node()</div>
+<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; n2: &quot;</span> &lt;&lt; mesh-&gt;point( __e.indices[1] ).node() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;}</div>
+<div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;</div>
+<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;ImporterGmsh&lt;MeshType&gt;::addEdge( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;2&gt; )</div>
+<div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;{</div>
+<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;    face_type e;</div>
+<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;    e.setProcessIdInPartition( this-&gt;worldComm().localRank() );</div>
+<div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;    e.setId( mesh-&gt;numFaces() );</div>
+<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;    e.setMarker( __e.physical );</div>
+<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;    e.setMarker2( __e.elementary );</div>
+<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;    e.setNumberOfPartitions( __e.numPartitions );</div>
+<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;    e.setProcessId( __e.partition );</div>
+<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;    e.setNeighborPartitionIds( __e.ghosts );</div>
+<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;</div>
+<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1afea6a1908b3cd3a722e987cf6861eca8" title="Line (2 nodes). ">GMSH_LINE</a> ||</div>
+<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ac6c38ea3f936ef5022b62c88003137d5" title="Second order line (3 nodes: 2 associated. ">GMSH_LINE_2</a> ||</div>
+<div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a0800058b7a8fc81417cbcbeb530dddff" title="line of order 3 ">GMSH_LINE_3</a> ||</div>
+<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ac70e34fe9d12e0279e8dda2ee527e2e3" title="line of order 4 ">GMSH_LINE_4</a> ||</div>
+<div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a1dd62f2520e365961f6c04c726fa7928" title="line of order 5 ">GMSH_LINE_5</a> )</div>
+<div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;    {</div>
+<div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160;        DCHECK( __e.indices.size() == npoints_per_edge )</div>
+<div class="line"><a name="l01284"></a><span class="lineno"> 1284</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;Invalid element indices, &quot;</span></div>
+<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;indices size : &quot;</span> &lt;&lt; __e.indices.size() &lt;&lt; <span class="stringliteral">&quot; points per edge : &quot;</span> &lt;&lt; npoints_per_edge;</div>
+<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span>&#160;        <span class="keywordtype">int</span> count_pt_on_boundary = 0;</div>
+<div class="line"><a name="l01287"></a><span class="lineno"> 1287</span>&#160;        <span class="keywordflow">for</span> ( uint16_type jj = 0; jj &lt; npoints_per_edge; ++jj )</div>
+<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160;        {</div>
+<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160;            e.setPoint( jj, mesh-&gt;point( __e.indices[jj] ) );</div>
+<div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;            <span class="keywordflow">if</span> ( mesh-&gt;point( __e.indices[jj] ).isOnBoundary() )</div>
+<div class="line"><a name="l01291"></a><span class="lineno"> 1291</span>&#160;                ++count_pt_on_boundary;</div>
+<div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;        }</div>
+<div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;        <span class="keywordflow">if</span> ( count_pt_on_boundary &gt;= 2 )</div>
+<div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;            e.setOnBoundary( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;</div>
+<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;    }</div>
+<div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;</div>
+<div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
+<div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
+<div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;</div>
+<div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;    <span class="comment">//M_n_b_vertices[ __e.indices[0] ] = 1;</span></div>
+<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;    <span class="comment">//M_n_b_vertices[ __e.indices[1] ] = 1;</span></div>
+<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;</div>
+<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;    <span class="keywordtype">bool</span> inserted;</div>
+<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;    face_iterator fit;</div>
+<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;    boost::tie( fit, inserted ) = mesh-&gt;addFace( e );</div>
+<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;    __idGmshToFeel=e.id();</div>
+<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;</div>
+<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;added edge on boundary (&quot;</span></div>
+<div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;                  &lt;&lt; fit-&gt;isOnBoundary() &lt;&lt; <span class="stringliteral">&quot;) with id :&quot;</span> &lt;&lt; fit-&gt;id()</div>
+<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; n1: &quot;</span> &lt;&lt; mesh-&gt;point( __e.indices[0] ).node()</div>
+<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; n2: &quot;</span> &lt;&lt; mesh-&gt;point( __e.indices[1] ).node() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;}</div>
+<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;ImporterGmsh&lt;MeshType&gt;::addEdge( mesh_type*mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;3&gt; )</div>
+<div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;{</div>
+<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;    edge_type e;</div>
+<div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;    e.setProcessIdInPartition( this-&gt;worldComm().localRank() );</div>
+<div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;    e.setId( mesh-&gt;numEdges() );</div>
+<div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;    e.setMarker( __e.physical );</div>
+<div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;    e.setMarker2( __e.elementary );</div>
+<div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;    e.setNumberOfPartitions( __e.numPartitions );</div>
+<div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;    e.setProcessId( __e.partition );</div>
+<div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;    e.setNeighborPartitionIds( __e.ghosts );</div>
+<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;</div>
+<div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1afea6a1908b3cd3a722e987cf6861eca8" title="Line (2 nodes). ">GMSH_LINE</a> ||</div>
+<div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ac6c38ea3f936ef5022b62c88003137d5" title="Second order line (3 nodes: 2 associated. ">GMSH_LINE_2</a> ||</div>
+<div class="line"><a name="l01329"></a><span class="lineno"> 1329</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a0800058b7a8fc81417cbcbeb530dddff" title="line of order 3 ">GMSH_LINE_3</a> ||</div>
+<div class="line"><a name="l01330"></a><span class="lineno"> 1330</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ac70e34fe9d12e0279e8dda2ee527e2e3" title="line of order 4 ">GMSH_LINE_4</a> ||</div>
+<div class="line"><a name="l01331"></a><span class="lineno"> 1331</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a1dd62f2520e365961f6c04c726fa7928" title="line of order 5 ">GMSH_LINE_5</a> )</div>
+<div class="line"><a name="l01332"></a><span class="lineno"> 1332</span>&#160;    {</div>
+<div class="line"><a name="l01333"></a><span class="lineno"> 1333</span>&#160;        <span class="keywordtype">int</span> count_pt_on_boundary = 0;</div>
+<div class="line"><a name="l01334"></a><span class="lineno"> 1334</span>&#160;        <span class="keywordflow">for</span> ( uint16_type jj = 0; jj &lt; npoints_per_edge; ++jj )</div>
+<div class="line"><a name="l01335"></a><span class="lineno"> 1335</span>&#160;        {</div>
+<div class="line"><a name="l01336"></a><span class="lineno"> 1336</span>&#160;            e.setPoint( jj, mesh-&gt;point( __e.indices[jj] ) );</div>
+<div class="line"><a name="l01337"></a><span class="lineno"> 1337</span>&#160;            <span class="keywordflow">if</span> ( mesh-&gt;point( __e.indices[jj] ).isOnBoundary() )</div>
+<div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;                ++count_pt_on_boundary;</div>
+<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;        }</div>
+<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;        <span class="keywordflow">if</span> ( count_pt_on_boundary &gt;= 2 )</div>
+<div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;        {</div>
+<div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;            e.setOnBoundary( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;        }</div>
+<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;    }</div>
+<div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;</div>
+<div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
+<div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
+<div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;</div>
+<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;    <span class="comment">//M_n_b_vertices[ __e.indices[0] ] = 1;</span></div>
+<div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;    <span class="comment">//M_n_b_vertices[ __e.indices[1] ] = 1;</span></div>
+<div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;</div>
+<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;    <span class="keyword">auto</span> eit = mesh-&gt;addEdge( e );</div>
+<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;    __idGmshToFeel=eit.id();</div>
+<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;</div>
+<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;    <span class="keywordflow">if</span> ( npoints_per_edge == 2 )</div>
+<div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;        DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;added edge on boundary (&quot;</span></div>
+<div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;                      &lt;&lt; eit.isOnBoundary() &lt;&lt; <span class="stringliteral">&quot;) with id :&quot;</span> &lt;&lt; eit.id()</div>
+<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; n1: &quot;</span> &lt;&lt; eit.point( 0 ).node()</div>
+<div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; n2: &quot;</span> &lt;&lt; eit.point( 1 ).node() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160;</div>
+<div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160;}</div>
+<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;</div>
+<div class="line"><a name="l01363"></a><span class="lineno"> 1363</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="line"><a name="l01364"></a><span class="lineno"> 1364</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l01365"></a><span class="lineno"> 1365</span>&#160;ImporterGmsh&lt;MeshType&gt;::addFace( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel )</div>
+<div class="line"><a name="l01366"></a><span class="lineno"> 1366</span>&#160;{</div>
+<div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160;    addFace( mesh, __e, __idGmshToFeel, mpl::int_&lt;mesh_type::nDim&gt;() );</div>
+<div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160;}</div>
+<div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;</div>
+<div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;ImporterGmsh&lt;MeshType&gt;::addFace( mesh_type*, Feel::detail::GMSHElement <span class="keyword">const</span>&amp;, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;1&gt; )</div>
+<div class="line"><a name="l01373"></a><span class="lineno"> 1373</span>&#160;{}</div>
+<div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;</div>
+<div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;ImporterGmsh&lt;MeshType&gt;::addFace( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;2&gt; )</div>
+<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;{</div>
+<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;    GmshOrdering&lt;element_type&gt; ordering;</div>
+<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;</div>
+<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;    element_type e;</div>
+<div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;    e.setProcessIdInPartition( this-&gt;worldComm().localRank() );</div>
+<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;    e.setMarker( __e.physical );</div>
+<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;    e.setMarker2( __e.elementary );</div>
+<div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;    e.setNumberOfPartitions( __e.numPartitions );</div>
+<div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;    e.setProcessId( __e.partition );</div>
+<div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;    e.setNeighborPartitionIds( __e.ghosts );</div>
+<div class="line"><a name="l01388"></a><span class="lineno"> 1388</span>&#160;</div>
+<div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3ce5e16332068d450d959e1839ebde2d" title="Quadrangle (4 nodes). ">GMSH_QUADRANGLE</a> ||</div>
+<div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1af01f3dae9d29212f81d374233e9f013d" title="Second order quadrangle (9 nodes: 4. ">GMSH_QUADRANGLE_2</a> ||</div>
+<div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1aaed86b38abd76b1aeb06bf30e3d54062" title="Triangle (3 nodes). ">GMSH_TRIANGLE</a> ||</div>
+<div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3b0a4272c4f1aa39c3ec4e036d9be611" title="Second order triangle (6 nodes: 3. ">GMSH_TRIANGLE_2</a> ||</div>
+<div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a79c9343bfd5996352dbc52d0085116e9" title="triangle of order 3 ">GMSH_TRIANGLE_3</a> ||</div>
+<div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a88f4fbeaf4332ea44eb880a60057a99b" title="triangle of order 4 ">GMSH_TRIANGLE_4</a> ||</div>
+<div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a54f3f4b7a65f4d7a1b42d3aa045de648" title="triangle of order 5 ">GMSH_TRIANGLE_5</a> )</div>
+<div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;    {</div>
+<div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;        <span class="keywordtype">int</span> count_pt_on_boundary = 0;</div>
+<div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;        <span class="keywordflow">for</span> ( uint16_type jj = 0; jj &lt; npoints_per_element; ++jj )</div>
+<div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;        {</div>
+<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;            <span class="comment">//ptseen[mesh-&gt;point( __e.indices[jj] ).id()]=1;</span></div>
+<div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;            <span class="keywordflow">if</span> (!e.isGhostCell()) mesh-&gt;points().modify( mesh-&gt;pointIterator( __e.indices[jj] ), Feel::detail::UpdateProcessId(e.processId()) );</div>
+<div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;            e.setPoint( ordering.fromGmshId( jj ), mesh-&gt;point( __e.indices[jj] ) );</div>
+<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;            <span class="keywordflow">if</span> ( mesh-&gt;point( __e.indices[jj] ).isOnBoundary() )</div>
+<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;                ++count_pt_on_boundary;</div>
+<div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;        }</div>
+<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;        <span class="keywordflow">if</span> ( ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1aaed86b38abd76b1aeb06bf30e3d54062" title="Triangle (3 nodes). ">GMSH_TRIANGLE</a> ||</div>
+<div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3b0a4272c4f1aa39c3ec4e036d9be611" title="Second order triangle (6 nodes: 3. ">GMSH_TRIANGLE_2</a> ||</div>
+<div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a79c9343bfd5996352dbc52d0085116e9" title="triangle of order 3 ">GMSH_TRIANGLE_3</a> ||</div>
+<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a88f4fbeaf4332ea44eb880a60057a99b" title="triangle of order 4 ">GMSH_TRIANGLE_4</a> ||</div>
+<div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a54f3f4b7a65f4d7a1b42d3aa045de648" title="triangle of order 5 ">GMSH_TRIANGLE_5</a> ) &amp;&amp;</div>
+<div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;             count_pt_on_boundary &gt;= 2 )</div>
+<div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;        {</div>
+<div class="line"><a name="l01413"></a><span class="lineno"> 1413</span>&#160;            e.setOnBoundary( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160;        }</div>
+<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;        <span class="keywordflow">if</span> ( (__e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3ce5e16332068d450d959e1839ebde2d" title="Quadrangle (4 nodes). ">GMSH_QUADRANGLE</a> ||</div>
+<div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;              __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1af01f3dae9d29212f81d374233e9f013d" title="Second order quadrangle (9 nodes: 4. ">GMSH_QUADRANGLE_2</a>) &amp;&amp;</div>
+<div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;             count_pt_on_boundary &gt;= 2 )</div>
+<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;            e.setOnBoundary( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;</div>
+<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;    }</div>
+<div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;</div>
+<div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;    mesh-&gt;addElement( e );</div>
+<div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;    __idGmshToFeel=e.id();</div>
+<div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;</div>
+<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
+<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
+<div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160;    M_n_vertices[ __e.indices[2] ] = 1;</div>
+<div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;</div>
+<div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3ce5e16332068d450d959e1839ebde2d" title="Quadrangle (4 nodes). ">GMSH_QUADRANGLE</a> ||</div>
+<div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1af01f3dae9d29212f81d374233e9f013d" title="Second order quadrangle (9 nodes: 4. ">GMSH_QUADRANGLE_2</a> )</div>
+<div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160;        M_n_vertices[ __e.indices[3] ] = 1;</div>
+<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;}</div>
+<div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;ImporterGmsh&lt;MeshType&gt;::addFace( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;3&gt; )</div>
+<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;{</div>
+<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;    GmshOrdering&lt;face_type&gt; ordering;</div>
+<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;</div>
+<div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;    face_type e;</div>
+<div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;    e.setProcessIdInPartition( this-&gt;worldComm().localRank() );</div>
+<div class="line"><a name="l01441"></a><span class="lineno"> 1441</span>&#160;    e.setId( mesh-&gt;numFaces() );</div>
+<div class="line"><a name="l01442"></a><span class="lineno"> 1442</span>&#160;    e.setMarker( __e.physical );</div>
+<div class="line"><a name="l01443"></a><span class="lineno"> 1443</span>&#160;    e.setMarker2( __e.elementary );</div>
+<div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;    e.setNumberOfPartitions( __e.numPartitions );</div>
+<div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;    e.setProcessId( __e.partition );</div>
+<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;    e.setNeighborPartitionIds( __e.ghosts );</div>
+<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;</div>
+<div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;    <span class="comment">// we consider in 3D that all faces provided by Gmsh are on the boundary</span></div>
+<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;    <span class="comment">// which might not be true</span></div>
+<div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;    <span class="comment">// \warning there might be a bug here</span></div>
+<div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;    e.setOnBoundary( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;</div>
+<div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3ce5e16332068d450d959e1839ebde2d" title="Quadrangle (4 nodes). ">GMSH_QUADRANGLE</a> ||</div>
+<div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1af01f3dae9d29212f81d374233e9f013d" title="Second order quadrangle (9 nodes: 4. ">GMSH_QUADRANGLE_2</a> ||</div>
+<div class="line"><a name="l01455"></a><span class="lineno"> 1455</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1aaed86b38abd76b1aeb06bf30e3d54062" title="Triangle (3 nodes). ">GMSH_TRIANGLE</a> ||</div>
+<div class="line"><a name="l01456"></a><span class="lineno"> 1456</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3b0a4272c4f1aa39c3ec4e036d9be611" title="Second order triangle (6 nodes: 3. ">GMSH_TRIANGLE_2</a> ||</div>
+<div class="line"><a name="l01457"></a><span class="lineno"> 1457</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a79c9343bfd5996352dbc52d0085116e9" title="triangle of order 3 ">GMSH_TRIANGLE_3</a> ||</div>
+<div class="line"><a name="l01458"></a><span class="lineno"> 1458</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a88f4fbeaf4332ea44eb880a60057a99b" title="triangle of order 4 ">GMSH_TRIANGLE_4</a> ||</div>
+<div class="line"><a name="l01459"></a><span class="lineno"> 1459</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a54f3f4b7a65f4d7a1b42d3aa045de648" title="triangle of order 5 ">GMSH_TRIANGLE_5</a> )</div>
+<div class="line"><a name="l01460"></a><span class="lineno"> 1460</span>&#160;    {</div>
+<div class="line"><a name="l01461"></a><span class="lineno"> 1461</span>&#160;        <span class="keywordflow">for</span> ( uint16_type jj = 0; jj &lt; npoints_per_face; ++jj )</div>
+<div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;        {</div>
+<div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;            <span class="comment">//ptseen[mesh-&gt;point( __e.indices[jj] ).id()]=1;</span></div>
+<div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160;            e.setPoint( ordering.fromGmshId( jj ), mesh-&gt;point( __e.indices[jj] ) );</div>
+<div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160;        }</div>
+<div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;</div>
+<div class="line"><a name="l01467"></a><span class="lineno"> 1467</span>&#160;        <span class="comment">//e.setPoint( jj, mesh-&gt;point( __e[jj] ) );</span></div>
+<div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160;    }</div>
+<div class="line"><a name="l01469"></a><span class="lineno"> 1469</span>&#160;</div>
+<div class="line"><a name="l01470"></a><span class="lineno"> 1470</span>&#160;    <span class="keywordtype">bool</span> inserted;</div>
+<div class="line"><a name="l01471"></a><span class="lineno"> 1471</span>&#160;    face_iterator fit;</div>
+<div class="line"><a name="l01472"></a><span class="lineno"> 1472</span>&#160;    boost::tie( fit, inserted ) = mesh-&gt;addFace( e );</div>
+<div class="line"><a name="l01473"></a><span class="lineno"> 1473</span>&#160;</div>
+<div class="line"><a name="l01474"></a><span class="lineno"> 1474</span>&#160;    __idGmshToFeel=e.id();</div>
+<div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;</div>
+<div class="line"><a name="l01476"></a><span class="lineno"> 1476</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
+<div class="line"><a name="l01477"></a><span class="lineno"> 1477</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
+<div class="line"><a name="l01478"></a><span class="lineno"> 1478</span>&#160;    M_n_vertices[ __e.indices[2] ] = 1;</div>
+<div class="line"><a name="l01479"></a><span class="lineno"> 1479</span>&#160;</div>
+<div class="line"><a name="l01480"></a><span class="lineno"> 1480</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a3ce5e16332068d450d959e1839ebde2d" title="Quadrangle (4 nodes). ">GMSH_QUADRANGLE</a> ||</div>
+<div class="line"><a name="l01481"></a><span class="lineno"> 1481</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1af01f3dae9d29212f81d374233e9f013d" title="Second order quadrangle (9 nodes: 4. ">GMSH_QUADRANGLE_2</a> )</div>
+<div class="line"><a name="l01482"></a><span class="lineno"> 1482</span>&#160;        M_n_vertices[ __e.indices[3] ] = 1;</div>
+<div class="line"><a name="l01483"></a><span class="lineno"> 1483</span>&#160;</div>
+<div class="line"><a name="l01484"></a><span class="lineno"> 1484</span>&#160;}</div>
+<div class="line"><a name="l01485"></a><span class="lineno"> 1485</span>&#160;</div>
+<div class="line"><a name="l01486"></a><span class="lineno"> 1486</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="line"><a name="l01487"></a><span class="lineno"> 1487</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l01488"></a><span class="lineno"> 1488</span>&#160;ImporterGmsh&lt;MeshType&gt;::addVolume( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel )</div>
+<div class="line"><a name="l01489"></a><span class="lineno"> 1489</span>&#160;{</div>
+<div class="line"><a name="l01490"></a><span class="lineno"> 1490</span>&#160;    addVolume( mesh, __e, __idGmshToFeel, mpl::int_&lt;mesh_type::nDim&gt;() );</div>
+<div class="line"><a name="l01491"></a><span class="lineno"> 1491</span>&#160;}</div>
+<div class="line"><a name="l01492"></a><span class="lineno"> 1492</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="line"><a name="l01493"></a><span class="lineno"> 1493</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l01494"></a><span class="lineno"> 1494</span>&#160;ImporterGmsh&lt;MeshType&gt;::addVolume( mesh_type*, Feel::detail::GMSHElement <span class="keyword">const</span>&amp;, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;1&gt; )</div>
+<div class="line"><a name="l01495"></a><span class="lineno"> 1495</span>&#160;{}</div>
+<div class="line"><a name="l01496"></a><span class="lineno"> 1496</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l01498"></a><span class="lineno"> 1498</span>&#160;ImporterGmsh&lt;MeshType&gt;::addVolume( mesh_type*, Feel::detail::GMSHElement <span class="keyword">const</span>&amp;, <span class="keywordtype">int</span> &amp; <span class="comment">/*__idGmshToFeel*/</span>, mpl::int_&lt;2&gt; )</div>
+<div class="line"><a name="l01499"></a><span class="lineno"> 1499</span>&#160;{}</div>
+<div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="line"><a name="l01501"></a><span class="lineno"> 1501</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l01502"></a><span class="lineno"> 1502</span>&#160;ImporterGmsh&lt;MeshType&gt;::addVolume( mesh_type* mesh, Feel::detail::GMSHElement <span class="keyword">const</span>&amp; __e, <span class="keywordtype">int</span> &amp; __idGmshToFeel, mpl::int_&lt;3&gt; )</div>
+<div class="line"><a name="l01503"></a><span class="lineno"> 1503</span>&#160;{</div>
+<div class="line"><a name="l01504"></a><span class="lineno"> 1504</span>&#160;    element_type e;</div>
+<div class="line"><a name="l01505"></a><span class="lineno"> 1505</span>&#160;    e.setProcessIdInPartition( this-&gt;worldComm().localRank() );</div>
+<div class="line"><a name="l01506"></a><span class="lineno"> 1506</span>&#160;    GmshOrdering&lt;element_type&gt; ordering;</div>
+<div class="line"><a name="l01507"></a><span class="lineno"> 1507</span>&#160;    e.setMarker( __e.physical );</div>
+<div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160;    e.setMarker2( __e.elementary );</div>
+<div class="line"><a name="l01509"></a><span class="lineno"> 1509</span>&#160;    e.setNumberOfPartitions( __e.numPartitions );</div>
+<div class="line"><a name="l01510"></a><span class="lineno"> 1510</span>&#160;    e.setProcessId( __e.partition );</div>
+<div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160;    e.setNeighborPartitionIds( __e.ghosts );</div>
 <div class="line"><a name="l01512"></a><span class="lineno"> 1512</span>&#160;</div>
-<div class="line"><a name="l01513"></a><span class="lineno"> 1513</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;    <span class="comment">// WARNING: not yet done for high order in 3D !!!</span></div>
-<div class="line"><a name="l01515"></a><span class="lineno"> 1515</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a9d87b081654b66dd7ff5f0305ed9991e" title="Hexahedron (8 nodes). ">GMSH_HEXAHEDRON</a> ||</div>
-<div class="line"><a name="l01517"></a><span class="lineno"> 1517</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ab97b32b4f77eabc48d5e8a87ad1184ad" title="Second order hexahedron (27 nodes: 8. ">GMSH_HEXAHEDRON_2</a> ||</div>
-<div class="line"><a name="l01518"></a><span class="lineno"> 1518</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a015bfe4b11badb184dc3fa9682070e85" title="Tetrahedron (4 nodes). ">GMSH_TETRAHEDRON</a> ||</div>
-<div class="line"><a name="l01519"></a><span class="lineno"> 1519</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a80bee3e57b9bbb5318a90fb131c0ee30" title="Second order tetrahedron (10 nodes: ">GMSH_TETRAHEDRON_2</a> ||</div>
-<div class="line"><a name="l01520"></a><span class="lineno"> 1520</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1afc8b8875fba239d65dbc5c4af24317aa" title="tetra of order 3 ">GMSH_TETRAHEDRON_3</a> ||</div>
-<div class="line"><a name="l01521"></a><span class="lineno"> 1521</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a8e73cfb6e8197635cb8f96f87983c7cc" title="tetra of order 4 ">GMSH_TETRAHEDRON_4</a> ||</div>
-<div class="line"><a name="l01522"></a><span class="lineno"> 1522</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ac6848bf8621a93b8ee38a4973b9b8292" title="tetra of order 5 ">GMSH_TETRAHEDRON_5</a> )</div>
-<div class="line"><a name="l01523"></a><span class="lineno"> 1523</span>&#160;    {</div>
-<div class="line"><a name="l01524"></a><span class="lineno"> 1524</span>&#160;        <span class="keywordtype">int</span> count_pt_on_boundary = 0;</div>
-<div class="line"><a name="l01525"></a><span class="lineno"> 1525</span>&#160;        <span class="keywordflow">for</span> ( uint16_type jj = 0; jj &lt; npoints_per_element; ++jj )</div>
-<div class="line"><a name="l01526"></a><span class="lineno"> 1526</span>&#160;        {</div>
-<div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;            <span class="comment">//ptseen[mesh-&gt;point( __e.indices[jj] ).id()]=1;</span></div>
-<div class="line"><a name="l01528"></a><span class="lineno"> 1528</span>&#160;            <span class="keywordflow">if</span> (!e.isGhostCell()) mesh-&gt;points().modify( mesh-&gt;pointIterator( __e.indices[jj] ), Feel::detail::UpdateProcessId(e.processId()) );</div>
-<div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;            <span class="comment">//std::cout &lt;&lt; &quot;gmsh index &quot; &lt;&lt; jj &lt;&lt; &quot; -&gt; &quot; &lt;&lt; ordering.fromGmshId(jj) &lt;&lt; &quot; -&gt; &quot; &lt;&lt; mesh-&gt;point( __e[jj] ).id()+1 &lt;&lt; &quot; : &quot; &lt;&lt; mesh-&gt;point( __e[jj] ).node() &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;            e.setPoint( ordering.fromGmshId( jj ), mesh-&gt;point( __e.indices[jj] ) );</div>
-<div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160;</div>
-<div class="line"><a name="l01532"></a><span class="lineno"> 1532</span>&#160;            <span class="keywordflow">if</span> ( mesh-&gt;point( __e.indices[jj] ).isOnBoundary() )</div>
-<div class="line"><a name="l01533"></a><span class="lineno"> 1533</span>&#160;                ++count_pt_on_boundary;</div>
-<div class="line"><a name="l01534"></a><span class="lineno"> 1534</span>&#160;        }</div>
-<div class="line"><a name="l01535"></a><span class="lineno"> 1535</span>&#160;        <span class="comment">// the tet share a face with the boundary</span></div>
-<div class="line"><a name="l01536"></a><span class="lineno"> 1536</span>&#160;        <span class="keywordflow">if</span> ( ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a015bfe4b11badb184dc3fa9682070e85" title="Tetrahedron (4 nodes). ">GMSH_TETRAHEDRON</a> ||</div>
-<div class="line"><a name="l01537"></a><span class="lineno"> 1537</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a80bee3e57b9bbb5318a90fb131c0ee30" title="Second order tetrahedron (10 nodes: ">GMSH_TETRAHEDRON_2</a> ||</div>
-<div class="line"><a name="l01538"></a><span class="lineno"> 1538</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1afc8b8875fba239d65dbc5c4af24317aa" title="tetra of order 3 ">GMSH_TETRAHEDRON_3</a> ||</div>
-<div class="line"><a name="l01539"></a><span class="lineno"> 1539</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a8e73cfb6e8197635cb8f96f87983c7cc" title="tetra of order 4 ">GMSH_TETRAHEDRON_4</a> ||</div>
-<div class="line"><a name="l01540"></a><span class="lineno"> 1540</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ac6848bf8621a93b8ee38a4973b9b8292" title="tetra of order 5 ">GMSH_TETRAHEDRON_5</a> )</div>
-<div class="line"><a name="l01541"></a><span class="lineno"> 1541</span>&#160;             &amp;&amp; count_pt_on_boundary &gt;= 3)</div>
-<div class="line"><a name="l01542"></a><span class="lineno"> 1542</span>&#160;            e.setOnBoundary( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l01543"></a><span class="lineno"> 1543</span>&#160;        <span class="comment">// the hex share a face with the boundary</span></div>
-<div class="line"><a name="l01544"></a><span class="lineno"> 1544</span>&#160;        <span class="keywordflow">if</span> ( ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a9d87b081654b66dd7ff5f0305ed9991e" title="Hexahedron (8 nodes). ">GMSH_HEXAHEDRON</a> ||</div>
-<div class="line"><a name="l01545"></a><span class="lineno"> 1545</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ab97b32b4f77eabc48d5e8a87ad1184ad" title="Second order hexahedron (27 nodes: 8. ">GMSH_HEXAHEDRON_2</a> )</div>
-<div class="line"><a name="l01546"></a><span class="lineno"> 1546</span>&#160;             &amp;&amp; count_pt_on_boundary &gt;= 4)</div>
-<div class="line"><a name="l01547"></a><span class="lineno"> 1547</span>&#160;            e.setOnBoundary( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l01548"></a><span class="lineno"> 1548</span>&#160;    }</div>
-<div class="line"><a name="l01549"></a><span class="lineno"> 1549</span>&#160;</div>
-<div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160;    mesh-&gt;addElement( e );</div>
-<div class="line"><a name="l01551"></a><span class="lineno"> 1551</span>&#160;    __idGmshToFeel=e.id();</div>
-<div class="line"><a name="l01552"></a><span class="lineno"> 1552</span>&#160;</div>
-<div class="line"><a name="l01553"></a><span class="lineno"> 1553</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
-<div class="line"><a name="l01554"></a><span class="lineno"> 1554</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
-<div class="line"><a name="l01555"></a><span class="lineno"> 1555</span>&#160;    M_n_vertices[ __e.indices[2] ] = 1;</div>
-<div class="line"><a name="l01556"></a><span class="lineno"> 1556</span>&#160;    M_n_vertices[ __e.indices[3] ] = 1;</div>
-<div class="line"><a name="l01557"></a><span class="lineno"> 1557</span>&#160;</div>
-<div class="line"><a name="l01558"></a><span class="lineno"> 1558</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a9d87b081654b66dd7ff5f0305ed9991e" title="Hexahedron (8 nodes). ">GMSH_HEXAHEDRON</a> )</div>
-<div class="line"><a name="l01559"></a><span class="lineno"> 1559</span>&#160;    {</div>
-<div class="line"><a name="l01560"></a><span class="lineno"> 1560</span>&#160;        M_n_vertices[ __e.indices[4] ] = 1;</div>
-<div class="line"><a name="l01561"></a><span class="lineno"> 1561</span>&#160;        M_n_vertices[ __e.indices[5] ] = 1;</div>
-<div class="line"><a name="l01562"></a><span class="lineno"> 1562</span>&#160;        M_n_vertices[ __e.indices[6] ] = 1;</div>
-<div class="line"><a name="l01563"></a><span class="lineno"> 1563</span>&#160;        M_n_vertices[ __e.indices[7] ] = 1;</div>
-<div class="line"><a name="l01564"></a><span class="lineno"> 1564</span>&#160;    }</div>
-<div class="line"><a name="l01565"></a><span class="lineno"> 1565</span>&#160;}</div>
-<div class="line"><a name="l01566"></a><span class="lineno"> 1566</span>&#160;</div>
-<div class="line"><a name="l01567"></a><span class="lineno"> 1567</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a name="l01568"></a><span class="lineno"> 1568</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01569"></a><span class="lineno"> 1569</span>&#160;ImporterGmsh&lt;MeshType&gt;::updateGhostCellInfo( mesh_type* mesh, std::map&lt;int,int&gt; <span class="keyword">const</span>&amp; __idGmshToFeel, std::map&lt;<span class="keywordtype">int</span>,boost::tuple&lt;int,int&gt; &gt; <span class="keyword">const</span>&amp; __mapGhostElt,</div>
-<div class="line"><a name="l01570"></a><span class="lineno"> 1570</span>&#160;                                             std::vector&lt;int&gt; <span class="keyword">const</span>&amp; nbMsgToRecv )</div>
-<div class="line"><a name="l01571"></a><span class="lineno"> 1571</span>&#160;{</div>
-<div class="line"><a name="l01572"></a><span class="lineno"> 1572</span>&#160;    <span class="comment">// counter of msg sent for each process</span></div>
-<div class="line"><a name="l01573"></a><span class="lineno"> 1573</span>&#160;    std::vector&lt;int&gt; nbMsgToSend( this-&gt;worldComm().localSize(),0 );</div>
-<div class="line"><a name="l01574"></a><span class="lineno"> 1574</span>&#160;    <span class="comment">// map usefull to get final result</span></div>
-<div class="line"><a name="l01575"></a><span class="lineno"> 1575</span>&#160;    std::vector&lt; std::map&lt;int,int&gt; &gt; mapMsg( this-&gt;worldComm().localSize() );</div>
-<div class="line"><a name="l01576"></a><span class="lineno"> 1576</span>&#160;</div>
-<div class="line"><a name="l01577"></a><span class="lineno"> 1577</span>&#160;    <span class="comment">// iterate over ghost elt</span></div>
-<div class="line"><a name="l01578"></a><span class="lineno"> 1578</span>&#160;    <span class="keyword">auto</span> it_map = __mapGhostElt.begin();</div>
-<div class="line"><a name="l01579"></a><span class="lineno"> 1579</span>&#160;    <span class="keyword">auto</span> <span class="keyword">const</span> en_map = __mapGhostElt.end();</div>
-<div class="line"><a name="l01580"></a><span class="lineno"> 1580</span>&#160;    <span class="keywordflow">for</span> ( ; it_map!=en_map ; ++it_map )</div>
-<div class="line"><a name="l01581"></a><span class="lineno"> 1581</span>&#160;    {</div>
-<div class="line"><a name="l01582"></a><span class="lineno"> 1582</span>&#160;        <span class="keyword">auto</span> <span class="keyword">const</span> idGmsh = it_map-&gt;first;</div>
-<div class="line"><a name="l01583"></a><span class="lineno"> 1583</span>&#160;        <span class="keyword">auto</span> <span class="keyword">const</span> idProc = it_map-&gt;second.template get&lt;1&gt;();</div>
-<div class="line"><a name="l01584"></a><span class="lineno"> 1584</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l01585"></a><span class="lineno"> 1585</span>&#160;<span class="preprocessor"></span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[updateGhostCellInfo]----1---\n&quot;</span></div>
-<div class="line"><a name="l01586"></a><span class="lineno"> 1586</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;I am the proc &quot;</span> &lt;&lt; this-&gt;worldComm().globalRank()</div>
-<div class="line"><a name="l01587"></a><span class="lineno"> 1587</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; local proc &quot;</span> &lt;&lt; this-&gt;worldComm().localRank()</div>
-<div class="line"><a name="l01588"></a><span class="lineno"> 1588</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; I send to the proc &quot;</span> &lt;&lt; idProc &lt;&lt; <span class="stringliteral">&quot; for idGmsh &quot;</span> &lt;&lt; idGmsh+1</div>
-<div class="line"><a name="l01589"></a><span class="lineno"> 1589</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; with tag &quot;</span>&lt;&lt; nbMsgToSend[idProc]</div>
-<div class="line"><a name="l01590"></a><span class="lineno"> 1590</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; the G &quot;</span> &lt;&lt; mesh-&gt;element( it_map-&gt;second.template get&lt;0&gt;(),idProc ).G()</div>
-<div class="line"><a name="l01591"></a><span class="lineno"> 1591</span>&#160;                  &lt;&lt; std::endl;</div>
-<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160;<span class="preprocessor"></span>        <span class="comment">// send</span></div>
-<div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;        this-&gt;worldComm().localComm().send( idProc , nbMsgToSend[idProc], idGmsh );</div>
-<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;        <span class="comment">// save tag of request</span></div>
-<div class="line"><a name="l01596"></a><span class="lineno"> 1596</span>&#160;        mapMsg[idProc].insert( std::make_pair( nbMsgToSend[idProc],it_map-&gt;second.template get&lt;0&gt;() ) );</div>
-<div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160;        <span class="comment">// update nb send</span></div>
-<div class="line"><a name="l01598"></a><span class="lineno"> 1598</span>&#160;        nbMsgToSend[idProc]++;</div>
-<div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;    }</div>
-<div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160;</div>
-<div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160;<span class="preprocessor">#if !defined( NDEBUG )</span></div>
-<div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160;<span class="preprocessor"></span>    <span class="comment">// check nbMsgToRecv computation</span></div>
-<div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160;    std::vector&lt;int&gt; nbMsgToRecv2;</div>
-<div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;    mpi::all_to_all( this-&gt;worldComm().localComm(),</div>
-<div class="line"><a name="l01605"></a><span class="lineno"> 1605</span>&#160;                     nbMsgToSend,</div>
-<div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160;                     nbMsgToRecv2 );</div>
-<div class="line"><a name="l01607"></a><span class="lineno"> 1607</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> proc=0; proc&lt;this-&gt;worldComm().localSize(); ++proc )</div>
-<div class="line"><a name="l01608"></a><span class="lineno"> 1608</span>&#160;    {</div>
-<div class="line"><a name="l01609"></a><span class="lineno"> 1609</span>&#160;        CHECK( nbMsgToRecv[proc]==nbMsgToRecv2[proc] ) &lt;&lt; <span class="stringliteral">&quot;paritioning data incorect &quot;</span></div>
-<div class="line"><a name="l01610"></a><span class="lineno"> 1610</span>&#160;                                                       &lt;&lt; <span class="stringliteral">&quot;myrank &quot;</span> &lt;&lt; this-&gt;worldComm().localRank() &lt;&lt; <span class="stringliteral">&quot; proc &quot;</span> &lt;&lt; proc</div>
-<div class="line"><a name="l01611"></a><span class="lineno"> 1611</span>&#160;                                                       &lt;&lt; <span class="stringliteral">&quot; nbMsgToRecv[proc] &quot;</span> &lt;&lt; nbMsgToRecv[proc]</div>
-<div class="line"><a name="l01612"></a><span class="lineno"> 1612</span>&#160;                                                       &lt;&lt; <span class="stringliteral">&quot; nbMsgToRecv2[proc] &quot;</span> &lt;&lt; nbMsgToRecv2[proc] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l01613"></a><span class="lineno"> 1613</span>&#160;    }</div>
-<div class="line"><a name="l01614"></a><span class="lineno"> 1614</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01615"></a><span class="lineno"> 1615</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l01616"></a><span class="lineno"> 1616</span>&#160;    <span class="comment">// get gmsh id asked and re-send the correspond id Feel</span></div>
-<div class="line"><a name="l01617"></a><span class="lineno"> 1617</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> proc=0; proc&lt;this-&gt;worldComm().localSize(); ++proc )</div>
-<div class="line"><a name="l01618"></a><span class="lineno"> 1618</span>&#160;    {</div>
-<div class="line"><a name="l01619"></a><span class="lineno"> 1619</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> cpt=0 ; cpt&lt;nbMsgToRecv[proc] ; ++cpt )</div>
-<div class="line"><a name="l01620"></a><span class="lineno"> 1620</span>&#160;        {</div>
-<div class="line"><a name="l01621"></a><span class="lineno"> 1621</span>&#160;            <span class="keywordtype">int</span> idGmsh;</div>
-<div class="line"><a name="l01622"></a><span class="lineno"> 1622</span>&#160;            <span class="comment">//reception idGmsh</span></div>
-<div class="line"><a name="l01623"></a><span class="lineno"> 1623</span>&#160;            this-&gt;worldComm().localComm().recv( proc, cpt, idGmsh );</div>
-<div class="line"><a name="l01624"></a><span class="lineno"> 1624</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l01625"></a><span class="lineno"> 1625</span>&#160;<span class="preprocessor"></span>            std::cout &lt;&lt; <span class="stringliteral">&quot;[updateGhostCellInfo]----2---\n&quot;</span></div>
-<div class="line"><a name="l01626"></a><span class="lineno"> 1626</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot;I am the proc&quot;</span> &lt;&lt; this-&gt;worldComm().localRank()</div>
-<div class="line"><a name="l01627"></a><span class="lineno"> 1627</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; I receive of the proc &quot;</span> &lt;&lt; proc &lt;&lt; <span class="stringliteral">&quot; for idGmsh &quot;</span> &lt;&lt; idGmsh+1</div>
-<div class="line"><a name="l01628"></a><span class="lineno"> 1628</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; with tag &quot;</span>&lt;&lt; cpt</div>
-<div class="line"><a name="l01629"></a><span class="lineno"> 1629</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; the G &quot;</span> &lt;&lt; mesh-&gt;element( __idGmshToFeel.find(idGmsh)-&gt;second ).G()</div>
-<div class="line"><a name="l01630"></a><span class="lineno"> 1630</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; with idFeel Classic &quot;</span> &lt;&lt; __idGmshToFeel.find(idGmsh)-&gt;second</div>
-<div class="line"><a name="l01631"></a><span class="lineno"> 1631</span>&#160;                      &lt;&lt; std::endl;</div>
-<div class="line"><a name="l01632"></a><span class="lineno"> 1632</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01633"></a><span class="lineno"> 1633</span>&#160;<span class="preprocessor"></span>            <span class="comment">//re-send idFeel</span></div>
-<div class="line"><a name="l01634"></a><span class="lineno"> 1634</span>&#160;            this-&gt;worldComm().localComm().send( proc, cpt, __idGmshToFeel.find( idGmsh )-&gt;second );</div>
-<div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160;        }</div>
-<div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;    }</div>
-<div class="line"><a name="l01637"></a><span class="lineno"> 1637</span>&#160;</div>
-<div class="line"><a name="l01638"></a><span class="lineno"> 1638</span>&#160;    <span class="comment">// get response to initial request and update Feel::Mesh data</span></div>
-<div class="line"><a name="l01639"></a><span class="lineno"> 1639</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> proc=0; proc&lt;this-&gt;worldComm().localSize(); ++proc )</div>
-<div class="line"><a name="l01640"></a><span class="lineno"> 1640</span>&#160;    {</div>
-<div class="line"><a name="l01641"></a><span class="lineno"> 1641</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> cpt=0; cpt&lt;nbMsgToSend[proc]; ++cpt )</div>
-<div class="line"><a name="l01642"></a><span class="lineno"> 1642</span>&#160;        {</div>
-<div class="line"><a name="l01643"></a><span class="lineno"> 1643</span>&#160;            <span class="keywordtype">int</span> idFeel;</div>
-<div class="line"><a name="l01644"></a><span class="lineno"> 1644</span>&#160;            <span class="comment">// receive idFeel</span></div>
-<div class="line"><a name="l01645"></a><span class="lineno"> 1645</span>&#160;            this-&gt;worldComm().localComm().recv( proc, cpt, idFeel );</div>
-<div class="line"><a name="l01646"></a><span class="lineno"> 1646</span>&#160;            <span class="comment">// update data</span></div>
-<div class="line"><a name="l01647"></a><span class="lineno"> 1647</span>&#160;            <span class="keyword">auto</span> elttt = mesh-&gt;elementIterator( mapMsg[proc][cpt],proc );</div>
-<div class="line"><a name="l01648"></a><span class="lineno"> 1648</span>&#160;            mesh-&gt;elements().modify( elttt, Feel::detail::updateIdInOthersPartitions( proc, idFeel ) );</div>
-<div class="line"><a name="l01649"></a><span class="lineno"> 1649</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l01650"></a><span class="lineno"> 1650</span>&#160;<span class="preprocessor"></span>            std::cout &lt;&lt; <span class="stringliteral">&quot;[updateGhostCellInfo]----3---\n&quot;</span></div>
-<div class="line"><a name="l01651"></a><span class="lineno"> 1651</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot;END! I am the proc&quot;</span> &lt;&lt; this-&gt;worldComm().localRank()&lt;&lt;<span class="stringliteral">&quot; I receive of the proc &quot;</span> &lt;&lt; proc</div>
-<div class="line"><a name="l01652"></a><span class="lineno"> 1652</span>&#160;                      &lt;&lt;<span class="stringliteral">&quot; with tag &quot;</span>&lt;&lt; cpt</div>
-<div class="line"><a name="l01653"></a><span class="lineno"> 1653</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; for the G &quot;</span> &lt;&lt; mesh-&gt;element( mapMsg[proc][cpt], proc ).G()</div>
-<div class="line"><a name="l01654"></a><span class="lineno"> 1654</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; with idFeel Classic &quot;</span> &lt;&lt; mapMsg[proc][cpt]</div>
-<div class="line"><a name="l01655"></a><span class="lineno"> 1655</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; with idFeel &quot;</span> &lt;&lt; idFeel</div>
-<div class="line"><a name="l01656"></a><span class="lineno"> 1656</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; and modif &quot;</span> &lt;&lt; mesh-&gt;element( mapMsg[proc][cpt] , proc ).idInPartition( proc )</div>
-<div class="line"><a name="l01657"></a><span class="lineno"> 1657</span>&#160;                      &lt;&lt; std::endl;</div>
-<div class="line"><a name="l01658"></a><span class="lineno"> 1658</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01659"></a><span class="lineno"> 1659</span>&#160;<span class="preprocessor"></span>        }</div>
-<div class="line"><a name="l01660"></a><span class="lineno"> 1660</span>&#160;    }</div>
-<div class="line"><a name="l01661"></a><span class="lineno"> 1661</span>&#160;</div>
-<div class="line"><a name="l01662"></a><span class="lineno"> 1662</span>&#160;}</div>
-<div class="line"><a name="l01663"></a><span class="lineno"> 1663</span>&#160;</div>
-<div class="line"><a name="l01664"></a><span class="lineno"> 1664</span>&#160;} <span class="comment">// Feel</span></div>
-<div class="line"><a name="l01665"></a><span class="lineno"> 1665</span>&#160;</div>
+<div class="line"><a name="l01513"></a><span class="lineno"> 1513</span>&#160;</div>
+<div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l01515"></a><span class="lineno"> 1515</span>&#160;    <span class="comment">// WARNING: not yet done for high order in 3D !!!</span></div>
+<div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l01517"></a><span class="lineno"> 1517</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a9d87b081654b66dd7ff5f0305ed9991e" title="Hexahedron (8 nodes). ">GMSH_HEXAHEDRON</a> ||</div>
+<div class="line"><a name="l01518"></a><span class="lineno"> 1518</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ab97b32b4f77eabc48d5e8a87ad1184ad" title="Second order hexahedron (27 nodes: 8. ">GMSH_HEXAHEDRON_2</a> ||</div>
+<div class="line"><a name="l01519"></a><span class="lineno"> 1519</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a015bfe4b11badb184dc3fa9682070e85" title="Tetrahedron (4 nodes). ">GMSH_TETRAHEDRON</a> ||</div>
+<div class="line"><a name="l01520"></a><span class="lineno"> 1520</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a80bee3e57b9bbb5318a90fb131c0ee30" title="Second order tetrahedron (10 nodes: ">GMSH_TETRAHEDRON_2</a> ||</div>
+<div class="line"><a name="l01521"></a><span class="lineno"> 1521</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1afc8b8875fba239d65dbc5c4af24317aa" title="tetra of order 3 ">GMSH_TETRAHEDRON_3</a> ||</div>
+<div class="line"><a name="l01522"></a><span class="lineno"> 1522</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a8e73cfb6e8197635cb8f96f87983c7cc" title="tetra of order 4 ">GMSH_TETRAHEDRON_4</a> ||</div>
+<div class="line"><a name="l01523"></a><span class="lineno"> 1523</span>&#160;         __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ac6848bf8621a93b8ee38a4973b9b8292" title="tetra of order 5 ">GMSH_TETRAHEDRON_5</a> )</div>
+<div class="line"><a name="l01524"></a><span class="lineno"> 1524</span>&#160;    {</div>
+<div class="line"><a name="l01525"></a><span class="lineno"> 1525</span>&#160;        <span class="keywordtype">int</span> count_pt_on_boundary = 0;</div>
+<div class="line"><a name="l01526"></a><span class="lineno"> 1526</span>&#160;        <span class="keywordflow">for</span> ( uint16_type jj = 0; jj &lt; npoints_per_element; ++jj )</div>
+<div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;        {</div>
+<div class="line"><a name="l01528"></a><span class="lineno"> 1528</span>&#160;            <span class="comment">//ptseen[mesh-&gt;point( __e.indices[jj] ).id()]=1;</span></div>
+<div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;            <span class="keywordflow">if</span> (!e.isGhostCell()) mesh-&gt;points().modify( mesh-&gt;pointIterator( __e.indices[jj] ), Feel::detail::UpdateProcessId(e.processId()) );</div>
+<div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;            <span class="comment">//std::cout &lt;&lt; &quot;gmsh index &quot; &lt;&lt; jj &lt;&lt; &quot; -&gt; &quot; &lt;&lt; ordering.fromGmshId(jj) &lt;&lt; &quot; -&gt; &quot; &lt;&lt; mesh-&gt;point( __e[jj] ).id()+1 &lt;&lt; &quot; : &quot; &lt;&lt; mesh-&gt;point( __e[jj] ).node() &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160;            e.setPoint( ordering.fromGmshId( jj ), mesh-&gt;point( __e.indices[jj] ) );</div>
+<div class="line"><a name="l01532"></a><span class="lineno"> 1532</span>&#160;</div>
+<div class="line"><a name="l01533"></a><span class="lineno"> 1533</span>&#160;            <span class="keywordflow">if</span> ( mesh-&gt;point( __e.indices[jj] ).isOnBoundary() )</div>
+<div class="line"><a name="l01534"></a><span class="lineno"> 1534</span>&#160;                ++count_pt_on_boundary;</div>
+<div class="line"><a name="l01535"></a><span class="lineno"> 1535</span>&#160;        }</div>
+<div class="line"><a name="l01536"></a><span class="lineno"> 1536</span>&#160;        <span class="comment">// the tet share a face with the boundary</span></div>
+<div class="line"><a name="l01537"></a><span class="lineno"> 1537</span>&#160;        <span class="keywordflow">if</span> ( ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a015bfe4b11badb184dc3fa9682070e85" title="Tetrahedron (4 nodes). ">GMSH_TETRAHEDRON</a> ||</div>
+<div class="line"><a name="l01538"></a><span class="lineno"> 1538</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a80bee3e57b9bbb5318a90fb131c0ee30" title="Second order tetrahedron (10 nodes: ">GMSH_TETRAHEDRON_2</a> ||</div>
+<div class="line"><a name="l01539"></a><span class="lineno"> 1539</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1afc8b8875fba239d65dbc5c4af24317aa" title="tetra of order 3 ">GMSH_TETRAHEDRON_3</a> ||</div>
+<div class="line"><a name="l01540"></a><span class="lineno"> 1540</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a8e73cfb6e8197635cb8f96f87983c7cc" title="tetra of order 4 ">GMSH_TETRAHEDRON_4</a> ||</div>
+<div class="line"><a name="l01541"></a><span class="lineno"> 1541</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ac6848bf8621a93b8ee38a4973b9b8292" title="tetra of order 5 ">GMSH_TETRAHEDRON_5</a> )</div>
+<div class="line"><a name="l01542"></a><span class="lineno"> 1542</span>&#160;             &amp;&amp; count_pt_on_boundary &gt;= 3)</div>
+<div class="line"><a name="l01543"></a><span class="lineno"> 1543</span>&#160;            e.setOnBoundary( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l01544"></a><span class="lineno"> 1544</span>&#160;        <span class="comment">// the hex share a face with the boundary</span></div>
+<div class="line"><a name="l01545"></a><span class="lineno"> 1545</span>&#160;        <span class="keywordflow">if</span> ( ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a9d87b081654b66dd7ff5f0305ed9991e" title="Hexahedron (8 nodes). ">GMSH_HEXAHEDRON</a> ||</div>
+<div class="line"><a name="l01546"></a><span class="lineno"> 1546</span>&#160;               __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1ab97b32b4f77eabc48d5e8a87ad1184ad" title="Second order hexahedron (27 nodes: 8. ">GMSH_HEXAHEDRON_2</a> )</div>
+<div class="line"><a name="l01547"></a><span class="lineno"> 1547</span>&#160;             &amp;&amp; count_pt_on_boundary &gt;= 4)</div>
+<div class="line"><a name="l01548"></a><span class="lineno"> 1548</span>&#160;            e.setOnBoundary( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l01549"></a><span class="lineno"> 1549</span>&#160;    }</div>
+<div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160;</div>
+<div class="line"><a name="l01551"></a><span class="lineno"> 1551</span>&#160;    mesh-&gt;addElement( e );</div>
+<div class="line"><a name="l01552"></a><span class="lineno"> 1552</span>&#160;    __idGmshToFeel=e.id();</div>
+<div class="line"><a name="l01553"></a><span class="lineno"> 1553</span>&#160;</div>
+<div class="line"><a name="l01554"></a><span class="lineno"> 1554</span>&#160;    M_n_vertices[ __e.indices[0] ] = 1;</div>
+<div class="line"><a name="l01555"></a><span class="lineno"> 1555</span>&#160;    M_n_vertices[ __e.indices[1] ] = 1;</div>
+<div class="line"><a name="l01556"></a><span class="lineno"> 1556</span>&#160;    M_n_vertices[ __e.indices[2] ] = 1;</div>
+<div class="line"><a name="l01557"></a><span class="lineno"> 1557</span>&#160;    M_n_vertices[ __e.indices[3] ] = 1;</div>
+<div class="line"><a name="l01558"></a><span class="lineno"> 1558</span>&#160;</div>
+<div class="line"><a name="l01559"></a><span class="lineno"> 1559</span>&#160;    <span class="keywordflow">if</span> ( __e.type == <a class="code" href="namespaceFeel.html#abd2154c710709e9de515c298d86dd8a1a9d87b081654b66dd7ff5f0305ed9991e" title="Hexahedron (8 nodes). ">GMSH_HEXAHEDRON</a> )</div>
+<div class="line"><a name="l01560"></a><span class="lineno"> 1560</span>&#160;    {</div>
+<div class="line"><a name="l01561"></a><span class="lineno"> 1561</span>&#160;        M_n_vertices[ __e.indices[4] ] = 1;</div>
+<div class="line"><a name="l01562"></a><span class="lineno"> 1562</span>&#160;        M_n_vertices[ __e.indices[5] ] = 1;</div>
+<div class="line"><a name="l01563"></a><span class="lineno"> 1563</span>&#160;        M_n_vertices[ __e.indices[6] ] = 1;</div>
+<div class="line"><a name="l01564"></a><span class="lineno"> 1564</span>&#160;        M_n_vertices[ __e.indices[7] ] = 1;</div>
+<div class="line"><a name="l01565"></a><span class="lineno"> 1565</span>&#160;    }</div>
+<div class="line"><a name="l01566"></a><span class="lineno"> 1566</span>&#160;}</div>
+<div class="line"><a name="l01567"></a><span class="lineno"> 1567</span>&#160;</div>
+<div class="line"><a name="l01568"></a><span class="lineno"> 1568</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="line"><a name="l01569"></a><span class="lineno"> 1569</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l01570"></a><span class="lineno"> 1570</span>&#160;ImporterGmsh&lt;MeshType&gt;::updateGhostCellInfo( mesh_type* mesh, std::map&lt;int,int&gt; <span class="keyword">const</span>&amp; __idGmshToFeel, std::map&lt;<span class="keywordtype">int</span>,boost::tuple&lt;int,int&gt; &gt; <span class="keyword">const</span>&amp; __mapGhostElt,</div>
+<div class="line"><a name="l01571"></a><span class="lineno"> 1571</span>&#160;                                             std::vector&lt;int&gt; <span class="keyword">const</span>&amp; nbMsgToRecv )</div>
+<div class="line"><a name="l01572"></a><span class="lineno"> 1572</span>&#160;{</div>
+<div class="line"><a name="l01573"></a><span class="lineno"> 1573</span>&#160;    <span class="comment">// counter of msg sent for each process</span></div>
+<div class="line"><a name="l01574"></a><span class="lineno"> 1574</span>&#160;    std::vector&lt;int&gt; nbMsgToSend( this-&gt;worldComm().localSize(),0 );</div>
+<div class="line"><a name="l01575"></a><span class="lineno"> 1575</span>&#160;    <span class="comment">// map usefull to get final result</span></div>
+<div class="line"><a name="l01576"></a><span class="lineno"> 1576</span>&#160;    std::vector&lt; std::map&lt;int,int&gt; &gt; mapMsg( this-&gt;worldComm().localSize() );</div>
+<div class="line"><a name="l01577"></a><span class="lineno"> 1577</span>&#160;</div>
+<div class="line"><a name="l01578"></a><span class="lineno"> 1578</span>&#160;    <span class="comment">// iterate over ghost elt</span></div>
+<div class="line"><a name="l01579"></a><span class="lineno"> 1579</span>&#160;    <span class="keyword">auto</span> it_map = __mapGhostElt.begin();</div>
+<div class="line"><a name="l01580"></a><span class="lineno"> 1580</span>&#160;    <span class="keyword">auto</span> <span class="keyword">const</span> en_map = __mapGhostElt.end();</div>
+<div class="line"><a name="l01581"></a><span class="lineno"> 1581</span>&#160;    <span class="keywordflow">for</span> ( ; it_map!=en_map ; ++it_map )</div>
+<div class="line"><a name="l01582"></a><span class="lineno"> 1582</span>&#160;    {</div>
+<div class="line"><a name="l01583"></a><span class="lineno"> 1583</span>&#160;        <span class="keyword">auto</span> <span class="keyword">const</span> idGmsh = it_map-&gt;first;</div>
+<div class="line"><a name="l01584"></a><span class="lineno"> 1584</span>&#160;        <span class="keyword">auto</span> <span class="keyword">const</span> idProc = it_map-&gt;second.template get&lt;1&gt;();</div>
+<div class="line"><a name="l01585"></a><span class="lineno"> 1585</span>&#160;<span class="preprocessor">#if 0</span></div>
+<div class="line"><a name="l01586"></a><span class="lineno"> 1586</span>&#160;<span class="preprocessor"></span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[updateGhostCellInfo]----1---\n&quot;</span></div>
+<div class="line"><a name="l01587"></a><span class="lineno"> 1587</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;I am the proc &quot;</span> &lt;&lt; this-&gt;worldComm().globalRank()</div>
+<div class="line"><a name="l01588"></a><span class="lineno"> 1588</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; local proc &quot;</span> &lt;&lt; this-&gt;worldComm().localRank()</div>
+<div class="line"><a name="l01589"></a><span class="lineno"> 1589</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; I send to the proc &quot;</span> &lt;&lt; idProc &lt;&lt; <span class="stringliteral">&quot; for idGmsh &quot;</span> &lt;&lt; idGmsh+1</div>
+<div class="line"><a name="l01590"></a><span class="lineno"> 1590</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; with tag &quot;</span>&lt;&lt; nbMsgToSend[idProc]</div>
+<div class="line"><a name="l01591"></a><span class="lineno"> 1591</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot; the G &quot;</span> &lt;&lt; mesh-&gt;element( it_map-&gt;second.template get&lt;0&gt;(),idProc ).G()</div>
+<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;                  &lt;&lt; std::endl;</div>
+<div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;<span class="preprocessor"></span>        <span class="comment">// send</span></div>
+<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;        this-&gt;worldComm().localComm().send( idProc , nbMsgToSend[idProc], idGmsh );</div>
+<div class="line"><a name="l01596"></a><span class="lineno"> 1596</span>&#160;        <span class="comment">// save tag of request</span></div>
+<div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160;        mapMsg[idProc].insert( std::make_pair( nbMsgToSend[idProc],it_map-&gt;second.template get&lt;0&gt;() ) );</div>
+<div class="line"><a name="l01598"></a><span class="lineno"> 1598</span>&#160;        <span class="comment">// update nb send</span></div>
+<div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;        nbMsgToSend[idProc]++;</div>
+<div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160;    }</div>
+<div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160;</div>
+<div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160;<span class="preprocessor">#if !defined( NDEBUG )</span></div>
+<div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160;<span class="preprocessor"></span>    <span class="comment">// check nbMsgToRecv computation</span></div>
+<div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;    std::vector&lt;int&gt; nbMsgToRecv2;</div>
+<div class="line"><a name="l01605"></a><span class="lineno"> 1605</span>&#160;    mpi::all_to_all( this-&gt;worldComm().localComm(),</div>
+<div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160;                     nbMsgToSend,</div>
+<div class="line"><a name="l01607"></a><span class="lineno"> 1607</span>&#160;                     nbMsgToRecv2 );</div>
+<div class="line"><a name="l01608"></a><span class="lineno"> 1608</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> proc=0; proc&lt;this-&gt;worldComm().localSize(); ++proc )</div>
+<div class="line"><a name="l01609"></a><span class="lineno"> 1609</span>&#160;    {</div>
+<div class="line"><a name="l01610"></a><span class="lineno"> 1610</span>&#160;        CHECK( nbMsgToRecv[proc]==nbMsgToRecv2[proc] ) &lt;&lt; <span class="stringliteral">&quot;paritioning data incorect &quot;</span></div>
+<div class="line"><a name="l01611"></a><span class="lineno"> 1611</span>&#160;                                                       &lt;&lt; <span class="stringliteral">&quot;myrank &quot;</span> &lt;&lt; this-&gt;worldComm().localRank() &lt;&lt; <span class="stringliteral">&quot; proc &quot;</span> &lt;&lt; proc</div>
+<div class="line"><a name="l01612"></a><span class="lineno"> 1612</span>&#160;                                                       &lt;&lt; <span class="stringliteral">&quot; nbMsgToRecv[proc] &quot;</span> &lt;&lt; nbMsgToRecv[proc]</div>
+<div class="line"><a name="l01613"></a><span class="lineno"> 1613</span>&#160;                                                       &lt;&lt; <span class="stringliteral">&quot; nbMsgToRecv2[proc] &quot;</span> &lt;&lt; nbMsgToRecv2[proc] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l01614"></a><span class="lineno"> 1614</span>&#160;    }</div>
+<div class="line"><a name="l01615"></a><span class="lineno"> 1615</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01616"></a><span class="lineno"> 1616</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l01617"></a><span class="lineno"> 1617</span>&#160;    <span class="comment">// get gmsh id asked and re-send the correspond id Feel</span></div>
+<div class="line"><a name="l01618"></a><span class="lineno"> 1618</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> proc=0; proc&lt;this-&gt;worldComm().localSize(); ++proc )</div>
+<div class="line"><a name="l01619"></a><span class="lineno"> 1619</span>&#160;    {</div>
+<div class="line"><a name="l01620"></a><span class="lineno"> 1620</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> cpt=0 ; cpt&lt;nbMsgToRecv[proc] ; ++cpt )</div>
+<div class="line"><a name="l01621"></a><span class="lineno"> 1621</span>&#160;        {</div>
+<div class="line"><a name="l01622"></a><span class="lineno"> 1622</span>&#160;            <span class="keywordtype">int</span> idGmsh;</div>
+<div class="line"><a name="l01623"></a><span class="lineno"> 1623</span>&#160;            <span class="comment">//reception idGmsh</span></div>
+<div class="line"><a name="l01624"></a><span class="lineno"> 1624</span>&#160;            this-&gt;worldComm().localComm().recv( proc, cpt, idGmsh );</div>
+<div class="line"><a name="l01625"></a><span class="lineno"> 1625</span>&#160;<span class="preprocessor">#if 0</span></div>
+<div class="line"><a name="l01626"></a><span class="lineno"> 1626</span>&#160;<span class="preprocessor"></span>            std::cout &lt;&lt; <span class="stringliteral">&quot;[updateGhostCellInfo]----2---\n&quot;</span></div>
+<div class="line"><a name="l01627"></a><span class="lineno"> 1627</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot;I am the proc&quot;</span> &lt;&lt; this-&gt;worldComm().localRank()</div>
+<div class="line"><a name="l01628"></a><span class="lineno"> 1628</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; I receive of the proc &quot;</span> &lt;&lt; proc &lt;&lt; <span class="stringliteral">&quot; for idGmsh &quot;</span> &lt;&lt; idGmsh+1</div>
+<div class="line"><a name="l01629"></a><span class="lineno"> 1629</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; with tag &quot;</span>&lt;&lt; cpt</div>
+<div class="line"><a name="l01630"></a><span class="lineno"> 1630</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; the G &quot;</span> &lt;&lt; mesh-&gt;element( __idGmshToFeel.find(idGmsh)-&gt;second ).G()</div>
+<div class="line"><a name="l01631"></a><span class="lineno"> 1631</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; with idFeel Classic &quot;</span> &lt;&lt; __idGmshToFeel.find(idGmsh)-&gt;second</div>
+<div class="line"><a name="l01632"></a><span class="lineno"> 1632</span>&#160;                      &lt;&lt; std::endl;</div>
+<div class="line"><a name="l01633"></a><span class="lineno"> 1633</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01634"></a><span class="lineno"> 1634</span>&#160;<span class="preprocessor"></span>            <span class="comment">//re-send idFeel</span></div>
+<div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160;            this-&gt;worldComm().localComm().send( proc, cpt, __idGmshToFeel.find( idGmsh )-&gt;second );</div>
+<div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;        }</div>
+<div class="line"><a name="l01637"></a><span class="lineno"> 1637</span>&#160;    }</div>
+<div class="line"><a name="l01638"></a><span class="lineno"> 1638</span>&#160;</div>
+<div class="line"><a name="l01639"></a><span class="lineno"> 1639</span>&#160;    <span class="comment">// get response to initial request and update Feel::Mesh data</span></div>
+<div class="line"><a name="l01640"></a><span class="lineno"> 1640</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> proc=0; proc&lt;this-&gt;worldComm().localSize(); ++proc )</div>
+<div class="line"><a name="l01641"></a><span class="lineno"> 1641</span>&#160;    {</div>
+<div class="line"><a name="l01642"></a><span class="lineno"> 1642</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> cpt=0; cpt&lt;nbMsgToSend[proc]; ++cpt )</div>
+<div class="line"><a name="l01643"></a><span class="lineno"> 1643</span>&#160;        {</div>
+<div class="line"><a name="l01644"></a><span class="lineno"> 1644</span>&#160;            <span class="keywordtype">int</span> idFeel;</div>
+<div class="line"><a name="l01645"></a><span class="lineno"> 1645</span>&#160;            <span class="comment">// receive idFeel</span></div>
+<div class="line"><a name="l01646"></a><span class="lineno"> 1646</span>&#160;            this-&gt;worldComm().localComm().recv( proc, cpt, idFeel );</div>
+<div class="line"><a name="l01647"></a><span class="lineno"> 1647</span>&#160;            <span class="comment">// update data</span></div>
+<div class="line"><a name="l01648"></a><span class="lineno"> 1648</span>&#160;            <span class="keyword">auto</span> elttt = mesh-&gt;elementIterator( mapMsg[proc][cpt],proc );</div>
+<div class="line"><a name="l01649"></a><span class="lineno"> 1649</span>&#160;            mesh-&gt;elements().modify( elttt, Feel::detail::updateIdInOthersPartitions( proc, idFeel ) );</div>
+<div class="line"><a name="l01650"></a><span class="lineno"> 1650</span>&#160;<span class="preprocessor">#if 0</span></div>
+<div class="line"><a name="l01651"></a><span class="lineno"> 1651</span>&#160;<span class="preprocessor"></span>            std::cout &lt;&lt; <span class="stringliteral">&quot;[updateGhostCellInfo]----3---\n&quot;</span></div>
+<div class="line"><a name="l01652"></a><span class="lineno"> 1652</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot;END! I am the proc&quot;</span> &lt;&lt; this-&gt;worldComm().localRank()&lt;&lt;<span class="stringliteral">&quot; I receive of the proc &quot;</span> &lt;&lt; proc</div>
+<div class="line"><a name="l01653"></a><span class="lineno"> 1653</span>&#160;                      &lt;&lt;<span class="stringliteral">&quot; with tag &quot;</span>&lt;&lt; cpt</div>
+<div class="line"><a name="l01654"></a><span class="lineno"> 1654</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; for the G &quot;</span> &lt;&lt; mesh-&gt;element( mapMsg[proc][cpt], proc ).G()</div>
+<div class="line"><a name="l01655"></a><span class="lineno"> 1655</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; with idFeel Classic &quot;</span> &lt;&lt; mapMsg[proc][cpt]</div>
+<div class="line"><a name="l01656"></a><span class="lineno"> 1656</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; with idFeel &quot;</span> &lt;&lt; idFeel</div>
+<div class="line"><a name="l01657"></a><span class="lineno"> 1657</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot; and modif &quot;</span> &lt;&lt; mesh-&gt;element( mapMsg[proc][cpt] , proc ).idInPartition( proc )</div>
+<div class="line"><a name="l01658"></a><span class="lineno"> 1658</span>&#160;                      &lt;&lt; std::endl;</div>
+<div class="line"><a name="l01659"></a><span class="lineno"> 1659</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01660"></a><span class="lineno"> 1660</span>&#160;<span class="preprocessor"></span>        }</div>
+<div class="line"><a name="l01661"></a><span class="lineno"> 1661</span>&#160;    }</div>
+<div class="line"><a name="l01662"></a><span class="lineno"> 1662</span>&#160;</div>
+<div class="line"><a name="l01663"></a><span class="lineno"> 1663</span>&#160;}</div>
+<div class="line"><a name="l01664"></a><span class="lineno"> 1664</span>&#160;</div>
+<div class="line"><a name="l01665"></a><span class="lineno"> 1665</span>&#160;} <span class="comment">// Feel</span></div>
 <div class="line"><a name="l01666"></a><span class="lineno"> 1666</span>&#160;</div>
 <div class="line"><a name="l01667"></a><span class="lineno"> 1667</span>&#160;</div>
-<div class="line"><a name="l01668"></a><span class="lineno"> 1668</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __ImporterGmsh_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l01668"></a><span class="lineno"> 1668</span>&#160;</div>
+<div class="line"><a name="l01669"></a><span class="lineno"> 1669</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __ImporterGmsh_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:31 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:05:57 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -471,7 +471,7 @@ $(document).ready(function(){initNavTree('integrator_8hpp_source.html','');});
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="preprocessor">#if 1</span></div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;<span class="preprocessor"></span>    matrix_type</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    evaluate( <span class="keywordtype">bool</span> parallel=<span class="keyword">true</span>,</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;              WorldComm <span class="keyword">const</span>&amp; worldcomm = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() ) const</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;              WorldComm <span class="keyword">const</span>&amp; worldcomm = Environment::worldComm() ) const</div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;<span class="preprocessor"></span>    <span class="comment">//typename expression_type::template tensor&lt;Geo_t&gt;::value_type</span></div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    BOOST_PARAMETER_MEMBER_FUNCTION( ( matrix_type ),</div>
@@ -3246,7 +3246,7 @@ $(document).ready(function(){initNavTree('integrator_8hpp_source.html','');});
 <div class="line"><a name="l03243"></a><span class="lineno"> 3243</span>&#160;<span class="keyword">struct </span>integrate_type</div>
 <div class="line"><a name="l03244"></a><span class="lineno"> 3244</span>&#160;{</div>
 <div class="line"><a name="l03245"></a><span class="lineno"> 3245</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> clean_type&lt;Args,tag::expr&gt;::type _expr_type;</div>
-<div class="line"><a name="l03246"></a><span class="lineno"> 3246</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1detail_1_1quadptlocrangetype.html">Feel::detail::quadptlocrangetype&lt;typename clean_type&lt;Args,tag::range&gt;::type</a>&gt;::type _range_type;</div>
+<div class="line"><a name="l03246"></a><span class="lineno"> 3246</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Feel::detail::quadptlocrangetype&lt;typename clean_type&lt;Args,tag::range&gt;::type&gt;::type _range_type;</div>
 <div class="line"><a name="l03247"></a><span class="lineno"> 3247</span>&#160;    <span class="comment">//typedef _Q&lt; ExpressionOrder&lt;_range_type,_expr_type&gt;::value &gt; the_quad_type;</span></div>
 <div class="line"><a name="l03248"></a><span class="lineno"> 3248</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> clean2_type&lt;Args,tag::quad, _Q&lt; ExpressionOrder&lt;_range_type,_expr_type&gt;::value &gt; &gt;::type _quad_type;</div>
 <div class="line"><a name="l03249"></a><span class="lineno"> 3249</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> clean2_type&lt;Args,tag::quad1, _Q&lt; ExpressionOrder&lt;_range_type,_expr_type&gt;::value_1 &gt; &gt;::type _quad1_type;</div>
@@ -3429,7 +3429,7 @@ $(document).ready(function(){initNavTree('integrator_8hpp_source.html','');});
 <div class="line"><a name="l03437"></a><span class="lineno"> 3437</span>&#160;      ( partitioner,   *, <span class="stringliteral">&quot;auto&quot;</span> )</div>
 <div class="line"><a name="l03438"></a><span class="lineno"> 3438</span>&#160;      ( verbose,   ( <span class="keywordtype">bool</span> ), <span class="keyword">false</span> )</div>
 <div class="line"><a name="l03439"></a><span class="lineno"> 3439</span>&#160;      ( parallel,   *( boost::is_integral&lt;mpl::_&gt; ), 1 )</div>
-<div class="line"><a name="l03440"></a><span class="lineno"> 3440</span>&#160;      ( worldcomm,       (WorldComm), <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() )</div>
+<div class="line"><a name="l03440"></a><span class="lineno"> 3440</span>&#160;      ( worldcomm,       (WorldComm), Environment::worldComm() )</div>
 <div class="line"><a name="l03441"></a><span class="lineno"> 3441</span>&#160;    )</div>
 <div class="line"><a name="l03442"></a><span class="lineno"> 3442</span>&#160;)</div>
 <div class="line"><a name="l03443"></a><span class="lineno"> 3443</span>&#160;{</div>
@@ -3487,7 +3487,7 @@ $(document).ready(function(){initNavTree('integrator_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:32 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:05:58 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

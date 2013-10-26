@@ -161,61 +161,61 @@ $(document).ready(function(){initNavTree('penalisation_8hpp_source.html','');});
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> Dim&gt;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="classFeel_1_1Penalisation.html">   59</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1Penalisation.html">Penalisation</a> : <span class="keyword">public</span> <a class="code" href="classFeel_1_1Application.html" title="provides information about the Application ">Application</a></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">class </span>Penalisation : <span class="keyword">public</span> Application</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// mesh</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex&lt;Dim,1,Dim&gt;</a> <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">entity_type</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">typedef</span> Simplex&lt;Dim,1,Dim&gt; entity_type;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">Mesh&lt;entity_type&gt;</a> <a class="code" href="classFeel_1_1Mesh.html" title="unifying mesh class ">mesh_type</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">typedef</span> Mesh&lt;entity_type&gt; mesh_type;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;mesh_type&gt; mesh_ptrtype;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// bases</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Lagrange.html">Lagrange&lt;VELOCITY_ORDER, Vectorial&gt;</a> <a class="code" href="classFeel_1_1Lagrange.html">basis_veloc_type</a>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Lagrange.html">Lagrange&lt;PRESSURE_ORDER, Scalar&gt;</a> <a class="code" href="classFeel_1_1Lagrange.html">basis_pressure_type</a>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Lagrange.html">Lagrange&lt;0, Scalar&gt;</a> <a class="code" href="classFeel_1_1Lagrange.html">basis_lag_type</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">typedef</span> Lagrange&lt;VELOCITY_ORDER, Vectorial&gt; basis_veloc_type;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">typedef</span> Lagrange&lt;PRESSURE_ORDER, Scalar&gt; basis_pressure_type;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">typedef</span> Lagrange&lt;0, Scalar&gt; basis_lag_type;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// typedef bases&lt;Lagrange&lt;CARAC_ORDER,Scalar,Discontinuous&gt; &gt; basis_carac_type;</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structFeel_1_1bases.html">bases&lt;Lagrange&lt;CARAC_ORDER,Scalar&gt;</a> &gt; <a class="code" href="structFeel_1_1bases.html">basis_carac_type</a>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structFeel_1_1bases.html">bases&lt;Lagrange&lt;0,Scalar,Discontinuous&gt;</a> &gt; <a class="code" href="structFeel_1_1bases.html">basis_p0_type</a>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structFeel_1_1bases.html">bases&lt;basis_veloc_type, basis_pressure_type, basis_lag_type&gt;</a> <a class="code" href="structFeel_1_1bases.html">basis_type</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">typedef</span> bases&lt;Lagrange&lt;CARAC_ORDER,Scalar&gt; &gt; basis_carac_type;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">typedef</span> bases&lt;Lagrange&lt;0,Scalar,Discontinuous&gt; &gt; basis_p0_type;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">typedef</span> bases&lt;basis_veloc_type, basis_pressure_type, basis_lag_type&gt; basis_type;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">//typedef bases&lt;basis_veloc_type, basis_pressure_type&gt; basis_type;</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// space</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FunctionSpace.html">FunctionSpace&lt;mesh_type, basis_type&gt;</a> <a class="code" href="classFeel_1_1FunctionSpace.html">space_type</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">typedef</span> FunctionSpace&lt;mesh_type, basis_type&gt; space_type;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;space_type&gt; space_ptrtype;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FunctionSpace.html">FunctionSpace&lt;mesh_type, basis_carac_type,Discontinuous&gt;</a> <a class="code" href="classFeel_1_1FunctionSpace.html">space_carac_type</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">typedef</span> FunctionSpace&lt;mesh_type, basis_carac_type,Discontinuous&gt; space_carac_type;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;space_carac_type&gt; space_carac_ptrtype;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FunctionSpace.html">FunctionSpace&lt;mesh_type, basis_p0_type,Discontinuous&gt;</a> <a class="code" href="classFeel_1_1FunctionSpace.html">space_p0_type</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">typedef</span> FunctionSpace&lt;mesh_type, basis_p0_type,Discontinuous&gt; space_p0_type;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;space_p0_type&gt; space_p0_ptrtype;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">// elements</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">space_type::element_type</a> <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_type::element_type element_type;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;element_type&gt; element_ptrtype;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> element_type::template sub_element&lt;0&gt;::type element_veloc_type;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> element_type::template sub_element&lt;1&gt;::type element_pressure_type;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> element_type::template sub_element&lt;2&gt;::type element_lag_type;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">space_carac_type::element_type</a> <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">element_carac_type</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_carac_type::element_type element_carac_type;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;element_carac_type&gt; element_carac_ptrtype;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">space_p0_type::element_type</a> <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">element_p0_type</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> space_p0_type::element_type element_p0_type;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;element_p0_type&gt; element_p0_ptrtype;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// backend</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">Backend&lt;double&gt;</a> <a class="code" href="classFeel_1_1Backend.html" title="base class for all linear algebra backends ">backend_type</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">typedef</span> Backend&lt;double&gt; backend_type;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;backend_type&gt; backend_ptrtype;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">//algebra</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1MatrixSparse.html">backend_type::sparse_matrix_type</a> <a class="code" href="classFeel_1_1MatrixSparse.html">sparse_matrix_type</a>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1Vector.html">backend_type::vector_type</a> <a class="code" href="classFeel_1_1Vector.html">vector_type</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> backend_type::sparse_matrix_type sparse_matrix_type;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> backend_type::vector_type vector_type;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;sparse_matrix_type&gt; sparse_matrix_ptrtype;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;vector_type&gt; vector_ptrtype;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">//export</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Exporter.html" title="export Feel generated data to some file formatsUse the visitor and factory pattern. ">Exporter&lt;mesh_type&gt;</a> <a class="code" href="classFeel_1_1Exporter.html" title="export Feel generated data to some file formatsUse the visitor and factory pattern. ">export_type</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">typedef</span> Exporter&lt;mesh_type&gt; export_type;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;export_type&gt; export_ptrtype;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">public</span> :</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="classFeel_1_1Penalisation.html">Penalisation</a>();</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1Penalisation.html#a2ac890ffcbe6b99229f8a078a7da35b0">run</a>();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    Penalisation();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1Application.html#a67506b6f4f427f4bca3b82cc0cc2e64d">run</a>();</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">private</span> :</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> exportResults();</div>
@@ -250,8 +250,8 @@ $(document).ready(function(){initNavTree('penalisation_8hpp_source.html','');});
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    vector_ptrtype F;</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    element_ptrtype U;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">element_carac_type</a> carac;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="classFeel_1_1FunctionSpace_1_1Element.html">element_p0_type</a> p0;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    element_carac_type carac;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    element_p0_type p0;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">double</span> xp,yp,zp;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">double</span> Vx, Vy, Vz;</div>
@@ -271,7 +271,7 @@ $(document).ready(function(){initNavTree('penalisation_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:44 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:06:07 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

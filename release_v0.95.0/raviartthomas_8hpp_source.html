@@ -165,11 +165,11 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">namespace </span>detail</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> P&gt;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1times__x.html">   68</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1times__x.html">times_x</a></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">struct </span>times_x</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> P::value_type value_type;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> P::points_type points_type;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="structFeel_1_1detail_1_1times__x.html">times_x</a> ( P <span class="keyword">const</span>&amp; p, <span class="keywordtype">int</span> c  )</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    times_x ( P <span class="keyword">const</span>&amp; p, <span class="keywordtype">int</span> c  )</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        :</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        M_p ( p ),</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        M_c( c )</div>
@@ -193,10 +193,10 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> T &gt;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1extract__all__poly__indices.html">extract_all_poly_indices</a></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">struct </span>extract_all_poly_indices</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    T start;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="structFeel_1_1detail_1_1extract__all__poly__indices.html">extract_all_poly_indices</a>( T comp, T N )</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    extract_all_poly_indices( T comp, T N )</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        :</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        start( comp*N )</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    { }</div>
@@ -212,26 +212,26 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;         uint16_type O,</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;         <span class="keyword">typename</span> T = double,</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;         <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type, u<span class="keywordtype">int</span>16_type, u<span class="keywordtype">int</span>16_type&gt; <span class="keyword">class </span>Convex = Simplex&gt;</div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="code" href="classFeel_1_1RaviartThomasPolynomialSet.html">  115</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1RaviartThomasPolynomialSet.html">RaviartThomasPolynomialSet</a></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">class </span>RaviartThomasPolynomialSet</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    :</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">public</span> <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">Feel::detail::OrthonormalPolynomialSet</a>&lt;N, N, O+1, Vectorial, T, Convex&gt;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">public</span> Feel::detail::OrthonormalPolynomialSet&lt;N, N, O+1, Vectorial, T, Convex&gt;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">Feel::detail::OrthonormalPolynomialSet&lt;N, N, O+1, Vectorial, T, Convex&gt;</a> <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">super</a>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">typedef</span> Feel::detail::OrthonormalPolynomialSet&lt;N, N, O+1, Vectorial, T, Convex&gt; super;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type Om1 = (O==0)?0:O-1;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">Feel::detail::OrthonormalPolynomialSet&lt;N, N, O, Vectorial, T, Convex&gt;</a> <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">Pk_v_type</a>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">Feel::detail::OrthonormalPolynomialSet&lt;N, N, O+1, Vectorial, T, Convex&gt;</a> <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">Pkp1_v_type</a>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">Feel::detail::OrthonormalPolynomialSet&lt;N, N, Om1, Vectorial, T, Convex&gt;</a> <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">Pkm1_v_type</a>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">Feel::detail::OrthonormalPolynomialSet&lt;N, N, O, Scalar, T, Convex&gt;</a> <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">Pk_s_type</a>;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">Feel::detail::OrthonormalPolynomialSet&lt;N, N, O+1, Scalar, T, Convex&gt;</a> <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">Pkp1_s_type</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">typedef</span> Feel::detail::OrthonormalPolynomialSet&lt;N, N, O, Vectorial, T, Convex&gt; Pk_v_type;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">typedef</span> Feel::detail::OrthonormalPolynomialSet&lt;N, N, O+1, Vectorial, T, Convex&gt; Pkp1_v_type;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">typedef</span> Feel::detail::OrthonormalPolynomialSet&lt;N, N, Om1, Vectorial, T, Convex&gt; Pkm1_v_type;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">typedef</span> Feel::detail::OrthonormalPolynomialSet&lt;N, N, O, Scalar, T, Convex&gt; Pk_s_type;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">typedef</span> Feel::detail::OrthonormalPolynomialSet&lt;N, N, O+1, Scalar, T, Convex&gt; Pkp1_s_type;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1PolynomialSet.html" title="a Set of polynomials ">PolynomialSet&lt;typename super::basis_type,Vectorial&gt;</a> <a class="code" href="classFeel_1_1PolynomialSet.html" title="a Set of polynomials ">vectorial_polynomialset_type</a>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1Polynomial.html" title="polynomial class ">vectorial_polynomialset_type::polynomial_type</a> <a class="code" href="classFeel_1_1Polynomial.html" title="polynomial class ">vectorial_polynomial_type</a>;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1PolynomialSet.html" title="a Set of polynomials ">PolynomialSet&lt;typename super::basis_type,Scalar&gt;</a> <a class="code" href="classFeel_1_1PolynomialSet.html" title="a Set of polynomials ">scalar_polynomialset_type</a>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1Polynomial.html" title="polynomial class ">scalar_polynomialset_type::polynomial_type</a> <a class="code" href="classFeel_1_1Polynomial.html" title="polynomial class ">scalar_polynomial_type</a>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">typedef</span> PolynomialSet&lt;typename super::basis_type,Vectorial&gt; vectorial_polynomialset_type;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> vectorial_polynomialset_type::polynomial_type vectorial_polynomial_type;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">typedef</span> PolynomialSet&lt;typename super::basis_type,Scalar&gt; scalar_polynomialset_type;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> scalar_polynomialset_type::polynomial_type scalar_polynomial_type;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1RaviartThomasPolynomialSet.html">RaviartThomasPolynomialSet&lt;N, O, T&gt;</a> <a class="code" href="classFeel_1_1RaviartThomasPolynomialSet.html">self_type</a>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">typedef</span> RaviartThomasPolynomialSet&lt;N, O, T&gt; self_type;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::value_type value_type;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::convex_type convex_type;</div>
@@ -242,9 +242,9 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = super::nOrder;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nComponents = super::nComponents;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> is_product = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="classFeel_1_1RaviartThomasPolynomialSet.html">RaviartThomasPolynomialSet</a>()</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    RaviartThomasPolynomialSet()</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        :</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">super</a>()</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        super()</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    {</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        uint16_type dim_Pkp1 = convex_type::polyDims( nOrder );</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        uint16_type dim_Pk = convex_type::polyDims( nOrder-1 );</div>
@@ -255,21 +255,21 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;[RTPset] dim_Pkm1 = &quot;</span> &lt;&lt; dim_Pkm1 &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor"></span>        <span class="comment">// (P_k)^d</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">Pkp1_v_type</a> Pkp1_v;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="classFeel_1_1PolynomialSet.html" title="a Set of polynomials ">vectorial_polynomialset_type</a> Pk_v( Pkp1_v.polynomialsUpToDimension( dim_Pk ) );</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        Pkp1_v_type Pkp1_v;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        vectorial_polynomialset_type Pk_v( Pkp1_v.polynomialsUpToDimension( dim_Pk ) );</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor"></span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[RTPset] Pk_v =&quot;</span> &lt;&lt; Pk_v.<a class="code" href="classFeel_1_1PolynomialSet.html#a47c3378ff4692aa26fe75815bbd92033">coeff</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor"></span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[RTPset] Pk_v =&quot;</span> &lt;&lt; Pk_v.coeff() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor"></span>        <span class="comment">// P_k</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">Pkp1_s_type</a> Pkp1;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="classFeel_1_1PolynomialSet.html" title="a Set of polynomials ">scalar_polynomialset_type</a> Pk ( Pkp1.polynomialsUpToDimension( dim_Pk ) );</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        Pkp1_s_type Pkp1;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        scalar_polynomialset_type Pk ( Pkp1.polynomialsUpToDimension( dim_Pk ) );</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor"></span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[RTPset] Pk =&quot;</span> &lt;&lt; Pk.<a class="code" href="classFeel_1_1PolynomialSet.html#a47c3378ff4692aa26fe75815bbd92033">coeff</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor"></span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[RTPset] Pk =&quot;</span> &lt;&lt; Pk.coeff() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;[RTPset] Pk(0) =&quot;</span> &lt;&lt; Pk.polynomial( 0 ).coefficients() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="comment">// x P_k \ P_{k-1}</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <a class="code" href="classFeel_1_1IMGeneral.html" title="integration method interface class ">IMGeneral&lt;convex_type::nDim, 2*nOrder,value_type&gt;</a> im;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        IMGeneral&lt;convex_type::nDim, 2*nOrder,value_type&gt; im;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;[RTPset] im.points() = &quot; &lt;&lt; im.points() &lt;&lt; std::endl;</span></div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        ublas::matrix&lt;value_type&gt; xPkc( nComponents*( dim_Pk-dim_Pkm1 ),Pk.coeff().size2() );</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
@@ -278,7 +278,7 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        {</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> j = 0; j &lt; convex_type::nDim; ++j )</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                <a class="code" href="structFeel_1_1detail_1_1times__x.html">Feel::detail::times_x&lt;scalar_polynomial_type&gt;</a> xp( Pk.polynomial( l ), j );</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                Feel::detail::times_x&lt;scalar_polynomial_type&gt; xp( Pk.polynomial( l ), j );</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                ublas::row( xPkc,i*nComponents+j )=</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                    ublas::row( <a class="code" href="namespaceFeel.html#ae89776231eca6bd68ba734da512759b3">Feel::project</a>( Pkp1,</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                                               xp,</div>
@@ -288,7 +288,7 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;[RTPset] after xPkc = &quot; &lt;&lt; xPkc &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <a class="code" href="classFeel_1_1PolynomialSet.html" title="a Set of polynomials ">vectorial_polynomialset_type</a> xPk( <span class="keyword">typename</span> super::basis_type(), xPkc, <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        vectorial_polynomialset_type xPk( <span class="keyword">typename</span> super::basis_type(), xPkc, <span class="keyword">true</span> );</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;[RTPset] here 1\n&quot;;</span></div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="comment">// (P_k)^d + x P_k</span></div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;[RTPset] RT Poly coeff = &quot; &lt;&lt; unite( Pk_v, xPk ).coeff() &lt;&lt; &quot;\n&quot;;</span></div>
@@ -307,13 +307,13 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="classFeel_1_1Basis.html" title="Base class for basis. ">Basis</a>,</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Basis,</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;         <span class="keyword">template</span>&lt;<span class="keyword">class</span>, u<span class="keywordtype">int</span>16_type, <span class="keyword">class</span>&gt; <span class="keyword">class </span>PointSetType&gt;</div>
-<div class="line"><a name="l00212"></a><span class="lineno"><a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html">  212</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html">RaviartThomasDual</a></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="keyword">class </span>RaviartThomasDual</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    :</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keyword">public</span> <a class="code" href="classFeel_1_1DualBasis.html" title="basis of a space P&#39; dual of some space P ">DualBasis</a>&lt;Basis&gt;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keyword">public</span> DualBasis&lt;Basis&gt;</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;{</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1DualBasis.html">DualBasis&lt;Basis&gt;</a> <a class="code" href="classFeel_1_1DualBasis.html">super</a>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keyword">typedef</span> DualBasis&lt;Basis&gt; super;</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = super::nDim;</div>
@@ -324,7 +324,7 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> primal_space_type::points_type points_type;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> primal_space_type::matrix_type matrix_type;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> primal_space_type::template convex&lt;nDim+nOrder-1&gt;::type convex_type;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference</a>&lt;convex_type, nDim, nDim+nOrder-1, nDim, value_type&gt; <a class="code" href="classFeel_1_1Reference.html">reference_convex_type</a>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keyword">typedef</span> Reference&lt;convex_type, nDim, nDim+nOrder-1, nDim, value_type&gt; reference_convex_type;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> reference_convex_type::node_type node_type;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> primal_space_type::Pkp1_v_type Pkp1_v_type;</div>
@@ -339,19 +339,19 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nbPtsPerVolume = 0;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type numPoints = ( reference_convex_type::numGeometricFaces*nbPtsPerFace+reference_convex_type::numEdges*nbPtsPerEdge );</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno"><a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html#a8485c606be6052216720d3069ff5693a">  243</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type <a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html#a8485c606be6052216720d3069ff5693a">nDofPerVertex</a> = 0;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDofPerVertex = 0;</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno"><a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html#a92ffd21320a05e82be71e7ad21acde88">  246</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type <a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html#a92ffd21320a05e82be71e7ad21acde88">nDofPerEdge</a> = nbPtsPerEdge;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDofPerEdge = nbPtsPerEdge;</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno"><a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html#ae74bce8db5c148def3ada43713eec03c">  249</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type <a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html#ae74bce8db5c148def3ada43713eec03c">nDofPerFace</a> = nbPtsPerFace;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDofPerFace = nbPtsPerFace;</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno"><a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html#a50216422db57e40cba9b68af67cc1d0a">  252</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type <a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html#a50216422db57e40cba9b68af67cc1d0a">nDofPerVolume</a> = 0;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDofPerVolume = 0;</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
-<div class="line"><a name="l00255"></a><span class="lineno"><a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html#a6d9f264873e184832be50701d00514ca">  255</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type <a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html#a6d9f264873e184832be50701d00514ca">nLocalDof</a> = numPoints;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nLocalDof = numPoints;</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html">RaviartThomasDual</a>( <a class="code" href="classFeel_1_1RaviartThomasPolynomialSet.html">primal_space_type</a> <span class="keyword">const</span>&amp; primal )</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    RaviartThomasDual( primal_space_type <span class="keyword">const</span>&amp; primal )</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        :</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <a class="code" href="classFeel_1_1DualBasis.html">super</a>( primal ),</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        super( primal ),</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        M_convex_ref(),</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        M_eid( M_convex_ref.topologicalDimension()+1 ),</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        M_pts( nDim, numPoints ),</div>
@@ -367,7 +367,7 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot; o- nbPtsPerEdge   = &quot;</span> &lt;&lt; ( int )nbPtsPerEdge &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot; o- nbPtsPerFace   = &quot;</span> &lt;&lt; ( int )nbPtsPerFace &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot; o- nbPtsPerVolume = &quot;</span> &lt;&lt; ( int )nbPtsPerVolume &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot; o- nLocalDof      = &quot;</span> &lt;&lt; <a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html#a6d9f264873e184832be50701d00514ca">nLocalDof</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot; o- nLocalDof      = &quot;</span> &lt;&lt; nLocalDof &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="comment">// loop on each entity forming the convex of topological</span></div>
@@ -392,7 +392,7 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;[RT Dual] done 1\n&quot;;</span></div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="comment">// compute  \f$ \ell_e( U ) = (U * n[e]) (edge_pts(e)) \f$</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Functional.html" title="represents a linear functional ">Functional&lt;primal_space_type&gt;</a> functional_type;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keyword">typedef</span> Functional&lt;primal_space_type&gt; functional_type;</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        std::vector&lt;functional_type&gt; fset;</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="comment">// jacobian of the transformation from reference face to the face in the</span></div>
@@ -433,9 +433,9 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            uint16_type dim_Pk = convex_type::polyDims( nOrder-1 );</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            uint16_type dim_Pm1 = convex_type::polyDims( nOrder-2 );</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            <a class="code" href="classFeel_1_1detail_1_1OrthonormalPolynomialSet.html">Pkp1_v_type</a> Pkp1;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            Pkp1_v_type Pkp1;</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            <a class="code" href="classFeel_1_1PolynomialSet.html" title="a Set of polynomials ">vectorial_polynomialset_type</a> Pkm1 ( Pkp1.polynomialsUpToDimension( dim_Pm1 ) );</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            vectorial_polynomialset_type Pkm1 ( Pkp1.polynomialsUpToDimension( dim_Pm1 ) );</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            <span class="comment">//std::cout &lt;&lt; &quot;Pkm1 = &quot; &lt;&lt; Pkm1.coeff() &lt;&lt; &quot;\n&quot;;</span></div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            <span class="comment">//std::cout &lt;&lt; &quot;Primal = &quot; &lt;&lt; primal.coeff() &lt;&lt; &quot;\n&quot;;</span></div>
@@ -449,7 +449,7 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        }</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;[RT Dual] done 3, n fset = &quot; &lt;&lt; fset.size() &lt;&lt; std::endl;</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        M_fset.<a class="code" href="classFeel_1_1FunctionalSet.html#a5a52498e1794cd1190978572a924911c">setFunctionalSet</a>( fset );</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        M_fset.setFunctionalSet( fset );</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="comment">//        std::cout &lt;&lt; &quot;[RT DUAL matrix] mat = &quot; &lt;&lt; M_fset.rep() &lt;&lt; &quot;\n&quot;;</span></div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;[RT Dual] done 4\n&quot;;</span></div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
@@ -457,7 +457,7 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="comment">//pointset_type const&amp; pointSet() const { return M_pset; }</span></div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
-<div class="line"><a name="l00368"></a><span class="lineno"><a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html#a671e6088a5100735b42342d79c699b4d">  368</a></span>&#160;    points_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html#a671e6088a5100735b42342d79c699b4d">points</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    points_type <span class="keyword">const</span>&amp; <a class="code" href="namespaceFeel.html#a07ec0494dee4ca9a16b866e8c1f4d495">points</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="keywordflow">return</span> M_pts;</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    }</div>
@@ -469,7 +469,7 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keywordflow">return</span> M_fset( pset );</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    }</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    points_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html#a671e6088a5100735b42342d79c699b4d">points</a>( uint16_type f )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    points_type <span class="keyword">const</span>&amp; <a class="code" href="namespaceFeel.html#a07ec0494dee4ca9a16b866e8c1f4d495">points</a>( uint16_type f )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordflow">return</span> M_pts_per_face[f];</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    }</div>
@@ -514,8 +514,8 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="keyword">public</span> boost::enable_shared_from_this&lt;RaviartThomas&lt;N,O,T,Convex&gt; &gt;</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;{</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FiniteElement.html" title="Finite element following Ciarlet framework. ">FiniteElement&lt;RaviartThomasPolynomialSet&lt;N, O, T, Convex&gt;</a>,</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            <a class="code" href="classFeel_1_1fem_1_1detail_1_1RaviartThomasDual.html">fem::detail::RaviartThomasDual</a>,</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;            <a class="code" href="classFeel_1_1PointSetEquiSpaced.html">PointSetEquiSpaced</a> &gt; <a class="code" href="classFeel_1_1FiniteElement.html">super</a>;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            fem::detail::RaviartThomasDual,</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;            PointSetEquiSpaced &gt; <a class="code" href="classFeel_1_1FiniteElement.html">super</a>;</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    BOOST_STATIC_ASSERT( N &gt; 1 );</div>
@@ -585,7 +585,7 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;        super( cr ),</div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        M_refconvex()</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    {}</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    ~<a class="code" href="classFeel_1_1RaviartThomas.html">RaviartThomas</a>()</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    ~RaviartThomas()</div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    {}</div>
 <div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;</div>
 <div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;</div>
@@ -779,14 +779,14 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;} <span class="comment">// fem</span></div>
 <div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;<span class="keyword">template</span>&lt;uint16_type Order,</div>
 <div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;         uint16_type TheTAG=0 &gt;</div>
-<div class="line"><a name="l00734"></a><span class="lineno"><a class="code" href="classFeel_1_1RaviartThomas.html">  734</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1RaviartThomas.html">RaviartThomas</a></div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;<span class="keyword">class </span>RaviartThomas</div>
 <div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;{</div>
 <div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    <span class="keyword">template</span>&lt;uint16_type N,</div>
 <div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;             uint16_type R = N,</div>
 <div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;             <span class="keyword">typename</span> T = double,</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;             <span class="keyword">typename</span> <a class="code" href="classFeel_1_1Convex.html" title="Convex base class. ">Convex</a> = <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex&lt;N&gt;</a> &gt;</div>
-<div class="line"><a name="l00741"></a><span class="lineno"><a class="code" href="structFeel_1_1RaviartThomas_1_1apply.html">  741</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1RaviartThomas_1_1apply.html">apply</a></div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;             <span class="keyword">typename</span> Convex = Simplex&lt;N&gt; &gt;</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    <span class="keyword">struct </span>apply</div>
 <div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;    {</div>
 <div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;mpl::bool_&lt;Convex::is_simplex&gt;,</div>
 <div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;                mpl::identity&lt;fem::RaviartThomas&lt;N,Order,T,Simplex,TheTAG&gt; &gt;,</div>
@@ -795,12 +795,12 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 <div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    };</div>
 <div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;</div>
 <div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;    <span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type TheNewTAG&gt;</div>
-<div class="line"><a name="l00750"></a><span class="lineno"><a class="code" href="structFeel_1_1RaviartThomas_1_1ChangeTag.html">  750</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1RaviartThomas_1_1ChangeTag.html">ChangeTag</a></div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    <span class="keyword">struct </span>ChangeTag</div>
 <div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    {</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1RaviartThomas.html">RaviartThomas&lt;Order,TheNewTAG&gt;</a> <a class="code" href="classFeel_1_1RaviartThomas.html">type</a>;</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;        <span class="keyword">typedef</span> RaviartThomas&lt;Order,TheNewTAG&gt; type;</div>
 <div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;    };</div>
 <div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Lagrange.html">Lagrange&lt;Order,Scalar&gt;</a> <a class="code" href="classFeel_1_1Lagrange.html">component_basis_type</a>;</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    <span class="keyword">typedef</span> Lagrange&lt;Order,Scalar&gt; component_basis_type;</div>
 <div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;</div>
 <div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type TAG = TheTAG;</div>
 <div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;</div>
@@ -811,7 +811,7 @@ $(document).ready(function(){initNavTree('raviartthomas_8hpp_source.html','');})
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:48 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:06:09 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

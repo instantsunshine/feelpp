@@ -159,7 +159,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">namespace </span>Feel</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="classFeel_1_1ModelCrbBaseBase.html">   62</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1ModelCrbBaseBase.html">ModelCrbBaseBase</a> {};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">class </span>ModelCrbBaseBase {};</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ModelType&gt;</div>
 <div class="line"><a name="l00126"></a><span class="lineno"><a class="code" href="classFeel_1_1EIM.html">  126</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1EIM.html" title="Empirical interpolation of a function to obtain an affine decomposition. ">EIM</a> : <span class="keyword">public</span> <a class="code" href="classFeel_1_1CRBDB.html" title="brief description ">CRBDB</a></div>
@@ -598,7 +598,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;EIM&lt;ModelType&gt;::studyConvergence( parameter_type <span class="keyword">const</span> &amp; mu , solution_type &amp; solution)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot; Convergence study \n&quot;</span>;</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    <span class="keywordtype">int</span> proc_number =  <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank();</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    <span class="keywordtype">int</span> proc_number =  Environment::worldComm().globalRank();</div>
 <div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;</div>
 <div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    std::vector&lt;double&gt; l2ErrorVec(M_model-&gt;mMax(), 0.0);</div>
 <div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;</div>
@@ -611,7 +611,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;        std::remove( file_name.c_str() );</div>
 <div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;</div>
 <div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    std::ofstream conv;</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    <span class="keywordflow">if</span>( proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    <span class="keywordflow">if</span>( proc_number == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;        {</div>
 <div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;            conv.open(file_name, std::ios::app);</div>
 <div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;            conv &lt;&lt; <span class="stringliteral">&quot;#Nb_basis&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; <span class="stringliteral">&quot;L2_error&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -662,7 +662,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="preprocessor"></span>        l2ErrorVec[N-1] = l2_error; <span class="comment">// /!\ l2ErrorVec[i] represents error with i+1 bases</span></div>
 <div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        <span class="keywordflow">if</span>( proc_number == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        <span class="keywordflow">if</span>( proc_number == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;            conv &lt;&lt; N &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; l2_error &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; interpolation_error &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;</div>
 <div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;    }<span class="comment">//loop over basis functions</span></div>
@@ -672,7 +672,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;}</div>
 <div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;</div>
 <div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> SpaceType, <span class="keyword">typename</span> ModelSpaceType, <span class="keyword">typename</span> ParameterSpaceType&gt;</div>
-<div class="line"><a name="l00733"></a><span class="lineno"><a class="code" href="classFeel_1_1EIMFunctionBase.html">  733</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1EIMFunctionBase.html">EIMFunctionBase</a></div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;<span class="keyword">class </span>EIMFunctionBase</div>
 <div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;{</div>
 <div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;</div>
@@ -700,7 +700,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> parameterspace_type::sampling_ptrtype sampling_ptrtype;</div>
 <div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> parameterspace_type::sampling_type sampling_type;</div>
 <div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1EIM.html" title="Empirical interpolation of a function to obtain an affine decomposition. ">EIM&lt;EIMFunctionBase&lt;SpaceType,model_functionspace_type, ParameterSpaceType&gt;</a> &gt; <a class="code" href="classFeel_1_1EIM.html" title="Empirical interpolation of a function to obtain an affine decomposition. ">eim_type</a>;</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;    <span class="keyword">typedef</span> EIM&lt;EIMFunctionBase&lt;SpaceType,model_functionspace_type, ParameterSpaceType&gt; &gt; eim_type;</div>
 <div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> eim_type::vector_type vector_type;</div>
 <div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;</div>
 <div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;eim_type&gt; eim_ptrtype;</div>
@@ -712,7 +712,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;    <span class="keyword">typedef</span> boost::tuple&lt;double,parameter_type&gt; parameter_residual_type;</div>
 <div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;</div>
 <div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;</div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    <a class="code" href="classFeel_1_1EIMFunctionBase.html">EIMFunctionBase</a>( po::variables_map <span class="keyword">const</span>&amp; vm,</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    EIMFunctionBase( po::variables_map <span class="keyword">const</span>&amp; vm,</div>
 <div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;                     functionspace_ptrtype fspace,</div>
 <div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;                     parameterspace_ptrtype pspace,</div>
 <div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;                     sampling_ptrtype sampling,</div>
@@ -728,7 +728,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;        {</div>
 <div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;            LOG(INFO)&lt;&lt; <span class="stringliteral">&quot;EimFunctionBase constructor\n&quot;</span>;</div>
 <div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        }</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classFeel_1_1EIMFunctionBase.html">EIMFunctionBase</a>()</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    <span class="keyword">virtual</span> ~EIMFunctionBase()</div>
 <div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        {}</div>
 <div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    std::string <span class="keyword">const</span>&amp; name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> M_name; }</div>
 <div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    <span class="keywordtype">void</span> setName( std::string <span class="keyword">const</span>&amp; name ) { M_name = name; }</div>
@@ -832,11 +832,11 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;</div>
 <div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;</div>
 <div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ModelType, <span class="keyword">typename</span> SpaceType, <span class="keyword">typename</span> ExprType&gt;</div>
-<div class="line"><a name="l00893"></a><span class="lineno"><a class="code" href="classFeel_1_1EIMFunction.html">  893</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1EIMFunction.html">EIMFunction</a></div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;    : <span class="keyword">public</span> <a class="code" href="classFeel_1_1EIMFunctionBase.html">EIMFunctionBase</a>&lt;SpaceType, typename ModelType::functionspace_type, typename ModelType::parameterspace_type&gt; ,</div>
-<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;      <span class="keyword">public</span> <a class="code" href="classFeel_1_1CRBDB.html" title="brief description ">CRBDB</a></div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;<span class="keyword">class </span>EIMFunction</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;    : <span class="keyword">public</span> EIMFunctionBase&lt;SpaceType, typename ModelType::functionspace_type, typename ModelType::parameterspace_type&gt; ,</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;      <span class="keyword">public</span> CRBDB</div>
 <div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;{</div>
-<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1EIMFunctionBase.html">EIMFunctionBase&lt;SpaceType, typename ModelType::functionspace_type, typename ModelType::parameterspace_type&gt;</a> <a class="code" href="classFeel_1_1EIMFunctionBase.html">super</a>;</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;    <span class="keyword">typedef</span> EIMFunctionBase&lt;SpaceType, typename ModelType::functionspace_type, typename ModelType::parameterspace_type&gt; super;</div>
 <div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;    <span class="keyword">typedef</span> ModelType model_type;</div>
 <div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;    <span class="comment">//typedef ModelType* model_ptrtype;</span></div>
@@ -865,14 +865,14 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;    <span class="keyword">typedef</span> ExprType expr_type;</div>
 <div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;expr_type&gt; expr_ptrtype;</div>
 <div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;</div>
-<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1EIM.html" title="Empirical interpolation of a function to obtain an affine decomposition. ">super::eim_type</a> <a class="code" href="classFeel_1_1EIM.html" title="Empirical interpolation of a function to obtain an affine decomposition. ">eim_type</a>;</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::eim_type eim_type;</div>
 <div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::eim_ptrtype eim_ptrtype;</div>
 <div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::context_type context_type;</div>
 <div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::vector_type vector_type;</div>
 <div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;</div>
-<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1CRBModel.html" title="Certified Reduced Basis Model class. ">CRBModel&lt;ModelType&gt;</a> <a class="code" href="classFeel_1_1CRBModel.html" title="Certified Reduced Basis Model class. ">crbmodel_type</a>;</div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    <span class="keyword">typedef</span> CRBModel&lt;ModelType&gt; crbmodel_type;</div>
 <div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;crbmodel_type&gt; crbmodel_ptrtype;</div>
-<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1CRB.html" title="Certifed Reduced Basis class. ">CRB&lt;crbmodel_type&gt;</a> <a class="code" href="classFeel_1_1CRB.html" title="Certifed Reduced Basis class. ">crb_type</a>;</div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    <span class="keyword">typedef</span> CRB&lt;crbmodel_type&gt; crb_type;</div>
 <div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;crb_type&gt; crb_ptrtype;</div>
 <div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;</div>
 <div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;    <span class="keyword">typedef</span> Eigen::Matrix&lt;double, Eigen::Dynamic, Eigen::Dynamic&gt; matrix_type;</div>
@@ -881,32 +881,32 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;    <span class="keyword">typedef</span> boost::tuple&lt;double,parameter_type&gt; parameter_residual_type;</div>
 <div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::node_type node_type;</div>
 <div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;</div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;    <a class="code" href="classFeel_1_1EIMFunction.html">EIMFunction</a>( po::variables_map <span class="keyword">const</span>&amp; vm,</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;    EIMFunction( po::variables_map <span class="keyword">const</span>&amp; vm,</div>
 <div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;                 model_ptrtype model,</div>
 <div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;                 functionspace_ptrtype space,</div>
 <div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;                 solution_type&amp; u,</div>
 <div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;                 parameter_type&amp; mu,</div>
 <div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;                 expr_type&amp; expr,</div>
 <div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;                 sampling_ptrtype sampling,</div>
-<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;                 std::string <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1CRBDB.html#aafbd9eddb9faeb89f4f0fa29d01744e9">name</a> )</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;                 std::string <span class="keyword">const</span>&amp; name )</div>
 <div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;        :</div>
-<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;        <a class="code" href="classFeel_1_1EIMFunctionBase.html">super</a>( vm, space, model-&gt;parameterSpace(), sampling, model-&gt;modelName(), <a class="code" href="classFeel_1_1CRBDB.html#aafbd9eddb9faeb89f4f0fa29d01744e9">name</a> ),</div>
-<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;        <a class="code" href="classFeel_1_1CRBDB.html#a63ce83e6c566106d8f133bfa4f222706" title="default constructor ">CRBDB</a>( model-&gt;modelName()+<span class="stringliteral">&quot;EIMFunction&quot;</span>, <a class="code" href="classFeel_1_1CRBDB.html#aafbd9eddb9faeb89f4f0fa29d01744e9">name</a>, <a class="code" href="classFeel_1_1CRBDB.html#aafbd9eddb9faeb89f4f0fa29d01744e9">name</a>, <a class="code" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">vm</a> ),</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;        super( vm, space, model-&gt;parameterSpace(), sampling, model-&gt;modelName(), name ),</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;        <a class="code" href="classFeel_1_1CRBDB.html#a63ce83e6c566106d8f133bfa4f222706" title="default constructor ">CRBDB</a>( model-&gt;modelName()+<span class="stringliteral">&quot;EIMFunction&quot;</span>, name, name, vm ),</div>
 <div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;        M_vm( vm ),</div>
 <div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;        M_model( model ),</div>
 <div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;        M_expr( expr ),</div>
 <div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;        M_u( u ),</div>
 <div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;        M_mu( mu ),</div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;        M_mu_sampling( <span class="keyword">new</span> sampling_type ( model-&gt;parameterSpace() , 1 , sampling ) ),</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;        M_mu_sampling( new sampling_type ( model-&gt;parameterSpace() , 1 , sampling ) ),</div>
 <div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;        M_q_vector(),</div>
 <div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;        M_z_vector(),</div>
 <div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;        M_solution_vector(),</div>
 <div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;        M_t(),</div>
 <div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;        M_ctx( this-&gt;functionSpace() ),</div>
 <div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;        M_B(),</div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;        M_eim( <span class="keyword">new</span> <a class="code" href="classFeel_1_1EIM.html" title="Empirical interpolation of a function to obtain an affine decomposition. ">eim_type</a>( vm, <span class="keyword">this</span>, sampling , 1e-8, <a class="code" href="classFeel_1_1EIMFunction.html#a1200717eba7cc6dda363c93c19e0d0ab">loadDB</a>() ) )</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;        M_eim( new eim_type( vm, this, sampling , 1e-8, loadDB() ) )</div>
 <div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;        {</div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;            <span class="keywordflow">if</span> ( !<a class="code" href="classFeel_1_1EIMFunction.html#a1200717eba7cc6dda363c93c19e0d0ab">loadDB</a>() )</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;            <span class="keywordflow">if</span> ( !loadDB() )</div>
 <div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;            {</div>
 <div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;No EIMFunction database &quot;</span>;</div>
 <div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;            }</div>
@@ -917,7 +917,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;        }</div>
 <div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;</div>
 <div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;</div>
-<div class="line"><a name="l00978"></a><span class="lineno"><a class="code" href="classFeel_1_1EIMFunction.html#a2e5092d5407c9bee1dec444d2bc57568">  978</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1EIMFunction.html#a2e5092d5407c9bee1dec444d2bc57568">saveDB</a>()</div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;    <span class="keywordtype">void</span> saveDB()</div>
 <div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;    {</div>
 <div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;        fs::ofstream ofs( this-&gt;<a class="code" href="classFeel_1_1CRBDB.html#a6ab0476785ef1a656f50e0a86fe81703">dbLocalPath</a>() / this-&gt;<a class="code" href="classFeel_1_1CRBDB.html#af37a10b53fc44efe766ebf6febee3b86">dbFilename</a>() );</div>
 <div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;</div>
@@ -930,7 +930,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;        }</div>
 <div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;    }</div>
 <div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;</div>
-<div class="line"><a name="l00994"></a><span class="lineno"><a class="code" href="classFeel_1_1EIMFunction.html#a1200717eba7cc6dda363c93c19e0d0ab">  994</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classFeel_1_1EIMFunction.html#a1200717eba7cc6dda363c93c19e0d0ab">loadDB</a>()</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;    <span class="keywordtype">bool</span> loadDB()</div>
 <div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;    {</div>
 <div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;        <span class="keywordflow">if</span>( M_q_vector.size() &gt; 0 &amp;&amp; M_t.size() &gt; 0 )</div>
 <div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -960,10 +960,10 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;    }</div>
 <div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;</div>
 <div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;</div>
-<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;    <a class="code" href="classFeel_1_1Vector.html">vector_type</a></div>
+<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;    vector_type</div>
 <div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;    beta( parameter_type <span class="keyword">const</span>&amp; mu, <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __M )</div>
 <div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;    {</div>
-<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;        <a class="code" href="classFeel_1_1Vector.html">vector_type</a> __beta( __M );</div>
+<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;        vector_type __beta( __M );</div>
 <div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160;        __beta = this-&gt;operator()( M_ctx, mu );</div>
 <div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;        <span class="comment">//M_mu = mu;</span></div>
 <div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;        <span class="comment">//__beta = evaluateFromContext( _context=M_ctx, _expr=M_expr );</span></div>
@@ -1308,7 +1308,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;</div>
 <div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160;        LOG( INFO )&lt;&lt;<span class="stringliteral">&quot; M_B : \n &quot;</span>&lt;&lt;M_B;</div>
 <div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;</div>
-<div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;        <a class="code" href="classFeel_1_1EIMFunction.html#a2e5092d5407c9bee1dec444d2bc57568">saveDB</a>();</div>
+<div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;        saveDB();</div>
 <div class="line"><a name="l01373"></a><span class="lineno"> 1373</span>&#160;</div>
 <div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;    }<span class="comment">//fillInterpolationMatrixFirstTime</span></div>
 <div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;</div>
@@ -1320,7 +1320,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;        <span class="keywordtype">bool</span> expression_expansion = option(_name=<span class="stringliteral">&quot;eim.compute-expansion-of-expression&quot;</span>).template as&lt;bool&gt;() ;</div>
 <div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;</div>
 <div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;        <span class="comment">//rank of the current processor</span></div>
-<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;        <span class="keywordtype">int</span> proc_number = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank();</div>
+<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;        <span class="keywordtype">int</span> proc_number = Environment::worldComm().globalRank();</div>
 <div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;</div>
 <div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;        <span class="keywordtype">int</span> npoints = M_ctx.nPoints();</div>
 <div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;</div>
@@ -1382,7 +1382,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l01443"></a><span class="lineno"> 1443</span>&#160;        <span class="keywordtype">bool</span> expression_expansion = option(_name=<span class="stringliteral">&quot;eim.compute-expansion-of-expression&quot;</span>).template as&lt;bool&gt;() ;</div>
 <div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;</div>
 <div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;        <span class="comment">//rank of the current processor</span></div>
-<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;        <span class="keywordtype">int</span> proc_number = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank();</div>
+<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;        <span class="keywordtype">int</span> proc_number = Environment::worldComm().globalRank();</div>
 <div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;</div>
 <div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;        <span class="keywordtype">int</span> size = M_ctx.nPoints();</div>
 <div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;</div>
@@ -1420,7 +1420,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l01481"></a><span class="lineno"> 1481</span>&#160;        LOG( INFO )&lt;&lt;<span class="stringliteral">&quot; M_B : \n &quot;</span>&lt;&lt;M_B;</div>
 <div class="line"><a name="l01482"></a><span class="lineno"> 1482</span>&#160;        <span class="comment">//google::FlushLogFiles(google::GLOG_INFO);</span></div>
 <div class="line"><a name="l01483"></a><span class="lineno"> 1483</span>&#160;</div>
-<div class="line"><a name="l01484"></a><span class="lineno"> 1484</span>&#160;        <a class="code" href="classFeel_1_1EIMFunction.html#a2e5092d5407c9bee1dec444d2bc57568">saveDB</a>();</div>
+<div class="line"><a name="l01484"></a><span class="lineno"> 1484</span>&#160;        saveDB();</div>
 <div class="line"><a name="l01485"></a><span class="lineno"> 1485</span>&#160;</div>
 <div class="line"><a name="l01486"></a><span class="lineno"> 1486</span>&#160;    }<span class="comment">//fillInterpolationMatrix</span></div>
 <div class="line"><a name="l01487"></a><span class="lineno"> 1487</span>&#160;</div>
@@ -1511,7 +1511,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l01572"></a><span class="lineno"> 1572</span>&#160;</div>
 <div class="line"><a name="l01573"></a><span class="lineno"> 1573</span>&#160;        <span class="keywordflow">if</span> ( !M_crb-&gt;isDBLoaded() || M_crb-&gt;rebuildDB() )</div>
 <div class="line"><a name="l01574"></a><span class="lineno"> 1574</span>&#160;        {</div>
-<div class="line"><a name="l01575"></a><span class="lineno"> 1575</span>&#160;            <span class="keywordflow">if</span>( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().globalRank() == <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().masterRank() )</div>
+<div class="line"><a name="l01575"></a><span class="lineno"> 1575</span>&#160;            <span class="keywordflow">if</span>( Environment::worldComm().globalRank() == Environment::worldComm().masterRank() )</div>
 <div class="line"><a name="l01576"></a><span class="lineno"> 1576</span>&#160;                LOG( INFO ) &lt;&lt; <span class="stringliteral">&quot;No CRB DB available, do crb offline computations...&quot;</span>;</div>
 <div class="line"><a name="l01577"></a><span class="lineno"> 1577</span>&#160;            M_crb-&gt;setOfflineStep( <span class="keyword">true</span> );</div>
 <div class="line"><a name="l01578"></a><span class="lineno"> 1578</span>&#160;            M_crb-&gt;offline();</div>
@@ -1709,13 +1709,13 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l01770"></a><span class="lineno"> 1770</span>&#160;{</div>
 <div class="line"><a name="l01771"></a><span class="lineno"> 1771</span>&#160;</div>
 <div class="line"><a name="l01772"></a><span class="lineno"> 1772</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Args&gt;</div>
-<div class="line"><a name="l01773"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1compute__eim__return.html"> 1773</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1compute__eim__return.html">compute_eim_return</a></div>
+<div class="line"><a name="l01773"></a><span class="lineno"> 1773</span>&#160;<span class="keyword">struct </span>compute_eim_return</div>
 <div class="line"><a name="l01774"></a><span class="lineno"> 1774</span>&#160;{</div>
-<div class="line"><a name="l01775"></a><span class="lineno"> 1775</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_reference&lt;typename boost::remove_pointer&lt;typename parameter::binding&lt;Args, tag::model&gt;::type&gt;<a class="code" href="classFeel_1_1EIMFunction.html">::type</a>&gt;::type::element_type model1_type;</div>
-<div class="line"><a name="l01776"></a><span class="lineno"> 1776</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_const&lt;typename boost::remove_pointer&lt;model1_type&gt;::type&gt;<a class="code" href="classFeel_1_1EIMFunction.html">::type</a> model_type;</div>
-<div class="line"><a name="l01777"></a><span class="lineno"> 1777</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_reference&lt;typename parameter::binding&lt;Args, tag::expr&gt;::type&gt;<a class="code" href="classFeel_1_1EIMFunction.html">::type</a> expr_type;</div>
+<div class="line"><a name="l01775"></a><span class="lineno"> 1775</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_reference&lt;typename boost::remove_pointer&lt;typename parameter::binding&lt;Args, tag::model&gt;::type&gt;::type&gt;::type::element_type model1_type;</div>
+<div class="line"><a name="l01776"></a><span class="lineno"> 1776</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_const&lt;typename boost::remove_pointer&lt;model1_type&gt;::type&gt;::type model_type;</div>
+<div class="line"><a name="l01777"></a><span class="lineno"> 1777</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_reference&lt;typename parameter::binding&lt;Args, tag::expr&gt;::type&gt;::type expr_type;</div>
 <div class="line"><a name="l01778"></a><span class="lineno"> 1778</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_reference&lt;typename parameter::binding&lt;Args, tag::space&gt;::type&gt;::type::element_type space_type;</div>
-<div class="line"><a name="l01779"></a><span class="lineno"> 1779</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1EIMFunction.html">EIMFunction&lt;model_type, space_type, expr_type&gt;</a> <a class="code" href="classFeel_1_1EIMFunction.html">type</a>;</div>
+<div class="line"><a name="l01779"></a><span class="lineno"> 1779</span>&#160;    <span class="keyword">typedef</span> EIMFunction&lt;model_type, space_type, expr_type&gt; type;</div>
 <div class="line"><a name="l01780"></a><span class="lineno"> 1780</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;EIMFunction&lt;model_type, space_type, expr_type&gt; &gt; ptrtype;</div>
 <div class="line"><a name="l01781"></a><span class="lineno"> 1781</span>&#160;};</div>
 <div class="line"><a name="l01782"></a><span class="lineno"> 1782</span>&#160;}</div>
@@ -1733,7 +1733,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l01794"></a><span class="lineno"> 1794</span>&#160;      ( space, *)</div>
 <div class="line"><a name="l01795"></a><span class="lineno"> 1795</span>&#160;        ) <span class="comment">// required</span></div>
 <div class="line"><a name="l01796"></a><span class="lineno"> 1796</span>&#160;    ( optional</div>
-<div class="line"><a name="l01797"></a><span class="lineno"> 1797</span>&#160;      ( options, *, <a class="code" href="classFeel_1_1detail_1_1Environment.html#ab2b28bbafcdbad667fd52b22702be57d">Environment::vm</a>())</div>
+<div class="line"><a name="l01797"></a><span class="lineno"> 1797</span>&#160;      ( options, *, Environment::vm())</div>
 <div class="line"><a name="l01798"></a><span class="lineno"> 1798</span>&#160;      <span class="comment">//( space, *( boost::is_convertible&lt;mpl::_,boost::shared_ptr&lt;FunctionSpaceBase&gt; &gt; ), model-&gt;functionSpace() )</span></div>
 <div class="line"><a name="l01799"></a><span class="lineno"> 1799</span>&#160;      <span class="comment">//( space, *, model-&gt;functionSpace() )</span></div>
 <div class="line"><a name="l01800"></a><span class="lineno"> 1800</span>&#160;      ( sampling, *, model-&gt;parameterSpace()-&gt;sampling() )</div>
@@ -1742,13 +1742,13 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l01803"></a><span class="lineno"> 1803</span>&#160;)</div>
 <div class="line"><a name="l01804"></a><span class="lineno"> 1804</span>&#160;{</div>
 <div class="line"><a name="l01805"></a><span class="lineno"> 1805</span>&#160;    Feel::detail::ignore_unused_variable_warning( args );</div>
-<div class="line"><a name="l01806"></a><span class="lineno"> 1806</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classFeel_1_1EIMFunction.html">Feel::detail::compute_eim_return&lt;Args&gt;::type</a> eim_type;</div>
+<div class="line"><a name="l01806"></a><span class="lineno"> 1806</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Feel::detail::compute_eim_return&lt;Args&gt;::type eim_type;</div>
 <div class="line"><a name="l01807"></a><span class="lineno"> 1807</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Feel::detail::compute_eim_return&lt;Args&gt;::ptrtype eim_ptrtype;</div>
 <div class="line"><a name="l01808"></a><span class="lineno"> 1808</span>&#160;    <span class="keywordflow">return</span>  eim_ptrtype(<span class="keyword">new</span> eim_type( options, model, space, element, parameter, expr, sampling, name ) );</div>
 <div class="line"><a name="l01809"></a><span class="lineno"> 1809</span>&#160;} <span class="comment">// eim</span></div>
 <div class="line"><a name="l01810"></a><span class="lineno"> 1810</span>&#160;</div>
 <div class="line"><a name="l01811"></a><span class="lineno"> 1811</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ModelType&gt;</div>
-<div class="line"><a name="l01812"></a><span class="lineno"><a class="code" href="structFeel_1_1EimFunctionNoSolve.html"> 1812</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1EimFunctionNoSolve.html">EimFunctionNoSolve</a></div>
+<div class="line"><a name="l01812"></a><span class="lineno"> 1812</span>&#160;<span class="keyword">struct </span>EimFunctionNoSolve</div>
 <div class="line"><a name="l01813"></a><span class="lineno"> 1813</span>&#160;{</div>
 <div class="line"><a name="l01814"></a><span class="lineno"> 1814</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> ModelType::functionspace_type functionspace_type;</div>
 <div class="line"><a name="l01815"></a><span class="lineno"> 1815</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> ModelType::functionspace_ptrtype functionspace_ptrtype;</div>
@@ -1769,7 +1769,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l01830"></a><span class="lineno"> 1830</span>&#160;                                                     fusion::vector&lt; mpl::int_&lt;0&gt;, mpl::int_&lt;1&gt;, mpl::int_&lt;2&gt;, mpl::int_&lt;3&gt;, mpl::int_&lt;4&gt; &gt;</div>
 <div class="line"><a name="l01831"></a><span class="lineno"> 1831</span>&#160;                                                     &gt;::type &gt;::type &gt;::type index_vector_type;</div>
 <div class="line"><a name="l01832"></a><span class="lineno"> 1832</span>&#160;</div>
-<div class="line"><a name="l01833"></a><span class="lineno"> 1833</span>&#160;    <a class="code" href="structFeel_1_1EimFunctionNoSolve.html">EimFunctionNoSolve</a>( model_ptrtype model )</div>
+<div class="line"><a name="l01833"></a><span class="lineno"> 1833</span>&#160;    EimFunctionNoSolve( model_ptrtype model )</div>
 <div class="line"><a name="l01834"></a><span class="lineno"> 1834</span>&#160;        :</div>
 <div class="line"><a name="l01835"></a><span class="lineno"> 1835</span>&#160;        M_model( model ),</div>
 <div class="line"><a name="l01836"></a><span class="lineno"> 1836</span>&#160;        M_elt( M_model-&gt;functionSpace()-&gt;element() )</div>
@@ -1789,7 +1789,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l01850"></a><span class="lineno"> 1850</span>&#160;    }</div>
 <div class="line"><a name="l01851"></a><span class="lineno"> 1851</span>&#160;    element_type solve( parameter_type <span class="keyword">const</span>&amp; mu , mpl::bool_&lt;true&gt; )</div>
 <div class="line"><a name="l01852"></a><span class="lineno"> 1852</span>&#160;    {</div>
-<div class="line"><a name="l01853"></a><span class="lineno"> 1853</span>&#160;        <a class="code" href="structFeel_1_1EimFunctionNoSolve_1_1ProjectInfCompositeCase.html">ProjectInfCompositeCase</a> project_inf_composite_case( M_elt );</div>
+<div class="line"><a name="l01853"></a><span class="lineno"> 1853</span>&#160;        ProjectInfCompositeCase project_inf_composite_case( M_elt );</div>
 <div class="line"><a name="l01854"></a><span class="lineno"> 1854</span>&#160;        index_vector_type index_vector;</div>
 <div class="line"><a name="l01855"></a><span class="lineno"> 1855</span>&#160;        fusion::for_each( index_vector, project_inf_composite_case );</div>
 <div class="line"><a name="l01856"></a><span class="lineno"> 1856</span>&#160;        <span class="keywordflow">return</span> project_inf_composite_case.element();</div>
@@ -1799,9 +1799,9 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l01860"></a><span class="lineno"> 1860</span>&#160;    functionspace_ptrtype functionSpace() { <span class="keywordflow">return</span> M_model-&gt;functionSpace(); }</div>
 <div class="line"><a name="l01861"></a><span class="lineno"> 1861</span>&#160;    parameterspace_ptrtype parameterSpace() { <span class="keywordflow">return</span> M_model-&gt;parameterSpace(); }</div>
 <div class="line"><a name="l01862"></a><span class="lineno"> 1862</span>&#160;</div>
-<div class="line"><a name="l01863"></a><span class="lineno"><a class="code" href="structFeel_1_1EimFunctionNoSolve_1_1ProjectInfCompositeCase.html"> 1863</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1EimFunctionNoSolve_1_1ProjectInfCompositeCase.html">ProjectInfCompositeCase</a></div>
+<div class="line"><a name="l01863"></a><span class="lineno"> 1863</span>&#160;    <span class="keyword">struct </span>ProjectInfCompositeCase</div>
 <div class="line"><a name="l01864"></a><span class="lineno"> 1864</span>&#160;    {</div>
-<div class="line"><a name="l01865"></a><span class="lineno"> 1865</span>&#160;        <a class="code" href="structFeel_1_1EimFunctionNoSolve_1_1ProjectInfCompositeCase.html">ProjectInfCompositeCase</a>( element_type &amp; composite_element)</div>
+<div class="line"><a name="l01865"></a><span class="lineno"> 1865</span>&#160;        ProjectInfCompositeCase( element_type &amp; composite_element)</div>
 <div class="line"><a name="l01866"></a><span class="lineno"> 1866</span>&#160;            :</div>
 <div class="line"><a name="l01867"></a><span class="lineno"> 1867</span>&#160;            M_element( composite_element )</div>
 <div class="line"><a name="l01868"></a><span class="lineno"> 1868</span>&#160;        {}</div>
@@ -1832,7 +1832,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 <div class="line"><a name="l01893"></a><span class="lineno"> 1893</span>&#160;boost::shared_ptr&lt;EimFunctionNoSolve&lt;ModelType&gt;&gt;</div>
 <div class="line"><a name="l01894"></a><span class="lineno"> 1894</span>&#160;eim_no_solve( boost::shared_ptr&lt;ModelType&gt; model )</div>
 <div class="line"><a name="l01895"></a><span class="lineno"> 1895</span>&#160;{</div>
-<div class="line"><a name="l01896"></a><span class="lineno"> 1896</span>&#160;    <span class="keywordflow">return</span> boost::shared_ptr&lt;EimFunctionNoSolve&lt;ModelType&gt;&gt;( <span class="keyword">new</span> <a class="code" href="structFeel_1_1EimFunctionNoSolve.html">EimFunctionNoSolve&lt;ModelType&gt;</a>( model ) );</div>
+<div class="line"><a name="l01896"></a><span class="lineno"> 1896</span>&#160;    <span class="keywordflow">return</span> boost::shared_ptr&lt;EimFunctionNoSolve&lt;ModelType&gt;&gt;( <span class="keyword">new</span> EimFunctionNoSolve&lt;ModelType&gt;( model ) );</div>
 <div class="line"><a name="l01897"></a><span class="lineno"> 1897</span>&#160;}</div>
 <div class="line"><a name="l01898"></a><span class="lineno"> 1898</span>&#160;</div>
 <div class="line"><a name="l01899"></a><span class="lineno"> 1899</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> ExprType , <span class="keyword">typename</span> EimType &gt;</div>
@@ -1861,7 +1861,7 @@ $(document).ready(function(){initNavTree('eim_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:18 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:05:48 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -131,23 +131,23 @@ typedef boost::shared_ptr<br class="typebreak"/>
 typedef <a class="el" href="classFeel_1_1Backend.html">Backend</a>&lt; value_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>backend_type</b></td></tr>
 <tr class="separator:a54a7cfafe0706a7cd69372c4561eee6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2604c2bd2f3d205bbcf1726a8a76ae99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2604c2bd2f3d205bbcf1726a8a76ae99"></a>
-typedef <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a>&lt; 0, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_l_type</b></td></tr>
+typedef Lagrange&lt; 0, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_l_type</b></td></tr>
 <tr class="separator:a2604c2bd2f3d205bbcf1726a8a76ae99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fc57a17cbe8639f028f739c2271be2e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fc57a17cbe8639f028f739c2271be2e"></a>
-typedef <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a>&lt; 1, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_p_type</b></td></tr>
+typedef Lagrange&lt; 1, <a class="el" href="structFeel_1_1Scalar.html">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_p_type</b></td></tr>
 <tr class="separator:a0fc57a17cbe8639f028f739c2271be2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae70741c05585a370e44b17987ca84717"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae70741c05585a370e44b17987ca84717"></a>
-typedef <a class="el" href="structFeel_1_1bases.html">bases</a>&lt; <a class="el" href="classFeel_1_1Lagrange.html">basis_u_type</a>, <br class="typebreak"/>
-<a class="el" href="classFeel_1_1Lagrange.html">basis_p_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_type</b></td></tr>
+typedef bases&lt; basis_u_type, <br class="typebreak"/>
+basis_p_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_type</b></td></tr>
 <tr class="separator:ae70741c05585a370e44b17987ca84717"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a709846b6045508352ef8633a37235bb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a709846b6045508352ef8633a37235bb1"></a>
-typedef <a class="el" href="classFeel_1_1Lagrange.html">Lagrange</a>&lt; 2, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_u_type</b></td></tr>
+typedef Lagrange&lt; 2, <a class="el" href="structFeel_1_1Vectorial.html">Vectorial</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>basis_u_type</b></td></tr>
 <tr class="separator:a709846b6045508352ef8633a37235bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af70aa6d4c23f4aef8b66e830d0dc69f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af70aa6d4c23f4aef8b66e830d0dc69f1"></a>
 typedef <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>convex_type</b></td></tr>
 <tr class="separator:af70aa6d4c23f4aef8b66e830d0dc69f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfabb6cf6e86a1fc7eaeeda7a9badf10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfabb6cf6e86a1fc7eaeeda7a9badf10"></a>
-typedef <a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">space_type::element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
+typedef space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
 <tr class="separator:abfabb6cf6e86a1fc7eaeeda7a9badf10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17b518acec9bb6eb878017851f63051f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17b518acec9bb6eb878017851f63051f"></a>
 typedef <a class="el" href="classFeel_1_1Exporter.html">Exporter</a>&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>export_type</b></td></tr>
@@ -165,7 +165,7 @@ typedef boost::shared_ptr<br class="typebreak"/>
 <tr class="separator:aa235adae76a2a36869eb1dbec1aed941"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d5e0935065fb753e12f8ddf74d8dacc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d5e0935065fb753e12f8ddf74d8dacc"></a>
 typedef <a class="el" href="classFeel_1_1FunctionSpace.html">FunctionSpace</a><br class="typebreak"/>
-&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a>, <a class="el" href="structFeel_1_1bases.html">basis_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>space_type</b></td></tr>
+&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a>, basis_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>space_type</b></td></tr>
 <tr class="separator:a9d5e0935065fb753e12f8ddf74d8dacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5732ab884b55d6f9feb7527af78d7c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5732ab884b55d6f9feb7527af78d7c4"></a>
 typedef double&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
@@ -175,7 +175,7 @@ typedef double&#160;</td><td class="memItemRight" valign="bottom"><b>value_type<
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab4e421209990deb3cda70d01c040cf8c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab4e421209990deb3cda70d01c040cf8c"></a>
 template&lt;typename ExprUExact , typename ExprPExact &gt; </td></tr>
-<tr class="memitem:ab4e421209990deb3cda70d01c040cf8c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>exportResults</b> (ExprUExact u_exact, ExprPExact p_exact, <a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a> &amp;U, <a class="el" href="classFeel_1_1FunctionSpace_1_1Element.html">element_type</a> &amp;V)</td></tr>
+<tr class="memitem:ab4e421209990deb3cda70d01c040cf8c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>exportResults</b> (ExprUExact u_exact, ExprPExact p_exact, element_type &amp;U, element_type &amp;V)</td></tr>
 <tr class="separator:ab4e421209990deb3cda70d01c040cf8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8d2f62cb27a596122d71f619928e602"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8d2f62cb27a596122d71f619928e602"></a>
 FEELPP_DONT_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
@@ -294,7 +294,7 @@ ptree::ptree&#160;</td><td class="memItemRight" valign="bottom"><b>M_stats</b></
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:32:24 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:06:24 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

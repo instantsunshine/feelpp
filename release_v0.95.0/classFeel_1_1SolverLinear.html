@@ -127,7 +127,7 @@ typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Preconditioner.html">Preconditioner</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>preconditioner_ptrtype</b></td></tr>
 <tr class="separator:af2ea5597c83929afeaa82159865d3197"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4abfb9e3f78412464794afe713add9a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4abfb9e3f78412464794afe713add9a1"></a>
-typedef <a class="el" href="structFeel_1_1type__traits.html">type_traits</a>&lt; T &gt;::real_type&#160;</td><td class="memItemRight" valign="bottom"><b>real_type</b></td></tr>
+typedef type_traits&lt; T &gt;::real_type&#160;</td><td class="memItemRight" valign="bottom"><b>real_type</b></td></tr>
 <tr class="separator:a4abfb9e3f78412464794afe713add9a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38242d3943fd9b89ab783decda28902f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38242d3943fd9b89ab783decda28902f"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
@@ -189,7 +189,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setShowKSPMonitor</b>
 <tr class="memitem:ad672a8b9778ddf384ec7e5d1f75f4b32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverLinear.html#ad672a8b9778ddf384ec7e5d1f75f4b32">setSolverType</a> (const <a class="el" href="namespaceFeel.html#a75d37378df29bc4c9a393504b87fdc51">SolverType</a> st)</td></tr>
 <tr class="separator:ad672a8b9778ddf384ec7e5d1f75f4b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac35211615a76dc2fc3959d5250579dbd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac35211615a76dc2fc3959d5250579dbd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setWorldComm</b> (<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWorldComm</b> (WorldComm const &amp;worldComm)</td></tr>
 <tr class="separator:ac35211615a76dc2fc3959d5250579dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2020315335172226f6ab5cd8360b318"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverLinear.html#ad2020315335172226f6ab5cd8360b318">showKSPConvergedReason</a> () const </td></tr>
 <tr class="separator:ad2020315335172226f6ab5cd8360b318"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -201,16 +201,16 @@ unsigned int, real_type &gt;&#160;</td><td class="memItemRight" valign="bottom">
 <tr class="memitem:a433f370d52aca86ae775b76b7dded0dd"><td class="memItemLeft" align="right" valign="top">virtual boost::tuple&lt; bool, <br class="typebreak"/>
 unsigned int, real_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverLinear.html#a433f370d52aca86ae775b76b7dded0dd">solve</a> (<a class="el" href="classFeel_1_1MatrixSparse.html">MatrixSparse</a>&lt; T &gt; const &amp;mat, <a class="el" href="classFeel_1_1MatrixSparse.html">MatrixSparse</a>&lt; T &gt; const &amp;prec, <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; T &gt; &amp;x, <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; T &gt; const &amp;b, const double tolerance, const unsigned int maxit, bool transpose)=0</td></tr>
 <tr class="separator:a433f370d52aca86ae775b76b7dded0dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a504f279570894dbe484694f3b0da5c3c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverLinear.html#a504f279570894dbe484694f3b0da5c3c">SolverLinear</a> (<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
+<tr class="memitem:a504f279570894dbe484694f3b0da5c3c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverLinear.html#a504f279570894dbe484694f3b0da5c3c">SolverLinear</a> (WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
 <tr class="separator:a504f279570894dbe484694f3b0da5c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a4178f0f35d4e8a633031c681cf55e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverLinear.html#a8a4178f0f35d4e8a633031c681cf55e8">SolverLinear</a> (po::variables_map const &amp;<a class="el" href="classFeel_1_1SolverLinear.html#ad93d33f94e2fee2113dd4b4011c441c2">vm</a>, <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
+<tr class="memitem:a8a4178f0f35d4e8a633031c681cf55e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverLinear.html#a8a4178f0f35d4e8a633031c681cf55e8">SolverLinear</a> (po::variables_map const &amp;<a class="el" href="classFeel_1_1SolverLinear.html#ad93d33f94e2fee2113dd4b4011c441c2">vm</a>, WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
 <tr class="separator:a8a4178f0f35d4e8a633031c681cf55e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefa299f4d0c7f3d5555f69acfe009e4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#a75d37378df29bc4c9a393504b87fdc51">SolverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverLinear.html#aefa299f4d0c7f3d5555f69acfe009e4f">solverType</a> () const </td></tr>
 <tr class="separator:aefa299f4d0c7f3d5555f69acfe009e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad93d33f94e2fee2113dd4b4011c441c2"><td class="memItemLeft" align="right" valign="top">po::variables_map&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverLinear.html#ad93d33f94e2fee2113dd4b4011c441c2">vm</a> () const </td></tr>
 <tr class="separator:ad93d33f94e2fee2113dd4b4011c441c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66c5099798a200620d8df17ea9cc64c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66c5099798a200620d8df17ea9cc64c1"></a>
-<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>worldComm</b> () const </td></tr>
+WorldComm const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>worldComm</b> () const </td></tr>
 <tr class="separator:a66c5099798a200620d8df17ea9cc64c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00c678b88735046fc5cf51ca71f3f1ef"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1SolverLinear.html#a00c678b88735046fc5cf51ca71f3f1ef">~SolverLinear</a> ()</td></tr>
 <tr class="separator:a00c678b88735046fc5cf51ca71f3f1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -280,8 +280,8 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classFeel_1_1SolverLinear.html">Feel::SolverLinear</a>&lt; T &gt;::<a class="el" href="classFeel_1_1SolverLinear.html">SolverLinear</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td>
-          <td class="paramname"><em>worldComm</em> = <code><a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>()</code>)</td><td></td>
+          <td class="paramtype">WorldComm const &amp;&#160;</td>
+          <td class="paramname"><em>worldComm</em> = <code>Environment::worldComm()</code>)</td><td></td>
           <td></td>
         </tr>
       </table>
@@ -313,8 +313,8 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td>
-          <td class="paramname"><em>worldComm</em> = <code><a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>()</code>&#160;</td>
+          <td class="paramtype">WorldComm const &amp;&#160;</td>
+          <td class="paramname"><em>worldComm</em> = <code>Environment::worldComm()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1240,7 +1240,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:32:24 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:06:24 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

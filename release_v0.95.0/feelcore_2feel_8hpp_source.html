@@ -256,14 +256,14 @@ $(document).ready(function(){initNavTree('feelcore_2feel_8hpp_source.html','');}
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="keyword">namespace </span>detail</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;{</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">int</span> bit_size&gt;</div>
-<div class="line"><a name="l00198"></a><span class="lineno"><a class="code" href="classFeel_1_1detail_1_1no__int.html">  198</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1detail_1_1no__int.html">no_int</a></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="keyword">class </span>no_int</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;{</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="classFeel_1_1detail_1_1no__int.html">no_int</a>();</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    no_int();</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;};</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keyword">template</span>&lt; <span class="keywordtype">int</span> bit_size &gt;</div>
-<div class="line"><a name="l00205"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1integer.html">  205</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1integer.html">integer</a></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="keyword">struct </span>integer</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;{</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keyword">typedef</span> mpl::list&lt;signed char,signed short, signed int, signed long int, signed long long&gt; builtins_;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::base&lt; <span class="keyword">typename</span> mpl::lower_bound&lt;</div>
@@ -281,7 +281,7 @@ $(document).ready(function(){initNavTree('feelcore_2feel_8hpp_source.html','');}
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;};</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="keyword">template</span>&lt; <span class="keywordtype">int</span> bit_size &gt;</div>
-<div class="line"><a name="l00223"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1real.html">  223</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1real.html">real</a></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="keyword">struct </span>real</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;{</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">typedef</span> mpl::list&lt;float, double, long double&gt; builtins_;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::base&lt; <span class="keyword">typename</span> mpl::lower_bound&lt;</div>
@@ -323,7 +323,7 @@ $(document).ready(function(){initNavTree('feelcore_2feel_8hpp_source.html','');}
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="keyword">namespace </span>detail</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;{</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="keyword">template</span>&lt; <span class="keywordtype">int</span> bit_size &gt;</div>
-<div class="line"><a name="l00268"></a><span class="lineno"><a class="code" href="structFeel_1_1detail_1_1unsigned__integer.html">  268</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1detail_1_1unsigned__integer.html">unsigned_integer</a></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="keyword">struct </span>unsigned_integer</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;{</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="comment">//typedef mpl::list&lt;unsigned char,unsigned short, long unsigned int, long unsigned int,  long unsigned long&gt; builtins_;</span></div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keyword">typedef</span> mpl::list&lt;unsigned char,unsigned short, unsigned int, unsigned long int,  unsigned long long&gt; builtins_;</div>
@@ -414,7 +414,7 @@ $(document).ready(function(){initNavTree('feelcore_2feel_8hpp_source.html','');}
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="keyword">namespace </span>meta</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;{</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TheArgs&gt;</div>
-<div class="line"><a name="l00387"></a><span class="lineno"><a class="code" href="structFeel_1_1meta_1_1remove__all.html">  387</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1meta_1_1remove__all.html">remove_all</a></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="keyword">struct </span>remove_all</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;{</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> boost::remove_pointer&lt;</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keyword">typename</span> boost::remove_const&lt;</div>
@@ -570,7 +570,7 @@ $(document).ready(function(){initNavTree('feelcore_2feel_8hpp_source.html','');}
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:20 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:05:49 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

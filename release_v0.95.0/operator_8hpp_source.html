@@ -152,7 +152,7 @@ $(document).ready(function(){initNavTree('operator_8hpp_source.html','');});
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;dual_image_space_type&gt;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    dual_image_space_ptrtype;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> domain_space_type::element_type domain_element_type;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1FsFunctionalLinear.html">FsFunctionalLinear&lt;dual_image_space_type&gt;</a> <a class="code" href="classFeel_1_1FsFunctionalLinear.html">image_element_type</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">typedef</span> FsFunctionalLinear&lt;dual_image_space_type&gt; image_element_type;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classFeel_1_1Operator.html" title="Operator between function spaces. ">Operator</a>()</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        :</div>
@@ -181,14 +181,14 @@ $(document).ready(function(){initNavTree('operator_8hpp_source.html','');});
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">// apply the operator: ie := Op de</span></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    apply( <span class="keyword">const</span> domain_element_type&amp; de,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;           <a class="code" href="classFeel_1_1FsFunctionalLinear.html">image_element_type</a>&amp;        ie ) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;           image_element_type&amp;        ie ) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">// for convenience</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="classFeel_1_1FsFunctionalLinear.html">image_element_type</a> operator()( <span class="keyword">const</span> domain_element_type&amp; de )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    image_element_type operator()( <span class="keyword">const</span> domain_element_type&amp; de )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="classFeel_1_1FsFunctionalLinear.html">image_element_type</a> ie( M_dualImageSpace );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        image_element_type ie( M_dualImageSpace );</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        apply( de, ie );</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> ie;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
@@ -226,7 +226,7 @@ $(document).ready(function(){initNavTree('operator_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:40 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:06:04 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

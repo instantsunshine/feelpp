@@ -262,7 +262,7 @@ $(document).ready(function(){initNavTree('pointsettomesh_8hpp_source.html','');}
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<a class="code" href="classFeel_1_1PointSetToMesh.html#ac540fae4a23b988ace4700749271197e">PointSetToMesh&lt;Convex, T&gt;::visit</a>( pointset_type* pset, mpl::int_&lt;1&gt; )</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;{</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    DVLOG(2) &lt;&lt; <span class="stringliteral">&quot;[PointSetToMesh::visit(&lt;1&gt;)] pointset to mesh\n&quot;</span>;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    M_mesh = mesh_ptrtype( <span class="keyword">new</span> mesh_type( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().subWorldCommSeq() ) );</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    M_mesh = mesh_ptrtype( <span class="keyword">new</span> mesh_type( Environment::worldComm().subWorldCommSeq() ) );</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> __npts = pset-&gt;nPoints();</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
@@ -376,7 +376,7 @@ $(document).ready(function(){initNavTree('pointsettomesh_8hpp_source.html','');}
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;{</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="preprocessor">#if defined(FEELPP_HAS_VTK)</span></div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="preprocessor"></span>    <span class="comment">// reinitialize mesh</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    M_mesh = mesh_ptrtype( <span class="keyword">new</span> mesh_type( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().subWorldCommSeq() ) );</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    M_mesh = mesh_ptrtype( <span class="keyword">new</span> mesh_type( Environment::worldComm().subWorldCommSeq() ) );</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    vtkPoints *newPoints = vtkPoints::New();</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
@@ -467,7 +467,7 @@ $(document).ready(function(){initNavTree('pointsettomesh_8hpp_source.html','');}
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;{</div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<span class="preprocessor">#if defined(FEELPP_HAS_VTK)</span></div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="preprocessor"></span>    <span class="comment">// reinitialize mesh</span></div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    M_mesh = mesh_ptrtype( <span class="keyword">new</span> mesh_type( <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().subWorldCommSeq() ) );</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    M_mesh = mesh_ptrtype( <span class="keyword">new</span> mesh_type( Environment::worldComm().subWorldCommSeq() ) );</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    vtkPoints *newPoints = vtkPoints::New();</div>
 <div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;</div>
@@ -515,7 +515,7 @@ $(document).ready(function(){initNavTree('pointsettomesh_8hpp_source.html','');}
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:44 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:06:07 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

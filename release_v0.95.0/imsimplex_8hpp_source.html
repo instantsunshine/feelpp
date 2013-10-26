@@ -2500,19 +2500,19 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l02408"></a><span class="lineno"> 2408</span>&#160;</div>
 <div class="line"><a name="l02410"></a><span class="lineno"> 2410</span>&#160;</div>
 <div class="line"><a name="l02415"></a><span class="lineno"> 2415</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">int</span> Order, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l02416"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra.html"> 2416</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a></div>
+<div class="line"><a name="l02416"></a><span class="lineno"> 2416</span>&#160;<span class="keyword">struct </span>IMTetrahedra</div>
 <div class="line"><a name="l02417"></a><span class="lineno"> 2417</span>&#160;{</div>
 <div class="line"><a name="l02418"></a><span class="lineno"> 2418</span>&#160;};</div>
 <div class="line"><a name="l02419"></a><span class="lineno"> 2419</span>&#160;</div>
 <div class="line"><a name="l02426"></a><span class="lineno"> 2426</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l02427"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html"> 2427</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;1,T&gt;</div>
+<div class="line"><a name="l02427"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_011_00_01T_01_4.html"> 2427</a></span>&#160;<span class="keyword">struct </span>IMTetrahedra&lt;1,T&gt;</div>
 <div class="line"><a name="l02428"></a><span class="lineno"> 2428</span>&#160;{</div>
 <div class="line"><a name="l02429"></a><span class="lineno"> 2429</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l02430"></a><span class="lineno"> 2430</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 3;</div>
 <div class="line"><a name="l02431"></a><span class="lineno"> 2431</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = 1;</div>
 <div class="line"><a name="l02432"></a><span class="lineno"> 2432</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints = 1;</div>
 <div class="line"><a name="l02433"></a><span class="lineno"> 2433</span>&#160;</div>
-<div class="line"><a name="l02434"></a><span class="lineno"> 2434</span>&#160;    <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>()</div>
+<div class="line"><a name="l02434"></a><span class="lineno"> 2434</span>&#160;    IMTetrahedra()</div>
 <div class="line"><a name="l02435"></a><span class="lineno"> 2435</span>&#160;        :</div>
 <div class="line"><a name="l02436"></a><span class="lineno"> 2436</span>&#160;        q ()</div>
 <div class="line"><a name="l02437"></a><span class="lineno"> 2437</span>&#160;    {</div>
@@ -2521,7 +2521,7 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l02440"></a><span class="lineno"> 2440</span>&#160;</div>
 <div class="line"><a name="l02441"></a><span class="lineno"> 2441</span>&#160;    std::vector&lt;value_type&gt; q;</div>
 <div class="line"><a name="l02442"></a><span class="lineno"> 2442</span>&#160;};</div>
-<div class="line"><a name="l02443"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_010_00_01T_01_4.html"> 2443</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;0,T&gt; : <span class="keyword">public</span> <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;1,T&gt; {};</div>
+<div class="line"><a name="l02443"></a><span class="lineno"> 2443</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>IMTetrahedra&lt;0,T&gt; : <span class="keyword">public</span> IMTetrahedra&lt;1,T&gt; {};</div>
 <div class="line"><a name="l02444"></a><span class="lineno"> 2444</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l02445"></a><span class="lineno"> 2445</span>&#160;<span class="comment">  4</span></div>
 <div class="line"><a name="l02446"></a><span class="lineno"> 2446</span>&#160;<span class="comment">  -0.723606797749979  -0.723606797749979  -0.723606797749979  0.333333333333333</span></div>
@@ -2531,13 +2531,13 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l02450"></a><span class="lineno"> 2450</span>&#160;<span class="comment">  Gauss  quadrature  constants  for  the  reference  tetrahedron  order  p=2</span></div>
 <div class="line"><a name="l02451"></a><span class="lineno"> 2451</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l02452"></a><span class="lineno"> 2452</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l02453"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_012_00_01T_01_4.html"> 2453</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;2,T&gt;</div>
+<div class="line"><a name="l02453"></a><span class="lineno"> 2453</span>&#160;<span class="keyword">struct </span>IMTetrahedra&lt;2,T&gt;</div>
 <div class="line"><a name="l02454"></a><span class="lineno"> 2454</span>&#160;{</div>
 <div class="line"><a name="l02455"></a><span class="lineno"> 2455</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l02456"></a><span class="lineno"> 2456</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 3;</div>
 <div class="line"><a name="l02457"></a><span class="lineno"> 2457</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = 2;</div>
 <div class="line"><a name="l02458"></a><span class="lineno"> 2458</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints = 4;</div>
-<div class="line"><a name="l02459"></a><span class="lineno"> 2459</span>&#160;    <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>()</div>
+<div class="line"><a name="l02459"></a><span class="lineno"> 2459</span>&#160;    IMTetrahedra()</div>
 <div class="line"><a name="l02460"></a><span class="lineno"> 2460</span>&#160;        :</div>
 <div class="line"><a name="l02461"></a><span class="lineno"> 2461</span>&#160;        q()</div>
 <div class="line"><a name="l02462"></a><span class="lineno"> 2462</span>&#160;    {</div>
@@ -2561,13 +2561,13 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l02480"></a><span class="lineno"> 2480</span>&#160;<span class="comment">  Gauss  quadrature  constants  for  the  reference  tetrahedron  order  p=3</span></div>
 <div class="line"><a name="l02481"></a><span class="lineno"> 2481</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l02482"></a><span class="lineno"> 2482</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l02483"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_013_00_01T_01_4.html"> 2483</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;3,T&gt;</div>
+<div class="line"><a name="l02483"></a><span class="lineno"> 2483</span>&#160;<span class="keyword">struct </span>IMTetrahedra&lt;3,T&gt;</div>
 <div class="line"><a name="l02484"></a><span class="lineno"> 2484</span>&#160;{</div>
 <div class="line"><a name="l02485"></a><span class="lineno"> 2485</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l02486"></a><span class="lineno"> 2486</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 3;</div>
 <div class="line"><a name="l02487"></a><span class="lineno"> 2487</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = 3;</div>
 <div class="line"><a name="l02488"></a><span class="lineno"> 2488</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints = 5;</div>
-<div class="line"><a name="l02489"></a><span class="lineno"> 2489</span>&#160;    <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>()</div>
+<div class="line"><a name="l02489"></a><span class="lineno"> 2489</span>&#160;    IMTetrahedra()</div>
 <div class="line"><a name="l02490"></a><span class="lineno"> 2490</span>&#160;        :</div>
 <div class="line"><a name="l02491"></a><span class="lineno"> 2491</span>&#160;        q()</div>
 <div class="line"><a name="l02492"></a><span class="lineno"> 2492</span>&#160;    {</div>
@@ -2596,13 +2596,13 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l02515"></a><span class="lineno"> 2515</span>&#160;<span class="comment">  -0.798807152333598  -0.798807152333598  -0.201192847666402  0.199111111111111</span></div>
 <div class="line"><a name="l02516"></a><span class="lineno"> 2516</span>&#160;<span class="comment">  Gauss  quadrature  constants  for  the  reference  tetrahedron  order  p=4</span></div>
 <div class="line"><a name="l02517"></a><span class="lineno"> 2517</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l02518"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_014_00_01T_01_4.html"> 2518</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;4,T&gt;</div>
+<div class="line"><a name="l02518"></a><span class="lineno"> 2518</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>IMTetrahedra&lt;4,T&gt;</div>
 <div class="line"><a name="l02519"></a><span class="lineno"> 2519</span>&#160;{</div>
 <div class="line"><a name="l02520"></a><span class="lineno"> 2520</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l02521"></a><span class="lineno"> 2521</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 3;</div>
 <div class="line"><a name="l02522"></a><span class="lineno"> 2522</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = 4;</div>
 <div class="line"><a name="l02523"></a><span class="lineno"> 2523</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints = 11;</div>
-<div class="line"><a name="l02524"></a><span class="lineno"> 2524</span>&#160;    <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>()</div>
+<div class="line"><a name="l02524"></a><span class="lineno"> 2524</span>&#160;    IMTetrahedra()</div>
 <div class="line"><a name="l02525"></a><span class="lineno"> 2525</span>&#160;        :</div>
 <div class="line"><a name="l02526"></a><span class="lineno"> 2526</span>&#160;        q()</div>
 <div class="line"><a name="l02527"></a><span class="lineno"> 2527</span>&#160;    {</div>
@@ -2640,13 +2640,13 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l02559"></a><span class="lineno"> 2559</span>&#160;<span class="comment">-0.908992591748701  -0.908992591748701  -0.091007408251299  0.056728027702775</span></div>
 <div class="line"><a name="l02560"></a><span class="lineno"> 2560</span>&#160;<span class="comment">  Gauss  quadrature  constants  for  the  reference  tetrahedron  order  p=5</span></div>
 <div class="line"><a name="l02561"></a><span class="lineno"> 2561</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l02562"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_015_00_01T_01_4.html"> 2562</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;5,T&gt;</div>
+<div class="line"><a name="l02562"></a><span class="lineno"> 2562</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>IMTetrahedra&lt;5,T&gt;</div>
 <div class="line"><a name="l02563"></a><span class="lineno"> 2563</span>&#160;{</div>
 <div class="line"><a name="l02564"></a><span class="lineno"> 2564</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l02565"></a><span class="lineno"> 2565</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 3;</div>
 <div class="line"><a name="l02566"></a><span class="lineno"> 2566</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = 5;</div>
 <div class="line"><a name="l02567"></a><span class="lineno"> 2567</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints = 14;</div>
-<div class="line"><a name="l02568"></a><span class="lineno"> 2568</span>&#160;    <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>()</div>
+<div class="line"><a name="l02568"></a><span class="lineno"> 2568</span>&#160;    IMTetrahedra()</div>
 <div class="line"><a name="l02569"></a><span class="lineno"> 2569</span>&#160;        :</div>
 <div class="line"><a name="l02570"></a><span class="lineno"> 2570</span>&#160;        q()</div>
 <div class="line"><a name="l02571"></a><span class="lineno"> 2571</span>&#160;    {</div>
@@ -2699,13 +2699,13 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l02618"></a><span class="lineno"> 2618</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l02619"></a><span class="lineno"> 2619</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l02620"></a><span class="lineno"> 2620</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l02621"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_016_00_01T_01_4.html"> 2621</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;6,T&gt;</div>
+<div class="line"><a name="l02621"></a><span class="lineno"> 2621</span>&#160;<span class="keyword">struct </span>IMTetrahedra&lt;6,T&gt;</div>
 <div class="line"><a name="l02622"></a><span class="lineno"> 2622</span>&#160;{</div>
 <div class="line"><a name="l02623"></a><span class="lineno"> 2623</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l02624"></a><span class="lineno"> 2624</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 3;</div>
 <div class="line"><a name="l02625"></a><span class="lineno"> 2625</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = 6;</div>
 <div class="line"><a name="l02626"></a><span class="lineno"> 2626</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints = 24;</div>
-<div class="line"><a name="l02627"></a><span class="lineno"> 2627</span>&#160;    <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>()</div>
+<div class="line"><a name="l02627"></a><span class="lineno"> 2627</span>&#160;    IMTetrahedra()</div>
 <div class="line"><a name="l02628"></a><span class="lineno"> 2628</span>&#160;        :</div>
 <div class="line"><a name="l02629"></a><span class="lineno"> 2629</span>&#160;        q()</div>
 <div class="line"><a name="l02630"></a><span class="lineno"> 2630</span>&#160;    {</div>
@@ -2775,13 +2775,13 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l02694"></a><span class="lineno"> 2694</span>&#160;<span class="comment">  Gauss  quadrature  constants  for  the  reference  tetrahedron  order  p=7</span></div>
 <div class="line"><a name="l02695"></a><span class="lineno"> 2695</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l02696"></a><span class="lineno"> 2696</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l02697"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_017_00_01T_01_4.html"> 2697</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;7,T&gt;</div>
+<div class="line"><a name="l02697"></a><span class="lineno"> 2697</span>&#160;<span class="keyword">struct </span>IMTetrahedra&lt;7,T&gt;</div>
 <div class="line"><a name="l02698"></a><span class="lineno"> 2698</span>&#160;{</div>
 <div class="line"><a name="l02699"></a><span class="lineno"> 2699</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l02700"></a><span class="lineno"> 2700</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 3;</div>
 <div class="line"><a name="l02701"></a><span class="lineno"> 2701</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = 7;</div>
 <div class="line"><a name="l02702"></a><span class="lineno"> 2702</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints = 31;</div>
-<div class="line"><a name="l02703"></a><span class="lineno"> 2703</span>&#160;    <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>()</div>
+<div class="line"><a name="l02703"></a><span class="lineno"> 2703</span>&#160;    IMTetrahedra()</div>
 <div class="line"><a name="l02704"></a><span class="lineno"> 2704</span>&#160;        :</div>
 <div class="line"><a name="l02705"></a><span class="lineno"> 2705</span>&#160;        q()</div>
 <div class="line"><a name="l02706"></a><span class="lineno"> 2706</span>&#160;    {</div>
@@ -2870,13 +2870,13 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l02789"></a><span class="lineno"> 2789</span>&#160;<span class="comment">  Gauss  quadrature  constants  for  the  reference  tetrahedron  order  p=8</span></div>
 <div class="line"><a name="l02790"></a><span class="lineno"> 2790</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l02791"></a><span class="lineno"> 2791</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l02792"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_018_00_01T_01_4.html"> 2792</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;8,T&gt;</div>
+<div class="line"><a name="l02792"></a><span class="lineno"> 2792</span>&#160;<span class="keyword">struct </span>IMTetrahedra&lt;8,T&gt;</div>
 <div class="line"><a name="l02793"></a><span class="lineno"> 2793</span>&#160;{</div>
 <div class="line"><a name="l02794"></a><span class="lineno"> 2794</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l02795"></a><span class="lineno"> 2795</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 3;</div>
 <div class="line"><a name="l02796"></a><span class="lineno"> 2796</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = 8;</div>
 <div class="line"><a name="l02797"></a><span class="lineno"> 2797</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints = 43;</div>
-<div class="line"><a name="l02798"></a><span class="lineno"> 2798</span>&#160;    <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>()</div>
+<div class="line"><a name="l02798"></a><span class="lineno"> 2798</span>&#160;    IMTetrahedra()</div>
 <div class="line"><a name="l02799"></a><span class="lineno"> 2799</span>&#160;        :</div>
 <div class="line"><a name="l02800"></a><span class="lineno"> 2800</span>&#160;        q()</div>
 <div class="line"><a name="l02801"></a><span class="lineno"> 2801</span>&#160;    {</div>
@@ -2987,13 +2987,13 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l02906"></a><span class="lineno"> 2906</span>&#160;<span class="comment">  Gauss  quadrature  constants  for  the  reference  tetrahedron  order  p=9</span></div>
 <div class="line"><a name="l02907"></a><span class="lineno"> 2907</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l02908"></a><span class="lineno"> 2908</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l02909"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_019_00_01T_01_4.html"> 2909</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;9,T&gt;</div>
+<div class="line"><a name="l02909"></a><span class="lineno"> 2909</span>&#160;<span class="keyword">struct </span>IMTetrahedra&lt;9,T&gt;</div>
 <div class="line"><a name="l02910"></a><span class="lineno"> 2910</span>&#160;{</div>
 <div class="line"><a name="l02911"></a><span class="lineno"> 2911</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l02912"></a><span class="lineno"> 2912</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 3;</div>
 <div class="line"><a name="l02913"></a><span class="lineno"> 2913</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = 9;</div>
 <div class="line"><a name="l02914"></a><span class="lineno"> 2914</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints = 53;</div>
-<div class="line"><a name="l02915"></a><span class="lineno"> 2915</span>&#160;    <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>()</div>
+<div class="line"><a name="l02915"></a><span class="lineno"> 2915</span>&#160;    IMTetrahedra()</div>
 <div class="line"><a name="l02916"></a><span class="lineno"> 2916</span>&#160;        :</div>
 <div class="line"><a name="l02917"></a><span class="lineno"> 2917</span>&#160;        q()</div>
 <div class="line"><a name="l02918"></a><span class="lineno"> 2918</span>&#160;    {</div>
@@ -3187,13 +3187,13 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l03106"></a><span class="lineno"> 3106</span>&#160;<span class="comment">  Gauss  quadrature  constants  for  the  reference  tetrahedron  order  p=11</span></div>
 <div class="line"><a name="l03107"></a><span class="lineno"> 3107</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l03108"></a><span class="lineno"> 3108</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l03109"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_0111_00_01T_01_4.html"> 3109</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;11,T&gt;</div>
+<div class="line"><a name="l03109"></a><span class="lineno"> 3109</span>&#160;<span class="keyword">struct </span>IMTetrahedra&lt;11,T&gt;</div>
 <div class="line"><a name="l03110"></a><span class="lineno"> 3110</span>&#160;{</div>
 <div class="line"><a name="l03111"></a><span class="lineno"> 3111</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l03112"></a><span class="lineno"> 3112</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 3;</div>
 <div class="line"><a name="l03113"></a><span class="lineno"> 3113</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = 11;</div>
 <div class="line"><a name="l03114"></a><span class="lineno"> 3114</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints = 126;</div>
-<div class="line"><a name="l03115"></a><span class="lineno"> 3115</span>&#160;    <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>()</div>
+<div class="line"><a name="l03115"></a><span class="lineno"> 3115</span>&#160;    IMTetrahedra()</div>
 <div class="line"><a name="l03116"></a><span class="lineno"> 3116</span>&#160;        :</div>
 <div class="line"><a name="l03117"></a><span class="lineno"> 3117</span>&#160;        q()</div>
 <div class="line"><a name="l03118"></a><span class="lineno"> 3118</span>&#160;    {</div>
@@ -3328,7 +3328,7 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l03247"></a><span class="lineno"> 3247</span>&#160;</div>
 <div class="line"><a name="l03248"></a><span class="lineno"> 3248</span>&#160;    std::vector&lt;value_type&gt; q;</div>
 <div class="line"><a name="l03249"></a><span class="lineno"> 3249</span>&#160;};</div>
-<div class="line"><a name="l03250"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_0110_00_01T_01_4.html"> 3250</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;10,T&gt;: <span class="keyword">public</span> <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;11,T&gt; {};</div>
+<div class="line"><a name="l03250"></a><span class="lineno"> 3250</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>IMTetrahedra&lt;10,T&gt;: <span class="keyword">public</span> IMTetrahedra&lt;11,T&gt; {};</div>
 <div class="line"><a name="l03251"></a><span class="lineno"> 3251</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l03252"></a><span class="lineno"> 3252</span>&#160;<span class="comment">210</span></div>
 <div class="line"><a name="l03253"></a><span class="lineno"> 3253</span>&#160;<span class="comment">-0.875000000000000  -0.875000000000000  0.625000000000000  0.420407272132140</span></div>
@@ -3544,13 +3544,13 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l03463"></a><span class="lineno"> 3463</span>&#160;<span class="comment">  Gauss  quadrature  constants  for  the  reference  tetrahedron  order  p=13</span></div>
 <div class="line"><a name="l03464"></a><span class="lineno"> 3464</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l03465"></a><span class="lineno"> 3465</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l03466"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_0113_00_01T_01_4.html"> 3466</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;13,T&gt;</div>
+<div class="line"><a name="l03466"></a><span class="lineno"> 3466</span>&#160;<span class="keyword">struct </span>IMTetrahedra&lt;13,T&gt;</div>
 <div class="line"><a name="l03467"></a><span class="lineno"> 3467</span>&#160;{</div>
 <div class="line"><a name="l03468"></a><span class="lineno"> 3468</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l03469"></a><span class="lineno"> 3469</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 3;</div>
 <div class="line"><a name="l03470"></a><span class="lineno"> 3470</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = 13;</div>
 <div class="line"><a name="l03471"></a><span class="lineno"> 3471</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints = 210;</div>
-<div class="line"><a name="l03472"></a><span class="lineno"> 3472</span>&#160;    <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>()</div>
+<div class="line"><a name="l03472"></a><span class="lineno"> 3472</span>&#160;    IMTetrahedra()</div>
 <div class="line"><a name="l03473"></a><span class="lineno"> 3473</span>&#160;        :</div>
 <div class="line"><a name="l03474"></a><span class="lineno"> 3474</span>&#160;        q()</div>
 <div class="line"><a name="l03475"></a><span class="lineno"> 3475</span>&#160;    {</div>
@@ -3769,7 +3769,7 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l03688"></a><span class="lineno"> 3688</span>&#160;</div>
 <div class="line"><a name="l03689"></a><span class="lineno"> 3689</span>&#160;    std::vector&lt;value_type&gt; q;</div>
 <div class="line"><a name="l03690"></a><span class="lineno"> 3690</span>&#160;};</div>
-<div class="line"><a name="l03691"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_0112_00_01T_01_4.html"> 3691</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;12,T&gt;: <span class="keyword">public</span> <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;13,T&gt; {};</div>
+<div class="line"><a name="l03691"></a><span class="lineno"> 3691</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>IMTetrahedra&lt;12,T&gt;: <span class="keyword">public</span> IMTetrahedra&lt;13,T&gt; {};</div>
 <div class="line"><a name="l03692"></a><span class="lineno"> 3692</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l03693"></a><span class="lineno"> 3693</span>&#160;<span class="comment">330</span></div>
 <div class="line"><a name="l03694"></a><span class="lineno"> 3694</span>&#160;<span class="comment">-0.888888888888889  -0.888888888888889  0.666666666666667  0.514536992829256</span></div>
@@ -4105,13 +4105,13 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l04024"></a><span class="lineno"> 4024</span>&#160;<span class="comment">  Gauss  quadrature  constants  for  the  reference  tetrahedron  order  p=15</span></div>
 <div class="line"><a name="l04025"></a><span class="lineno"> 4025</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l04026"></a><span class="lineno"> 4026</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l04027"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_0115_00_01T_01_4.html"> 4027</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;15,T&gt;</div>
+<div class="line"><a name="l04027"></a><span class="lineno"> 4027</span>&#160;<span class="keyword">struct </span>IMTetrahedra&lt;15,T&gt;</div>
 <div class="line"><a name="l04028"></a><span class="lineno"> 4028</span>&#160;{</div>
 <div class="line"><a name="l04029"></a><span class="lineno"> 4029</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l04030"></a><span class="lineno"> 4030</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 3;</div>
 <div class="line"><a name="l04031"></a><span class="lineno"> 4031</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = 15;</div>
 <div class="line"><a name="l04032"></a><span class="lineno"> 4032</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints = 330;</div>
-<div class="line"><a name="l04033"></a><span class="lineno"> 4033</span>&#160;    <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>()</div>
+<div class="line"><a name="l04033"></a><span class="lineno"> 4033</span>&#160;    IMTetrahedra()</div>
 <div class="line"><a name="l04034"></a><span class="lineno"> 4034</span>&#160;        :</div>
 <div class="line"><a name="l04035"></a><span class="lineno"> 4035</span>&#160;        q()</div>
 <div class="line"><a name="l04036"></a><span class="lineno"> 4036</span>&#160;    {</div>
@@ -4450,7 +4450,7 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l04369"></a><span class="lineno"> 4369</span>&#160;</div>
 <div class="line"><a name="l04370"></a><span class="lineno"> 4370</span>&#160;    std::vector&lt;value_type&gt; q;</div>
 <div class="line"><a name="l04371"></a><span class="lineno"> 4371</span>&#160;};</div>
-<div class="line"><a name="l04372"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_0114_00_01T_01_4.html"> 4372</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;14,T&gt;: <span class="keyword">public</span> <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;15,T&gt; {};</div>
+<div class="line"><a name="l04372"></a><span class="lineno"> 4372</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>IMTetrahedra&lt;14,T&gt;: <span class="keyword">public</span> IMTetrahedra&lt;15,T&gt; {};</div>
 <div class="line"><a name="l04373"></a><span class="lineno"> 4373</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l04374"></a><span class="lineno"> 4374</span>&#160;<span class="comment">495</span></div>
 <div class="line"><a name="l04375"></a><span class="lineno"> 4375</span>&#160;<span class="comment">-0.900000000000000  -0.900000000000000  0.700000000000000  0.657650819729946</span></div>
@@ -4951,13 +4951,13 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l04870"></a><span class="lineno"> 4870</span>&#160;<span class="comment">  Gauss  quadrature  constants  for  the  reference  tetrahedron  order  p=17</span></div>
 <div class="line"><a name="l04871"></a><span class="lineno"> 4871</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l04872"></a><span class="lineno"> 4872</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l04873"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_0117_00_01T_01_4.html"> 4873</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;17,T&gt;</div>
+<div class="line"><a name="l04873"></a><span class="lineno"> 4873</span>&#160;<span class="keyword">struct </span>IMTetrahedra&lt;17,T&gt;</div>
 <div class="line"><a name="l04874"></a><span class="lineno"> 4874</span>&#160;{</div>
 <div class="line"><a name="l04875"></a><span class="lineno"> 4875</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l04876"></a><span class="lineno"> 4876</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 3;</div>
 <div class="line"><a name="l04877"></a><span class="lineno"> 4877</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = 17;</div>
 <div class="line"><a name="l04878"></a><span class="lineno"> 4878</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints = 495;</div>
-<div class="line"><a name="l04879"></a><span class="lineno"> 4879</span>&#160;    <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>()</div>
+<div class="line"><a name="l04879"></a><span class="lineno"> 4879</span>&#160;    IMTetrahedra()</div>
 <div class="line"><a name="l04880"></a><span class="lineno"> 4880</span>&#160;        :</div>
 <div class="line"><a name="l04881"></a><span class="lineno"> 4881</span>&#160;        q()</div>
 <div class="line"><a name="l04882"></a><span class="lineno"> 4882</span>&#160;    {</div>
@@ -5461,7 +5461,7 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l05380"></a><span class="lineno"> 5380</span>&#160;</div>
 <div class="line"><a name="l05381"></a><span class="lineno"> 5381</span>&#160;    std::vector&lt;value_type&gt; q;</div>
 <div class="line"><a name="l05382"></a><span class="lineno"> 5382</span>&#160;};</div>
-<div class="line"><a name="l05383"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_0116_00_01T_01_4.html"> 5383</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;16,T&gt;: <span class="keyword">public</span> <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;17,T&gt; {};</div>
+<div class="line"><a name="l05383"></a><span class="lineno"> 5383</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>IMTetrahedra&lt;16,T&gt;: <span class="keyword">public</span> IMTetrahedra&lt;17,T&gt; {};</div>
 <div class="line"><a name="l05384"></a><span class="lineno"> 5384</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l05385"></a><span class="lineno"> 5385</span>&#160;<span class="comment">715</span></div>
 <div class="line"><a name="l05386"></a><span class="lineno"> 5386</span>&#160;<span class="comment">-0.909090909090909  -0.909090909090909  0.727272727272727  0.870591471154497</span></div>
@@ -6182,13 +6182,13 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l06101"></a><span class="lineno"> 6101</span>&#160;<span class="comment">  Gauss  quadrature  constants  for  the  reference  tetrahedron  order  p=19</span></div>
 <div class="line"><a name="l06102"></a><span class="lineno"> 6102</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l06103"></a><span class="lineno"> 6103</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l06104"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_0119_00_01T_01_4.html"> 6104</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;19,T&gt;</div>
+<div class="line"><a name="l06104"></a><span class="lineno"> 6104</span>&#160;<span class="keyword">struct </span>IMTetrahedra&lt;19,T&gt;</div>
 <div class="line"><a name="l06105"></a><span class="lineno"> 6105</span>&#160;{</div>
 <div class="line"><a name="l06106"></a><span class="lineno"> 6106</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l06107"></a><span class="lineno"> 6107</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 3;</div>
 <div class="line"><a name="l06108"></a><span class="lineno"> 6108</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = 19;</div>
 <div class="line"><a name="l06109"></a><span class="lineno"> 6109</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints = 715;</div>
-<div class="line"><a name="l06110"></a><span class="lineno"> 6110</span>&#160;    <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>()</div>
+<div class="line"><a name="l06110"></a><span class="lineno"> 6110</span>&#160;    IMTetrahedra()</div>
 <div class="line"><a name="l06111"></a><span class="lineno"> 6111</span>&#160;        :</div>
 <div class="line"><a name="l06112"></a><span class="lineno"> 6112</span>&#160;        q()</div>
 <div class="line"><a name="l06113"></a><span class="lineno"> 6113</span>&#160;    {</div>
@@ -6912,7 +6912,7 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l06831"></a><span class="lineno"> 6831</span>&#160;</div>
 <div class="line"><a name="l06832"></a><span class="lineno"> 6832</span>&#160;    std::vector&lt;value_type&gt; q;</div>
 <div class="line"><a name="l06833"></a><span class="lineno"> 6833</span>&#160;};</div>
-<div class="line"><a name="l06834"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_0118_00_01T_01_4.html"> 6834</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;18,T&gt;: <span class="keyword">public</span> <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;19,T&gt; {};</div>
+<div class="line"><a name="l06834"></a><span class="lineno"> 6834</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>IMTetrahedra&lt;18,T&gt;: <span class="keyword">public</span> IMTetrahedra&lt;19,T&gt; {};</div>
 <div class="line"><a name="l06835"></a><span class="lineno"> 6835</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l06836"></a><span class="lineno"> 6836</span>&#160;<span class="comment">1001</span></div>
 <div class="line"><a name="l06837"></a><span class="lineno"> 6837</span>&#160;<span class="comment">-0.916666666666667  -0.916666666666667  0.750000000000000  1.186370883531411</span></div>
@@ -7919,13 +7919,13 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l07838"></a><span class="lineno"> 7838</span>&#160;<span class="comment">  Gauss  quadrature  constants  for  the  reference  tetrahedron  order  p=21</span></div>
 <div class="line"><a name="l07839"></a><span class="lineno"> 7839</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l07840"></a><span class="lineno"> 7840</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l07841"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_0121_00_01T_01_4.html"> 7841</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;21,T&gt;</div>
+<div class="line"><a name="l07841"></a><span class="lineno"> 7841</span>&#160;<span class="keyword">struct </span>IMTetrahedra&lt;21,T&gt;</div>
 <div class="line"><a name="l07842"></a><span class="lineno"> 7842</span>&#160;{</div>
 <div class="line"><a name="l07843"></a><span class="lineno"> 7843</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
 <div class="line"><a name="l07844"></a><span class="lineno"> 7844</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = 3;</div>
 <div class="line"><a name="l07845"></a><span class="lineno"> 7845</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nOrder = 21;</div>
 <div class="line"><a name="l07846"></a><span class="lineno"> 7846</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nPoints = 1001;</div>
-<div class="line"><a name="l07847"></a><span class="lineno"> 7847</span>&#160;    <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>()</div>
+<div class="line"><a name="l07847"></a><span class="lineno"> 7847</span>&#160;    IMTetrahedra()</div>
 <div class="line"><a name="l07848"></a><span class="lineno"> 7848</span>&#160;        :</div>
 <div class="line"><a name="l07849"></a><span class="lineno"> 7849</span>&#160;        q()</div>
 <div class="line"><a name="l07850"></a><span class="lineno"> 7850</span>&#160;    {</div>
@@ -8935,7 +8935,7 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 <div class="line"><a name="l08854"></a><span class="lineno"> 8854</span>&#160;</div>
 <div class="line"><a name="l08855"></a><span class="lineno"> 8855</span>&#160;    std::vector&lt;value_type&gt; q;</div>
 <div class="line"><a name="l08856"></a><span class="lineno"> 8856</span>&#160;};</div>
-<div class="line"><a name="l08857"></a><span class="lineno"><a class="code" href="structFeel_1_1IMTetrahedra_3_0120_00_01T_01_4.html"> 8857</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;20,T&gt;: <span class="keyword">public</span> <a class="code" href="structFeel_1_1IMTetrahedra.html">IMTetrahedra</a>&lt;21,T&gt; {};</div>
+<div class="line"><a name="l08857"></a><span class="lineno"> 8857</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>IMTetrahedra&lt;20,T&gt;: <span class="keyword">public</span> IMTetrahedra&lt;21,T&gt; {};</div>
 <div class="line"><a name="l08858"></a><span class="lineno"> 8858</span>&#160;} <span class="comment">// detail</span></div>
 <div class="line"><a name="l08859"></a><span class="lineno"> 8859</span>&#160;</div>
 <div class="line"><a name="l08860"></a><span class="lineno"> 8860</span>&#160;</div>
@@ -9026,7 +9026,7 @@ $(document).ready(function(){initNavTree('imsimplex_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:32 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:05:58 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

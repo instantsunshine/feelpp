@@ -122,24 +122,16 @@ class Feel::IMGeneral&lt; Dim, Order, T, Entity, QPS, DegreePolicy &gt;</h3>
 <div class="line"><span class="comment">// integrate exactly polynomials of order 5in 3D over hexahedrons using</span></div>
 <div class="line"><span class="comment">// GaussLobatto points and double precision</span></div>
 <div class="line">IM&lt;3,5,double,Hypercube,GaussLobatto&gt; im;</div>
-</div><!-- fragment --> </div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Feel::IMGeneral&lt; Dim, Order, T, Entity, QPS, DegreePolicy &gt;:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
- <div class="center">
-  <img src="classFeel_1_1IMGeneral.png" usemap="#Feel::IMGeneral&lt; Dim, Order, T, Entity, QPS, DegreePolicy &gt;_map" alt=""/>
-  <map id="Feel::IMGeneral&lt; Dim, Order, T, Entity, QPS, DegreePolicy &gt;_map" name="Feel::IMGeneral&lt; Dim, Order, T, Entity, QPS, DegreePolicy &gt;_map">
-</map>
- </div></div>
+</div><!-- fragment --> </div>
+<p>Inherits QPS&lt; Entity&lt; Dim, 1, Dim &gt;, DegreePolicy&lt; Order &gt;::integration_degree, T &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a1e6156a19af5765d8ba28227e0e5dc64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e6156a19af5765d8ba28227e0e5dc64"></a>
-typedef <a class="el" href="classFeel_1_1Entity.html">Entity</a>&lt; Dim, 1, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>convex_type</b></td></tr>
+typedef Entity&lt; Dim, 1, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>convex_type</b></td></tr>
 <tr class="separator:a1e6156a19af5765d8ba28227e0e5dc64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a666ec084835dccb15199aa12cdf0a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a666ec084835dccb15199aa12cdf0a9"></a>
-typedef DegreePolicy&lt; <a class="el" href="structFeel_1_1Order.html">Order</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>degree_policy_type</b></td></tr>
+typedef DegreePolicy&lt; Order &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>degree_policy_type</b></td></tr>
 <tr class="separator:a7a666ec084835dccb15199aa12cdf0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59e40aaec73aef5843b4cdc130411662"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59e40aaec73aef5843b4cdc130411662"></a>
 typedef super::face_quadrature_type&#160;</td><td class="memItemRight" valign="bottom"><b>face_quadrature_type</b></td></tr>
@@ -151,8 +143,8 @@ typedef super::node_type&#160;</td><td class="memItemRight" valign="bottom"><b>n
 typedef super::nodes_type&#160;</td><td class="memItemRight" valign="bottom"><b>nodes_type</b></td></tr>
 <tr class="separator:ab45c87d7ad98c830b069d0d0990c479f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a380ab1e6b30c6f72f19f7180f7fe0672"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a380ab1e6b30c6f72f19f7180f7fe0672"></a>
-typedef <a class="el" href="classFeel_1_1IMGeneral.html">IMGeneral</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, <br class="typebreak"/>
-T, <a class="el" href="classFeel_1_1Entity.html">Entity</a>, QPS, DegreePolicy &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>parent_quadrature_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1IMGeneral.html">IMGeneral</a>&lt; Dim, Order, <br class="typebreak"/>
+T, Entity, QPS, DegreePolicy &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>parent_quadrature_type</b></td></tr>
 <tr class="separator:a380ab1e6b30c6f72f19f7180f7fe0672"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00bfbab133268ff3efe1ed680b1d2e5e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00bfbab133268ff3efe1ed680b1d2e5e"></a>
 typedef boost::tuple<br class="typebreak"/>
@@ -195,7 +187,7 @@ static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>n
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:32:13 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:06:20 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

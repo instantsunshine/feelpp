@@ -101,7 +101,6 @@ $(document).ready(function(){initNavTree('classFeel_1_1CRBModel.html','');});
 <div class="header">
   <div class="summary">
 <a href="classFeel_1_1CRBModel-members.html">List of all members</a> &#124;
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Feel::CRBModel&lt; ModelType &gt; Class Template Reference</div>  </div>
@@ -124,22 +123,9 @@ class Feel::CRBModel&lt; ModelType &gt;</h3>
 <p>The FEM model type should derive from this class and fill the vector of matrices M_Aq and vector of vectors M_Fq</p>
 <dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd>crb </dd></dl>
-</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Feel::CRBModel&lt; ModelType &gt;:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
- <div class="center">
-  <img src="classFeel_1_1CRBModel.png" usemap="#Feel::CRBModel&lt; ModelType &gt;_map" alt=""/>
-  <map id="Feel::CRBModel&lt; ModelType &gt;_map" name="Feel::CRBModel&lt; ModelType &gt;_map">
-</map>
- </div></div>
+<p>Inherits enable_shared_from_this&lt; CRBModel&lt; ModelType &gt; &gt;.</p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFeel_1_1CRBModel_1_1ComputeNormL2InCompositeCase.html">ComputeNormL2InCompositeCase</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors, destructor</div></td></tr>
@@ -675,21 +661,21 @@ typedef boost::shared_ptr<br class="typebreak"/>
 <tr class="separator:a54d03c5cc11323c18aca0e301c053a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dbe10b798a4d317d7fa2e033b04e8a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7dbe10b798a4d317d7fa2e033b04e8a9"></a>
 typedef <br class="typebreak"/>
-<a class="el" href="classFeel_1_1OperatorLinearComposite.html">OperatorLinearComposite</a><br class="typebreak"/>
+OperatorLinearComposite<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1CRBModel.html#abfd06e583290cfaeda5ea14a49065468">space_type</a>, <a class="el" href="classFeel_1_1CRBModel.html#abfd06e583290cfaeda5ea14a49065468">space_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operatorcomposite_type</b></td></tr>
 <tr class="separator:a7dbe10b798a4d317d7fa2e033b04e8a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff1bc359037b77fa7d5cb107f03c034d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff1bc359037b77fa7d5cb107f03c034d"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
-&lt; <a class="el" href="classFeel_1_1OperatorLinearComposite.html">operatorcomposite_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operatorcomposite_ptrtype</b></td></tr>
+&lt; operatorcomposite_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operatorcomposite_ptrtype</b></td></tr>
 <tr class="separator:aff1bc359037b77fa7d5cb107f03c034d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec56b5c11708dc3c14f744a0882057c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec56b5c11708dc3c14f744a0882057c9"></a>
 typedef <br class="typebreak"/>
-<a class="el" href="classFeel_1_1FsFunctionalLinearComposite.html">FsFunctionalLinearComposite</a><br class="typebreak"/>
+FsFunctionalLinearComposite<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1CRBModel.html#abfd06e583290cfaeda5ea14a49065468">space_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>functionalcomposite_type</b></td></tr>
 <tr class="separator:aec56b5c11708dc3c14f744a0882057c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4027a8f771182c4abac6e6693ae6992"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4027a8f771182c4abac6e6693ae6992"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
-&lt; <a class="el" href="classFeel_1_1FsFunctionalLinearComposite.html">functionalcomposite_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>functionalcomposite_ptrtype</b></td></tr>
+&lt; functionalcomposite_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>functionalcomposite_ptrtype</b></td></tr>
 <tr class="separator:ab4027a8f771182c4abac6e6693ae6992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a016bd01d6e7694b4b612d82108ac5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a016bd01d6e7694b4b612d82108ac5c"></a>
 typedef <a class="el" href="classFeel_1_1Preconditioner.html">Preconditioner</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>preconditioner_type</b></td></tr>
@@ -2101,7 +2087,7 @@ template&lt;typename ModelType&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:32:08 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:06:17 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

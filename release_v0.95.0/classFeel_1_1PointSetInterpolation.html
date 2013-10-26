@@ -122,8 +122,7 @@ class Feel::PointSetInterpolation&lt; Dim, Order, T, Convex &gt;</h3>
  <div class="center">
   <img src="classFeel_1_1PointSetInterpolation.png" usemap="#Feel::PointSetInterpolation&lt; Dim, Order, T, Convex &gt;_map" alt=""/>
   <map id="Feel::PointSetInterpolation&lt; Dim, Order, T, Convex &gt;_map" name="Feel::PointSetInterpolation&lt; Dim, Order, T, Convex &gt;_map">
-<area href="classFeel_1_1PointSet.html" alt="Feel::PointSet&lt; Convex&lt; Dim, Order, Dim &gt;, T &gt;" shape="rect" coords="0,56,314,80"/>
-<area href="classFeel_1_1VisitableBase.html" alt="Feel::VisitableBase&lt;&gt;" shape="rect" coords="0,0,314,24"/>
+<area href="classFeel_1_1PointSet.html" alt="Feel::PointSet&lt; Convex&lt; Dim, Order, Dim &gt;, T &gt;" shape="rect" coords="0,0,314,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -136,7 +135,7 @@ typedef super::return_type&#160;</td><td class="memItemRight" valign="bottom"><b
 typedef T&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
 <tr class="separator:ab728792f3668fbfee3066cbff6294342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24cac81244e2db3708a7573452e149d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24cac81244e2db3708a7573452e149d3"></a>
-typedef <a class="el" href="classFeel_1_1Convex.html">Convex</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>convex_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1Convex.html">Convex</a>&lt; Dim, Order, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>convex_type</b></td></tr>
 <tr class="separator:a24cac81244e2db3708a7573452e149d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a0324256de4c533b0fa038e843dd0c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a0324256de4c533b0fa038e843dd0c6"></a>
 typedef super::nodes_type&#160;</td><td class="memItemRight" valign="bottom"><b>nodes_type</b></td></tr>
@@ -148,8 +147,8 @@ typedef <a class="el" href="structFeel_1_1matrix__node.html">matrix_node</a><br 
 <tr class="memitem:aba458d8eb6b3c78b7d5152333afbcf26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba458d8eb6b3c78b7d5152333afbcf26"></a>
 typedef mpl::if_&lt; mpl::bool_<br class="typebreak"/>
 &lt; is_simplex &gt;, <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; Dim, <br class="typebreak"/>
-<a class="el" href="structFeel_1_1Order.html">Order</a>, Dim &gt;, <a class="el" href="classFeel_1_1Hypercube.html">Hypercube</a>&lt; Dim, <br class="typebreak"/>
-<a class="el" href="structFeel_1_1Order.html">Order</a>, Dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>conv_order_type</b></td></tr>
+Order, Dim &gt;, Hypercube&lt; Dim, <br class="typebreak"/>
+Order, Dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>conv_order_type</b></td></tr>
 <tr class="separator:aba458d8eb6b3c78b7d5152333afbcf26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1286219947ec9665bd5a2d2cc60ce5ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1286219947ec9665bd5a2d2cc60ce5ae"></a>
 typedef <a class="el" href="classFeel_1_1Reference.html">Reference</a>&lt; <a class="el" href="classFeel_1_1Convex.html">convex_type</a>, <br class="typebreak"/>
@@ -261,7 +260,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>addToPtE</b> (uint16_
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classFeel_1_1PointSet"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classFeel_1_1PointSet')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classFeel_1_1PointSet.html">Feel::PointSet&lt; Convex&lt; Dim, Order, Dim &gt;, T &gt;</a></td></tr>
 <tr class="memitem:a975709cac35cada9010b8ce44d05b435 inherit pub_types_classFeel_1_1PointSet"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a975709cac35cada9010b8ce44d05b435"></a>
-typedef <a class="el" href="classFeel_1_1Convex.html">Convex</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>convex_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1Convex.html">Convex</a>&lt; Dim, Order, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>convex_type</b></td></tr>
 <tr class="separator:a975709cac35cada9010b8ce44d05b435 inherit pub_types_classFeel_1_1PointSet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a171a70945defe11efd81feff6eda5121 inherit pub_types_classFeel_1_1PointSet"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a171a70945defe11efd81feff6eda5121"></a>
 typedef <a class="el" href="structFeel_1_1node.html">node</a>&lt; value_type &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>node_type</b></td></tr>
@@ -273,10 +272,10 @@ ublas::column_major &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>n
 <tr class="separator:acf9e34e5cc3efe06081ef6db58f0f811 inherit pub_types_classFeel_1_1PointSet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56a4c162991f66a59d4d75c5e885f0a5 inherit pub_types_classFeel_1_1PointSet"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56a4c162991f66a59d4d75c5e885f0a5"></a>
 typedef <a class="el" href="classFeel_1_1Reference.html">Reference</a>&lt; <a class="el" href="classFeel_1_1Convex.html">Convex</a>&lt; Dim, <br class="typebreak"/>
-<a class="el" href="structFeel_1_1Order.html">Order</a>, Dim &gt;, <a class="el" href="classFeel_1_1Convex.html">Convex</a>&lt; Dim, <br class="typebreak"/>
-<a class="el" href="structFeel_1_1Order.html">Order</a>, Dim &gt;::nDim, <a class="el" href="classFeel_1_1Convex.html">Convex</a><br class="typebreak"/>
-&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, Dim &gt;::nOrder, <br class="typebreak"/>
-<a class="el" href="classFeel_1_1Convex.html">Convex</a>&lt; Dim, <a class="el" href="structFeel_1_1Order.html">Order</a>, Dim &gt;<br class="typebreak"/>
+Order, Dim &gt;, <a class="el" href="classFeel_1_1Convex.html">Convex</a>&lt; Dim, <br class="typebreak"/>
+Order, Dim &gt;::nDim, <a class="el" href="classFeel_1_1Convex.html">Convex</a><br class="typebreak"/>
+&lt; Dim, Order, Dim &gt;::nOrder, <br class="typebreak"/>
+<a class="el" href="classFeel_1_1Convex.html">Convex</a>&lt; Dim, Order, Dim &gt;<br class="typebreak"/>
 ::nDim, value_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>RefElem</b></td></tr>
 <tr class="separator:a56a4c162991f66a59d4d75c5e885f0a5 inherit pub_types_classFeel_1_1PointSet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec74eb0725bfd9b04f09c4f6618e7243 inherit pub_types_classFeel_1_1PointSet"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec74eb0725bfd9b04f09c4f6618e7243"></a>
@@ -345,8 +344,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>toPython</b> ()</td><
 <tr class="separator:a494a65b1dabd0d54070f64a06f483806 inherit pro_methods_classFeel_1_1PointSet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6556c156141f845ab66783506f709663 inherit pro_methods_classFeel_1_1PointSet"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1PointSet.html#a6556c156141f845ab66783506f709663">setPoints</a> (uint16_type f, nodes_type const &amp;n)</td></tr>
 <tr class="separator:a6556c156141f845ab66783506f709663 inherit pro_methods_classFeel_1_1PointSet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_static_methods_classFeel_1_1VisitableBase"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classFeel_1_1VisitableBase')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classFeel_1_1VisitableBase.html">Feel::VisitableBase&lt;&gt;</a></td></tr>
-<tr class="memitem:a3c4ac7ee3fa9b1ef11cd1e075cb38e49 inherit pro_static_methods_classFeel_1_1VisitableBase"><td class="memItemLeft" align="right" valign="top">static return_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1VisitableBase.html#a3c4ac7ee3fa9b1ef11cd1e075cb38e49">acceptImpl</a> (T *visited, <a class="el" href="classFeel_1_1VisitorBase.html">VisitorBase</a> *guest)</td></tr>
+<tr class="inherit_header pro_static_methods_classFeel_1_1VisitableBase"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classFeel_1_1VisitableBase')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classFeel_1_1VisitableBase.html">Feel::VisitableBase&lt; R, CatchAll &gt;</a></td></tr>
+<tr class="memitem:a3c4ac7ee3fa9b1ef11cd1e075cb38e49 inherit pro_static_methods_classFeel_1_1VisitableBase"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a3c4ac7ee3fa9b1ef11cd1e075cb38e49 inherit pro_static_methods_classFeel_1_1VisitableBase"><td class="memTemplItemLeft" align="right" valign="top">static return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>acceptImpl</b> (T *visited, <a class="el" href="classFeel_1_1VisitorBase.html">VisitorBase</a> *guest)</td></tr>
 <tr class="separator:a3c4ac7ee3fa9b1ef11cd1e075cb38e49 inherit pro_static_methods_classFeel_1_1VisitableBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classFeel_1_1PointSet"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classFeel_1_1PointSet')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classFeel_1_1PointSet.html">Feel::PointSet&lt; Convex&lt; Dim, Order, Dim &gt;, T &gt;</a></td></tr>
 <tr class="memitem:ace3273d3fa7f6e93a7b5ff1c7607edff inherit pro_attribs_classFeel_1_1PointSet"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace3273d3fa7f6e93a7b5ff1c7607edff"></a>
@@ -371,7 +371,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>pointsName</b>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:32:20 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:06:22 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

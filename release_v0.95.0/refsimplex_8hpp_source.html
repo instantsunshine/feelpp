@@ -132,12 +132,12 @@ $(document).ready(function(){initNavTree('refsimplex_8hpp_source.html','');});
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span>Feel</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type Dim, u<span class="keywordtype">int</span>16_type Order, u<span class="keywordtype">int</span>16_type RDim,  <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference</a>&lt;<a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex</a>&lt;Dim, <a class="code" href="structFeel_1_1Order.html">Order</a>, RDim&gt;, Dim, <a class="code" href="structFeel_1_1Order.html">Order</a>, RDim, T&gt;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">class </span>Reference&lt;Simplex&lt;Dim, Order, RDim&gt;, Dim, Order, RDim, T&gt;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    :</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span> <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex</a>&lt;Dim, Order, RDim&gt;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span> Simplex&lt;Dim, Order, RDim&gt;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">Simplex&lt;Dim, Order, RDim&gt;</a> <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">super</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">typedef</span> Simplex&lt;Dim, Order, RDim&gt; super;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nDim = super::nDim;</div>
@@ -147,18 +147,18 @@ $(document).ready(function(){initNavTree('refsimplex_8hpp_source.html','');});
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type topological_dimension = super::topological_dimension;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type real_dimension = super::real_dimension;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">super</a> <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">GeoShape</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">typedef</span> super GeoShape;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> Shape = super::Shape;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> Geometry = super::Geometry;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference&lt;Simplex&lt;Dim, Order, RDim&gt;</a>, Dim, <a class="code" href="structFeel_1_1Order.html">Order</a>, RDim, T&gt; <a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html">self_type</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">typedef</span> Reference&lt;Simplex&lt;Dim, Order, RDim&gt;, Dim, Order, RDim, T&gt; self_type;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> mpl::if_&lt;boost::is_same&lt;typename super::element_type, boost::none_t&gt;,</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            mpl::identity&lt;boost::none_t&gt;,</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            mpl::identity&lt;Reference&lt;typename super::element_type, nDim+1, nOrder, nRealDim, T&gt; &gt; &gt;::type::type element_type;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference</a>&lt;<span class="keyword">typename</span> super::topological_face_type,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            super::topological_face_type::nDim, nOrder, nRealDim, T&gt; <a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">topological_face_type</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">typedef</span> Reference&lt;<span class="keyword">typename</span> super::topological_face_type,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            super::topological_face_type::nDim, nOrder, nRealDim, T&gt; topological_face_type;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::edge_to_point_t edge_to_point_t;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::face_to_point_t face_to_point_t;</div>
@@ -177,8 +177,8 @@ $(document).ready(function(){initNavTree('refsimplex_8hpp_source.html','');});
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nbPtsPerFace = super::nbPtsPerFace;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint16_type nbPtsPerVolume = super::nbPtsPerVolume;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1node.html">node&lt;value_type&gt;::type</a> node_type;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1matrix__node.html">matrix_node&lt;value_type&gt;::type</a> points_type;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> node&lt;value_type&gt;::type node_type;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> matrix_node&lt;value_type&gt;::type points_type;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">typedef</span> points_type matrix_node_type;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">typedef</span> node_type normal_type;</div>
@@ -188,9 +188,9 @@ $(document).ready(function(){initNavTree('refsimplex_8hpp_source.html','');});
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> super::permutation_type permutation_type;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference</a>()</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    Reference()</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        :</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">super</a>(),</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        super(),</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        M_id( 0 ),</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        M_vertices( nRealDim, numVertices ),</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        M_points( nRealDim, numPoints ),</div>
@@ -251,9 +251,9 @@ $(document).ready(function(){initNavTree('refsimplex_8hpp_source.html','');});
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        computeMeasure();</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference</a>( element_type <span class="keyword">const</span>&amp; e, uint16_type __f, uint16_type __p = permutation_type::IDENTITY )</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    Reference( element_type <span class="keyword">const</span>&amp; e, uint16_type __f, uint16_type __p = permutation_type::IDENTITY )</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        :</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">super</a>(),</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        super(),</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        M_id( __f ),</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        M_vertices( nRealDim, numVertices ),</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        M_points( nRealDim, numPoints ),</div>
@@ -345,9 +345,9 @@ $(document).ready(function(){initNavTree('refsimplex_8hpp_source.html','');});
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        computeMeasure();</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference</a>( <a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference</a> <span class="keyword">const</span> &amp; r )</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    Reference( Reference <span class="keyword">const</span> &amp; r )</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        :</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <a class="code" href="classFeel_1_1Simplex.html" title="simplex of dimension Dim ">super</a>( r ),</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        super( r ),</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        M_id( r.M_id ),</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        M_vertices( r.M_vertices ),</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        M_points( r.M_points ),</div>
@@ -360,11 +360,11 @@ $(document).ready(function(){initNavTree('refsimplex_8hpp_source.html','');});
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    }</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    ~<a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference</a>() {}</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    ~Reference() {}</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference</a>&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( <a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference</a> <span class="keyword">const</span>&amp; r )</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    Reference&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( Reference <span class="keyword">const</span>&amp; r )</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    {</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">if</span> ( <span class="keyword">this</span> != &amp;r )</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        {</div>
@@ -424,12 +424,12 @@ $(document).ready(function(){initNavTree('refsimplex_8hpp_source.html','');});
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keywordflow">return</span> ublas::column( M_vertices, edge_to_point_t::e2p( __e,__p ) );</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    }</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
-<div class="line"><a name="l00345"></a><span class="lineno"><a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#a3076dd82e168007b00a9428721972583">  345</a></span>&#160;    ublas::matrix_column&lt;points_type const&gt; <a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#a3076dd82e168007b00a9428721972583">faceVertex</a>( uint16_type f, uint16_type p )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    ublas::matrix_column&lt;points_type const&gt; faceVertex( uint16_type f, uint16_type p )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keywordflow">return</span> ublas::column( M_vertices, face_to_point_t::f2p( f,p ) );</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    }</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
-<div class="line"><a name="l00353"></a><span class="lineno"><a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#a36a84762d693ed004caa4358283f60ba">  353</a></span>&#160;    matrix_node_type <a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#a36a84762d693ed004caa4358283f60ba">faceVertices</a>( uint16_type f )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    matrix_node_type faceVertices( uint16_type f )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        matrix_node_type v( nRealDim, nDim  );</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
@@ -462,42 +462,42 @@ $(document).ready(function(){initNavTree('refsimplex_8hpp_source.html','');});
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordflow">return</span> ublas::column( M_points, __i );</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    }</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
-<div class="line"><a name="l00389"></a><span class="lineno"><a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#af01d23e555c8aaf12e5d45c4e4f2b970">  389</a></span>&#160;    node_type <a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#af01d23e555c8aaf12e5d45c4e4f2b970">barycenter</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    node_type barycenter()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordflow">return</span> M_barycenter;</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    }</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div>
-<div class="line"><a name="l00397"></a><span class="lineno"><a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#af3564c9f5e33d2047c36c900dee92882">  397</a></span>&#160;    points_type <a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#af3564c9f5e33d2047c36c900dee92882">barycenterFaces</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    points_type barycenterFaces()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keywordflow">return</span> M_barycenterfaces;</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    }</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
-<div class="line"><a name="l00405"></a><span class="lineno"><a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#ac17717f5e71f14becf122bac590c10fe">  405</a></span>&#160;    ublas::matrix_column&lt;matrix_node_type const&gt; <a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#ac17717f5e71f14becf122bac590c10fe">faceBarycenter</a>( uint16_type f )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    ublas::matrix_column&lt;matrix_node_type const&gt; faceBarycenter( uint16_type f )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keywordflow">return</span> ublas::column( M_barycenterfaces, f );</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    }</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div>
-<div class="line"><a name="l00416"></a><span class="lineno"><a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#acd524dd5d28cf765809aa7dae19932b2">  416</a></span>&#160;    normals_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#acd524dd5d28cf765809aa7dae19932b2">normals</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    normals_type <span class="keyword">const</span>&amp; normals()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <span class="keywordflow">return</span> M_normals;</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    }</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
-<div class="line"><a name="l00428"></a><span class="lineno"><a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#afec919598a4495e865ff939741a3debb">  428</a></span>&#160;    node_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#afec919598a4495e865ff939741a3debb">normal</a>( uint16_type __n )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    node_type <span class="keyword">const</span>&amp; normal( uint16_type __n )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        <span class="keywordflow">return</span> M_normals[__n];</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    }</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;</div>
-<div class="line"><a name="l00440"></a><span class="lineno"><a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#a10f46ddf6ec91644e00ae04a3694e232">  440</a></span>&#160;    node_type <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#a10f46ddf6ec91644e00ae04a3694e232">tangent</a>( uint16_type __n )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    node_type <span class="keyword">const</span>&amp; tangent( uint16_type __n )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        <span class="keywordflow">return</span> M_tangents[__n];</div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    }</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div>
-<div class="line"><a name="l00451"></a><span class="lineno"><a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#a726be531250cb97577e22f37c00b8901">  451</a></span>&#160;    normal_const_iterator <a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#a726be531250cb97577e22f37c00b8901">beginNormal</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    normal_const_iterator beginNormal()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        <span class="keywordflow">return</span> M_normals.begin();</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    }</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;</div>
-<div class="line"><a name="l00462"></a><span class="lineno"><a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#a0324bc705d510bdd9e202902137cd697">  462</a></span>&#160;    normal_const_iterator <a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#a0324bc705d510bdd9e202902137cd697">endNormal</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    normal_const_iterator endNormal()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        <span class="keywordflow">return</span> M_normals.end();</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    }</div>
@@ -513,7 +513,7 @@ $(document).ready(function(){initNavTree('refsimplex_8hpp_source.html','');});
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        <span class="keywordflow">return</span> M_points;</div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    }</div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;</div>
-<div class="line"><a name="l00481"></a><span class="lineno"><a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#a2e2da6f31e75064a677424ae3c9118f8">  481</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#a2e2da6f31e75064a677424ae3c9118f8">measure</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    <span class="keywordtype">double</span> measure()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        <span class="keywordflow">return</span> M_meas;</div>
 <div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    }</div>
@@ -677,13 +677,13 @@ $(document).ready(function(){initNavTree('refsimplex_8hpp_source.html','');});
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    }</div>
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;</div>
 <div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;    boost::tuple&lt;bool, value_type&gt;</div>
-<div class="line"><a name="l00705"></a><span class="lineno"><a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#ab4727474b91e7f60c944282556810cfb">  705</a></span>&#160;    <a class="code" href="classFeel_1_1Reference_3_01Simplex_3_01Dim_00_01Order_00_01RDim_01_4_00_01Dim_00_01Order_00_01RDim_00_01T_01_4.html#ab4727474b91e7f60c944282556810cfb">isIn</a>( <span class="keyword">typename</span> <a class="code" href="structFeel_1_1node.html">node&lt;value_type&gt;::type</a> <span class="keyword">const</span>&amp; pt )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;    isIn( <span class="keyword">typename</span> node&lt;value_type&gt;::type <span class="keyword">const</span>&amp; pt )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;[isIn] pt =&quot; &lt;&lt; pt &lt;&lt; &quot;\n&quot;;</span></div>
 <div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;        ublas::vector&lt;double&gt; D( nDim + 1, 0 );</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;        <span class="keyword">typename</span> <a class="code" href="structFeel_1_1matrix__node.html">matrix_node&lt;value_type&gt;::type</a> M( nDim+1,nDim+1 );</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;        <span class="keyword">typename</span> <a class="code" href="structFeel_1_1matrix__node.html">matrix_node&lt;value_type&gt;::type</a> P( nDim,nDim+1 );</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        <span class="keyword">typename</span> <a class="code" href="structFeel_1_1matrix__node.html">matrix_node&lt;value_type&gt;::type</a> P0( nDim,nDim+1 );</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;        <span class="keyword">typename</span> matrix_node&lt;value_type&gt;::type M( nDim+1,nDim+1 );</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;        <span class="keyword">typename</span> matrix_node&lt;value_type&gt;::type P( nDim,nDim+1 );</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        <span class="keyword">typename</span> matrix_node&lt;value_type&gt;::type P0( nDim,nDim+1 );</div>
 <div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;        std::fill( M.data().begin(), M.data().end(), value_type( 1.0 ) );</div>
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;</div>
 <div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> p = 0; p &lt; numVertices; ++p )</div>
@@ -1019,14 +1019,14 @@ $(document).ready(function(){initNavTree('refsimplex_8hpp_source.html','');});
 <div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;</div>
 <div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;</div>
 <div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;</div>
-<div class="line"><a name="l01048"></a><span class="lineno"><a class="code" href="classFeel_1_1Entity_3_01SHAPE__LINE_00_01T_01_4.html"> 1048</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="classFeel_1_1Entity.html">Entity</a>&lt;SHAPE_LINE, T&gt;: <span class="keyword">public</span> <a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference</a>&lt;Simplex&lt;1, 1, 1&gt;,1,1, 1, T&gt; {};</div>
-<div class="line"><a name="l01049"></a><span class="lineno"><a class="code" href="classFeel_1_1Entity_3_01SHAPE__TRIANGLE_00_01T_01_4.html"> 1049</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="classFeel_1_1Entity.html">Entity</a>&lt;SHAPE_TRIANGLE, T&gt;: <span class="keyword">public</span> <a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference</a>&lt;Simplex&lt;2, 1, 2&gt;,2,1, 2, T&gt; {};</div>
-<div class="line"><a name="l01050"></a><span class="lineno"><a class="code" href="classFeel_1_1Entity_3_01SHAPE__TETRA_00_01T_01_4.html"> 1050</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="classFeel_1_1Entity.html">Entity</a>&lt;SHAPE_TETRA, T&gt;: <span class="keyword">public</span> <a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference</a>&lt;Simplex&lt;3, 1, 3&gt;,3,1, 3, T&gt; {};</div>
+<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span>Entity&lt;SHAPE_LINE, T&gt;: <span class="keyword">public</span> Reference&lt;Simplex&lt;1, 1, 1&gt;,1,1, 1, T&gt; {};</div>
+<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span>Entity&lt;SHAPE_TRIANGLE, T&gt;: <span class="keyword">public</span> Reference&lt;Simplex&lt;2, 1, 2&gt;,2,1, 2, T&gt; {};</div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span>Entity&lt;SHAPE_TETRA, T&gt;: <span class="keyword">public</span> Reference&lt;Simplex&lt;3, 1, 3&gt;,3,1, 3, T&gt; {};</div>
 <div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;</div>
 <div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;</div>
 <div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;<span class="keyword">template</span>&lt;u<span class="keywordtype">int</span>16_type Dim, u<span class="keywordtype">int</span>16_type Order, u<span class="keywordtype">int</span>16_type RDim,  <span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;<a class="code" href="classFeel_1_1Reference.html" title="Reference convex. ">Reference&lt;Simplex&lt;Dim, Order, RDim&gt;</a>, Dim, Order, RDim, T&gt;::computeBarycenters()</div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;Reference&lt;Simplex&lt;Dim, Order, RDim&gt;, Dim, Order, RDim, T&gt;::computeBarycenters()</div>
 <div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;{</div>
 <div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;    M_barycenter = ublas::column( glas::average( M_vertices ), 0 );</div>
 <div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;</div>
@@ -1099,7 +1099,7 @@ $(document).ready(function(){initNavTree('refsimplex_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:49 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:06:10 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -137,10 +137,10 @@ $(document).ready(function(){initNavTree('discontinuous_8hpp_source.html','');})
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// import fusion namespace in Feel</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">namespace </span>fusion = boost::fusion;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="classFeel_1_1Discontinuous.html">   47</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1Discontinuous.html">Discontinuous</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">class </span>Discontinuous</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    :</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// necessary for boost.parameters</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span> <a class="code" href="structFeel_1_1detail_1_1continuity__base.html">detail::continuity_base</a></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span> detail::continuity_base</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
@@ -156,13 +156,13 @@ $(document).ready(function(){initNavTree('discontinuous_8hpp_source.html','');})
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="classFeel_1_1Discontinuous.html#a3f350499ceee69f07074d75820929b78" title="default constructor ">Discontinuous</a>();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classFeel_1_1Discontinuous.html#a3f350499ceee69f07074d75820929b78" title="default constructor ">Discontinuous</a>( <a class="code" href="classFeel_1_1Continuous.html" title="describe continuous functions ">Continuous</a> <span class="keyword">const</span> &amp; );</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classFeel_1_1Discontinuous.html#a6346ccfda50a0f1ceefd6f0460731ed9" title="destructor ">~Discontinuous</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Discontinuous();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    Discontinuous( Continuous <span class="keyword">const</span> &amp; );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    ~Discontinuous();</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="classFeel_1_1Discontinuous.html#a7643fe441699a9d648f06923dcf41f8b">   91</a></span>&#160;    <a class="code" href="classFeel_1_1Discontinuous.html">Discontinuous</a>&amp; <a class="code" href="classFeel_1_1Discontinuous.html#a7643fe441699a9d648f06923dcf41f8b" title="copy operator ">operator=</a>( <a class="code" href="classFeel_1_1Discontinuous.html">Discontinuous</a> <span class="keyword">const</span> &amp; o )</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    Discontinuous&amp; <a class="code" href="namespaceFeel.html#a50972fd7b0bc76c7a441e8ed1b779871">operator=</a>( Discontinuous <span class="keyword">const</span> &amp; o )</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span> ( <span class="keyword">this</span> != &amp;o )</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div>
@@ -181,7 +181,7 @@ $(document).ready(function(){initNavTree('discontinuous_8hpp_source.html','');})
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, <span class="keyword">typename</span> DofType&gt;</div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="code" href="classFeel_1_1Discontinuous_1_1apply.html">  123</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classFeel_1_1Discontinuous_1_1apply.html">apply</a></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">class </span>apply</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    {</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0" title="Indices (starting from 0) ">size_type</a> result_type;</div>
@@ -189,7 +189,7 @@ $(document).ready(function(){initNavTree('discontinuous_8hpp_source.html','');})
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">typedef</span> DofType dof_type;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> dof_type::fe_type fe_type;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <a class="code" href="classFeel_1_1Discontinuous_1_1apply.html">apply</a>( MeshType&amp; M, DofType&amp; D )</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        apply( MeshType&amp; M, DofType&amp; D )</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            :</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            M_mesh( M ),</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            M_dof( D )</div>
@@ -218,7 +218,7 @@ $(document).ready(function(){initNavTree('discontinuous_8hpp_source.html','');})
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:16 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:05:46 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

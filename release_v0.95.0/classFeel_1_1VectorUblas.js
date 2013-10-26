@@ -1,7 +1,5 @@
 var classFeel_1_1VectorUblas =
 [
-    [ "range", "structFeel_1_1VectorUblas_1_1range.html", "structFeel_1_1VectorUblas_1_1range" ],
-    [ "slice", "structFeel_1_1VectorUblas_1_1slice.html", "structFeel_1_1VectorUblas_1_1slice" ],
     [ "clone_ptrtype", "classFeel_1_1VectorUblas.html#a2a0f840b5c7bac408f737e2c72f59aa9", null ],
     [ "clone_type", "classFeel_1_1VectorUblas.html#abdf6006890692ee0b4176f0ba141530d", null ],
     [ "const_iterator", "classFeel_1_1VectorUblas.html#a60a3addb6436e0143940701bc35e4008", null ],

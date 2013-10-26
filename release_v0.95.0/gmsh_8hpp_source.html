@@ -157,7 +157,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">namespace </span>Feel</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="classFeel_1_1PeriodicEntities.html">   60</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1PeriodicEntities.html">PeriodicEntities</a>: <span class="keyword">public</span> std::map&lt;int,std::pair&lt;int,int&gt; &gt; {};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">class </span>PeriodicEntities: <span class="keyword">public</span> std::map&lt;int,std::pair&lt;int,int&gt; &gt; {};</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno"><a class="code" href="classFeel_1_1Gmsh.html">  101</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator. ">Gmsh</a></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
@@ -165,13 +165,13 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">enum</span> DomainType { GMSH_REFERENCE_DOMAIN = 0, GMSH_REAL_DOMAIN };</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="code" href="structFeel_1_1Gmsh_1_1Factory.html">  107</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structFeel_1_1Gmsh_1_1Factory.html">Factory</a></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">struct </span>Factory</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern ">Feel::Singleton&lt; Feel::Factory&lt; Gmsh, std::string &gt;</a> &gt; <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern ">type</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Singleton.html" title="implement the Singleton pattern ">Feel::Singleton&lt; Feel::Factory&lt; Gmsh, std::string &gt;</a> &gt; type;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    };</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator. ">Gmsh</a>( <span class="keywordtype">int</span> nDim = 1, <span class="keywordtype">int</span> nOrder = GMSH_ORDER_ONE, <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1Gmsh.html#a7cae62fb16983d79a498454678884d56">worldComm</a>=<a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() );</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator. ">Gmsh</a>( <span class="keywordtype">int</span> nDim = 1, <span class="keywordtype">int</span> nOrder = GMSH_ORDER_ONE, WorldComm <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1Gmsh.html#a7cae62fb16983d79a498454678884d56">worldComm</a>=Environment::worldComm() );</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator. ">Gmsh</a>( <a class="code" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator. ">Gmsh</a> <span class="keyword">const</span> &amp; __g );</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator. ">Gmsh</a>();</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
@@ -213,7 +213,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordflow">return</span> M_name;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        }</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="classFeel_1_1PeriodicEntities.html">PeriodicEntities</a> <span class="keyword">const</span>&amp; periodic()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> M_periodic; }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    PeriodicEntities <span class="keyword">const</span>&amp; periodic()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> M_periodic; }</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
 <div class="line"><a name="l00200"></a><span class="lineno"><a class="code" href="classFeel_1_1Gmsh.html#ae18c55744553e441b9b7957d75b99fb0">  200</a></span>&#160;    std::vector&lt;std::pair&lt;double,double&gt; &gt; <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1Gmsh.html#ae18c55744553e441b9b7957d75b99fb0">boundingBox</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="keyword">        </span>{</div>
@@ -278,7 +278,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1Gmsh.html#afb750c08567fcc101515cde0f9d88978" title="add physical names to msh files ">M_usePhysicalNames</a>;</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        }</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
-<div class="line"><a name="l00283"></a><span class="lineno"><a class="code" href="classFeel_1_1Gmsh.html#a7cae62fb16983d79a498454678884d56">  283</a></span>&#160;    <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1Gmsh.html#a7cae62fb16983d79a498454678884d56">worldComm</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno"><a class="code" href="classFeel_1_1Gmsh.html#a7cae62fb16983d79a498454678884d56">  283</a></span>&#160;    WorldComm <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1Gmsh.html#a7cae62fb16983d79a498454678884d56">worldComm</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classFeel_1_1Gmsh.html#a7f488443251749d91ab9c53a7808a79e" title="communicator ">M_worldComm</a>;</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        }</div>
@@ -444,7 +444,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;            <a class="code" href="classFeel_1_1Gmsh.html#afb750c08567fcc101515cde0f9d88978" title="add physical names to msh files ">M_usePhysicalNames</a> = option;</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;        }</div>
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;</div>
-<div class="line"><a name="l00515"></a><span class="lineno"><a class="code" href="classFeel_1_1Gmsh.html#a1500e210db9a3df0b716e439c2a115c8">  515</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1Gmsh.html#a1500e210db9a3df0b716e439c2a115c8" title="set the communicator ">setWorldComm</a>( <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; _worldcomm )</div>
+<div class="line"><a name="l00515"></a><span class="lineno"><a class="code" href="classFeel_1_1Gmsh.html#a1500e210db9a3df0b716e439c2a115c8">  515</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFeel_1_1Gmsh.html#a1500e210db9a3df0b716e439c2a115c8" title="set the communicator ">setWorldComm</a>( WorldComm <span class="keyword">const</span>&amp; _worldcomm )</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        {</div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;            <a class="code" href="classFeel_1_1Gmsh.html#a7f488443251749d91ab9c53a7808a79e" title="communicator ">M_worldComm</a> = _worldcomm;</div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        }</div>
@@ -483,7 +483,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;            <a class="code" href="classFeel_1_1Gmsh.html#a3066ede9cbaa42c21d5c6e376aaef35d" title="recombine simplices into hypercubes ">M_recombine</a> = _recombine;</div>
 <div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;        }</div>
 <div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    <span class="keywordtype">void</span> setPeriodic( <a class="code" href="classFeel_1_1PeriodicEntities.html">PeriodicEntities</a> <span class="keyword">const</span>&amp; p )</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    <span class="keywordtype">void</span> setPeriodic( PeriodicEntities <span class="keyword">const</span>&amp; p )</div>
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        {</div>
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;            M_periodic = p;</div>
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        }</div>
@@ -527,7 +527,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    std::string  <a class="code" href="classFeel_1_1Gmsh.html#af5c39f61ca85ece34cb7bdc6cdd5fe1c">prefix</a>( std::string <span class="keyword">const</span>&amp; __name, uint16_type dim ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;</div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00652"></a><span class="lineno"><a class="code" href="classFeel_1_1Gmsh.html#a7f488443251749d91ab9c53a7808a79e">  652</a></span>&#160;    <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <a class="code" href="classFeel_1_1Gmsh.html#a7f488443251749d91ab9c53a7808a79e" title="communicator ">M_worldComm</a>;</div>
+<div class="line"><a name="l00652"></a><span class="lineno"><a class="code" href="classFeel_1_1Gmsh.html#a7f488443251749d91ab9c53a7808a79e">  652</a></span>&#160;    WorldComm <a class="code" href="classFeel_1_1Gmsh.html#a7f488443251749d91ab9c53a7808a79e" title="communicator ">M_worldComm</a>;</div>
 <div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;</div>
 <div class="line"><a name="l00655"></a><span class="lineno"><a class="code" href="classFeel_1_1Gmsh.html#abeb9d16e5374b22060732831a0794de7">  655</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classFeel_1_1Gmsh.html#abeb9d16e5374b22060732831a0794de7" title="mesh dimension ">M_dimension</a>;</div>
 <div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;</div>
@@ -563,7 +563,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;</div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    <span class="keywordtype">bool</span> M_substructuring;</div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;</div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    <a class="code" href="classFeel_1_1PeriodicEntities.html">PeriodicEntities</a> M_periodic;</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    PeriodicEntities M_periodic;</div>
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;};</div>
 <div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;</div>
 <div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator. ">Gmsh</a> <a class="code" href="classFeel_1_1Gmsh.html" title="Gmsh Mesh Generator. ">gmsh_type</a>;</div>
@@ -724,7 +724,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    ( optional</div>
 <div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;      ( refine,          *( boost::is_integral&lt;mpl::_&gt; ), 0 )</div>
 <div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;      ( save,          *( boost::is_integral&lt;mpl::_&gt; ), 0 )</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;      ( worldcomm, ( WorldComm ), <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() )</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;      ( worldcomm, ( WorldComm ), Environment::worldComm() )</div>
 <div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        ) )</div>
 <div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;{</div>
 <div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Feel::detail::mesh&lt;Args&gt;::type _mesh_type;</div>
@@ -800,7 +800,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;      ( refine,          *( boost::is_integral&lt;mpl::_&gt; ), option(_name=<span class="stringliteral">&quot;gmsh.refine&quot;</span>).<span class="keyword">template</span> as&lt;int&gt;() )</div>
 <div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;      ( update,          *( boost::is_integral&lt;mpl::_&gt; ), 0 )</div>
 <div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;      ( physical_are_elementary_regions,           *, option(_name=<span class="stringliteral">&quot;gmsh.physical_are_elementary_regions&quot;</span>).<span class="keyword">template</span> as&lt;bool&gt;() )</div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;      ( worldcomm,       *, <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() )</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;      ( worldcomm,       *, Environment::worldComm() )</div>
 <div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;      ( rebuild_partitions, (<span class="keywordtype">bool</span>), option(_name=<span class="stringliteral">&quot;gmsh.partition&quot;</span>).<span class="keyword">template</span> as&lt;bool&gt;() )</div>
 <div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;      ( rebuild_partitions_filename,    *, filename )</div>
 <div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;      ( partitions,      *( boost::is_integral&lt;mpl::_&gt; ), worldcomm.globalSize() )</div>
@@ -815,10 +815,10 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;    _mesh_ptrtype _mesh( mesh );</div>
 <div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;    _mesh-&gt;setWorldComm( worldcomm );</div>
 <div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;</div>
-<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;    std::string filename_with_path = <a class="code" href="classFeel_1_1detail_1_1Environment.html#aeb133b6d43b8ec8a48c502d67676256b">Environment::findFile</a>( filename );</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;    std::string filename_with_path = Environment::findFile( filename );</div>
 <div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;    <span class="keywordflow">if</span> ( filename_with_path.empty() )</div>
 <div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;    {</div>
-<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;        std::vector&lt;std::string&gt; plist = <a class="code" href="classFeel_1_1detail_1_1Environment.html#abd55a574b5edb51d7230f2947568f2d0">Environment::geoPathList</a>();</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;        std::vector&lt;std::string&gt; plist = Environment::geoPathList();</div>
 <div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;        std::ostringstream ostr;</div>
 <div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;        std::for_each( plist.begin(), plist.end(), [&amp;ostr]( std::string s ) { ostr &lt;&lt; <span class="stringliteral">&quot; - &quot;</span> &lt;&lt; s &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>; } );</div>
 <div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;        CHECK( !filename_with_path.empty() ) &lt;&lt; <span class="stringliteral">&quot;File &quot;</span> &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot; cannot be found in the following paths list:\n &quot;</span> &lt;&lt; ostr.str();</div>
@@ -908,9 +908,9 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Feel::detail::meshFromGeoEntity&lt;Args&gt;::type _mesh_type;</div>
 <div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;</div>
 <div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;<span class="preprocessor">#if BOOST_FILESYSTEM_VERSION == 3</span></div>
-<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;<span class="preprocessor"></span>    ExporterGmsh&lt;_mesh_type,1&gt; exporter( fs::path( filename ).stem().<span class="keywordtype">string</span>(), 1,  <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().subWorldCommSeq() );</div>
+<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;<span class="preprocessor"></span>    ExporterGmsh&lt;_mesh_type,1&gt; exporter( fs::path( filename ).stem().<span class="keywordtype">string</span>(), 1,  Environment::worldComm().subWorldCommSeq() );</div>
 <div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;<span class="preprocessor">#elif BOOST_FILESYSTEM_VERSION == 2</span></div>
-<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;<span class="preprocessor"></span>    ExporterGmsh&lt;_mesh_type,1&gt; exporter( fs::path( filename ).stem(), 1, <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>().subWorldCommSeq() );</div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;<span class="preprocessor"></span>    ExporterGmsh&lt;_mesh_type,1&gt; exporter( fs::path( filename ).stem(), 1, Environment::worldComm().subWorldCommSeq() );</div>
 <div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;<span class="preprocessor"></span>    exporter.gmshSaveOneElementAsMesh( filename, geoentity, pointset );</div>
 <div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;}</div>
@@ -941,7 +941,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;      ( periodic,        *, PeriodicEntities() )</div>
 <div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;      ( rebuild_partitions, (<span class="keywordtype">bool</span>), option(_name=<span class="stringliteral">&quot;gmsh.partition&quot;</span>).<span class="keyword">template</span> as&lt;bool&gt;() )</div>
 <div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;      ( rebuild_partitions_filename, *( boost::is_convertible&lt;mpl::_,std::string&gt; ) , desc-&gt;prefix()+<span class="stringliteral">&quot;.msh&quot;</span> )</div>
-<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;      ( worldcomm,      *, <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() )</div>
+<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;      ( worldcomm,      *, Environment::worldComm() )</div>
 <div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;      ( partitions,   *( boost::is_integral&lt;mpl::_&gt; ), worldcomm.globalSize() )</div>
 <div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;      ( partition_file,   *( boost::is_integral&lt;mpl::_&gt; ), 0 )</div>
 <div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;      ( partitioner,   *( boost::is_integral&lt;mpl::_&gt; ), GMSH_PARTITIONER_CHACO )</div>
@@ -1069,9 +1069,9 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;      ( geo_parameters,    *( boost::icl::is_map&lt;mpl::_&gt; ), <a class="code" href="classFeel_1_1Gmsh.html#a63f45d6c769f769094cb1e6e65ebf931" title="Create a map from a list of geometry parameters string and separated by a character :...">Gmsh::gpstr2map</a>( option(_name=<span class="stringliteral">&quot;gmsh.geo-variables-list&quot;</span>).<span class="keyword">template</span> as&lt;std::string&gt;() ) )</div>
 <div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;      ( dim,              *( boost::is_integral&lt;mpl::_&gt; ), 3 )</div>
 <div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;      ( order,              *( boost::is_integral&lt;mpl::_&gt; ), 1 )</div>
-<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;      ( files_path, *( boost::is_convertible&lt;mpl::_,std::string&gt; ), <a class="code" href="classFeel_1_1detail_1_1Environment.html#a56f1882ced469e11ae30c3087955feae">Environment::localGeoRepository</a>() )</div>
+<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;      ( files_path, *( boost::is_convertible&lt;mpl::_,std::string&gt; ), Environment::localGeoRepository() )</div>
 <div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;      ( depends, *( boost::is_convertible&lt;mpl::_,std::string&gt; ), option(_name=<span class="stringliteral">&quot;gmsh.depends&quot;</span>).<span class="keyword">template</span> as&lt;std::string&gt;() )</div>
-<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;      ( worldcomm,       (WorldComm), <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() ) )</div>
+<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;      ( worldcomm,       (WorldComm), Environment::worldComm() ) )</div>
 <div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160;    )</div>
 <div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;</div>
 <div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160;{</div>
@@ -1084,10 +1084,10 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;<span class="preprocessor"></span>    gmsh_ptr-&gt;setPrefix( fs::path( filename ).stem() );</div>
 <div class="line"><a name="l01291"></a><span class="lineno"> 1291</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;    std::string filename_with_path = <a class="code" href="classFeel_1_1detail_1_1Environment.html#aeb133b6d43b8ec8a48c502d67676256b">Environment::findFile</a>( filename );</div>
+<div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;    std::string filename_with_path = Environment::findFile( filename );</div>
 <div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;    <span class="keywordflow">if</span> ( filename_with_path.empty() )</div>
 <div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;    {</div>
-<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;        std::vector&lt;std::string&gt; plist = <a class="code" href="classFeel_1_1detail_1_1Environment.html#abd55a574b5edb51d7230f2947568f2d0">Environment::geoPathList</a>();</div>
+<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;        std::vector&lt;std::string&gt; plist = Environment::geoPathList();</div>
 <div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;        std::ostringstream ostr;</div>
 <div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;        std::for_each( plist.begin(), plist.end(), [&amp;ostr]( std::string s ) { ostr &lt;&lt; <span class="stringliteral">&quot; - &quot;</span> &lt;&lt; s &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>; } );</div>
 <div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;        CHECK( !filename_with_path.empty() ) &lt;&lt; <span class="stringliteral">&quot;File &quot;</span> &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot; cannot be found in the following paths list:\n &quot;</span> &lt;&lt; ostr.str();</div>
@@ -1159,17 +1159,17 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;    <span class="keywordflow">if</span> ( fs::exists( filename ) )</div>
 <div class="line"><a name="l01373"></a><span class="lineno"> 1373</span>&#160;        gmsh_ptr-&gt;setDescription( ( boost::format( <span class="stringliteral">&quot;Merge \&quot;%1%\&quot;;\n&quot;</span> ) % filename ).str() );</div>
 <div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;</div>
-<div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( fs::exists( fs::path( <a class="code" href="classFeel_1_1detail_1_1Environment.html#a56f1882ced469e11ae30c3087955feae">Environment::localGeoRepository</a>() ) / filename ) )</div>
-<div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;        gmsh_ptr-&gt;setDescription( ( boost::format( <span class="stringliteral">&quot;Merge \&quot;%1%\&quot;;\n&quot;</span> ) % ( fs::path( <a class="code" href="classFeel_1_1detail_1_1Environment.html#a56f1882ced469e11ae30c3087955feae">Environment::localGeoRepository</a>() ) / filename ).<span class="keywordtype">string</span>() ).str() );</div>
+<div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( fs::exists( fs::path( Environment::localGeoRepository() ) / filename ) )</div>
+<div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;        gmsh_ptr-&gt;setDescription( ( boost::format( <span class="stringliteral">&quot;Merge \&quot;%1%\&quot;;\n&quot;</span> ) % ( fs::path( Environment::localGeoRepository() ) / filename ).<span class="keywordtype">string</span>() ).str() );</div>
 <div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;</div>
-<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( <a class="code" href="classFeel_1_1detail_1_1Environment.html#aeefdfd9a9974472b880eab52815d764b">Environment::systemGeoRepository</a>().<span class="keyword">template</span> get&lt;1&gt;()  &amp;&amp;</div>
-<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;              fs::exists( fs::path( <a class="code" href="classFeel_1_1detail_1_1Environment.html#aeefdfd9a9974472b880eab52815d764b">Environment::systemGeoRepository</a>().get&lt;0&gt;() ) / filename ) )</div>
-<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;        gmsh_ptr-&gt;setDescription( ( boost::format( <span class="stringliteral">&quot;Merge \&quot;%1%\&quot;;\n&quot;</span> ) % ( fs::path( <a class="code" href="classFeel_1_1detail_1_1Environment.html#aeefdfd9a9974472b880eab52815d764b">Environment::systemGeoRepository</a>().get&lt;0&gt;() ) / filename ).<span class="keywordtype">string</span>() ).str() );</div>
+<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( Environment::systemGeoRepository().<span class="keyword">template</span> get&lt;1&gt;()  &amp;&amp;</div>
+<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;              fs::exists( fs::path( Environment::systemGeoRepository().get&lt;0&gt;() ) / filename ) )</div>
+<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;        gmsh_ptr-&gt;setDescription( ( boost::format( <span class="stringliteral">&quot;Merge \&quot;%1%\&quot;;\n&quot;</span> ) % ( fs::path( Environment::systemGeoRepository().get&lt;0&gt;() ) / filename ).<span class="keywordtype">string</span>() ).str() );</div>
 <div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;</div>
 <div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;    {</div>
 <div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;        std::ostringstream ostr;</div>
-<div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;        ostr &lt;&lt; <span class="stringliteral">&quot;File &quot;</span> &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot; was not found neither in current directory or in &quot;</span> &lt;&lt; <a class="code" href="classFeel_1_1detail_1_1Environment.html#a56f1882ced469e11ae30c3087955feae">Environment::localGeoRepository</a>() &lt;&lt; <span class="stringliteral">&quot; or in &quot;</span> &lt;&lt; <a class="code" href="classFeel_1_1detail_1_1Environment.html#aeefdfd9a9974472b880eab52815d764b">Environment::systemGeoRepository</a>();</div>
+<div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;        ostr &lt;&lt; <span class="stringliteral">&quot;File &quot;</span> &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot; was not found neither in current directory or in &quot;</span> &lt;&lt; Environment::localGeoRepository() &lt;&lt; <span class="stringliteral">&quot; or in &quot;</span> &lt;&lt; Environment::systemGeoRepository();</div>
 <div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;        <span class="keywordflow">throw</span> std::invalid_argument( ostr.str() );</div>
 <div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;    }</div>
 <div class="line"><a name="l01388"></a><span class="lineno"> 1388</span>&#160;</div>
@@ -1194,17 +1194,17 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;    <span class="keywordflow">if</span> ( fs::exists( filename ) )</div>
 <div class="line"><a name="l01413"></a><span class="lineno"> 1413</span>&#160;        gmsh_ptr-&gt;setDescription( ( boost::format( <span class="stringliteral">&quot;Merge \&quot;%1%\&quot;;\nSave View [0] \&quot;%2%\&quot;;\n&quot;</span> ) % filename % meshname ).str() );</div>
 <div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160;</div>
-<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( fs::exists( fs::path( <a class="code" href="classFeel_1_1detail_1_1Environment.html#a56f1882ced469e11ae30c3087955feae">Environment::localGeoRepository</a>() ) / filename ) )</div>
-<div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;        gmsh_ptr-&gt;setDescription( ( boost::format( <span class="stringliteral">&quot;Merge \&quot;%1%\&quot;;\nSave View [0] \&quot;%2%\&quot;;\n&quot;</span> ) % ( fs::path( <a class="code" href="classFeel_1_1detail_1_1Environment.html#a56f1882ced469e11ae30c3087955feae">Environment::localGeoRepository</a>() ) / filename ).string() % meshname ).str() );</div>
+<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( fs::exists( fs::path( Environment::localGeoRepository() ) / filename ) )</div>
+<div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;        gmsh_ptr-&gt;setDescription( ( boost::format( <span class="stringliteral">&quot;Merge \&quot;%1%\&quot;;\nSave View [0] \&quot;%2%\&quot;;\n&quot;</span> ) % ( fs::path( Environment::localGeoRepository() ) / filename ).string() % meshname ).str() );</div>
 <div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;</div>
-<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( <a class="code" href="classFeel_1_1detail_1_1Environment.html#aeefdfd9a9974472b880eab52815d764b">Environment::systemGeoRepository</a>().template get&lt;1&gt;()  &amp;&amp;</div>
-<div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;              fs::exists( fs::path( <a class="code" href="classFeel_1_1detail_1_1Environment.html#aeefdfd9a9974472b880eab52815d764b">Environment::systemGeoRepository</a>().get&lt;0&gt;() ) / filename ) )</div>
-<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;        gmsh_ptr-&gt;setDescription( ( boost::format( <span class="stringliteral">&quot;Merge \&quot;%1%\&quot;;\nSave View [0] \&quot;%2%\&quot;;\n&quot;</span> ) % ( fs::path( <a class="code" href="classFeel_1_1detail_1_1Environment.html#aeefdfd9a9974472b880eab52815d764b">Environment::systemGeoRepository</a>().get&lt;0&gt;() ) / filename ).<span class="keywordtype">string</span>() % meshname ).str() );</div>
+<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( Environment::systemGeoRepository().template get&lt;1&gt;()  &amp;&amp;</div>
+<div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;              fs::exists( fs::path( Environment::systemGeoRepository().get&lt;0&gt;() ) / filename ) )</div>
+<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;        gmsh_ptr-&gt;setDescription( ( boost::format( <span class="stringliteral">&quot;Merge \&quot;%1%\&quot;;\nSave View [0] \&quot;%2%\&quot;;\n&quot;</span> ) % ( fs::path( Environment::systemGeoRepository().get&lt;0&gt;() ) / filename ).<span class="keywordtype">string</span>() % meshname ).str() );</div>
 <div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;</div>
 <div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;    {</div>
 <div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;        std::ostringstream ostr;</div>
-<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;        ostr &lt;&lt; <span class="stringliteral">&quot;File &quot;</span> &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot; was not found neither in current directory or in &quot;</span> &lt;&lt; <a class="code" href="classFeel_1_1detail_1_1Environment.html#a56f1882ced469e11ae30c3087955feae">Environment::localGeoRepository</a>() &lt;&lt; <span class="stringliteral">&quot; or in &quot;</span> &lt;&lt; <a class="code" href="classFeel_1_1detail_1_1Environment.html#aeefdfd9a9974472b880eab52815d764b">Environment::systemGeoRepository</a>();</div>
+<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;        ostr &lt;&lt; <span class="stringliteral">&quot;File &quot;</span> &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot; was not found neither in current directory or in &quot;</span> &lt;&lt; Environment::localGeoRepository() &lt;&lt; <span class="stringliteral">&quot; or in &quot;</span> &lt;&lt; Environment::systemGeoRepository();</div>
 <div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;        <span class="keywordflow">throw</span> std::invalid_argument( ostr.str() );</div>
 <div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160;    }</div>
 <div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;</div>
@@ -1284,7 +1284,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;      ( refine,          *( boost::is_integral&lt;mpl::_&gt; ), option(_name=<span class="stringliteral">&quot;gmsh.refine&quot;</span>).<span class="keyword">template</span> as&lt;int&gt;() )</div>
 <div class="line"><a name="l01528"></a><span class="lineno"> 1528</span>&#160;      ( update,          *( boost::is_integral&lt;mpl::_&gt; ), MESH_CHECK|MESH_UPDATE_FACES|MESH_UPDATE_EDGES )</div>
 <div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;      ( physical_are_elementary_regions,           (<span class="keywordtype">bool</span>), option(_name=<span class="stringliteral">&quot;gmsh.physical_are_elementary_regions&quot;</span>).<span class="keyword">template</span> as&lt;bool&gt;() )</div>
-<div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;      ( worldcomm,       (WorldComm), <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() )</div>
+<div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;      ( worldcomm,       (WorldComm), Environment::worldComm() )</div>
 <div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160;      ( force_rebuild,   *( boost::is_integral&lt;mpl::_&gt; ), option(_name=<span class="stringliteral">&quot;gmsh.rebuild&quot;</span>).<span class="keyword">template</span> as&lt;bool&gt;() )</div>
 <div class="line"><a name="l01532"></a><span class="lineno"> 1532</span>&#160;      ( rebuild_partitions, (<span class="keywordtype">bool</span>), option(_name=<span class="stringliteral">&quot;gmsh.partition&quot;</span>).<span class="keyword">template</span> as&lt;bool&gt;() )</div>
 <div class="line"><a name="l01533"></a><span class="lineno"> 1533</span>&#160;      ( rebuild_partitions_filename, *( boost::is_convertible&lt;mpl::_,std::string&gt; ) , filename )</div>
@@ -1305,7 +1305,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 <div class="line"><a name="l01548"></a><span class="lineno"> 1548</span>&#160;    <span class="comment">// look for mesh_name in various directories (executable directory, current directory. ...)</span></div>
 <div class="line"><a name="l01549"></a><span class="lineno"> 1549</span>&#160;    <span class="comment">// return an empty string if the file is not found</span></div>
 <div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160;</div>
-<div class="line"><a name="l01551"></a><span class="lineno"> 1551</span>&#160;    fs::path mesh_name=fs::path(<a class="code" href="classFeel_1_1detail_1_1Environment.html#aeb133b6d43b8ec8a48c502d67676256b">Environment::findFile</a>(filename));</div>
+<div class="line"><a name="l01551"></a><span class="lineno"> 1551</span>&#160;    fs::path mesh_name=fs::path(Environment::findFile(filename));</div>
 <div class="line"><a name="l01552"></a><span class="lineno"> 1552</span>&#160;    LOG_IF( WARNING, mesh_name.extension() != <span class="stringliteral">&quot;.geo&quot;</span> &amp;&amp; mesh_name.extension() != <span class="stringliteral">&quot;.msh&quot;</span> )</div>
 <div class="line"><a name="l01553"></a><span class="lineno"> 1553</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;Invalid filename &quot;</span> &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot; it should have either the .geo or .msh extension\n&quot;</span>;</div>
 <div class="line"><a name="l01554"></a><span class="lineno"> 1554</span>&#160;</div>
@@ -1374,7 +1374,7 @@ $(document).ready(function(){initNavTree('gmsh_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:29 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:05:56 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

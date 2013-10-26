@@ -148,21 +148,21 @@ $(document).ready(function(){initNavTree('solverlinear_8hpp_source.html','');});
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;SolverLinear&lt;T&gt; &gt;  self_ptrtype;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">typedef</span> T value_type;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structFeel_1_1type__traits.html">type_traits&lt;T&gt;::real_type</a> real_type;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> type_traits&lt;T&gt;::real_type real_type;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;Preconditioner&lt;T&gt; &gt; preconditioner_ptrtype;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classFeel_1_1SolverLinear.html#a504f279570894dbe484694f3b0da5c3c">SolverLinear</a> ( <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; worldComm = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() );</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classFeel_1_1SolverLinear.html#a504f279570894dbe484694f3b0da5c3c">SolverLinear</a> ( WorldComm <span class="keyword">const</span>&amp; worldComm = Environment::worldComm() );</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classFeel_1_1SolverLinear.html#a504f279570894dbe484694f3b0da5c3c">SolverLinear</a> ( po::variables_map <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1SolverLinear.html#ad93d33f94e2fee2113dd4b4011c441c2">vm</a>, <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; worldComm = <a class="code" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>() );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classFeel_1_1SolverLinear.html#a504f279570894dbe484694f3b0da5c3c">SolverLinear</a> ( po::variables_map <span class="keyword">const</span>&amp; <a class="code" href="classFeel_1_1SolverLinear.html#ad93d33f94e2fee2113dd4b4011c441c2">vm</a>, WorldComm <span class="keyword">const</span>&amp; worldComm = Environment::worldComm() );</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classFeel_1_1SolverLinear.html#a00c678b88735046fc5cf51ca71f3f1ef">~SolverLinear</a> ();</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; worldComm()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    WorldComm <span class="keyword">const</span>&amp; worldComm()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> M_worldComm;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> setWorldComm( <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; worldComm )</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> setWorldComm( WorldComm <span class="keyword">const</span>&amp; worldComm )</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        M_worldComm=worldComm;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
@@ -335,7 +335,7 @@ $(document).ready(function(){initNavTree('solverlinear_8hpp_source.html','');});
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="comment">//mpi communicator</span></div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> M_worldComm;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    WorldComm M_worldComm;</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
@@ -377,7 +377,7 @@ $(document).ready(function(){initNavTree('solverlinear_8hpp_source.html','');});
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="comment">/*----------------------- inline functions ----------------------------------*/</span></div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;<span class="keyword">inline</span></div>
-<div class="line"><a name="l00413"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverLinear.html#a504f279570894dbe484694f3b0da5c3c">  413</a></span>&#160;<a class="code" href="classFeel_1_1SolverLinear.html#a504f279570894dbe484694f3b0da5c3c">SolverLinear&lt;T&gt;::SolverLinear</a> ( <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; worldComm ) :</div>
+<div class="line"><a name="l00413"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverLinear.html#a504f279570894dbe484694f3b0da5c3c">  413</a></span>&#160;<a class="code" href="classFeel_1_1SolverLinear.html#a504f279570894dbe484694f3b0da5c3c">SolverLinear&lt;T&gt;::SolverLinear</a> ( WorldComm <span class="keyword">const</span>&amp; worldComm ) :</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    M_worldComm( worldComm ),</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    M_solver_type         ( GMRES ),</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    M_preconditioner_type ( LU_PRECOND ),</div>
@@ -391,7 +391,7 @@ $(document).ready(function(){initNavTree('solverlinear_8hpp_source.html','');});
 <div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="keyword">inline</span></div>
-<div class="line"><a name="l00427"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverLinear.html#a8a4178f0f35d4e8a633031c681cf55e8">  427</a></span>&#160;<a class="code" href="classFeel_1_1SolverLinear.html#a504f279570894dbe484694f3b0da5c3c">SolverLinear&lt;T&gt;::SolverLinear</a> ( po::variables_map <span class="keyword">const</span>&amp; vm, <a class="code" href="classFeel_1_1WorldComm.html">WorldComm</a> <span class="keyword">const</span>&amp; worldComm ) :</div>
+<div class="line"><a name="l00427"></a><span class="lineno"><a class="code" href="classFeel_1_1SolverLinear.html#a8a4178f0f35d4e8a633031c681cf55e8">  427</a></span>&#160;<a class="code" href="classFeel_1_1SolverLinear.html#a504f279570894dbe484694f3b0da5c3c">SolverLinear&lt;T&gt;::SolverLinear</a> ( po::variables_map <span class="keyword">const</span>&amp; vm, WorldComm <span class="keyword">const</span>&amp; worldComm ) :</div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    M_worldComm( worldComm ),</div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    M_vm( vm ),</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    M_solver_type         ( GMRES ),</div>
@@ -419,7 +419,7 @@ $(document).ready(function(){initNavTree('solverlinear_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:31:50 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:06:11 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

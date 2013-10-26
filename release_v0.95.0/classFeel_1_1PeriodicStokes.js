@@ -2,7 +2,7 @@ var classFeel_1_1PeriodicStokes =
 [
     [ "basis_composite_type", "classFeel_1_1PeriodicStokes.html#ac8be81e979a4877592afdf30fe46bbec", null ],
     [ "element_type", "classFeel_1_1PeriodicStokes.html#a8ca43045d8849b05496e98a090a9a09d", null ],
-    [ "entity_type", "classFeel_1_1PeriodicStokes.html#af0c6b46e068bfda0199b07fd72d1f624", null ],
+    [ "entity_type", "classFeel_1_1PeriodicStokes.html#a78fbf79d68a7c2c986691b6f0fe5ebe9", null ],
     [ "export_ptrtype", "classFeel_1_1PeriodicStokes.html#a0905045ef44b3ae308084c2bd240f9ab", null ],
     [ "export_type", "classFeel_1_1PeriodicStokes.html#a9f25bf57c21fbdaa3803bfdf38ba958a", null ],
     [ "functionspace_composite_ptrtype", "classFeel_1_1PeriodicStokes.html#aa9f24d67c35b64f455eb61dfd40343ed", null ],

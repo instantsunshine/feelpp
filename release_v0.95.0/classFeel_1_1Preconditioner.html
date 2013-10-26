@@ -160,7 +160,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> ()</td
 <tr class="memitem:a94802ca4f63a7fec34b659e2d137433e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#a94802ca4f63a7fec34b659e2d137433e">initialized</a> () const </td></tr>
 <tr class="separator:a94802ca4f63a7fec34b659e2d137433e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b2754f466957bb9ac9fabc42e1ca179"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b2754f466957bb9ac9fabc42e1ca179"></a>
-<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>worldComm</b> () const </td></tr>
+WorldComm const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>worldComm</b> () const </td></tr>
 <tr class="separator:a4b2754f466957bb9ac9fabc42e1ca179"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a797ec630b280d5012a407012c303dd95"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#a797ec630b280d5012a407012c303dd95">apply</a> (const <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; T &gt; &amp;x, <a class="el" href="classFeel_1_1Vector.html">Vector</a>&lt; T &gt; &amp;y)=0</td></tr>
 <tr class="separator:a797ec630b280d5012a407012c303dd95"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,13 +206,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_mat_has_changed</b>
 <tr class="separator:a9e352374d2f27317ed049192cac84380"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23a7db331f0ba75462d7b8747fc214da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFeel.html#affe8f1716191835c1f39a4f88c8f7299">PreconditionerType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#a23a7db331f0ba75462d7b8747fc214da">M_preconditioner_type</a></td></tr>
 <tr class="separator:a23a7db331f0ba75462d7b8747fc214da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f161a521809cf5d4325038d995a2f24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#a8f161a521809cf5d4325038d995a2f24">M_worldComm</a></td></tr>
+<tr class="memitem:a8f161a521809cf5d4325038d995a2f24"><td class="memItemLeft" align="right" valign="top">WorldComm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#a8f161a521809cf5d4325038d995a2f24">M_worldComm</a></td></tr>
 <tr class="separator:a8f161a521809cf5d4325038d995a2f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Constructors, destructor</h2></td></tr>
 <tr class="memitem:aeb3a3c22bccee5ccef4ff1566999041c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb3a3c22bccee5ccef4ff1566999041c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#aeb3a3c22bccee5ccef4ff1566999041c">Preconditioner</a> (std::string const &amp;name=&quot;&quot;, <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#aeb3a3c22bccee5ccef4ff1566999041c">Preconditioner</a> (std::string const &amp;name=&quot;&quot;, WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
 <tr class="memdesc:aeb3a3c22bccee5ccef4ff1566999041c"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor <br/></td></tr>
 <tr class="separator:aeb3a3c22bccee5ccef4ff1566999041c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef7545e5d254a486d6305af30357c6cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef7545e5d254a486d6305af30357c6cf"></a>
@@ -226,7 +226,7 @@ Constructors, destructor</h2></td></tr>
 <tr class="memitem:a76a877afa7a329c9d6a34ab8fff44aa3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Preconditioner.html#a76a877afa7a329c9d6a34ab8fff44aa3">init</a> ()</td></tr>
 <tr class="separator:a76a877afa7a329c9d6a34ab8fff44aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07ccb38179524806a744b78efa60b514"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07ccb38179524806a744b78efa60b514"></a>
-static preconditioner_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>build</b> (std::string const &amp;name=&quot;&quot;, <a class="el" href="namespaceFeel.html#a4da28efa430cc4bd3a6a86cde30a9809">BackendType</a>=BACKEND_PETSC, <a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;worldComm=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
+static preconditioner_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>build</b> (std::string const &amp;name=&quot;&quot;, <a class="el" href="namespaceFeel.html#a4da28efa430cc4bd3a6a86cde30a9809">BackendType</a>=BACKEND_PETSC, WorldComm const &amp;worldComm=Environment::worldComm())</td></tr>
 <tr class="separator:a07ccb38179524806a744b78efa60b514"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -645,7 +645,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> <a class="el" href="classFeel_1_1Preconditioner.html">Feel::Preconditioner</a>&lt; T &gt;::M_worldComm</td>
+          <td class="memname">WorldComm <a class="el" href="classFeel_1_1Preconditioner.html">Feel::Preconditioner</a>&lt; T &gt;::M_worldComm</td>
         </tr>
       </table>
   </td>
@@ -665,7 +665,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:32:21 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:06:23 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

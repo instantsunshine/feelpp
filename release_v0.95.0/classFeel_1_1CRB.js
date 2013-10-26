@@ -1,8 +1,5 @@
 var classFeel_1_1CRB =
 [
-    [ "ComputeIntegrals", "structFeel_1_1CRB_1_1ComputeIntegrals.html", "structFeel_1_1CRB_1_1ComputeIntegrals" ],
-    [ "ComputeIntegralsSquare", "structFeel_1_1CRB_1_1ComputeIntegralsSquare.html", "structFeel_1_1CRB_1_1ComputeIntegralsSquare" ],
-    [ "ComputePhi", "structFeel_1_1CRB_1_1ComputePhi.html", "structFeel_1_1CRB_1_1ComputePhi" ],
     [ "array_2_type", "classFeel_1_1CRB.html#a4ae3bed9adddfa0dbe9c5d3f026116b7", null ],
     [ "array_3_type", "classFeel_1_1CRB.html#a3e6b93ad9f38dc9c7b5b5d7a56cb2840", null ],
     [ "array_4_type", "classFeel_1_1CRB.html#aae7e451ab5cd3a98dd2a509ba00e4d51", null ],

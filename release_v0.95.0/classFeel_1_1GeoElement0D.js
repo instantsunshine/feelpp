@@ -16,6 +16,8 @@ var classFeel_1_1GeoElement0D =
     [ "~GeoElement0D", "classFeel_1_1GeoElement0D.html#a481e9771e6e1072c807b9890c08c9255", null ],
     [ "boundaryEntityDimension", "classFeel_1_1GeoElement0D.html#a7656bdaadecfe61a4dda6e3a7d709e0a", null ],
     [ "G", "classFeel_1_1GeoElement0D.html#a07181be7763129dbe72218d6ff539dfa", null ],
+    [ "G", "classFeel_1_1GeoElement0D.html#af095f06161872e5e6c395e09530f84d3", null ],
+    [ "G", "classFeel_1_1GeoElement0D.html#aa00122547442cdba708ae952dbd9cfdb", null ],
     [ "id", "classFeel_1_1GeoElement0D.html#af96d9f4c88a1a698308573425d4534bf", null ],
     [ "isGhostCell", "classFeel_1_1GeoElement0D.html#a791259c273ef2140c18f8d797573479d", null ],
     [ "isGhostFace", "classFeel_1_1GeoElement0D.html#a80ff560785cbf68dbe09db9f1fadaabf", null ],
@@ -35,6 +37,8 @@ var classFeel_1_1GeoElement0D =
     [ "processId", "classFeel_1_1GeoElement0D.html#abaefa603db5713974d54c26f65f9a6ff", null ],
     [ "setPoint", "classFeel_1_1GeoElement0D.html#a620a55ce0d329a44e5abf145646729de", null ],
     [ "vertices", "classFeel_1_1GeoElement0D.html#a6c802074cf4b1c1dd10593ce4546f6da", null ],
+    [ "vertices", "classFeel_1_1GeoElement0D.html#a468c8af5a48a52f45dcab7925e442a8d", null ],
+    [ "vertices", "classFeel_1_1GeoElement0D.html#a5806b79d94e3207182f1b28da4be75ac", null ],
     [ "boost::serialization::access", "classFeel_1_1GeoElement0D.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ],
-    [ "M_facept", "classFeel_1_1GeoElement0D.html#ac6982f92228a9e616c1dc0db1976176f", null ]
+    [ "M_facept", "classFeel_1_1GeoElement0D.html#a33c71a6825463f394727ee47f441523b", null ]
 ];

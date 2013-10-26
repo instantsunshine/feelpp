@@ -145,7 +145,7 @@ typedef boost::shared_ptr<br class="typebreak"/>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors, destructor</div></td></tr>
-<tr class="memitem:a1303d8e0da46dae1afc2411757b5229b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a1303d8e0da46dae1afc2411757b5229b">MeshBase</a> (<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;<a class="el" href="classFeel_1_1MeshBase.html#a5a883e96959039e3a5fa81ca15a15bb7">worldComm</a>=<a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>())</td></tr>
+<tr class="memitem:a1303d8e0da46dae1afc2411757b5229b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a1303d8e0da46dae1afc2411757b5229b">MeshBase</a> (WorldComm const &amp;<a class="el" href="classFeel_1_1MeshBase.html#a5a883e96959039e3a5fa81ca15a15bb7">worldComm</a>=Environment::worldComm())</td></tr>
 <tr class="separator:a1303d8e0da46dae1afc2411757b5229b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5328f1259e75d4273d8868676b7b59b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a5328f1259e75d4273d8868676b7b59b2">MeshBase</a> (<a class="el" href="classFeel_1_1MeshBase.html">MeshBase</a> const &amp;)</td></tr>
 <tr class="separator:a5328f1259e75d4273d8868676b7b59b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,13 +195,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aafc348f41e694a49aa14f3bac0a27e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87e08db85fd4469f5d759c88cfb158a0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a87e08db85fd4469f5d759c88cfb158a0">partition</a> (const uint16_type n_parts)=0</td></tr>
 <tr class="separator:a87e08db85fd4469f5d759c88cfb158a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a883e96959039e3a5fa81ca15a15bb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a5a883e96959039e3a5fa81ca15a15bb7">worldComm</a> () const </td></tr>
+<tr class="memitem:a5a883e96959039e3a5fa81ca15a15bb7"><td class="memItemLeft" align="right" valign="top">WorldComm const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a5a883e96959039e3a5fa81ca15a15bb7">worldComm</a> () const </td></tr>
 <tr class="separator:a5a883e96959039e3a5fa81ca15a15bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf053c0c4f9069b531a11e31b8ee04b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf053c0c4f9069b531a11e31b8ee04b7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setWorldComm</b> (<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;_worldComm)=0</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setWorldComm</b> (WorldComm const &amp;_worldComm)=0</td></tr>
 <tr class="separator:abf053c0c4f9069b531a11e31b8ee04b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76ac6e10835f85ee5ad86a4a0dd4902d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76ac6e10835f85ee5ad86a4a0dd4902d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setWorldCommMeshBase</b> (<a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;_worldComm)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWorldCommMeshBase</b> (WorldComm const &amp;_worldComm)</td></tr>
 <tr class="separator:a76ac6e10835f85ee5ad86a4a0dd4902d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52d73883cc705c2dbbb293e5a5c27e3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52d73883cc705c2dbbb293e5a5c27e3e"></a>
 mpi::communicator const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>comm</b> () const </td></tr>
@@ -217,12 +217,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ab9cd5b8ba76773a6619c9b45575d72b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57f5d3023519e382787590cf7fb6ff1c"><td class="memItemLeft" align="right" valign="top">smd_type::mesh_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a57f5d3023519e382787590cf7fb6ff1c">subMesh</a> () const </td></tr>
 <tr class="separator:a57f5d3023519e382787590cf7fb6ff1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02b97642b632a0f1f477921433752cde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02b97642b632a0f1f477921433752cde"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#a02b97642b632a0f1f477921433752cde">isSubMesh</a> () const </td></tr>
+<tr class="memdesc:a02b97642b632a0f1f477921433752cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if is a sub mesh <br/></td></tr>
+<tr class="separator:a02b97642b632a0f1f477921433752cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca88d84255d571cbf3b141f7d03cc020"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#aca88d84255d571cbf3b141f7d03cc020">isSubMeshFrom</a> (<a class="el" href="classFeel_1_1MeshBase.html">MeshBase</a> const *m) const </td></tr>
 <tr class="separator:aca88d84255d571cbf3b141f7d03cc020"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acff1b5cf17685564edc19b262360786a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#acff1b5cf17685564edc19b262360786a">isSubMeshFrom</a> (boost::shared_ptr&lt; <a class="el" href="classFeel_1_1MeshBase.html">MeshBase</a> &gt; m) const </td></tr>
 <tr class="separator:acff1b5cf17685564edc19b262360786a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcf9ea3ccca25b81cf7cb88736c44f33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#abcf9ea3ccca25b81cf7cb88736c44f33">isParentMeshOf</a> (boost::shared_ptr&lt; <a class="el" href="classFeel_1_1MeshBase.html">MeshBase</a> &gt; m) const </td></tr>
 <tr class="separator:abcf9ea3ccca25b81cf7cb88736c44f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba790d3b54a8332129e12208aaf2087f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1MeshBase.html#aba790d3b54a8332129e12208aaf2087f">isSiblingOf</a> (boost::shared_ptr&lt; <a class="el" href="classFeel_1_1MeshBase.html">MeshBase</a> &gt; m) const </td></tr>
+<tr class="separator:aba790d3b54a8332129e12208aaf2087f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19aa93418c1bbc2cf2c85525caef9aa9"><td class="memTemplParams" colspan="2"><a class="anchor" id="a19aa93418c1bbc2cf2c85525caef9aa9"></a>
 template&lt;typename M &gt; </td></tr>
 <tr class="memitem:a19aa93418c1bbc2cf2c85525caef9aa9"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isSameMesh</b> (M const *m) const </td></tr>
@@ -291,8 +297,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization
         <tr>
           <td class="memname">Feel::MeshBase::MeshBase </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const &amp;&#160;</td>
-          <td class="paramname"><em>worldComm</em> = <code><a class="el" href="classFeel_1_1detail_1_1Environment.html#ae60e87ffd72558a37c29852634190641">Environment::worldComm</a>()</code>)</td><td></td>
+          <td class="paramtype">WorldComm const &amp;&#160;</td>
+          <td class="paramname"><em>worldComm</em> = <code>Environment::worldComm()</code>)</td><td></td>
           <td></td>
         </tr>
       </table>
@@ -556,6 +562,31 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization
 
 </div>
 </div>
+<a class="anchor" id="aba790d3b54a8332129e12208aaf2087f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Feel::MeshBase::isSiblingOf </td>
+          <td>(</td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classFeel_1_1MeshBase.html">MeshBase</a> &gt;&#160;</td>
+          <td class="paramname"><em>m</em>)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true if the mesh is related to the mesh <code>m</code> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aca88d84255d571cbf3b141f7d03cc020"></a>
 <div class="memitem">
 <div class="memproto">
@@ -716,7 +747,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>id in sub mesh given the id in the parent mesh </dd></dl>
 
-<p>References <a class="el" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">Feel::invalid_size_type_value</a>.</p>
+<p>References <a class="el" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">Feel::invalid_size_type_value</a>, <a class="el" href="classFeel_1_1MeshBase.html#aba790d3b54a8332129e12208aaf2087f">isSiblingOf()</a>, <a class="el" href="classFeel_1_1MeshBase.html#aca88d84255d571cbf3b141f7d03cc020">isSubMeshFrom()</a>, and <a class="el" href="classFeel_1_1MeshBase.html#a2752e31bffbb3942a2beddd99f6df27c">meshToSubMesh()</a>.</p>
 
 </div>
 </div>
@@ -1124,7 +1155,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>id in parent mesh given the id in the sub mesh </dd></dl>
 
-<p>References <a class="el" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">Feel::invalid_size_type_value</a>.</p>
+<p>References <a class="el" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">Feel::invalid_size_type_value</a>, <a class="el" href="classFeel_1_1MeshBase.html#aba790d3b54a8332129e12208aaf2087f">isSiblingOf()</a>, and <a class="el" href="classFeel_1_1MeshBase.html#aca88d84255d571cbf3b141f7d03cc020">isSubMeshFrom()</a>.</p>
 
 </div>
 </div>
@@ -1238,7 +1269,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classFeel_1_1WorldComm.html">WorldComm</a> const&amp; Feel::MeshBase::worldComm </td>
+          <td class="memname">WorldComm const&amp; Feel::MeshBase::worldComm </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -1261,7 +1292,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Fri Oct 25 2013 00:32:16 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Sun Oct 27 2013 00:06:21 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
