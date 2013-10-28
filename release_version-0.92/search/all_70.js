@@ -40,7 +40,7 @@ var searchData=
   ['pfemapp_5foptions',['pfemapp_options',['../namespaceFeel.html#ad2b131cb1baf12462234f232706a3541',1,'Feel']]],
   ['pidinpartition',['pidInPartition',['../classFeel_1_1GeoEntity.html#ae11d3dda92bd8f62233c90bfeb78a87d',1,'Feel::GeoEntity']]],
   ['plottingproperties',['PlottingProperties',['../classFeel_1_1ExporterGnuplot.html#a5c3132ff5e3f49c42169ac996516b28b',1,'Feel::ExporterGnuplot']]],
-  ['pod',['pod',['../classFeel_1_1POD.html#a1b3e78255d4d6f8997ac93fc5880839e',1,'Feel::POD::pod(mode_set_type &amp;ModeSet, bool is_primal)'],['../classFeel_1_1POD.html#aea3caf8c890c0bc9ab3a20abba37b948',1,'Feel::POD::POD(POD const &amp;o)']]],
+  ['pod',['POD',['../classFeel_1_1POD.html#aea3caf8c890c0bc9ab3a20abba37b948',1,'Feel::POD::POD(POD const &amp;o)'],['../classFeel_1_1POD.html#a1b3e78255d4d6f8997ac93fc5880839e',1,'Feel::POD::pod(mode_set_type &amp;ModeSet, bool is_primal)']]],
   ['pod',['POD',['../classFeel_1_1POD.html',1,'Feel']]],
   ['pod_2ecpp',['pod.cpp',['../pod_8cpp.html',1,'']]],
   ['pod_2ehpp',['pod.hpp',['../pod_8hpp.html',1,'']]],

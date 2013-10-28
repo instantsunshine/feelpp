@@ -18,7 +18,7 @@ var searchData=
   ['permutation',['permutation',['../classFeel_1_1GeoElement2D.html#a18d3c2fa13e04b63dac3f8e1e0897c73',1,'Feel::GeoElement2D::permutation()'],['../classFeel_1_1GeoND.html#ac11fdcf33bbf45651af84f92013e31b6',1,'Feel::GeoND::permutation()'],['../classFeel_1_1GeoMap_1_1Context.html#a31bf85298851064fcc0b284c6ffb6419',1,'Feel::GeoMap::Context::permutation()']]],
   ['pfemapp_5foptions',['pfemapp_options',['../namespaceFeel.html#ad2b131cb1baf12462234f232706a3541',1,'Feel']]],
   ['pidinpartition',['pidInPartition',['../classFeel_1_1GeoEntity.html#ae11d3dda92bd8f62233c90bfeb78a87d',1,'Feel::GeoEntity']]],
-  ['pod',['pod',['../classFeel_1_1POD.html#a1b3e78255d4d6f8997ac93fc5880839e',1,'Feel::POD::pod(mode_set_type &amp;ModeSet, bool is_primal)'],['../classFeel_1_1POD.html#aea3caf8c890c0bc9ab3a20abba37b948',1,'Feel::POD::POD(POD const &amp;o)']]],
+  ['pod',['POD',['../classFeel_1_1POD.html#aea3caf8c890c0bc9ab3a20abba37b948',1,'Feel::POD::POD(POD const &amp;o)'],['../classFeel_1_1POD.html#a1b3e78255d4d6f8997ac93fc5880839e',1,'Feel::POD::pod(mode_set_type &amp;ModeSet, bool is_primal)']]],
   ['podmatrix',['podMatrix',['../classFeel_1_1POD.html#ae95a129311da1a5ddff80307bd427440',1,'Feel::POD']]],
   ['point',['point',['../classFeel_1_1GeoElement0D.html#a86362b572ca7f08cb9614a7881abaead',1,'Feel::GeoElement0D::point()'],['../classFeel_1_1GeoND.html#a7b0b3f109c3c67842a600e692cbedc35',1,'Feel::GeoND::point(uint16_type i)'],['../classFeel_1_1GeoND.html#a4051d59feb51b7621e58618d79b36a60',1,'Feel::GeoND::point(uint16_type i) const ']]],
   ['pointelementneighborids',['pointElementNeighborIds',['../classFeel_1_1GeoND.html#aa69cfc18c0acfd2e6a517098139a0c38',1,'Feel::GeoND']]],
