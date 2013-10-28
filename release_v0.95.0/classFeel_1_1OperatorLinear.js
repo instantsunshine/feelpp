@@ -1,5 +1,7 @@
 var classFeel_1_1OperatorLinear =
 [
+    [ "adjoint_ptrtype", "classFeel_1_1OperatorLinear.html#a292748801d7f8134283bd19c49e651b5", null ],
+    [ "adjoint_type", "classFeel_1_1OperatorLinear.html#abe716b32d1921c01de2909d7f25bad29", null ],
     [ "backend_ptrtype", "classFeel_1_1OperatorLinear.html#a1cfd046609f7b4251776da6c470593fb", null ],
     [ "backend_type", "classFeel_1_1OperatorLinear.html#a9f804ecb5adb0b43b39d64e83271e901", null ],
     [ "domain_element_range_type", "classFeel_1_1OperatorLinear.html#a3bf5baa5334298f49c65e42245685c1f", null ],
@@ -25,6 +27,7 @@ var classFeel_1_1OperatorLinear =
     [ "~OperatorLinear", "classFeel_1_1OperatorLinear.html#a24d9f7708556dbfb88cfea5e35bc7162", null ],
     [ "add", "classFeel_1_1OperatorLinear.html#a622ee6a0d70c94040162d4f9b4ca9189", null ],
     [ "add", "classFeel_1_1OperatorLinear.html#a1308383d71f3f99b0eb5be45ce1fc8fe", null ],
+    [ "adjoint", "classFeel_1_1OperatorLinear.html#a07d84623008d62c649629f95d1b7f97c", null ],
     [ "apply", "classFeel_1_1OperatorLinear.html#a567569437957b1046c426f82f18a9049", null ],
     [ "apply", "classFeel_1_1OperatorLinear.html#ae793f046f02a937dba3ef6cf8708c3fe", null ],
     [ "apply", "classFeel_1_1OperatorLinear.html#a264782a9f1c07c24c5ce1285fde48d50", null ],
