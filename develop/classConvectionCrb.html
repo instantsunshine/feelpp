@@ -36,7 +36,6 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git26dc228</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -121,7 +120,7 @@ $(document).ready(function(){initNavTree('classConvectionCrb.html','');});
   </dd>
 </dl>
 </div>
-<p>Inherits Feel::ModelCrbBase&lt; ParameterDefinition, FunctionSpaceDefinition, EimDefinition &gt;.</p>
+<p>Inherits Feel::ModelCrbBase&lt; ParameterDefinition, FunctionSpaceDefinition, EimDefinition &gt;, and enable_shared_from_this&lt; ConvectionCrb &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -195,9 +194,9 @@ typedef space_type::element_type&#160;</td><td class="memItemRight" valign="bott
 <tr class="memitem:af82d6450d768dfd65045787817a1f980"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af82d6450d768dfd65045787817a1f980"></a>
 typedef eigen_matrix_type&#160;</td><td class="memItemRight" valign="bottom"><b>ematrix_type</b></td></tr>
 <tr class="separator:af82d6450d768dfd65045787817a1f980"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10e954f4f1057f5449a10d3677ff46b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10e954f4f1057f5449a10d3677ff46b1"></a>
-typedef <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entity_type</b></td></tr>
-<tr class="separator:a10e954f4f1057f5449a10d3677ff46b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae26fa5f123f34d8cbfffa6f801987655"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae26fa5f123f34d8cbfffa6f801987655"></a>
+typedef <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; CONVECTION_DIM &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entity_type</b></td></tr>
+<tr class="separator:ae26fa5f123f34d8cbfffa6f801987655"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a047e2533060b4c066d3547d342c73f1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a047e2533060b4c066d3547d342c73f1d"></a>
 typedef <a class="el" href="classFeel_1_1Exporter.html">Exporter</a>&lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>export_type</b></td></tr>
 <tr class="separator:a047e2533060b4c066d3547d342c73f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -255,6 +254,15 @@ typedef boost::shared_ptr<br class="typebreak"/>
 typedef <a class="el" href="classFeel_1_1ParameterSpace.html">ParameterSpace</a><br class="typebreak"/>
 &lt; ParameterSpaceDimension &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>parameterspace_type</b></td></tr>
 <tr class="separator:a0a9919cddd74a15a8113ef7a492905f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfbdd5c680a6cdcc349673cbf1ed9032"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfbdd5c680a6cdcc349673cbf1ed9032"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classFeel_1_1ReducedBasisSpace.html">rbfunctionspace_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>rbfunctionspace_ptrtype</b></td></tr>
+<tr class="separator:abfbdd5c680a6cdcc349673cbf1ed9032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00ece23a0ed9607fdddca6b4834974a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00ece23a0ed9607fdddca6b4834974a9"></a>
+typedef <a class="el" href="classFeel_1_1ReducedBasisSpace.html">ReducedBasisSpace</a><br class="typebreak"/>
+&lt; <a class="el" href="classConvectionCrb.html">ConvectionCrb</a>, <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a>, <br class="typebreak"/>
+basis_type, <a class="el" href="classConvectionCrb.html#a961a537b3f22b9d265b6c142a3d72ddc">value_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>rbfunctionspace_type</b></td></tr>
+<tr class="separator:a00ece23a0ed9607fdddca6b4834974a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0bbcf0744ca87457123b1aaa9c4d50a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0bbcf0744ca87457123b1aaa9c4d50a"></a>
 typedef <br class="typebreak"/>
 parameterspace_type::sampling_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>sampling_ptrtype</b></td></tr>
@@ -282,11 +290,14 @@ backend_type::sparse_matrix_ptrtype&#160;</td><td class="memItemRight" valign="b
 typedef <br class="typebreak"/>
 <a class="el" href="classFeel_1_1MatrixSparse.html">backend_type::sparse_matrix_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>sparse_matrix_type</b></td></tr>
 <tr class="separator:ae2d16322544f685c995db966f570cb05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65e55300213b5e5c1b8d6e7c540211f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65e55300213b5e5c1b8d6e7c540211f8"></a>
+<tr class="memitem:a10efe4e18cdce7dddaf593c71bb47598"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10efe4e18cdce7dddaf593c71bb47598"></a>
 typedef ModelCrbBase<br class="typebreak"/>
 &lt; ParameterDefinition, <br class="typebreak"/>
-FunctionSpaceDefinition &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>super_type</b></td></tr>
-<tr class="separator:a65e55300213b5e5c1b8d6e7c540211f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+FunctionSpaceDefinition, <br class="typebreak"/>
+EimDefinition<br class="typebreak"/>
+&lt; ParameterDefinition, <br class="typebreak"/>
+FunctionSpaceDefinition &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>super_type</b></td></tr>
+<tr class="separator:a10efe4e18cdce7dddaf593c71bb47598"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f88d274dd2cdb40098b662f43ec71b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f88d274dd2cdb40098b662f43ec71b3"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1FunctionSpace.html">T_space_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>T_space_ptrtype</b></td></tr>
@@ -319,6 +330,13 @@ typedef <a class="el" href="classFeel_1_1Vector.html">backend_type::vector_type<
 typedef std::vector<br class="typebreak"/>
 &lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>beta_vector_type</b></td></tr>
 <tr class="separator:a9827b8cc5770aa077b43d3ec2717806e inherit pub_types_classFeel_1_1ModelCrbBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b2342f7928796f1b237949ef1c36b44 inherit pub_types_classFeel_1_1ModelCrbBase"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b2342f7928796f1b237949ef1c36b44"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; element_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>element_ptrtype</b></td></tr>
+<tr class="separator:a6b2342f7928796f1b237949ef1c36b44 inherit pub_types_classFeel_1_1ModelCrbBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4bb85de63b2a325771ed2fb626b2dec inherit pub_types_classFeel_1_1ModelCrbBase"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4bb85de63b2a325771ed2fb626b2dec"></a>
+typedef space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
+<tr class="separator:ab4bb85de63b2a325771ed2fb626b2dec inherit pub_types_classFeel_1_1ModelCrbBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad782a4302200b4bf997867f2518ed024 inherit pub_types_classFeel_1_1ModelCrbBase"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad782a4302200b4bf997867f2518ed024"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
 &lt; fun_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>fun_ptrtype</b></td></tr>
@@ -482,6 +500,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>QaTri</b> () const </t
 <tr class="separator:a0b98ab4dc3c32cc8b9cfb9f9b4ea28ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ba1a6fab2b3d6f2fbc98c9db5baee95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionCrb.html#a7ba1a6fab2b3d6f2fbc98c9db5baee95">Ql</a> (int l) const </td></tr>
 <tr class="separator:a7ba1a6fab2b3d6f2fbc98c9db5baee95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ea3de55f657599e75a4e96743ed736d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ea3de55f657599e75a4e96743ed736d"></a>
+rbfunctionspace_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionCrb.html#a7ea3de55f657599e75a4e96743ed736d">rBFunctionSpace</a> ()</td></tr>
+<tr class="memdesc:a7ea3de55f657599e75a4e96743ed736d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the reduced basis function space. <br/></td></tr>
+<tr class="separator:a7ea3de55f657599e75a4e96743ed736d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63d80cf8f923fc4d6dea4f73d77063f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63d80cf8f923fc4d6dea4f73d77063f7"></a>
 <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>refParameter</b> ()</td></tr>
 <tr class="separator:a63d80cf8f923fc4d6dea4f73d77063f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -579,13 +601,13 @@ static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_time_
 static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>Order</b> = 1</td></tr>
 <tr class="separator:a67016c16b63f62d85eccc045e715c4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af49ab03be11482049bf776b024de41c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af49ab03be11482049bf776b024de41c7"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Order_p</b> = 1</td></tr>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Order_p</b> = CONVECTION_ORDER_P</td></tr>
 <tr class="separator:af49ab03be11482049bf776b024de41c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf46f1a4fe3bee4274d6bb1745d03767"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf46f1a4fe3bee4274d6bb1745d03767"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Order_s</b> = 2</td></tr>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Order_s</b> = CONVECTION_ORDER_U</td></tr>
 <tr class="separator:aaf46f1a4fe3bee4274d6bb1745d03767"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2aa95242928763ad2fca85f581c87b45"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2aa95242928763ad2fca85f581c87b45"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Order_t</b> = 2</td></tr>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Order_t</b> = CONVECTION_ORDER_T</td></tr>
 <tr class="separator:a2aa95242928763ad2fca85f581c87b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34bc3a104acc1233cf3132fea56f5e3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34bc3a104acc1233cf3132fea56f5e3d"></a>
 static const uint16_type&#160;</td><td class="memItemRight" valign="bottom"><b>ParameterSpaceDimension</b> = 2</td></tr>
@@ -969,7 +991,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>M_is_initialized</b><
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sun Nov 3 2013 00:01:23 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -36,7 +36,6 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git26dc228</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -135,9 +134,9 @@ typedef bases&lt; Lagrange&lt; Order+1, <br class="typebreak"/>
 typedef <br class="typebreak"/>
 functionspace_composite_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
 <tr class="separator:a8ca43045d8849b05496e98a090a9a09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0c6b46e068bfda0199b07fd72d1f624"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0c6b46e068bfda0199b07fd72d1f624"></a>
-typedef <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entity_type</b></td></tr>
-<tr class="separator:af0c6b46e068bfda0199b07fd72d1f624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78fbf79d68a7c2c986691b6f0fe5ebe9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78fbf79d68a7c2c986691b6f0fe5ebe9"></a>
+typedef Entity&lt; Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entity_type</b></td></tr>
+<tr class="separator:a78fbf79d68a7c2c986691b6f0fe5ebe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0905045ef44b3ae308084c2bd240f9ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0905045ef44b3ae308084c2bd240f9ab"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Exporter.html">export_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>export_ptrtype</b></td></tr>
@@ -161,7 +160,7 @@ typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_ptrtype</b></td></tr>
 <tr class="separator:a545fb68d96f191c66e78814f54385cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1dee2bc5280543f48fa15e5d9c5b449"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1dee2bc5280543f48fa15e5d9c5b449"></a>
-typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; <a class="el" href="classFeel_1_1Simplex.html">entity_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; entity_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_type</b></td></tr>
 <tr class="separator:aa1dee2bc5280543f48fa15e5d9c5b449"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c56ef2750fc0168d35b4b4d791f46ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c56ef2750fc0168d35b4b4d791f46ab"></a>
 typedef double&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
@@ -273,7 +272,7 @@ template&lt;int Dim, int Order&gt; </div>
 </div><div class="memdoc">
 <p>constructor </p>
 
-<p>References <a class="el" href="classFeel_1_1Simget.html#a842d077007302c803e3b18897c42f8e6">Feel::Simget::about()</a>, <a class="el" href="classFeel_1_1Simget.html#afcd4ac23a947d7238110967ee57f00dd">Feel::Simget::changeRepository()</a>, <a class="el" href="classFeel_1_1Simplex.html#a55a19a07ddc54c41e5c620723c8d7942">Feel::Simplex&lt; Dim, Order, RDim &gt;::name()</a>, and <a class="el" href="classFeel_1_1FunctionSpace.html#a32db9068214cab3a221c581f1484045a">Feel::FunctionSpace&lt; A0, A1, A2, A3, A4 &gt;::New()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1Simget.html#a842d077007302c803e3b18897c42f8e6">Feel::Simget::about()</a>, <a class="el" href="classFeel_1_1Simget.html#afcd4ac23a947d7238110967ee57f00dd">Feel::Simget::changeRepository()</a>, and <a class="el" href="classFeel_1_1FunctionSpace.html#a32db9068214cab3a221c581f1484045a">Feel::FunctionSpace&lt; A0, A1, A2, A3, A4 &gt;::New()</a>.</p>
 
 </div>
 </div>
@@ -314,7 +313,7 @@ template&lt;int Dim, int Order&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sun Nov 3 2013 00:01:28 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -4,7 +4,7 @@ var searchData=
   ['h1',['h1',['../classFeel_1_1CRBModel.html#a52e8be521c0cc6452c6fe2e0533717a6',1,'Feel::CRBModel::h1() const '],['../classFeel_1_1CRBModel.html#a1c8deb8ba5df0197195fde43abb36f9c',1,'Feel::CRBModel::h1(element_type const &amp;xi_i, element_type const &amp;xi_j) const '],['../classFeel_1_1CRBModel.html#ac36e52235de1cc532a18c494e6713357',1,'Feel::CRBModel::h1(element_type const &amp;xi_i) const ']]],
   ['hasconstantnullspace',['hasConstantNullSpace',['../classFeel_1_1Backend.html#a9ad1f4d37cc5d51dda696d87c620f327',1,'Feel::Backend']]],
   ['hasdata',['hasData',['../classFeel_1_1TimeSet_1_1Step.html#a324ec86b7bae50b1c4549d024718ef03',1,'Feel::TimeSet::Step']]],
-  ['haselement',['hasElement',['../namespaceFeel.html#a10420503bae61d1236dbc91c2dff5e9e',1,'Feel']]],
+  ['haselement',['hasElement',['../namespaceFeel.html#ac5004dc4ae1bd485dac6f693e19e7647',1,'Feel']]],
   ['hasgraph',['hasGraph',['../classFeel_1_1MatrixSparse.html#ac84662d75dd20f2f4bcc41ae908f97b8',1,'Feel::MatrixSparse']]],
   ['hasmesh',['hasMesh',['../classFeel_1_1TimeSet_1_1Step.html#afb1f334fc8c74565ff9452f109f2e9a2',1,'Feel::TimeSet::Step']]],
   ['haspoints',['hasPoints',['../classFeel_1_1GeoND.html#a7638af1bcc93ca823affae23203ce3e2',1,'Feel::GeoND']]],

@@ -25,7 +25,6 @@ var NAVTREEINDEX0 =
 "Building.html#PETsc":[4,1,4,3],
 "Building.html#Ubuntu":[4,1,3,1],
 "Building.html#Unis":[4,1,2],
-"CMakeVariables.html":[7,3],
 "ChangeLog.html":[3],
 "ChangeLog.html#bugs0920":[3,2,1],
 "ChangeLog.html#changes0910":[3,4,0],
@@ -84,7 +83,7 @@ var NAVTREEINDEX0 =
 "Exporter.html":[5,7],
 "Exporter.html#Introduction":[5,7,0],
 "Exporter.html#VisPrinciples":[5,7,1],
-"Exporter.html#Visualisation":[5,7,2],
+"Exporter.html#Visualization":[5,7,2],
 "FictitiousDomainPenalisationParticle.html":[6,3,1],
 "FictitiousDomainPenalisationParticle.html#FictitiousDomainPenalisationParticle_Intro":[6,3,1,0],
 "FictitiousDomainPenalisationParticle.html#FictitiousDomainPenalisationParticle_Model":[6,3,1,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "QuickRef.html":[5],
 "SolidMechanics.html":[6,4],
 "Spaces.html":[5,3],
-"Spaces.html#QRFunctionSpace":[5,3,0]
+"Spaces.html#QRFunctionSpace":[5,3,0],
+"Spaces.html#QRFunctionSpaceFn":[5,3,1]
 };

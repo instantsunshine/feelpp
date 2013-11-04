@@ -11,6 +11,7 @@ var classFeel_1_1PointSet =
     [ "PointSet", "classFeel_1_1PointSet.html#a191aa5b5eb4917a5dd28c5a5d888cfbf", null ],
     [ "PointSet", "classFeel_1_1PointSet.html#af52b66b3b7b879f5b1cdeb60491e2ca7", null ],
     [ "PointSet", "classFeel_1_1PointSet.html#a51df24d35fb5ec23504caf9c12a89f0d", null ],
+    [ "PointSet", "classFeel_1_1PointSet.html#a029e4106ce186e2e9844a1e57a603ae6", null ],
     [ "~PointSet", "classFeel_1_1PointSet.html#afeb9cb02799c6c8d827901ea60dd3418", null ],
     [ "FEELPP_DEFINE_VISITABLE", "classFeel_1_1PointSet.html#ab13f7c9034cf7f7698e891541ce4b68f", null ],
     [ "getName", "classFeel_1_1PointSet.html#a1c408d8c9ee965c2e7871fd338d6a7e5", null ],

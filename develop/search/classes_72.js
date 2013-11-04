@@ -2,6 +2,7 @@ var searchData=
 [
   ['rankup',['RankUp',['../structFeel_1_1RankUp.html',1,'Feel']]],
   ['raviartthomas',['RaviartThomas',['../classFeel_1_1fem_1_1RaviartThomas.html',1,'Feel::fem']]],
+  ['reducedbasisspace',['ReducedBasisSpace',['../classFeel_1_1ReducedBasisSpace.html',1,'Feel']]],
   ['reference',['Reference',['../classFeel_1_1Reference.html',1,'Feel']]],
   ['reference_3c_20convex_2c_20dim_2c_20convex_3a_3anorder_2c_20convex_3a_3andim_2c_20value_5ftype_20_3e',['Reference&lt; Convex, Dim, Convex::nOrder, Convex::nDim, value_type &gt;',['../classFeel_1_1Reference.html',1,'Feel']]],
   ['reference_3c_20convex_2c_20dim_2c_20convex_3a_3anorder_2c_20convex_3a_3anrealdim_2c_20value_5ftype_20_3e',['Reference&lt; Convex, Dim, Convex::nOrder, Convex::nRealDim, value_type &gt;',['../classFeel_1_1Reference.html',1,'Feel']]],

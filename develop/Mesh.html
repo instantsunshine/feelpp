@@ -36,7 +36,6 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git26dc228</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -125,8 +124,8 @@ $(document).ready(function(){initNavTree('Mesh.html','');});
 <hr/>
  <h1><a class="anchor" id="Mesh_Introduction"></a>
 Introduction</h1>
-<p>Feel++ provides some tools to manipulate mesh.<br/>
- Here is a basic example that shows you how to generate a mesh for a square geometry (source <code>"doc/manual/tutorial/mymesh.cpp"</code>). </p>
+<p>Feel++ provides some tools to manipulate meshes.<br/>
+ Here is a basic example that shows how to generate a mesh for a square geometry (source <code>"doc/manual/tutorial/mymesh.cpp"</code>). </p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> main( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv )</div>
 <div class="line">{</div>
 <div class="line">  <span class="comment">// initialize Feel++ Environment</span></div>
@@ -145,10 +144,10 @@ Introduction</h1>
 <div class="line">  e-&gt;save();</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// main</span></div>
-</div><!-- fragment --><p>As always, we initialise the <a href="http://www.feelpp.org">Feel++</a> environment (see section <a class="el" href="FirstApp.html">First Feel++ Application</a> ).<br/>
+</div><!-- fragment --><p>As always, we initialize the <a href="http://www.feelpp.org">Feel++</a> environment (see section <a class="el" href="FirstApp.html">First Feel++ Application</a> ).<br/>
  The <code><a class="el" href="namespaceFeel.html#aaf2805e45809b7e7cd370220b9062da0">unitSquare()</a></code> will generate a mesh for a square geometry. <a href="http://www.feelpp.org">Feel++</a> provides several functions to automate the GMSH mesh generation for different topologies. These functions will create a geometry file <code></code>.geo and a mesh file <code></code>.msh. We can visualize them in GMSH. </p>
 <pre class="fragment">  gmsh &lt;entity_name&gt;.msh
-</pre><p>Finally we use the <code>exporter()</code> (see <a class="el" href="Exporter.html">Post-Processing and Visualisation</a> ) function to export the mesh for post processing. It will create by default a Paraview format file <code></code>.sos and an Ensight format file <code></code>.case. </p>
+</pre><p>Finally we use the <code>exporter()</code> (see <a class="el" href="Exporter.html">Post-Processing and Visualization</a>) function to export the mesh for post processing. It will create by default a Paraview format file <code></code>.sos and an Ensight format file <code></code>.case. </p>
 <pre class="fragment">  paraview &lt;app_name&gt;.sos
 </pre><p>In this section, we present some of the mesh definition and manipulation tools provided by <a href="http://www.feelpp.org">Feel++</a>. For more information you can also see <a class="el" href="classFeel_1_1Gmsh.html">Gmsh</a>.<br/>
 </p>
@@ -170,7 +169,7 @@ Basic Meshes</h1>
 <td><code><a class="el" href="namespaceFeel.html#a5f23b38aeff08e0c33d858c57e5093ab">unitSphere()</a></code>;</td><td>3</td><td>Build a mesh of the unit sphere using tetrahedrons </td></tr>
 </table>
 <p><b>Examples :</b><br/>
- From "<a class="el" href="myfunctionspace_8cpp.html">doc/manual/tutorial/myfunctionspace.cpp</a> </p>
+ From "doc/manual/tutorial/myfunctionspace.cpp" : </p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> mesh = <a class="code" href="namespaceFeel.html#aaf2805e45809b7e7cd370220b9062da0">unitSquare</a>();</div>
 </div><!-- fragment --><p><a href="#" class="top">top</a> </p>
 <hr/>
@@ -239,7 +238,7 @@ loadMesh</h2>
 </ul>
 <p><br/>
  The file you want to load has to be in an appropriate repository.<br/>
- <a href="http://www.feelpp.org">Feel++</a> looks for <code></code>.geo and <code></code>.msh files in following directories (in this order) : </p>
+ <a href="http://www.feelpp.org">Feel++</a> looks for <code></code>.geo and <code></code>.msh files in the following directories (in this order) : </p>
 <ul>
 <li>current path </li>
 <li>paths that went through changeRepository(), it means that we look for example into the path from which the executable was run </li>
@@ -259,7 +258,7 @@ loadMesh</h2>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> mesh = loadMesh(_mesh=<span class="keyword">new</span> Mesh&lt;Simplex&lt; 2 &gt; &gt; );</div>
 </div><!-- fragment --><h2><a class="anchor" id="LoadGMSh"></a>
 loadGMSHMesh</h2>
-<p>In order to load only <code></code>.msh file, you can also use the loadGMSHMesh</p>
+<p>In order to load only <code></code>.msh file, you can also use the loadGMSHMesh.</p>
 <p><b>Interface :</b><br/>
  </p>
 <div class="fragment"><div class="line">mesh_ptrtype loadGMSHMesh(_mesh, _filename, _refine, _update, _physical_are_elementary_regions);</div>
@@ -320,7 +319,7 @@ geo</h2>
 </ul>
 <p>Optional Parameters : </p>
 <ul>
-<li><code>_h</code> : characteristic size of the mesh. Default = </li>
+<li><code>_h</code> : characteristic size of the mesh. Default = <code>0.1</code>. </li>
 <li><code>_dim</code> : dimension. Default = <code>3</code>. </li>
 <li><code>_order</code> : order. Default = <code>1</code>. </li>
 <li><code>_files_path</code> : path to the file. Default = <code>localGeoRepository()</code>.</li>
@@ -404,7 +403,7 @@ Todo</h1>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sun Nov 3 2013 00:01:22 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

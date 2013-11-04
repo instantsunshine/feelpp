@@ -2,8 +2,8 @@ var searchData=
 [
   ['e',['E',['../classFeel_1_1Air.html#aa39d4f358b90d498f8c929b31dbb4f85',1,'Feel::Air::E()'],['../classFeel_1_1CastIron.html#a0b45bc6b1a8583e19b3a988dc375553d',1,'Feel::CastIron::E() const '],['../classFeel_1_1CastIron.html#a0b45bc6b1a8583e19b3a988dc375553d',1,'Feel::CastIron::E() const '],['../classFeel_1_1Material.html#ae77a8a1467a7d659de123bb1931fab92',1,'Feel::Material::E()']]],
   ['e2p',['e2p',['../classFeel_1_1Simplex.html#a87a026e3a9955900903d45caf936baea',1,'Feel::Simplex']]],
-  ['edge',['edge',['../group__GeoEle.html#a5ad0ae48278bd7903ae72d241c3c1562',1,'Feel::GeoElement2D::edge(uint16_type i) const '],['../group__GeoEle.html#a547bc8176148376aa8c41d71d22c08b0',1,'Feel::GeoElement2D::edge(uint16_type i)']]],
-  ['edgepermutation',['edgePermutation',['../group__GeoEle.html#aa0febae423d58be8d246adca78844c1b',1,'Feel::GeoElement2D']]],
+  ['edge',['edge',['../classFeel_1_1GeoElement2D.html#a5ad0ae48278bd7903ae72d241c3c1562',1,'Feel::GeoElement2D::edge(uint16_type i) const '],['../classFeel_1_1GeoElement2D.html#a547bc8176148376aa8c41d71d22c08b0',1,'Feel::GeoElement2D::edge(uint16_type i)']]],
+  ['edgepermutation',['edgePermutation',['../classFeel_1_1GeoElement2D.html#aa0febae423d58be8d246adca78844c1b',1,'Feel::GeoElement2D']]],
   ['edges',['edges',['../namespaceFeel.html#acc2d630cda517a95be1879ea38fb5069',1,'Feel']]],
   ['eigenpair',['eigenPair',['../classFeel_1_1SolverEigen.html#ae607d5a42a4d9d6323409f0ebf8acc61',1,'Feel::SolverEigen']]],
   ['eigenproblemtype',['eigenProblemType',['../classFeel_1_1SolverEigen.html#a21181602fd3b68ffb0656b8bbf072e92',1,'Feel::SolverEigen']]],
@@ -67,7 +67,7 @@ var searchData=
   ['exportergnuplot',['ExporterGnuplot',['../classFeel_1_1ExporterGnuplot.html#a384cdc9dead2391044dd2eecd5963352',1,'Feel::ExporterGnuplot']]],
   ['exportresults',['exportResults',['../classConvectionCrb.html#aae368a987ceec6d263808cd8d161419f',1,'ConvectionCrb']]],
   ['exprbase',['ExprBase',['../classFeel_1_1ExprBase.html#ade5077f5338b506fd116dcab12a72948',1,'Feel::ExprBase']]],
-  ['expression',['expression',['../classFeel_1_1vf_1_1details_1_1Projector.html#af6ce91a91972c004249887c5484a5b61',1,'Feel::vf::details::Projector']]],
+  ['expression',['expression',['../classFeel_1_1vf_1_1details_1_1EvaluatorContext.html#a071355df774f3274e4e4e5adb9a1e7b8',1,'Feel::vf::details::EvaluatorContext::expression()'],['../classFeel_1_1vf_1_1details_1_1Projector.html#af6ce91a91972c004249887c5484a5b61',1,'Feel::vf::details::Projector::expression()']]],
   ['extrapolate',['extrapolate',['../classFeel_1_1Bdf.html#ab27129c9ec56f53502df9f4df4f15760',1,'Feel::Bdf']]],
   ['extrapolatecoefficient',['extrapolateCoefficient',['../classFeel_1_1Bdf.html#a1bef56c8f81d9c70e5f2bb8271190d54',1,'Feel::Bdf']]]
 ];

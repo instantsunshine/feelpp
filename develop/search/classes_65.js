@@ -6,6 +6,7 @@ var searchData=
   ['environment',['Environment',['../classFeel_1_1detail_1_1Environment.html',1,'Feel::detail']]],
   ['equalities',['equalities',['../classFeel_1_1equalities.html',1,'Feel']]],
   ['errorbase',['ErrorBase',['../classFeel_1_1ErrorBase.html',1,'Feel']]],
+  ['evaluatorcontext',['EvaluatorContext',['../classFeel_1_1vf_1_1details_1_1EvaluatorContext.html',1,'Feel::vf::details']]],
   ['example',['Example',['../classFeel_1_1Example.html',1,'Feel']]],
   ['exporter',['Exporter',['../classFeel_1_1Exporter.html',1,'Feel']]],
   ['exporter_3c_20meshtype_20_3e',['Exporter&lt; MeshType &gt;',['../classFeel_1_1Exporter.html',1,'Feel']]],

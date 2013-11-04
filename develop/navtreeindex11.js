@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"classFeel_1_1GeoND.html#a7b540283dab9d36d1033571d014c4e63":[10,0,89,13],
 "classFeel_1_1GeoND.html#a7c1f6efdcc1240ae37c3ff8a12964d6d":[10,0,89,30],
 "classFeel_1_1GeoND.html#a7c2e46bdce353aef46748a96a51d53f9":[10,0,89,40],
 "classFeel_1_1GeoND.html#a7e642f6333af2dc5e1d971333145c8f1":[10,0,89,25],
@@ -231,13 +232,13 @@ var NAVTREEINDEX11 =
 "classFeel_1_1Ground.html#afc375a2fbe1fabb0c62e4db013f389c5":[10,0,95,18],
 "classFeel_1_1HeatSink.html":[10,0,96],
 "classFeel_1_1HeatSink.html#a05287357e8e2339f5d1903da3e0243f3":[10,0,96,3],
+"classFeel_1_1HeatSink.html#a0eb6fbdc257615a91f7aab3339c43b0f":[10,0,96,4],
 "classFeel_1_1HeatSink.html#a15187ccb3a713aa13f5bd3768c009c1c":[10,0,96,7],
 "classFeel_1_1HeatSink.html#a24d22a2311c892b626111ee2092a121f":[10,0,96,12],
 "classFeel_1_1HeatSink.html#a2e7a412939a219156b88b128e01d1461":[10,0,96,0],
 "classFeel_1_1HeatSink.html#a4d47641ad3b5b805f566490176cb7a09":[10,0,96,6],
 "classFeel_1_1HeatSink.html#a4fc27689fa79848e4d936eb72e55fe8d":[10,0,96,5],
 "classFeel_1_1HeatSink.html#a6f676d65462ba73cbad17bc6df339f87":[10,0,96,14],
-"classFeel_1_1HeatSink.html#a88f3045c8b50a4d0d55e44e9e2ada222":[10,0,96,4],
 "classFeel_1_1HeatSink.html#a896a449f592c96bdb18f8dfec3003313":[10,0,96,1],
 "classFeel_1_1HeatSink.html#aa81b85118c579e702601567cedc6eb82":[10,0,96,10],
 "classFeel_1_1HeatSink.html#aad7b3f3eb6ea8aad078ecfd2cc5dafa9":[10,0,96,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "classFeel_1_1IMExact.html":[10,0,97],
 "classFeel_1_1IMExact.html#a0834a0e4ec826e2fedd1bebed76419c9":[10,0,97,8],
 "classFeel_1_1IMExact.html#a2bcdfeeb660051f71c6543682350efd3":[10,0,97,1],
-"classFeel_1_1IMExact.html#a41205c84c3d0c885b62d5745b0621591":[10,0,97,7],
-"classFeel_1_1IMExact.html#a445a64dee34f87ee271cc35b3e81de67":[10,0,97,6]
+"classFeel_1_1IMExact.html#a41205c84c3d0c885b62d5745b0621591":[10,0,97,7]
 };

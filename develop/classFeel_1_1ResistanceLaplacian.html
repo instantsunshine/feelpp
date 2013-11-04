@@ -36,7 +36,6 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git26dc228</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -149,9 +148,9 @@ typedef <br class="typebreak"/>
 typedef <br class="typebreak"/>
 functionspace_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
 <tr class="separator:a15764dd482919548ad46cc0f37dce129"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5efc961381ed49d4af0ec3fcfac03f24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5efc961381ed49d4af0ec3fcfac03f24"></a>
-typedef <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; Dim, 1, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entity_type</b></td></tr>
-<tr class="separator:a5efc961381ed49d4af0ec3fcfac03f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac3fda90cacc32ef4ded7bfddfc1612e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac3fda90cacc32ef4ded7bfddfc1612e"></a>
+typedef Entity&lt; Dim, 1, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entity_type</b></td></tr>
+<tr class="separator:aac3fda90cacc32ef4ded7bfddfc1612e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a349aa69cecadfeb15f1be9d1c559197a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a349aa69cecadfeb15f1be9d1c559197a"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Exporter.html">export_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>export_ptrtype</b></td></tr>
@@ -167,22 +166,22 @@ typedef boost::shared_ptr<br class="typebreak"/>
 typedef <a class="el" href="classFeel_1_1FunctionSpace.html">FunctionSpace</a><br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a>, basis_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>functionspace_type</b></td></tr>
 <tr class="separator:af5ae909fedacead149a9d5ea0236c3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a94231b3b872e27647ccab70af58abb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a94231b3b872e27647ccab70af58abb"></a>
-typedef <a class="el" href="classFeel_1_1Simplex.html">Simplex</a>&lt; 1, 1, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>line_entity_type</b></td></tr>
-<tr class="separator:a1a94231b3b872e27647ccab70af58abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b4a16edf4b8295bf152b2ea343cd72c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b4a16edf4b8295bf152b2ea343cd72c"></a>
+typedef Entity&lt; 1, 1, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>line_entity_type</b></td></tr>
+<tr class="separator:a8b4a16edf4b8295bf152b2ea343cd72c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3a423a90bd7413f016a2852b6964034"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3a423a90bd7413f016a2852b6964034"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Mesh.html">line_mesh_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>line_mesh_ptrtype</b></td></tr>
 <tr class="separator:ab3a423a90bd7413f016a2852b6964034"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfcfe533b30f372603fe7fe7d699725c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfcfe533b30f372603fe7fe7d699725c"></a>
-typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; <a class="el" href="classFeel_1_1Simplex.html">line_entity_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>line_mesh_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; line_entity_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>line_mesh_type</b></td></tr>
 <tr class="separator:abfcfe533b30f372603fe7fe7d699725c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af43127789726887d9744131a2ddb45ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af43127789726887d9744131a2ddb45ce"></a>
 typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1Mesh.html">mesh_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_ptrtype</b></td></tr>
 <tr class="separator:af43127789726887d9744131a2ddb45ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30bfc12bca19f559067a4054dd368917"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30bfc12bca19f559067a4054dd368917"></a>
-typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; <a class="el" href="classFeel_1_1Simplex.html">entity_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_type</b></td></tr>
+typedef <a class="el" href="classFeel_1_1Mesh.html">Mesh</a>&lt; entity_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_type</b></td></tr>
 <tr class="separator:a30bfc12bca19f559067a4054dd368917"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abec9eec36e6047e4293b86f072a6cfaa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abec9eec36e6047e4293b86f072a6cfaa"></a>
 typedef p0_space_type::element_type&#160;</td><td class="memItemRight" valign="bottom"><b>p0_element_type</b></td></tr>
@@ -428,7 +427,7 @@ template&lt;int Dim, int Order&gt; </div>
 </div><div class="memdoc">
 <p>constructor </p>
 
-<p>References <a class="el" href="classFeel_1_1Application.html#ac559fca482047d68e7382ba720592758">Feel::Application::about()</a>, <a class="el" href="classFeel_1_1Application.html#aeeeb89c0d1a125390b09101b1c6206e2">Feel::Application::changeRepository()</a>, <a class="el" href="classFeel_1_1ResistanceLaplacian.html#a95f01f427e7216768833931620f65717">Feel::ResistanceLaplacian&lt; Dim, Order &gt;::createMesh()</a>, <a class="el" href="classFeel_1_1Simplex.html#a55a19a07ddc54c41e5c620723c8d7942">Feel::Simplex&lt; Dim, Order, RDim &gt;::name()</a>, <a class="el" href="classFeel_1_1FunctionSpace.html#a32db9068214cab3a221c581f1484045a">Feel::FunctionSpace&lt; A0, A1, A2, A3, A4 &gt;::New()</a>, <a class="el" href="classFeel_1_1Application.html#a7ea7f307aaafa0a0bd666c1c5d43410b">Feel::Application::optionsDescription()</a>, and <a class="el" href="classFeel_1_1Application.html#a6d636004b73027e9dc226d7ec9e9d89c">Feel::Application::vm()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1Application.html#ac559fca482047d68e7382ba720592758">Feel::Application::about()</a>, <a class="el" href="classFeel_1_1Application.html#aeeeb89c0d1a125390b09101b1c6206e2">Feel::Application::changeRepository()</a>, <a class="el" href="classFeel_1_1ResistanceLaplacian.html#a95f01f427e7216768833931620f65717">Feel::ResistanceLaplacian&lt; Dim, Order &gt;::createMesh()</a>, <a class="el" href="classFeel_1_1FunctionSpace.html#a32db9068214cab3a221c581f1484045a">Feel::FunctionSpace&lt; A0, A1, A2, A3, A4 &gt;::New()</a>, <a class="el" href="classFeel_1_1Application.html#a7ea7f307aaafa0a0bd666c1c5d43410b">Feel::Application::optionsDescription()</a>, and <a class="el" href="classFeel_1_1Application.html#a6d636004b73027e9dc226d7ec9e9d89c">Feel::Application::vm()</a>.</p>
 
 </div>
 </div>
@@ -489,7 +488,7 @@ template&lt;int Dim, int Order&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sun Nov 3 2013 00:01:29 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

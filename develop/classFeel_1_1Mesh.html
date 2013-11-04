@@ -36,7 +36,6 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
     <div id="projectname"><a href="http://www.feelpp.org/"><img alt="Logo" src="feel_logo_small.png"/></a>
-   &#160;<span id="projectnumber">0.96.0-alpha.1+git26dc228</span>
    </div>
    <div id="projectbrief">Finite Element Embedded Library and Language in C++</div>
   </td>
@@ -469,8 +468,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>updateEntitiesCoDimen
 <tr class="memitem:a2f3aee791a7965909ab4e055961c795a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f3aee791a7965909ab4e055961c795a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateEntitiesCoDimensionOne</b> (mpl::bool_&lt; false &gt;)</td></tr>
 <tr class="separator:a2f3aee791a7965909ab4e055961c795a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5053aff0f3ff59ebe50523bd220541b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a5053aff0f3ff59ebe50523bd220541b1">updateEntitiesCoDimensionOneGhostCell</a> ()</td></tr>
-<tr class="separator:a5053aff0f3ff59ebe50523bd220541b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44af1658a34df3be9f48e39b375ce238"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1Mesh.html#a44af1658a34df3be9f48e39b375ce238">updateEntitiesCoDimensionOneGhostCellByUsingBlockingComm</a> ()</td></tr>
+<tr class="separator:a44af1658a34df3be9f48e39b375ce238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9103d61397d8db410980c536a4901bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9103d61397d8db410980c536a4901bb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateEntitiesCoDimensionOneGhostCellByUsingNonBlockingComm</b> ()</td></tr>
+<tr class="separator:ab9103d61397d8db410980c536a4901bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -1595,7 +1597,7 @@ template&lt;typename Shape , typename T , int Tag&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a5053aff0f3ff59ebe50523bd220541b1"></a>
+<a class="anchor" id="a44af1658a34df3be9f48e39b375ce238"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1605,7 +1607,7 @@ template&lt;typename C, typename V, int T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; C, V, T &gt;::updateEntitiesCoDimensionOneGhostCell </td>
+          <td class="memname">void <a class="el" href="classFeel_1_1Mesh.html">Feel::Mesh</a>&lt; C, V, T &gt;::updateEntitiesCoDimensionOneGhostCellByUsingBlockingComm </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td></td>
@@ -1638,7 +1640,7 @@ template&lt;typename Shape , typename T , int Tag&gt; </div>
 <p>update the mesh data structure before using it</p>
 <p>by default if the number of processors if &gt; 1, we partition the mesh. A different behaviour is controlled by setting properly <code>setComponents()</code>, <code>components()</code> </p>
 
-<p>References <a class="el" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">Feel::elements()</a>, <a class="el" href="namespaceFeel.html#ad8a9273a3537c11a78f1c84f79b96eaf">Feel::elementsRange()</a>, <a class="el" href="namespaceFeel.html#a12d0226a5e73e64f3b97bf9c723ee239">Feel::faces()</a>, <a class="el" href="namespaceFeel.html#a10420503bae61d1236dbc91c2dff5e9e">Feel::hasElement()</a>, and <a class="el" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">Feel::invalid_size_type_value</a>.</p>
+<p>References <a class="el" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">Feel::elements()</a>, <a class="el" href="namespaceFeel.html#ad8a9273a3537c11a78f1c84f79b96eaf">Feel::elementsRange()</a>, <a class="el" href="namespaceFeel.html#a12d0226a5e73e64f3b97bf9c723ee239">Feel::faces()</a>, <a class="el" href="namespaceFeel.html#ac5004dc4ae1bd485dac6f693e19e7647">Feel::hasElement()</a>, and <a class="el" href="namespaceFeel.html#a0d4d77cd361adda45d27d72ff0357e55">Feel::invalid_size_type_value</a>.</p>
 
 </div>
 </div>
@@ -1924,7 +1926,7 @@ template&lt;typename C, typename V, int T&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Sun Nov 3 2013 00:01:27 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

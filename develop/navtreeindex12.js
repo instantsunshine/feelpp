@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"classFeel_1_1IMExact.html#a445a64dee34f87ee271cc35b3e81de67":[10,0,97,6],
 "classFeel_1_1IMExact.html#a619117764c5c21a755c8fe2822d9d8cf":[10,0,97,0],
 "classFeel_1_1IMExact.html#a65a08114f6b2d27e8f2081c1a4a1a12f":[10,0,97,2],
 "classFeel_1_1IMExact.html#a73a505d1c37ff03731227088fe15cd7a":[10,0,97,3],
@@ -155,7 +156,6 @@ var NAVTREEINDEX12 =
 "classFeel_1_1LaplacianLM.html#a1a5a6a858dc242c57ac189b0311a5766":[10,0,110,0],
 "classFeel_1_1LaplacianLM.html#a3520b79ce0a0c9415af0a6f9ab524be8":[10,0,110,2],
 "classFeel_1_1LaplacianLM.html#a3dc00055b73c707f526cf8480579e3b7":[10,0,110,1],
-"classFeel_1_1LaplacianLM.html#a48997599d588527834734d1557d16636":[10,0,110,6],
 "classFeel_1_1LaplacianLM.html#a5351dd10b4975245409f157c88ecaff1":[10,0,110,11],
 "classFeel_1_1LaplacianLM.html#a6e7c86a5d20db5fc8ff59939f9822a18":[10,0,110,10],
 "classFeel_1_1LaplacianLM.html#a7b590cacc6070707c6a596ed30125403":[10,0,110,5],
@@ -166,6 +166,7 @@ var NAVTREEINDEX12 =
 "classFeel_1_1LaplacianLM.html#ab3a6c4e8176e53b832d35c612d1dc7d0":[10,0,110,19],
 "classFeel_1_1LaplacianLM.html#ac9c1cb239687379f84d6bbcac055c27b":[10,0,110,16],
 "classFeel_1_1LaplacianLM.html#aceabf9dacc7e3f10e235a2b55b7a1fd2":[10,0,110,9],
+"classFeel_1_1LaplacianLM.html#acfaa85c573e8917881df2b990b3cf076":[10,0,110,6],
 "classFeel_1_1LaplacianLM.html#ad3e7771289f133e68329f25dcf3ebe3b":[10,0,110,8],
 "classFeel_1_1LaplacianLM.html#ad678d980dee83a44e37564d06d82b181":[10,0,110,13],
 "classFeel_1_1LaplacianLM.html#ad8a184ff6cfeb29deaf955137dce441c":[10,0,110,17],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "classFeel_1_1MatrixBlockBase.html#a534ab01773e0da316c981e8c9f2bded8":[10,0,117,41],
 "classFeel_1_1MatrixBlockBase.html#a560e0e1cc4137fe49aa77370d37c3b9c":[10,0,117,47],
 "classFeel_1_1MatrixBlockBase.html#a5a8efdb785c9a4962ec086216a6a4a1c":[10,0,117,11],
-"classFeel_1_1MatrixBlockBase.html#a6437ebfdd57d63ab5b75433b82efdc21":[10,0,117,34],
-"classFeel_1_1MatrixBlockBase.html#a64818e783cfe272b164598cf9970bb33":[10,0,117,44]
+"classFeel_1_1MatrixBlockBase.html#a6437ebfdd57d63ab5b75433b82efdc21":[10,0,117,34]
 };

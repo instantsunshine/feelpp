@@ -6,6 +6,7 @@ var searchData=
   ['randomize',['randomize',['../classFeel_1_1ParameterSpace_1_1Sampling.html#a8153ff0223fcdfeffc53bc931b9bbd63',1,'Feel::ParameterSpace::Sampling']]],
   ['randomsampling',['randomSampling',['../classFeel_1_1CRB.html#a2403f72998096b470fdadea784cf6e83',1,'Feel::CRB']]],
   ['rank',['rank',['../classFeel_1_1detail_1_1Environment.html#a2ca57bbad85b2d3a1eedb9d1b8224290',1,'Feel::detail::Environment']]],
+  ['rbfunctionspace',['rBFunctionSpace',['../classFeel_1_1CRBModel.html#af2a1b479d64949e4fa67dafb602d6c0f',1,'Feel::CRBModel::rBFunctionSpace()'],['../classConvectionCrb.html#a7ea3de55f657599e75a4e96743ed736d',1,'ConvectionCrb::rBFunctionSpace()']]],
   ['readfromfile',['readFromFile',['../classFeel_1_1ParameterSpace_1_1Sampling.html#a4781d8abfd6544946c5f573e7d3d111e',1,'Feel::ParameterSpace::Sampling']]],
   ['rebuilddb',['rebuildDB',['../classFeel_1_1CRB.html#a5a47e56dbbb68057386103c09394f6e2',1,'Feel::CRB']]],
   ['rebuilddofpoints',['rebuildDofPoints',['../classFeel_1_1DofTable.html#a5ee85542b51f1ca4f164451f2c2e6523',1,'Feel::DofTable::rebuildDofPoints()'],['../classFeel_1_1FunctionSpace.html#ac421a861046e08913f5268356e3fd6a7',1,'Feel::FunctionSpace::rebuildDofPoints()']]],
