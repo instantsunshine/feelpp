@@ -1368,7 +1368,7 @@ $(document).ready(function(){initNavTree('meshimpl_8hpp_source.html','');});
 <div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;    std::for_each( markers.begin(), markers.end(),</div>
 <div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;                   [=]( uint16_type marker )</div>
 <div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;                   {</div>
-<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;                       <span class="keyword">auto</span> range=<a class="code" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">markedfaces</a>( <span class="keyword">this</span>, marker );</div>
+<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;                       <span class="keyword">auto</span> range=<a class="code" href="namespaceFeel.html#ac0d40e0852d5f0d447623caff773b1a5">markedfaces</a>( this-&gt;shared_from_this(), boost::any(marker) );</div>
 <div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;                       LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;removing &quot;</span> &lt;&lt; <a class="code" href="namespaceFeel.html#a3198793dc5cee5c96bd5b8f22bd2865c">nelements</a>(range) &lt;&lt; <span class="stringliteral">&quot; faces marked &quot;</span>  &lt;&lt; marker &lt;&lt; <span class="stringliteral">&quot; from boundary faces\n&quot;</span>;</div>
 <div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;</div>
 <div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;                       <span class="keywordflow">for</span>( <span class="keyword">auto</span> it = range.template get&lt;1&gt;(), en = range.template get&lt;2&gt;(); it != en; ++it )</div>
@@ -3412,7 +3412,7 @@ $(document).ready(function(){initNavTree('meshimpl_8hpp_source.html','');});
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Wed Nov 6 2013 17:32:30 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
