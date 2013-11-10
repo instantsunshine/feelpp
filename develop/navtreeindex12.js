@@ -1,5 +1,14 @@
 var NAVTREEINDEX12 =
 {
+"classFeel_1_1HeatSink.html#a2e7a412939a219156b88b128e01d1461":[10,0,96,0],
+"classFeel_1_1HeatSink.html#a4d47641ad3b5b805f566490176cb7a09":[10,0,96,6],
+"classFeel_1_1HeatSink.html#a4fc27689fa79848e4d936eb72e55fe8d":[10,0,96,5],
+"classFeel_1_1HeatSink.html#a6f676d65462ba73cbad17bc6df339f87":[10,0,96,14],
+"classFeel_1_1HeatSink.html#a896a449f592c96bdb18f8dfec3003313":[10,0,96,1],
+"classFeel_1_1HeatSink.html#aa81b85118c579e702601567cedc6eb82":[10,0,96,10],
+"classFeel_1_1HeatSink.html#aad7b3f3eb6ea8aad078ecfd2cc5dafa9":[10,0,96,13],
+"classFeel_1_1HeatSink.html#ad79aea35c9592a5a1df2c131f77e39cd":[10,0,96,8],
+"classFeel_1_1HeatSink.html#adee86c2f711a10446539f02e510d5d0a":[10,0,96,11],
 "classFeel_1_1HeatSink.html#ae332344a996de305784b414ce8f6dbeb":[10,0,96,2],
 "classFeel_1_1HeatSink.html#afd19bc698926b1630421e96bda99bb36":[10,0,96,9],
 "classFeel_1_1IMExact.html":[10,0,97],
@@ -240,14 +249,5 @@ var NAVTREEINDEX12 =
 "classFeel_1_1MatrixBlockBase.html#a01db4c97e783e3668ba6e6018a7962f8":[10,0,117,22],
 "classFeel_1_1MatrixBlockBase.html#a043f8b273cdab6e977bb074a0b89cd0b":[10,0,117,1],
 "classFeel_1_1MatrixBlockBase.html#a0ea4b9be6c1a5890cad8a78e724e9142":[10,0,117,40],
-"classFeel_1_1MatrixBlockBase.html#a118a09fb8a2d451ab9c1cd6460425065":[10,0,117,23],
-"classFeel_1_1MatrixBlockBase.html#a1fe43f8b51bee4fb581684dfe1d0bba0":[10,0,117,46],
-"classFeel_1_1MatrixBlockBase.html#a20d1cbb82a50d87a4e99878d6324e21c":[10,0,117,42],
-"classFeel_1_1MatrixBlockBase.html#a240cf6d9a0f761be725e3eda8d1f3406":[10,0,117,15],
-"classFeel_1_1MatrixBlockBase.html#a2570ad512eb22765063fc3f98966b4ff":[10,0,117,24],
-"classFeel_1_1MatrixBlockBase.html#a278cc9e4c0831da73328ba8c1303c501":[10,0,117,9],
-"classFeel_1_1MatrixBlockBase.html#a34fa74f2fb935688f541944a906c22c8":[10,0,117,4],
-"classFeel_1_1MatrixBlockBase.html#a43f8bc4e32ec10c7d57ce52886562251":[10,0,117,12],
-"classFeel_1_1MatrixBlockBase.html#a4b1c988b9386d9224b3f406ba480bc85":[10,0,117,8],
-"classFeel_1_1MatrixBlockBase.html#a50ca3e84ef0c3f2d109129d102ec19b3":[10,0,117,21]
+"classFeel_1_1MatrixBlockBase.html#a118a09fb8a2d451ab9c1cd6460425065":[10,0,117,23]
 };

@@ -140,7 +140,7 @@ var searchData=
   ['matrixshellsparse',['MatrixShellSparse',['../classFeel_1_1MatrixShellSparse.html',1,'Feel']]],
   ['matrixshellsparse_2ecpp',['matrixshellsparse.cpp',['../matrixshellsparse_8cpp.html',1,'']]],
   ['matrixshellsparse_2ehpp',['matrixshellsparse.hpp',['../matrixshellsparse_8hpp.html',1,'']]],
-  ['matrixsparse',['MatrixSparse',['../classFeel_1_1MatrixSparse.html#ad1148862cd03b6386843944e3d5452bf',1,'Feel::MatrixSparse']]],
+  ['matrixsparse',['MatrixSparse',['../classFeel_1_1MatrixSparse.html#a56a0827a925879c0adac2e5688b96d6d',1,'Feel::MatrixSparse']]],
   ['matrixsparse',['MatrixSparse',['../classFeel_1_1MatrixSparse.html',1,'Feel']]],
   ['matrixsparse_2ehpp',['matrixsparse.hpp',['../matrixsparse_8hpp.html',1,'']]],
   ['matrixstructure',['MatrixStructure',['../namespaceFeel.html#a3d7a6c5948e669b187f2d4620499715a',1,'Feel']]],

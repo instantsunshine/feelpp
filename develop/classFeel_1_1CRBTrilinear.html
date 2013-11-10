@@ -250,10 +250,24 @@ typedef Eigen::Map<br class="typebreak"/>
 &lt; Eigen::Matrix&lt; double, <br class="typebreak"/>
 Eigen::Dynamic, 1 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>map_dense_vector_type</b></td></tr>
 <tr class="separator:a714e296f3c9a55e224fedcda8d58b137"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b078054fa8859fdf1c15ce2d3a10e1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b078054fa8859fdf1c15ce2d3a10e1e"></a>
+<tr class="memitem:aebd3653e45ab5a3f01028868753f9488"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aebd3653e45ab5a3f01028868753f9488"></a>
 typedef boost::tuple<br class="typebreak"/>
-&lt; vectorN_type, vectorN_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>solutions_tuple</b></td></tr>
-<tr class="separator:a9b078054fa8859fdf1c15ce2d3a10e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+&lt; std::vector&lt; vectorN_type &gt;<br class="typebreak"/>
+, std::vector&lt; vectorN_type &gt;<br class="typebreak"/>
+, std::vector&lt; vectorN_type &gt;<br class="typebreak"/>
+, std::vector&lt; vectorN_type &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>solutions_tuple</b></td></tr>
+<tr class="separator:aebd3653e45ab5a3f01028868753f9488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8947ef0c1fbafde3fcdd07e3c5b093f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8947ef0c1fbafde3fcdd07e3c5b093f7"></a>
+typedef boost::tuple&lt; double, <br class="typebreak"/>
+double, double, std::vector<br class="typebreak"/>
+&lt; std::vector&lt; double &gt;<br class="typebreak"/>
+ &gt;, std::vector&lt; std::vector<br class="typebreak"/>
+&lt; double &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>upper_bounds_tuple</b></td></tr>
+<tr class="separator:a8947ef0c1fbafde3fcdd07e3c5b093f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7a5f1161201ea47aaec6a79ae74e288"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7a5f1161201ea47aaec6a79ae74e288"></a>
+typedef boost::tuple&lt; double, <br class="typebreak"/>
+double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_info_tuple</b></td></tr>
+<tr class="separator:ac7a5f1161201ea47aaec6a79ae74e288"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a612109bb27f31e2178139bc35c0f9bdc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a612109bb27f31e2178139bc35c0f9bdc"></a>
 typedef <a class="el" href="classFeel_1_1Exporter.html">Exporter</a>&lt; <a class="el" href="classFeel_1_1CRBTrilinear.html#a98e07678e838c0eb6ff9a7b584e8827f">mesh_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>export_type</b></td></tr>
 <tr class="separator:a612109bb27f31e2178139bc35c0f9bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -272,6 +286,15 @@ typedef <a class="el" href="classFeel_1_1CRBSCM.html">CRBSCM</a>&lt; truth_model
 typedef boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classFeel_1_1CRBTrilinear.html#a7893a523e7ba56a1517987b5b15587f3">scm_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>scm_ptrtype</b></td></tr>
 <tr class="separator:ae85115eea27ad1510b2cedf69d94217d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a176f56fb4656022dcb6b570ce4c19f27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a176f56fb4656022dcb6b570ce4c19f27"></a>
+typedef CRBElementsDB<br class="typebreak"/>
+&lt; truth_model_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBTrilinear.html#a176f56fb4656022dcb6b570ce4c19f27">crb_elements_db_type</a></td></tr>
+<tr class="memdesc:a176f56fb4656022dcb6b570ce4c19f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">elements database <br/></td></tr>
+<tr class="separator:a176f56fb4656022dcb6b570ce4c19f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae5e4716cee69c9fc07022a583e4a83"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ae5e4716cee69c9fc07022a583e4a83"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classFeel_1_1CRBTrilinear.html#a176f56fb4656022dcb6b570ce4c19f27">crb_elements_db_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>crb_elements_db_ptrtype</b></td></tr>
+<tr class="separator:a6ae5e4716cee69c9fc07022a583e4a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -280,13 +303,7 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBTrilinear.html#a57b8742fca7e280dec8500b01adf98ac">CRBTrilinear</a> ()</td></tr>
 <tr class="memdesc:a57b8742fca7e280dec8500b01adf98ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor <br/></td></tr>
 <tr class="separator:a57b8742fca7e280dec8500b01adf98ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0eac0ff980277e5cb6ec6b55b9d67b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0eac0ff980277e5cb6ec6b55b9d67b1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBTrilinear.html#ad0eac0ff980277e5cb6ec6b55b9d67b1">CRBTrilinear</a> (std::string <a class="el" href="classFeel_1_1CRBDB.html#aafbd9eddb9faeb89f4f0fa29d01744e9">name</a>, po::variables_map const &amp;<a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">vm</a>)</td></tr>
-<tr class="memdesc:ad0eac0ff980277e5cb6ec6b55b9d67b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor from command line options <br/></td></tr>
-<tr class="separator:ad0eac0ff980277e5cb6ec6b55b9d67b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fdd806fa11c82b5b8a108c4ccf20d81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7fdd806fa11c82b5b8a108c4ccf20d81"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBTrilinear.html#a7fdd806fa11c82b5b8a108c4ccf20d81">CRBTrilinear</a> (std::string <a class="el" href="classFeel_1_1CRBDB.html#aafbd9eddb9faeb89f4f0fa29d01744e9">name</a>, po::variables_map const &amp;<a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">vm</a>, truth_model_ptrtype const &amp;model)</td></tr>
-<tr class="memdesc:a7fdd806fa11c82b5b8a108c4ccf20d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor from command line options <br/></td></tr>
+<tr class="memitem:a7fdd806fa11c82b5b8a108c4ccf20d81"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBTrilinear.html#a7fdd806fa11c82b5b8a108c4ccf20d81">CRBTrilinear</a> (std::string <a class="el" href="classFeel_1_1CRBDB.html#aafbd9eddb9faeb89f4f0fa29d01744e9">name</a>, po::variables_map const &amp;<a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">vm</a>, truth_model_ptrtype const &amp;model)</td></tr>
 <tr class="separator:a7fdd806fa11c82b5b8a108c4ccf20d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d5584a6daf09c1730f089823bf24248"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d5584a6daf09c1730f089823bf24248"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBTrilinear.html#a5d5584a6daf09c1730f089823bf24248">CRBTrilinear</a> (<a class="el" href="classFeel_1_1CRBTrilinear.html">CRBTrilinear</a> const &amp;o)</td></tr>
@@ -321,6 +338,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>displayVector</b> (co
 <tr class="memitem:a24b003fbf3eb843be8cf339829436c21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24b003fbf3eb843be8cf339829436c21"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>displayMatrix</b> (const matrixN_type &amp;M) const </td></tr>
 <tr class="separator:a24b003fbf3eb843be8cf339829436c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1666034b95256cc494a3edbd5a7ab2dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1666034b95256cc494a3edbd5a7ab2dc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>checkResidual</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, std::vector&lt; std::vector&lt; double &gt; &gt; const &amp;primal_residual_coeffs, std::vector&lt; std::vector&lt; double &gt; &gt; const &amp;dual_residual_coeffs, <a class="el" href="classFeel_1_1CRBTrilinear.html#a76c3722b35417c136463a6f5ae254da2">element_type</a> &amp;u, <a class="el" href="classFeel_1_1CRBTrilinear.html#a76c3722b35417c136463a6f5ae254da2">element_type</a> &amp;udu) const </td></tr>
+<tr class="separator:a1666034b95256cc494a3edbd5a7ab2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84afbb322045f8900ffd64cf337c9618"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84afbb322045f8900ffd64cf337c9618"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>compareResidualsForTransientProblems</b> (int N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, std::vector&lt; <a class="el" href="classFeel_1_1CRBTrilinear.html#a76c3722b35417c136463a6f5ae254da2">element_type</a> &gt; const &amp;Un, std::vector&lt; <a class="el" href="classFeel_1_1CRBTrilinear.html#a76c3722b35417c136463a6f5ae254da2">element_type</a> &gt; const &amp;Unold, std::vector&lt; <a class="el" href="classFeel_1_1CRBTrilinear.html#a76c3722b35417c136463a6f5ae254da2">element_type</a> &gt; const &amp;Undu, std::vector&lt; <a class="el" href="classFeel_1_1CRBTrilinear.html#a76c3722b35417c136463a6f5ae254da2">element_type</a> &gt; const &amp;Unduold, std::vector&lt; std::vector&lt; double &gt; &gt; const &amp;primal_residual_coeffs, std::vector&lt; std::vector&lt; double &gt; &gt; const &amp;dual_residual_coeffs) const </td></tr>
+<tr class="separator:a84afbb322045f8900ffd64cf337c9618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1a147e27866ba3de3530eee4f331c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a1a147e27866ba3de3530eee4f331c1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>loadSCMDB</b> ()</td></tr>
+<tr class="separator:a2a1a147e27866ba3de3530eee4f331c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada6d0425052b76e958a2e76050fd891c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada6d0425052b76e958a2e76050fd891c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>orthonormalize</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, wn_type &amp;wn, int Nm=1)</td></tr>
 <tr class="separator:ada6d0425052b76e958a2e76050fd891c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -351,12 +377,12 @@ wn_type&#160;</td><td class="memItemRight" valign="bottom"><b>wndu</b> () const 
 <tr class="separator:a7b719197285f5d300eb47774ba0a8969"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae704d7411781b5b0fc59222d9ee02897"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBTrilinear.html#ae704d7411781b5b0fc59222d9ee02897">exportBasisFunctions</a> (const export_vector_wn_type &amp;wn) const </td></tr>
 <tr class="separator:ae704d7411781b5b0fc59222d9ee02897"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1b9665f031ac0055c8e6843be89b8ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1b9665f031ac0055c8e6843be89b8ad"></a>
+<tr class="memitem:a3da49f6247e4f4bcabb814525afc054b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3da49f6247e4f4bcabb814525afc054b"></a>
 boost::tuple&lt; double, double, <br class="typebreak"/>
-solutions_tuple, double, <br class="typebreak"/>
-double, double, boost::tuple<br class="typebreak"/>
-&lt; double, double, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, double eps=1e-6, int N=-1)</td></tr>
-<tr class="separator:aa1b9665f031ac0055c8e6843be89b8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+solutions_tuple, <br class="typebreak"/>
+matrix_info_tuple, double, <br class="typebreak"/>
+double, upper_bounds_tuple &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, double eps=1e-6, int N=-1, bool print_rb_matrix=false)</td></tr>
+<tr class="separator:a3da49f6247e4f4bcabb814525afc054b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1be0328d17b984e9b547705748bc22a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1be0328d17b984e9b547705748bc22a0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> (const double *X, unsigned long N, double *Y, unsigned long P)</td></tr>
 <tr class="separator:a1be0328d17b984e9b547705748bc22a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -452,6 +478,50 @@ template&lt;class Archive &gt; </td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setIsLoaded</b> (bool isloaded)</td></tr>
 <tr class="separator:a6a903e732be9451e6c9f7068e88fc050 inherit pro_methods_classFeel_1_1CRBDB"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a7fdd806fa11c82b5b8a108c4ccf20d81"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TruthModelType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classFeel_1_1CRBTrilinear.html">Feel::CRBTrilinear</a>&lt; TruthModelType &gt;::<a class="el" href="classFeel_1_1CRBTrilinear.html">CRBTrilinear</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">po::variables_map const &amp;&#160;</td>
+          <td class="paramname"><em>vm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">truth_model_ptrtype const &amp;&#160;</td>
+          <td class="paramname"><em>model</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>constructor from command line options </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a3193992d36e09e73e558c44d2a5e1da0"></a>
 <div class="memitem">
@@ -567,8 +637,6 @@ template&lt;typename TruthModelType &gt; </div>
   </table>
   </dd>
 </dl>
-
-<p>References <a class="el" href="classFeel_1_1CRBDB.html#aafbd9eddb9faeb89f4f0fa29d01744e9">Feel::CRBDB::name()</a>.</p>
 
 </div>
 </div>
@@ -989,7 +1057,7 @@ template&lt;typename TruthModelType &gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <hr size="1"><address style="text-align: right;"><small>
-Generated on Thu Nov 7 2013 00:01:32 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
+Generated on Mon Nov 11 2013 00:01:58 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

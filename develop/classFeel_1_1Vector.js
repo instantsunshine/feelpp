@@ -7,7 +7,7 @@ var classFeel_1_1Vector =
     [ "self_ptrtype", "classFeel_1_1Vector.html#a98dacdd5252b7045fb6cc4e9f1f39052", null ],
     [ "self_type", "classFeel_1_1Vector.html#a55b89613939a338c42e16d8018af8725", null ],
     [ "value_type", "classFeel_1_1Vector.html#af8431cb232027e05ea646005790d7670", null ],
-    [ "Vector", "classFeel_1_1Vector.html#aeae03d306c99af6cb09412e2d8a5ccd9", null ],
+    [ "Vector", "classFeel_1_1Vector.html#ae0214ee3489b2732cf242a709219e6d2", null ],
     [ "Vector", "classFeel_1_1Vector.html#aaace34c49fb03efaba99b5f5a210bc78", null ],
     [ "Vector", "classFeel_1_1Vector.html#a2b1bd2f2bdf2ef21016ae44832bd735f", null ],
     [ "Vector", "classFeel_1_1Vector.html#af9f494708700fb1f524805788b94c500", null ],

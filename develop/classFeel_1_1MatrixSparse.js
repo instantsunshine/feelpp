@@ -8,7 +8,7 @@ var classFeel_1_1MatrixSparse =
     [ "value_type", "classFeel_1_1MatrixSparse.html#aad48603a9b89f11f28ac4e7d91aae5a6", null ],
     [ "vector_ptrtype", "classFeel_1_1MatrixSparse.html#a16b4dad0e1848972efee54ad1c8d039e", null ],
     [ "vector_type", "classFeel_1_1MatrixSparse.html#a55ae9bbda7f145ab9b7a7db6e047af93", null ],
-    [ "MatrixSparse", "classFeel_1_1MatrixSparse.html#ad1148862cd03b6386843944e3d5452bf", null ],
+    [ "MatrixSparse", "classFeel_1_1MatrixSparse.html#a56a0827a925879c0adac2e5688b96d6d", null ],
     [ "MatrixSparse", "classFeel_1_1MatrixSparse.html#aba70c14001e20cb083d0d16ab35bd3f0", null ],
     [ "~MatrixSparse", "classFeel_1_1MatrixSparse.html#acb37362d6cff7fc03e286eda7d2788ba", null ],
     [ "_get_submatrix", "classFeel_1_1MatrixSparse.html#a1f3f6634339063536e73d71edb0273e6", null ],
