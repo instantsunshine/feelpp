@@ -15,10 +15,12 @@ var NAVTREE =
       [ "Mesh Notations", "Notations.html#MeshNotations", null ]
     ] ],
     [ "ChangeLog", "ChangeLog.html", [
-      [ "Feel++ Release 0.95.0", "ChangeLog.html#feelpp0950", [
+      [ "Feel++ Release 0.96.0", "ChangeLog.html#feelpp0960", [
         [ "Changes", "ChangeLog.html#changes0960", null ],
         [ "Features", "ChangeLog.html#features0960", null ],
-        [ "Noteworthy Issues", "ChangeLog.html#issues0960", null ],
+        [ "Noteworthy Issues", "ChangeLog.html#issues0960", null ]
+      ] ],
+      [ "Feel++ Release 0.95.0", "ChangeLog.html#feelpp0950", [
         [ "Changes", "ChangeLog.html#changes0950", null ],
         [ "Features", "ChangeLog.html#features0950", null ],
         [ "Noteworthy Issues", "ChangeLog.html#issues0950", null ]
@@ -50,10 +52,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"StVenantKirchhoff.html",
-"classFeel_1_1AdvReact.html#a72ed1c65a6886b17402af5a7859f676d",
-"classFeel_1_1Backend.html#ae7cb75f6f20d1dccaefed350a5e96859",
-"classFeel_1_1CRB.html#aacfd9442a240b6230944f903fe7d5662",
+"Spaces.html#QRFunctionSpaceFn",
+"classFeel_1_1AdvReact.html#a5b13f08249635d501df9ae123969a967",
+"classFeel_1_1Backend.html#ae40599ecea7961fbad9dd267ce73753b",
+"classFeel_1_1CRB.html#aabd0bba59196f4c748d6c26ae2b7e1d7",
 "classFeel_1_1CRBModel.html#aff1bc359037b77fa7d5cb107f03c034d",
 "classFeel_1_1CRBTrilinear.html#aeabb014c69c0186309f9b60c6442c977",
 "classFeel_1_1DofTable.html#a5cabcb776b449fa646d3bfccdb4db983",

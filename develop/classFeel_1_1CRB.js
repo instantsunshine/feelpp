@@ -64,7 +64,6 @@ var classFeel_1_1CRB =
     [ "y_set_type", "classFeel_1_1CRB.html#a2f63c8f619e152f3720961c41a66918a", null ],
     [ "y_type", "classFeel_1_1CRB.html#a7eb0cbac4b1141cd3fbc657e78d59399", null ],
     [ "CRB", "classFeel_1_1CRB.html#ac1ebf1a0031cd9f1c2f0a07d7dce726e", null ],
-    [ "CRB", "classFeel_1_1CRB.html#ac7b14b49377e19698c981f68719c4a2e", null ],
     [ "CRB", "classFeel_1_1CRB.html#a16df68c3b0a412d2bc29ab97a1c09dfe", null ],
     [ "CRB", "classFeel_1_1CRB.html#ab599edbc7305ff9e6758e3b75f070e9c", null ],
     [ "~CRB", "classFeel_1_1CRB.html#ac2f4df29955251700b2f048050f0fbfe", null ],

@@ -85,7 +85,7 @@ var searchData=
   ['core_5fdata_3c_20data_2c_20inequalities_20_3e',['core_data&lt; Data, INEQUALITIES &gt;',['../classFeel_1_1core__data.html',1,'Feel']]],
   ['cptofsave',['cptOfSave',['../classFeel_1_1Exporter.html#aeb82f802a761712a6c4fcd9f25f25720',1,'Feel::Exporter']]],
   ['crash_20course',['Crash Course',['../CrashCourse.html',1,'GettingStarted']]],
-  ['crb',['CRB',['../classFeel_1_1CRB.html#ac1ebf1a0031cd9f1c2f0a07d7dce726e',1,'Feel::CRB::CRB()'],['../classFeel_1_1CRB.html#ac7b14b49377e19698c981f68719c4a2e',1,'Feel::CRB::CRB(std::string name, po::variables_map const &amp;vm)'],['../classFeel_1_1CRB.html#a16df68c3b0a412d2bc29ab97a1c09dfe',1,'Feel::CRB::CRB(std::string name, po::variables_map const &amp;vm, truth_model_ptrtype const &amp;model)'],['../classFeel_1_1CRB.html#ab599edbc7305ff9e6758e3b75f070e9c',1,'Feel::CRB::CRB(CRB const &amp;o)']]],
+  ['crb',['CRB',['../classFeel_1_1CRB.html#ac1ebf1a0031cd9f1c2f0a07d7dce726e',1,'Feel::CRB::CRB()'],['../classFeel_1_1CRB.html#a16df68c3b0a412d2bc29ab97a1c09dfe',1,'Feel::CRB::CRB(std::string name, po::variables_map const &amp;vm, truth_model_ptrtype const &amp;model)'],['../classFeel_1_1CRB.html#ab599edbc7305ff9e6758e3b75f070e9c',1,'Feel::CRB::CRB(CRB const &amp;o)']]],
   ['crb',['CRB',['../classFeel_1_1CRB.html',1,'Feel']]],
   ['crb_2ehpp',['crb.hpp',['../crb_8hpp.html',1,'']]],
   ['crb_5felements_5fdb_5ftype',['crb_elements_db_type',['../classFeel_1_1CRB.html#a2964effaa2b0cd23cbb5fa8963982fb5',1,'Feel::CRB::crb_elements_db_type()'],['../classFeel_1_1CRBTrilinear.html#a176f56fb4656022dcb6b570ce4c19f27',1,'Feel::CRBTrilinear::crb_elements_db_type()']]],

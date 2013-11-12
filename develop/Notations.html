@@ -157,8 +157,6 @@ Mesh Notations</h1>
 <p>The collections <img class="formulaInl" alt="$\calT_h, \calF_h, \calE_h, \calN_h$" src="form_570.png"/>, as well as the internal and boundary collections, are provided by our mesh data structure and stored using the the Boost.Multi_index library <a href="http://www.boost.org/libs/multi_index/doc/index.html">http://www.boost.org/libs/multi_index/doc/index.html</a>. The mesh entities (elements, faces, edges, nodes) are indexed either by their ids, the process id (i.e. the id given by MPI in a parallel context, by default the current process id) to which they belong, their markers (material properties, boundary ids...) or their location (whether the entity is internal or lies on the boundary of the domain). Other indices could certainly be defined, however those previous four already allow a wide range of applications. Thanks to Boost.Multi_index, it is trivial to retrieve pairs of iterators over the entity's containers depending on the usage context. The pairs of iterators are then turned into a range, see Boost.Range <a href="http://www.boost.org/libs/range/index.html,">http://www.boost.org/libs/range/index.html,</a> to be manipulated by integration, <a class="el" href="Integrals.html">Integrations, Operators and Norms</a>, and projection, tools. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
-<hr size="1"><address style="text-align: right;"><small>
-Generated on Mon Nov 11 2013 00:01:56 for Feel++ by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.4</small></address>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
