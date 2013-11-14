@@ -17,12 +17,11 @@ var NAVTREEINDEX0 =
 "Building.html#Debian":[4,1,3,0],
 "Building.html#DebianUbuntu":[4,1,3],
 "Building.html#Git":[4,1,1],
+"Building.html#Homebrew":[4,1,4,2],
+"Building.html#HomebrewFeel":[4,1,4,3],
 "Building.html#Mac":[4,1,4],
-"Building.html#MacPorts":[4,1,4,1],
-"Building.html#MacPortsFeel":[4,1,4,2],
 "Building.html#Manual":[4,1,5,0],
-"Building.html#Missing":[4,1,4,4],
-"Building.html#PETsc":[4,1,4,3],
+"Building.html#PMS":[4,1,4,1],
 "Building.html#Ubuntu":[4,1,3,1],
 "Building.html#Unis":[4,1,2],
 "ChangeLog.html":[3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "QuickRef.html":[5],
 "SolidMechanics.html":[6,4],
 "Spaces.html":[5,3],
-"Spaces.html#QRFunctionSpace":[5,3,0]
+"Spaces.html#QRFunctionSpace":[5,3,0],
+"Spaces.html#QRFunctionSpaceFn":[5,3,1]
 };

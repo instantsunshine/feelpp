@@ -19,10 +19,9 @@ var GettingStarted =
       ] ],
       [ "Feel++ on Mac OS X", "Building.html#Mac", [
         [ "Compilers", "Building.html#Compilers", null ],
-        [ "MacPorts", "Building.html#MacPorts", null ],
-        [ "MacPorts and Feel++", "Building.html#MacPortsFeel", null ],
-        [ "PETSc and SLEPc on Snow Leopard and Lion", "Building.html#PETsc", null ],
-        [ "Missing ports", "Building.html#Missing", null ]
+        [ "Package management systems", "Building.html#PMS", null ],
+        [ "Homebrew", "Building.html#Homebrew", null ],
+        [ "Homebrew and Feel++", "Building.html#HomebrewFeel", null ]
       ] ],
       [ "Compiling", "Building.html#Compiling", [
         [ "Compiling the Feel++ manual", "Building.html#Manual", null ]

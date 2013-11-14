@@ -1,6 +1,5 @@
 var NAVTREEINDEX8 =
 {
-"classFeel_1_1ErrorBase.html#af8c2c3341965c5c381e9988bb5b99604":[10,0,58,50],
 "classFeel_1_1ErrorBase.html#afadb1c4652bb8d148dc9679f66fc1945":[10,0,58,23],
 "classFeel_1_1Example.html":[10,0,59],
 "classFeel_1_1Example.html#a0f8b7afe9d2a295052e3b07dda9c4af1":[10,0,59,4],
@@ -249,5 +248,6 @@ var NAVTREEINDEX8 =
 "classFeel_1_1FilterFromVtk3D.html#a9012ed390d80c790c8936273598e2ed8":[10,0,72,2],
 "classFeel_1_1FilterFromVtk3D.html#a9689310bd716ddc85d5dd4c8558a0b6f":[10,0,72,1],
 "classFeel_1_1FiniteElement.html":[10,0,73],
-"classFeel_1_1FiniteElement.html#a0108b376077503bbbcf92b0e6963c5b5":[10,0,73,18]
+"classFeel_1_1FiniteElement.html#a0108b376077503bbbcf92b0e6963c5b5":[10,0,73,18],
+"classFeel_1_1FiniteElement.html#a01776487ba92ee227c7fdbffc56d3e41":[10,0,73,12]
 };

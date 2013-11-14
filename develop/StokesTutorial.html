@@ -158,7 +158,68 @@ Implementation</h1>
  We define the product of function spaces for the flow speed and the flow pressur using <code>THch&lt;order&gt;()</code>(TH stands for Taylor-Hoods) function which is <code>Pch&lt;N+1&gt;</code> <img class="formulaInl" alt="$\times$" src="form_860.png"/> <code>Pch&lt;N&gt;</code> for respectively flow speed and pressure spaces.<br/>
  We take an element <img class="formulaInl" alt="$U=\left( \begin{array}{c} u \\ p \\ \end{array} \right) $" src="form_861.png"/> in this space. Then we define the integrals of the variationnal formulation for the left and the right hand side. Finally, we apply the Poiseuille profile on the boundary.<br/>
  We call the solver to resolve the problem (<a class="el" href="Forms.html#Solver">Solver</a>). </p>
-<div class="fragment"></div><!-- fragment --></div></div><!-- contents -->
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>**argv )</div>
+<div class="line">{</div>
+<div class="line">    Environment env( _argc=argc, _argv=argv,</div>
+<div class="line">                     _desc=feel_options(),</div>
+<div class="line">                     _about=about(_name=<span class="stringliteral">&quot;mystokes&quot;</span>,</div>
+<div class="line">                                  _author=<span class="stringliteral">&quot;Feel++ Consortium&quot;</span>,</div>
+<div class="line">                                  _email=<span class="stringliteral">&quot;feelpp-devel@feelpp.org&quot;</span>));</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// create the mesh</span></div>
+<div class="line">    <span class="keyword">auto</span> mesh = loadMesh(_mesh=<span class="keyword">new</span> Mesh&lt;Simplex&lt; 2 &gt; &gt; );</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// function space</span></div>
+<div class="line">    <span class="keyword">auto</span> Vh = THch&lt;2&gt;( mesh );</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// element U=(u,p) in Vh</span></div>
+<div class="line">    <span class="keyword">auto</span> U = Vh-&gt;element();</div>
+<div class="line">    <span class="keyword">auto</span> u = U.element&lt;0&gt;();</div>
+<div class="line">    <span class="keyword">auto</span> p = U.element&lt;1&gt;();</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// left hand side</span></div>
+<div class="line">    <span class="keyword">auto</span> a = form2( _trial=Vh, _test=Vh );</div>
+<div class="line">    a = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>(_range=<a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>(mesh),</div>
+<div class="line">                  _expr=trace(gradt(u)*trans(grad(u))) );</div>
+<div class="line"></div>
+<div class="line">    a+= <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>(_range=<a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>(mesh),</div>
+<div class="line">                  _expr=-div(u)*idt(p)-divt(u)*<span class="keywordtype">id</span>(p));</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">auto</span> syms = symbols&lt;2&gt;();</div>
+<div class="line">    <span class="keyword">auto</span> u1 = parse( option(_name=<span class="stringliteral">&quot;functions.alpha&quot;</span>).as&lt;std::string&gt;(), syms );</div>
+<div class="line">    <span class="keyword">auto</span> u2 = parse( option(_name=<span class="stringliteral">&quot;functions.beta&quot;</span>).as&lt;std::string&gt;(), syms );</div>
+<div class="line">    matrix u_exact = matrix(2,1);</div>
+<div class="line">    u_exact = u1,u2;</div>
+<div class="line">    <span class="keyword">auto</span> p_exact = parse( option(_name=<span class="stringliteral">&quot;functions.gamma&quot;</span>).as&lt;std::string&gt;(), syms );</div>
+<div class="line">    <span class="keyword">auto</span> f = -laplacian( u_exact, syms ) + grad( p_exact, syms ).transpose();</div>
+<div class="line">    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;rhs : &quot;</span> &lt;&lt; f;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// right hand side</span></div>
+<div class="line">    <span class="keyword">auto</span> l = form1( _test=Vh );</div>
+<div class="line">    l = <a class="code" href="namespaceFeel.html#a4c300b4c137594540a9428af36363049" title="integrate a polynomial over a convex ">integrate</a>(_range=<a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>(mesh),</div>
+<div class="line">                  _expr=trans(expr&lt;2,1,5&gt;( f, syms ))*<span class="keywordtype">id</span>(u));</div>
+<div class="line">    a+=on(_range=<a class="code" href="namespaceFeel.html#a6d4deea03257c3f53b0e9df514a7bf00">boundaryfaces</a>(mesh), _rhs=l, _element=u,</div>
+<div class="line">          _expr=expr&lt;2,1,5&gt;(u_exact,syms));</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// solve a(u,v)=l(v)</span></div>
+<div class="line">    a.solve(_rhs=l,_solution=U);</div>
+<div class="line">    <span class="comment">//# endmarker_main #</span></div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">double</span> mean_p = mean(_range=<a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>(mesh),_expr=idv(p))(0,0);</div>
+<div class="line">    <span class="keywordtype">double</span> mean_p_exact = mean(_range=<a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>(mesh),_expr=expr(p_exact,syms))(0,0);</div>
+<div class="line">    <span class="keywordtype">double</span> l2error_u = normL2( _range=<a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>(mesh), _expr=idv(u)-expr&lt;2,1,5&gt;( u_exact, syms ) );</div>
+<div class="line">    <span class="keywordtype">double</span> l2error_p = normL2( _range=<a class="code" href="namespaceFeel.html#ace44a7a9c428a5849b81de59532e4ef8">elements</a>(mesh), _expr=idv(p)-mean_p-(expr( p_exact, syms )-mean_p_exact) );</div>
+<div class="line">    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;L2 error norm u: &quot;</span> &lt;&lt; l2error_u;</div>
+<div class="line">    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;L2 error norm p: &quot;</span> &lt;&lt; l2error_p;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// save results</span></div>
+<div class="line">    <span class="keyword">auto</span> e = exporter( _mesh=mesh );</div>
+<div class="line">    e-&gt;add( <span class="stringliteral">&quot;u&quot;</span>, u );</div>
+<div class="line">    e-&gt;add( <span class="stringliteral">&quot;p&quot;</span>, p );</div>
+<div class="line">    e-&gt;save();</div>
+<div class="line">}</div>
+</div><!-- fragment --></div></div><!-- contents -->
 </div><!-- doc-content -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

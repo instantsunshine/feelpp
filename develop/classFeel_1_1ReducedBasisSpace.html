@@ -155,6 +155,20 @@ typedef mpl::if_&lt; mpl::bool_<br class="typebreak"/>
 , mpl::identity&lt; basis_0_type &gt;<br class="typebreak"/>
  &gt;::type::type&#160;</td><td class="memItemRight" valign="bottom"><b>basis_type</b></td></tr>
 <tr class="separator:a42d912ad3f92380d1b5eb4369e0c59a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06f267726e8adacd5b6289b4b9aa6b27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06f267726e8adacd5b6289b4b9aa6b27"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; ctxrb_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ctxrb_ptrtype</b></td></tr>
+<tr class="separator:a06f267726e8adacd5b6289b4b9aa6b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaa724fe4bdcb30ea38cde3535547aa1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afaa724fe4bdcb30ea38cde3535547aa1"></a>
+typedef ContextRB&#160;</td><td class="memItemRight" valign="bottom"><b>ctxrb_type</b></td></tr>
+<tr class="separator:afaa724fe4bdcb30ea38cde3535547aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1277a1f48f907e35e338c0751bef96ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1277a1f48f907e35e338c0751bef96ad"></a>
+typedef boost::shared_ptr<br class="typebreak"/>
+&lt; ctxrbset_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ctxrbset_ptrtype</b></td></tr>
+<tr class="separator:a1277a1f48f907e35e338c0751bef96ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7291d9f315d63914e1754e1171fc3eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7291d9f315d63914e1754e1171fc3eb"></a>
+typedef ContextRBSet&#160;</td><td class="memItemRight" valign="bottom"><b>ctxrbset_type</b></td></tr>
+<tr class="separator:af7291d9f315d63914e1754e1171fc3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4a107df15dbdfda4834fb7d137636ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4a107df15dbdfda4834fb7d137636ea"></a>
 typedef Eigen::Matrix<br class="typebreak"/>
 &lt; value_type, Eigen::Dynamic, <br class="typebreak"/>
@@ -171,6 +185,12 @@ typedef boost::shared_ptr<br class="typebreak"/>
 <tr class="memitem:aa7b860bb7b0f719b88c45602109985c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7b860bb7b0f719b88c45602109985c6"></a>
 typedef Element&lt; value_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>element_type</b></td></tr>
 <tr class="separator:aa7b860bb7b0f719b88c45602109985c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18d914f74ab075dfffc671ed03ea2238"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18d914f74ab075dfffc671ed03ea2238"></a>
+typedef super_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>fespace_ptrtype</b></td></tr>
+<tr class="separator:a18d914f74ab075dfffc671ed03ea2238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a9f6a9a90add2e71a28ba52fe288136"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a9f6a9a90add2e71a28ba52fe288136"></a>
+typedef <a class="el" href="classFeel_1_1FunctionSpace.html">super</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fespace_type</b></td></tr>
+<tr class="separator:a0a9f6a9a90add2e71a28ba52fe288136"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a155cc4d3050cb0d5dd5bb809152b7d77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a155cc4d3050cb0d5dd5bb809152b7d77"></a>
 typedef mpl::if_&lt; mpl::greater<br class="typebreak"/>
 &lt; mpl::int_&lt; nDim &gt;, mpl::int_<br class="typebreak"/>
@@ -696,9 +716,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>basisValue</b> (int
 <tr class="separator:afc6ca3ac2f05a807587fa0817f4d245f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af348e97b6c3a1e6d22915e1e22b5705d"><td class="memItemLeft" align="right" valign="top">ContextRBSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1ReducedBasisSpace.html#af348e97b6c3a1e6d22915e1e22b5705d">context</a> ()</td></tr>
 <tr class="separator:af348e97b6c3a1e6d22915e1e22b5705d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4689bdea0c7eed6c6a379d52fb5cd0ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4689bdea0c7eed6c6a379d52fb5cd0ae"></a>
-ContextRB&#160;</td><td class="memItemRight" valign="bottom"><b>contextBasis</b> (typename ContextRB::ctx_type const &amp;p, ContextRBSet const &amp;c)</td></tr>
-<tr class="separator:a4689bdea0c7eed6c6a379d52fb5cd0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a410b73a8a674932a13bf7be3cde69d6e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a410b73a8a674932a13bf7be3cde69d6e"></a>
+ctxrb_ptrtype&#160;</td><td class="memItemRight" valign="bottom"><b>contextBasis</b> (typename ContextRB::ctx_ptrtype const &amp;p, ContextRBSet const &amp;c)</td></tr>
+<tr class="separator:a410b73a8a674932a13bf7be3cde69d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5b63bd35166b1859b9f1968ad25f620"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5b63bd35166b1859b9f1968ad25f620"></a>
 space_element_type &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>dualBasisElement</b> (int index)</td></tr>
 <tr class="separator:ad5b63bd35166b1859b9f1968ad25f620"><td class="memSeparator" colspan="2">&#160;</td></tr>
