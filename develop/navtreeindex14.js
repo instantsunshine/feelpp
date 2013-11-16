@@ -1,5 +1,17 @@
 var NAVTREEINDEX14 =
 {
+"classFeel_1_1MatrixSparse.html#ae6f6ea8901e8df74735b6bf16f62ec38":[10,0,122,61],
+"classFeel_1_1MatrixSparse.html#ae8f45b9fd3434df3b1e204217c875327":[10,0,122,84],
+"classFeel_1_1MatrixSparse.html#aeb1718cc16429b8e3e31db31a9c6cdda":[10,0,122,52],
+"classFeel_1_1MatrixSparse.html#aec47bcf734704ed4305b0fd57b9c61bb":[10,0,122,26],
+"classFeel_1_1MatrixSparse.html#af063975c7023be476717bd95d5a2764e":[10,0,122,39],
+"classFeel_1_1MatrixSparse.html#af154a6d470908d4e78f71af90892b566":[10,0,122,79],
+"classFeel_1_1MatrixSparse.html#afb193ee2665ec9ab3fc06d71c41e5c19":[10,0,122,49],
+"classFeel_1_1MatrixSparse.html#afc5c209b88e9a14332ae395e2b8d9309":[10,0,122,22],
+"classFeel_1_1MatrixSparse.html#afecd0afd3539f36ffdb8b27390e62fed":[10,0,122,58],
+"classFeel_1_1MatrixSparse.html#affeeff43b4091041fe2bb9b147517386":[10,0,122,64],
+"classFeel_1_1MatrixSparse.html#afff6eccdb6e5f5c4e1edfb9ad121a05f":[10,0,122,83],
+"classFeel_1_1MatrixTriplet.html":[10,0,123],
 "classFeel_1_1MatrixTriplet.html#a23bf99824e2e13f8f801230f9f81e7d8":[10,0,123,3],
 "classFeel_1_1MatrixTriplet.html#a360d4984e3a9d63ed90fa843a4844b15":[10,0,123,5],
 "classFeel_1_1MatrixTriplet.html#a3761a010e5c5ec931619ff59c46f2f13":[10,0,123,7],
@@ -237,17 +249,5 @@ var NAVTREEINDEX14 =
 "classFeel_1_1Mesh1D.html#a5a7f7646a395621405fdc7bc66022149":[10,0,128,4],
 "classFeel_1_1Mesh1D.html#a5aef0447ae3b6c713f78bb203fe6b6c1":[10,0,128,35],
 "classFeel_1_1Mesh1D.html#a60c5ea0c5b9c35cda3b932e0800747ff":[10,0,128,27],
-"classFeel_1_1Mesh1D.html#a61a7f0259e3e5dc336219fc5a2f047e7":[10,0,128,39],
-"classFeel_1_1Mesh1D.html#a690cf8e7ce619dba68184bad61beac2b":[10,0,128,31],
-"classFeel_1_1Mesh1D.html#a6d016d4c5011c0be3d838b589478c83a":[10,0,128,3],
-"classFeel_1_1Mesh1D.html#a6e1fdde1286033738bf1c332e9218298":[10,0,128,42],
-"classFeel_1_1Mesh1D.html#a74e806e967bb23bc15323c97a1309481":[10,0,128,11],
-"classFeel_1_1Mesh1D.html#a7db36e0f7f1e69bf37ebe4f395d962fb":[10,0,128,32],
-"classFeel_1_1Mesh1D.html#a824d510a17b38de0c3d414624a24ecc8":[10,0,128,10],
-"classFeel_1_1Mesh1D.html#a9514dc3471330831265bd08f09489d18":[10,0,128,38],
-"classFeel_1_1Mesh1D.html#a986b53b875d7374ab4726739af4cb3c7":[10,0,128,1],
-"classFeel_1_1Mesh1D.html#a9c14a403a3692759818f8a79971b6cdc":[10,0,128,40],
-"classFeel_1_1Mesh1D.html#a9ee75e7535599308d8be4edeee50499a":[10,0,128,43],
-"classFeel_1_1Mesh1D.html#aa5159a45f2879a17a1e4ec86f50b8702":[10,0,128,21],
-"classFeel_1_1Mesh1D.html#aa6c9d6ef222b94207ddc8701bbc7e39e":[10,0,128,14]
+"classFeel_1_1Mesh1D.html#a61a7f0259e3e5dc336219fc5a2f047e7":[10,0,128,39]
 };

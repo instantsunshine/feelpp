@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['n',['n',['../classFeel_1_1problem.html#af758f0e18a0195723848d4babfa2d284',1,'Feel::problem::n()'],['../classFeel_1_1GeoMap_1_1Context.html#a36a807cc25eca5d065303e524d637f8b',1,'Feel::GeoMap::Context::N()'],['../classFeel_1_1GeoMap_1_1Inverse.html#a81db0318b64f232b3ba1c14d2056740d',1,'Feel::GeoMap::Inverse::N()']]],
+  ['n',['N',['../classFeel_1_1GeoMap_1_1Context.html#a36a807cc25eca5d065303e524d637f8b',1,'Feel::GeoMap::Context::N()'],['../classFeel_1_1GeoMap_1_1Inverse.html#a81db0318b64f232b3ba1c14d2056740d',1,'Feel::GeoMap::Inverse::N()'],['../classFeel_1_1problem.html#af758f0e18a0195723848d4babfa2d284',1,'Feel::problem::n()']]],
   ['na',['nA',['../classFeel_1_1problem.html#aa3aa482741a91009453665a52061239b',1,'Feel::problem']]],
   ['name',['NAME',['../classFeel_1_1detail_1_1NAME.html',1,'Feel::detail']]],
   ['name',['name',['../classFeel_1_1AboutPerson.html#a3e63b78b9c4ac13abc05dedb9c254b3f',1,'Feel::AboutPerson::name()'],['../classFeel_1_1Simget.html#af253c82f9e803fd38ee16d18a6ca6337',1,'Feel::Simget::name()'],['../classFeel_1_1TypeInfo.html#ad4fa83dca0bb3ba3cb72bedcefcbdf77',1,'Feel::TypeInfo::name()'],['../classFeel_1_1CRBDB.html#aafbd9eddb9faeb89f4f0fa29d01744e9',1,'Feel::CRBDB::name()'],['../classFeel_1_1TimeSet.html#a089f134efa92dbfa7576b73e48f2e442',1,'Feel::TimeSet::name()'],['../classFeel_1_1Material.html#abcf0af6f4d995c3949494904f95ebf0b',1,'Feel::Material::name()'],['../classFeel_1_1Simplex.html#a55a19a07ddc54c41e5c620723c8d7942',1,'Feel::Simplex::name()'],['../classFeel_1_1PolynomialSet.html#a1595086fc3e00e3cef43003f98c14153',1,'Feel::PolynomialSet::name()'],['../classFeel_1_1Sound.html#a6b7ed5ae55c1b8e2a5721e95a54e2a09',1,'Feel::Sound::name()']]],
@@ -9,7 +9,7 @@ var searchData=
   ['nbdof',['nbDof',['../classFeel_1_1PolynomialSet.html#a302650f3b7232c4a279e63f3438ba9a0',1,'Feel::PolynomialSet']]],
   ['nbnearneighbor',['nbNearNeighbor',['../classFeel_1_1KDTree.html#a4c5c6f72dc80365cc3ccfd0e0bc08bd6',1,'Feel::KDTree']]],
   ['nbpoints',['nbPoints',['../classFeel_1_1FiniteElement.html#a4966c7ea9f195b78d1a806ae55097417',1,'Feel::FiniteElement']]],
-  ['ndof',['nDof',['../classFeel_1_1DataMap.html#ae824d566b31908f88345c35f121fe382',1,'Feel::DataMap::nDof()'],['../classFeel_1_1FunctionSpace.html#a3e7c6d744090500c56177328b7ab402d',1,'Feel::FunctionSpace::nDof()'],['../classFeel_1_1EIM.html#a760ab4c7b0db6d80c89ee225c4b1e8cc',1,'Feel::EIM::nDOF()']]],
+  ['ndof',['nDOF',['../classFeel_1_1EIM.html#a760ab4c7b0db6d80c89ee225c4b1e8cc',1,'Feel::EIM::nDOF()'],['../classFeel_1_1DataMap.html#ae824d566b31908f88345c35f121fe382',1,'Feel::DataMap::nDof()'],['../classFeel_1_1FunctionSpace.html#a3e7c6d744090500c56177328b7ab402d',1,'Feel::FunctionSpace::nDof()']]],
   ['ndofonprocessor',['nDofOnProcessor',['../classFeel_1_1DataMap.html#ae967766557cd9a2a1a7ed475d340723e',1,'Feel::DataMap']]],
   ['ndofpercomponent',['nDofPerComponent',['../classFeel_1_1FunctionSpace.html#a11d7b07ab67d461b92d48c6492049822',1,'Feel::FunctionSpace']]],
   ['ndofperedge',['nDofPerEdge',['../classFeel_1_1FiniteElement.html#a1f2eaffa29856ddf3d0df0583d64a02d',1,'Feel::FiniteElement']]],

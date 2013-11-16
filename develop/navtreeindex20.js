@@ -1,5 +1,17 @@
 var NAVTREEINDEX20 =
 {
+"classFeel_1_1SolverEigen.html#af5e07b3f630d217ce03ad39977464681":[10,0,189,22],
+"classFeel_1_1SolverEigen.html#af9c650601cc29bcba51ff045d58a0f09":[10,0,189,25],
+"classFeel_1_1SolverEigen.html#afcd6f8382b7c9076d89d42efc1e0a099":[10,0,189,54],
+"classFeel_1_1SolverLinear.html":[10,0,190],
+"classFeel_1_1SolverLinear.html#a00c678b88735046fc5cf51ca71f3f1ef":[10,0,190,7],
+"classFeel_1_1SolverLinear.html#a0106b7b383e6f56664faa03da1319c6a":[10,0,190,38],
+"classFeel_1_1SolverLinear.html#a0b0da3bd9731e3f63a93c121b587fb79":[10,0,190,3],
+"classFeel_1_1SolverLinear.html#a180cd436b526acd453af1ff794d41725":[10,0,190,22],
+"classFeel_1_1SolverLinear.html#a191b84d3fbcc0f52f179f555dedaf394":[10,0,190,42],
+"classFeel_1_1SolverLinear.html#a1a59504e203ef4e9e12f8abea1bda193":[10,0,190,14],
+"classFeel_1_1SolverLinear.html#a2346d6c9e349de4df2bbd4b4c2d55d2a":[10,0,190,41],
+"classFeel_1_1SolverLinear.html#a23b8704001afdd94dee56b421fb84f70":[10,0,190,32],
 "classFeel_1_1SolverLinear.html#a2bfaa01e46047dcfc23a6606e09dd7b9":[10,0,190,15],
 "classFeel_1_1SolverLinear.html#a37541041f2314b27ddd99da03a6f0163":[10,0,190,50],
 "classFeel_1_1SolverLinear.html#a38242d3943fd9b89ab783decda28902f":[10,0,190,2],
@@ -237,17 +249,5 @@ var NAVTREEINDEX20 =
 "classFeel_1_1Sphere.html#ab7d6b2425d4fa4e75da30316edd8fe0c":[10,0,195,7],
 "classFeel_1_1Sphere.html#ad25b9da537f0a7d8990896be5259df92":[10,0,195,10],
 "classFeel_1_1Sphere.html#ad87de8af1aa22665ef15d40a813c13b6":[10,0,195,4],
-"classFeel_1_1Sphere.html#afe25bd44afa4ee40bcc4b85c04db6194":[10,0,195,12],
-"classFeel_1_1Stokes.html":[10,0,196],
-"classFeel_1_1Stokes.html#a0fc57a17cbe8639f028f739c2271be2e":[10,0,196,3],
-"classFeel_1_1Stokes.html#a17b518acec9bb6eb878017851f63051f":[10,0,196,8],
-"classFeel_1_1Stokes.html#a1e018da9d075297afd42e49419530f7d":[10,0,196,14],
-"classFeel_1_1Stokes.html#a2604c2bd2f3d205bbcf1726a8a76ae99":[10,0,196,2],
-"classFeel_1_1Stokes.html#a2bf466a5eebc0e47b7becd65598d50c5":[10,0,196,10],
-"classFeel_1_1Stokes.html#a4ed9d456ace87ee03482607170c4e6fb":[10,0,196,9],
-"classFeel_1_1Stokes.html#a54a7cfafe0706a7cd69372c4561eee6e":[10,0,196,1],
-"classFeel_1_1Stokes.html#a670c636f87581b7acdb98d4a7b16fc89":[10,0,196,17],
-"classFeel_1_1Stokes.html#a709846b6045508352ef8633a37235bb1":[10,0,196,5],
-"classFeel_1_1Stokes.html#a943e2945f3e20eca655316133863168b":[10,0,196,0],
-"classFeel_1_1Stokes.html#a9d5e0935065fb753e12f8ddf74d8dacc":[10,0,196,12]
+"classFeel_1_1Sphere.html#afe25bd44afa4ee40bcc4b85c04db6194":[10,0,195,12]
 };

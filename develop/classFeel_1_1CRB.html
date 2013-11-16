@@ -236,12 +236,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>computeProjectionInit
 <tr class="memitem:a9db6d2715f035d55374839626a55e172"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9db6d2715f035d55374839626a55e172"></a>
 matrix_info_tuple&#160;</td><td class="memItemRight" valign="bottom"><b>newton</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, vectorN_type &amp;uN, double &amp;output) const </td></tr>
 <tr class="separator:a9db6d2715f035d55374839626a55e172"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f5b0c9c034b2af3a26bbdcf659d976b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f5b0c9c034b2af3a26bbdcf659d976b"></a>
-<a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>offlineFixedPointPrimal</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, sparse_matrix_ptrtype &amp;A, bool zero_iteration)</td></tr>
-<tr class="separator:a1f5b0c9c034b2af3a26bbdcf659d976b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a931a5d5705bd8d3c370d1d741d78a44d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a931a5d5705bd8d3c370d1d741d78a44d"></a>
-<a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>offlineFixedPointDual</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, element_ptrtype &amp;dual_initial_field, const sparse_matrix_ptrtype &amp;A, const <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a> &amp;u, bool zero_iteration)</td></tr>
-<tr class="separator:a931a5d5705bd8d3c370d1d741d78a44d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abce7f3d0403ed15f7040c5c923e92306"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abce7f3d0403ed15f7040c5c923e92306"></a>
+<a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>offlineFixedPointPrimal</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu)</td></tr>
+<tr class="separator:abce7f3d0403ed15f7040c5c923e92306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac31559e3cf65e01dc163ba59cb74fc7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac31559e3cf65e01dc163ba59cb74fc7e"></a>
+<a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>offlineFixedPointDual</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, element_ptrtype &amp;dual_initial_field)</td></tr>
+<tr class="separator:ac31559e3cf65e01dc163ba59cb74fc7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2437fdb2e025da243cfdae9f564c663"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2437fdb2e025da243cfdae9f564c663"></a>
 matrix_info_tuple&#160;</td><td class="memItemRight" valign="bottom"><b>fixedPointPrimal</b> (<a class="el" href="namespaceFeel.html#a285d572c85de361b3f3e2695b41a4ce0">size_type</a> N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, std::vector&lt; vectorN_type &gt; &amp;uN, std::vector&lt; vectorN_type &gt; &amp;uNold, std::vector&lt; double &gt; &amp;output_vector, int K=0, bool print_rb_matrix=false) const </td></tr>
 <tr class="separator:ac2437fdb2e025da243cfdae9f564c663"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -370,6 +370,43 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printRBMatrix</b> (ma
 <tr class="separator:abf178d5e1a1f95c67f0add56850e3702"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a859c151122fa4104dd7700f926c7ad93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#a859c151122fa4104dd7700f926c7ad93">computationalTimeStatistics</a> (std::string appname)</td></tr>
 <tr class="separator:a859c151122fa4104dd7700f926c7ad93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e127cfaa0cd70e6d5210d2f79cf3e67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#a8e127cfaa0cd70e6d5210d2f79cf3e67">updateApeeBasisConstruction</a> (int N, std::vector&lt; <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> &gt; const &amp;new_primal_parameters, std::vector&lt; <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> &gt; const &amp;new_dual_parameters) const </td></tr>
+<tr class="separator:a8e127cfaa0cd70e6d5210d2f79cf3e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f16921b4675953cdc27c46fad1c5ff5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f16921b4675953cdc27c46fad1c5ff5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateApeeOfflineResidualComputation</b> (int N, std::vector&lt; <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> &gt; const &amp;new_primal_parameters, std::vector&lt; <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> &gt; const &amp;new_dual_parameters)</td></tr>
+<tr class="separator:a1f16921b4675953cdc27c46fad1c5ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c57e64a3a8c63d57287bd6bddb130a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c57e64a3a8c63d57287bd6bddb130a5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>computePrimalApeeBasis</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu) const </td></tr>
+<tr class="separator:a0c57e64a3a8c63d57287bd6bddb130a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76f7dbca83e30094596ebc9e5fbc8ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae76f7dbca83e30094596ebc9e5fbc8ab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>computeDualApeeBasis</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu) const </td></tr>
+<tr class="separator:ae76f7dbca83e30094596ebc9e5fbc8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfc95ec1fb10ef10c3993caf047c5759"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acfc95ec1fb10ef10c3993caf047c5759"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>computeSquareDualNormOfPrimalResidual</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a> const &amp;u)</td></tr>
+<tr class="separator:acfc95ec1fb10ef10c3993caf047c5759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1a54ce99a6fc8cc2a8ea1caf8ef6efc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1a54ce99a6fc8cc2a8ea1caf8ef6efc"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>computeSquareDualNormOfDualResidual</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, <a class="el" href="classFeel_1_1CRB.html#aed783e3fef64f87a7d71afccd5eaae4a">element_type</a> const &amp;udu)</td></tr>
+<tr class="separator:ad1a54ce99a6fc8cc2a8ea1caf8ef6efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b3d1af79dc5f4212139af0382e20fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07b3d1af79dc5f4212139af0382e20fa"></a>
+vectorN_type&#160;</td><td class="memItemRight" valign="bottom"><b>computeOnlinePrimalApeeVector</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, vectorN_type const &amp;uN, vectorN_type const &amp;uNold=vectorN_type(), double dt=1e30, double time=1e30) const </td></tr>
+<tr class="separator:a07b3d1af79dc5f4212139af0382e20fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed92931ebfa05b40e9120d032441e730"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed92931ebfa05b40e9120d032441e730"></a>
+vectorN_type&#160;</td><td class="memItemRight" valign="bottom"><b>computeOnlineDualApeeVector</b> (<a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, vectorN_type const &amp;uNdu, vectorN_type const &amp;uNduold=vectorN_type(), double dt=1e30, double time=1e30) const </td></tr>
+<tr class="separator:aed92931ebfa05b40e9120d032441e730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9be36746d6c084d07e2b33fb6347b054"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9be36746d6c084d07e2b33fb6347b054"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>assemblePrimalAndDualApeeBasisMatrices</b> (int N) const </td></tr>
+<tr class="separator:a9be36746d6c084d07e2b33fb6347b054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3cfe73eb528132f67939c49cdab1e1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRB.html#ae3cfe73eb528132f67939c49cdab1e1c">selectPrimalApeeParameters</a> (int N, std::vector&lt; <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> &gt; &amp;new_parameters)</td></tr>
+<tr class="separator:ae3cfe73eb528132f67939c49cdab1e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1048c58725355d92676ad21654bd1c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1048c58725355d92676ad21654bd1c3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>selectDualApeeParameters</b> (int N, std::vector&lt; <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> &gt; &amp;new_parameters)</td></tr>
+<tr class="separator:af1048c58725355d92676ad21654bd1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5724e85d3aa6ac8b309cdad725934c18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5724e85d3aa6ac8b309cdad725934c18"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>computeOnlinePrimalApee</b> (int N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, vectorN_type const &amp;uN, vectorN_type const &amp;uNold=vectorN_type(), double dt=1e30, double time=1e30) const </td></tr>
+<tr class="separator:a5724e85d3aa6ac8b309cdad725934c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a405d0ee74a2a316bf5bd8945f038f50e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a405d0ee74a2a316bf5bd8945f038f50e"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>computeOnlineDualApee</b> (int N, <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> const &amp;mu, vectorN_type const &amp;uNdu, vectorN_type const &amp;uNduold=vectorN_type(), double dt=1e30, double time=1e30) const </td></tr>
+<tr class="separator:a405d0ee74a2a316bf5bd8945f038f50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classFeel_1_1CRBDB"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classFeel_1_1CRBDB')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classFeel_1_1CRBDB.html">Feel::CRBDB</a></td></tr>
 <tr class="memitem:a63ce83e6c566106d8f133bfa4f222706 inherit pub_methods_classFeel_1_1CRBDB"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63ce83e6c566106d8f133bfa4f222706"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFeel_1_1CRBDB.html#a63ce83e6c566106d8f133bfa4f222706">CRBDB</a> ()</td></tr>
@@ -1561,7 +1598,7 @@ template&lt;typename TruthModelType &gt; </div>
 <p>Offline computation</p>
 <dl class="section return"><dt>Returns</dt><dd>the convergence history (max error) </dd></dl>
 
-<p>References <a class="el" href="classFeel_1_1CRB.html#a7e91a6877d6064fba476540ca71c0772">Feel::CRB&lt; TruthModelType &gt;::check()</a>, <a class="el" href="classFeel_1_1CRB.html#ab5ac52d3e77a6ffedf1bbe31adbefeb2">Feel::CRB&lt; TruthModelType &gt;::exportBasisFunctions()</a>, <a class="el" href="namespaceFeel.html#a73707c3e6d405359ea9b4e1f21c9e530">Feel::inner_product()</a>, <a class="el" href="classFeel_1_1CRB.html#a7878f971a68f86fb1bb261b6f9aac137">Feel::CRB&lt; TruthModelType &gt;::maxErrorBounds()</a>, <a class="el" href="classFeel_1_1CRB.html#a8084a3cd7bc559a3d39dba3b89cf7a17">Feel::CRB&lt; TruthModelType &gt;::offlineResidual()</a>, <a class="el" href="classFeel_1_1CRB.html#a502e37b1aab2435a5d0ec16c3ecc6de4">Feel::CRB&lt; TruthModelType &gt;::orthonormalize()</a>, <a class="el" href="classFeel_1_1CRB.html#a39d510c1295521c3f2de52d359b368ee">Feel::CRB&lt; TruthModelType &gt;::saveDB()</a>, and <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>.</p>
+<p>References <a class="el" href="classFeel_1_1CRB.html#a7e91a6877d6064fba476540ca71c0772">Feel::CRB&lt; TruthModelType &gt;::check()</a>, <a class="el" href="classFeel_1_1CRB.html#ab5ac52d3e77a6ffedf1bbe31adbefeb2">Feel::CRB&lt; TruthModelType &gt;::exportBasisFunctions()</a>, <a class="el" href="namespaceFeel.html#a73707c3e6d405359ea9b4e1f21c9e530">Feel::inner_product()</a>, <a class="el" href="classFeel_1_1CRB.html#a7878f971a68f86fb1bb261b6f9aac137">Feel::CRB&lt; TruthModelType &gt;::maxErrorBounds()</a>, <a class="el" href="classFeel_1_1CRB.html#a8084a3cd7bc559a3d39dba3b89cf7a17">Feel::CRB&lt; TruthModelType &gt;::offlineResidual()</a>, <a class="el" href="classFeel_1_1CRB.html#a502e37b1aab2435a5d0ec16c3ecc6de4">Feel::CRB&lt; TruthModelType &gt;::orthonormalize()</a>, <a class="el" href="classFeel_1_1CRB.html#a39d510c1295521c3f2de52d359b368ee">Feel::CRB&lt; TruthModelType &gt;::saveDB()</a>, <a class="el" href="classFeel_1_1CRB.html#ae3cfe73eb528132f67939c49cdab1e1c">Feel::CRB&lt; TruthModelType &gt;::selectPrimalApeeParameters()</a>, <a class="el" href="classFeel_1_1CRB.html#a8e127cfaa0cd70e6d5210d2f79cf3e67">Feel::CRB&lt; TruthModelType &gt;::updateApeeBasisConstruction()</a>, and <a class="el" href="classFeel_1_1CRBDB.html#a8826a0c808f54acc619447f6cdc35cab">Feel::CRBDB::vm()</a>.</p>
 
 </div>
 </div>
@@ -1945,6 +1982,42 @@ template&lt;typename TruthModelType&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ae3cfe73eb528132f67939c49cdab1e1c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TruthModelType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classFeel_1_1CRB.html">Feel::CRB</a>&lt; TruthModelType &gt;::selectPrimalApeeParameters </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>new_parameters</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Greedy algorithm for apee basis </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">N</td><td>: current number of elements in the RB </td></tr>
+    <tr><td class="paramname">new_parameters</td><td>: vector to be enrich by new parameters associated to N </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a0a0700cf0af27df6c163154d945516b6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2161,6 +2234,48 @@ template&lt;typename TruthModelType&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>compute online the lower bound </dd></dl>
 
 <p>References <a class="el" href="classFeel_1_1CRB.html#a2e3675cdd7b5f8a6d0045d1371e2a9d2">Feel::CRB&lt; TruthModelType &gt;::ub()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e127cfaa0cd70e6d5210d2f79cf3e67"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TruthModelType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classFeel_1_1CRB.html">Feel::CRB</a>&lt; TruthModelType &gt;::updateApeeBasisConstruction </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>new_primal_parameters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classFeel_1_1ParameterSpace_1_1Element.html">parameter_type</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>new_dual_parameters</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>update basis built to have error estimators from F.Casenave's paper </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">N</td><td>: current number of elements in the RB </td></tr>
+    <tr><td class="paramname">new</td><td>parameters that we must select from N-1 to N Be carreful, M_primal_apee_basis and M_dual_apee_basis don't have the same size because affine decomposition can be different </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

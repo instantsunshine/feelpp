@@ -116,9 +116,7 @@ $(document).ready(function(){initNavTree('Building.html','');});
 <li class="level2"><a href="#HomebrewFeel">Homebrew and Feel++</a></li>
 </ul>
 </li>
-<li class="level1"><a href="#Compiling">Compiling</a><ul><li class="level2"><a href="#Manual">Compiling the Feel++ manual</a></li>
-</ul>
-</li>
+<li class="level1"><a href="#Compiling">Compiling</a></li>
 </ul>
 </div>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Christophe Prud'homme </dd>
@@ -274,21 +272,15 @@ Compiling</h1>
   # directory level as feel
 </pre><p> you can customize the build type: </p>
 <pre class="fragment">  # Choose g++ release
-  cmake -CMAKE_CXX_COMPILER=/usr/bin/g++-4.6
+  cmake -CMAKE_CXX_COMPILER=/usr/bin/g++
   # Debug build type (-g...)
   cmake -D CMAKE_BUILD_TYPE=Debug
   # Release build type (-O3...)
   cmake -D CMAKE_BUILD_TYPE=Release
   ...
-</pre><p> Once Cmake has made its work, you are now able to compile the library with </p>
+</pre><p> Once Cmake has done its work, you are now able to compile the library with </p>
 <pre class="fragment">  make
-</pre><p> <b>Important</b> : from now, all commands should be type in <code>feel.opt</code> or its subdirectories.</p>
-<h2><a class="anchor" id="Manual"></a>
-Compiling the Feel++ manual</h2>
-<p>The manual is edited with LaTeX so you need to have installed the LaTeX distribution on your computer. LaTeX is a high-quality typesetting system, it includes features designed for the production of technical and scientific documentation. There are several ways to make it work, for example you can go on <a href="http://www.tug.org/mactex/">MacTeX website</a> and follow the instructions to install the distribution. If the command <code>make check</code> in <code>feel.opt/</code> has been run before, the tutorial should be already compiled and ready. The steps are as follows to build the <a class="el" href="namespaceFeel.html" title="[marker1] ">Feel</a> tutorial </p>
-<pre class="fragment">  cd feel.opt/doc/manual
-  make feelpp-manual_pdf
-</pre><p> The directory <code>doc/manual</code> contains all examples used in the tutorial. You will see how it works in the following parts. </p>
+</pre><p> <b>Important</b> : from now, all commands should be type in <code>feel.opt</code> or its subdirectories. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <script>

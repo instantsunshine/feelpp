@@ -23,9 +23,7 @@ var GettingStarted =
         [ "Homebrew", "Building.html#Homebrew", null ],
         [ "Homebrew and Feel++", "Building.html#HomebrewFeel", null ]
       ] ],
-      [ "Compiling", "Building.html#Compiling", [
-        [ "Compiling the Feel++ manual", "Building.html#Manual", null ]
-      ] ]
+      [ "Compiling", "Building.html#Compiling", null ]
     ] ],
     [ "First Feel++ Application", "FirstApp.html", [
       [ "Minimal Example", "FirstApp.html#Minimal", null ],

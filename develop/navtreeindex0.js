@@ -20,7 +20,6 @@ var NAVTREEINDEX0 =
 "Building.html#Homebrew":[4,1,4,2],
 "Building.html#HomebrewFeel":[4,1,4,3],
 "Building.html#Mac":[4,1,4],
-"Building.html#Manual":[4,1,5,0],
 "Building.html#PMS":[4,1,4,1],
 "Building.html#Ubuntu":[4,1,3,1],
 "Building.html#Unis":[4,1,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "SolidMechanics.html":[6,4],
 "Spaces.html":[5,3],
 "Spaces.html#QRFunctionSpace":[5,3,0],
-"Spaces.html#QRFunctionSpaceFn":[5,3,1]
+"Spaces.html#QRFunctionSpaceFn":[5,3,1],
+"StVenantKirchhoff.html":[6,4,2]
 };
