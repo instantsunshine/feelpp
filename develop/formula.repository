@@ -863,3 +863,8 @@
 \form#862:$ \left\{ \begin{aligned} -\mu\Delta \bf u + \nabla p & = \bf f & \text{on}\; \Omega \;, \\ \nabla\cdot\bf u & = 0 & \text{on}\; \Omega \;, \\ \bf u & = g & \text{on}\; \Gamma \;, \\ \end{aligned} \right $
 \form#863:$u\in [H_g^1(\Omega)]^d$
 \form#864:$p\in [L_0^2(\Omega)]$
+\form#865:\[ \mathrm{curl}( \nabla \times \psi) = \Delta \psi + \nabla (div \psi) \]
+\form#866:\[ \int_\Omega \bvec{v}\cdot \mathrm{curl}w = \int_\Omega w ( \nabla \times \bvec{v}) -\int_{\partial\Omega} w (\bvec{v}\times n) \]
+\form#867:$ \left\{ \begin{aligned} \mu \mathrm{curl}( \nabla \times \bvec{u}) - \nabla (div \bvec{u}) + \nabla p & = \bvec{f} & \text{on}\; \Omega \;, \ \ \nabla\cdot \bvec{u} & = 0 & \text{on}\; \Omega \; \end{aligned} \right $
+\form#868:\[ \mu \int_\Omega \mathrm{curl}( \nabla \times \bvec{u}) \cdot \bf \bvec{v} - \mu \int_\Omega \nabla (div \bvec{u}) \cdot \bvec{v} + \nabla p \cdot \bvec{v} & = \int_\Omega \bvec{f}\cdot \bvec{v} \]
+\form#869:\[ \mu \int_\Omega ( \nabla \times \bvec{u})( \nabla \times \bvec{v}) - \mu \int_{\partial\Omega} (\nabla \times \bvec{u}) \cdot ( \bvec{v} \times \bvec{n})+ \mu \int_\Omega ( \nabla \cdot \bvec{u})( \nabla \times \bvec{v}) - \mu \int_{\partial\Omega} (\nabla \cdot \bvec{u})n \cdot \bvec{v} + \int_\Omega p \nabla \cdot \bvec{v} -\int_{\partial\Omega} p \mathbf n \cdot \bvec{v} = \int_\Omega \bvec{f} \cdot \bvec{v} \]

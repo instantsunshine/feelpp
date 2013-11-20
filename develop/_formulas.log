@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2013.8.6)  6 NOV 2013 16:37
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2013.8.6)  21 NOV 2013 00:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -530,10 +530,77 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
+[1
+
+]
+! Undefined control sequence.
+l.13 \[ \int_\Omega \bvec
+                         {v}\cdot \mathrm{curl}w = \int_\Omega w ( \nabla \t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.13 ...rl}w = \int_\Omega w ( \nabla \times \bvec
+                                                  {v}) -\int_{\partial\Omega...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.13 ... \bvec{v}) -\int_{\partial\Omega} w (\bvec
+                                                  {v}\times n) \]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[2]
+! Undefined control sequence.
+l.16 ...ed} \mu \mathrm{curl}( \nabla \times \bvec
+                                                  {u}) - \nabla (div \bvec{u...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.16 ...nabla \times \bvec{u}) - \nabla (div \bvec
+                                                  {u}) + \nabla p & = \bvec{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.16 ...\nabla (div \bvec{u}) + \nabla p & = \bvec
+                                                  {f} & \text{on}\; \Omega \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.16 ...ext{on}\; \Omega \;, \ \ \nabla\cdot \bvec
+                                                  {u} & = 0 & \text{on}\; \O...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Missing delimiter (. inserted).
 <to be read again> 
                    $
-l.10 ...on}\; \Gamma \;, \\ \end{aligned} \right $
+l.16 ...ext{on}\; \Omega \; \end{aligned} \right $
                                                   
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -542,16 +609,206 @@ braces don't get unbalanced. Otherwise just proceed.
 Acceptable delimiters are characters whose \delcode is
 nonnegative, or you can use `\delimiter <delimiter code>'.
 
-[1
+[3]
+! Undefined control sequence.
+l.19 ..._\Omega \mathrm{curl}( \nabla \times \bvec
+                                                  {u}) \cdot \bf \bvec{v} - ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-] [2] [3] (./_formulas.aux) ) 
+! Undefined control sequence.
+l.19 ...}( \nabla \times \bvec{u}) \cdot \bf \bvec
+                                                  {v} - \mu \int_\Omega \nab...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.19 ...vec{v} - \mu \int_\Omega \nabla (div \bvec
+                                                  {u}) \cdot \bvec{v} + \nab...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.19 ...t_\Omega \nabla (div \bvec{u}) \cdot \bvec
+                                                  {v} + \nabla p \cdot \bvec...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.19 ...{u}) \cdot \bvec{v} + \nabla p \cdot \bvec
+                                                  {v} & = \int_\Omega \bvec{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+l.19 ...\cdot \bvec{v} + \nabla p \cdot \bvec{v} &
+                                                   = \int_\Omega \bvec{f}\cd...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.19 ...bla p \cdot \bvec{v} & = \int_\Omega \bvec
+                                                  {f}\cdot \bvec{v} \]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.19 ...vec{v} & = \int_\Omega \bvec{f}\cdot \bvec
+                                                  {v} \]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[4]
+! Undefined control sequence.
+l.22 \[ \mu \int_\Omega ( \nabla \times \bvec
+                                             {u})( \nabla \times \bvec{v}) -...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.22 ...abla \times \bvec{u})( \nabla \times \bvec
+                                                  {v}) - \mu \int_{\partial\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.22 ...\int_{\partial\Omega} (\nabla \times \bvec
+                                                  {u}) \cdot ( \bvec{v} \tim...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.22 ...ga} (\nabla \times \bvec{u}) \cdot ( \bvec
+                                                  {v} \times \bvec{n})+ \mu ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.22 ...es \bvec{u}) \cdot ( \bvec{v} \times \bvec
+                                                  {n})+ \mu \int_\Omega ( \n...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.22 ...{n})+ \mu \int_\Omega ( \nabla \cdot \bvec
+                                                  {u})( \nabla \times \bvec{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.22 ...nabla \cdot \bvec{u})( \nabla \times \bvec
+                                                  {v}) - \mu \int_{\partial\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.22 ... \int_{\partial\Omega} (\nabla \cdot \bvec
+                                                  {u})n \cdot \bvec{v} + \in...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.22 ...mega} (\nabla \cdot \bvec{u})n \cdot \bvec
+                                                  {v} + \int_\Omega p \nabla...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.22 ...bvec{v} + \int_\Omega p \nabla \cdot \bvec
+                                                  {v} -\int_{\partial\Omega}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.22 ...t_{\partial\Omega} p \mathbf n \cdot \bvec
+                                                  {v} = \int_\Omega \bvec{f}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.22 ...athbf n \cdot \bvec{v} = \int_\Omega \bvec
+                                                  {f} \cdot \bvec{v} \]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.22 ...bvec{v} = \int_\Omega \bvec{f} \cdot \bvec
+                                                  {v} \]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[5] (./_formulas.aux) ) 
 Here is how much of TeX's memory you used:
  11161 strings out of 495060
  202460 string characters out of 3182054
- 245868 words of memory out of 3000000
+ 245865 words of memory out of 3000000
  14093 multiletter control sequences out of 15000+200000
  17281 words of font info for 50 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 70i,11n,59p,468b,128s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 70i,11n,59p,468b,126s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on _formulas.dvi (3 pages, 5944 bytes).
+Output written on _formulas.dvi (5 pages, 6900 bytes).

@@ -39,7 +39,6 @@ var searchData=
   ['maxid',['maxId',['../classFeel_1_1BareItemsHandler.html#a9fc712dae6d828b1ec63568f0f4b4665',1,'Feel::BareItemsHandler']]],
   ['maxiter',['maxIter',['../classFeel_1_1CRB.html#ad7345c7cd25c7eb439e5c44818ae91cf',1,'Feel::CRB::maxIter()'],['../classFeel_1_1CRBSCM.html#a01dcb80fcad2bf8b0fe69e35d04f7f9b',1,'Feel::CRBSCM::maxIter()']]],
   ['maxiterations',['maxIterations',['../classFeel_1_1Backend.html#a8fd53f677dd9379166c2287d9cc69abe',1,'Feel::Backend::maxIterations()'],['../classFeel_1_1SolverEigen.html#a54a8c1921a6869d2c45b7950393165af',1,'Feel::SolverEigen::maxIterations()'],['../classFeel_1_1SolverLinear.html#af1a89b2e9c98ddadd32ce0689cd9c274',1,'Feel::SolverLinear::maxIterations()']]],
-  ['maxiterationssnes',['maxIterationsSNES',['../classFeel_1_1Backend.html#a2a16730b57206a63511c1c547f91a55e',1,'Feel::Backend']]],
   ['maxitksp',['maxitKSP',['../classFeel_1_1SolverNonLinear.html#a1c2db80b0be7b6568ee2c6dcab15c70f',1,'Feel::SolverNonLinear']]],
   ['maxlid',['maxLID',['../classFeel_1_1DataMap.html#ace22c7e11a19967409d331e6c669c5dd',1,'Feel::DataMap']]],
   ['maxmygid',['maxMyGID',['../classFeel_1_1DataMap.html#abe1b0d25d562becf450a71c33fd7a477',1,'Feel::DataMap']]],
